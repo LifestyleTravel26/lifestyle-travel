@@ -21,17 +21,21 @@ export default function Home() {
             Lifestyle & Travel
           </span>
         </div>
-        <button style={{
-          backgroundColor: '#e8572a',
-          color: 'white',
-          border: 'none',
-          borderRadius: '8px',
-          padding: '8px 16px',
-          cursor: 'pointer',
-          fontWeight: 'bold'
-        }}>
+        <Link
+          href="/signup"
+          style={{
+            backgroundColor: '#e8572a',
+            color: 'white',
+            borderRadius: '8px',
+            padding: '8px 16px',
+            cursor: 'pointer',
+            fontWeight: 'bold',
+            textDecoration: 'none',
+            display: 'inline-block',
+          }}
+        >
           Comenzar
-        </button>
+        </Link>
       </div>
 
       {/* HERO */}
