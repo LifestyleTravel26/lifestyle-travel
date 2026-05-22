@@ -595,11 +595,11 @@ export default function Irlanda() {
             </table>
           </div>
           <div style={{ marginTop: '14px', backgroundColor: '#f0fdf4', borderRadius: '8px', padding: '14px' }}>
-            <p style={{ fontSize: '14px', margin: '0 0 6px', fontWeight: '700' }}>🤝 Comunidad Lifestyle & Travel:</p>
-            <p style={{ fontSize: '14px', margin: 0 }}>
-              Grupos de soporte para latinos en Irlanda: <Link text="wa.me/353830691988" url="https://wa.me/353830691988" />
+            <p style={{ fontSize: '14px', margin: '0 0 10px', fontWeight: '700' }}>🤝 Comunidad Latina en Irlanda</p>
+            <p style={{ fontSize: '13px', color: '#555', margin: 0 }}>
+              Mexicanos · Ticos · Colombianos · Argentinos · Venezolanos · Peruanos en Irlanda — links próximamente
             </p>
-          </div>
+          </div> 
           <HackBox text="La mayoría de las crisis en Irlanda se resuelven siguiendo el proceso burocrático correcto. Mantén la calma, usa Google Translate si necesitas, y recuerda: todo tiene solución si sigues el paso a paso. Nunca respondas solo a notificaciones de Revenue o Inmigración — consulta primero." />
         </Section>
 
