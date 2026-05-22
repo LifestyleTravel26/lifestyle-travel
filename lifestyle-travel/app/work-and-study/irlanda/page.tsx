@@ -78,7 +78,7 @@ export default function Irlanda() {
 
       {/* STATS */}
       <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '10px', padding: '16px 20px' }}>
-        {[['💰', 'Costo inicial (Cursos)', '€3,000 - €5,000'], ['🕐', 'Duración', '12 - 24 meses'], ['📊', 'Dificultad', 'Fácil']].map((s, i) => (
+        {[['💰', 'Costo inicial (Cursos)', '€3,000 - €5,000'], ['🕐', 'Duración', '8 - 12 meses'], ['📊', 'Dificultad', 'Fácil']].map((s, i) => (
           <div key={i} style={{ backgroundColor: 'white', borderRadius: '10px', padding: '14px', textAlign: 'center', boxShadow: '0 1px 4px rgba(0,0,0,0.06)' }}>
             <div style={{ fontSize: '22px', marginBottom: '4px' }}>{s[0]}</div>
             <div style={{ color: '#999', fontSize: '10px', marginBottom: '3px' }}>{s[1]}</div>
