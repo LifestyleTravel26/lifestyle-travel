@@ -3,6 +3,7 @@ import { useState } from 'react'
 
 export default function Irlanda() {
   const [openSection, setOpenSection] = useState<string | null>(null)
+  const [feedback, setFeedback] = useState('')
   const toggle = (s: string) => setOpenSection(openSection === s ? null : s)
 
   const HackBox = ({ text }: { text: string }) => (
@@ -77,7 +78,7 @@ export default function Irlanda() {
 
       {/* STATS */}
       <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '10px', padding: '16px 20px' }}>
-        {[['💰', 'Costo inicial', '€3,000 - €5,000'], ['🕐', 'Duración', '12 - 24 meses'], ['📊', 'Dificultad', 'Fácil']].map((s, i) => (
+        {[['💰', 'Costo inicial (Cursos)', '€3,000 - €5,000'], ['🕐', 'Duración', '12 - 24 meses'], ['📊', 'Dificultad', 'Fácil']].map((s, i) => (
           <div key={i} style={{ backgroundColor: 'white', borderRadius: '10px', padding: '14px', textAlign: 'center', boxShadow: '0 1px 4px rgba(0,0,0,0.06)' }}>
             <div style={{ fontSize: '22px', marginBottom: '4px' }}>{s[0]}</div>
             <div style={{ color: '#999', fontSize: '10px', marginBottom: '3px' }}>{s[1]}</div>
@@ -419,8 +420,7 @@ export default function Irlanda() {
                 {[
                   ['Daft.ie', 'Portal oficial #1', 'Activa alertas push — responde en menos de 2 horas', 'daft.ie', 'https://daft.ie'],
                   ['Rent.ie', 'Portal oficial #2', 'Filtra por habitaciones compartidas', 'rent.ie', 'https://rent.ie'],
-                  ['Grupos WhatsApp Latinos', 'Networking', 'Habitaciones publicadas antes que en portales — responde en 2 minutos', 'Comunidad L&T', 'https://wa.me/353830691988'],
-                  ['Facebook Groups', 'Social', 'Grupos: Rent in Dublin / Apartments Dublin', 'Facebook', 'https://facebook.com'],
+                  ['Grupos WhatsApp Latinos', 'Networking', 'Únete al grupo de tu país — Mexicanos, Ticos, Colombianos, Argentinos en Irlanda', 'Ver grupos', '#'],
                 ].map((r, i) => (
                   <tr key={i}>
                     <td style={{ ...T.td(i), ...T.bold }}>{r[0]}</td>
@@ -565,7 +565,7 @@ export default function Irlanda() {
             ['INIS / Inmigración', 'IrishImmigration.ie — Para problemas con visa y IRP'],
             ['Revenue / Impuestos', 'Revenue.ie — Para Emergency Tax y trámites fiscales'],
             ['GP (Médico)', 'Busca tu GP más cercano por código postal en hse.ie'],
-            ['Comunidad L&T', 'wa.me/353830691988 — Soporte de la comunidad Lifestyle & Travel'],
+            ['Comunidad L&T', ' Mexicanos, Ticos, Colombianos, Argentinos en Irlanda — '],
           ].map((item, i) => (
             <div key={i} style={{ display: 'flex', gap: '10px', marginBottom: '8px', fontSize: '14px' }}>
               <span style={{ color: '#e8572a', fontWeight: '700', flexShrink: 0, minWidth: '120px' }}>{item[0]}:</span>
@@ -640,18 +640,42 @@ export default function Irlanda() {
           </div>
         </Section>
 
-        {/* CONSULTORIA */}
-        <div style={{ backgroundColor: 'white', borderRadius: '16px', padding: '24px', textAlign: 'center', boxShadow: '0 2px 8px rgba(0,0,0,0.08)', marginTop: '24px' }}>
+      {/* CONSULTORIA */}
+      <div style={{ backgroundColor: 'white', borderRadius: '16px', padding: '24px', textAlign: 'center', boxShadow: '0 2px 8px rgba(0,0,0,0.08)', marginTop: '24px' }}>
           <div style={{ fontSize: '40px', marginBottom: '12px' }}>💬</div>
           <h3 style={{ fontWeight: 'bold', marginBottom: '8px', fontSize: '18px' }}>Consultoría 1 a 1</h3>
           <p style={{ color: '#666', fontSize: '14px', marginBottom: '6px' }}>Armamos tu plan migratorio personalizado con Jimmy.</p>
           <p style={{ color: '#999', fontSize: '13px', marginBottom: '16px' }}>60 minutos · Plan completo · Respuesta en 24h</p>
-          <a href="https://instagram.com/lifestyle.n.travel" target="_blank" rel="noopener noreferrer" style={{ backgroundColor: '#e8572a', color: 'white', borderRadius: '12px', padding: '14px 32px', fontSize: '15px', fontWeight: 'bold', textDecoration: 'none', display: 'inline-block' }}>
-            📸 Contáctanos en Instagram
+          <a href="#" target="_blank" rel="noopener noreferrer"
+            style={{ backgroundColor: '#e8572a', color: 'white', borderRadius: '12px', padding: '14px 32px', fontSize: '15px', fontWeight: 'bold', textDecoration: 'none', display: 'inline-block' }}>
+            📅 Agenda tu llamada de orientación
           </a>
+        </div>
+
+        {/* FEEDBACK */}
+        <div style={{ backgroundColor: 'white', borderRadius: '16px', padding: '24px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)', marginTop: '16px' }}>
+          <div style={{ fontSize: '28px', textAlign: 'center', marginBottom: '8px' }}>📝</div>
+          <h3 style={{ fontWeight: 'bold', fontSize: '15px', textAlign: 'center', marginBottom: '4px' }}>¿Algo desactualizado o una sugerencia?</h3>
+          <p style={{ color: '#888', fontSize: '13px', textAlign: 'center', marginBottom: '16px' }}>Tu feedback nos ayuda a mantener el blueprint al día.</p>
+          <textarea
+            value={feedback}
+            onChange={e => setFeedback(e.target.value)}
+            placeholder="Ej: el precio de la escuela X cambió, o me gustaría ver información sobre..."
+            rows={3}
+            style={{ width: '100%', borderRadius: '10px', border: '1px solid #e5e7eb', padding: '12px', fontSize: '13px', resize: 'none', boxSizing: 'border-box' as const, fontFamily: 'inherit', outline: 'none' }}
+          />
+          <button
+            onClick={() => {
+              if (!feedback.trim()) return
+              window.open(`https://wa.me/353830691988?text=${encodeURIComponent('💡 Feedback Blueprint Irlanda:\n\n' + feedback)}`, '_blank')
+              setFeedback('')
+            }}
+            style={{ marginTop: '10px', width: '100%', backgroundColor: '#1a1a2e', color: 'white', borderRadius: '10px', padding: '12px', fontSize: '14px', fontWeight: '700', border: 'none', cursor: 'pointer' }}>
+            Enviar sugerencia
+          </button>
         </div>
 
       </div>
     </main>
   )
-}
+}  
