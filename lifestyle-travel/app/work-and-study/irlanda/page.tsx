@@ -121,7 +121,6 @@ export default function Irlanda() {
         {/* ESTRATEGIA */}
         <Section id="estrategia" emoji="🏷️" title="Estrategia y Presupuesto: Selección de Academia">
           <Intro text="Elegir bien tu escuela es la decisión financiera más importante de tu proceso. No se trata solo de estudiar — es tu inversión base que determina tu velocidad de inserción laboral. Las escuelas AM son más caras pero te dejan las tardes libres para trabajar. Las PM son más baratas y te dejan las mañanas libres." />
-          
           <SubHead text="🇮🇪 Matriz: Dublín (Sede Central)" />
           <p style={{ fontSize: '13px', color: '#666', marginBottom: '10px', lineHeight: '1.6' }}>18 escuelas verificadas en Dublín ordenadas por precio. AM = turno mañana (más caro), PM = turno tarde (más barato y libera mañanas para trabajar).</p>
           <div style={T.wrap}>
@@ -161,7 +160,6 @@ export default function Irlanda() {
               </tbody>
             </table>
           </div>
-
           <SubHead text="☘️ Matriz: Limerick (Optimización de costos)" />
           <p style={{ fontSize: '13px', color: '#666', marginBottom: '10px', lineHeight: '1.6' }}>Limerick es la segunda ciudad universitaria de Irlanda. Renta más barata (€100-200/mes menos que Dublín), menor competencia laboral y escuelas más económicas. Ideal si tu prioridad es ahorrar.</p>
           <div style={T.wrap}>
@@ -187,7 +185,6 @@ export default function Irlanda() {
               </tbody>
             </table>
           </div>
-
           <div style={{ marginTop: '14px', backgroundColor: '#fef3c7', borderRadius: '8px', padding: '12px', border: '1px solid #fbbf24' }}>
             <p style={{ fontSize: '13px', margin: 0, lineHeight: '1.6' }}>
               <strong>🔵 Solvencia requerida para inglés (25 semanas):</strong> €6,665 (≈ $7,330 USD)<br />
@@ -297,7 +294,6 @@ export default function Irlanda() {
         {/* ATERRIZAJE */}
         <Section id="aterrizaje" emoji="🏦" title="Protocolo de Aterrizaje y Gestión">
           <Intro text="El aterrizaje es la fase más crítica de tu proceso migratorio. Los primeros 30 días determinan si trabajas y cobras rápido o si quemas ahorros esperando trámites. El orden correcto lo es todo: primero el PPS, luego el banco, luego el IRP." />
-          
           <SubHead text="1. PPS Number — Tu número de seguridad social irlandés" />
           <p style={{ fontSize: '14px', color: '#444', lineHeight: '1.7', marginBottom: '12px' }}>Sin PPS tu empleador está obligado a aplicarte Emergency Tax (~40%). Es el primer trámite que debes hacer al llegar. Tarda 2-4 semanas si lo haces bien desde el día 1.</p>
           {[
@@ -311,7 +307,6 @@ export default function Irlanda() {
               <span style={{ lineHeight: '1.6' }}>{s[2] ? <><strong>{s[0]}:</strong> <a href={s[2] as string} target="_blank" rel="noopener noreferrer" style={T.link}>{s[1]}</a></> : <><strong>{s[0]}:</strong> {s[1]}</>}</span>
             </div>
           ))}
-
           <SubHead text="2. IRP — Registro de Inmigración (Obligatorio)" />
           <p style={{ fontSize: '14px', color: '#444', lineHeight: '1.7', marginBottom: '10px' }}>El IRP es tu tarjeta de residencia física. Debes registrarte dentro de los primeros 90 días de llegada. Sin IRP no puedes renovar tu visa ni demostrar estatus legal.</p>
           {[
@@ -534,7 +529,7 @@ export default function Irlanda() {
                   <span style={{ color: '#22c55e' }}>✓</span> {item}
                 </p>
               ))}
-              <p style={{ fontSize: '14px', fontWeight: '700', color: '#e8572a', marginTop: '10px', margin: '10px 0 0' }}>👉 Tiempo real: 1-3 semanas desde que llegas</p>
+              <p style={{ fontSize: '14px', fontWeight: '700', color: '#e8572a', margin: '10px 0 0' }}>👉 Tiempo real: 1-3 semanas desde que llegas</p>
             </div>
             <div style={{ backgroundColor: '#eff6ff', borderRadius: '12px', padding: '16px', border: '1px solid #93c5fd' }}>
               <p style={{ fontSize: '15px', fontWeight: '700', color: '#1e40af', margin: '0 0 10px' }}>2️⃣ Hito 2 — Primer ingreso (primer cobro)</p>
@@ -565,7 +560,7 @@ export default function Irlanda() {
             ['INIS / Inmigración', 'IrishImmigration.ie — Para problemas con visa y IRP'],
             ['Revenue / Impuestos', 'Revenue.ie — Para Emergency Tax y trámites fiscales'],
             ['GP (Médico)', 'Busca tu GP más cercano por código postal en hse.ie'],
-            ['Comunidad L&T', ' Mexicanos, Ticos, Colombianos, Argentinos en Irlanda — '],
+            ['Comunidad L&T', 'Mexicanos, Ticos, Colombianos, Argentinos en Irlanda — ver grupos abajo'],
           ].map((item, i) => (
             <div key={i} style={{ display: 'flex', gap: '10px', marginBottom: '8px', fontSize: '14px' }}>
               <span style={{ color: '#e8572a', fontWeight: '700', flexShrink: 0, minWidth: '120px' }}>{item[0]}:</span>
@@ -599,7 +594,7 @@ export default function Irlanda() {
             <p style={{ fontSize: '13px', color: '#555', margin: 0 }}>
               Mexicanos · Ticos · Colombianos · Argentinos · Venezolanos · Peruanos en Irlanda — links próximamente
             </p>
-          </div> 
+          </div>
           <HackBox text="La mayoría de las crisis en Irlanda se resuelven siguiendo el proceso burocrático correcto. Mantén la calma, usa Google Translate si necesitas, y recuerda: todo tiene solución si sigues el paso a paso. Nunca respondas solo a notificaciones de Revenue o Inmigración — consulta primero." />
         </Section>
 
@@ -640,14 +635,13 @@ export default function Irlanda() {
           </div>
         </Section>
 
-    {/* CONSULTORIA */}
-    <div style={{ backgroundColor: 'white', borderRadius: '16px', padding: '24px', textAlign: 'center', boxShadow: '0 2px 8px rgba(0,0,0,0.08)', marginTop: '24px' }}>
+        {/* CONSULTORIA */}
+        <div style={{ backgroundColor: 'white', borderRadius: '16px', padding: '24px', textAlign: 'center', boxShadow: '0 2px 8px rgba(0,0,0,0.08)', marginTop: '24px' }}>
           <div style={{ fontSize: '40px', marginBottom: '12px' }}>💬</div>
           <h3 style={{ fontWeight: 'bold', marginBottom: '8px', fontSize: '18px' }}>Consultoría 1 a 1</h3>
           <p style={{ color: '#666', fontSize: '14px', marginBottom: '6px' }}>Armamos tu plan migratorio personalizado con Jimmy.</p>
           <p style={{ color: '#999', fontSize: '13px', marginBottom: '16px' }}>60 minutos · Plan completo · Respuesta en 24h</p>
-          <a href="#" target="_blank" rel="noopener noreferrer"
-            style={{ backgroundColor: '#e8572a', color: 'white', borderRadius: '12px', padding: '14px 32px', fontSize: '15px', fontWeight: 'bold', textDecoration: 'none', display: 'inline-block' }}>
+          <a href="#" target="_blank" rel="noopener noreferrer" style={{ backgroundColor: '#e8572a', color: 'white', borderRadius: '12px', padding: '14px 32px', fontSize: '15px', fontWeight: 'bold', textDecoration: 'none', display: 'inline-block' }}>
             📅 Agenda tu llamada de orientación
           </a>
         </div>
@@ -678,4 +672,4 @@ export default function Irlanda() {
       </div>
     </main>
   )
-}  
+}
