@@ -36,7 +36,10 @@ export default function Home() {
 
       {/* HERO */}
       <div style={{
-        background: 'linear-gradient(rgba(0,0,0,0.60), rgba(0,0,0,0.60)), url(https://images.unsplash.com/photo-1488085061387-422e29b40080?q=80&w=1331&auto=format&fit=crop) center/cover',
+        backgroundImage: 'linear-gradient(rgba(0,0,0,0.60), rgba(0,0,0,0.60)), url("https://images.unsplash.com/photo-1488085061387-422e29b40080?q=80&w=1331&auto=format&fit=crop")',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
         padding: '72px 24px',
         textAlign: 'center'
       }}>
@@ -97,7 +100,10 @@ export default function Home() {
               style={{ textDecoration: 'none', color: 'inherit' }}
             >
               <div style={{
-                background: `linear-gradient(rgba(0,0,0,0.50), rgba(0,0,0,0.50)), url(${visa.img}) center/cover`,
+                backgroundImage: `linear-gradient(rgba(0,0,0,0.50), rgba(0,0,0,0.50)), url("${visa.img}")`,
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+                backgroundRepeat: 'no-repeat',
                 borderRadius: '16px',
                 padding: '28px 20px',
                 display: 'flex',
