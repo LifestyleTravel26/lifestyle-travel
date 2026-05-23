@@ -69,7 +69,17 @@ export default function Irlanda() {
       </div>
 
       {/* HERO */}
-      <div style={{ background: 'linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)), url(https://images.unsplash.com/photo-1590089415225-401ed6f9db8e?w=1200) center/cover', padding: '56px 24px', textAlign: 'center' }}>
+      <div
+        style={{
+          backgroundImage:
+            'linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)), url("https://images.unsplash.com/photo-1570875450638-044bca38ec92?q=80&w=1234&auto=format&fit=crop")',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+          padding: '56px 24px',
+          textAlign: 'center',
+        }}
+      >
         <div style={{ fontSize: '52px', marginBottom: '8px' }}>🇮🇪</div>
         <h1 style={{ color: 'white', fontSize: '34px', fontWeight: 'bold', margin: '0 0 6px' }}>Irlanda</h1>
         <p style={{ color: '#ccc', fontSize: '15px', margin: '0 0 14px' }}>Europa · Work and Study</p>
@@ -102,6 +112,7 @@ export default function Irlanda() {
 
         {/* FREE */}
         <Section id="autoridad" emoji="🧭" title="Encabezado de Autoridad" free={true}>
+          <div style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1505576457712-b769c0c0a354?q=80&w=686&auto=format&fit=crop")', backgroundSize: 'cover', backgroundPosition: 'center', borderRadius: '10px', height: '160px', marginBottom: '16px' }} />
           <Intro text="Irlanda es el destino número 1 para latinoamericanos en Europa. Inglés oficial, alta demanda laboral, comunidad latina consolidada y un camino claro hacia la residencia permanente a través del Stamp 1G post-graduación." />
           <p style={{ fontSize: '14px', lineHeight: '1.8', marginBottom: '10px' }}>
             <strong>Stamp 2 (Student Visa):</strong> te permite estudiar a tiempo completo y trabajar <strong>20 horas/semana</strong> durante clases y <strong>40 horas/semana</strong> en vacaciones oficiales.
@@ -385,6 +396,7 @@ export default function Irlanda() {
         {/* VIVIENDA */}
         <Section id="vivienda" emoji="🏠" title="Protocolo de Vivienda e Instalación">
           <Intro text="El mercado de vivienda en Irlanda es extremadamente competitivo, especialmente en Dublín. Las habitaciones buenas se alquilan en horas. No busques suerte — aplica un sistema técnico de búsqueda con alertas en tiempo real y networking desde el primer día." />
+          <div style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1601805824475-527ed396e4d2?q=80&w=764&auto=format&fit=crop")', backgroundSize: 'cover', backgroundPosition: 'center', borderRadius: '10px', height: '160px', marginBottom: '16px' }} />
           <SubHead text="📊 Costos de Alojamiento (Estimación 2025)" />
           <div style={T.wrap}>
             <table style={T.table}>
@@ -432,6 +444,7 @@ export default function Irlanda() {
 
         {/* EMPLEOS */}
         <Section id="empleos" emoji="🛠️" title="Matriz de Empleos de Alta Rotación">
+          <div style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1630784032313-f780ae5532c6?q=80&w=687&auto=format&fit=crop")', backgroundSize: 'cover', backgroundPosition: 'center', borderRadius: '10px', height: '160px', marginBottom: '16px' }} />
           <Intro text="Con Stamp 2 puedes trabajar 20 horas por semana durante el período académico y 40 horas durante las vacaciones oficiales. Estos son los sectores con mayor rotación y acceso más rápido para recién llegados sin experiencia local." />
           <p style={{ fontSize: '14px', color: '#444', lineHeight: '1.7', marginBottom: '12px' }}>
             <strong>Estrategia CV en mano:</strong> imprime 50 copias de tu CV y preséntate en pubs entre 3pm y 5pm (antes del turno de la noche). Pide hablar con el Floor Manager y di: <em>"I'm looking for Floor Staff, I have immediate availability."</em> Este método funciona 3x más que aplicar online.
@@ -600,6 +613,7 @@ export default function Irlanda() {
 
         {/* COUNTRY MATRIX */}
         <Section id="matrix" emoji="🌍" title="Country Comparison Matrix">
+          <div style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1555577508-d4497bed817e?q=80&w=725&auto=format&fit=crop")', backgroundSize: 'cover', backgroundPosition: 'center', borderRadius: '10px', height: '160px', marginBottom: '16px' }} />
           <Intro text="Resumen ejecutivo de Irlanda como destino de migración para latinoamericanos. Úsalo para comparar con otros países del blueprint y tomar la decisión más informada." />
           <div style={T.wrap}>
             <table style={T.table}>
