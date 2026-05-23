@@ -107,7 +107,7 @@ export default function Home() {
             justifyContent: 'center',
             alignItems: 'center',
             textAlign: 'center',
-            padding: '24px',
+            padding: '48px 24px',
           }}
         >
           <h1
@@ -153,12 +153,12 @@ export default function Home() {
           style={{
             fontSize: '22px',
             fontWeight: 'bold',
-            marginBottom: '8px',
+            marginBottom: '4px',
           }}
         >
           Tipos de Visa
         </h2>
-        <p style={{ color: '#666', marginBottom: '24px' }}>
+        <p style={{ color: '#666', marginBottom: '16px' }}>
           Cada uno con su blueprint completo
         </p>
 
@@ -181,7 +181,8 @@ export default function Home() {
                   flexDirection: 'column',
                   justifyContent: 'flex-end',
                   cursor: 'pointer',
-                  height: '150px',
+                  height: '160px',
+                  aspectRatio: '1',
                   boxSizing: 'border-box',
                 }}
               >
