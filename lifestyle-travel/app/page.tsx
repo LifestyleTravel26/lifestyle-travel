@@ -3,51 +3,45 @@ import Link from 'next/link';
 const visaCards = [
   {
     title: 'Visa Work and Study',
-    countries: '9 Países',
     emoji: '🎓',
     href: '/work-and-study',
     backgroundImage:
-      'linear-gradient(rgba(0,0,0,0.50), rgba(0,0,0,0.50)), url("https://images.unsplash.com/photo-1607114751909-976171f71616?q=80&w=1200&auto=format&fit=crop")',
+      'linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)), url("https://images.unsplash.com/photo-1607114751909-976171f71616?q=80&w=1200&auto=format&fit=crop")',
   },
   {
     title: 'Visa Work and Holidays',
-    countries: '6 Países',
     emoji: '🌴',
     href: '/work-and-holidays',
     backgroundImage:
-      'linear-gradient(rgba(0,0,0,0.50), rgba(0,0,0,0.50)), url("https://images.unsplash.com/photo-1476900543704-4312b78632f8?q=80&w=1200&auto=format&fit=crop")',
+      'linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)), url("https://images.unsplash.com/photo-1476900543704-4312b78632f8?q=80&w=1200&auto=format&fit=crop")',
   },
   {
     title: 'Nómada Digital',
-    countries: '8 Países',
     emoji: '💻',
     href: '/nomada-digital',
     backgroundImage:
-      'linear-gradient(rgba(0,0,0,0.50), rgba(0,0,0,0.50)), url("https://images.unsplash.com/photo-1715210471871-590883e6a720?q=80&w=1200&auto=format&fit=crop")',
+      'linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)), url("https://images.unsplash.com/photo-1715210471871-590883e6a720?q=80&w=1200&auto=format&fit=crop")',
   },
   {
     title: 'Visa Au Pair',
-    countries: '5 Países',
     emoji: '👨‍👩‍👧',
     href: '/au-pair',
     backgroundImage:
-      'linear-gradient(rgba(0,0,0,0.50), rgba(0,0,0,0.50)), url("https://images.unsplash.com/photo-1560706981-3f98c4aceb76?q=80&w=1200&auto=format&fit=crop")',
+      'linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)), url("https://images.unsplash.com/photo-1560706981-3f98c4aceb76?q=80&w=1200&auto=format&fit=crop")',
   },
   {
     title: 'Pet Sitting',
-    countries: '4 Países',
     emoji: '🐾',
     href: '/pet-sitting',
     backgroundImage:
-      'linear-gradient(rgba(0,0,0,0.50), rgba(0,0,0,0.50)), url("https://images.unsplash.com/photo-1696875135742-c3044510c9e2?q=80&w=1200&auto=format&fit=crop")',
+      'linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)), url("https://images.unsplash.com/photo-1696875135742-c3044510c9e2?q=80&w=1200&auto=format&fit=crop")',
   },
   {
     title: 'Voluntariado Internacional',
-    countries: 'Global',
     emoji: '🌍',
     href: '/voluntariado',
     backgroundImage:
-      'linear-gradient(rgba(0,0,0,0.50), rgba(0,0,0,0.50)), url("https://images.unsplash.com/photo-1565803974275-dccd2f933cbb?q=80&w=1200&auto=format&fit=crop")',
+      'linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)), url("https://images.unsplash.com/photo-1565803974275-dccd2f933cbb?q=80&w=1200&auto=format&fit=crop")',
   },
 ] as const;
 
@@ -60,40 +54,7 @@ export default function Home() {
         fontFamily: 'sans-serif',
       }}
     >
-      {/* HEADER */}
-      <div
-        style={{
-          backgroundColor: '#1a1a2e',
-          padding: '16px 24px',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'space-between',
-        }}
-      >
-        <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-          <span>✈️</span>
-          <span style={{ color: 'white', fontWeight: 'bold', fontSize: '18px' }}>
-            Lifestyle & Travel
-          </span>
-        </div>
-        <Link
-          href="/signup"
-          style={{
-            backgroundColor: '#e8572a',
-            color: 'white',
-            borderRadius: '8px',
-            padding: '8px 16px',
-            cursor: 'pointer',
-            fontWeight: 'bold',
-            textDecoration: 'none',
-            display: 'inline-block',
-          }}
-        >
-          Comenzar
-        </Link>
-      </div>
-
-      {/* HERO */}
+      {/* HERO (full screen with nav overlay) */}
       <div
         style={{
           backgroundImage:
@@ -101,44 +62,89 @@ export default function Home() {
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
-          padding: '72px 24px',
-          textAlign: 'center',
-          minHeight: '280px',
+          minHeight: '100vh',
+          display: 'flex',
+          flexDirection: 'column',
         }}
       >
-        <h1
+        <div
           style={{
-            color: 'white',
-            fontSize: '32px',
-            fontWeight: 'bold',
-            marginBottom: '16px',
+            padding: '16px 24px',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'space-between',
+            flexShrink: 0,
           }}
         >
-          Tu Camino Para Trabajar en el Extranjero
-        </h1>
-        <p
+          <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+            <span>✈️</span>
+            <span style={{ color: 'white', fontWeight: 'bold', fontSize: '18px' }}>
+              Lifestyle & Travel
+            </span>
+          </div>
+          <Link
+            href="/signup"
+            style={{
+              backgroundColor: '#e8572a',
+              color: 'white',
+              borderRadius: '8px',
+              padding: '8px 16px',
+              cursor: 'pointer',
+              fontWeight: 'bold',
+              textDecoration: 'none',
+              display: 'inline-block',
+            }}
+          >
+            Comenzar
+          </Link>
+        </div>
+
+        <div
           style={{
-            color: '#ccc',
-            fontSize: '16px',
-            marginBottom: '24px',
+            flex: 1,
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'center',
+            alignItems: 'center',
+            textAlign: 'center',
+            padding: '24px',
           }}
         >
-          Blueprints paso a paso para emigrar y empezar a ganar dinero rápidamente.
-        </p>
-        <button
-          style={{
-            backgroundColor: '#e8572a',
-            color: 'white',
-            border: 'none',
-            borderRadius: '12px',
-            padding: '16px 32px',
-            fontSize: '16px',
-            cursor: 'pointer',
-            fontWeight: 'bold',
-          }}
-        >
-          ¿No sabes por dónde comenzar? →
-        </button>
+          <h1
+            style={{
+              color: 'white',
+              fontSize: '32px',
+              fontWeight: 'bold',
+              marginBottom: '16px',
+            }}
+          >
+            Tu Camino Para Trabajar en el Extranjero
+          </h1>
+          <p
+            style={{
+              color: '#ccc',
+              fontSize: '16px',
+              marginBottom: '24px',
+              maxWidth: '520px',
+            }}
+          >
+            Blueprints paso a paso para emigrar y empezar a ganar dinero rápidamente.
+          </p>
+          <button
+            style={{
+              backgroundColor: '#e8572a',
+              color: 'white',
+              border: 'none',
+              borderRadius: '12px',
+              padding: '16px 32px',
+              fontSize: '16px',
+              cursor: 'pointer',
+              fontWeight: 'bold',
+            }}
+          >
+            ¿No sabes por dónde comenzar? →
+          </button>
+        </div>
       </div>
 
       {/* VISA CARDS */}
@@ -156,7 +162,7 @@ export default function Home() {
           Cada uno con su blueprint completo
         </p>
 
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '8px' }}>
           {visaCards.map((visa) => (
             <Link
               key={visa.href}
@@ -170,12 +176,13 @@ export default function Home() {
                   backgroundPosition: 'center',
                   backgroundRepeat: 'no-repeat',
                   borderRadius: '16px',
-                  padding: '20px',
+                  padding: '16px',
                   display: 'flex',
                   flexDirection: 'column',
                   justifyContent: 'flex-end',
                   cursor: 'pointer',
-                  minHeight: '140px',
+                  height: '150px',
+                  boxSizing: 'border-box',
                 }}
               >
                 <span style={{ fontSize: '20px', lineHeight: 1, marginBottom: '6px' }}>
@@ -187,23 +194,9 @@ export default function Home() {
                     fontSize: '16px',
                     color: 'white',
                     lineHeight: 1.3,
-                    marginBottom: '8px',
                   }}
                 >
                   {visa.title}
-                </span>
-                <span
-                  style={{
-                    backgroundColor: '#e8572a',
-                    color: 'white',
-                    borderRadius: '20px',
-                    padding: '4px 12px',
-                    fontSize: '12px',
-                    fontWeight: 'bold',
-                    alignSelf: 'flex-start',
-                  }}
-                >
-                  {visa.countries}
                 </span>
               </div>
             </Link>
