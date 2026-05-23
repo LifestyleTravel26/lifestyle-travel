@@ -162,7 +162,15 @@ export default function Home() {
           Cada uno con su blueprint completo
         </p>
 
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '8px' }}>
+        <div
+          style={{
+            display: 'grid',
+            gridTemplateColumns: '1fr 1fr',
+            gap: '8px',
+            maxWidth: '600px',
+            margin: '0 auto',
+          }}
+        >
           {visaCards.map((visa) => (
             <Link
               key={visa.href}
@@ -176,13 +184,12 @@ export default function Home() {
                   backgroundPosition: 'center',
                   backgroundRepeat: 'no-repeat',
                   borderRadius: '16px',
-                  padding: '16px',
+                  padding: '14px',
                   display: 'flex',
                   flexDirection: 'column',
                   justifyContent: 'flex-end',
                   cursor: 'pointer',
-                  height: '160px',
-                  aspectRatio: '1',
+                  aspectRatio: '4/3',
                   boxSizing: 'border-box',
                 }}
               >
@@ -192,9 +199,10 @@ export default function Home() {
                 <span
                   style={{
                     fontWeight: 'bold',
-                    fontSize: '16px',
+                    fontSize: '15px',
                     color: 'white',
                     lineHeight: 1.3,
+                    textShadow: '0 1px 3px rgba(0,0,0,0.8)',
                   }}
                 >
                   {visa.title}
