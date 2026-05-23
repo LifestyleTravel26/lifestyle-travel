@@ -47,14 +47,56 @@ export default function Irlanda() {
     <a href={url} target="_blank" rel="noopener noreferrer" style={T.link}>{text}</a>
   )
 
+  const imageBanner = (url: string) => ({
+    backgroundImage: `url("${url}")`,
+    backgroundSize: 'cover' as const,
+    backgroundPosition: 'center' as const,
+    backgroundRepeat: 'no-repeat' as const,
+    height: '220px',
+    borderRadius: '12px',
+    marginBottom: '16px',
+  })
+
+  const heroTextShadow = '0 2px 12px rgba(0,0,0,0.9), 0 1px 4px rgba(0,0,0,0.85)'
+
   const Section = ({ id, emoji, title, children, free = false }: any) => (
-    <div style={{ border: free ? '2px solid #e8572a' : '2px solid #f59e0b', borderRadius: '12px', marginBottom: '10px', overflow: 'hidden' }}>
-      <button onClick={() => toggle(id)} style={{ width: '100%', padding: '14px 20px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', backgroundColor: 'white', border: 'none', cursor: 'pointer' }}>
+    <div
+      style={{
+        border: free ? '2px solid #e8572a' : '2px solid #f59e0b',
+        borderRadius: '12px',
+        marginBottom: '10px',
+        overflow: 'hidden',
+        display: 'flex',
+        flexDirection: 'column',
+      }}
+    >
+      <button
+        onClick={() => toggle(id)}
+        style={{
+          width: '100%',
+          padding: '14px 20px',
+          display: 'flex',
+          justifyContent: 'space-between',
+          alignItems: 'center',
+          backgroundColor: 'white',
+          border: 'none',
+          cursor: 'pointer',
+          flexShrink: 0,
+        }}
+      >
         <span style={{ fontWeight: '600', fontSize: '15px' }}>{emoji} {title}</span>
         <span style={{ fontSize: '16px', color: '#999' }}>{openSection === id ? '∧' : '∨'}</span>
       </button>
       {openSection === id && (
-        <div style={{ padding: '20px', backgroundColor: 'white', borderTop: '1px solid #f5f5f5' }}>{children}</div>
+        <div
+          style={{
+            padding: '20px',
+            backgroundColor: 'white',
+            borderTop: '1px solid #f5f5f5',
+          }}
+        >
+          {children}
+        </div>
       )}
     </div>
   )
@@ -72,7 +114,7 @@ export default function Irlanda() {
       <div
         style={{
           backgroundImage:
-            'linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)), url("https://images.unsplash.com/photo-1570875450638-044bca38ec92?q=80&w=1234&auto=format&fit=crop")',
+            'url("https://images.unsplash.com/photo-1570875450638-044bca38ec92?q=80&w=1234&auto=format&fit=crop")',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
@@ -80,10 +122,41 @@ export default function Irlanda() {
           textAlign: 'center',
         }}
       >
-        <div style={{ fontSize: '52px', marginBottom: '8px' }}>🇮🇪</div>
-        <h1 style={{ color: 'white', fontSize: '34px', fontWeight: 'bold', margin: '0 0 6px' }}>Irlanda</h1>
-        <p style={{ color: '#ccc', fontSize: '15px', margin: '0 0 14px' }}>Europa · Work and Study</p>
-        <span style={{ backgroundColor: '#22c55e', color: 'white', borderRadius: '20px', padding: '6px 18px', fontSize: '13px', fontWeight: 'bold' }}>Fácil</span>
+        <div style={{ fontSize: '52px', marginBottom: '8px', textShadow: heroTextShadow }}>🇮🇪</div>
+        <h1
+          style={{
+            color: 'white',
+            fontSize: '34px',
+            fontWeight: 'bold',
+            margin: '0 0 6px',
+            textShadow: heroTextShadow,
+          }}
+        >
+          Irlanda
+        </h1>
+        <p
+          style={{
+            color: 'white',
+            fontSize: '15px',
+            margin: '0 0 14px',
+            textShadow: heroTextShadow,
+          }}
+        >
+          Europa · Work and Study
+        </p>
+        <span
+          style={{
+            backgroundColor: '#22c55e',
+            color: 'white',
+            borderRadius: '20px',
+            padding: '6px 18px',
+            fontSize: '13px',
+            fontWeight: 'bold',
+            boxShadow: '0 2px 8px rgba(0,0,0,0.35)',
+          }}
+        >
+          Fácil
+        </span>
       </div>
 
       {/* STATS */}
@@ -112,7 +185,7 @@ export default function Irlanda() {
 
         {/* FREE */}
         <Section id="autoridad" emoji="🧭" title="Encabezado de Autoridad" free={true}>
-          <div style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1505576457712-b769c0c0a354?q=80&w=686&auto=format&fit=crop")', backgroundSize: 'cover', backgroundPosition: 'center', borderRadius: '10px', height: '160px', marginBottom: '16px' }} />
+          <div style={imageBanner('https://images.unsplash.com/photo-1505576457712-b769c0c0a354?q=80&w=686&auto=format&fit=crop')} />
           <Intro text="Irlanda es el destino número 1 para latinoamericanos en Europa. Inglés oficial, alta demanda laboral, comunidad latina consolidada y un camino claro hacia la residencia permanente a través del Stamp 1G post-graduación." />
           <p style={{ fontSize: '14px', lineHeight: '1.8', marginBottom: '10px' }}>
             <strong>Stamp 2 (Student Visa):</strong> te permite estudiar a tiempo completo y trabajar <strong>20 horas/semana</strong> durante clases y <strong>40 horas/semana</strong> en vacaciones oficiales.
@@ -396,7 +469,7 @@ export default function Irlanda() {
         {/* VIVIENDA */}
         <Section id="vivienda" emoji="🏠" title="Protocolo de Vivienda e Instalación">
           <Intro text="El mercado de vivienda en Irlanda es extremadamente competitivo, especialmente en Dublín. Las habitaciones buenas se alquilan en horas. No busques suerte — aplica un sistema técnico de búsqueda con alertas en tiempo real y networking desde el primer día." />
-          <div style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1601805824475-527ed396e4d2?q=80&w=764&auto=format&fit=crop")', backgroundSize: 'cover', backgroundPosition: 'center', borderRadius: '10px', height: '160px', marginBottom: '16px' }} />
+          <div style={imageBanner('https://images.unsplash.com/photo-1601805824475-527ed396e4d2?q=80&w=764&auto=format&fit=crop')} />
           <SubHead text="📊 Costos de Alojamiento (Estimación 2025)" />
           <div style={T.wrap}>
             <table style={T.table}>
@@ -444,7 +517,7 @@ export default function Irlanda() {
 
         {/* EMPLEOS */}
         <Section id="empleos" emoji="🛠️" title="Matriz de Empleos de Alta Rotación">
-          <div style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1630784032313-f780ae5532c6?q=80&w=687&auto=format&fit=crop")', backgroundSize: 'cover', backgroundPosition: 'center', borderRadius: '10px', height: '160px', marginBottom: '16px' }} />
+          <div style={imageBanner('https://images.unsplash.com/photo-1630784032313-f780ae5532c6?q=80&w=687&auto=format&fit=crop')} />
           <Intro text="Con Stamp 2 puedes trabajar 20 horas por semana durante el período académico y 40 horas durante las vacaciones oficiales. Estos son los sectores con mayor rotación y acceso más rápido para recién llegados sin experiencia local." />
           <p style={{ fontSize: '14px', color: '#444', lineHeight: '1.7', marginBottom: '12px' }}>
             <strong>Estrategia CV en mano:</strong> imprime 50 copias de tu CV y preséntate en pubs entre 3pm y 5pm (antes del turno de la noche). Pide hablar con el Floor Manager y di: <em>"I'm looking for Floor Staff, I have immediate availability."</em> Este método funciona 3x más que aplicar online.
@@ -613,7 +686,7 @@ export default function Irlanda() {
 
         {/* COUNTRY MATRIX */}
         <Section id="matrix" emoji="🌍" title="Country Comparison Matrix">
-          <div style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1555577508-d4497bed817e?q=80&w=725&auto=format&fit=crop")', backgroundSize: 'cover', backgroundPosition: 'center', borderRadius: '10px', height: '160px', marginBottom: '16px' }} />
+          <div style={imageBanner('https://images.unsplash.com/photo-1555577508-d4497bed817e?q=80&w=725&auto=format&fit=crop')} />
           <Intro text="Resumen ejecutivo de Irlanda como destino de migración para latinoamericanos. Úsalo para comparar con otros países del blueprint y tomar la decisión más informada." />
           <div style={T.wrap}>
             <table style={T.table}>
