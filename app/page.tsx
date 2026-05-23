@@ -36,8 +36,8 @@ export default function Home() {
 
       {/* HERO */}
       <div style={{
-        backgroundColor: '#1a1a2e',
-        padding: '48px 24px',
+        background: 'linear-gradient(rgba(0,0,0,0.60), rgba(0,0,0,0.60)), url(https://images.unsplash.com/photo-1488085061387-422e29b40080?w=1200) center/cover',
+        padding: '72px 24px',
         textAlign: 'center'
       }}>
         <h1 style={{
@@ -84,12 +84,12 @@ export default function Home() {
 
         <div style={{ display: 'grid', gap: '16px' }}>
           {[
-            { title: 'Visa Work and Study', countries: '9 Países', emoji: '🎓', href: '/work-and-study' },
-            { title: 'Visa Work and Holidays', countries: '6 Países', emoji: '🌴', href: '/work-and-holidays' },
-            { title: 'Nómada Digital', countries: '8 Países', emoji: '💻', href: '/nomada-digital' },
-            { title: 'Visa Au Pair', countries: '5 Países', emoji: '👨‍👩‍👧', href: '/au-pair' },
-            { title: 'Pet Sitting', countries: '4 Países', emoji: '🐾', href: '/pet-sitting' },
-            { title: 'Voluntariado Internacional', countries: 'Global', emoji: '🌍', href: '/voluntariado' },
+            { title: 'Visa Work and Study', countries: '9 Países', emoji: '🎓', href: '/work-and-study', img: 'https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=800' },
+            { title: 'Visa Work and Holidays', countries: '6 Países', emoji: '🌴', href: '/work-and-holidays', img: 'https://images.unsplash.com/photo-1506929562872-bb421503ef21?w=800' },
+            { title: 'Nómada Digital', countries: '8 Países', emoji: '💻', href: '/nomada-digital', img: 'https://images.unsplash.com/photo-1527689368864-3a821dbccc34?w=800' },
+            { title: 'Visa Au Pair', countries: '5 Países', emoji: '👨‍👩‍👧', href: '/au-pair', img: 'https://images.unsplash.com/photo-1536640712-4d4c36ff0e4e?w=800' },
+            { title: 'Pet Sitting', countries: '4 Países', emoji: '🐾', href: '/pet-sitting', img: 'https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=800' },
+            { title: 'Voluntariado Internacional', countries: 'Global', emoji: '🌍', href: '/voluntariado', img: 'https://images.unsplash.com/photo-1559027615-cd4628902d4a?w=800' },
           ].map((visa, i) => (
             <Link
               key={i}
@@ -97,18 +97,18 @@ export default function Home() {
               style={{ textDecoration: 'none', color: 'inherit' }}
             >
               <div style={{
-                backgroundColor: 'white',
+                background: `linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)), url(${visa.img}) center/cover`,
                 borderRadius: '16px',
-                padding: '20px',
+                padding: '24px 20px',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'space-between',
-                boxShadow: '0 2px 8px rgba(0,0,0,0.08)',
-                cursor: 'pointer'
+                cursor: 'pointer',
+                minHeight: '80px',
               }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
                   <span style={{ fontSize: '28px' }}>{visa.emoji}</span>
-                  <span style={{ fontWeight: 'bold', fontSize: '16px' }}>{visa.title}</span>
+                  <span style={{ fontWeight: 'bold', fontSize: '16px', color: 'white' }}>{visa.title}</span>
                 </div>
                 <span style={{
                   backgroundColor: '#e8572a',
@@ -116,7 +116,8 @@ export default function Home() {
                   borderRadius: '20px',
                   padding: '4px 12px',
                   fontSize: '12px',
-                  fontWeight: 'bold'
+                  fontWeight: 'bold',
+                  whiteSpace: 'nowrap' as const,
                 }}>
                   {visa.countries}
                 </span>
