@@ -170,20 +170,28 @@ export default function Home() {
                   backgroundPosition: 'center',
                   backgroundRepeat: 'no-repeat',
                   borderRadius: '16px',
-                  padding: '28px 20px',
+                  padding: '20px',
                   display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'space-between',
+                  flexDirection: 'column',
+                  justifyContent: 'flex-end',
                   cursor: 'pointer',
-                  minHeight: '160px',
+                  minHeight: '140px',
                 }}
               >
-                <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-                  <span style={{ fontSize: '28px' }}>{visa.emoji}</span>
-                  <span style={{ fontWeight: 'bold', fontSize: '16px', color: 'white' }}>
-                    {visa.title}
-                  </span>
-                </div>
+                <span style={{ fontSize: '20px', lineHeight: 1, marginBottom: '6px' }}>
+                  {visa.emoji}
+                </span>
+                <span
+                  style={{
+                    fontWeight: 'bold',
+                    fontSize: '16px',
+                    color: 'white',
+                    lineHeight: 1.3,
+                    marginBottom: '8px',
+                  }}
+                >
+                  {visa.title}
+                </span>
                 <span
                   style={{
                     backgroundColor: '#e8572a',
@@ -192,7 +200,7 @@ export default function Home() {
                     padding: '4px 12px',
                     fontSize: '12px',
                     fontWeight: 'bold',
-                    whiteSpace: 'nowrap',
+                    alignSelf: 'flex-start',
                   }}
                 >
                   {visa.countries}
