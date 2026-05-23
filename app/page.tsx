@@ -156,7 +156,7 @@ export default function Home() {
           Cada uno con su blueprint completo
         </p>
 
-        <div style={{ display: 'grid', gap: '16px' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px' }}>
           {visaCards.map((visa) => (
             <Link
               key={visa.href}
@@ -175,7 +175,7 @@ export default function Home() {
                   alignItems: 'center',
                   justifyContent: 'space-between',
                   cursor: 'pointer',
-                  minHeight: '80px',
+                  minHeight: '160px',
                 }}
               >
                 <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
