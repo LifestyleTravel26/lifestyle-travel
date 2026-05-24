@@ -104,59 +104,100 @@ export default function Irlanda() {
   return (
     <main style={{ minHeight: '100vh', backgroundColor: '#f8f7f4', fontFamily: 'Inter, system-ui, sans-serif' }}>
 
-      {/* HEADER */}
-      <div style={{ backgroundColor: '#1a1a2e', padding: '14px 24px', display: 'flex', alignItems: 'center', gap: '12px' }}>
-        <a href="/work-and-study" style={{ color: 'white', textDecoration: 'none', fontSize: '20px' }}>←</a>
-        <span style={{ color: 'white', fontWeight: 'bold', fontSize: '16px' }}>✈️ Lifestyle & Travel</span>
-      </div>
-
       {/* HERO */}
       <div
         style={{
+          position: 'relative',
+          height: '55vh',
           backgroundImage:
-            'url("https://images.unsplash.com/photo-1570875450638-044bca38ec92?q=80&w=1234&auto=format&fit=crop")',
+            'linear-gradient(rgba(0,0,0,0.40), rgba(0,0,0,0.40)), url("https://images.unsplash.com/photo-1570875450638-044bca38ec92?q=80&w=1234&auto=format&fit=crop")',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
-          padding: '56px 24px',
-          textAlign: 'center',
+          display: 'flex',
+          flexDirection: 'column',
         }}
       >
-        <div style={{ fontSize: '52px', marginBottom: '8px', textShadow: heroTextShadow }}>🇮🇪</div>
-        <h1
+        <div
           style={{
-            color: 'white',
-            fontSize: '34px',
-            fontWeight: 'bold',
-            margin: '0 0 6px',
-            textShadow: heroTextShadow,
+            padding: '16px 24px',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'space-between',
           }}
         >
-          Irlanda
-        </h1>
-        <p
+          <a
+            href="/work-and-study"
+            style={{
+              color: 'white',
+              textDecoration: 'none',
+              display: 'flex',
+              alignItems: 'center',
+              gap: '8px',
+            }}
+          >
+            <span style={{ fontSize: '20px' }}>←</span>
+            <span style={{ fontWeight: 'bold', fontSize: '18px' }}>✈️ Lifestyle & Travel</span>
+          </a>
+        </div>
+        <div
           style={{
-            color: 'white',
-            fontSize: '15px',
-            margin: '0 0 14px',
-            textShadow: heroTextShadow,
+            flex: 1,
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'center',
+            alignItems: 'center',
+            textAlign: 'center',
+            padding: '0 24px 24px',
           }}
         >
-          Europa · Work and Study
-        </p>
-        <span
+          <div style={{ fontSize: '52px', marginBottom: '8px', textShadow: heroTextShadow }}>🇮🇪</div>
+          <h1
+            style={{
+              color: 'white',
+              fontSize: '34px',
+              fontWeight: 'bold',
+              margin: '0 0 6px',
+              textShadow: heroTextShadow,
+            }}
+          >
+            Irlanda
+          </h1>
+          <p
+            style={{
+              color: 'white',
+              fontSize: '15px',
+              margin: '0 0 14px',
+              textShadow: heroTextShadow,
+            }}
+          >
+            Europa · Work and Study
+          </p>
+          <span
+            style={{
+              backgroundColor: '#22c55e',
+              color: 'white',
+              borderRadius: '20px',
+              padding: '6px 18px',
+              fontSize: '13px',
+              fontWeight: 'bold',
+              boxShadow: '0 2px 8px rgba(0,0,0,0.35)',
+            }}
+          >
+            Fácil
+          </span>
+        </div>
+        <div
           style={{
-            backgroundColor: '#22c55e',
-            color: 'white',
-            borderRadius: '20px',
-            padding: '6px 18px',
-            fontSize: '13px',
-            fontWeight: 'bold',
-            boxShadow: '0 2px 8px rgba(0,0,0,0.35)',
+            position: 'absolute',
+            bottom: 0,
+            left: 0,
+            right: 0,
+            height: '60px',
+            background: 'linear-gradient(to bottom, transparent, #f8f7f4)',
+            pointerEvents: 'none',
           }}
-        >
-          Fácil
-        </span>
+        />
       </div>
 
       {/* STATS */}
