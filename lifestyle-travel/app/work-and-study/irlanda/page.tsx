@@ -226,7 +226,7 @@ export default function Irlanda() {
 
         {/* FREE */}
         <Section id="autoridad" emoji="🧭" title="Encabezado de Autoridad" free={true}>
-          <div style={imageBanner('https://images.unsplash.com/photo-1505576457712-b769c0c0a354?q=80&w=686&auto=format&fit=crop')} />
+          <div style={imageBanner('https://images.unsplash.com/photo-1601805824475-527ed396e4d2?q=80&w=764&auto=format&fit=crop')} />
           <Intro text="Irlanda es el destino número 1 para latinoamericanos en Europa. Inglés oficial, alta demanda laboral, comunidad latina consolidada y un camino claro hacia la residencia permanente a través del Stamp 1G post-graduación." />
           <p style={{ fontSize: '14px', lineHeight: '1.8', marginBottom: '10px' }}>
             <strong>Stamp 2 (Student Visa):</strong> te permite estudiar a tiempo completo y trabajar <strong>20 horas/semana</strong> durante clases y <strong>40 horas/semana</strong> en vacaciones oficiales.
@@ -510,7 +510,7 @@ export default function Irlanda() {
         {/* VIVIENDA */}
         <Section id="vivienda" emoji="🏠" title="Protocolo de Vivienda e Instalación">
           <Intro text="El mercado de vivienda en Irlanda es extremadamente competitivo, especialmente en Dublín. Las habitaciones buenas se alquilan en horas. No busques suerte — aplica un sistema técnico de búsqueda con alertas en tiempo real y networking desde el primer día." />
-          <div style={imageBanner('https://images.unsplash.com/photo-1601805824475-527ed396e4d2?q=80&w=764&auto=format&fit=crop')} />
+          <div style={imageBanner('https://images.unsplash.com/photo-1505576457712-b769c0c0a354?q=80&w=686&auto=format&fit=crop')} />
           <SubHead text="📊 Costos de Alojamiento (Estimación 2025)" />
           <div style={T.wrap}>
             <table style={T.table}>
