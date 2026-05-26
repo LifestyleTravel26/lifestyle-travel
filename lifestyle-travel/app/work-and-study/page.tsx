@@ -92,7 +92,7 @@ export default function WorkAndStudy() {
       <div style={{
         position: 'relative',
         height: '55vh',
-        backgroundImage: 'linear-gradient(rgba(0,0,0,0.40), rgba(0,0,0,0.40)), url("https://images.unsplash.com/photo-1607114751909-976171f71616?q=80&w=1200&auto=format&fit=crop")',
+        backgroundImage: 'linear-gradient(rgba(0,0,0,0.20), rgba(0,0,0,0.20)), url("https://images.unsplash.com/photo-1607114751909-976171f71616?q=80&w=1200&auto=format&fit=crop")',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
@@ -125,7 +125,7 @@ export default function WorkAndStudy() {
           {countries.map((country) => (
             <Link key={country.href} href={country.href} style={{ textDecoration: 'none', color: 'inherit' }}>
               <div style={{
-                backgroundImage: `linear-gradient(to right, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.30) 50%, rgba(0,0,0,0.55) 100%), url("${country.img}")`,
+                backgroundImage: `linear-gradient(to right, rgba(0,0,0,0.25) 0%, rgba(0,0,0,0.10) 50%, rgba(0,0,0,0.25) 100%), url("${country.img}")`,
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
                 backgroundRepeat: 'no-repeat',
