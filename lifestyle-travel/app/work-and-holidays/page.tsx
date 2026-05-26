@@ -153,7 +153,7 @@ export default function WorkAndHolidays() {
       <div style={{
         position: 'relative',
         height: '55vh',
-        backgroundImage: 'linear-gradient(rgba(0,0,0,0.20), rgba(0,0,0,0.20)), url("https://plus.unsplash.com/premium_photo-1722349520010-a21efb9c3bcc?q=80&w=687&auto=format&fit=crop")',
+        backgroundImage: 'linear-gradient(rgba(0,0,0,0.20), rgba(0,0,0,0.20)), url("https://images.unsplash.com/photo-1476900543704-4312b78632f8?q=80HERO_TEMPw=1200HERO_TEMPauto=formatHERO_TEMPfit=crop")',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
@@ -258,6 +258,7 @@ export default function WorkAndHolidays() {
 
         {/* ACCORDION SECTIONS */}
         <Section id="como" emoji="🛂" title="Cómo Aplicar — 3 Sistemas">
+          <div style={{ backgroundImage: 'url("https://plus.unsplash.com/premium_photo-1722349520010-a21efb9c3bcc?q=80&w=687&auto=format&fit=crop")', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', height: '160px', borderRadius: '10px', marginBottom: '14px' }} />
           <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
             {[
               { n: '1️⃣', title: 'Aplicación Directa (First Come, First Served)', desc: 'Las visas se otorgan al primero que aplica cuando abren los cupos. Pueden llenarse en horas.', examples: 'Australia, Nueva Zelanda', color: '#22c55e' },
