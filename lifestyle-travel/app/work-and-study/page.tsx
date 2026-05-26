@@ -135,7 +135,7 @@ export default function WorkAndStudy() {
                 alignItems: 'center',
                 justifyContent: 'space-between',
                 cursor: 'pointer',
-                minHeight: '72px',
+                minHeight: '110px',
               }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
                   <span style={{ fontSize: '28px' }}>{country.flag}</span>
