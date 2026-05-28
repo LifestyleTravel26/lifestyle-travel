@@ -123,7 +123,7 @@ export function LoginForm() {
           color: '#e8572a',
           fontSize: '13px',
           textDecoration: 'none',
-          marginTop: '-10px',
+          marginTop: '-16px',
           marginBottom: '16px',
         }}
       >
