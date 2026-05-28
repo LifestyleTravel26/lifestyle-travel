@@ -89,12 +89,24 @@ export function LoginForm() {
           placeholder="tu@email.com"
         />
 
-        <label
-          htmlFor="password"
-          style={{ display: 'block', fontWeight: 'bold', marginBottom: '6px', fontSize: '14px' }}
+        <div
+          style={{
+            display: 'flex',
+            justifyContent: 'space-between',
+            alignItems: 'center',
+            marginBottom: '6px',
+          }}
         >
-          Contraseña
-        </label>
+          <label htmlFor="password" style={{ fontWeight: 'bold', fontSize: '14px' }}>
+            Contraseña
+          </label>
+          <Link
+            href="/forgot-password"
+            style={{ color: '#e8572a', fontSize: '13px', textDecoration: 'none' }}
+          >
+            ¿Olvidaste tu contraseña?
+          </Link>
+        </div>
         <input
           id="password"
           type="password"
