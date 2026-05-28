@@ -64,7 +64,7 @@ export function AuthLayout({ title, subtitle, children }: AuthLayoutProps) {
         <img
           src="/logo.png"
           alt="Lifestyle & Travel"
-          style={{ height: '70px', maxWidth: '160px', objectFit: 'contain', marginBottom: '16px' }}
+          style={{ height: '70px', maxWidth: '160px', objectFit: 'contain', borderRadius: '50%', marginBottom: '16px' }}
         />
         <h1 style={{ color: 'white', fontSize: '28px', fontWeight: 'bold', margin: '0 0 10px', textShadow: '0 2px 8px rgba(0,0,0,0.5)' }}>
           {title}
