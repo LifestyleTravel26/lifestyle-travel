@@ -42,11 +42,18 @@ export function AuthLayout({ title, subtitle, children }: AuthLayoutProps) {
       <div
         style={{
           backgroundColor: '#1a1a2e',
-          padding: '40px 24px',
+          padding: '32px 24px 40px',
           textAlign: 'center',
         }}
       >
-        <div style={{ fontSize: '48px', marginBottom: '12px' }}>✈️</div>
+        {/* Logo */}
+        <div style={{ marginBottom: '20px', display: 'flex', justifyContent: 'center' }}>
+          <img
+            src="/logo.png"
+            alt="Lifestyle & Travel"
+            style={{ height: '90px', objectFit: 'contain' }}
+          />
+        </div>
         <h1
           style={{
             color: 'white',
