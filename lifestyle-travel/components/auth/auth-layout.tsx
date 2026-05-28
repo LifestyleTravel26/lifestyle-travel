@@ -60,7 +60,7 @@ export function AuthLayout({ title, subtitle, children }: AuthLayoutProps) {
           <img
             src="/logo.png"
             alt="Lifestyle & Travel"
-            style={{ height: '90px', objectFit: 'contain' }}
+            style={{ height: '70px', maxWidth: '160px', objectFit: 'contain' }}
           />
         </div>
         <h1

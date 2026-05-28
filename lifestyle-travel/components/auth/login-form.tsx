@@ -89,24 +89,12 @@ export function LoginForm() {
           placeholder="tu@email.com"
         />
 
-        <div
-          style={{
-            display: 'flex',
-            justifyContent: 'space-between',
-            alignItems: 'center',
-            marginBottom: '6px',
-          }}
+        <label
+          htmlFor="password"
+          style={{ display: 'block', fontWeight: 'bold', marginBottom: '6px', fontSize: '14px' }}
         >
-          <label htmlFor="password" style={{ fontWeight: 'bold', fontSize: '14px' }}>
-            Contraseña
-          </label>
-          <Link
-            href="/forgot-password"
-            style={{ color: '#e8572a', fontSize: '13px', textDecoration: 'none' }}
-          >
-            ¿Olvidaste tu contraseña?
-          </Link>
-        </div>
+          Contraseña
+        </label>
         <input
           id="password"
           type="password"
@@ -117,6 +105,20 @@ export function LoginForm() {
           style={inputStyle}
           placeholder="••••••••"
         />
+        <Link
+          href="/forgot-password"
+          style={{
+            display: 'block',
+            textAlign: 'right',
+            color: '#e8572a',
+            fontSize: '13px',
+            textDecoration: 'none',
+            marginTop: '-10px',
+            marginBottom: '16px',
+          }}
+        >
+          ¿Olvidaste tu contraseña?
+        </Link>
 
         {error && (
           <p style={{ color: '#ef4444', fontSize: '14px', marginBottom: '16px' }}>{error}</p>
