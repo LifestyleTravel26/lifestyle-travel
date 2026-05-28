@@ -58,7 +58,7 @@ export function LoginForm() {
       return;
     }
 
-    router.push(redirectTo);
+    router.push('/');
     router.refresh();
   }
 
