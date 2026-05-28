@@ -110,25 +110,25 @@ export function LoginForm() {
           <p style={{ color: '#ef4444', fontSize: '14px', marginBottom: '16px' }}>{error}</p>
         )}
 
-        <button type="submit" disabled={loading} style={buttonStyle}>
+<button type="submit" disabled={loading} style={{ ...buttonStyle, marginBottom: '0px' }}>     
           {loading ? 'Iniciando sesión...' : 'Iniciar sesión'}
         </button>
       </form>
 
       <Link
-        href="/forgot-password"
-        style={{
-          display: 'block',
-          textAlign: 'right',
-          color: '#e8572a',
-          fontSize: '13px',
-          textDecoration: 'none',
-          marginTop: '-12px',
-          marginBottom: '16px',
-        }}
-      >
-        ¿Olvidaste tu contraseña?
-      </Link>
+  href="/forgot-password"
+  style={{
+    display: 'block',
+    textAlign: 'center',
+    color: '#e8572a',
+    fontSize: '13px',
+    textDecoration: 'none',
+    marginTop: '16px',
+    marginBottom: '8px',
+  }}
+>
+  ¿Olvidaste tu contraseña?
+</Link>
 
       <p style={{ textAlign: 'center', marginTop: '20px', color: '#666', fontSize: '14px' }}>
         ¿No tienes cuenta?{' '}
