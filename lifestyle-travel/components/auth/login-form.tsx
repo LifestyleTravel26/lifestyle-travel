@@ -11,7 +11,7 @@ const inputStyle: React.CSSProperties = {
   borderRadius: '8px',
   border: '1px solid #ddd',
   fontSize: '15px',
-  marginBottom: '16px',
+  marginBottom: '0px',
   boxSizing: 'border-box',
 };
 
@@ -123,7 +123,7 @@ export function LoginForm() {
           color: '#e8572a',
           fontSize: '13px',
           textDecoration: 'none',
-          marginTop: '-16px',
+          marginTop: '-12px',
           marginBottom: '16px',
         }}
       >
