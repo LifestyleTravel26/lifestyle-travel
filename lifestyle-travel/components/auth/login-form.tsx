@@ -105,20 +105,6 @@ export function LoginForm() {
           style={inputStyle}
           placeholder="••••••••"
         />
-        <Link
-          href="/forgot-password"
-          style={{
-            display: 'block',
-            textAlign: 'right',
-            color: '#e8572a',
-            fontSize: '13px',
-            textDecoration: 'none',
-            marginTop: '-10px',
-            marginBottom: '16px',
-          }}
-        >
-          ¿Olvidaste tu contraseña?
-        </Link>
 
         {error && (
           <p style={{ color: '#ef4444', fontSize: '14px', marginBottom: '16px' }}>{error}</p>
@@ -128,6 +114,21 @@ export function LoginForm() {
           {loading ? 'Iniciando sesión...' : 'Iniciar sesión'}
         </button>
       </form>
+
+      <Link
+        href="/forgot-password"
+        style={{
+          display: 'block',
+          textAlign: 'right',
+          color: '#e8572a',
+          fontSize: '13px',
+          textDecoration: 'none',
+          marginTop: '-10px',
+          marginBottom: '16px',
+        }}
+      >
+        ¿Olvidaste tu contraseña?
+      </Link>
 
       <p style={{ textAlign: 'center', marginTop: '20px', color: '#666', fontSize: '14px' }}>
         ¿No tienes cuenta?{' '}
