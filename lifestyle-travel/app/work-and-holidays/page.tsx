@@ -114,9 +114,9 @@ const destinationInfo = [
   { name: 'Australia', flag: '🇦🇺', duration: '12 meses (extensible)', age: '18 – 35', system: 'Aplicación directa', difficulty: 'Baja', funds: '~$5,000 AUD', salary: '$20 – $30 AUD/hora', color: '#22c55e' },
   { name: 'Nueva Zelanda', flag: '🇳🇿', duration: '12 meses', age: '18 – 30', system: 'Aplicación directa', difficulty: 'Baja', funds: '~$4,200 NZD', salary: '$18 – $25 NZD/hora', color: '#22c55e' },
   { name: 'Canadá', flag: '🇨🇦', duration: '12 – 24 meses', age: '18 – 35', system: 'Pool / sorteo', difficulty: 'Alta', funds: '~$2,500 CAD', salary: '$15 – $22 CAD/hora', color: '#ef4444' },
-  { name: 'Irlanda', flag: '🇮🇪', duration: '12 meses', age: '18 – 30', system: 'Programa bilateral', difficulty: 'Media', funds: '€2,500 – €3,000', salary: '€1,700 – €2,400/mes', color: '#f59e0b' },
-  { name: 'Alemania', flag: '🇩🇪', duration: '12 meses', age: '18 – 30', system: 'Consulado', difficulty: 'Baja', funds: '€2,000 – €3,000', salary: '€1,400 – €2,000/mes', color: '#22c55e' },
-  { name: 'Francia', flag: '🇫🇷', duration: '12 meses', age: '18 – 30', system: 'Consulado', difficulty: 'Media', funds: '€2,500 – €3,500', salary: '€1,500 – €2,200/mes', color: '#f59e0b' },
+  { name: 'Irlanda', flag: '🇮🇪', duration: '12 meses', age: '18 – 30', system: 'Programa bilateral', difficulty: 'Media', funds: '€2,500 – €3,000', salary: '€13.50 – €16/hora', color: '#f59e0b' },
+  { name: 'Alemania', flag: '🇩🇪', duration: '12 meses', age: '18 – 30', system: 'Consulado', difficulty: 'Baja', funds: '€2,000 – €3,000', salary: '€13.90 – €17/hora', color: '#22c55e' },
+  { name: 'Francia', flag: '🇫🇷', duration: '12 meses', age: '18 – 30', system: 'Consulado', difficulty: 'Media', funds: '€2,500 – €3,500', salary: '€12.02 – €15/hora', color: '#f59e0b' },
 ]
 
 export default function WorkAndHolidays() {
