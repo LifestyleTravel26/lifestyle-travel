@@ -24,7 +24,7 @@ export default function Home() {
         <div style={{ flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', textAlign: 'center', padding: '0 24px 24px' }}>
           <h1 style={{ color: 'white', fontSize: '28px', fontWeight: 'bold', marginBottom: '12px', lineHeight: '1.3' }}>Tu Camino Para Trabajar en el Extranjero</h1>
           <p style={{ color: '#ddd', fontSize: '14px', marginBottom: '20px', maxWidth: '400px' }}>Blueprints paso a paso para emigrar y empezar a ganar dinero rápidamente.</p>
-          <button style={{ backgroundColor: '#e8572a', color: 'white', border: 'none', borderRadius: '12px', padding: '14px 28px', fontSize: '15px', cursor: 'pointer', fontWeight: 'bold', width: '100%', maxWidth: '360px' }}>¿No sabes por dónde comenzar? →</button>
+          <Link href="/quiz" style={{ backgroundColor: '#e8572a', color: 'white', borderRadius: '12px', padding: '14px 28px', fontSize: '15px', fontWeight: 'bold', width: '100%', maxWidth: '360px', textDecoration: 'none', display: 'block', textAlign: 'center' }}>¿No sabes por dónde comenzar? →</Link>
         </div>
         <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, height: '60px', background: 'linear-gradient(to bottom, transparent, #f8f7f4)', pointerEvents: 'none' }} />
       </div>
