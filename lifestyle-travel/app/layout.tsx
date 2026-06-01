@@ -24,19 +24,35 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      lang="en"
+      lang="es"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <head>
+        {/* Google Analytics */}
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-FQWKYXGMY4"></script>
         <script
           dangerouslySetInnerHTML={{
             __html: `
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-FQWKYXGMY4');
-  `,
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-FQWKYXGMY4');
+            `,
+          }}
+        />
+
+        {/* Weglot — traducción Español → Portugués (Brasil) */}
+        <script
+          src="https://cdn.weglot.com/weglot.min.js"
+          type="text/javascript"
+        ></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              Weglot.initialize({
+                api_key: 'wg_7b1e92bc11dd7b3c93ad9d8ea91786ab8'
+              });
+            `,
           }}
         />
       </head>
