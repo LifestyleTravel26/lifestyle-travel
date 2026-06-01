@@ -3,7 +3,7 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 import createNextIntlPlugin from 'next-intl/plugin';
 
-const withNextIntl = createNextIntlPlugin('./i18n/request.ts');
+const withNextIntl = createNextIntlPlugin();
 
 const projectRoot = path.dirname(fileURLToPath(import.meta.url));
 
