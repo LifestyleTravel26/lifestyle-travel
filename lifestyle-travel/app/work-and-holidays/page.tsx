@@ -1,5 +1,5 @@
 'use client'
-import { useState } from 'react'
+import { useState, useRef } from 'react'
 import Link from 'next/link'
 
 const countries = [
@@ -8,49 +8,75 @@ const countries = [
     flag: '🇦🇷',
     level: 'Alto',
     levelColor: '#22c55e',
-    destinations: ['🇦🇺 Australia', '🇳🇿 Nueva Zelanda', '🇩🇪 Alemania', '🇫🇷 Francia', '🇮🇪 Irlanda', '🇵🇹 Portugal', '🇯🇵 Japón', '🇨🇦 Canadá', '🇳🇴 Noruega', '🇸🇪 Suecia'],
+    destinations: [
+      '🇦🇺 Australia', '🇳🇿 Nueva Zelanda', '🇩🇪 Alemania', '🇫🇷 Francia',
+      '🇮🇪 Irlanda', '🇵🇹 Portugal', '🇪🇸 España', '🇯🇵 Japón',
+      '🇨🇦 Canadá', '🇳🇴 Noruega', '🇸🇪 Suecia', '🇳🇱 Países Bajos',
+      '🇩🇰 Dinamarca',
+    ],
   },
   {
     name: 'Chile',
     flag: '🇨🇱',
     level: 'Alto',
     levelColor: '#22c55e',
-    destinations: ['🇦🇺 Australia', '🇳🇿 Nueva Zelanda', '🇩🇪 Alemania', '🇫🇷 Francia', '🇮🇪 Irlanda', '🇵🇹 Portugal', '🇨🇦 Canadá', '🇯🇵 Japón', '🇰🇷 Corea del Sur', '🇳🇴 Noruega'],
+    destinations: [
+      '🇦🇺 Australia', '🇳🇿 Nueva Zelanda', '🇩🇪 Alemania', '🇫🇷 Francia',
+      '🇮🇪 Irlanda', '🇵🇹 Portugal', '🇪🇸 España', '🇨🇦 Canadá',
+      '🇯🇵 Japón', '🇰🇷 Corea del Sur', '🇳🇴 Noruega', '🇸🇪 Suecia',
+    ],
   },
   {
     name: 'México',
     flag: '🇲🇽',
     level: 'Medio',
     levelColor: '#f59e0b',
-    destinations: ['🇨🇦 Canadá', '🇩🇪 Alemania', '🇳🇿 Nueva Zelanda', '🇰🇷 Corea del Sur', '🇫🇷 Francia'],
+    destinations: [
+      '🇨🇦 Canadá', '🇩🇪 Alemania', '🇳🇿 Nueva Zelanda',
+      '🇰🇷 Corea del Sur', '🇫🇷 Francia',
+    ],
   },
   {
     name: 'Uruguay',
     flag: '🇺🇾',
     level: 'Medio',
     levelColor: '#f59e0b',
-    destinations: ['🇦🇺 Australia', '🇩🇪 Alemania', '🇫🇷 Francia', '🇮🇪 Irlanda', '🇯🇵 Japón', '🇳🇿 Nueva Zelanda', '🇸🇪 Suecia'],
+    destinations: [
+      '🇦🇺 Australia', '🇩🇪 Alemania', '🇫🇷 Francia', '🇮🇪 Irlanda',
+      '🇵🇹 Portugal', '🇪🇸 España', '🇯🇵 Japón', '🇳🇿 Nueva Zelanda',
+      '🇳🇴 Noruega', '🇸🇪 Suecia',
+    ],
   },
   {
     name: 'Brasil',
     flag: '🇧🇷',
     level: 'Medio',
     levelColor: '#f59e0b',
-    destinations: ['🇦🇺 Australia', '🇨🇦 Canadá', '🇩🇪 Alemania', '🇫🇷 Francia', '🇳🇿 Nueva Zelanda'],
+    // Australia subclass 462 confirmed 2025; Canadá no tiene convenio WHV con Brasil
+    destinations: [
+      '🇦🇺 Australia', '🇩🇪 Alemania', '🇫🇷 Francia', '🇳🇿 Nueva Zelanda',
+    ],
   },
   {
     name: 'Perú',
     flag: '🇵🇪',
     level: 'Medio',
     levelColor: '#f59e0b',
-    destinations: ['🇦🇺 Australia', '🇨🇦 Canadá', '🇩🇪 Alemania', '🇫🇷 Francia', '🇮🇪 Irlanda', '🇳🇿 Nueva Zelanda', '🇵🇹 Portugal'],
+    destinations: [
+      '🇦🇺 Australia', '🇳🇿 Nueva Zelanda', '🇩🇪 Alemania', '🇫🇷 Francia',
+      '🇮🇪 Irlanda', '🇵🇹 Portugal', '🇪🇸 España',
+    ],
   },
   {
     name: 'Colombia',
     flag: '🇨🇴',
     level: 'Limitado',
     levelColor: '#ef4444',
-    destinations: ['🇫🇷 Francia (en negociación)', '🇨🇱 Chile', '🇲🇽 México', '🇵🇪 Perú (Alianza del Pacífico)'],
+    // Hungría vigente desde abril 2025 según Wise/Pulzo 2026
+    destinations: [
+      '🇫🇷 Francia', '🇭🇺 Hungría (desde 2025)',
+      '🇨🇱 Chile', '🇲🇽 México', '🇵🇪 Perú (Alianza del Pacífico)',
+    ],
   },
   {
     name: 'Costa Rica',
@@ -64,6 +90,7 @@ const countries = [
     flag: '🇪🇨',
     level: 'Limitado',
     levelColor: '#ef4444',
+    // Australia subclass 462 confirmado; Francia confirmada
     destinations: ['🇫🇷 Francia', '🇦🇺 Australia (cupos limitados)'],
   },
   {
@@ -71,7 +98,8 @@ const countries = [
     flag: '🇵🇦',
     level: 'Limitado',
     levelColor: '#ef4444',
-    destinations: ['🇫🇷 Francia', '🇦🇺 Australia', '🇳🇿 Nueva Zelanda'],
+    // Solo Francia confirmada con convenio bilateral activo
+    destinations: ['🇫🇷 Francia'],
   },
   {
     name: 'Bolivia',
@@ -122,7 +150,21 @@ const destinationInfo = [
 export default function WorkAndHolidays() {
   const [selectedCountry, setSelectedCountry] = useState<string | null>(null)
   const [openSection, setOpenSection] = useState<string | null>(null)
+  // ✅ FIX 2: ref para scroll automático al resultado
+  const resultRef = useRef<HTMLDivElement>(null)
+
   const toggle = (s: string) => setOpenSection(openSection === s ? null : s)
+
+  const handleSelectCountry = (name: string) => {
+    const next = selectedCountry === name ? null : name
+    setSelectedCountry(next)
+    if (next) {
+      // Pequeño delay para que React renderice el bloque antes de hacer scroll
+      setTimeout(() => {
+        resultRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+      }, 80)
+    }
+  }
 
   const HackBox = ({ text }: { text: string }) => (
     <div style={{ backgroundColor: '#fffbeb', borderLeft: '4px solid #f59e0b', borderRadius: '8px', padding: '14px 16px', marginTop: '16px' }}>
@@ -153,7 +195,7 @@ export default function WorkAndHolidays() {
       <div style={{
         position: 'relative',
         height: '55vh',
-        backgroundImage: 'linear-gradient(rgba(0,0,0,0.20), rgba(0,0,0,0.20)), url("https://images.unsplash.com/photo-1476900543704-4312b78632f8?q=80HERO_TEMPw=1200HERO_TEMPauto=formatHERO_TEMPfit=crop")',
+        backgroundImage: 'linear-gradient(rgba(0,0,0,0.20), rgba(0,0,0,0.20)), url("https://images.unsplash.com/photo-1476900543704-4312b78632f8?q=80&w=1200&auto=format&fit=crop")',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
@@ -178,59 +220,93 @@ export default function WorkAndHolidays() {
         <div style={{ backgroundColor: 'white', borderRadius: '16px', padding: '20px', boxShadow: '0 2px 8px rgba(0,0,0,0.07)', marginBottom: '20px' }}>
           <h2 style={{ fontSize: '18px', fontWeight: 'bold', marginBottom: '4px' }}>¿De dónde eres?</h2>
           <p style={{ color: '#666', fontSize: '13px', marginBottom: '16px' }}>Selecciona tu país para ver a qué destinos puedes aplicar</p>
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '8px' }}>
+
+          {/* ✅ FIX 1: auto-fit para que funcione en cualquier ancho de pantalla */}
+          <div style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(140px, 1fr))',
+            gap: '8px',
+          }}>
             {countries.map(c => (
               <button
                 key={c.name}
-                onClick={() => setSelectedCountry(selectedCountry === c.name ? null : c.name)}
+                onClick={() => handleSelectCountry(c.name)}
                 style={{
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'space-between',
-                  padding: '10px 12px',
+                  padding: '10px 10px',
                   borderRadius: '10px',
                   border: selectedCountry === c.name ? '2px solid #e8572a' : '2px solid #e5e7eb',
                   backgroundColor: selectedCountry === c.name ? '#fff5f2' : 'white',
                   cursor: 'pointer',
-                  gap: '6px',
+                  gap: '4px',
+                  minWidth: 0,         // ✅ evita overflow en grid
+                  width: '100%',
                 }}>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
-                  <span style={{ fontSize: '18px' }}>{c.flag}</span>
-                  <span style={{ fontSize: '12px', fontWeight: '600' }}>{c.name}</span>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '5px', minWidth: 0, overflow: 'hidden' }}>
+                  <span style={{ fontSize: '18px', flexShrink: 0 }}>{c.flag}</span>
+                  {/* ✅ FIX 3: texto truncado con ellipsis para nombres largos */}
+                  <span style={{
+                    fontSize: c.name.length > 10 ? '10px' : '12px',
+                    fontWeight: '600',
+                    whiteSpace: 'nowrap',
+                    overflow: 'hidden',
+                    textOverflow: 'ellipsis',
+                  }}>{c.name}</span>
                 </div>
-                <span style={{ backgroundColor: c.levelColor, color: 'white', borderRadius: '10px', padding: '2px 7px', fontSize: '10px', fontWeight: 'bold', whiteSpace: 'nowrap' as const }}>{c.level}</span>
+                <span style={{
+                  backgroundColor: c.levelColor,
+                  color: 'white',
+                  borderRadius: '10px',
+                  padding: '2px 6px',
+                  fontSize: '9px',
+                  fontWeight: 'bold',
+                  whiteSpace: 'nowrap',
+                  flexShrink: 0,
+                }}>{c.level}</span>
               </button>
             ))}
           </div>
         </div>
 
-        {/* RESULTADO */}
-        {selected && (
-          <div style={{ backgroundColor: 'white', borderRadius: '16px', padding: '20px', boxShadow: '0 2px 8px rgba(0,0,0,0.07)', marginBottom: '20px' }}>
-            <h3 style={{ fontSize: '16px', fontWeight: 'bold', marginBottom: '4px' }}>
-              {selected.flag} {selected.name} — Destinos disponibles
-            </h3>
-            {selected.destinations.length === 0 ? (
-              <div style={{ backgroundColor: '#fef2f2', borderRadius: '10px', padding: '16px', marginTop: '12px', textAlign: 'center' }}>
-                <p style={{ color: '#dc2626', fontWeight: '600', margin: 0, fontSize: '14px' }}>⚠️ Sin convenios Working Holiday activos</p>
-                <p style={{ color: '#666', fontSize: '13px', margin: '8px 0 0' }}>Tu país no tiene acuerdos WHV vigentes por el momento.</p>
-              </div>
-            ) : (
-              <div style={{ display: 'flex', flexWrap: 'wrap' as const, gap: '8px', marginTop: '12px' }}>
-                {selected.destinations.map((dest, i) => (
-                  <span key={i} style={{ backgroundColor: '#f0fdf4', border: '1px solid #86efac', borderRadius: '20px', padding: '6px 14px', fontSize: '13px', fontWeight: '600', color: '#166534' }}>
-                    {dest}
-                  </span>
-                ))}
-              </div>
-            )}
-            {selected.destinations.length > 0 && (
-              <p style={{ fontSize: '12px', color: '#888', marginTop: '12px', margin: '12px 0 0' }}>
-                ⚠️ Los cupos y condiciones cambian cada año. Verifica en el portal oficial de inmigración de cada país.
-              </p>
-            )}
-          </div>
-        )}
+        {/* ✅ FIX 2: ref aquí para scroll automático */}
+        <div ref={resultRef}>
+          {selected && (
+            <div style={{ backgroundColor: 'white', borderRadius: '16px', padding: '20px', boxShadow: '0 2px 8px rgba(0,0,0,0.07)', marginBottom: '20px' }}>
+              <h3 style={{ fontSize: '16px', fontWeight: 'bold', marginBottom: '4px' }}>
+                {selected.flag} {selected.name} — Destinos disponibles
+              </h3>
+              {selected.destinations.length === 0 ? (
+                <div style={{ backgroundColor: '#fef2f2', borderRadius: '10px', padding: '16px', marginTop: '12px', textAlign: 'center' }}>
+                  <p style={{ color: '#dc2626', fontWeight: '600', margin: 0, fontSize: '14px' }}>⚠️ Sin convenios Working Holiday activos</p>
+                  <p style={{ color: '#666', fontSize: '13px', margin: '8px 0 0' }}>Tu país no tiene acuerdos WHV vigentes por el momento.</p>
+                </div>
+              ) : (
+                <div style={{ display: 'flex', flexWrap: 'wrap' as const, gap: '8px', marginTop: '12px' }}>
+                  {selected.destinations.map((dest, i) => (
+                    <span key={i} style={{
+                      backgroundColor: '#f0fdf4',
+                      border: '1px solid #86efac',
+                      borderRadius: '20px',
+                      padding: '6px 14px',
+                      fontSize: '13px',
+                      fontWeight: '600',
+                      color: '#166534',
+                    }}>
+                      {dest}
+                    </span>
+                  ))}
+                </div>
+              )}
+              {selected.destinations.length > 0 && (
+                <p style={{ fontSize: '12px', color: '#888', margin: '12px 0 0' }}>
+                  ⚠️ Los cupos y condiciones cambian cada año. Verifica en el portal oficial de inmigración de cada país.
+                </p>
+              )}
+            </div>
+          )}
+        </div>
 
         {/* DESTINOS PRINCIPALES */}
         <h2 style={{ fontSize: '18px', fontWeight: 'bold', marginBottom: '4px', marginTop: '8px' }}>Destinos principales</h2>
@@ -391,13 +467,35 @@ export default function WorkAndHolidays() {
           </div>
         </Section>
 
-        {/* CONSULTORIA */}
+        {/* CONSULTORÍA — ✅ PLACEHOLDER para Calendly */}
         <div style={{ backgroundColor: 'white', borderRadius: '16px', padding: '24px', textAlign: 'center', boxShadow: '0 2px 8px rgba(0,0,0,0.08)', marginTop: '24px' }}>
           <div style={{ fontSize: '40px', marginBottom: '12px' }}>💬</div>
           <h3 style={{ fontWeight: 'bold', marginBottom: '8px', fontSize: '18px' }}>Consultoría 1 a 1</h3>
           <p style={{ color: '#666', fontSize: '14px', marginBottom: '6px' }}>Te ayudamos a identificar tu mejor ruta WHV según tu país.</p>
           <p style={{ color: '#999', fontSize: '13px', marginBottom: '16px' }}>60 minutos · Plan completo · Respuesta en 24h</p>
-          <a href="#" target="_blank" rel="noopener noreferrer" style={{ backgroundColor: '#e8572a', color: 'white', borderRadius: '12px', padding: '14px 32px', fontSize: '15px', fontWeight: 'bold', textDecoration: 'none', display: 'inline-block' }}>
+          {/* 
+            ✅ PRÓXIMO PASO — CALENDLY:
+            Reemplaza href="#" con tu link de Calendly:
+            href="https://calendly.com/TU-USUARIO/consulta-whv"
+            
+            Si quieres popup modal, instala: npm install @calendly/widget
+            y reemplaza este <a> por el componente <PopupButton>
+          */}
+          <a
+            href="#"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              backgroundColor: '#e8572a',
+              color: 'white',
+              borderRadius: '12px',
+              padding: '14px 32px',
+              fontSize: '15px',
+              fontWeight: 'bold',
+              textDecoration: 'none',
+              display: 'inline-block',
+            }}
+          >
             📅 Agenda tu llamada de orientación
           </a>
         </div>
