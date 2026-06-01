@@ -41,20 +41,7 @@ export default function RootLayout({
           }}
         />
 
-        {/* Weglot — traducción Español → Portugués (Brasil) */}
-        <script
-          src="https://cdn.weglot.com/weglot.min.js"
-          type="text/javascript"
-        ></script>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              Weglot.initialize({
-                api_key: 'wg_7b1e92bc11dd7b3c93ad9d8ea91786ab8'
-              });
-            `,
-          }}
-        />
+       
       </head>
       <body className="min-h-full flex flex-col">{children}</body>
     </html>
