@@ -1,7 +1,7 @@
 'use client'
 import { createContext, useContext, useState, useEffect } from 'react'
 
-type Locale = 'es' | 'pt'
+type Locale = 'es' | 'pt' | 'en'
 
 interface LanguageContextType {
   locale: Locale
@@ -18,7 +18,7 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
 
   useEffect(() => {
     const saved = localStorage.getItem('locale') as Locale
-    if (saved === 'es' || saved === 'pt') setLocaleState(saved)
+    if (saved === 'es' || saved === 'pt' || saved === 'en') setLocaleState(saved)
   }, [])
 
   const setLocale = (l: Locale) => {

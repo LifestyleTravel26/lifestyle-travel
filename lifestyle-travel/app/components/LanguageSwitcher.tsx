@@ -42,6 +42,22 @@ export default function LanguageSwitcher() {
       >
         🇧🇷 PT
       </button>
+      <button
+        onClick={() => setLocale('en')}
+        style={{
+          background: locale === 'en' ? '#e8572a' : 'transparent',
+          color: locale === 'en' ? 'white' : '#666',
+          border: '1.5px solid',
+          borderColor: locale === 'en' ? '#e8572a' : '#ddd',
+          borderRadius: '20px',
+          padding: '4px 10px',
+          fontSize: '12px',
+          fontWeight: '600',
+          cursor: 'pointer',
+        }}
+      >
+        🇬🇧 EN
+      </button>
     </div>
   )
 }
