@@ -1,10 +1,13 @@
 'use client'
 import { useState } from 'react'
+import { useLanguage } from '../../context/LanguageContext'
+import LanguageSwitcher from '../../components/LanguageSwitcher'
 
 export default function Espana() {
   const [openSection, setOpenSection] = useState<string | null>(null)
   const [feedback, setFeedback] = useState('')
   const toggle = (s: string) => setOpenSection(openSection === s ? null : s)
+  const { locale } = useLanguage()
 
   const HackBox = ({ text }: { text: string }) => (
     <div style={{ backgroundColor: '#fffbeb', borderLeft: '4px solid #f59e0b', borderRadius: '8px', padding: '14px 16px', marginTop: '16px' }}>
@@ -75,6 +78,7 @@ export default function Espana() {
       }}>
         <div style={{ padding: '16px 24px', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
           <a href="/work-and-study" style={{ color: 'white', textDecoration: 'none', fontSize: '20px' }}>←</a>
+          <LanguageSwitcher />
           <span style={{ color: 'white', fontWeight: 'bold', fontSize: '16px' }}>✈️ Lifestyle & Travel</span>
         </div>
         <div style={{ flex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', textAlign: 'center', padding: '0 24px 32px' }}>

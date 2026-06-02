@@ -1,6 +1,8 @@
 'use client'
 import { useState, useRef } from 'react'
 import Link from 'next/link'
+import { useLanguage } from '../context/LanguageContext'
+import LanguageSwitcher from '../components/LanguageSwitcher'
 
 const countries = [
   {
@@ -152,6 +154,7 @@ export default function WorkAndHolidays() {
   const [openSection, setOpenSection] = useState<string | null>(null)
   // ✅ FIX 2: ref para scroll automático al resultado
   const resultRef = useRef<HTMLDivElement>(null)
+  const { locale } = useLanguage()
 
   const toggle = (s: string) => setOpenSection(openSection === s ? null : s)
 
@@ -204,6 +207,7 @@ export default function WorkAndHolidays() {
       }}>
         <div style={{ padding: '16px 24px', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
           <Link href="/" style={{ color: 'white', textDecoration: 'none', fontSize: '20px' }}>←</Link>
+          <LanguageSwitcher />
           <span style={{ color: 'white', fontWeight: 'bold', fontSize: '16px' }}>✈️ Lifestyle & Travel</span>
         </div>
         <div style={{ flex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', textAlign: 'center', padding: '0 24px 32px' }}>
