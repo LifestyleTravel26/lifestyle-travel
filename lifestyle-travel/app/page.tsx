@@ -15,15 +15,15 @@ export default function Home() {
   return (
     <main style={{ minHeight: '100vh', backgroundColor: '#f8f7f4', fontFamily: 'sans-serif' }}>
       <div style={{ position: 'relative', height: '55vh', backgroundImage: 'linear-gradient(rgba(0,0,0,0.40), rgba(0,0,0,0.40)), url("https://images.unsplash.com/photo-1488085061387-422e29b40080?q=80&w=1331&auto=format&fit=crop")', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', display: 'flex', flexDirection: 'column' }}>
-        <div style={{ padding: '16px 24px', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+      <div style={{ padding: '16px 24px', display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
             <span>✈️</span>
             <span style={{ color: 'white', fontWeight: 'bold', fontSize: '18px' }}>Lifestyle & Travel</span>
           </div>
-          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end', gap: '8px' }}>
-            <NavButtons />
-            <LanguageSwitcher />
-          </div>
+          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end', gap: '4px' }}>
+  <NavButtons />
+  <LanguageSwitcher />
+</div>
         </div>
         <div style={{ flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', textAlign: 'center', padding: '0 24px 24px' }}>
           <h1 style={{ color: 'white', fontSize: '28px', fontWeight: 'bold', marginBottom: '12px', lineHeight: '1.3' }}>Tu Camino Para Trabajar en el Extranjero</h1>
