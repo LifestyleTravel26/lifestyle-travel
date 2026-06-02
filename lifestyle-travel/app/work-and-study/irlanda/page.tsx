@@ -3,11 +3,60 @@ import { useState } from 'react'
 import { useLanguage } from '../../context/LanguageContext'
 import LanguageSwitcher from '../../components/LanguageSwitcher'
 
+const translations = {
+  es: {
+    hero_title: 'Irlanda',
+    hero_sub: 'Europa · Work and Study',
+    hero_badge: 'Fácil',
+    stat1_label: 'Costo inicial (Cursos)',
+    stat1_value: '€3,000 - €5,000',
+    stat2_label: 'Duración',
+    stat2_value: '8 - 12 meses',
+    stat3_label: 'Dificultad',
+    stat3_value: 'Fácil',
+    included_title: 'Lo que incluye el Blueprint',
+    consultoria_title: 'Consultoría 1 a 1',
+    consultoria_desc: 'Armamos tu plan migratorio personalizado con Jimmy.',
+    consultoria_btn: '📅 Agenda tu llamada de orientación',
+  },
+  pt: {
+    hero_title: 'Irlanda',
+    hero_sub: 'Europa · Work and Study',
+    hero_badge: 'Fácil',
+    stat1_label: 'Custo inicial (Cursos)',
+    stat1_value: '€3,000 - €5,000',
+    stat2_label: 'Duração',
+    stat2_value: '8 - 12 meses',
+    stat3_label: 'Dificuldade',
+    stat3_value: 'Fácil',
+    included_title: 'O que inclui o Blueprint',
+    consultoria_title: 'Consultoria 1 a 1',
+    consultoria_desc: 'Montamos seu plano migratório personalizado com Jimmy.',
+    consultoria_btn: '📅 Agende sua chamada de orientação',
+  },
+  en: {
+    hero_title: 'Ireland',
+    hero_sub: 'Europe · Work and Study',
+    hero_badge: 'Easy',
+    stat1_label: 'Initial Cost (Courses)',
+    stat1_value: '€3,000 - €5,000',
+    stat2_label: 'Duration',
+    stat2_value: '8 - 12 months',
+    stat3_label: 'Difficulty',
+    stat3_value: 'Easy',
+    included_title: 'What the Blueprint Includes',
+    consultoria_title: '1 on 1 Consultation',
+    consultoria_desc: 'We build your personalized migration plan with Jimmy.',
+    consultoria_btn: '📅 Schedule your orientation call',
+  },
+}
+
 export default function Irlanda() {
   const [openSection, setOpenSection] = useState<string | null>(null)
   const [feedback, setFeedback] = useState('')
   const toggle = (s: string) => setOpenSection(openSection === s ? null : s)
   const { locale } = useLanguage()
+  const t = translations[locale]
 
   const HackBox = ({ text }: { text: string }) => (
     <div style={{ backgroundColor: '#fffbeb', borderLeft: '4px solid #f59e0b', borderRadius: '8px', padding: '14px 16px', marginTop: '16px' }}>
@@ -166,7 +215,7 @@ export default function Irlanda() {
               textShadow: heroTextShadow,
             }}
           >
-            Irlanda
+            {t.hero_title}
           </h1>
           <p
             style={{
@@ -176,7 +225,7 @@ export default function Irlanda() {
               textShadow: heroTextShadow,
             }}
           >
-            Europa · Work and Study
+            {t.hero_sub}
           </p>
           <span
             style={{
@@ -189,7 +238,7 @@ export default function Irlanda() {
               boxShadow: '0 2px 8px rgba(0,0,0,0.35)',
             }}
           >
-            Fácil
+            {t.hero_badge}
           </span>
         </div>
         <div
@@ -207,7 +256,7 @@ export default function Irlanda() {
 
       {/* STATS */}
       <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '10px', padding: '16px 20px' }}>
-        {[['💰', 'Costo inicial (Cursos)', '€3,000 - €5,000'], ['🕐', 'Duración', '8 - 12 meses'], ['📊', 'Dificultad', 'Fácil']].map((s, i) => (
+        {[['💰', t.stat1_label, t.stat1_value], ['🕐', t.stat2_label, t.stat2_value], ['📊', t.stat3_label, t.stat3_value]].map((s, i) => (
           <div key={i} style={{ backgroundColor: 'white', borderRadius: '10px', padding: '14px', textAlign: 'center', boxShadow: '0 1px 4px rgba(0,0,0,0.06)' }}>
             <div style={{ fontSize: '22px', marginBottom: '4px' }}>{s[0]}</div>
             <div style={{ color: '#999', fontSize: '10px', marginBottom: '3px' }}>{s[1]}</div>
@@ -218,7 +267,7 @@ export default function Irlanda() {
 
       {/* INCLUDED */}
       <div style={{ margin: '0 20px 16px', backgroundColor: 'white', borderRadius: '12px', padding: '18px', boxShadow: '0 1px 4px rgba(0,0,0,0.06)' }}>
-        <h3 style={{ fontWeight: '700', marginBottom: '10px', fontSize: '15px' }}>Lo que incluye el Blueprint</h3>
+        <h3 style={{ fontWeight: '700', marginBottom: '10px', fontSize: '15px' }}>{t.included_title}</h3>
         {['Stamp 2 permite estudiar full-time y trabajar 20h/semana (40h en vacaciones)', 'PPS Number en MyWelfare.ie apenas llegues — clave para evitar Emergency Tax del 40%', 'Stamp 1G post-graduación: trabajá tiempo completo 1-2 años como camino a residencia', 'Escuelas desde €3,000/año — 18 opciones verificadas en Dublín y Limerick', 'Comunidad latina consolidada — grupos de WhatsApp para vivienda y trabajo'].map((item, i) => (
           <div key={i} style={{ display: 'flex', gap: '8px', marginBottom: '6px' }}>
             <span style={{ color: '#22c55e', fontSize: '16px', flexShrink: 0 }}>✓</span>
@@ -771,11 +820,11 @@ export default function Irlanda() {
         {/* CONSULTORIA */}
         <div style={{ backgroundColor: 'white', borderRadius: '16px', padding: '24px', textAlign: 'center', boxShadow: '0 2px 8px rgba(0,0,0,0.08)', marginTop: '24px' }}>
           <div style={{ fontSize: '40px', marginBottom: '12px' }}>💬</div>
-          <h3 style={{ fontWeight: 'bold', marginBottom: '8px', fontSize: '18px' }}>Consultoría 1 a 1</h3>
-          <p style={{ color: '#666', fontSize: '14px', marginBottom: '6px' }}>Armamos tu plan migratorio personalizado con Jimmy.</p>
+          <h3 style={{ fontWeight: 'bold', marginBottom: '8px', fontSize: '18px' }}>{t.consultoria_title}</h3>
+          <p style={{ color: '#666', fontSize: '14px', marginBottom: '6px' }}>{t.consultoria_desc}</p>
           <p style={{ color: '#999', fontSize: '13px', marginBottom: '16px' }}>60 minutos · Plan completo · Respuesta en 24h</p>
           <a href="#" target="_blank" rel="noopener noreferrer" style={{ backgroundColor: '#e8572a', color: 'white', borderRadius: '12px', padding: '14px 32px', fontSize: '15px', fontWeight: 'bold', textDecoration: 'none', display: 'inline-block' }}>
-            📅 Agenda tu llamada de orientación
+            {t.consultoria_btn}
           </a>
         </div>
 
