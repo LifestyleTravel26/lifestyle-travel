@@ -479,14 +479,14 @@ export default function WorkAndHolidays() {
           <p style={{ color: '#999', fontSize: '13px', marginBottom: '16px' }}>60 minutos · Plan completo · Respuesta en 24h</p>
           {/* 
             ✅ PRÓXIMO PASO — CALENDLY:
-            Reemplaza href="#" con tu link de Calendly:
+            Reemplaza href="https://calendly.com/jimmyg-leonr/1-hour-meeting" con tu link de Calendly:
             href="https://calendly.com/TU-USUARIO/consulta-whv"
             
             Si quieres popup modal, instala: npm install @calendly/widget
             y reemplaza este <a> por el componente <PopupButton>
           */}
           <a
-            href="#"
+            href="https://calendly.com/jimmyg-leonr/1-hour-meeting"
             target="_blank"
             rel="noopener noreferrer"
             style={{

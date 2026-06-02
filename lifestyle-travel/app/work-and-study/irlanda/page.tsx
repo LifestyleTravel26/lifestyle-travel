@@ -823,7 +823,7 @@ export default function Irlanda() {
           <h3 style={{ fontWeight: 'bold', marginBottom: '8px', fontSize: '18px' }}>{t.consultoria_title}</h3>
           <p style={{ color: '#666', fontSize: '14px', marginBottom: '6px' }}>{t.consultoria_desc}</p>
           <p style={{ color: '#999', fontSize: '13px', marginBottom: '16px' }}>60 minutos · Plan completo · Respuesta en 24h</p>
-          <a href="#" target="_blank" rel="noopener noreferrer" style={{ backgroundColor: '#e8572a', color: 'white', borderRadius: '12px', padding: '14px 32px', fontSize: '15px', fontWeight: 'bold', textDecoration: 'none', display: 'inline-block' }}>
+          <a href="https://calendly.com/jimmyg-leonr/1-hour-meeting" target="_blank" rel="noopener noreferrer" style={{ backgroundColor: '#e8572a', color: 'white', borderRadius: '12px', padding: '14px 32px', fontSize: '15px', fontWeight: 'bold', textDecoration: 'none', display: 'inline-block' }}>
             {t.consultoria_btn}
           </a>
         </div>
