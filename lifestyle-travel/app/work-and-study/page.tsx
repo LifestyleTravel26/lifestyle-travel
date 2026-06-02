@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import LanguageSwitcher from '../components/LanguageSwitcher'
 
 const countries = [
   {
@@ -102,6 +103,7 @@ export default function WorkAndStudy() {
         {/* NAV */}
         <div style={{ padding: '16px 24px', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
           <Link href="/" style={{ color: 'white', textDecoration: 'none', fontSize: '20px' }}>←</Link>
+          <LanguageSwitcher />
           <span style={{ color: 'white', fontWeight: 'bold', fontSize: '16px' }}>✈️ Lifestyle & Travel</span>
         </div>
 
