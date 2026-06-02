@@ -1,10 +1,13 @@
 'use client'
 import { useState } from 'react'
+import { useLanguage } from '../../context/LanguageContext'
+import LanguageSwitcher from '../../components/LanguageSwitcher'
 
 export default function Irlanda() {
   const [openSection, setOpenSection] = useState<string | null>(null)
   const [feedback, setFeedback] = useState('')
   const toggle = (s: string) => setOpenSection(openSection === s ? null : s)
+  const { locale } = useLanguage()
 
   const HackBox = ({ text }: { text: string }) => (
     <div style={{ backgroundColor: '#fffbeb', borderLeft: '4px solid #f59e0b', borderRadius: '8px', padding: '14px 16px', marginTop: '16px' }}>
@@ -105,6 +108,7 @@ export default function Irlanda() {
     <main style={{ minHeight: '100vh', backgroundColor: '#f8f7f4', fontFamily: 'Inter, system-ui, sans-serif' }}>
 
       {/* HERO */}
+      
       <div
         style={{
           position: 'relative',
@@ -139,6 +143,7 @@ export default function Irlanda() {
             <span style={{ fontSize: '20px' }}>←</span>
             <span style={{ fontWeight: 'bold', fontSize: '18px' }}>✈️ Lifestyle & Travel</span>
           </a>
+          <LanguageSwitcher />
         </div>
         <div
           style={{
