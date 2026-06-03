@@ -18,7 +18,7 @@ export default function Australia() {
   )
 
   const Intro = ({ text }: { text: string }) => (
-    <p style={{ fontSize: '14px', lineHeight: '1.8', color: '#444', marginBottom: '16px', borderLeft: '3px solid #e8572a', paddingLeft: '12px' }}>{text}</p>
+    <p style={{ fontSize: '14px', lineHeight: '1.8', color: '#1a1a2e', marginBottom: '16px', borderLeft: '3px solid #e8572a', paddingLeft: '12px' }}>{text}</p>
   )
 
   const SubHead = ({ text }: { text: string }) => (
@@ -54,7 +54,7 @@ export default function Australia() {
     <div style={{ border: free ? '2px solid #e8572a' : '2px solid #f59e0b', borderRadius: '12px', marginBottom: '10px', overflow: 'hidden' }}>
       <button onClick={() => toggle(id)} style={{ width: '100%', padding: '14px 20px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', backgroundColor: 'white', border: 'none', cursor: 'pointer' }}>
         <span style={{ fontWeight: '600', fontSize: '15px' }}>{emoji} {title}</span>
-        <span style={{ fontSize: '16px', color: '#999' }}>{openSection === id ? '∧' : '∨'}</span>
+        <span style={{ fontSize: '16px', color: '#555555' }}>{openSection === id ? '∧' : '∨'}</span>
       </button>
       {openSection === id && (
         <div style={{ padding: '20px', backgroundColor: 'white', borderTop: '1px solid #f5f5f5' }}>{children}</div>
@@ -95,7 +95,7 @@ export default function Australia() {
         {[['💰', 'Capital requerido', '$18,000 - $25,000'], ['🕐', 'Duración', '8 - 12 meses'], ['📊', 'Dificultad', 'Alto']].map((s, i) => (
           <div key={i} style={{ backgroundColor: 'white', borderRadius: '10px', padding: '14px', textAlign: 'center', boxShadow: '0 1px 4px rgba(0,0,0,0.06)' }}>
             <div style={{ fontSize: '22px', marginBottom: '4px' }}>{s[0]}</div>
-            <div style={{ color: '#999', fontSize: '10px', marginBottom: '3px' }}>{s[1]}</div>
+            <div style={{ color: '#555555', fontSize: '10px', marginBottom: '3px' }}>{s[1]}</div>
             <div style={{ fontWeight: '700', fontSize: '12px' }}>{s[2]}</div>
           </div>
         ))}
@@ -113,7 +113,7 @@ export default function Australia() {
         ].map((item, i) => (
           <div key={i} style={{ display: 'flex', gap: '8px', marginBottom: '6px' }}>
             <span style={{ color: '#22c55e', fontSize: '16px', flexShrink: 0 }}>✓</span>
-            <span style={{ fontSize: '13px', color: '#444', lineHeight: '1.5' }}>{item}</span>
+            <span style={{ fontSize: '13px', color: '#1a1a2e', lineHeight: '1.5' }}>{item}</span>
           </div>
         ))}
       </div>
@@ -401,7 +401,7 @@ export default function Australia() {
         <Section id="empleos" emoji="🛠️" title="Matriz de Empleos de Alta Rotación">
           <div style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1526958977630-bc61b30a2009?q=80&w=1170&auto=format&fit=crop")', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', height: '200px', borderRadius: '12px', marginBottom: '16px' }} />
           <Intro text="Australia tiene los salarios más altos del blueprint — $22-35 AUD/hora. Con 48 horas quincenales (24h/semana promedio) puedes ganar $1,760-2,880 AUD/mes. En vacaciones a tiempo completo eso se duplica." />
-          <p style={{ fontSize: '14px', color: '#444', lineHeight: '1.7', marginBottom: '12px' }}>
+          <p style={{ fontSize: '14px', color: '#1a1a2e', lineHeight: '1.7', marginBottom: '12px' }}>
             <strong>CV en Mano:</strong> Camina por cafés, restaurantes y tiendas en zonas comerciales. Di: <em>"I'm looking for a casual position. I have immediate availability."</em>
           </p>
           <div style={T.wrap}>
@@ -493,7 +493,7 @@ export default function Australia() {
             <div style={{ backgroundColor: '#f0fdf4', borderRadius: '12px', padding: '16px', border: '1px solid #86efac' }}>
               <p style={{ fontSize: '15px', fontWeight: '700', color: '#166534', margin: '0 0 10px' }}>1️⃣ Hito 1 — Empleable (listo para trabajar)</p>
               {['Student Visa 500 activa', 'TFN obtenido (Australian Tax Office)', 'Cuenta bancaria activa (Commonwealth/ANZ)', 'Oferta laboral'].map((item, i) => (
-                <p key={i} style={{ fontSize: '13px', color: '#444', margin: '4px 0', display: 'flex', gap: '6px' }}>
+                <p key={i} style={{ fontSize: '13px', color: '#1a1a2e', margin: '4px 0', display: 'flex', gap: '6px' }}>
                   <span style={{ color: '#22c55e' }}>✓</span> {item}
                 </p>
               ))}
@@ -502,7 +502,7 @@ export default function Australia() {
             <div style={{ backgroundColor: '#eff6ff', borderRadius: '12px', padding: '16px', border: '1px solid #93c5fd' }}>
               <p style={{ fontSize: '15px', fontWeight: '700', color: '#1e40af', margin: '0 0 10px' }}>2️⃣ Hito 2 — Primer ingreso (primer cobro)</p>
               {['Contrato o acuerdo laboral', 'Alta en payroll', 'Cuenta bancaria activa'].map((item, i) => (
-                <p key={i} style={{ fontSize: '13px', color: '#444', margin: '4px 0', display: 'flex', gap: '6px' }}>
+                <p key={i} style={{ fontSize: '13px', color: '#1a1a2e', margin: '4px 0', display: 'flex', gap: '6px' }}>
                   <span style={{ color: '#3b82f6' }}>✓</span> {item}
                 </p>
               ))}
@@ -532,7 +532,7 @@ export default function Australia() {
           ].map((item, i) => (
             <div key={i} style={{ display: 'flex', gap: '10px', marginBottom: '8px', fontSize: '14px' }}>
               <span style={{ color: '#e8572a', fontWeight: '700', flexShrink: 0, minWidth: '120px' }}>{item[0]}:</span>
-              <span style={{ color: '#444', lineHeight: '1.5' }}>{item[1]}</span>
+              <span style={{ color: '#1a1a2e', lineHeight: '1.5' }}>{item[1]}</span>
             </div>
           ))}
           <SubHead text="⚠️ Gestión de Crisis Comunes (Quick Fix)" />
@@ -558,7 +558,7 @@ export default function Australia() {
           </div>
           <div style={{ marginTop: '14px', backgroundColor: '#f0fdf4', borderRadius: '8px', padding: '14px' }}>
             <p style={{ fontSize: '14px', margin: '0 0 10px', fontWeight: '700' }}>🤝 Comunidad Latina en Australia</p>
-            <p style={{ fontSize: '13px', color: '#555', margin: 0 }}>
+            <p style={{ fontSize: '13px', color: '#1a1a2e', margin: 0 }}>
               Mexicanos · Ticos · Colombianos · Argentinos · Venezolanos · Peruanos en Australia — links próximamente
             </p>
           </div>
@@ -609,8 +609,8 @@ export default function Australia() {
         <div style={{ backgroundColor: 'white', borderRadius: '16px', padding: '24px', textAlign: 'center', boxShadow: '0 2px 8px rgba(0,0,0,0.08)', marginTop: '24px' }}>
           <div style={{ fontSize: '40px', marginBottom: '12px' }}>💬</div>
           <h3 style={{ fontWeight: 'bold', marginBottom: '8px', fontSize: '18px' }}>Consultoría 1 a 1</h3>
-          <p style={{ color: '#666', fontSize: '14px', marginBottom: '6px' }}>Armamos tu plan migratorio personalizado con Jimmy.</p>
-          <p style={{ color: '#999', fontSize: '13px', marginBottom: '16px' }}>60 minutos · Plan completo · Respuesta en 24h</p>
+          <p style={{ color: '#1a1a2e', fontSize: '14px', marginBottom: '6px' }}>Armamos tu plan migratorio personalizado con Jimmy.</p>
+          <p style={{ color: '#555555', fontSize: '13px', marginBottom: '16px' }}>60 minutos · Plan completo · Respuesta en 24h</p>
           <a href="https://calendly.com/jimmyg-leonr/1-hour-meeting" target="_blank" rel="noopener noreferrer" style={{ backgroundColor: '#e8572a', color: 'white', borderRadius: '12px', padding: '14px 32px', fontSize: '15px', fontWeight: 'bold', textDecoration: 'none', display: 'inline-block' }}>
             📅 Agenda tu llamada de orientación
           </a>
@@ -620,7 +620,7 @@ export default function Australia() {
         <div style={{ backgroundColor: 'white', borderRadius: '16px', padding: '24px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)', marginTop: '16px' }}>
           <div style={{ fontSize: '28px', textAlign: 'center', marginBottom: '8px' }}>📝</div>
           <h3 style={{ fontWeight: 'bold', fontSize: '15px', textAlign: 'center', marginBottom: '4px' }}>¿Algo desactualizado o una sugerencia?</h3>
-          <p style={{ color: '#888', fontSize: '13px', textAlign: 'center', marginBottom: '16px' }}>Tu feedback nos ayuda a mantener el blueprint al día.</p>
+          <p style={{ color: '#333333', fontSize: '13px', textAlign: 'center', marginBottom: '16px' }}>Tu feedback nos ayuda a mantener el blueprint al día.</p>
           <textarea
             value={feedback}
             onChange={e => setFeedback(e.target.value)}

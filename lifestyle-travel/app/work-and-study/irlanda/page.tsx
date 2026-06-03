@@ -565,7 +565,7 @@ export default function Irlanda() {
   )
 
   const Intro = ({ text }: { text: string }) => (
-    <p style={{ fontSize: '14px', lineHeight: '1.8', color: '#444', marginBottom: '16px', borderLeft: '3px solid #e8572a', paddingLeft: '12px' }}>{text}</p>
+    <p style={{ fontSize: '14px', lineHeight: '1.8', color: '#1a1a2e', marginBottom: '16px', borderLeft: '3px solid #e8572a', paddingLeft: '12px' }}>{text}</p>
   )
 
   const SubHead = ({ text }: { text: string }) => (
@@ -613,7 +613,7 @@ export default function Irlanda() {
     <div style={{ border: free ? '2px solid #e8572a' : '2px solid #f59e0b', borderRadius: '12px', marginBottom: '10px', overflow: 'hidden', display: 'flex', flexDirection: 'column' }}>
       <button onClick={() => toggle(id)} style={{ width: '100%', padding: '14px 20px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', backgroundColor: 'white', border: 'none', cursor: 'pointer', flexShrink: 0 }}>
         <span style={{ fontWeight: '600', fontSize: '15px' }}>{emoji} {title}</span>
-        <span style={{ fontSize: '16px', color: '#999' }}>{openSection === id ? '∧' : '∨'}</span>
+        <span style={{ fontSize: '16px', color: '#555555' }}>{openSection === id ? '∧' : '∨'}</span>
       </button>
       {openSection === id && (
         <div style={{ padding: '20px', backgroundColor: 'white', borderTop: '1px solid #f5f5f5' }}>{children}</div>
@@ -647,7 +647,7 @@ export default function Irlanda() {
         {[['💰', t.stat1_label, t.stat1_value], ['🕐', t.stat2_label, t.stat2_value], ['📊', t.stat3_label, t.stat3_value]].map((s, i) => (
           <div key={i} style={{ backgroundColor: 'white', borderRadius: '10px', padding: '14px', textAlign: 'center', boxShadow: '0 1px 4px rgba(0,0,0,0.06)' }}>
             <div style={{ fontSize: '22px', marginBottom: '4px' }}>{s[0]}</div>
-            <div style={{ color: '#999', fontSize: '10px', marginBottom: '3px' }}>{s[1]}</div>
+            <div style={{ color: '#555555', fontSize: '10px', marginBottom: '3px' }}>{s[1]}</div>
             <div style={{ fontWeight: '700', fontSize: '12px' }}>{s[2]}</div>
           </div>
         ))}
@@ -659,7 +659,7 @@ export default function Irlanda() {
         {t.included.map((item, i) => (
           <div key={i} style={{ display: 'flex', gap: '8px', marginBottom: '6px' }}>
             <span style={{ color: '#22c55e', fontSize: '16px', flexShrink: 0 }}>✓</span>
-            <span style={{ fontSize: '13px', color: '#444', lineHeight: '1.5' }}>{item}</span>
+            <span style={{ fontSize: '13px', color: '#1a1a2e', lineHeight: '1.5' }}>{item}</span>
           </div>
         ))}
       </div>
@@ -689,7 +689,7 @@ export default function Irlanda() {
         <Section id="estrategia" emoji="🏷️" title={t.sec_estrategia_title}>
           <Intro text={t.estrategia_intro} />
           <SubHead text={t.dublin_head} />
-          <p style={{ fontSize: '13px', color: '#666', marginBottom: '10px', lineHeight: '1.6' }}>{t.dublin_sub}</p>
+          <p style={{ fontSize: '13px', color: '#1a1a2e', marginBottom: '10px', lineHeight: '1.6' }}>{t.dublin_sub}</p>
           <div style={T.wrap}>
             <table style={T.table}>
               <thead><tr>{[t.th_inst, t.th_loc, t.th_am, t.th_usd, t.th_pm, t.th_usd, t.th_web].map((h, i) => <th key={i} style={T.th}>{h}</th>)}</tr></thead>
@@ -728,7 +728,7 @@ export default function Irlanda() {
             </table>
           </div>
           <SubHead text={t.limerick_head} />
-          <p style={{ fontSize: '13px', color: '#666', marginBottom: '10px', lineHeight: '1.6' }}>{t.limerick_sub}</p>
+          <p style={{ fontSize: '13px', color: '#1a1a2e', marginBottom: '10px', lineHeight: '1.6' }}>{t.limerick_sub}</p>
           <div style={T.wrap}>
             <table style={T.table}>
               <thead><tr>{[t.th_inst, t.th_loc, t.th_am, t.th_usd, t.th_pm, t.th_usd, t.th_web].map((h, i) => <th key={i} style={T.th}>{h}</th>)}</tr></thead>
@@ -764,7 +764,7 @@ export default function Irlanda() {
         {/* PRE-FOUNDATIONS */}
         <Section id="pre" emoji="🚀" title={t.sec_pre_title}>
           <Intro text={t.pre_intro} />
-          <p style={{ fontSize: '14px', lineHeight: '1.7', marginBottom: '12px', color: '#444' }}>
+          <p style={{ fontSize: '14px', lineHeight: '1.7', marginBottom: '12px', color: '#1a1a2e' }}>
             {t.pre_p1} <strong>{t.pre_stamp}</strong> {t.pre_p1_end}
           </p>
           <div style={T.wrap}>
@@ -797,7 +797,7 @@ export default function Irlanda() {
         {/* EDUCACION SUPERIOR */}
         <Section id="edu" emoji="🎓" title={t.sec_edu_title}>
           <Intro text={t.edu_intro} />
-          <p style={{ fontSize: '14px', lineHeight: '1.7', marginBottom: '12px', color: '#444' }}>{t.edu_p1}</p>
+          <p style={{ fontSize: '14px', lineHeight: '1.7', marginBottom: '12px', color: '#1a1a2e' }}>{t.edu_p1}</p>
           <div style={T.wrap}>
             <table style={T.table}>
               <thead><tr>{[t.th_uni, t.th_area, t.th_anual, t.th_usd, t.th_web].map((h, i) => <th key={i} style={T.th}>{h}</th>)}</tr></thead>
@@ -860,7 +860,7 @@ export default function Irlanda() {
         <Section id="aterrizaje" emoji="🏦" title={t.sec_aterrizaje_title}>
           <Intro text={t.aterrizaje_intro} />
           <SubHead text={t.pps_head} />
-          <p style={{ fontSize: '14px', color: '#444', lineHeight: '1.7', marginBottom: '12px' }}>{t.pps_p}</p>
+          <p style={{ fontSize: '14px', color: '#1a1a2e', lineHeight: '1.7', marginBottom: '12px' }}>{t.pps_p}</p>
           {t.pasos.map((s, i) => (
             <div key={i} style={{ display: 'flex', gap: '10px', marginBottom: '8px', fontSize: '14px', alignItems: 'flex-start' }}>
               <span style={{ backgroundColor: '#e8572a', color: 'white', borderRadius: '50%', width: '22px', height: '22px', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '11px', fontWeight: '700', flexShrink: 0, marginTop: '1px' }}>{i + 1}</span>
@@ -868,7 +868,7 @@ export default function Irlanda() {
             </div>
           ))}
           <SubHead text={t.irp_head} />
-          <p style={{ fontSize: '14px', color: '#444', lineHeight: '1.7', marginBottom: '10px' }}>{t.irp_p}</p>
+          <p style={{ fontSize: '14px', color: '#1a1a2e', lineHeight: '1.7', marginBottom: '10px' }}>{t.irp_p}</p>
           {t.irp_items.map((item, i) => (
             <div key={i} style={{ display: 'flex', gap: '8px', marginBottom: '6px', fontSize: '14px' }}>
               <span style={{ color: '#e8572a', flexShrink: 0 }}>•</span>
@@ -881,7 +881,7 @@ export default function Irlanda() {
         {/* BANCOS */}
         <Section id="bancos" emoji="📊" title={t.sec_bancos_title}>
           <Intro text={t.bancos_intro} />
-          <p style={{ fontSize: '14px', color: '#444', lineHeight: '1.7', marginBottom: '12px' }}>
+          <p style={{ fontSize: '14px', color: '#1a1a2e', lineHeight: '1.7', marginBottom: '12px' }}>
             <strong>{t.bancos_estrategia_label}</strong> {t.bancos_estrategia_text}
           </p>
           <div style={T.wrap}>
@@ -991,7 +991,7 @@ export default function Irlanda() {
         <Section id="empleos" emoji="🛠️" title={t.sec_empleos_title}>
           <div style={imageBanner('https://images.unsplash.com/photo-1630784032313-f780ae5532c6?q=80&w=687&auto=format&fit=crop')} />
           <Intro text={t.empleos_intro} />
-          <p style={{ fontSize: '14px', color: '#444', lineHeight: '1.7', marginBottom: '12px' }}>
+          <p style={{ fontSize: '14px', color: '#1a1a2e', lineHeight: '1.7', marginBottom: '12px' }}>
             <strong>{t.empleos_cv_label}</strong> {t.empleos_cv_text} <em>{t.empleos_cv_quote}</em> {t.empleos_cv_end}
           </p>
           <div style={T.wrap}>
@@ -1076,7 +1076,7 @@ export default function Irlanda() {
             <div style={{ backgroundColor: '#f0fdf4', borderRadius: '12px', padding: '16px', border: '1px solid #86efac' }}>
               <p style={{ fontSize: '15px', fontWeight: '700', color: '#166534', margin: '0 0 10px' }}>{t.hito1_title}</p>
               {t.hito1_items.map((item, i) => (
-                <p key={i} style={{ fontSize: '13px', color: '#444', margin: '4px 0', display: 'flex', gap: '6px' }}>
+                <p key={i} style={{ fontSize: '13px', color: '#1a1a2e', margin: '4px 0', display: 'flex', gap: '6px' }}>
                   <span style={{ color: '#22c55e' }}>✓</span> {item}
                 </p>
               ))}
@@ -1085,7 +1085,7 @@ export default function Irlanda() {
             <div style={{ backgroundColor: '#eff6ff', borderRadius: '12px', padding: '16px', border: '1px solid #93c5fd' }}>
               <p style={{ fontSize: '15px', fontWeight: '700', color: '#1e40af', margin: '0 0 10px' }}>{t.hito2_title}</p>
               {t.hito2_items.map((item, i) => (
-                <p key={i} style={{ fontSize: '13px', color: '#444', margin: '4px 0', display: 'flex', gap: '6px' }}>
+                <p key={i} style={{ fontSize: '13px', color: '#1a1a2e', margin: '4px 0', display: 'flex', gap: '6px' }}>
                   <span style={{ color: '#3b82f6' }}>✓</span> {item}
                 </p>
               ))}
@@ -1109,7 +1109,7 @@ export default function Irlanda() {
           {t.crisis_contactos.map((item, i) => (
             <div key={i} style={{ display: 'flex', gap: '10px', marginBottom: '8px', fontSize: '14px' }}>
               <span style={{ color: '#e8572a', fontWeight: '700', flexShrink: 0, minWidth: '120px' }}>{item[0]}:</span>
-              <span style={{ color: '#444', lineHeight: '1.5' }}>{item[1]}</span>
+              <span style={{ color: '#1a1a2e', lineHeight: '1.5' }}>{item[1]}</span>
             </div>
           ))}
           <SubHead text={t.crisis_gestion_head} />
@@ -1136,7 +1136,7 @@ export default function Irlanda() {
           </div>
           <div style={{ marginTop: '14px', backgroundColor: '#f0fdf4', borderRadius: '8px', padding: '14px' }}>
             <p style={{ fontSize: '14px', margin: '0 0 10px', fontWeight: '700' }}>{t.comunidad_title}</p>
-            <p style={{ fontSize: '13px', color: '#555', margin: 0 }}>{t.comunidad_text}</p>
+            <p style={{ fontSize: '13px', color: '#1a1a2e', margin: 0 }}>{t.comunidad_text}</p>
           </div>
           <HackBox text={t.crisis_hack} />
         </Section>
@@ -1164,8 +1164,8 @@ export default function Irlanda() {
         <div style={{ backgroundColor: 'white', borderRadius: '16px', padding: '24px', textAlign: 'center', boxShadow: '0 2px 8px rgba(0,0,0,0.08)', marginTop: '24px' }}>
           <div style={{ fontSize: '40px', marginBottom: '12px' }}>💬</div>
           <h3 style={{ fontWeight: 'bold', marginBottom: '8px', fontSize: '18px' }}>{t.consultoria_title}</h3>
-          <p style={{ color: '#666', fontSize: '14px', marginBottom: '6px' }}>{t.consultoria_desc}</p>
-          <p style={{ color: '#999', fontSize: '13px', marginBottom: '16px' }}>{t.consultoria_time}</p>
+          <p style={{ color: '#1a1a2e', fontSize: '14px', marginBottom: '6px' }}>{t.consultoria_desc}</p>
+          <p style={{ color: '#555555', fontSize: '13px', marginBottom: '16px' }}>{t.consultoria_time}</p>
           <a href="https://calendly.com/jimmyg-leonr/1-hour-meeting" target="_blank" rel="noopener noreferrer" style={{ backgroundColor: '#e8572a', color: 'white', borderRadius: '12px', padding: '14px 32px', fontSize: '15px', fontWeight: 'bold', textDecoration: 'none', display: 'inline-block' }}>
             {t.consultoria_btn}
           </a>
@@ -1175,7 +1175,7 @@ export default function Irlanda() {
         <div style={{ backgroundColor: 'white', borderRadius: '16px', padding: '24px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)', marginTop: '16px' }}>
           <div style={{ fontSize: '28px', textAlign: 'center', marginBottom: '8px' }}>📝</div>
           <h3 style={{ fontWeight: 'bold', fontSize: '15px', textAlign: 'center', marginBottom: '4px' }}>{t.feedback_title}</h3>
-          <p style={{ color: '#888', fontSize: '13px', textAlign: 'center', marginBottom: '16px' }}>{t.feedback_desc}</p>
+          <p style={{ color: '#333333', fontSize: '13px', textAlign: 'center', marginBottom: '16px' }}>{t.feedback_desc}</p>
           <textarea
             value={feedback}
             onChange={e => setFeedback(e.target.value)}
