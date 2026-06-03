@@ -782,8 +782,8 @@ export default function Dubai() {
               <span style={{ lineHeight: '1.6' }}>{s[2] ? <><strong>{s[0]}:</strong> <a href={s[2] as string} target="_blank" rel="noopener noreferrer" style={T.link}>{s[1]}</a></> : <><strong>{s[0]}:</strong> {s[1]}</>}</span>
             </div>
           ))}
-          <SubHead text={t.trabalho_head} />
-          {t.trabalho_items.map((item, i) => (
+          <SubHead text={t.trabajo_head} />
+          {t.trabajo_items.map((item, i) => (
             <div key={i} style={{ display: 'flex', gap: '8px', marginBottom: '6px', fontSize: '14px' }}>
               <span style={{ color: '#e8572a', flexShrink: 0 }}>•</span>
               <span>{item[1] ? <a href={item[1] as string} target="_blank" rel="noopener noreferrer" style={T.link}>{item[0]}</a> : item[0]}</span>
