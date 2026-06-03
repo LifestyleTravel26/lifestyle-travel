@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { NavButtons } from '@/components/nav-buttons';
 
 const visaCards = [
   { title: 'Visa Work and Study', emoji: '🎓', href: '/work-and-study', img: 'https://images.unsplash.com/photo-1607114751909-976171f71616?q=80&w=1200&auto=format&fit=crop' },
@@ -18,7 +19,7 @@ export default function Home() {
             <span>✈️</span>
             <span style={{ color: 'white', fontWeight: 'bold', fontSize: '18px' }}>Lifestyle & Travel</span>
           </div>
-          <Link href="/signup" style={{ backgroundColor: '#e8572a', color: 'white', borderRadius: '8px', padding: '8px 16px', fontWeight: 'bold', textDecoration: 'none', display: 'inline-block' }}>Comenzar</Link>
+          <NavButtons />
         </div>
         <div style={{ flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', textAlign: 'center', padding: '0 24px 24px' }}>
           <h1 style={{ color: 'white', fontSize: '28px', fontWeight: 'bold', marginBottom: '12px', lineHeight: '1.3' }}>Tu Camino Para Trabajar en el Extranjero</h1>
