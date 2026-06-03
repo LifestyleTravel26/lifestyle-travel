@@ -235,8 +235,8 @@ const translations = {
       ['Passo 4', 'Anexar: Passaporte + Carta de Aceitação + Recibo de pagamento + Seguro médico + Resultados médicos', null],
       ['Passo 5', 'Custo total aprox. $700-$1.000 USD (normalmente incluído no pacote de visto da escola)', null],
     ],
-    trabalho_head: '2. Permissão de Trabalho (com empregador)',
-    trabalho_items: [
+    trabajo_head: '2. Permissão de Trabalho (com empregador)',
+    trabajo_items: [
       ['O visto de estudante NÃO dá permissão de trabalho automática — você precisa de um empregador sponsor', null],
       ['O empregador registra o contrato no MOHRE (Ministério de Recursos Humanos)', 'https://mohre.gov.ae'],
       ['Com Emirates ID + contrato registrado você pode trabalhar legalmente em Dubai', null],
@@ -404,8 +404,8 @@ const translations = {
       ['Step 4', 'Attach: Passport + Acceptance Letter + Payment receipt + Health insurance + Medical results', null],
       ['Step 5', 'Total cost approx. $700-$1,000 USD (normally included in school visa package)', null],
     ],
-    trabalho_head: '2. Work Permit (with employer)',
-    trabalho_items: [
+    trabajo_head: '2. Work Permit (with employer)',
+    trabajo_items: [
       ['Student visa does NOT give automatic work permission — you need an employer sponsor', null],
       ['The employer registers the contract at MOHRE (Ministry of Human Resources)', 'https://mohre.gov.ae'],
       ['With Emirates ID + registered contract you can work legally in Dubai', null],
