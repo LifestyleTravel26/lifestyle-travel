@@ -34,7 +34,7 @@ export default function Home() {
       </div>
       <div style={{ padding: '16px 16px 32px', maxWidth: '600px', margin: '0 auto' }}>
         <h2 style={{ fontSize: '20px', fontWeight: 'bold', marginBottom: '4px' }}>Tipos de Visa</h2>
-        <p style={{ color: '#666', marginBottom: '14px', fontSize: '13px' }}>Cada uno con su blueprint completo</p>
+        <p style={{ color: '#1a1a2e', marginBottom: '14px', fontSize: '13px' }}>Cada uno con su blueprint completo</p>
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '10px' }}>
           {visaCards.map((visa) => (
             <Link key={visa.href} href={visa.href} style={{ textDecoration: 'none', color: 'inherit' }}>

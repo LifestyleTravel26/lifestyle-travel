@@ -18,7 +18,7 @@ export default function PetSitting() {
   )
 
   const Intro = ({ text }: { text: string }) => (
-    <p style={{ fontSize: '14px', lineHeight: '1.8', color: '#444', marginBottom: '16px', borderLeft: '3px solid #e8572a', paddingLeft: '12px' }}>{text}</p>
+    <p style={{ fontSize: '14px', lineHeight: '1.8', color: '#1a1a2e', marginBottom: '16px', borderLeft: '3px solid #e8572a', paddingLeft: '12px' }}>{text}</p>
   )
 
   const SubHead = ({ text }: { text: string }) => (
@@ -54,7 +54,7 @@ export default function PetSitting() {
     <div style={{ border: '2px solid #f59e0b', borderRadius: '12px', marginBottom: '10px', overflow: 'hidden' }}>
       <button onClick={() => toggle(id)} style={{ width: '100%', padding: '14px 20px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', backgroundColor: 'white', border: 'none', cursor: 'pointer' }}>
         <span style={{ fontWeight: '600', fontSize: '15px' }}>{emoji} {title}</span>
-        <span style={{ fontSize: '16px', color: '#999' }}>{openSection === id ? '∧' : '∨'}</span>
+        <span style={{ fontSize: '16px', color: '#555555' }}>{openSection === id ? '∧' : '∨'}</span>
       </button>
       {openSection === id && (
         <div style={{ padding: '20px', backgroundColor: 'white', borderTop: '1px solid #f5f5f5' }}>{children}</div>
@@ -94,7 +94,7 @@ export default function PetSitting() {
         {[['💰', 'Capital inicial', '€1,500 – €3,000'], ['🏠', 'Alojamiento', 'Gratis (intercambio)'], ['📊', 'Dificultad', 'Baja – Media']].map((s, i) => (
           <div key={i} style={{ backgroundColor: 'white', borderRadius: '10px', padding: '14px', textAlign: 'center', boxShadow: '0 1px 4px rgba(0,0,0,0.06)' }}>
             <div style={{ fontSize: '22px', marginBottom: '4px' }}>{s[0]}</div>
-            <div style={{ color: '#999', fontSize: '10px', marginBottom: '3px' }}>{s[1]}</div>
+            <div style={{ color: '#555555', fontSize: '10px', marginBottom: '3px' }}>{s[1]}</div>
             <div style={{ fontWeight: '700', fontSize: '12px' }}>{s[2]}</div>
           </div>
         ))}
@@ -107,7 +107,7 @@ export default function PetSitting() {
           <div style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1617028835510-3882b8bd4076?q=80&w=687&auto=format&fit=crop")', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', height: '180px', borderRadius: '12px', marginBottom: '16px' }} />
           <h2 style={{ fontSize: '17px', fontWeight: '700', marginBottom: '10px' }}>¿Qué es el Pet Sitting?</h2>
           <Intro text="El pet sitting (house sitting) es un intercambio: tú cuidas una casa y sus mascotas y, a cambio, te alojas allí gratis. Para quienes trabajan en remoto, es una forma muy práctica de eliminar el gasto más grande (la vivienda) sin frenar su rutina online." />
-          <p style={{ fontSize: '14px', lineHeight: '1.8', color: '#444', marginBottom: '12px' }}>
+          <p style={{ fontSize: '14px', lineHeight: '1.8', color: '#1a1a2e', marginBottom: '12px' }}>
             A diferencia de otras rutas, <strong>no necesitas visa de trabajo, contrato laboral ni empleador</strong>. Solo necesitas perfil sólido, confianza y estrategia en plataformas especializadas.
           </p>
           <div style={{ backgroundColor: '#f0fdf4', border: '1px solid #86efac', borderRadius: '8px', padding: '14px' }}>
@@ -119,7 +119,7 @@ export default function PetSitting() {
               'Compatible con trabajo remoto e ingresos freelance',
               'Experiencia internacional y de vida real',
             ].map((item, i) => (
-              <p key={i} style={{ fontSize: '13px', color: '#444', margin: '3px 0', display: 'flex', gap: '6px' }}>
+              <p key={i} style={{ fontSize: '13px', color: '#1a1a2e', margin: '3px 0', display: 'flex', gap: '6px' }}>
                 <span style={{ color: '#22c55e' }}>✓</span> {item}
               </p>
             ))}
@@ -154,7 +154,7 @@ export default function PetSitting() {
                   <p style={{ fontWeight: '700', fontSize: '14px', margin: 0 }}>{item.flag} {item.title}</p>
                   <span style={{ backgroundColor: item.color, color: 'white', borderRadius: '10px', padding: '2px 8px', fontSize: '11px', fontWeight: 'bold', flexShrink: 0, marginLeft: '8px' }}>{item.dif}</span>
                 </div>
-                <p style={{ fontSize: '13px', color: '#555', margin: '0 0 6px', lineHeight: '1.5' }}>{item.detail}</p>
+                <p style={{ fontSize: '13px', color: '#1a1a2e', margin: '0 0 6px', lineHeight: '1.5' }}>{item.detail}</p>
                 <a href={item.url} target="_blank" rel="noopener noreferrer" style={{ color: '#2563eb', textDecoration: 'underline', fontSize: '12px' }}>{item.link} →</a>
               </div>
             ))}
@@ -180,10 +180,10 @@ export default function PetSitting() {
               <div key={i} style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', backgroundColor: '#f8f7f4', borderRadius: '10px', padding: '10px 14px' }}>
                 <div>
                   <p style={{ fontWeight: '700', fontSize: '13px', margin: '0 0 2px' }}>{r[0]}</p>
-                  <p style={{ fontSize: '12px', color: '#555', margin: 0 }}>{r[1]}</p>
+                  <p style={{ fontSize: '12px', color: '#1a1a2e', margin: 0 }}>{r[1]}</p>
                 </div>
                 <div style={{ textAlign: 'right' as const, flexShrink: 0, marginLeft: '8px' }}>
-                  <p style={{ fontSize: '11px', color: '#888', margin: '0 0 2px' }}>{r[2]}</p>
+                  <p style={{ fontSize: '11px', color: '#333333', margin: '0 0 2px' }}>{r[2]}</p>
                   <a href={r[3] as string} target="_blank" rel="noopener noreferrer" style={{ color: '#2563eb', textDecoration: 'underline', fontSize: '12px' }}>Ver →</a>
                 </div>
               </div>
@@ -223,7 +223,7 @@ export default function PetSitting() {
               <span style={{ fontSize: '20px', flexShrink: 0 }}>{step[0]}</span>
               <div>
                 <p style={{ fontWeight: '700', fontSize: '13px', margin: '0 0 3px' }}>{step[1]}</p>
-                <p style={{ fontSize: '12px', color: '#666', margin: 0, lineHeight: '1.5' }}>{step[2]}</p>
+                <p style={{ fontSize: '12px', color: '#1a1a2e', margin: 0, lineHeight: '1.5' }}>{step[2]}</p>
               </div>
             </div>
           ))}
@@ -293,8 +293,8 @@ export default function PetSitting() {
             ].map((r, i) => (
               <div key={i} style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', backgroundColor: '#f8f7f4', borderRadius: '10px', padding: '10px 14px' }}>
                 <div>
-                  <p style={{ fontWeight: '700', fontSize: '13px', margin: '0 0 2px' }}>{r[0]} <span style={{ color: '#888', fontWeight: 'normal', fontSize: '12px' }}>· {r[1]}</span></p>
-                  <p style={{ fontSize: '12px', color: '#555', margin: 0 }}>{r[2]}</p>
+                  <p style={{ fontWeight: '700', fontSize: '13px', margin: '0 0 2px' }}>{r[0]} <span style={{ color: '#333333', fontWeight: 'normal', fontSize: '12px' }}>· {r[1]}</span></p>
+                  <p style={{ fontSize: '12px', color: '#1a1a2e', margin: 0 }}>{r[2]}</p>
                 </div>
                 <a href={r[4] as string} target="_blank" rel="noopener noreferrer" style={{ color: '#2563eb', textDecoration: 'underline', fontSize: '12px', flexShrink: 0, marginLeft: '8px' }}>{r[3]}</a>
               </div>
@@ -318,7 +318,7 @@ export default function PetSitting() {
             ].map((item, i) => (
               <div key={i} style={{ backgroundColor: '#fef2f2', borderRadius: '10px', padding: '12px 14px', borderLeft: '3px solid #ef4444' }}>
                 <p style={{ fontWeight: '700', fontSize: '13px', color: '#dc2626', margin: '0 0 3px' }}>{item[0]}</p>
-                <p style={{ fontSize: '12px', color: '#555', margin: 0 }}>{item[1]}</p>
+                <p style={{ fontSize: '12px', color: '#1a1a2e', margin: 0 }}>{item[1]}</p>
               </div>
             ))}
           </div>
@@ -355,8 +355,8 @@ export default function PetSitting() {
         <div style={{ backgroundColor: 'white', borderRadius: '16px', padding: '24px', textAlign: 'center', boxShadow: '0 2px 8px rgba(0,0,0,0.08)', marginTop: '24px' }}>
           <div style={{ fontSize: '40px', marginBottom: '12px' }}>💬</div>
           <h3 style={{ fontWeight: 'bold', marginBottom: '8px', fontSize: '18px' }}>Consultoría 1 a 1</h3>
-          <p style={{ color: '#666', fontSize: '14px', marginBottom: '6px' }}>Te ayudamos a armar tu estrategia de pet sitting + trabajo remoto.</p>
-          <p style={{ color: '#999', fontSize: '13px', marginBottom: '16px' }}>60 minutos · Plan completo · Respuesta en 24h</p>
+          <p style={{ color: '#1a1a2e', fontSize: '14px', marginBottom: '6px' }}>Te ayudamos a armar tu estrategia de pet sitting + trabajo remoto.</p>
+          <p style={{ color: '#555555', fontSize: '13px', marginBottom: '16px' }}>60 minutos · Plan completo · Respuesta en 24h</p>
           <a href="https://calendly.com/jimmyg-leonr/1-hour-meeting" target="_blank" rel="noopener noreferrer" style={{ backgroundColor: '#e8572a', color: 'white', borderRadius: '12px', padding: '14px 32px', fontSize: '15px', fontWeight: 'bold', textDecoration: 'none', display: 'inline-block' }}>
             📅 Agenda tu llamada de orientación
           </a>

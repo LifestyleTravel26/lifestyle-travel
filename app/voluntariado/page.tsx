@@ -34,8 +34,8 @@ export default function Voluntariado() {
                 <span style={{ fontWeight: 'bold', fontSize: '16px' }}>{p.nombre}</span>
                 <span style={{ backgroundColor: '#e8572a', color: 'white', borderRadius: '20px', padding: '4px 12px', fontSize: '12px', fontWeight: 'bold' }}>{p.costo}</span>
               </div>
-              <p style={{ color: '#666', fontSize: '13px', marginBottom: '8px' }}>👥 {p.perfil}</p>
-              <p style={{ color: '#666', fontSize: '13px' }}>📋 {p.visa}</p>
+              <p style={{ color: '#1a1a2e', fontSize: '13px', marginBottom: '8px' }}>👥 {p.perfil}</p>
+              <p style={{ color: '#1a1a2e', fontSize: '13px' }}>📋 {p.visa}</p>
               <a href={p.link} target="_blank" style={{ display: 'inline-block', marginTop: '10px', color: '#e8572a', fontSize: '13px', fontWeight: 'bold', textDecoration: 'none' }}>Ver programa →</a>
             </div>
           ))}
@@ -59,7 +59,7 @@ export default function Voluntariado() {
                 <span style={{ fontWeight: 'bold', fontSize: '15px' }}>{p.pais}</span>
                 <span style={{ backgroundColor: p.color, color: 'white', borderRadius: '20px', padding: '3px 10px', fontSize: '11px', fontWeight: 'bold' }}>{p.categoria}</span>
               </div>
-              <p style={{ color: '#666', fontSize: '13px', marginBottom: '4px' }}>✈️ Europa: {p.europa}</p>
+              <p style={{ color: '#1a1a2e', fontSize: '13px', marginBottom: '4px' }}>✈️ Europa: {p.europa}</p>
               <p style={{ color: '#e8572a', fontSize: '13px', fontWeight: 'bold' }}>👉 {p.recomendacion}</p>
             </div>
           ))}
@@ -75,7 +75,7 @@ export default function Voluntariado() {
           ].map((h, i) => (
             <div key={i} style={{ backgroundColor: 'white', borderRadius: '12px', padding: '16px', marginBottom: '10px', boxShadow: '0 2px 8px rgba(0,0,0,0.06)', borderLeft: '4px solid #e8572a' }}>
               <p style={{ fontWeight: 'bold', color: '#e8572a', marginBottom: '6px', fontSize: '14px' }}>{h.titulo}</p>
-              <p style={{ color: '#444', fontSize: '13px', lineHeight: '1.5' }}>{h.contenido}</p>
+              <p style={{ color: '#1a1a2e', fontSize: '13px', lineHeight: '1.5' }}>{h.contenido}</p>
             </div>
           ))}
   
@@ -90,7 +90,7 @@ export default function Voluntariado() {
               { concepto: 'Capital inicial recomendado', precio: '$2,000 USD' },
             ].map((c, i) => (
               <div key={i} style={{ display: 'flex', justifyContent: 'space-between', padding: '10px 0', borderBottom: i < 5 ? '1px solid #f0f0f0' : 'none' }}>
-                <span style={{ color: '#444', fontSize: '14px' }}>{c.concepto}</span>
+                <span style={{ color: '#1a1a2e', fontSize: '14px' }}>{c.concepto}</span>
                 <span style={{ fontWeight: 'bold', color: '#e8572a', fontSize: '14px' }}>{c.precio}</span>
               </div>
             ))}
@@ -109,7 +109,7 @@ export default function Voluntariado() {
             ].map((item, i) => (
               <div key={i} style={{ display: 'flex', alignItems: 'center', gap: '10px', padding: '8px 0', borderBottom: i < 6 ? '1px solid #f0f0f0' : 'none' }}>
                 <span style={{ color: '#22c55e', fontSize: '18px' }}>✓</span>
-                <span style={{ color: '#444', fontSize: '14px' }}>{item}</span>
+                <span style={{ color: '#1a1a2e', fontSize: '14px' }}>{item}</span>
               </div>
             ))}
           </div>

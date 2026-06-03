@@ -8,7 +8,7 @@ export default function ForgotPasswordPage() {
       title="Recuperar contraseña"
       subtitle="Te enviamos un link a tu email"
     >
-      <Suspense fallback={<p style={{ textAlign: 'center', color: '#666' }}>Cargando...</p>}>
+      <Suspense fallback={<p style={{ textAlign: 'center', color: '#1a1a2e' }}>Cargando...</p>}>
         <ForgotPasswordForm />
       </Suspense>
     </AuthLayout>

@@ -130,7 +130,7 @@ export function LoginForm() {
   ¿Olvidaste tu contraseña?
 </Link>
 
-      <p style={{ textAlign: 'center', marginTop: '20px', color: '#666', fontSize: '14px' }}>
+      <p style={{ textAlign: 'center', marginTop: '20px', color: '#1a1a2e', fontSize: '14px' }}>
         ¿No tienes cuenta?{' '}
         <Link
           href={redirectTo !== '/' ? `/signup?redirectTo=${encodeURIComponent(redirectTo)}` : '/signup'}

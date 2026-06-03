@@ -18,7 +18,7 @@ export default function AuPair() {
   )
 
   const Intro = ({ text }: { text: string }) => (
-    <p style={{ fontSize: '14px', lineHeight: '1.8', color: '#444', marginBottom: '16px', borderLeft: '3px solid #e8572a', paddingLeft: '12px' }}>{text}</p>
+    <p style={{ fontSize: '14px', lineHeight: '1.8', color: '#1a1a2e', marginBottom: '16px', borderLeft: '3px solid #e8572a', paddingLeft: '12px' }}>{text}</p>
   )
 
   const SubHead = ({ text }: { text: string }) => (
@@ -54,7 +54,7 @@ export default function AuPair() {
     <div style={{ border: '2px solid #f59e0b', borderRadius: '12px', marginBottom: '10px', overflow: 'hidden' }}>
       <button onClick={() => toggle(id)} style={{ width: '100%', padding: '14px 20px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', backgroundColor: 'white', border: 'none', cursor: 'pointer' }}>
         <span style={{ fontWeight: '600', fontSize: '15px' }}>{emoji} {title}</span>
-        <span style={{ fontSize: '16px', color: '#999' }}>{openSection === id ? '∧' : '∨'}</span>
+        <span style={{ fontSize: '16px', color: '#555555' }}>{openSection === id ? '∧' : '∨'}</span>
       </button>
       {openSection === id && (
         <div style={{ padding: '20px', backgroundColor: 'white', borderTop: '1px solid #f5f5f5' }}>{children}</div>
@@ -94,7 +94,7 @@ export default function AuPair() {
         {[['💰', 'Capital inicial', '€2,000 – €4,000'], ['🕐', 'Duración', '6 – 12 meses'], ['📊', 'Dificultad', 'Baja – Media']].map((s, i) => (
           <div key={i} style={{ backgroundColor: 'white', borderRadius: '10px', padding: '14px', textAlign: 'center', boxShadow: '0 1px 4px rgba(0,0,0,0.06)' }}>
             <div style={{ fontSize: '22px', marginBottom: '4px' }}>{s[0]}</div>
-            <div style={{ color: '#999', fontSize: '10px', marginBottom: '3px' }}>{s[1]}</div>
+            <div style={{ color: '#555555', fontSize: '10px', marginBottom: '3px' }}>{s[1]}</div>
             <div style={{ fontWeight: '700', fontSize: '12px' }}>{s[2]}</div>
           </div>
         ))}
@@ -107,13 +107,13 @@ export default function AuPair() {
           <div style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1663579170393-7076f2021b10?q=80&w=687&auto=format&fit=crop")', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', height: '180px', borderRadius: '12px', marginBottom: '16px' }} />
           <h2 style={{ fontSize: '17px', fontWeight: '700', marginBottom: '10px' }}>¿Qué es la Visa Au Pair?</h2>
           <Intro text="La Visa Au Pair es una ruta de intercambio cultural que te permite vivir con una familia anfitriona mientras cuidas a sus hijos. A cambio recibes alojamiento, comida y una compensación económica. Es la forma más accesible de trabajar legalmente en Europa o EE.UU. sin necesitar contrato laboral tradicional." />
-          <p style={{ fontSize: '14px', lineHeight: '1.8', color: '#444', marginBottom: '10px' }}>
+          <p style={{ fontSize: '14px', lineHeight: '1.8', color: '#1a1a2e', marginBottom: '10px' }}>
             A diferencia de otras rutas, <strong>primero necesitas una familia anfitriona y luego aplicas a la visa</strong>. Sin familia confirmada no hay visa — esa es la regla clave del proceso.
           </p>
           <div style={{ backgroundColor: '#f0fdf4', border: '1px solid #86efac', borderRadius: '8px', padding: '14px' }}>
             <p style={{ fontSize: '13px', fontWeight: '700', margin: '0 0 8px', color: '#166534' }}>✅ Lo que incluye el programa Au Pair:</p>
             {['Alojamiento con la familia anfitriona', 'Comida incluida', 'Compensación semanal/mensual', 'Experiencia internacional y de idioma', 'Seguro médico en algunos países'].map((item, i) => (
-              <p key={i} style={{ fontSize: '13px', color: '#444', margin: '3px 0', display: 'flex', gap: '6px' }}>
+              <p key={i} style={{ fontSize: '13px', color: '#1a1a2e', margin: '3px 0', display: 'flex', gap: '6px' }}>
                 <span style={{ color: '#22c55e' }}>✓</span> {item}
               </p>
             ))}
@@ -162,7 +162,7 @@ export default function AuPair() {
           <div style={{ display: 'grid', gap: '10px', marginBottom: '14px' }}>
             <div style={{ backgroundColor: '#f0f9ff', borderRadius: '10px', padding: '14px', border: '1px solid #bae6fd' }}>
               <p style={{ fontWeight: '700', fontSize: '14px', margin: '0 0 6px', color: '#0369a1' }}>Opción A: Plataformas directas</p>
-              <p style={{ fontSize: '13px', color: '#444', margin: '0 0 8px', lineHeight: '1.5' }}>Tú haces el match directamente con la familia. Más libertad pero menos seguridad.</p>
+              <p style={{ fontSize: '13px', color: '#1a1a2e', margin: '0 0 8px', lineHeight: '1.5' }}>Tú haces el match directamente con la familia. Más libertad pero menos seguridad.</p>
               <div style={{ display: 'flex', flexWrap: 'wrap' as const, gap: '6px' }}>
                 {[['AuPairWorld', 'https://www.aupairworld.com'], ['AuPair.com', 'https://www.aupair.com']].map((p, i) => (
                   <a key={i} href={p[1]} target="_blank" rel="noopener noreferrer" style={{ backgroundColor: 'white', border: '1px solid #bae6fd', borderRadius: '6px', padding: '3px 10px', fontSize: '12px', color: '#2563eb', textDecoration: 'none' }}>{p[0]} →</a>
@@ -171,7 +171,7 @@ export default function AuPair() {
             </div>
             <div style={{ backgroundColor: '#f0fdf4', borderRadius: '10px', padding: '14px', border: '1px solid #86efac' }}>
               <p style={{ fontWeight: '700', fontSize: '14px', margin: '0 0 6px', color: '#166534' }}>Opción B: Agencias (recomendado)</p>
-              <p style={{ fontSize: '13px', color: '#444', margin: '0 0 8px', lineHeight: '1.5' }}>Te ayudan con matching, visa, soporte legal y acompañamiento. En EE.UU. es obligatorio.</p>
+              <p style={{ fontSize: '13px', color: '#1a1a2e', margin: '0 0 8px', lineHeight: '1.5' }}>Te ayudan con matching, visa, soporte legal y acompañamiento. En EE.UU. es obligatorio.</p>
               <div style={{ display: 'flex', flexWrap: 'wrap' as const, gap: '6px' }}>
                 {[
                   ['Cultural Care', 'https://www.culturalcare.com'],
@@ -199,7 +199,7 @@ export default function AuPair() {
               <span style={{ fontSize: '20px', flexShrink: 0 }}>{step[0]}</span>
               <div>
                 <p style={{ fontWeight: '700', fontSize: '13px', margin: '0 0 3px' }}>{step[1]}</p>
-                <p style={{ fontSize: '12px', color: '#666', margin: 0, lineHeight: '1.5' }}>{step[2]}</p>
+                <p style={{ fontSize: '12px', color: '#1a1a2e', margin: 0, lineHeight: '1.5' }}>{step[2]}</p>
               </div>
             </div>
           ))}
@@ -249,7 +249,7 @@ export default function AuPair() {
               <span style={{ backgroundColor: '#22c55e', color: 'white', borderRadius: '50%', width: '20px', height: '20px', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '11px', fontWeight: '700', flexShrink: 0, marginTop: '1px' }}>✓</span>
               <div>
                 <p style={{ fontWeight: '700', fontSize: '13px', margin: '0 0 2px' }}>{item[0]}</p>
-                <p style={{ fontSize: '12px', color: '#666', margin: 0 }}>{item[1]}</p>
+                <p style={{ fontSize: '12px', color: '#1a1a2e', margin: 0 }}>{item[1]}</p>
               </div>
             </div>
           ))}
@@ -294,8 +294,8 @@ export default function AuPair() {
             ].map((r, i) => (
               <div key={i} style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', backgroundColor: '#f8f7f4', borderRadius: '10px', padding: '10px 14px' }}>
                 <div>
-                  <p style={{ fontWeight: '700', fontSize: '13px', margin: '0 0 2px' }}>{r[0]} <span style={{ color: '#888', fontWeight: 'normal', fontSize: '12px' }}>· {r[1]}</span></p>
-                  <p style={{ fontSize: '12px', color: '#555', margin: 0 }}>{r[2]}</p>
+                  <p style={{ fontWeight: '700', fontSize: '13px', margin: '0 0 2px' }}>{r[0]} <span style={{ color: '#333333', fontWeight: 'normal', fontSize: '12px' }}>· {r[1]}</span></p>
+                  <p style={{ fontSize: '12px', color: '#1a1a2e', margin: 0 }}>{r[2]}</p>
                 </div>
                 <a href={r[4] as string} target="_blank" rel="noopener noreferrer" style={{ color: '#2563eb', textDecoration: 'underline', fontSize: '12px', flexShrink: 0, marginLeft: '8px' }}>{r[3]}</a>
               </div>
@@ -316,8 +316,8 @@ export default function AuPair() {
             ].map((r, i) => (
               <div key={i} style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', backgroundColor: '#f8f7f4', borderRadius: '10px', padding: '10px 14px' }}>
                 <div>
-                  <p style={{ fontWeight: '700', fontSize: '13px', margin: '0 0 2px' }}>{r[0]} <span style={{ color: '#888', fontWeight: 'normal', fontSize: '12px' }}>· {r[1]}</span></p>
-                  <p style={{ fontSize: '12px', color: '#555', margin: 0 }}>{r[2]}</p>
+                  <p style={{ fontWeight: '700', fontSize: '13px', margin: '0 0 2px' }}>{r[0]} <span style={{ color: '#333333', fontWeight: 'normal', fontSize: '12px' }}>· {r[1]}</span></p>
+                  <p style={{ fontSize: '12px', color: '#1a1a2e', margin: 0 }}>{r[2]}</p>
                 </div>
                 <a href={r[4] as string} target="_blank" rel="noopener noreferrer" style={{ color: '#2563eb', textDecoration: 'underline', fontSize: '12px', flexShrink: 0, marginLeft: '8px' }}>{r[3]}</a>
               </div>
@@ -339,7 +339,7 @@ export default function AuPair() {
             ].map((item, i) => (
               <div key={i} style={{ backgroundColor: '#fef2f2', borderRadius: '10px', padding: '12px 14px', borderLeft: '3px solid #ef4444' }}>
                 <p style={{ fontWeight: '700', fontSize: '13px', color: '#dc2626', margin: '0 0 3px' }}>{item[0]}</p>
-                <p style={{ fontSize: '12px', color: '#555', margin: 0 }}>{item[1]}</p>
+                <p style={{ fontSize: '12px', color: '#1a1a2e', margin: 0 }}>{item[1]}</p>
               </div>
             ))}
           </div>
@@ -378,8 +378,8 @@ export default function AuPair() {
         <div style={{ backgroundColor: 'white', borderRadius: '16px', padding: '24px', textAlign: 'center', boxShadow: '0 2px 8px rgba(0,0,0,0.08)', marginTop: '24px' }}>
           <div style={{ fontSize: '40px', marginBottom: '12px' }}>💬</div>
           <h3 style={{ fontWeight: 'bold', marginBottom: '8px', fontSize: '18px' }}>Consultoría 1 a 1</h3>
-          <p style={{ color: '#666', fontSize: '14px', marginBottom: '6px' }}>Te ayudamos a encontrar tu ruta Au Pair ideal según tu perfil.</p>
-          <p style={{ color: '#999', fontSize: '13px', marginBottom: '16px' }}>60 minutos · Plan completo · Respuesta en 24h</p>
+          <p style={{ color: '#1a1a2e', fontSize: '14px', marginBottom: '6px' }}>Te ayudamos a encontrar tu ruta Au Pair ideal según tu perfil.</p>
+          <p style={{ color: '#555555', fontSize: '13px', marginBottom: '16px' }}>60 minutos · Plan completo · Respuesta en 24h</p>
           <a href="https://calendly.com/jimmyg-leonr/1-hour-meeting" target="_blank" rel="noopener noreferrer" style={{ backgroundColor: '#e8572a', color: 'white', borderRadius: '12px', padding: '14px 32px', fontSize: '15px', fontWeight: 'bold', textDecoration: 'none', display: 'inline-block' }}>
             📅 Agenda tu llamada de orientación
           </a>

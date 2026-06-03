@@ -18,7 +18,7 @@ export default function Voluntariado() {
   )
 
   const Intro = ({ text }: { text: string }) => (
-    <p style={{ fontSize: '14px', lineHeight: '1.8', color: '#444', marginBottom: '16px', borderLeft: '3px solid #e8572a', paddingLeft: '12px' }}>{text}</p>
+    <p style={{ fontSize: '14px', lineHeight: '1.8', color: '#1a1a2e', marginBottom: '16px', borderLeft: '3px solid #e8572a', paddingLeft: '12px' }}>{text}</p>
   )
 
   const SubHead = ({ text }: { text: string }) => (
@@ -54,7 +54,7 @@ export default function Voluntariado() {
     <div style={{ border: '2px solid #f59e0b', borderRadius: '12px', marginBottom: '10px', overflow: 'hidden' }}>
       <button onClick={() => toggle(id)} style={{ width: '100%', padding: '14px 20px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', backgroundColor: 'white', border: 'none', cursor: 'pointer' }}>
         <span style={{ fontWeight: '600', fontSize: '15px' }}>{emoji} {title}</span>
-        <span style={{ fontSize: '16px', color: '#999' }}>{openSection === id ? '∧' : '∨'}</span>
+        <span style={{ fontSize: '16px', color: '#555555' }}>{openSection === id ? '∧' : '∨'}</span>
       </button>
       {openSection === id && (
         <div style={{ padding: '20px', backgroundColor: 'white', borderTop: '1px solid #f5f5f5' }}>{children}</div>
@@ -90,7 +90,7 @@ export default function Voluntariado() {
         {[['💰', 'Costo mensual', '~$0 (Aloj + comida)'], ['⏰', 'Horas/semana', '20 – 40 horas'], ['📊', 'Dificultad', 'Media – Alta']].map((s, i) => (
           <div key={i} style={{ backgroundColor: 'white', borderRadius: '10px', padding: '14px', textAlign: 'center', boxShadow: '0 1px 4px rgba(0,0,0,0.06)' }}>
             <div style={{ fontSize: '22px', marginBottom: '4px' }}>{s[0]}</div>
-            <div style={{ color: '#999', fontSize: '10px', marginBottom: '3px' }}>{s[1]}</div>
+            <div style={{ color: '#555555', fontSize: '10px', marginBottom: '3px' }}>{s[1]}</div>
             <div style={{ fontWeight: '700', fontSize: '12px' }}>{s[2]}</div>
           </div>
         ))}
@@ -106,7 +106,7 @@ export default function Voluntariado() {
           <div style={{ backgroundColor: '#f0fdf4', border: '1px solid #86efac', borderRadius: '8px', padding: '14px', marginBottom: '12px' }}>
             <p style={{ fontSize: '13px', fontWeight: '700', margin: '0 0 8px', color: '#166534' }}>✅ Lo que incluye el voluntariado:</p>
             {['Alojamiento gratis (habitación o cama)', 'Comida incluida (según programa)', 'Experiencia internacional real', 'Días libres para turismo y trabajo remoto', 'Red de contactos global'].map((item, i) => (
-              <p key={i} style={{ fontSize: '13px', color: '#444', margin: '3px 0', display: 'flex', gap: '6px' }}>
+              <p key={i} style={{ fontSize: '13px', color: '#1a1a2e', margin: '3px 0', display: 'flex', gap: '6px' }}>
                 <span style={{ color: '#22c55e' }}>✓</span> {item}
               </p>
             ))}
@@ -126,8 +126,8 @@ export default function Voluntariado() {
               <div key={i} style={{ backgroundColor: item.bg, borderRadius: '10px', padding: '14px', border: `1px solid ${item.border}` }}>
                 <p style={{ fontWeight: '700', fontSize: '14px', margin: '0 0 4px', color: item.color }}>{item.level}</p>
                 <p style={{ fontSize: '13px', fontWeight: '600', margin: '0 0 4px' }}>{item.countries}</p>
-                <p style={{ fontSize: '12px', color: '#555', margin: '0 0 6px', lineHeight: '1.5' }}>Europa: {item.europe} · Asia: {item.asia}</p>
-                <p style={{ fontSize: '12px', color: '#444', margin: 0, lineHeight: '1.5' }}>{item.impact}</p>
+                <p style={{ fontSize: '12px', color: '#1a1a2e', margin: '0 0 6px', lineHeight: '1.5' }}>Europa: {item.europe} · Asia: {item.asia}</p>
+                <p style={{ fontSize: '12px', color: '#1a1a2e', margin: 0, lineHeight: '1.5' }}>{item.impact}</p>
               </div>
             ))}
           </div>
@@ -151,8 +151,8 @@ export default function Voluntariado() {
                 <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '6px', marginBottom: '8px' }}>
                   {[['⏰ Horas', p.hours], ['🍽️ Beneficio', p.benefit], ['📍 Destinos', p.destinations], ['🛠️ Roles', p.roles]].map((item, j) => (
                     <div key={j}>
-                      <p style={{ fontSize: '11px', color: '#888', margin: '0 0 1px', fontWeight: '600' }}>{item[0]}</p>
-                      <p style={{ fontSize: '12px', color: '#444', margin: 0 }}>{item[1]}</p>
+                      <p style={{ fontSize: '11px', color: '#333333', margin: '0 0 1px', fontWeight: '600' }}>{item[0]}</p>
+                      <p style={{ fontSize: '12px', color: '#1a1a2e', margin: 0 }}>{item[1]}</p>
                     </div>
                   ))}
                 </div>
@@ -225,7 +225,7 @@ export default function Voluntariado() {
             ].map((item, i) => (
               <div key={i} style={{ backgroundColor: '#f0fdf4', borderRadius: '10px', padding: '12px 14px', borderLeft: '3px solid #22c55e' }}>
                 <p style={{ fontWeight: '700', fontSize: '13px', color: '#166534', margin: '0 0 3px' }}>{item[0]}</p>
-                <p style={{ fontSize: '12px', color: '#555', margin: 0 }}>{item[1]}</p>
+                <p style={{ fontSize: '12px', color: '#1a1a2e', margin: 0 }}>{item[1]}</p>
               </div>
             ))}
           </div>
@@ -264,8 +264,8 @@ export default function Voluntariado() {
             ].map((r, i) => (
               <div key={i} style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', backgroundColor: '#f8f7f4', borderRadius: '10px', padding: '10px 14px' }}>
                 <div>
-                  <p style={{ fontWeight: '700', fontSize: '13px', margin: '0 0 2px' }}>{r[0]} <span style={{ color: '#888', fontWeight: 'normal', fontSize: '12px' }}>· {r[1]}</span></p>
-                  <p style={{ fontSize: '12px', color: '#555', margin: 0 }}>{r[2]}</p>
+                  <p style={{ fontWeight: '700', fontSize: '13px', margin: '0 0 2px' }}>{r[0]} <span style={{ color: '#333333', fontWeight: 'normal', fontSize: '12px' }}>· {r[1]}</span></p>
+                  <p style={{ fontSize: '12px', color: '#1a1a2e', margin: 0 }}>{r[2]}</p>
                 </div>
                 <a href={r[4] as string} target="_blank" rel="noopener noreferrer" style={{ color: '#2563eb', textDecoration: 'underline', fontSize: '12px', flexShrink: 0, marginLeft: '8px' }}>{r[3]}</a>
               </div>
@@ -286,7 +286,7 @@ export default function Voluntariado() {
                 <p style={{ fontWeight: '700', fontSize: '13px', color: phase.color, margin: '0 0 2px' }}>{phase.phase}</p>
                 <p style={{ fontWeight: '700', fontSize: '14px', margin: '0 0 8px' }}>{phase.title}</p>
                 {phase.items.map((item, j) => (
-                  <p key={j} style={{ fontSize: '12px', color: '#555', margin: '3px 0', display: 'flex', gap: '6px' }}>
+                  <p key={j} style={{ fontSize: '12px', color: '#1a1a2e', margin: '3px 0', display: 'flex', gap: '6px' }}>
                     <span style={{ color: phase.color, flexShrink: 0 }}>•</span> {item}
                   </p>
                 ))}
@@ -307,7 +307,7 @@ export default function Voluntariado() {
               <span style={{ backgroundColor: '#e8572a', color: 'white', borderRadius: '50%', width: '22px', height: '22px', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '11px', fontWeight: '700', flexShrink: 0, marginTop: '1px' }}>{i + 1}</span>
               <div>
                 <p style={{ fontWeight: '700', fontSize: '13px', margin: '0 0 3px', color: '#e8572a' }}>{item[0]}</p>
-                <p style={{ fontSize: '13px', color: '#555', margin: 0, lineHeight: '1.5' }}>{item[1]}</p>
+                <p style={{ fontSize: '13px', color: '#1a1a2e', margin: 0, lineHeight: '1.5' }}>{item[1]}</p>
               </div>
             </div>
           ))}
@@ -326,7 +326,7 @@ export default function Voluntariado() {
               <div key={i} style={{ backgroundColor: '#f8f7f4', borderRadius: '12px', padding: '14px', borderLeft: `4px solid ${scenario.color}` }}>
                 <p style={{ fontWeight: '700', fontSize: '13px', margin: '0 0 8px', color: scenario.color }}>{scenario.title}</p>
                 {scenario.steps.map((step, j) => (
-                  <p key={j} style={{ fontSize: '12px', color: '#555', margin: '4px 0', display: 'flex', gap: '6px', lineHeight: '1.5' }}>
+                  <p key={j} style={{ fontSize: '12px', color: '#1a1a2e', margin: '4px 0', display: 'flex', gap: '6px', lineHeight: '1.5' }}>
                     <span style={{ fontWeight: '700', flexShrink: 0 }}>Paso {j + 1}:</span> {step}
                   </p>
                 ))}
@@ -392,8 +392,8 @@ export default function Voluntariado() {
         <div style={{ backgroundColor: 'white', borderRadius: '16px', padding: '24px', textAlign: 'center', boxShadow: '0 2px 8px rgba(0,0,0,0.08)', marginTop: '24px' }}>
           <div style={{ fontSize: '40px', marginBottom: '12px' }}>💬</div>
           <h3 style={{ fontWeight: 'bold', marginBottom: '8px', fontSize: '18px' }}>Consultoría 1 a 1</h3>
-          <p style={{ color: '#666', fontSize: '14px', marginBottom: '6px' }}>Te armamos la estrategia de voluntariado + trabajo remoto según tu perfil.</p>
-          <p style={{ color: '#999', fontSize: '13px', marginBottom: '16px' }}>60 minutos · Plan completo · Respuesta en 24h</p>
+          <p style={{ color: '#1a1a2e', fontSize: '14px', marginBottom: '6px' }}>Te armamos la estrategia de voluntariado + trabajo remoto según tu perfil.</p>
+          <p style={{ color: '#555555', fontSize: '13px', marginBottom: '16px' }}>60 minutos · Plan completo · Respuesta en 24h</p>
           <a href="https://calendly.com/jimmyg-leonr/1-hour-meeting" target="_blank" rel="noopener noreferrer" style={{ backgroundColor: '#e8572a', color: 'white', borderRadius: '12px', padding: '14px 32px', fontSize: '15px', fontWeight: 'bold', textDecoration: 'none', display: 'inline-block' }}>
             📅 Agenda tu llamada de orientación
           </a>

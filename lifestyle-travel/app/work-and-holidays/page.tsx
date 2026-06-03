@@ -181,7 +181,7 @@ export default function WorkAndHolidays() {
     <div style={{ border: '2px solid #f59e0b', borderRadius: '12px', marginBottom: '10px', overflow: 'hidden' }}>
       <button onClick={() => toggle(id)} style={{ width: '100%', padding: '14px 20px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', backgroundColor: 'white', border: 'none', cursor: 'pointer' }}>
         <span style={{ fontWeight: '600', fontSize: '15px' }}>{emoji} {title}</span>
-        <span style={{ fontSize: '16px', color: '#999' }}>{openSection === id ? '∧' : '∨'}</span>
+        <span style={{ fontSize: '16px', color: '#555555' }}>{openSection === id ? '∧' : '∨'}</span>
       </button>
       {openSection === id && (
         <div style={{ padding: '20px', backgroundColor: 'white', borderTop: '1px solid #f5f5f5' }}>{children}</div>
@@ -223,7 +223,7 @@ export default function WorkAndHolidays() {
         {/* SELECTOR PAÍS DE ORIGEN */}
         <div style={{ backgroundColor: 'white', borderRadius: '16px', padding: '20px', boxShadow: '0 2px 8px rgba(0,0,0,0.07)', marginBottom: '20px' }}>
           <h2 style={{ fontSize: '18px', fontWeight: 'bold', marginBottom: '4px' }}>¿De dónde eres?</h2>
-          <p style={{ color: '#666', fontSize: '13px', marginBottom: '16px' }}>Selecciona tu país para ver a qué destinos puedes aplicar</p>
+          <p style={{ color: '#1a1a2e', fontSize: '13px', marginBottom: '16px' }}>Selecciona tu país para ver a qué destinos puedes aplicar</p>
 
           {/* ✅ FIX 1: auto-fit para que funcione en cualquier ancho de pantalla */}
           <div style={{
@@ -284,7 +284,7 @@ export default function WorkAndHolidays() {
               {selected.destinations.length === 0 ? (
                 <div style={{ backgroundColor: '#fef2f2', borderRadius: '10px', padding: '16px', marginTop: '12px', textAlign: 'center' }}>
                   <p style={{ color: '#dc2626', fontWeight: '600', margin: 0, fontSize: '14px' }}>⚠️ Sin convenios Working Holiday activos</p>
-                  <p style={{ color: '#666', fontSize: '13px', margin: '8px 0 0' }}>Tu país no tiene acuerdos WHV vigentes por el momento.</p>
+                  <p style={{ color: '#1a1a2e', fontSize: '13px', margin: '8px 0 0' }}>Tu país no tiene acuerdos WHV vigentes por el momento.</p>
                 </div>
               ) : (
                 <div style={{ display: 'flex', flexWrap: 'wrap' as const, gap: '8px', marginTop: '12px' }}>
@@ -304,7 +304,7 @@ export default function WorkAndHolidays() {
                 </div>
               )}
               {selected.destinations.length > 0 && (
-                <p style={{ fontSize: '12px', color: '#888', margin: '12px 0 0' }}>
+                <p style={{ fontSize: '12px', color: '#333333', margin: '12px 0 0' }}>
                   ⚠️ Los cupos y condiciones cambian cada año. Verifica en el portal oficial de inmigración de cada país.
                 </p>
               )}
@@ -314,7 +314,7 @@ export default function WorkAndHolidays() {
 
         {/* DESTINOS PRINCIPALES */}
         <h2 style={{ fontSize: '18px', fontWeight: 'bold', marginBottom: '4px', marginTop: '8px' }}>Destinos principales</h2>
-        <p style={{ color: '#666', fontSize: '13px', marginBottom: '16px' }}>Comparativa de los mejores países WHV</p>
+        <p style={{ color: '#1a1a2e', fontSize: '13px', marginBottom: '16px' }}>Comparativa de los mejores países WHV</p>
         <div style={{ display: 'flex', flexDirection: 'column', gap: '10px', marginBottom: '24px' }}>
           {destinationInfo.map((d, i) => (
             <div key={i} style={{ backgroundColor: 'white', borderRadius: '12px', padding: '16px', boxShadow: '0 1px 4px rgba(0,0,0,0.06)', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
@@ -324,12 +324,12 @@ export default function WorkAndHolidays() {
                   <span style={{ fontWeight: '700', fontSize: '15px' }}>{d.name}</span>
                   <span style={{ backgroundColor: d.color, color: 'white', borderRadius: '10px', padding: '2px 8px', fontSize: '11px', fontWeight: 'bold' }}>{d.difficulty}</span>
                 </div>
-                <div style={{ fontSize: '12px', color: '#666', lineHeight: '1.6' }}>
+                <div style={{ fontSize: '12px', color: '#1a1a2e', lineHeight: '1.6' }}>
                   ⏱ {d.duration} · 🎂 {d.age}<br />
                   💰 {d.funds} · 💵 {d.salary}
                 </div>
               </div>
-              <div style={{ fontSize: '12px', color: '#888', textAlign: 'right' as const, maxWidth: '100px' }}>
+              <div style={{ fontSize: '12px', color: '#333333', textAlign: 'right' as const, maxWidth: '100px' }}>
                 {d.system}
               </div>
             </div>
@@ -347,8 +347,8 @@ export default function WorkAndHolidays() {
             ].map((item, i) => (
               <div key={i} style={{ backgroundColor: '#f8f7f4', borderRadius: '10px', padding: '14px', borderLeft: `4px solid ${item.color}` }}>
                 <p style={{ fontWeight: '700', fontSize: '14px', margin: '0 0 4px' }}>{item.n} {item.title}</p>
-                <p style={{ fontSize: '13px', color: '#555', margin: '0 0 6px', lineHeight: '1.5' }}>{item.desc}</p>
-                <p style={{ fontSize: '12px', color: '#888', margin: 0 }}>Ejemplos: <strong>{item.examples}</strong></p>
+                <p style={{ fontSize: '13px', color: '#1a1a2e', margin: '0 0 6px', lineHeight: '1.5' }}>{item.desc}</p>
+                <p style={{ fontSize: '12px', color: '#333333', margin: 0 }}>Ejemplos: <strong>{item.examples}</strong></p>
               </div>
             ))}
           </div>
@@ -403,7 +403,7 @@ export default function WorkAndHolidays() {
               <span style={{ backgroundColor: '#22c55e', color: 'white', borderRadius: '50%', width: '20px', height: '20px', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '11px', fontWeight: '700', flexShrink: 0, marginTop: '1px' }}>✓</span>
               <div>
                 <p style={{ fontWeight: '700', fontSize: '13px', margin: '0 0 2px' }}>{item[0]}</p>
-                <p style={{ fontSize: '12px', color: '#666', margin: 0 }}>{item[1]}</p>
+                <p style={{ fontSize: '12px', color: '#1a1a2e', margin: 0 }}>{item[1]}</p>
               </div>
             </div>
           ))}
@@ -411,7 +411,7 @@ export default function WorkAndHolidays() {
         </Section>
 
         <Section id="bancos" emoji="🏦" title="Opciones Bancarias">
-          <p style={{ fontSize: '14px', color: '#444', marginBottom: '12px', lineHeight: '1.6' }}>Para una Working Holiday abre primero Wise o Revolut antes de viajar. Luego abre banco local en el país destino.</p>
+          <p style={{ fontSize: '14px', color: '#1a1a2e', marginBottom: '12px', lineHeight: '1.6' }}>Para una Working Holiday abre primero Wise o Revolut antes de viajar. Luego abre banco local en el país destino.</p>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
             {[
               ['Wise', 'Digital', 'Transferencias internacionales baratas + múltiples divisas. Abre antes de viajar.', 'wise.com', 'https://wise.com'],
@@ -421,8 +421,8 @@ export default function WorkAndHolidays() {
             ].map((r, i) => (
               <div key={i} style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', backgroundColor: '#f8f7f4', borderRadius: '10px', padding: '12px 14px' }}>
                 <div>
-                  <p style={{ fontWeight: '700', fontSize: '13px', margin: '0 0 2px' }}>{r[0]} <span style={{ color: '#888', fontWeight: 'normal', fontSize: '12px' }}>· {r[1]}</span></p>
-                  <p style={{ fontSize: '12px', color: '#555', margin: 0 }}>{r[2]}</p>
+                  <p style={{ fontWeight: '700', fontSize: '13px', margin: '0 0 2px' }}>{r[0]} <span style={{ color: '#333333', fontWeight: 'normal', fontSize: '12px' }}>· {r[1]}</span></p>
+                  <p style={{ fontSize: '12px', color: '#1a1a2e', margin: 0 }}>{r[2]}</p>
                 </div>
                 <a href={r[4] as string} target="_blank" rel="noopener noreferrer" style={{ color: '#2563eb', textDecoration: 'underline', fontSize: '12px', flexShrink: 0, marginLeft: '8px' }}>{r[3]}</a>
               </div>
@@ -432,7 +432,7 @@ export default function WorkAndHolidays() {
 
         <Section id="vivienda" emoji="🏠" title="Protocolo de Vivienda">
           <div style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1539635278303-d4002c07eae3?q=80&w=1170&auto=format&fit=crop")', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', height: '160px', borderRadius: '10px', marginBottom: '14px' }} />
-          <p style={{ fontSize: '14px', color: '#444', marginBottom: '12px', lineHeight: '1.6' }}>Reserva hostel o Airbnb para las primeras 1-2 semanas. Busca habitación permanente desde ahí.</p>
+          <p style={{ fontSize: '14px', color: '#1a1a2e', marginBottom: '12px', lineHeight: '1.6' }}>Reserva hostel o Airbnb para las primeras 1-2 semanas. Busca habitación permanente desde ahí.</p>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
             {[
               ['Airbnb', 'Alojamiento temporal', 'Primeras semanas — base para buscar permanente', 'airbnb.com', 'https://airbnb.com'],
@@ -443,8 +443,8 @@ export default function WorkAndHolidays() {
             ].map((r, i) => (
               <div key={i} style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', backgroundColor: '#f8f7f4', borderRadius: '10px', padding: '10px 14px' }}>
                 <div>
-                  <p style={{ fontWeight: '700', fontSize: '13px', margin: '0 0 2px' }}>{r[0]} <span style={{ color: '#888', fontWeight: 'normal', fontSize: '12px' }}>· {r[1]}</span></p>
-                  <p style={{ fontSize: '12px', color: '#555', margin: 0 }}>{r[2]}</p>
+                  <p style={{ fontWeight: '700', fontSize: '13px', margin: '0 0 2px' }}>{r[0]} <span style={{ color: '#333333', fontWeight: 'normal', fontSize: '12px' }}>· {r[1]}</span></p>
+                  <p style={{ fontSize: '12px', color: '#1a1a2e', margin: 0 }}>{r[2]}</p>
                 </div>
                 <a href={r[4] as string} target="_blank" rel="noopener noreferrer" style={{ color: '#2563eb', textDecoration: 'underline', fontSize: '12px', flexShrink: 0, marginLeft: '8px' }}>{r[3]}</a>
               </div>
@@ -465,7 +465,7 @@ export default function WorkAndHolidays() {
             ].map((item, i) => (
               <div key={i} style={{ backgroundColor: '#fef2f2', borderRadius: '10px', padding: '12px 14px', borderLeft: '3px solid #ef4444' }}>
                 <p style={{ fontWeight: '700', fontSize: '13px', color: '#dc2626', margin: '0 0 3px' }}>{item[0]}</p>
-                <p style={{ fontSize: '12px', color: '#555', margin: 0 }}>{item[1]}</p>
+                <p style={{ fontSize: '12px', color: '#1a1a2e', margin: 0 }}>{item[1]}</p>
               </div>
             ))}
           </div>
@@ -475,8 +475,8 @@ export default function WorkAndHolidays() {
         <div style={{ backgroundColor: 'white', borderRadius: '16px', padding: '24px', textAlign: 'center', boxShadow: '0 2px 8px rgba(0,0,0,0.08)', marginTop: '24px' }}>
           <div style={{ fontSize: '40px', marginBottom: '12px' }}>💬</div>
           <h3 style={{ fontWeight: 'bold', marginBottom: '8px', fontSize: '18px' }}>Consultoría 1 a 1</h3>
-          <p style={{ color: '#666', fontSize: '14px', marginBottom: '6px' }}>Te ayudamos a identificar tu mejor ruta WHV según tu país.</p>
-          <p style={{ color: '#999', fontSize: '13px', marginBottom: '16px' }}>60 minutos · Plan completo · Respuesta en 24h</p>
+          <p style={{ color: '#1a1a2e', fontSize: '14px', marginBottom: '6px' }}>Te ayudamos a identificar tu mejor ruta WHV según tu país.</p>
+          <p style={{ color: '#555555', fontSize: '13px', marginBottom: '16px' }}>60 minutos · Plan completo · Respuesta en 24h</p>
           {/* 
             ✅ PRÓXIMO PASO — CALENDLY:
             Reemplaza href="https://calendly.com/jimmyg-leonr/1-hour-meeting" con tu link de Calendly:

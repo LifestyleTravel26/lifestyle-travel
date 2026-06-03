@@ -209,7 +209,7 @@ export default function VisaQuiz() {
           <div style={{ textAlign: 'center', marginBottom: '24px' }}>
             <div style={{ fontSize: '60px', marginBottom: '8px' }}>🎯</div>
             <h1 style={{ fontSize: '22px', fontWeight: 'bold', marginBottom: '6px' }}>Tu visa ideal es...</h1>
-            <p style={{ color: '#666', fontSize: '14px' }}>Basado en tus respuestas</p>
+            <p style={{ color: '#1a1a2e', fontSize: '14px' }}>Basado en tus respuestas</p>
           </div>
 
           {/* MAIN RECOMMENDATION */}
@@ -217,11 +217,11 @@ export default function VisaQuiz() {
             <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '14px' }}>
               <span style={{ fontSize: '40px' }}>{recommendation.emoji}</span>
               <div>
-                <p style={{ fontSize: '11px', color: '#999', margin: 0, fontWeight: '600', textTransform: 'uppercase' as const }}>Recomendación principal</p>
+                <p style={{ fontSize: '11px', color: '#555555', margin: 0, fontWeight: '600', textTransform: 'uppercase' as const }}>Recomendación principal</p>
                 <h2 style={{ fontSize: '20px', fontWeight: 'bold', margin: 0, color: recommendation.color }}>{recommendation.visa}</h2>
               </div>
             </div>
-            <p style={{ fontSize: '14px', lineHeight: '1.7', color: '#444', marginBottom: '20px' }}>{recommendation.reason}</p>
+            <p style={{ fontSize: '14px', lineHeight: '1.7', color: '#1a1a2e', marginBottom: '20px' }}>{recommendation.reason}</p>
             <Link
               href={recommendation.href}
               style={{ backgroundColor: recommendation.color, color: 'white', borderRadius: '12px', padding: '14px 24px', fontSize: '15px', fontWeight: 'bold', textDecoration: 'none', display: 'block', textAlign: 'center' as const }}
@@ -231,7 +231,7 @@ export default function VisaQuiz() {
           </div>
 
           {/* ALTERNATIVES */}
-          <p style={{ fontSize: '13px', color: '#888', marginBottom: '10px', fontWeight: '600' }}>También podrían interesarte:</p>
+          <p style={{ fontSize: '13px', color: '#333333', marginBottom: '10px', fontWeight: '600' }}>También podrían interesarte:</p>
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '10px', marginBottom: '24px' }}>
             {recommendation.alternatives.map((alt, i) => (
               <Link key={i} href={alt.href} style={{ textDecoration: 'none' }}>
@@ -269,7 +269,7 @@ export default function VisaQuiz() {
       </div>
 
       <div style={{ padding: '32px 20px 40px', maxWidth: '500px', margin: '0 auto' }}>
-        <p style={{ fontSize: '13px', color: '#999', marginBottom: '8px', fontWeight: '600' }}>Pregunta {current + 1} de {questions.length}</p>
+        <p style={{ fontSize: '13px', color: '#555555', marginBottom: '8px', fontWeight: '600' }}>Pregunta {current + 1} de {questions.length}</p>
         <div style={{ fontSize: '48px', marginBottom: '12px' }}>{q.emoji}</div>
         <h1 style={{ fontSize: '22px', fontWeight: 'bold', marginBottom: '24px', lineHeight: '1.3' }}>{q.question}</h1>
 

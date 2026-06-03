@@ -35,7 +35,7 @@ export function ForgotPasswordForm() {
       <div style={{ backgroundColor: 'white', borderRadius: '16px', padding: '28px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)', textAlign: 'center' }}>
         <div style={{ fontSize: '48px', marginBottom: '16px' }}>📧</div>
         <h2 style={{ fontSize: '18px', fontWeight: 'bold', marginBottom: '8px' }}>¡Email enviado!</h2>
-        <p style={{ color: '#666', fontSize: '14px', marginBottom: '20px' }}>Revisa tu bandeja de entrada y haz click en el link para restablecer tu contraseña.</p>
+        <p style={{ color: '#1a1a2e', fontSize: '14px', marginBottom: '20px' }}>Revisa tu bandeja de entrada y haz click en el link para restablecer tu contraseña.</p>
         <Link href="/login" style={{ color: '#e8572a', fontWeight: 'bold', textDecoration: 'none', fontSize: '14px' }}>
           ← Volver al inicio de sesión
         </Link>
