@@ -17,6 +17,7 @@ body {
   margin: 0;
   min-height: 100%;
   color-scheme: light only;
+  background-color: #f8f7f4;
 }
 
 body {
@@ -25,30 +26,32 @@ body {
   font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
 }
 
-/* ============================================
-   DARK MODE OVERRIDE — fuerza colores en toda la app
-   Evita que el dark mode del navegador/sistema
-   afecte botones, textos y fondos
-   ============================================ */
+/* ================================================
+   DARK MODE GLOBAL FIX
+   Fuerza light mode en toda la app.
+   Sin esto, el dark mode del browser/sistema
+   pone el texto transparente sobre fondos blancos.
+   ================================================ */
 
+/* Fuerza texto oscuro en botones — fix para acordeones */
 button {
-  color: inherit;
-  background-color: inherit;
-}
-
-/* Fuerza fondo blanco y texto oscuro en toda la app */
-main, div, section, article, aside, p, span, h1, h2, h3, h4, h5, h6, label, li {
-  color: inherit;
-}
-
-/* Fija el fondo de la app — evita que dark mode lo ponga negro */
-html {
-  background-color: #f8f7f4;
-}
-
-/* Inputs y forms — evita que dark mode invierta colores */
-input, textarea, select {
-  color: #1a1a2e;
+  color: #1a1a2e !important;
   background-color: white;
+}
+
+/* Fuerza fondo blanco y texto oscuro en inputs */
+input, textarea, select {
+  color: #1a1a2e !important;
+  background-color: white !important;
   color-scheme: light;
+}
+
+/* Evita que el browser cambie colores en divs y spans */
+div, span, p, h1, h2, h3, h4, h5, h6, label, li, td, th {
+  color: inherit;
+}
+
+/* Fondo base de la app — evita que dark mode lo ponga negro */
+main {
+  background-color: #f8f7f4;
 }
