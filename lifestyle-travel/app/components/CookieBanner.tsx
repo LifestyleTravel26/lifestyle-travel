@@ -27,6 +27,8 @@ export default function CookieBanner() {
   const [locale, setLocale] = useState<'es' | 'pt' | 'en'>('es')
 
   useEffect(() => {
+    console.log('CookieBanner mounted')
+
     // Detectar idioma guardado
     try {
       const savedLocale = localStorage.getItem('locale') as 'es' | 'pt' | 'en'
