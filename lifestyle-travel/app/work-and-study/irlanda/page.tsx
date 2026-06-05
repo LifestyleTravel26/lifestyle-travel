@@ -682,7 +682,7 @@ export default function Irlanda() {
 
         {/* PREMIUM BADGE */}
         <div style={{ textAlign: 'center', margin: '16px 0' }}>
-          <span style={{ backgroundColor: '#fff8e1', border: '2px solid #f59e0b', borderRadius: '20px', padding: '8px 20px', fontSize: '13px', fontWeight: 'bold' }}>{t.premium_badge}</span>
+          <span style={{ backgroundColor: '#fff8e1', border: '2px solid #f59e0b', borderRadius: '20px', padding: '8px 20px', fontSize: '13px', fontWeight: 'bold', color: '#1a1a2e' }}>{t.premium_badge}</span>
         </div>
 
         {/* ESTRATEGIA */}

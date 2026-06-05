@@ -17,7 +17,7 @@ export function AuthLayout({ title, subtitle, children }: AuthLayoutProps) {
       {/* TOP NAV */}
       <div style={{ position: 'absolute', top: 0, left: 0, right: 0, zIndex: 10, padding: '16px 24px', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
         <Link href="/" style={{ color: 'white', textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '8px', fontWeight: 'bold' }}>
-          ← ✈️ <span>Lifestyle & Travel</span>
+          ← ✈️ <span style={{ color: 'white' }}>Lifestyle & Travel</span>
         </Link>
         <LanguageSwitcher />
       </div>
