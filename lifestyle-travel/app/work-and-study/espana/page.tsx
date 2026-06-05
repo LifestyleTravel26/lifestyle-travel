@@ -552,7 +552,7 @@ export default function Espana() {
     wrap: { overflowX: 'auto' as const, marginTop: '12px', borderRadius: '10px', border: '1px solid #e5e7eb' },
     table: { width: '100%', borderCollapse: 'collapse' as const, minWidth: '400px' },
     th: { backgroundColor: '#1e3a5f', color: 'white', padding: '10px 14px', textAlign: 'left' as const, fontSize: '13px', fontWeight: '700' as const, whiteSpace: 'nowrap' as const },
-    td: (i: number) => ({ padding: '9px 14px', fontSize: '13px', borderBottom: '1px solid #f0f0f0', backgroundColor: i % 2 === 0 ? 'white' : '#fafafa', lineHeight: '1.4' }),
+    td: (i: number) => ({ padding: '9px 14px', fontSize: '13px', borderBottom: '1px solid #f0f0f0', backgroundColor: i % 2 === 0 ? 'white' : '#fafafa', lineHeight: '1.4' , color: '#1a1a2e' }),
     link: { color: '#2563eb', textDecoration: 'underline' as const, cursor: 'pointer' as const, fontSize: '13px' },
     bold: { fontWeight: '700' as const },
   }
@@ -563,8 +563,8 @@ export default function Espana() {
 
   const Section = ({ id, emoji, title, children, free = false }: any) => (
     <div style={{ border: free ? '2px solid #e8572a' : '2px solid #f59e0b', borderRadius: '12px', marginBottom: '10px', overflow: 'hidden' }}>
-      <button onClick={() => toggle(id)} style={{ width: '100%', padding: '14px 20px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', backgroundColor: 'white', border: 'none', cursor: 'pointer' }}>
-        <span style={{ fontWeight: '600', fontSize: '15px' }}>{emoji} {title}</span>
+      <button onClick={() => toggle(id)} style={{ width: '100%', padding: '14px 20px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', backgroundColor: 'white', border: 'none', cursor: 'pointer', color: '#1a1a2e' }}>
+        <span style={{ fontWeight: '600', fontSize: '15px', color: '#1a1a2e' }}>{emoji} {title}</span>
         <span style={{ fontSize: '16px', color: '#555555' }}>{openSection === id ? '∧' : '∨'}</span>
       </button>
       {openSection === id && (
@@ -598,14 +598,14 @@ export default function Espana() {
           <div key={i} style={{ backgroundColor: 'white', borderRadius: '10px', padding: '14px', textAlign: 'center', boxShadow: '0 1px 4px rgba(0,0,0,0.06)' }}>
             <div style={{ fontSize: '22px', marginBottom: '4px' }}>{s[0]}</div>
             <div style={{ color: '#555555', fontSize: '10px', marginBottom: '3px' }}>{s[1]}</div>
-            <div style={{ fontWeight: '700', fontSize: '12px' }}>{s[2]}</div>
+            <div style={{ fontWeight: '700', fontSize: '12px', color: '#1a1a2e' }}>{s[2]}</div>
           </div>
         ))}
       </div>
 
       {/* INCLUDED */}
       <div style={{ margin: '0 20px 16px', backgroundColor: 'white', borderRadius: '12px', padding: '18px', boxShadow: '0 1px 4px rgba(0,0,0,0.06)' }}>
-        <h3 style={{ fontWeight: '700', marginBottom: '10px', fontSize: '15px' }}>{t.included_title}</h3>
+        <h3 style={{ fontWeight: '700', marginBottom: '10px', fontSize: '15px', color: '#1a1a2e'}}>{t.included_title}</h3>
         {t.included.map((item, i) => (
           <div key={i} style={{ display: 'flex', gap: '8px', marginBottom: '6px' }}>
             <span style={{ color: '#22c55e', fontSize: '16px', flexShrink: 0 }}>✓</span>
@@ -620,10 +620,10 @@ export default function Espana() {
         <Section id="autoridad" emoji="🧭" title={t.sec_autoridad_title} free={true}>
           <div style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1559386081-325882507af7?q=80&w=736&auto=format&fit=crop")', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', height: '200px', borderRadius: '12px', marginBottom: '16px' }} />
           <Intro text={t.autoridad_intro} />
-          <p style={{ fontSize: '14px', lineHeight: '1.8', marginBottom: '10px' }}>
+          <p style={{ fontSize: '14px', lineHeight: '1.8', marginBottom: '10px', color: '#1a1a2e'}}>
             <strong>{t.autoridad_p1_label}</strong> {t.autoridad_p1_text} <strong>{t.autoridad_p1_b}</strong> {t.autoridad_p1_end}
           </p>
-          <p style={{ fontSize: '14px', lineHeight: '1.8', marginBottom: '10px' }}>
+          <p style={{ fontSize: '14px', lineHeight: '1.8', marginBottom: '10px', color: '#1a1a2e'}}>
             <strong>{t.autoridad_p2_label}</strong> {t.autoridad_p2}
           </p>
           <BlueBox text={t.autoridad_blue} />
@@ -1065,7 +1065,7 @@ export default function Espana() {
         {/* CONSULTORIA */}
         <div style={{ backgroundColor: 'white', borderRadius: '16px', padding: '24px', textAlign: 'center', boxShadow: '0 2px 8px rgba(0,0,0,0.08)', marginTop: '24px' }}>
           <div style={{ fontSize: '40px', marginBottom: '12px' }}>💬</div>
-          <h3 style={{ fontWeight: 'bold', marginBottom: '8px', fontSize: '18px' }}>{t.consultoria_title}</h3>
+          <h3 style={{ fontWeight: 'bold', marginBottom: '8px', fontSize: '18px', color: '#1a1a2e'}}>{t.consultoria_title}</h3>
           <p style={{ color: '#1a1a2e', fontSize: '14px', marginBottom: '6px' }}>{t.consultoria_desc}</p>
           <p style={{ color: '#555555', fontSize: '13px', marginBottom: '16px' }}>{t.consultoria_time}</p>
           <a href="https://calendly.com/jimmyg-leonr/1-hour-meeting" target="_blank" rel="noopener noreferrer" style={{ backgroundColor: '#e8572a', color: 'white', borderRadius: '12px', padding: '14px 32px', fontSize: '15px', fontWeight: 'bold', textDecoration: 'none', display: 'inline-block' }}>
@@ -1076,7 +1076,7 @@ export default function Espana() {
         {/* FEEDBACK */}
         <div style={{ backgroundColor: 'white', borderRadius: '16px', padding: '24px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)', marginTop: '16px' }}>
           <div style={{ fontSize: '28px', textAlign: 'center', marginBottom: '8px' }}>📝</div>
-          <h3 style={{ fontWeight: 'bold', fontSize: '15px', textAlign: 'center', marginBottom: '4px' }}>{t.feedback_title}</h3>
+          <h3 style={{ fontWeight: 'bold', fontSize: '15px', textAlign: 'center', marginBottom: '4px', color: '#1a1a2e'}}>{t.feedback_title}</h3>
           <p style={{ color: '#333333', fontSize: '13px', textAlign: 'center', marginBottom: '16px' }}>{t.feedback_desc}</p>
           <textarea
             value={feedback}
