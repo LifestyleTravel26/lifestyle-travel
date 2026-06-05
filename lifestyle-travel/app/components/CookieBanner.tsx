@@ -1,6 +1,5 @@
 'use client'
 import { useState, useEffect } from 'react'
-import { useLanguage } from '@/app/context/LanguageContext'
 
 const translations = {
   es: {
@@ -25,37 +24,45 @@ const translations = {
 
 export default function CookieBanner() {
   const [visible, setVisible] = useState(false)
-  const { locale } = useLanguage()
-  const t = translations[locale]
+  const [locale, setLocale] = useState<'es' | 'pt' | 'en'>('es')
 
   useEffect(() => {
-    const consent = localStorage.getItem('cookie_consent')
-    if (!consent) setVisible(true)
+    // Detectar idioma guardado
+    try {
+      const savedLocale = localStorage.getItem('locale') as 'es' | 'pt' | 'en'
+      if (savedLocale && ['es', 'pt', 'en'].includes(savedLocale)) {
+        setLocale(savedLocale)
+      }
+    } catch {}
+
+    // Mostrar banner si no hay consentimiento
+    try {
+      const consent = localStorage.getItem('cookie_consent')
+      if (!consent) setVisible(true)
+    } catch {
+      setVisible(true)
+    }
   }, [])
 
   function handleAccept() {
-    localStorage.setItem('cookie_consent', 'accepted')
+    try { localStorage.setItem('cookie_consent', 'accepted') } catch {}
     setVisible(false)
-    // Activar Google Analytics
     if (typeof window !== 'undefined' && (window as any).gtag) {
-      ;(window as any).gtag('consent', 'update', {
-        analytics_storage: 'granted',
-      })
+      ;(window as any).gtag('consent', 'update', { analytics_storage: 'granted' })
     }
   }
 
   function handleReject() {
-    localStorage.setItem('cookie_consent', 'rejected')
+    try { localStorage.setItem('cookie_consent', 'rejected') } catch {}
     setVisible(false)
-    // Bloquear Google Analytics
     if (typeof window !== 'undefined' && (window as any).gtag) {
-      ;(window as any).gtag('consent', 'update', {
-        analytics_storage: 'denied',
-      })
+      ;(window as any).gtag('consent', 'update', { analytics_storage: 'denied' })
     }
   }
 
   if (!visible) return null
+
+  const t = translations[locale]
 
   return (
     <div style={{
@@ -69,52 +76,24 @@ export default function CookieBanner() {
       display: 'flex',
       flexDirection: 'column',
       gap: '12px',
-      boxShadow: '0 -4px 20px rgba(0,0,0,0.2)',
+      boxShadow: '0 -4px 20px rgba(0,0,0,0.3)',
     }}>
-      <p style={{
-        color: 'white',
-        fontSize: '13px',
-        lineHeight: '1.6',
-        margin: 0,
-      }}>
+      <p style={{ color: 'white', fontSize: '13px', lineHeight: '1.6', margin: 0 }}>
         🍪 {t.message}{' '}
-        <a
-          href="/privacy"
-          style={{ color: '#e8572a', textDecoration: 'underline', fontSize: '13px' }}
-        >
+        <a href="/privacy" style={{ color: '#e8572a', textDecoration: 'underline', fontSize: '13px' }}>
           {t.privacy}
         </a>
       </p>
       <div style={{ display: 'flex', gap: '10px' }}>
         <button
           onClick={handleAccept}
-          style={{
-            flex: 1,
-            backgroundColor: '#e8572a',
-            color: 'white',
-            border: 'none',
-            borderRadius: '8px',
-            padding: '10px',
-            fontSize: '14px',
-            fontWeight: 'bold',
-            cursor: 'pointer',
-          }}
+          style={{ flex: 1, backgroundColor: '#e8572a', color: 'white', border: 'none', borderRadius: '8px', padding: '10px', fontSize: '14px', fontWeight: 'bold', cursor: 'pointer' }}
         >
           {t.accept}
         </button>
         <button
           onClick={handleReject}
-          style={{
-            flex: 1,
-            backgroundColor: 'transparent',
-            color: 'white',
-            border: '1px solid rgba(255,255,255,0.3)',
-            borderRadius: '8px',
-            padding: '10px',
-            fontSize: '14px',
-            fontWeight: 'bold',
-            cursor: 'pointer',
-          }}
+          style={{ flex: 1, backgroundColor: 'transparent', color: 'white', border: '1px solid rgba(255,255,255,0.4)', borderRadius: '8px', padding: '10px', fontSize: '14px', fontWeight: 'bold', cursor: 'pointer' }}
         >
           {t.reject}
         </button>
