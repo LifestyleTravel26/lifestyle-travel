@@ -27,6 +27,7 @@ export default function RootLayout({
   return (
     <html
       lang="es"
+      style={{ colorScheme: 'light' }}
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <head>
@@ -37,13 +38,16 @@ export default function RootLayout({
             __html: `
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
+              gtag('consent', 'default', {
+                analytics_storage: 'denied'
+              });
               gtag('js', new Date());
               gtag('config', 'G-FQWKYXGMY4');
             `,
           }}
         />
-
-       
+        {/* Lemon Squeezy */}
+        <script src="https://assets.lemonsqueezy.com/lemon.js" defer></script>
       </head>
       <body className="min-h-full flex flex-col">
         <LanguageProvider>
