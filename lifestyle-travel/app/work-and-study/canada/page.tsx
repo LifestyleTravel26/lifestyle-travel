@@ -654,8 +654,24 @@ export default function Canada() {
             <a href="https://lifestylentravel2.lemonsqueezy.com/checkout/buy/524cea8d-e3ba-4bbf-b5dd-46c927b2857d?embed=1" className="lemonsqueezy-button" style={{ backgroundColor: '#1a1a2e', color: 'white', borderRadius: '10px', padding: '14px', fontSize: '15px', fontWeight: 'bold', textDecoration: 'none', display: 'block' }}>
               🗂️ Comprar este Blueprint — €14.99
             </a>
-            <a href="https://lifestylentravel2.lemonsqueezy.com/checkout/buy/2dc9d208-cf0b-45f0-83b4-998414ffb9f4?embed=1" className="lemonsqueezy-button" style={{ backgroundColor: '#e8572a', color: 'white', borderRadius: '10px', padding: '14px', fontSize: '15px', fontWeight: 'bold', textDecoration: 'none', display: 'block' }}>
-              📚 Acceso Total — Todos los Blueprints €39.99
+            <a
+              href="https://lifestylentravel2.lemonsqueezy.com/checkout/buy/2dc9d208-cf0b-45f0-83b4-998414ffb9f4?embed=1"
+              className="lemonsqueezy-button"
+              style={{
+                backgroundColor: '#e8572a',
+                color: 'white',
+                borderRadius: '10px',
+                padding: '16px',
+                fontSize: '16px',
+                fontWeight: 'bold',
+                textDecoration: 'none',
+                display: 'block',
+                textAlign: 'center',
+                boxShadow: '0 4px 12px rgba(232,87,42,0.4)',
+                border: '2px solid #ff6b3d',
+              }}
+            >
+              🔥 Acceso Total — Todos los Blueprints €39.99
             </a>
           </div>
         </div>
