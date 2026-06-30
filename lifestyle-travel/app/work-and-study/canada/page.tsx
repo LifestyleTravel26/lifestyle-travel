@@ -645,10 +645,22 @@ export default function Canada() {
           <HackBox text={t.autoridad_hack} />
         </Section>
 
-        {/* PREMIUM BADGE */}
-        <div style={{ textAlign: 'center', margin: '16px 0' }}>
-          <span style={{ backgroundColor: '#fff8e1', border: '2px solid #f59e0b', borderRadius: '20px', padding: '8px 20px', fontSize: '13px', fontWeight: 'bold', color: '#1a1a2e' }}>{t.premium_badge}</span>
+        {/* PREMIUM LOCK */}
+        <div style={{ backgroundColor: 'white', borderRadius: '16px', padding: '24px', textAlign: 'center', boxShadow: '0 4px 16px rgba(0,0,0,0.10)', margin: '16px 0', border: '2px solid #e8572a' }}>
+          <div style={{ fontSize: '40px', marginBottom: '12px' }}>🔒</div>
+          <h3 style={{ fontWeight: 'bold', fontSize: '18px', color: '#1a1a2e', marginBottom: '8px' }}>Contenido Premium</h3>
+          <p style={{ color: '#555555', fontSize: '14px', marginBottom: '20px' }}>Accede al blueprint completo con toda la información detallada</p>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+            <a href="https://lifestylentravel2.lemonsqueezy.com/checkout/buy/524cea8d-e3ba-4bbf-b5dd-46c927b2857d?embed=1" className="lemonsqueezy-button" style={{ backgroundColor: '#1a1a2e', color: 'white', borderRadius: '10px', padding: '14px', fontSize: '15px', fontWeight: 'bold', textDecoration: 'none', display: 'block' }}>
+              🗂️ Comprar este Blueprint — €14.99
+            </a>
+            <a href="https://lifestylentravel2.lemonsqueezy.com/checkout/buy/2dc9d208-cf0b-45f0-83b4-998414ffb9f4?embed=1" className="lemonsqueezy-button" style={{ backgroundColor: '#e8572a', color: 'white', borderRadius: '10px', padding: '14px', fontSize: '15px', fontWeight: 'bold', textDecoration: 'none', display: 'block' }}>
+              📚 Acceso Total — Todos los Blueprints €39.99
+            </a>
+          </div>
         </div>
+
+        <div style={{ display: 'none' }}>
 
         {/* ESTRATEGIA */}
         <Section id="estrategia" emoji="🏷️" title={t.sec_estrategia_title}>
@@ -1069,6 +1081,8 @@ export default function Canada() {
             </table>
           </div>
         </Section>
+
+        </div>
 
         {/* CONSULTORIA */}
         <div style={{ backgroundColor: 'white', borderRadius: '16px', padding: '24px', textAlign: 'center', boxShadow: '0 2px 8px rgba(0,0,0,0.08)', marginTop: '24px' }}>

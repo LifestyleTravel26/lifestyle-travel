@@ -396,6 +396,24 @@ export default function AuPair() {
           <HackBox text={t.destinos_hack} />
         </Section>
 
+        {/* PREMIUM LOCK */}
+        <div style={{ backgroundColor: 'white', borderRadius: '16px', padding: '24px', textAlign: 'center', boxShadow: '0 4px 16px rgba(0,0,0,0.10)', margin: '16px 0', border: '2px solid #e8572a' }}>
+          <div style={{ fontSize: '40px', marginBottom: '12px' }}>🔒</div>
+          <h3 style={{ fontWeight: 'bold', fontSize: '18px', color: '#1a1a2e', marginBottom: '8px' }}>Contenido Premium</h3>
+          <p style={{ color: '#555555', fontSize: '14px', marginBottom: '20px' }}>Accede al blueprint completo con toda la información detallada</p>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+            <a href="https://lifestylentravel2.lemonsqueezy.com/checkout/buy/524cea8d-e3ba-4bbf-b5dd-46c927b2857d?embed=1" className="lemonsqueezy-button" style={{ backgroundColor: '#1a1a2e', color: 'white', borderRadius: '10px', padding: '14px', fontSize: '15px', fontWeight: 'bold', textDecoration: 'none', display: 'block' }}>
+              🗂️ Comprar este Blueprint — €14.99
+            </a>
+            <a href="https://lifestylentravel2.lemonsqueezy.com/checkout/buy/2dc9d208-cf0b-45f0-83b4-998414ffb9f4?embed=1" className="lemonsqueezy-button" style={{ backgroundColor: '#e8572a', color: 'white', borderRadius: '10px', padding: '14px', fontSize: '15px', fontWeight: 'bold', textDecoration: 'none', display: 'block' }}>
+              📚 Acceso Total — Todos los Blueprints €39.99
+            </a>
+          </div>
+        </div>
+
+        <div style={{ display: 'none' }}>
+
+
         {/* APLICACION */}
         <Section id="aplicacion" emoji="🛂" title={t.sec_aplic_title}>
           <div style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1663579170702-fce379dc864e?q=80&w=1170&auto=format&fit=crop")', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', height: '180px', borderRadius: '10px', marginBottom: '14px' }} />
@@ -577,6 +595,8 @@ export default function AuPair() {
           </div>
           <HackBox text={t.matrix_hack} />
         </Section>
+
+        </div>
 
         {/* CONSULTORIA */}
         <div style={{ backgroundColor: 'white', borderRadius: '16px', padding: '24px', textAlign: 'center', boxShadow: '0 2px 8px rgba(0,0,0,0.08)', marginTop: '24px' }}>
