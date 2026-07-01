@@ -1,6 +1,6 @@
 import { createServerClient } from '@supabase/ssr';
 import { NextResponse, type NextRequest } from 'next/server';
-import { isAuthRoute, isPremiumRoute } from './config';
+import { isAuthRoute } from './config';
 
 export async function updateSession(request: NextRequest) {
   let supabaseResponse = NextResponse.next({ request });
@@ -32,18 +32,10 @@ export async function updateSession(request: NextRequest) {
 
   const { pathname } = request.nextUrl;
 
-  if (!user && isPremiumRoute(pathname)) {
-    const url = request.nextUrl.clone();
-    url.pathname = '/login';
-    url.searchParams.set('redirectTo', pathname);
-    return NextResponse.redirect(url);
-  }
-
   if (user && isAuthRoute(pathname)) {
     const url = request.nextUrl.clone();
     const redirectTo = url.searchParams.get('redirectTo');
-    url.pathname =
-      redirectTo && isPremiumRoute(redirectTo) ? redirectTo : '/';
+    url.pathname = redirectTo && redirectTo.startsWith('/') ? redirectTo : '/';
     url.searchParams.delete('redirectTo');
     return NextResponse.redirect(url);
   }
