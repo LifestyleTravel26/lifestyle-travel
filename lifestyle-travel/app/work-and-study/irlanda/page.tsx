@@ -555,7 +555,7 @@ export default function Irlanda() {
   const [feedback, setFeedback] = useState('')
   const toggle = (s: string) => setOpenSection(openSection === s ? null : s)
   const { locale } = useLanguage()
-  const { hasAccess } = usePurchase()
+  const { hasAccess, loading } = usePurchase()
   const t = translations[locale]
 
   const HackBox = ({ text }: { text: string }) => (
@@ -698,7 +698,7 @@ export default function Irlanda() {
   </div>
 )}
 
-<div style={{ display: 'none' }}>
+<div style={{ display: hasAccess ? 'block' : 'none' }}>
 
         {/* ESTRATEGIA */}
         <Section id="estrategia" emoji="🏷️" title={t.sec_estrategia_title}>
