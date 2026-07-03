@@ -686,7 +686,7 @@ export default function Malta() {
         </div>
         )}
 
-        <div style={{ display: 'none' }}>
+        <div style={{ display: hasAccess ? 'block' : 'none' }}>
 
         {/* ESTRATEGIA */}
         <Section id="estrategia" emoji="🏷️" title={t.sec_estrategia_title}>
