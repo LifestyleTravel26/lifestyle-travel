@@ -921,10 +921,10 @@ export default function NuevaZelanda() {
               <thead><tr>{[t.th_sector, t.th_puesto, t.th_salario_nzd, t.th_usd_h, t.th_canal_emp].map((h, i) => <th key={i} style={T.th}>{h}</th>)}</tr></thead>
               <tbody>
                 {[
-                  ['Hospitality', 'Waiter / Kitchen Hand', '$23 – $26 NZD', '$13.1 – $14.8', 'Seek / CV en persona'],
-                  ['Cleaning', 'Cleaner / Housekeeping', '$23 – $25 NZD', '$13.1 – $14.3', 'Indeed NZ / Agencias'],
+                  ['Hospitality', 'Waiter', '$23.15 – $26 NZD', '$13.89 – $15.60', 'Seek / CV en persona'],
+                  ['Cleaning', 'Housekeeping', '$23.15 – $25 NZD', '$13.89 – $15.00', 'Indeed NZ / Agencias'],
                   ['Hotels', 'Front Desk / Hotel Staff', '$24 – $27 NZD', '$13.7 – $15.4', 'Seek / hoteles directos'],
-                  ['Retail', 'Sales Assistant', '$23 – $26 NZD', '$13.1 – $14.8', 'Trade Me Jobs / malls'],
+                  ['Retail', 'Shop Assistant', '$23.15 – $26 NZD', '$13.89 – $15.60', 'Trade Me Jobs / malls'],
                   ['Agriculture', 'Fruit Picker / Farm Worker', '$23 – $28 NZD', '$13.1 – $16', 'Seasonal Jobs NZ / Backpacker Board'],
                 ].map((r, i) => (
                   <tr key={i}>
@@ -949,10 +949,10 @@ export default function NuevaZelanda() {
               <thead><tr>{[t.th_sector_sal, t.th_puesto_sal, t.th_salario_nzd, t.th_usd_h, t.th_mensual].map((h, i) => <th key={i} style={T.th}>{h}</th>)}</tr></thead>
               <tbody>
                 {[
-                  ['Hospitality', 'Waiter / Kitchen Hand', '$23 – $26 NZD', '$13.1 – $14.8', 'NZ$1,840 – $2,080'],
-                  ['Cleaning', 'Cleaner / Housekeeping', '$23 – $25 NZD', '$13.1 – $14.3', 'NZ$1,840 – $2,000'],
+                  ['Hospitality', 'Waiter', '$23.15 – $26 NZD', '$13.89 – $15.60', 'NZ$1,852 – $2,080'],
+                  ['Cleaning', 'Housekeeping', '$23.15 – $25 NZD', '$13.89 – $15.00', 'NZ$1,852 – $2,000'],
                   ['Hotels', 'Front Desk / Hotel Staff', '$24 – $27 NZD', '$13.7 – $15.4', 'NZ$1,920 – $2,160'],
-                  ['Retail', 'Sales Assistant', '$23 – $26 NZD', '$13.1 – $14.8', 'NZ$1,840 – $2,080'],
+                  ['Retail', 'Shop Assistant', '$23.15 – $26 NZD', '$13.89 – $15.60', 'NZ$1,852 – $2,080'],
                   ['Agriculture', 'Fruit Picker / Farm Worker', '$23 – $28 NZD', '$13.1 – $16', 'NZ$1,840 – $2,240'],
                 ].map((r, i) => (
                   <tr key={i}>
