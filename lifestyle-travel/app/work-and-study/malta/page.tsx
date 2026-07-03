@@ -107,7 +107,7 @@ const translations = {
     salarios_intro: 'Estimación de ingresos reales para estudiantes con Single Permit trabajando 20 horas semanales. Malta tiene salario mínimo de €8.24/hora (2026).',
     th_sector_sal: 'Sector', th_puesto_sal: 'Puesto', th_mensual: 'Mensual EST. (20h/sem)',
     salarios_blue: '💡 Malta tiene un costo de vida más bajo que Irlanda o Canadá. Con €700-800/mes puedes cubrir renta + comida + transporte. El iGaming es la joya oculta — €960/mes con solo 20h/semana es muy sólido para Malta.',
-    salarios_hack: 'Con 20h/semana en iGaming ganas €800-960/mes. Con hospitality €560-720/mes. La diferencia es el inglés: B2 te abre el iGaming. Invierte 3 meses en mejorar tu inglés y multiplicas tus ingresos.',
+    salarios_hack: 'Con 20h/semana en iGaming ganas €800-960/mes. Con hospitality €660-800/mes. La diferencia es el inglés: B2 te abre el iGaming. Invierte 3 meses en mejorar tu inglés y multiplicas tus ingresos.',
     sec_timeline_title: 'Timeline de Ejecución',
     timeline_intro: 'Malta tiene un timeline diferente a Irlanda. Los primeros 3 meses son de instalación legal — no de trabajo. Planifica tu ahorro para sobrevivir esos 3 meses antes del primer ingreso.',
     th_fase: 'Fase', th_que_hacer: 'Qué hacer', th_tiempo: 'Tiempo',
@@ -283,7 +283,7 @@ const translations = {
     salarios_intro: 'Estimativa de renda real para estudantes com Single Permit trabalhando 20 horas semanais. Malta tem salário mínimo de €8,24/hora (2026).',
     th_sector_sal: 'Setor', th_puesto_sal: 'Cargo', th_mensual: 'Mensal EST. (20h/sem)',
     salarios_blue: '💡 Malta tem um custo de vida mais baixo que Irlanda ou Canadá. Com €700-800/mês você pode cobrir aluguel + comida + transporte. O iGaming é a joia oculta — €960/mês com apenas 20h/semana é muito sólido para Malta.',
-    salarios_hack: 'Com 20h/semana em iGaming você ganha €800-960/mês. Com hospitalidade €560-720/mês. A diferença é o inglês: B2 te abre o iGaming. Invista 3 meses em melhorar seu inglês e multiplique sua renda.',
+    salarios_hack: 'Com 20h/semana em iGaming você ganha €800-960/mês. Com hospitalidade €660-800/mês. A diferença é o inglês: B2 te abre o iGaming. Invista 3 meses em melhorar seu inglês e multiplique sua renda.',
     sec_timeline_title: 'Cronograma de Execução',
     timeline_intro: 'Malta tem um cronograma diferente da Irlanda. Os primeiros 3 meses são de instalação legal — não de trabalho. Planeje suas economias para sobreviver esses 3 meses antes da primeira renda.',
     th_fase: 'Fase', th_que_hacer: 'O que fazer', th_tiempo: 'Tempo',
@@ -459,7 +459,7 @@ const translations = {
     salarios_intro: 'Real income estimates for students with Single Permit working 20 hours per week. Malta has a minimum wage of €8.24/hour (2026).',
     th_sector_sal: 'Sector', th_puesto_sal: 'Role', th_mensual: 'Monthly EST. (20h/wk)',
     salarios_blue: '💡 Malta has a lower cost of living than Ireland or Canada. With €700-800/month you can cover rent + food + transport. iGaming is the hidden gem — €960/month with just 20h/week is very solid for Malta.',
-    salarios_hack: 'With 20h/week in iGaming you earn €800-960/month. With hospitality €560-720/month. The difference is English: B2 opens iGaming to you. Invest 3 months improving your English and multiply your income.',
+    salarios_hack: 'With 20h/week in iGaming you earn €800-960/month. With hospitality €660-800/month. The difference is English: B2 opens iGaming to you. Invest 3 months improving your English and multiply your income.',
     sec_timeline_title: 'Execution Timeline',
     timeline_intro: 'Malta has a different timeline from Ireland. The first 3 months are for legal setup — not work. Plan your savings to survive those 3 months before the first income.',
     th_fase: 'Phase', th_que_hacer: 'What to do', th_tiempo: 'Time',
@@ -959,8 +959,8 @@ export default function Malta() {
               <thead><tr>{[t.th_sector, t.th_puesto, t.th_salario_h, t.th_canal_emp].map((h, i) => <th key={i} style={T.th}>{h}</th>)}</tr></thead>
               <tbody>
                 {[
-                  ['Hospitality', 'Waiter / Bar Staff / Kitchen Assistant', '€7 – €9', 'CV en mano en restaurantes / Indeed'],
-                  ['Cleaning Services', 'Cleaner / Housekeeping', '€7 – €8', 'Grupos Facebook / Agencias'],
+                  ['Hospitality', 'Waiter / Bar Staff / Kitchen Assistant', '€8.24 – €10', 'CV en mano en restaurantes / Indeed'],
+                  ['Cleaning Services', 'Cleaner / Housekeeping', '€8.24 – €9', 'Grupos Facebook / Agencias'],
                   ['Hotels & Tourism', 'Hotel Staff / Reception Assistant', '€8 – €10', 'LinkedIn / Jobs in Malta'],
                   ['iGaming / Customer Support', 'Customer Support Agent', '€10 – €12', 'LinkedIn / portales especializados'],
                   ['Delivery / Logistics', 'Courier / Delivery Rider', '€8 – €11', 'Bolt Food / Wolt'],
@@ -986,8 +986,8 @@ export default function Malta() {
               <thead><tr>{[t.th_sector_sal, t.th_puesto_sal, t.th_salario_h, t.th_usd, t.th_mensual].map((h, i) => <th key={i} style={T.th}>{h}</th>)}</tr></thead>
               <tbody>
                 {[
-                  ['Hospitality', 'Waiter / Bar Staff', '€7 – €9', '$8 – $10', '€560 – €720'],
-                  ['Cleaning', 'Cleaner / Housekeeping', '€7 – €8', '$8 – $9', '€560 – €640'],
+                  ['Hospitality', 'Waiter / Bar Staff', '€8.24 – €10', '$9 – $11', '€660 – €800'],
+                  ['Cleaning', 'Cleaner / Housekeeping', '€8.24 – €9', '$9 – $10', '€660 – €720'],
                   ['Hotels', 'Hotel Staff / Reception', '€8 – €10', '$9 – $12', '€640 – €800'],
                   ['iGaming', 'Customer Support', '€10 – €12', '$12 – $14', '€800 – €960'],
                   ['Delivery', 'Rider / Courier', '€8 – €11', '$9 – $13', '€640 – €880'],
