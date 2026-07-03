@@ -25,9 +25,65 @@ const translations = {
       { level: '🔴 RESTRICCIÓN', countries: 'Ecuador, Bolivia, Cuba, Rep. Dominicana, Honduras, El Salvador, Guatemala, Nicaragua', europe: '⛔ Visa Schengen obligatoria', asia: '⛔ Restringido', impact: 'ALTO — Deben tramitar visa consular previa. El hostal debe enviar Carta de Invitación Formal. Recomendado: UN Volunteers o AIESEC por su respaldo institucional.', color: '#ef4444', bg: '#fef2f2', border: '#fca5a5' },
     ],
     sec_prog_title: 'Programas Disponibles',
-    prog_intro: 'Tres programas principales, cada uno con un perfil diferente. Worldpackers para hostales y proyectos urbanos. WWOOF para granjas y vida rural. UN Volunteers para misiones humanitarias con financiación completa de la ONU.',
+    prog_intro: 'Plataformas principales para voluntariado internacional: Worldpackers para hostales urbanos, WWOOF y HelpX para granjas, Workaway para variedad global, UN Volunteers para misiones profesionales con la ONU, y Peace Corps (solo ciudadanos USA).',
     prog_fields: ['⏰ Horas', '🍽️ Beneficio', '📍 Destinos', '🛠️ Roles'],
-    prog_hack: 'La ONU (UN Volunteers) es el mejor programa para pasaportes de alta restricción — la carta de la ONU exime de solvencia consular y acelera aprobación de visa. Para pasaportes Premium, Worldpackers es la entrada más rápida y flexible.',
+    programs: [
+      { name: 'Worldpackers', emoji: '🌐', cost: '$49 USD/año', hours: '20-24 h/semana', benefit: 'Cama + cocina + desayuno + lavandería', destinations: 'España, Portugal, Francia, Italia, Tailandia, Vietnam', roles: 'Recepción, Social Media, Bartender, Limpieza', link: 'https://www.worldpackers.com', color: '#e8572a' },
+      { name: 'Workaway', emoji: '🔄', cost: '$49/año', hours: '20-30 h/semana', benefit: 'Alojamiento + comidas (según anfitrión)', destinations: 'Global — Europa, Asia, Latam', roles: 'Hostales, granjas, construcción, enseñanza', link: 'https://www.workaway.info', color: '#0ea5e9' },
+      { name: 'WWOOF', emoji: '🌾', cost: '$20-40/año', hours: '25-30 h/semana', benefit: 'Alojamiento + 3 comidas completas/día', destinations: 'Francia, Alemania, Irlanda, Japón, Corea del Sur', roles: 'Siembra, Cosecha, Animales, Permacultura, Quesos/Vino', link: 'https://wwoof.net', color: '#22c55e' },
+      { name: 'HelpX', emoji: '🤝', cost: 'Gratis / $20 premium', hours: '20-30 h/semana', benefit: 'Alojamiento + comidas (según anfitrión)', destinations: 'Australia, Nueva Zelanda, Europa', roles: 'Granjas, hostales, construcción — similar a Workaway', link: 'https://www.helpx.net', color: '#8b5cf6' },
+      { name: 'UN Volunteers (ONU)', emoji: '🇺🇳', cost: '$0 (Paga la ONU)', hours: '35-40 h/semana', benefit: 'Estipendio $1,200-$2,400/mes + seguro + vuelos', destinations: 'Camboya, Laos, Nepal, Europa del Este, Latam', roles: 'Voluntariado profesional — requiere experiencia', link: 'https://www.unv.org', color: '#3b82f6' },
+      { name: 'Peace Corps', emoji: '🇺🇸', cost: 'Gratis (solo ciudadanos USA)', hours: '2 años', benefit: 'Alojamiento + estipendio + seguro + formación', destinations: 'África, Asia, América Latina', roles: 'Desarrollo comunitario — mención informativa', link: 'https://www.peacecorps.gov', color: '#6366f1' },
+    ],
+    aplicar_en: 'Aplicar en',
+    sec_tipos_title: 'Tipos de Voluntariado',
+    tipos_items: [
+      ['🌱 Ambiental', 'Granjas orgánicas, conservación, WWOOF'],
+      ['👥 Social', 'Orfanatos, escuelas, comunidades vulnerables, Worldpackers'],
+      ['🏗️ Construcción', 'Proyectos de desarrollo, Habitat for Humanity'],
+      ['📚 Enseñanza de idiomas', 'Inglés, español en Asia y África'],
+      ['💻 Tecnología', 'Desarrollo web, apps para ONGs, UN Volunteers'],
+      ['🐾 Cuidado de animales', 'Refugios, santuarios, reservas'],
+    ],
+    sec_comparativa_title: 'Comparativa de Plataformas',
+    th_comp_plataforma: 'Plataforma', th_comp_precio: 'Precio/año', th_comp_tipo: 'Tipo', th_comp_aloj: 'Alojamiento incluido', th_comp_pago: 'Pago',
+    comparativa_rows: [
+      ['Worldpackers', '$49', 'Social/Cultural', 'Sí', 'No'],
+      ['Workaway', '$49', 'Variado', 'Sí', 'No'],
+      ['WWOOF', '$20-$40', 'Agrícola', 'Sí', 'No'],
+      ['HelpX', 'Gratis/$20', 'Variado', 'Sí', 'No'],
+      ['UN Volunteers', 'Gratis', 'Profesional', 'Sí', 'Sí (estipendio)'],
+      ['Peace Corps', 'Gratis', 'Desarrollo', 'Sí', 'Sí (solo USA)'],
+    ],
+    sec_destinos_pop_title: 'Destinos Más Populares',
+    destinos_pop_items: [
+      ['🇨🇷 Costa Rica', 'Conservación de tortugas, naturaleza'],
+      ['🇹🇭 Tailandia', 'Enseñanza, templos budistas'],
+      ['🇳🇵 Nepal', 'Reconstrucción, montañismo'],
+      ['🇵🇪 Perú', 'Comunidades andinas, arqueología'],
+      ['🇰🇪 Kenia', 'Vida salvaje, conservación'],
+      ['🇪🇸 España', 'Granjas WWOOF, cultura'],
+      ['🇵🇹 Portugal', 'Granjas orgánicas, Alentejo'],
+      ['🇦🇺 Australia', 'Granjas WWOOF, trabajo regional'],
+    ],
+    sec_proscons_title: 'Pros y Contras',
+    pros_title: '✅ Pros',
+    cons_title: '❌ Contras',
+    pros_items: [
+      'Alojamiento y comida generalmente incluidos',
+      'Experiencia laboral internacional para el CV',
+      'Conoces personas de todo el mundo',
+      'Aprendes idiomas viviendo la experiencia',
+      'Bajo costo — solo pagas la membresía',
+    ],
+    cons_items: [
+      'No genera ingresos (excepto UN Volunteers)',
+      'Trabajo físico en algunos casos',
+      'Calidad varía mucho según el proyecto',
+      'Requiere disponibilidad de tiempo',
+      'Algunos proyectos cobran "program fees" altos — investigar bien',
+    ],
+    prog_hack: 'La ONU (UN Volunteers) es el mejor programa para pasaportes de alta restricción — la carta de la ONU exime de solvencia consular y acelera aprobación de visa. Para pasaportes Premium, Worldpackers o HelpX son la entrada más rápida y flexible.',
     sec_req_title: 'Requisitos por Programa',
     th_prog: 'Programa', th_edad: 'Edad', th_idioma: 'Idioma', th_antec: 'Antecedentes', th_docs: 'Documentos',
     sec_gastos_title: 'Gastos Obligatorios por Perfil',
@@ -116,9 +172,65 @@ const translations = {
       { level: '🔴 RESTRIÇÃO', countries: 'Equador, Bolívia, Cuba, Rep. Dominicana, Honduras, El Salvador, Guatemala, Nicarágua', europe: '⛔ Visto Schengen obrigatório', asia: '⛔ Restrito', impact: 'ALTO — Devem tramitar visto consular prévio. O hostel deve enviar Carta de Convite Formal. Recomendado: UN Volunteers ou AIESEC pelo respaldo institucional.', color: '#ef4444', bg: '#fef2f2', border: '#fca5a5' },
     ],
     sec_prog_title: 'Programas Disponíveis',
-    prog_intro: 'Três programas principais, cada um com um perfil diferente. Worldpackers para hostels e projetos urbanos. WWOOF para fazendas e vida rural. UN Volunteers para missões humanitárias com financiamento completo da ONU.',
+    prog_intro: 'Principais plataformas para voluntariado internacional: Worldpackers para hostels urbanos, WWOOF e HelpX para fazendas, Workaway para variedade global, UN Volunteers para missões profissionais com a ONU, e Peace Corps (apenas cidadãos dos EUA).',
     prog_fields: ['⏰ Horas', '🍽️ Benefício', '📍 Destinos', '🛠️ Funções'],
-    prog_hack: 'A ONU (UN Volunteers) é o melhor programa para passaportes de alta restrição — a carta da ONU isenta de solvência consular e acelera aprovação de visto. Para passaportes Premium, Worldpackers é a entrada mais rápida e flexível.',
+    programs: [
+      { name: 'Worldpackers', emoji: '🌐', cost: '$49 USD/ano', hours: '20-24 h/semana', benefit: 'Cama + cozinha + café da manhã + lavanderia', destinations: 'Espanha, Portugal, França, Itália, Tailândia, Vietnã', roles: 'Recepção, Social Media, Bartender, Limpeza', link: 'https://www.worldpackers.com', color: '#e8572a' },
+      { name: 'Workaway', emoji: '🔄', cost: '$49/ano', hours: '20-30 h/semana', benefit: 'Alojamento + refeições (conforme anfitrião)', destinations: 'Global — Europa, Ásia, Latam', roles: 'Hostels, fazendas, construção, ensino', link: 'https://www.workaway.info', color: '#0ea5e9' },
+      { name: 'WWOOF', emoji: '🌾', cost: '$20-40/ano', hours: '25-30 h/semana', benefit: 'Alojamento + 3 refeições completas/dia', destinations: 'França, Alemanha, Irlanda, Japão, Coreia do Sul', roles: 'Plantio, Colheita, Animais, Permacultura, Queijos/Vinho', link: 'https://wwoof.net', color: '#22c55e' },
+      { name: 'HelpX', emoji: '🤝', cost: 'Grátis / $20 premium', hours: '20-30 h/semana', benefit: 'Alojamento + refeições (conforme anfitrião)', destinations: 'Austrália, Nova Zelândia, Europa', roles: 'Fazendas, hostels, construção — similar ao Workaway', link: 'https://www.helpx.net', color: '#8b5cf6' },
+      { name: 'UN Volunteers (ONU)', emoji: '🇺🇳', cost: '$0 (Paga a ONU)', hours: '35-40 h/semana', benefit: 'Estipêndio $1.200-$2.400/mês + seguro + voos', destinations: 'Camboja, Laos, Nepal, Europa Oriental, Latam', roles: 'Voluntariado profissional — requer experiência', link: 'https://www.unv.org', color: '#3b82f6' },
+      { name: 'Peace Corps', emoji: '🇺🇸', cost: 'Grátis (apenas cidadãos EUA)', hours: '2 anos', benefit: 'Alojamento + estipêndio + seguro + formação', destinations: 'África, Ásia, América Latina', roles: 'Desenvolvimento comunitário — menção informativa', link: 'https://www.peacecorps.gov', color: '#6366f1' },
+    ],
+    aplicar_en: 'Aplicar em',
+    sec_tipos_title: 'Tipos de Voluntariado',
+    tipos_items: [
+      ['🌱 Ambiental', 'Fazendas orgânicas, conservação, WWOOF'],
+      ['👥 Social', 'Orfanatos, escolas, comunidades vulneráveis, Worldpackers'],
+      ['🏗️ Construção', 'Projetos de desenvolvimento, Habitat for Humanity'],
+      ['📚 Ensino de idiomas', 'Inglês, espanhol na Ásia e África'],
+      ['💻 Tecnologia', 'Desenvolvimento web, apps para ONGs, UN Volunteers'],
+      ['🐾 Cuidado de animais', 'Abrigos, santuários, reservas'],
+    ],
+    sec_comparativa_title: 'Comparativo de Plataformas',
+    th_comp_plataforma: 'Plataforma', th_comp_precio: 'Preço/ano', th_comp_tipo: 'Tipo', th_comp_aloj: 'Alojamento incluído', th_comp_pago: 'Pagamento',
+    comparativa_rows: [
+      ['Worldpackers', '$49', 'Social/Cultural', 'Sim', 'Não'],
+      ['Workaway', '$49', 'Variado', 'Sim', 'Não'],
+      ['WWOOF', '$20-$40', 'Agrícola', 'Sim', 'Não'],
+      ['HelpX', 'Grátis/$20', 'Variado', 'Sim', 'Não'],
+      ['UN Volunteers', 'Grátis', 'Profissional', 'Sim', 'Sim (estipêndio)'],
+      ['Peace Corps', 'Grátis', 'Desenvolvimento', 'Sim', 'Sim (apenas EUA)'],
+    ],
+    sec_destinos_pop_title: 'Destinos Mais Populares',
+    destinos_pop_items: [
+      ['🇨🇷 Costa Rica', 'Conservação de tartarugas, natureza'],
+      ['🇹🇭 Tailândia', 'Ensino, templos budistas'],
+      ['🇳🇵 Nepal', 'Reconstrução, montanhismo'],
+      ['🇵🇪 Peru', 'Comunidades andinas, arqueologia'],
+      ['🇰🇪 Quênia', 'Vida selvagem, conservação'],
+      ['🇪🇸 Espanha', 'Fazendas WWOOF, cultura'],
+      ['🇵🇹 Portugal', 'Fazendas orgânicas, Alentejo'],
+      ['🇦🇺 Austrália', 'Fazendas WWOOF, trabalho regional'],
+    ],
+    sec_proscons_title: 'Prós e Contras',
+    pros_title: '✅ Prós',
+    cons_title: '❌ Contras',
+    pros_items: [
+      'Alojamento e comida geralmente incluídos',
+      'Experiência profissional internacional para o CV',
+      'Conhece pessoas de todo o mundo',
+      'Aprende idiomas vivendo a experiência',
+      'Baixo custo — só paga a assinatura',
+    ],
+    cons_items: [
+      'Não gera renda (exceto UN Volunteers)',
+      'Trabalho físico em alguns casos',
+      'Qualidade varia muito conforme o projeto',
+      'Requer disponibilidade de tempo',
+      'Alguns projetos cobram "program fees" altos — investigar bem',
+    ],
+    prog_hack: 'A ONU (UN Volunteers) é o melhor programa para passaportes de alta restrição — a carta da ONU isenta de solvência consular e acelera aprovação de visto. Para passaportes Premium, Worldpackers ou HelpX são a entrada mais rápida e flexível.',
     sec_req_title: 'Requisitos por Programa',
     th_prog: 'Programa', th_edad: 'Idade', th_idioma: 'Idioma', th_antec: 'Antecedentes', th_docs: 'Documentos',
     sec_gastos_title: 'Despesas Obrigatórias por Perfil',
@@ -207,9 +319,65 @@ const translations = {
       { level: '🔴 RESTRICTED', countries: 'Ecuador, Bolivia, Cuba, Dominican Rep., Honduras, El Salvador, Guatemala, Nicaragua', europe: '⛔ Schengen Visa required', asia: '⛔ Restricted', impact: 'HIGH — Must process prior consular visa. The hostel must send a Formal Invitation Letter. Recommended: UN Volunteers or AIESEC for institutional backing.', color: '#ef4444', bg: '#fef2f2', border: '#fca5a5' },
     ],
     sec_prog_title: 'Available Programs',
-    prog_intro: 'Three main programs, each with a different profile. Worldpackers for hostels and urban projects. WWOOF for farms and rural life. UN Volunteers for humanitarian missions with full UN funding.',
+    prog_intro: 'Main platforms for international volunteering: Worldpackers for urban hostels, WWOOF and HelpX for farms, Workaway for global variety, UN Volunteers for professional UN missions, and Peace Corps (US citizens only).',
     prog_fields: ['⏰ Hours', '🍽️ Benefit', '📍 Destinations', '🛠️ Roles'],
-    prog_hack: 'The UN (UN Volunteers) is the best program for highly restricted passports — the UN letter exempts from consular solvency and speeds up visa approval. For Premium passports, Worldpackers is the fastest and most flexible entry.',
+    programs: [
+      { name: 'Worldpackers', emoji: '🌐', cost: '$49 USD/year', hours: '20-24 h/week', benefit: 'Bed + kitchen + breakfast + laundry', destinations: 'Spain, Portugal, France, Italy, Thailand, Vietnam', roles: 'Reception, Social Media, Bartender, Cleaning', link: 'https://www.worldpackers.com', color: '#e8572a' },
+      { name: 'Workaway', emoji: '🔄', cost: '$49/year', hours: '20-30 h/week', benefit: 'Accommodation + meals (per host)', destinations: 'Global — Europe, Asia, Latam', roles: 'Hostels, farms, construction, teaching', link: 'https://www.workaway.info', color: '#0ea5e9' },
+      { name: 'WWOOF', emoji: '🌾', cost: '$20-40/year', hours: '25-30 h/week', benefit: 'Accommodation + 3 full meals/day', destinations: 'France, Germany, Ireland, Japan, South Korea', roles: 'Planting, Harvest, Animals, Permaculture, Cheese/Wine', link: 'https://wwoof.net', color: '#22c55e' },
+      { name: 'HelpX', emoji: '🤝', cost: 'Free / $20 premium', hours: '20-30 h/week', benefit: 'Accommodation + meals (per host)', destinations: 'Australia, New Zealand, Europe', roles: 'Farms, hostels, construction — similar to Workaway', link: 'https://www.helpx.net', color: '#8b5cf6' },
+      { name: 'UN Volunteers', emoji: '🇺🇳', cost: '$0 (UN pays)', hours: '35-40 h/week', benefit: 'Stipend $1,200-$2,400/month + insurance + flights', destinations: 'Cambodia, Laos, Nepal, Eastern Europe, Latam', roles: 'Professional volunteering — experience required', link: 'https://www.unv.org', color: '#3b82f6' },
+      { name: 'Peace Corps', emoji: '🇺🇸', cost: 'Free (US citizens only)', hours: '2 years', benefit: 'Accommodation + stipend + insurance + training', destinations: 'Africa, Asia, Latin America', roles: 'Community development — informational note', link: 'https://www.peacecorps.gov', color: '#6366f1' },
+    ],
+    aplicar_en: 'Apply at',
+    sec_tipos_title: 'Types of Volunteering',
+    tipos_items: [
+      ['🌱 Environmental', 'Organic farms, conservation, WWOOF'],
+      ['👥 Social', 'Orphanages, schools, vulnerable communities, Worldpackers'],
+      ['🏗️ Construction', 'Development projects, Habitat for Humanity'],
+      ['📚 Language teaching', 'English, Spanish in Asia and Africa'],
+      ['💻 Technology', 'Web development, apps for NGOs, UN Volunteers'],
+      ['🐾 Animal care', 'Shelters, sanctuaries, reserves'],
+    ],
+    sec_comparativa_title: 'Platform Comparison',
+    th_comp_plataforma: 'Platform', th_comp_precio: 'Price/year', th_comp_tipo: 'Type', th_comp_aloj: 'Accommodation included', th_comp_pago: 'Paid',
+    comparativa_rows: [
+      ['Worldpackers', '$49', 'Social/Cultural', 'Yes', 'No'],
+      ['Workaway', '$49', 'Varied', 'Yes', 'No'],
+      ['WWOOF', '$20-$40', 'Agricultural', 'Yes', 'No'],
+      ['HelpX', 'Free/$20', 'Varied', 'Yes', 'No'],
+      ['UN Volunteers', 'Free', 'Professional', 'Yes', 'Yes (stipend)'],
+      ['Peace Corps', 'Free', 'Development', 'Yes', 'Yes (USA only)'],
+    ],
+    sec_destinos_pop_title: 'Most Popular Destinations',
+    destinos_pop_items: [
+      ['🇨🇷 Costa Rica', 'Turtle conservation, nature'],
+      ['🇹🇭 Thailand', 'Teaching, Buddhist temples'],
+      ['🇳🇵 Nepal', 'Reconstruction, mountaineering'],
+      ['🇵🇪 Peru', 'Andean communities, archaeology'],
+      ['🇰🇪 Kenya', 'Wildlife, conservation'],
+      ['🇪🇸 Spain', 'WWOOF farms, culture'],
+      ['🇵🇹 Portugal', 'Organic farms, Alentejo'],
+      ['🇦🇺 Australia', 'WWOOF farms, regional work'],
+    ],
+    sec_proscons_title: 'Pros and Cons',
+    pros_title: '✅ Pros',
+    cons_title: '❌ Cons',
+    pros_items: [
+      'Accommodation and food generally included',
+      'International work experience for your CV',
+      'Meet people from all over the world',
+      'Learn languages by living the experience',
+      'Low cost — you only pay the membership',
+    ],
+    cons_items: [
+      'Does not generate income (except UN Volunteers)',
+      'Physical work in some cases',
+      'Quality varies greatly depending on the project',
+      'Requires time availability',
+      'Some projects charge high "program fees" — research carefully',
+    ],
+    prog_hack: 'The UN (UN Volunteers) is the best program for highly restricted passports — the UN letter exempts from consular solvency and speeds up visa approval. For Premium passports, Worldpackers or HelpX are the fastest and most flexible entry.',
     sec_req_title: 'Requirements by Program',
     th_prog: 'Program', th_edad: 'Age', th_idioma: 'Language', th_antec: 'Background check', th_docs: 'Documents',
     sec_gastos_title: 'Mandatory Costs by Profile',
@@ -331,11 +499,7 @@ export default function Voluntariado() {
     </div>
   )
 
-  const programs = [
-    { name: 'Worldpackers', emoji: '🌐', cost: '$49 USD/año', hours: '20-24 h/semana', benefit: 'Cama + cocina + desayuno + lavandería', destinations: 'España, Portugal, Francia, Italia, Tailandia, Vietnam', roles: 'Recepción, Social Media, Bartender, Limpieza', link: 'https://www.worldpackers.com', color: '#e8572a' },
-    { name: 'WWOOF', emoji: '🌾', cost: '€15-35/año', hours: '25-30 h/semana', benefit: 'Alojamiento + 3 comidas completas/día', destinations: 'Francia, Alemania, Irlanda, Japón, Corea del Sur', roles: 'Siembra, Cosecha, Animales, Permacultura, Quesos/Vino', link: 'https://wwoof.net', color: '#22c55e' },
-    { name: 'UN Volunteers (ONU)', emoji: '🇺🇳', cost: '$0 (Paga la ONU)', hours: '35-40 h/semana', benefit: 'Subsidio $1,200-$2,400/mes + seguro + vuelos', destinations: 'Camboya, Laos, Nepal, Europa del Este, Latam', roles: 'Logística, DDHH, Soporte Técnico, Monitoreo', link: 'https://www.unv.org', color: '#3b82f6' },
-  ]
+  const programs = t.programs
 
   return (
     <main style={{ minHeight: '100vh', backgroundColor: '#f8f7f4', fontFamily: 'Inter, system-ui, sans-serif' }}>
@@ -451,11 +615,73 @@ export default function Voluntariado() {
                     </div>
                   ))}
                 </div>
-                <a href={p.link} target="_blank" rel="noopener noreferrer" style={{ color: p.color, textDecoration: 'underline', fontSize: '13px', fontWeight: '700' }}>Aplicar en {p.name} →</a>
+                <a href={p.link} target="_blank" rel="noopener noreferrer" style={{ color: p.color, textDecoration: 'underline', fontSize: '13px', fontWeight: '700' }}>{t.aplicar_en} {p.name} →</a>
               </div>
             ))}
           </div>
           <HackBox text={t.prog_hack} />
+        </Section>
+
+        <Section id="comparativa" emoji="📊" title={t.sec_comparativa_title}>
+          <div style={T.wrap}>
+            <table style={{ ...T.table, minWidth: '540px' }}>
+              <thead><tr>{[t.th_comp_plataforma, t.th_comp_precio, t.th_comp_tipo, t.th_comp_aloj, t.th_comp_pago].map((h, i) => <th key={i} style={T.th}>{h}</th>)}</tr></thead>
+              <tbody>
+                {t.comparativa_rows.map((r, i) => (
+                  <tr key={i}>
+                    <td style={{ ...T.td(i), ...T.bold }}>{r[0]}</td>
+                    <td style={{ ...T.td(i), color: '#166534', fontWeight: '600' }}>{r[1]}</td>
+                    <td style={T.td(i)}>{r[2]}</td>
+                    <td style={T.td(i)}>{r[3]}</td>
+                    <td style={T.td(i)}>{r[4]}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </Section>
+
+        <Section id="tipos" emoji="🎯" title={t.sec_tipos_title}>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+            {t.tipos_items.map((item, i) => (
+              <div key={i} style={{ backgroundColor: '#f8f7f4', borderRadius: '10px', padding: '12px 14px', borderLeft: '3px solid #e8572a' }}>
+                <p style={{ fontWeight: '700', fontSize: '13px', color: '#1a1a2e', margin: '0 0 3px' }}>{item[0]}</p>
+                <p style={{ fontSize: '12px', color: '#333333', margin: 0 }}>{item[1]}</p>
+              </div>
+            ))}
+          </div>
+        </Section>
+
+        <Section id="destinos-pop" emoji="🗺️" title={t.sec_destinos_pop_title}>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+            {t.destinos_pop_items.map((item, i) => (
+              <div key={i} style={{ backgroundColor: '#f0fdf4', borderRadius: '10px', padding: '12px 14px', borderLeft: '3px solid #22c55e' }}>
+                <p style={{ fontWeight: '700', fontSize: '13px', color: '#166534', margin: '0 0 3px' }}>{item[0]}</p>
+                <p style={{ fontSize: '12px', color: '#1a1a2e', margin: 0 }}>{item[1]}</p>
+              </div>
+            ))}
+          </div>
+        </Section>
+
+        <Section id="proscons" emoji="⚖️" title={t.sec_proscons_title}>
+          <div style={{ display: 'grid', gap: '12px' }}>
+            <div style={{ backgroundColor: '#f0fdf4', borderRadius: '10px', padding: '14px', border: '1px solid #86efac' }}>
+              <p style={{ fontWeight: '700', fontSize: '14px', margin: '0 0 8px', color: '#166534' }}>{t.pros_title}</p>
+              {t.pros_items.map((item, i) => (
+                <p key={i} style={{ fontSize: '13px', color: '#1a1a2e', margin: '4px 0', display: 'flex', gap: '6px' }}>
+                  <span style={{ color: '#22c55e' }}>✓</span> {item}
+                </p>
+              ))}
+            </div>
+            <div style={{ backgroundColor: '#fef2f2', borderRadius: '10px', padding: '14px', border: '1px solid #fecaca' }}>
+              <p style={{ fontWeight: '700', fontSize: '14px', margin: '0 0 8px', color: '#dc2626' }}>{t.cons_title}</p>
+              {t.cons_items.map((item, i) => (
+                <p key={i} style={{ fontSize: '13px', color: '#1a1a2e', margin: '4px 0', display: 'flex', gap: '6px' }}>
+                  <span style={{ color: '#ef4444' }}>✗</span> {item}
+                </p>
+              ))}
+            </div>
+          </div>
         </Section>
 
         {/* REQUISITOS */}
