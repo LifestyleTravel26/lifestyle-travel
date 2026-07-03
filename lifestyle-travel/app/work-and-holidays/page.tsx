@@ -19,6 +19,50 @@ const translations = {
     main_destinations_title: 'Destinos principales',
     main_destinations_sub: 'Comparativa de los mejores países WHV',
     difficulty: { Baja: 'Baja', Media: 'Media', Alta: 'Alta' },
+    destinations: [
+      { name: 'Australia', flag: '🇦🇺', duration: '12 meses (extensible a 24)', age: '18 – 35', system: 'Aplicación directa', difficulty: 'Baja', funds: '~$5,000 AUD', salary: '$24.10 AUD/hora (~$15.67 USD)', color: '#22c55e' },
+      { name: 'Nueva Zelanda', flag: '🇳🇿', duration: '12 meses (extensible a 23)', age: '18 – 30', system: 'Aplicación directa', difficulty: 'Baja', funds: '~$4,200 NZD', salary: '$23.15 NZD/hora (~$13.89 USD)', color: '#22c55e' },
+      { name: 'Canadá', flag: '🇨🇦', duration: '12 – 24 meses', age: '18 – 35', system: 'Pool / sorteo', difficulty: 'Alta', funds: '~$2,500 CAD', salary: '$17.30 CAD/hora (~$12.80 USD)', color: '#ef4444' },
+      { name: 'Irlanda', flag: '🇮🇪', duration: '12 meses', age: '18 – 30', system: 'Programa bilateral', difficulty: 'Media', funds: '€2,500 – €3,000', salary: '€13.50/hora (~$15.53 USD)', color: '#f59e0b' },
+      { name: 'Japón', flag: '🇯🇵', duration: '12 meses', age: '18 – 30', system: 'Consulado', difficulty: 'Media', funds: '¥50,000 (~$330 USD)', salary: '¥1,055/hora (~$7 USD)', color: '#f59e0b' },
+      { name: 'Corea del Sur', flag: '🇰🇷', duration: '12 meses', age: '18 – 30', system: 'Aplicación directa', difficulty: 'Media', funds: 'Solicitud gratuita', salary: '₩9,860/hora (~$7.50 USD)', color: '#f59e0b' },
+      { name: 'Alemania', flag: '🇩🇪', duration: '12 meses', age: '18 – 30', system: 'Consulado', difficulty: 'Baja', funds: '€2,000 – €3,000', salary: '€13.90 – €17/hora', color: '#22c55e' },
+      { name: 'Francia', flag: '🇫🇷', duration: '12 meses', age: '18 – 30', system: 'Consulado', difficulty: 'Media', funds: '€2,500 – €3,500', salary: '€12.02 – €15/hora', color: '#f59e0b' },
+    ],
+    sec_comparativa_title: 'Comparativa WHV',
+    sec_comparativa_sub: 'Salarios, costo de vida, empleo y clima de los principales destinos',
+    th_comp_pais: 'País', th_comp_salario: 'Salario Mínimo', th_comp_costo: 'Costo de Vida', th_comp_trabajo: 'Facilidad de Encontrar Trabajo', th_comp_clima: 'Clima',
+    comparativa_rows: [
+      ['🇦🇺 Australia', 'AUD $24.10/h (~$15.67 USD)', 'Alto', '⭐⭐⭐⭐⭐', 'Cálido'],
+      ['🇳🇿 Nueva Zelanda', 'NZD $23.15/h (~$13.89 USD)', 'Alto', '⭐⭐⭐⭐', 'Templado'],
+      ['🇨🇦 Canadá', 'CAD $17.30/h (~$12.80 USD)', 'Medio-Alto', '⭐⭐⭐⭐', 'Frío'],
+      ['🇮🇪 Irlanda', '€13.50/h (~$15.53 USD)', 'Alto', '⭐⭐⭐⭐⭐', 'Frío'],
+      ['🇯🇵 Japón', '¥1,055/h (~$7 USD)', 'Medio', '⭐⭐⭐', 'Variado'],
+      ['🇰🇷 Corea del Sur', '₩9,860/h (~$7.50 USD)', 'Medio', '⭐⭐⭐', 'Variado'],
+    ],
+    sec_extension_title: 'Extensión de Visa',
+    extension_intro: 'Algunos países permiten extender tu WHV si cumples trabajo estacional o regional.',
+    extension_items: [
+      ['🇦🇺 Australia', 'Extensible a 24 meses con 88 días de trabajo agrícola o regional'],
+      ['🇳🇿 Nueva Zelanda', 'Extensible a 23 meses con 3 meses de trabajo estacional'],
+    ],
+    sec_impuestos_title: 'Impuestos',
+    impuestos_intro: 'Los impuestos se pagan una vez que empiezas a trabajar en el país. Cada destino tiene su propio número fiscal.',
+    impuestos_items: [
+      ['🇦🇺 Australia', 'Tax File Number (TFN) — puedes obtener reembolso al final del año fiscal'],
+      ['🇳🇿 Nueva Zelanda', 'IRD number — declaración anual de impuestos'],
+      ['🇨🇦 Canadá', 'SIN number — declaración anual de impuestos'],
+      ['🇮🇪 Irlanda', 'PPS number — declaración anual de impuestos'],
+    ],
+    impuestos_hack: 'Muchos latinos reciben un reembolso de $500-$2,000 al final del año fiscal al presentar su declaración. No dejes ese dinero sobre la mesa.',
+    sec_seguro_title: 'Seguro Médico',
+    seguro_intro: 'Requisitos de cobertura médica según el destino WHV.',
+    seguro_items: [
+      ['🇦🇺 Australia', 'Overseas Visitor Health Cover (OVHC) obligatorio ~AUD $50-100/mes'],
+      ['🇳🇿 Nueva Zelanda', 'ACC cubre accidentes — se recomienda seguro de viaje adicional'],
+      ['🇨🇦 Canadá', 'Cobertura provincial tras 3 meses — seguro privado recomendado mientras tanto'],
+      ['🇮🇪 Irlanda', 'Seguro de viaje recomendado — salud pública tras 1 año de residencia'],
+    ],
     sec_como_title: 'Cómo Aplicar — 3 Sistemas',
     systems: [
       { n: '1️⃣', title: 'Aplicación Directa (First Come, First Served)', desc: 'Las visas se otorgan al primero que aplica cuando abren los cupos. Pueden llenarse en horas.', examples: 'Australia, Nueva Zelanda', color: '#22c55e' },
@@ -72,6 +116,50 @@ const translations = {
     main_destinations_title: 'Destinos principais',
     main_destinations_sub: 'Comparativo dos melhores países WHV',
     difficulty: { Baja: 'Baixa', Media: 'Média', Alta: 'Alta' },
+    destinations: [
+      { name: 'Austrália', flag: '🇦🇺', duration: '12 meses (extensível a 24)', age: '18 – 35', system: 'Solicitação direta', difficulty: 'Baja', funds: '~$5.000 AUD', salary: '$24,10 AUD/hora (~$15,67 USD)', color: '#22c55e' },
+      { name: 'Nova Zelândia', flag: '🇳🇿', duration: '12 meses (extensível a 23)', age: '18 – 30', system: 'Solicitação direta', difficulty: 'Baja', funds: '~$4.200 NZD', salary: '$23,15 NZD/hora (~$13,89 USD)', color: '#22c55e' },
+      { name: 'Canadá', flag: '🇨🇦', duration: '12 – 24 meses', age: '18 – 35', system: 'Pool / sorteio', difficulty: 'Alta', funds: '~$2.500 CAD', salary: '$17,30 CAD/hora (~$12,80 USD)', color: '#ef4444' },
+      { name: 'Irlanda', flag: '🇮🇪', duration: '12 meses', age: '18 – 30', system: 'Programa bilateral', difficulty: 'Media', funds: '€2.500 – €3.000', salary: '€13,50/hora (~$15,53 USD)', color: '#f59e0b' },
+      { name: 'Japão', flag: '🇯🇵', duration: '12 meses', age: '18 – 30', system: 'Consulado', difficulty: 'Media', funds: '¥50.000 (~$330 USD)', salary: '¥1.055/hora (~$7 USD)', color: '#f59e0b' },
+      { name: 'Coreia do Sul', flag: '🇰🇷', duration: '12 meses', age: '18 – 30', system: 'Solicitação direta', difficulty: 'Media', funds: 'Solicitação gratuita', salary: '₩9.860/hora (~$7,50 USD)', color: '#f59e0b' },
+      { name: 'Alemanha', flag: '🇩🇪', duration: '12 meses', age: '18 – 30', system: 'Consulado', difficulty: 'Baja', funds: '€2.000 – €3.000', salary: '€13,90 – €17/hora', color: '#22c55e' },
+      { name: 'França', flag: '🇫🇷', duration: '12 meses', age: '18 – 30', system: 'Consulado', difficulty: 'Media', funds: '€2.500 – €3.500', salary: '€12,02 – €15/hora', color: '#f59e0b' },
+    ],
+    sec_comparativa_title: 'Comparativo WHV',
+    sec_comparativa_sub: 'Salários, custo de vida, emprego e clima dos principais destinos',
+    th_comp_pais: 'País', th_comp_salario: 'Salário Mínimo', th_comp_costo: 'Custo de Vida', th_comp_trabajo: 'Facilidade de Encontrar Trabalho', th_comp_clima: 'Clima',
+    comparativa_rows: [
+      ['🇦🇺 Austrália', 'AUD $24,10/h (~$15,67 USD)', 'Alto', '⭐⭐⭐⭐⭐', 'Quente'],
+      ['🇳🇿 Nova Zelândia', 'NZD $23,15/h (~$13,89 USD)', 'Alto', '⭐⭐⭐⭐', 'Temperado'],
+      ['🇨🇦 Canadá', 'CAD $17,30/h (~$12,80 USD)', 'Médio-Alto', '⭐⭐⭐⭐', 'Frio'],
+      ['🇮🇪 Irlanda', '€13,50/h (~$15,53 USD)', 'Alto', '⭐⭐⭐⭐⭐', 'Frio'],
+      ['🇯🇵 Japão', '¥1.055/h (~$7 USD)', 'Médio', '⭐⭐⭐', 'Variado'],
+      ['🇰🇷 Coreia do Sul', '₩9.860/h (~$7,50 USD)', 'Médio', '⭐⭐⭐', 'Variado'],
+    ],
+    sec_extension_title: 'Extensão de Visto',
+    extension_intro: 'Alguns países permitem estender seu WHV se cumprir trabalho sazonal ou regional.',
+    extension_items: [
+      ['🇦🇺 Austrália', 'Extensível a 24 meses com 88 dias de trabalho agrícola ou regional'],
+      ['🇳🇿 Nova Zelândia', 'Extensível a 23 meses com 3 meses de trabalho sazonal'],
+    ],
+    sec_impuestos_title: 'Impostos',
+    impuestos_intro: 'Os impostos são pagos assim que você começa a trabalhar no país. Cada destino tem seu próprio número fiscal.',
+    impuestos_items: [
+      ['🇦🇺 Austrália', 'Tax File Number (TFN) — pode obter reembolso no final do ano fiscal'],
+      ['🇳🇿 Nova Zelândia', 'IRD number — declaração anual de impostos'],
+      ['🇨🇦 Canadá', 'SIN number — declaração anual de impostos'],
+      ['🇮🇪 Irlanda', 'PPS number — declaração anual de impostos'],
+    ],
+    impuestos_hack: 'Muitos latinos recebem um reembolso de $500-$2.000 no final do ano fiscal ao apresentar a declaração. Não deixe esse dinheiro na mesa.',
+    sec_seguro_title: 'Seguro Médico',
+    seguro_intro: 'Requisitos de cobertura médica conforme o destino WHV.',
+    seguro_items: [
+      ['🇦🇺 Austrália', 'Overseas Visitor Health Cover (OVHC) obrigatório ~AUD $50-100/mês'],
+      ['🇳🇿 Nova Zelândia', 'ACC cobre acidentes — recomenda-se seguro viagem adicional'],
+      ['🇨🇦 Canadá', 'Cobertura provincial após 3 meses — seguro privado recomendado enquanto isso'],
+      ['🇮🇪 Irlanda', 'Seguro viagem recomendado — saúde pública após 1 ano de residência'],
+    ],
     sec_como_title: 'Como Solicitar — 3 Sistemas',
     systems: [
       { n: '1️⃣', title: 'Solicitação Direta (First Come, First Served)', desc: 'Os vistos são concedidos ao primeiro que solicita quando as vagas abrem. Podem se esgotar em horas.', examples: 'Austrália, Nova Zelândia', color: '#22c55e' },
@@ -125,6 +213,50 @@ const translations = {
     main_destinations_title: 'Main destinations',
     main_destinations_sub: 'Comparison of the best WHV countries',
     difficulty: { Baja: 'Low', Media: 'Medium', Alta: 'High' },
+    destinations: [
+      { name: 'Australia', flag: '🇦🇺', duration: '12 months (extendable to 24)', age: '18 – 35', system: 'Direct application', difficulty: 'Baja', funds: '~$5,000 AUD', salary: '$24.10 AUD/hour (~$15.67 USD)', color: '#22c55e' },
+      { name: 'New Zealand', flag: '🇳🇿', duration: '12 months (extendable to 23)', age: '18 – 30', system: 'Direct application', difficulty: 'Baja', funds: '~$4,200 NZD', salary: '$23.15 NZD/hour (~$13.89 USD)', color: '#22c55e' },
+      { name: 'Canada', flag: '🇨🇦', duration: '12 – 24 months', age: '18 – 35', system: 'Pool / lottery', difficulty: 'Alta', funds: '~$2,500 CAD', salary: '$17.30 CAD/hour (~$12.80 USD)', color: '#ef4444' },
+      { name: 'Ireland', flag: '🇮🇪', duration: '12 months', age: '18 – 30', system: 'Bilateral program', difficulty: 'Media', funds: '€2,500 – €3,000', salary: '€13.50/hour (~$15.53 USD)', color: '#f59e0b' },
+      { name: 'Japan', flag: '🇯🇵', duration: '12 months', age: '18 – 30', system: 'Consulate', difficulty: 'Media', funds: '¥50,000 (~$330 USD)', salary: '¥1,055/hour (~$7 USD)', color: '#f59e0b' },
+      { name: 'South Korea', flag: '🇰🇷', duration: '12 months', age: '18 – 30', system: 'Direct application', difficulty: 'Media', funds: 'Free application', salary: '₩9,860/hour (~$7.50 USD)', color: '#f59e0b' },
+      { name: 'Germany', flag: '🇩🇪', duration: '12 months', age: '18 – 30', system: 'Consulate', difficulty: 'Baja', funds: '€2,000 – €3,000', salary: '€13.90 – €17/hour', color: '#22c55e' },
+      { name: 'France', flag: '🇫🇷', duration: '12 months', age: '18 – 30', system: 'Consulate', difficulty: 'Media', funds: '€2,500 – €3,500', salary: '€12.02 – €15/hour', color: '#f59e0b' },
+    ],
+    sec_comparativa_title: 'WHV Comparison',
+    sec_comparativa_sub: 'Wages, cost of living, job availability and climate across top destinations',
+    th_comp_pais: 'Country', th_comp_salario: 'Minimum Wage', th_comp_costo: 'Cost of Living', th_comp_trabajo: 'Ease of Finding Work', th_comp_clima: 'Climate',
+    comparativa_rows: [
+      ['🇦🇺 Australia', 'AUD $24.10/h (~$15.67 USD)', 'High', '⭐⭐⭐⭐⭐', 'Warm'],
+      ['🇳🇿 New Zealand', 'NZD $23.15/h (~$13.89 USD)', 'High', '⭐⭐⭐⭐', 'Temperate'],
+      ['🇨🇦 Canada', 'CAD $17.30/h (~$12.80 USD)', 'Medium-High', '⭐⭐⭐⭐', 'Cold'],
+      ['🇮🇪 Ireland', '€13.50/h (~$15.53 USD)', 'High', '⭐⭐⭐⭐⭐', 'Cold'],
+      ['🇯🇵 Japan', '¥1,055/h (~$7 USD)', 'Medium', '⭐⭐⭐', 'Varied'],
+      ['🇰🇷 South Korea', '₩9,860/h (~$7.50 USD)', 'Medium', '⭐⭐⭐', 'Varied'],
+    ],
+    sec_extension_title: 'Visa Extension',
+    extension_intro: 'Some countries allow you to extend your WHV if you complete seasonal or regional work.',
+    extension_items: [
+      ['🇦🇺 Australia', 'Extendable to 24 months with 88 days of farm or regional work'],
+      ['🇳🇿 New Zealand', 'Extendable to 23 months with 3 months of seasonal work'],
+    ],
+    sec_impuestos_title: 'Taxes',
+    impuestos_intro: 'Taxes apply once you start working in the country. Each destination has its own tax ID number.',
+    impuestos_items: [
+      ['🇦🇺 Australia', 'Tax File Number (TFN) — tax refund available at end of fiscal year'],
+      ['🇳🇿 New Zealand', 'IRD number — annual tax return'],
+      ['🇨🇦 Canada', 'SIN number — annual tax return'],
+      ['🇮🇪 Ireland', 'PPS number — annual tax return'],
+    ],
+    impuestos_hack: 'Many Latin Americans receive a $500-$2,000 refund at the end of the fiscal year when filing their tax return. Don\'t leave that money on the table.',
+    sec_seguro_title: 'Health Insurance',
+    seguro_intro: 'Medical coverage requirements by WHV destination.',
+    seguro_items: [
+      ['🇦🇺 Australia', 'Overseas Visitor Health Cover (OVHC) mandatory ~AUD $50-100/month'],
+      ['🇳🇿 New Zealand', 'ACC covers accidents — travel insurance recommended'],
+      ['🇨🇦 Canada', 'Provincial health coverage after 3 months — private insurance recommended meanwhile'],
+      ['🇮🇪 Ireland', 'Travel insurance recommended — public health after 1 year of residence'],
+    ],
     sec_como_title: 'How to Apply — 3 Systems',
     systems: [
       { n: '1️⃣', title: 'Direct Application (First Come, First Served)', desc: 'Visas are granted to the first applicant when quotas open. They can fill up in hours.', examples: 'Australia, New Zealand', color: '#22c55e' },
@@ -183,15 +315,6 @@ const countries = [
   { name: 'Guatemala', flag: '🇬🇹', level: 'No disponible', levelColor: '#6b7280', destinations: [] },
   { name: 'Honduras', flag: '🇭🇳', level: 'No disponible', levelColor: '#6b7280', destinations: [] },
   { name: 'El Salvador', flag: '🇸🇻', level: 'No disponible', levelColor: '#6b7280', destinations: [] },
-]
-
-const destinationInfo = [
-  { name: 'Australia', flag: '🇦🇺', duration: '12 meses (extensible)', age: '18 – 35', system: 'Aplicación directa', difficulty: 'Baja', funds: '~$5,000 AUD', salary: '$20 – $30 AUD/hora', color: '#22c55e' },
-  { name: 'Nueva Zelanda', flag: '🇳🇿', duration: '12 meses', age: '18 – 30', system: 'Aplicación directa', difficulty: 'Baja', funds: '~$4,200 NZD', salary: '$18 – $25 NZD/hora', color: '#22c55e' },
-  { name: 'Canadá', flag: '🇨🇦', duration: '12 – 24 meses', age: '18 – 35', system: 'Pool / sorteo', difficulty: 'Alta', funds: '~$2,500 CAD', salary: '$15 – $22 CAD/hora', color: '#ef4444' },
-  { name: 'Irlanda', flag: '🇮🇪', duration: '12 meses', age: '18 – 30', system: 'Programa bilateral', difficulty: 'Media', funds: '€2,500 – €3,000', salary: '€13.50 – €16/hora', color: '#f59e0b' },
-  { name: 'Alemania', flag: '🇩🇪', duration: '12 meses', age: '18 – 30', system: 'Consulado', difficulty: 'Baja', funds: '€2,000 – €3,000', salary: '€13.90 – €17/hora', color: '#22c55e' },
-  { name: 'Francia', flag: '🇫🇷', duration: '12 meses', age: '18 – 30', system: 'Consulado', difficulty: 'Media', funds: '€2,500 – €3,500', salary: '€12.02 – €15/hora', color: '#f59e0b' },
 ]
 
 export default function WorkAndHolidays() {
@@ -310,7 +433,7 @@ export default function WorkAndHolidays() {
         <h2 style={{ fontSize: '18px', fontWeight: 'bold', marginBottom: '4px', marginTop: '8px', color: '#1a1a2e' }}>{t.main_destinations_title}</h2>
         <p style={{ color: '#333333', fontSize: '13px', marginBottom: '16px' }}>{t.main_destinations_sub}</p>
         <div style={{ display: 'flex', flexDirection: 'column', gap: '10px', marginBottom: '24px' }}>
-          {destinationInfo.map((d, i) => (
+          {t.destinations.map((d, i) => (
             <div key={i} style={{ backgroundColor: 'white', borderRadius: '12px', padding: '16px', boxShadow: '0 1px 4px rgba(0,0,0,0.06)', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
               <div>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '4px' }}>
@@ -330,6 +453,30 @@ export default function WorkAndHolidays() {
               </div>
             </div>
           ))}
+        </div>
+
+        {/* COMPARATIVA */}
+        <h2 style={{ fontSize: '18px', fontWeight: 'bold', marginBottom: '4px', color: '#1a1a2e' }}>{t.sec_comparativa_title}</h2>
+        <p style={{ color: '#333333', fontSize: '13px', marginBottom: '12px' }}>{t.sec_comparativa_sub}</p>
+        <div style={{ overflowX: 'auto' as const, borderRadius: '10px', border: '1px solid #e5e7eb', marginBottom: '24px' }}>
+          <table style={{ width: '100%', borderCollapse: 'collapse' as const, minWidth: '520px' }}>
+            <thead>
+              <tr>{[t.th_comp_pais, t.th_comp_salario, t.th_comp_costo, t.th_comp_trabajo, t.th_comp_clima].map((h, i) => (
+                <th key={i} style={{ backgroundColor: '#1e3a5f', color: 'white', padding: '10px 12px', textAlign: 'left' as const, fontSize: '12px', fontWeight: '700' as const }}>{h}</th>
+              ))}</tr>
+            </thead>
+            <tbody>
+              {t.comparativa_rows.map((r, i) => (
+                <tr key={i}>
+                  <td style={{ padding: '9px 12px', fontSize: '12px', borderBottom: '1px solid #f0f0f0', backgroundColor: i % 2 === 0 ? 'white' : '#fafafa', fontWeight: '700', color: '#1a1a2e' }}>{r[0]}</td>
+                  <td style={{ padding: '9px 12px', fontSize: '12px', borderBottom: '1px solid #f0f0f0', backgroundColor: i % 2 === 0 ? 'white' : '#fafafa', color: '#166534', fontWeight: '600' }}>{r[1]}</td>
+                  <td style={{ padding: '9px 12px', fontSize: '12px', borderBottom: '1px solid #f0f0f0', backgroundColor: i % 2 === 0 ? 'white' : '#fafafa', color: '#1a1a2e' }}>{r[2]}</td>
+                  <td style={{ padding: '9px 12px', fontSize: '12px', borderBottom: '1px solid #f0f0f0', backgroundColor: i % 2 === 0 ? 'white' : '#fafafa', color: '#1a1a2e' }}>{r[3]}</td>
+                  <td style={{ padding: '9px 12px', fontSize: '12px', borderBottom: '1px solid #f0f0f0', backgroundColor: i % 2 === 0 ? 'white' : '#fafafa', color: '#1a1a2e' }}>{r[4]}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
         </div>
 
         {/* ACCORDION SECTIONS */}
@@ -399,6 +546,8 @@ export default function WorkAndHolidays() {
                   ['🇩🇪 Alemania', '€75', 'Consulado', 'auswaertiges-amt.de', 'https://www.auswaertiges-amt.de'],
                   ['🇫🇷 Francia', '€99', 'Consulado', 'france-visas.gouv.fr', 'https://france-visas.gouv.fr'],
                   ['🇮🇪 Irlanda', '€60 – €100', 'Bilateral', 'irishimmigration.ie', 'https://www.irishimmigration.ie'],
+                  ['🇯🇵 Japón', '¥50,000 (~$330 USD)', 'Consulado', 'mofa.go.jp', 'https://www.mofa.go.jp'],
+                  ['🇰🇷 Corea del Sur', 'Gratis', 'Directa', 'hikorea.go.kr', 'https://www.hikorea.go.kr'],
                   ['🇪🇸 España', '€80', 'Consulado', 'exteriores.gob.es', 'https://www.exteriores.gob.es'],
                   ['🇵🇹 Portugal', '€75', 'Consulado', 'vistos.mne.gov.pt', 'https://vistos.mne.gov.pt'],
                 ].map((r, i) => (
@@ -471,6 +620,43 @@ export default function WorkAndHolidays() {
             ))}
           </div>
           <HackBox text={t.vivienda_hack} />
+        </Section>
+
+        <Section id="extension" emoji="📅" title={t.sec_extension_title}>
+          <p style={{ fontSize: '14px', color: '#1a1a2e', marginBottom: '12px', lineHeight: '1.6' }}>{t.extension_intro}</p>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+            {t.extension_items.map((item, i) => (
+              <div key={i} style={{ backgroundColor: '#f0fdf4', borderRadius: '10px', padding: '12px 14px', borderLeft: '3px solid #22c55e' }}>
+                <p style={{ fontWeight: '700', fontSize: '13px', color: '#166534', margin: '0 0 3px' }}>{item[0]}</p>
+                <p style={{ fontSize: '12px', color: '#1a1a2e', margin: 0 }}>{item[1]}</p>
+              </div>
+            ))}
+          </div>
+        </Section>
+
+        <Section id="impuestos" emoji="🧾" title={t.sec_impuestos_title}>
+          <p style={{ fontSize: '14px', color: '#1a1a2e', marginBottom: '12px', lineHeight: '1.6' }}>{t.impuestos_intro}</p>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+            {t.impuestos_items.map((item, i) => (
+              <div key={i} style={{ backgroundColor: '#f8f7f4', borderRadius: '10px', padding: '12px 14px', borderLeft: '3px solid #1e3a5f' }}>
+                <p style={{ fontWeight: '700', fontSize: '13px', color: '#1a1a2e', margin: '0 0 3px' }}>{item[0]}</p>
+                <p style={{ fontSize: '12px', color: '#1a1a2e', margin: 0 }}>{item[1]}</p>
+              </div>
+            ))}
+          </div>
+          <HackBox text={t.impuestos_hack} />
+        </Section>
+
+        <Section id="seguro" emoji="🏥" title={t.sec_seguro_title}>
+          <p style={{ fontSize: '14px', color: '#1a1a2e', marginBottom: '12px', lineHeight: '1.6' }}>{t.seguro_intro}</p>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+            {t.seguro_items.map((item, i) => (
+              <div key={i} style={{ backgroundColor: '#eff6ff', borderRadius: '10px', padding: '12px 14px', borderLeft: '3px solid #2563eb' }}>
+                <p style={{ fontWeight: '700', fontSize: '13px', color: '#1e3a5f', margin: '0 0 3px' }}>{item[0]}</p>
+                <p style={{ fontSize: '12px', color: '#1a1a2e', margin: 0 }}>{item[1]}</p>
+              </div>
+            ))}
+          </div>
         </Section>
 
         <Section id="crisis" emoji="🛡️" title={t.sec_crisis_title}>
