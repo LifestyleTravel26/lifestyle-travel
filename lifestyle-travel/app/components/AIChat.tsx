@@ -11,7 +11,7 @@ const translations = {
     placeholder: 'Ej: ¿Cuánto dinero necesito para ir a Irlanda?',
     send: 'Enviar',
     thinking: 'Pensando...',
-    welcome: '¡Hola! Soy tu asistente de migración AI. Puedo ayudarte con preguntas sobre visas, costos, requisitos y todo lo relacionado con emigrar y trabajar en el extranjero. ¿En qué te puedo ayudar?',
+    welcome: '¡Hola! 🌍 ¿Listo para tu aventura en el extranjero? Soy tu asistente de migración AI. Puedo ayudarte con visas, costos, requisitos y todo lo que necesitas para emigrar y trabajar legalmente abroad. ¿Por dónde empezamos?',
     error: 'Error al procesar tu mensaje. Intenta de nuevo.',
   },
   pt: {
@@ -20,7 +20,7 @@ const translations = {
     placeholder: 'Ex: Quanto dinheiro preciso para ir à Irlanda?',
     send: 'Enviar',
     thinking: 'Pensando...',
-    welcome: 'Olá! Sou seu assistente de migração AI. Posso ajudá-lo com perguntas sobre vistos, custos, requisitos e tudo relacionado a emigrar e trabalhar no exterior. Como posso ajudá-lo?',
+    welcome: 'Olá! 🌍 Pronto para sua aventura no exterior? Sou seu assistente de migração AI. Posso ajudá-lo com vistos, custos, requisitos e tudo que você precisa para emigrar e trabalhar legalmente no exterior. Por onde começamos?',
     error: 'Erro ao processar sua mensagem. Tente novamente.',
   },
   en: {
@@ -29,7 +29,7 @@ const translations = {
     placeholder: 'E.g: How much money do I need to go to Ireland?',
     send: 'Send',
     thinking: 'Thinking...',
-    welcome: 'Hi! I am your AI migration assistant. I can help you with questions about visas, costs, requirements and everything related to emigrating and working abroad. How can I help you?',
+    welcome: 'Hi! 🌍 Ready for your adventure abroad? I\'m your AI migration assistant. I can help you with visas, costs, requirements and everything you need to emigrate and work legally abroad. Where do we start?',
     error: 'Error processing your message. Please try again.',
   },
 }
@@ -39,20 +39,125 @@ type Message = {
   content: string
 }
 
+const BUTTON_SIZE = 56
+const CHAT_WIDTH = 340
+const CHAT_HEIGHT = 480
+const GAP = 12
+const INITIAL_BOTTOM = 80
+const INITIAL_RIGHT = 20
+const DRAG_THRESHOLD = 5
+
+function getInitialPosition() {
+  return {
+    x: window.innerWidth - INITIAL_RIGHT - BUTTON_SIZE,
+    y: window.innerHeight - INITIAL_BOTTOM - BUTTON_SIZE,
+  }
+}
+
+function clampButtonPosition(pos: { x: number; y: number }) {
+  return {
+    x: Math.max(0, Math.min(window.innerWidth - BUTTON_SIZE, pos.x)),
+    y: Math.max(0, Math.min(window.innerHeight - BUTTON_SIZE, pos.y)),
+  }
+}
+
+function getChatPosition(buttonPos: { x: number; y: number }) {
+  let chatX = buttonPos.x + BUTTON_SIZE - CHAT_WIDTH
+  let chatY = buttonPos.y - CHAT_HEIGHT - GAP
+
+  if (chatY < 8) {
+    chatY = buttonPos.y + BUTTON_SIZE + GAP
+  }
+
+  chatX = Math.max(8, Math.min(window.innerWidth - CHAT_WIDTH - 8, chatX))
+  chatY = Math.max(8, Math.min(window.innerHeight - CHAT_HEIGHT - 8, chatY))
+
+  return { x: chatX, y: chatY }
+}
+
 export default function AIChat() {
   const [mounted, setMounted] = useState(false)
   const [isOpen, setIsOpen] = useState(false)
+  const [position, setPosition] = useState<{ x: number; y: number } | null>(null)
+  const [isDragging, setIsDragging] = useState(false)
   const [messages, setMessages] = useState<Message[]>([])
   const [input, setInput] = useState('')
   const [loading, setLoading] = useState(false)
   const messagesEndRef = useRef<HTMLDivElement>(null)
+  const isDraggingRef = useRef(false)
+  const dragStartRef = useRef({ pointerX: 0, pointerY: 0, posX: 0, posY: 0 })
+  const movedRef = useRef(0)
   const { locale } = useLanguage()
   const { hasAccess } = usePurchase()
   const t = translations[locale]
 
   useEffect(() => {
     setMounted(true)
+    setPosition(getInitialPosition())
+
+    const onResize = () => {
+      setPosition(prev => (prev ? clampButtonPosition(prev) : getInitialPosition()))
+    }
+    window.addEventListener('resize', onResize)
+    return () => window.removeEventListener('resize', onResize)
   }, [])
+
+  useEffect(() => {
+    function handlePointerMove(e: MouseEvent | TouchEvent) {
+      if (!isDraggingRef.current) return
+      if ('touches' in e) e.preventDefault()
+
+      const clientX = 'touches' in e ? e.touches[0].clientX : e.clientX
+      const clientY = 'touches' in e ? e.touches[0].clientY : e.clientY
+      const dx = clientX - dragStartRef.current.pointerX
+      const dy = clientY - dragStartRef.current.pointerY
+      movedRef.current = Math.hypot(dx, dy)
+
+      setPosition(clampButtonPosition({
+        x: dragStartRef.current.posX + dx,
+        y: dragStartRef.current.posY + dy,
+      }))
+    }
+
+    function handlePointerUp() {
+      if (!isDraggingRef.current) return
+      if (movedRef.current < DRAG_THRESHOLD) {
+        setIsOpen(prev => !prev)
+      }
+      isDraggingRef.current = false
+      setIsDragging(false)
+    }
+
+    document.addEventListener('mousemove', handlePointerMove)
+    document.addEventListener('mouseup', handlePointerUp)
+    document.addEventListener('touchmove', handlePointerMove, { passive: false })
+    document.addEventListener('touchend', handlePointerUp)
+
+    return () => {
+      document.removeEventListener('mousemove', handlePointerMove)
+      document.removeEventListener('mouseup', handlePointerUp)
+      document.removeEventListener('touchmove', handlePointerMove)
+      document.removeEventListener('touchend', handlePointerUp)
+    }
+  }, [])
+
+  function handlePointerDown(e: React.MouseEvent | React.TouchEvent) {
+    if (!position) return
+    e.preventDefault()
+
+    const clientX = 'touches' in e ? e.touches[0].clientX : e.clientX
+    const clientY = 'touches' in e ? e.touches[0].clientY : e.clientY
+
+    isDraggingRef.current = true
+    setIsDragging(true)
+    movedRef.current = 0
+    dragStartRef.current = {
+      pointerX: clientX,
+      pointerY: clientY,
+      posX: position.x,
+      posY: position.y,
+    }
+  }
 
   useEffect(() => {
     setMessages(prev => {
@@ -102,30 +207,36 @@ export default function AIChat() {
 
   if (!mounted) return null
   if (!hasAccess) return null
+  if (!position) return null
+
+  const chatPosition = getChatPosition(position)
 
   return createPortal(
     <>
       <button
         type="button"
         aria-label={isOpen ? 'Close chat' : 'Open AI chat'}
-        onClick={() => setIsOpen(!isOpen)}
+        onMouseDown={handlePointerDown}
+        onTouchStart={handlePointerDown}
         style={{
           position: 'fixed',
-          bottom: '80px',
-          right: '20px',
-          width: '56px',
-          height: '56px',
+          left: `${position.x}px`,
+          top: `${position.y}px`,
+          width: `${BUTTON_SIZE}px`,
+          height: `${BUTTON_SIZE}px`,
           borderRadius: '50%',
           backgroundColor: '#e8572a',
           color: 'white',
           border: 'none',
-          cursor: 'pointer',
+          cursor: isDragging ? 'grabbing' : 'grab',
           fontSize: '24px',
           boxShadow: '0 4px 16px rgba(232,87,42,0.4)',
           zIndex: 10001,
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
+          touchAction: 'none',
+          userSelect: 'none',
         }}
       >
         {isOpen ? '✕' : '🤖'}
@@ -134,11 +245,11 @@ export default function AIChat() {
       {isOpen && (
         <div style={{
           position: 'fixed',
-          bottom: '148px',
-          right: '20px',
-          width: '340px',
+          left: `${chatPosition.x}px`,
+          top: `${chatPosition.y}px`,
+          width: `${CHAT_WIDTH}px`,
           maxWidth: 'calc(100vw - 40px)',
-          height: '480px',
+          height: `${CHAT_HEIGHT}px`,
           backgroundColor: 'white',
           borderRadius: '16px',
           boxShadow: '0 8px 32px rgba(0,0,0,0.15)',
