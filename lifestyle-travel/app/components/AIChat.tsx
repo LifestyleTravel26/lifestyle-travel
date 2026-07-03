@@ -2,6 +2,7 @@
 import { useState, useRef, useEffect } from 'react'
 import { createPortal } from 'react-dom'
 import { useLanguage } from '../context/LanguageContext'
+import { usePurchase } from '@/app/hooks/usePurchase'
 
 const translations = {
   es: {
@@ -46,6 +47,7 @@ export default function AIChat() {
   const [loading, setLoading] = useState(false)
   const messagesEndRef = useRef<HTMLDivElement>(null)
   const { locale } = useLanguage()
+  const { hasAccess } = usePurchase()
   const t = translations[locale]
 
   useEffect(() => {
@@ -99,6 +101,7 @@ export default function AIChat() {
   }
 
   if (!mounted) return null
+  if (!hasAccess) return null
 
   return createPortal(
     <>
