@@ -47,10 +47,16 @@ export default function AIChat() {
   const t = translations[locale]
 
   useEffect(() => {
-    if (messages.length === 0) {
-      setMessages([{ role: 'assistant', content: t.welcome }])
-    }
-  }, [])
+    setMessages(prev => {
+      if (prev.length === 0) {
+        return [{ role: 'assistant', content: t.welcome }]
+      }
+      if (prev.length === 1 && prev[0].role === 'assistant') {
+        return [{ role: 'assistant', content: t.welcome }]
+      }
+      return prev
+    })
+  }, [locale, t.welcome])
 
   useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })
@@ -58,19 +64,23 @@ export default function AIChat() {
 
   async function sendMessage() {
     if (!input.trim() || loading) return
-    const userMessage: Message = { role: 'user', content: input }
+    const userMessage: Message = { role: 'user', content: input.trim() }
     const newMessages = [...messages, userMessage]
     setMessages(newMessages)
     setInput('')
     setLoading(true)
+
+    const firstUserIndex = newMessages.findIndex(m => m.role === 'user')
+    const apiMessages = firstUserIndex >= 0 ? newMessages.slice(firstUserIndex) : []
+
     try {
       const response = await fetch('/api/chat', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ messages: newMessages }),
+        body: JSON.stringify({ messages: apiMessages }),
       })
       const data = await response.json()
-      if (data.message) {
+      if (response.ok && data.message) {
         setMessages([...newMessages, { role: 'assistant', content: data.message }])
       } else {
         setMessages([...newMessages, { role: 'assistant', content: t.error }])

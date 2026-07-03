@@ -1,9 +1,10 @@
 import { NextRequest, NextResponse } from 'next/server'
 import Anthropic from '@anthropic-ai/sdk'
 
-const client = new Anthropic({
-  apiKey: process.env.ANTHROPIC_API_KEY,
-})
+type ChatMessage = {
+  role: 'user' | 'assistant'
+  content: string
+}
 
 const SYSTEM_PROMPT = `You are a migration assistant for Lifestyle & Travel (lifestylentravel.com), a platform that helps Latin Americans emigrate and work legally abroad.
 
@@ -29,18 +30,52 @@ Be concise, practical and actionable. Maximum 3-4 paragraphs per response.
 Always recommend checking official immigration portals for the latest requirements.
 If asked about pricing, mention the platform plans: Blueprint Individual €14.99, Full Access €39.99, Orientation Call €59.99.`
 
+function normalizeMessages(messages: unknown): ChatMessage[] {
+  if (!Array.isArray(messages)) return []
+
+  return messages
+    .filter(
+      (m): m is ChatMessage =>
+        typeof m === 'object' &&
+        m !== null &&
+        (m.role === 'user' || m.role === 'assistant') &&
+        typeof m.content === 'string' &&
+        m.content.trim().length > 0
+    )
+    .map(m => ({ role: m.role, content: m.content.trim() }))
+}
+
 export async function POST(request: NextRequest) {
   try {
+    if (!process.env.ANTHROPIC_API_KEY) {
+      return NextResponse.json({ error: 'AI service not configured' }, { status: 503 })
+    }
+
     const { messages } = await request.json()
+    const firstUserIndex = normalizeMessages(messages).findIndex(m => m.role === 'user')
+
+    if (firstUserIndex === -1) {
+      return NextResponse.json({ error: 'No user message provided' }, { status: 400 })
+    }
+
+    const apiMessages = normalizeMessages(messages).slice(firstUserIndex)
+
+    const client = new Anthropic({
+      apiKey: process.env.ANTHROPIC_API_KEY,
+    })
 
     const response = await client.messages.create({
       model: 'claude-sonnet-4-6',
       max_tokens: 1024,
       system: SYSTEM_PROMPT,
-      messages: messages,
+      messages: apiMessages,
     })
 
-    const text = response.content[0].type === 'text' ? response.content[0].text : ''
+    const text = response.content[0]?.type === 'text' ? response.content[0].text : ''
+
+    if (!text) {
+      return NextResponse.json({ error: 'Empty response from AI' }, { status: 502 })
+    }
 
     return NextResponse.json({ message: text })
   } catch (error) {
