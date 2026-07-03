@@ -943,10 +943,10 @@ export default function Canada() {
               <thead><tr>{[t.th_sector, t.th_puesto, t.th_salario_cad, t.th_usd_h, t.th_canal_emp].map((h, i) => <th key={i} style={T.th}>{h}</th>)}</tr></thead>
               <tbody>
                 {[
-                  ['Hospitality', 'Server / Kitchen Helper', '$16 – $20 CAD', '$11.5 – $14.4', 'Indeed / CV en persona'],
-                  ['Cleaning', 'Cleaner / Housekeeping', '$16 – $19 CAD', '$11.5 – $13.7', 'Job Bank / Indeed'],
+                  ['Hospitality', 'Waiter', '$17.30 – $20 CAD', '$12.80 – $14.80', 'Indeed / CV en persona'],
+                  ['Cleaning', 'Housekeeping', '$17.30 – $19 CAD', '$12.80 – $14.06', 'Job Bank / Indeed'],
                   ['Hotels', 'Front Desk / Hotel Staff', '$17 – $21 CAD', '$12.2 – $15.1', 'LinkedIn / hotels directos'],
-                  ['Retail', 'Sales Associate', '$16 – $20 CAD', '$11.5 – $14.4', 'Indeed / aplicar en tienda'],
+                  ['Retail', 'Shop Assistant', '$17.30 – $20 CAD', '$12.80 – $14.80', 'Indeed / aplicar en tienda'],
                   ['Delivery', 'Delivery Driver / Courier', '$18 – $25 CAD', '$13 – $18', 'DoorDash / Uber Eats / Indeed'],
                 ].map((r, i) => (
                   <tr key={i}>
@@ -971,10 +971,10 @@ export default function Canada() {
               <thead><tr>{[t.th_sector_sal, t.th_puesto_sal, t.th_salario_cad, t.th_usd_h, t.th_mensual].map((h, i) => <th key={i} style={T.th}>{h}</th>)}</tr></thead>
               <tbody>
                 {[
-                  ['Hospitality', 'Server / Kitchen Helper', '$16 – $20 CAD', '$11.5 – $14.4', '$1,280 – $1,600 CAD'],
-                  ['Cleaning', 'Cleaner / Housekeeping', '$16 – $19 CAD', '$11.5 – $13.7', '$1,280 – $1,520 CAD'],
+                  ['Hospitality', 'Waiter', '$17.30 – $20 CAD', '$12.80 – $14.80', '$1,384 – $1,600 CAD'],
+                  ['Cleaning', 'Housekeeping', '$17.30 – $19 CAD', '$12.80 – $14.06', '$1,384 – $1,520 CAD'],
                   ['Hotels', 'Front Desk / Hotel Staff', '$17 – $21 CAD', '$12.2 – $15.1', '$1,360 – $1,680 CAD'],
-                  ['Retail', 'Sales Associate', '$16 – $20 CAD', '$11.5 – $14.4', '$1,280 – $1,600 CAD'],
+                  ['Retail', 'Shop Assistant', '$17.30 – $20 CAD', '$12.80 – $14.80', '$1,384 – $1,600 CAD'],
                   ['Delivery', 'Driver / Courier', '$18 – $25 CAD', '$13 – $18', '$1,440 – $2,000 CAD'],
                 ].map((r, i) => (
                   <tr key={i}>
