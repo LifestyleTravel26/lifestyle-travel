@@ -21,7 +21,57 @@ const translations = {
     included: ['Alojamiento con la familia anfitriona', 'Comida incluida', 'Compensación semanal/mensual', 'Experiencia internacional y de idioma', 'Seguro médico en algunos países'],
     sec_destinos_title: 'Destinos Disponibles — Visa Au Pair',
     destinos_intro: 'La Visa Au Pair está disponible en múltiples países europeos y en EE.UU. Cada uno tiene requisitos de edad, idioma y proceso distintos. Irlanda es el más accesible para latinoamericanos.',
-    th_pais: 'País', th_edad: 'Edad', th_idioma: 'Idioma', th_pago: 'Pago mensual', th_dificultad: 'Dificultad', th_portal: 'Portal',
+    th_pais: 'País', th_edad: 'Edad', th_idioma: 'Idioma', th_pago: 'Pocket money', th_dificultad: 'Dificultad', th_portal: 'Portal',
+    destinos_rows: [
+      ['🇮🇪 Irlanda', '18+', 'Inglés · visa estudiante recom.', '€200–€250/sem', 'Baja', 'irishimmigration.ie', 'https://www.irishimmigration.ie'],
+      ['🇦🇺 Australia', '18–30', 'Inglés · Working Holiday Visa', 'AUD $250–$350/sem', 'Media', 'immi.homeaffairs.gov.au', 'https://immi.homeaffairs.gov.au'],
+      ['🇩🇪 Alemania', '18–30', 'Alemán básico (A1)', '€280–€350/mes', 'Media', 'make-it-in-germany.com', 'https://www.make-it-in-germany.com/en/visa-residence/types/au-pair'],
+      ['🇫🇷 Francia', '18–30', 'Francés básico (A1)', '€400–€450/mes', 'Media', 'france-visas.gouv.fr', 'https://france-visas.gouv.fr/en/web/france-visas/au-pair'],
+      ['🇪🇸 España', '18–30', 'Español', '€300–€400/mes', 'Baja', 'exteriores.gob.es', 'https://www.exteriores.gob.es'],
+      ['🇦🇹 Austria', '18–30', 'Alemán básico (A1)', '€300–€400/mes', 'Media', 'migration.gv.at', 'https://www.migration.gv.at/en/types-of-immigration/fixed-term-settlement/au-pair/'],
+      ['🇨🇭 Suiza', '18–25', 'Alemán / Francés básico', 'CHF 700–900/mes', 'Alta', 'sem.admin.ch', 'https://www.sem.admin.ch'],
+      ['🇳🇱 Países Bajos', '18–25', 'Inglés / Básico', 'Competitivo', 'Media', 'ind.nl', 'https://ind.nl/en/residence-permits/exchange/au-pair'],
+      ['🇧🇪 Bélgica', '18–26', 'Básico', 'Competitivo', 'Media', 'dofi.ibz.be', 'https://dofi.ibz.be/en/themes/faq/au-pair'],
+      ['🇺🇸 EE.UU.', '18–26', 'Inglés intermedio', '$200.12/semana', 'Alta', 'j1visa.state.gov', 'https://j1visa.state.gov/programs/au-pair'],
+    ],
+    sec_comparativa_title: 'Comparativa Au Pair',
+    sec_comparativa_sub: 'Pocket money, horas, idioma y dificultad de visa por país',
+    th_comp_pais: 'País', th_comp_pocket: 'Pocket Money', th_comp_horas: 'Horas/Semana', th_comp_idioma: 'Idioma', th_comp_visa: 'Dificultad de Visa',
+    comparativa_rows: [
+      ['🇩🇪 Alemania', '€280–€350/mes', '30h', 'Alemán/Inglés', 'Media'],
+      ['🇫🇷 Francia', '€400–€450/mes', '30h', 'Francés', 'Media'],
+      ['🇪🇸 España', '€300–€400/mes', '30h', 'Español', 'Baja'],
+      ['🇺🇸 EE.UU.', '$200/semana', '45h', 'Inglés', 'Alta'],
+      ['🇮🇪 Irlanda', '€200–€250/semana', '25–30h', 'Inglés', 'Baja'],
+      ['🇦🇺 Australia', 'AUD $250–$350/semana', '25–30h', 'Inglés', 'Media'],
+      ['🇦🇹 Austria', '€300–€400/mes', '30h', 'Alemán', 'Media'],
+      ['🇨🇭 Suiza', 'CHF 700–900/mes', '30h', 'Alemán/Francés', 'Alta'],
+    ],
+    sec_agencias_title: 'Agencias Recomendadas',
+    agencias_intro: 'Plataformas y agencias para encontrar familia anfitriona y gestionar la visa.',
+    agencias_items: [
+      ['AuPairWorld', 'Gratuita, online', 'aupairworld.com', 'https://www.aupairworld.com'],
+      ['Cultural Care Au Pair', 'USA, más formal', 'culturalcare.com', 'https://www.culturalcare.com'],
+      ['Au Pair in America', 'USA, AIFS', 'aupairinamerica.com', 'https://www.aupairinamerica.com'],
+      ['GoAuPair', 'USA, online', 'goaupair.com', 'https://www.goaupair.com'],
+      ['AuPair.com', 'Europa, gratuita', 'aupair.com', 'https://www.aupair.com'],
+    ],
+    sec_proscons_title: 'Pros y Contras',
+    pros_title: '✅ Pros',
+    cons_title: '❌ Contras',
+    pros_items: [
+      'Alojamiento y comida incluidos',
+      'Aprendes el idioma viviendo con la familia',
+      'Experiencia cultural única',
+      'Bajo costo de vida',
+      'Extensible en muchos países',
+    ],
+    cons_items: [
+      'Sueldo bajo comparado con trabajo formal',
+      'Depende mucho de la familia anfitriona',
+      'Pocas horas libres en algunas familias',
+      'No aplica para todos los países de Latinoamérica',
+    ],
     destinos_hack: 'Irlanda es el destino más accesible para latinoamericanos — alta demanda, inglés como idioma de trabajo y proceso directo sin agencia obligatoria. Alemania y Francia requieren nivel básico del idioma local pero tienen los salarios más competitivos de Europa.',
     sec_aplic_title: 'Cómo Aplicar — Proceso Paso a Paso',
     aplic_intro: 'La Visa Au Pair no se solicita como una Working Holiday. Primero necesitas familia anfitriona + contrato firmado. Sin familia confirmada no hay visa. Ese es el orden correcto.',
@@ -81,7 +131,7 @@ const translations = {
       ['Edad', '18+', '18–30', '18–30', '18–26'],
       ['Idioma', 'Inglés básico', 'Alemán A1', 'Francés A1', 'Inglés intermedio'],
       ['Aplicación', 'Directo o agencia', 'Directo o agencia', 'Directo o agencia', 'Agencia obligatoria'],
-      ['Pago', '€150–€250/sem', '€280–€400/mes', '€300–€400/mes', '~$195/semana'],
+      ['Pago', '€200–€250/sem', '€280–€350/mes', '€400–€450/mes', '$200.12/sem'],
       ['Incluye', 'Aloj. + comida', 'Aloj. + comida', 'Aloj. + comida', 'Aloj. + comida + estudios'],
       ['Dificultad', '🟢 Baja', '🟡 Media', '🟡 Media', '🔴 Alta'],
     ],
@@ -107,7 +157,57 @@ const translations = {
     included: ['Alojamento com a família anfitriã', 'Comida incluída', 'Compensação semanal/mensal', 'Experiência internacional e de idioma', 'Seguro médico em alguns países'],
     sec_destinos_title: 'Destinos Disponíveis — Visto Au Pair',
     destinos_intro: 'O Visto Au Pair está disponível em vários países europeus e nos EUA. Cada um tem requisitos de idade, idioma e processo diferentes. A Irlanda é a mais acessível para latino-americanos.',
-    th_pais: 'País', th_edad: 'Idade', th_idioma: 'Idioma', th_pago: 'Pagamento mensal', th_dificultad: 'Dificuldade', th_portal: 'Portal',
+    th_pais: 'País', th_edad: 'Idade', th_idioma: 'Idioma', th_pago: 'Pocket money', th_dificultad: 'Dificuldade', th_portal: 'Portal',
+    destinos_rows: [
+      ['🇮🇪 Irlanda', '18+', 'Inglês · visto estudante recom.', '€200–€250/sem', 'Baixa', 'irishimmigration.ie', 'https://www.irishimmigration.ie'],
+      ['🇦🇺 Austrália', '18–30', 'Inglês · Working Holiday Visa', 'AUD $250–$350/sem', 'Média', 'immi.homeaffairs.gov.au', 'https://immi.homeaffairs.gov.au'],
+      ['🇩🇪 Alemanha', '18–30', 'Alemão básico (A1)', '€280–€350/mês', 'Média', 'make-it-in-germany.com', 'https://www.make-it-in-germany.com/en/visa-residence/types/au-pair'],
+      ['🇫🇷 França', '18–30', 'Francês básico (A1)', '€400–€450/mês', 'Média', 'france-visas.gouv.fr', 'https://france-visas.gouv.fr/en/web/france-visas/au-pair'],
+      ['🇪🇸 Espanha', '18–30', 'Espanhol', '€300–€400/mês', 'Baixa', 'exteriores.gob.es', 'https://www.exteriores.gob.es'],
+      ['🇦🇹 Áustria', '18–30', 'Alemão básico (A1)', '€300–€400/mês', 'Média', 'migration.gv.at', 'https://www.migration.gv.at/en/types-of-immigration/fixed-term-settlement/au-pair/'],
+      ['🇨🇭 Suíça', '18–25', 'Alemão / Francês básico', 'CHF 700–900/mês', 'Alta', 'sem.admin.ch', 'https://www.sem.admin.ch'],
+      ['🇳🇱 Países Baixos', '18–25', 'Inglês / Básico', 'Competitivo', 'Média', 'ind.nl', 'https://ind.nl/en/residence-permits/exchange/au-pair'],
+      ['🇧🇪 Bélgica', '18–26', 'Básico', 'Competitivo', 'Média', 'dofi.ibz.be', 'https://dofi.ibz.be/en/themes/faq/au-pair'],
+      ['🇺🇸 EUA', '18–26', 'Inglês intermediário', '$200,12/semana', 'Alta', 'j1visa.state.gov', 'https://j1visa.state.gov/programs/au-pair'],
+    ],
+    sec_comparativa_title: 'Comparativo Au Pair',
+    sec_comparativa_sub: 'Pocket money, horas, idioma e dificuldade de visto por país',
+    th_comp_pais: 'País', th_comp_pocket: 'Pocket Money', th_comp_horas: 'Horas/Semana', th_comp_idioma: 'Idioma', th_comp_visa: 'Dificuldade de Visto',
+    comparativa_rows: [
+      ['🇩🇪 Alemanha', '€280–€350/mês', '30h', 'Alemão/Inglês', 'Média'],
+      ['🇫🇷 França', '€400–€450/mês', '30h', 'Francês', 'Média'],
+      ['🇪🇸 Espanha', '€300–€400/mês', '30h', 'Espanhol', 'Baixa'],
+      ['🇺🇸 EUA', '$200/semana', '45h', 'Inglês', 'Alta'],
+      ['🇮🇪 Irlanda', '€200–€250/semana', '25–30h', 'Inglês', 'Baixa'],
+      ['🇦🇺 Austrália', 'AUD $250–$350/semana', '25–30h', 'Inglês', 'Média'],
+      ['🇦🇹 Áustria', '€300–€400/mês', '30h', 'Alemão', 'Média'],
+      ['🇨🇭 Suíça', 'CHF 700–900/mês', '30h', 'Alemão/Francês', 'Alta'],
+    ],
+    sec_agencias_title: 'Agências Recomendadas',
+    agencias_intro: 'Plataformas e agências para encontrar família anfitriã e gerenciar o visto.',
+    agencias_items: [
+      ['AuPairWorld', 'Gratuita, online', 'aupairworld.com', 'https://www.aupairworld.com'],
+      ['Cultural Care Au Pair', 'EUA, mais formal', 'culturalcare.com', 'https://www.culturalcare.com'],
+      ['Au Pair in America', 'EUA, AIFS', 'aupairinamerica.com', 'https://www.aupairinamerica.com'],
+      ['GoAuPair', 'EUA, online', 'goaupair.com', 'https://www.goaupair.com'],
+      ['AuPair.com', 'Europa, gratuita', 'aupair.com', 'https://www.aupair.com'],
+    ],
+    sec_proscons_title: 'Prós e Contras',
+    pros_title: '✅ Prós',
+    cons_title: '❌ Contras',
+    pros_items: [
+      'Alojamento e comida incluídos',
+      'Você aprende o idioma morando com a família',
+      'Experiência cultural única',
+      'Baixo custo de vida',
+      'Extensível em muitos países',
+    ],
+    cons_items: [
+      'Salário baixo comparado ao trabalho formal',
+      'Depende muito da família anfitriã',
+      'Poucas horas livres em algumas famílias',
+      'Não se aplica a todos os países da América Latina',
+    ],
     destinos_hack: 'A Irlanda é o destino mais acessível para latino-americanos — alta demanda, inglês como idioma de trabalho e processo direto sem agência obrigatória. Alemanha e França exigem nível básico do idioma local mas têm os salários mais competitivos da Europa.',
     sec_aplic_title: 'Como Solicitar — Processo Passo a Passo',
     aplic_intro: 'O Visto Au Pair não se solicita como um Working Holiday. Primeiro você precisa de família anfitriã + contrato assinado. Sem família confirmada não há visto. Essa é a ordem correta.',
@@ -167,7 +267,7 @@ const translations = {
       ['Idade', '18+', '18–30', '18–30', '18–26'],
       ['Idioma', 'Inglês básico', 'Alemão A1', 'Francês A1', 'Inglês intermediário'],
       ['Solicitação', 'Direto ou agência', 'Direto ou agência', 'Direto ou agência', 'Agência obrigatória'],
-      ['Pagamento', '€150–€250/sem', '€280–€400/mês', '€300–€400/mês', '~$195/semana'],
+      ['Pagamento', '€200–€250/sem', '€280–€350/mês', '€400–€450/mês', '$200,12/sem'],
       ['Inclui', 'Aloj. + comida', 'Aloj. + comida', 'Aloj. + comida', 'Aloj. + comida + estudos'],
       ['Dificuldade', '🟢 Baixa', '🟡 Média', '🟡 Média', '🔴 Alta'],
     ],
@@ -193,7 +293,57 @@ const translations = {
     included: ['Accommodation with host family', 'Food included', 'Weekly/monthly compensation', 'International and language experience', 'Health insurance in some countries'],
     sec_destinos_title: 'Available Destinations — Au Pair Visa',
     destinos_intro: 'The Au Pair Visa is available in multiple European countries and the US. Each has different age, language and process requirements. Ireland is the most accessible for Latin Americans.',
-    th_pais: 'Country', th_edad: 'Age', th_idioma: 'Language', th_pago: 'Monthly pay', th_dificultad: 'Difficulty', th_portal: 'Portal',
+    th_pais: 'Country', th_edad: 'Age', th_idioma: 'Language', th_pago: 'Pocket money', th_dificultad: 'Difficulty', th_portal: 'Portal',
+    destinos_rows: [
+      ['🇮🇪 Ireland', '18+', 'English · student visa recommended', '€200–€250/week', 'Low', 'irishimmigration.ie', 'https://www.irishimmigration.ie'],
+      ['🇦🇺 Australia', '18–30', 'English · Working Holiday Visa', 'AUD $250–$350/week', 'Medium', 'immi.homeaffairs.gov.au', 'https://immi.homeaffairs.gov.au'],
+      ['🇩🇪 Germany', '18–30', 'Basic German (A1)', '€280–€350/month', 'Medium', 'make-it-in-germany.com', 'https://www.make-it-in-germany.com/en/visa-residence/types/au-pair'],
+      ['🇫🇷 France', '18–30', 'Basic French (A1)', '€400–€450/month', 'Medium', 'france-visas.gouv.fr', 'https://france-visas.gouv.fr/en/web/france-visas/au-pair'],
+      ['🇪🇸 Spain', '18–30', 'Spanish', '€300–€400/month', 'Low', 'exteriores.gob.es', 'https://www.exteriores.gob.es'],
+      ['🇦🇹 Austria', '18–30', 'Basic German (A1)', '€300–€400/month', 'Medium', 'migration.gv.at', 'https://www.migration.gv.at/en/types-of-immigration/fixed-term-settlement/au-pair/'],
+      ['🇨🇭 Switzerland', '18–25', 'Basic German / French', 'CHF 700–900/month', 'High', 'sem.admin.ch', 'https://www.sem.admin.ch'],
+      ['🇳🇱 Netherlands', '18–25', 'English / Basic', 'Competitive', 'Medium', 'ind.nl', 'https://ind.nl/en/residence-permits/exchange/au-pair'],
+      ['🇧🇪 Belgium', '18–26', 'Basic', 'Competitive', 'Medium', 'dofi.ibz.be', 'https://dofi.ibz.be/en/themes/faq/au-pair'],
+      ['🇺🇸 USA', '18–26', 'Intermediate English', '$200.12/week', 'High', 'j1visa.state.gov', 'https://j1visa.state.gov/programs/au-pair'],
+    ],
+    sec_comparativa_title: 'Au Pair Comparison',
+    sec_comparativa_sub: 'Pocket money, hours, language and visa difficulty by country',
+    th_comp_pais: 'Country', th_comp_pocket: 'Pocket Money', th_comp_horas: 'Hours/Week', th_comp_idioma: 'Language', th_comp_visa: 'Visa Difficulty',
+    comparativa_rows: [
+      ['🇩🇪 Germany', '€280–€350/month', '30h', 'German/English', 'Medium'],
+      ['🇫🇷 France', '€400–€450/month', '30h', 'French', 'Medium'],
+      ['🇪🇸 Spain', '€300–€400/month', '30h', 'Spanish', 'Low'],
+      ['🇺🇸 USA', '$200/week', '45h', 'English', 'High'],
+      ['🇮🇪 Ireland', '€200–€250/week', '25–30h', 'English', 'Low'],
+      ['🇦🇺 Australia', 'AUD $250–$350/week', '25–30h', 'English', 'Medium'],
+      ['🇦🇹 Austria', '€300–€400/month', '30h', 'German', 'Medium'],
+      ['🇨🇭 Switzerland', 'CHF 700–900/month', '30h', 'German/French', 'High'],
+    ],
+    sec_agencias_title: 'Recommended Agencies',
+    agencias_intro: 'Platforms and agencies to find a host family and manage the visa.',
+    agencias_items: [
+      ['AuPairWorld', 'Free, online', 'aupairworld.com', 'https://www.aupairworld.com'],
+      ['Cultural Care Au Pair', 'USA, more formal', 'culturalcare.com', 'https://www.culturalcare.com'],
+      ['Au Pair in America', 'USA, AIFS', 'aupairinamerica.com', 'https://www.aupairinamerica.com'],
+      ['GoAuPair', 'USA, online', 'goaupair.com', 'https://www.goaupair.com'],
+      ['AuPair.com', 'Europe, free', 'aupair.com', 'https://www.aupair.com'],
+    ],
+    sec_proscons_title: 'Pros and Cons',
+    pros_title: '✅ Pros',
+    cons_title: '❌ Cons',
+    pros_items: [
+      'Accommodation and food included',
+      'Learn the language living with the family',
+      'Unique cultural experience',
+      'Low cost of living',
+      'Extendable in many countries',
+    ],
+    cons_items: [
+      'Low pay compared to formal work',
+      'Highly dependent on the host family',
+      'Limited free time with some families',
+      'Not available for all Latin American countries',
+    ],
     destinos_hack: 'Ireland is the most accessible destination for Latin Americans — high demand, English as the working language and direct process without mandatory agency. Germany and France require basic knowledge of the local language but have the most competitive salaries in Europe.',
     sec_aplic_title: 'How to Apply — Step by Step Process',
     aplic_intro: 'The Au Pair Visa is not applied for like a Working Holiday. First you need a host family + signed contract. Without a confirmed family there\'s no visa. That\'s the correct order.',
@@ -253,7 +403,7 @@ const translations = {
       ['Age', '18+', '18–30', '18–30', '18–26'],
       ['Language', 'Basic English', 'German A1', 'French A1', 'Intermediate English'],
       ['Application', 'Direct or agency', 'Direct or agency', 'Direct or agency', 'Agency required'],
-      ['Pay', '€150–€250/week', '€280–€400/month', '€300–€400/month', '~$195/week'],
+      ['Pay', '€200–€250/week', '€280–€350/month', '€400–€450/month', '$200.12/week'],
       ['Includes', 'Accom. + food', 'Accom. + food', 'Accom. + food', 'Accom. + food + studies'],
       ['Difficulty', '🟢 Low', '🟡 Medium', '🟡 Medium', '🔴 High'],
     ],
@@ -372,17 +522,7 @@ export default function AuPair() {
             <table style={T.table}>
               <thead><tr>{[t.th_pais, t.th_edad, t.th_idioma, t.th_pago, t.th_dificultad, t.th_portal].map((h, i) => <th key={i} style={T.th}>{h}</th>)}</tr></thead>
               <tbody>
-                {[
-                  ['🇮🇪 Irlanda', '18+', 'Inglés básico', '€150–€250/sem', 'Baja', 'irishimmigration.ie', 'https://www.irishimmigration.ie'],
-                  ['🇩🇪 Alemania', '18–30', 'Alemán básico (A1)', '€280–€400/mes', 'Media', 'make-it-in-germany.com', 'https://www.make-it-in-germany.com/en/visa-residence/types/au-pair'],
-                  ['🇫🇷 Francia', '18–30', 'Francés básico (A1)', '€300–€400/mes', 'Media', 'france-visas.gouv.fr', 'https://france-visas.gouv.fr/en/web/france-visas/au-pair'],
-                  ['🇪🇸 España', '18–30', 'Ninguno', 'Variable', 'Baja', 'exteriores.gob.es', 'https://www.exteriores.gob.es'],
-                  ['🇦🇹 Austria', '18–30', 'Alemán básico (A1)', 'Alto', 'Media', 'migration.gv.at', 'https://www.migration.gv.at/en/types-of-immigration/fixed-term-settlement/au-pair/'],
-                  ['🇨🇭 Suiza', '18–25', 'Básico', 'El más alto', 'Media', 'sem.admin.ch', 'https://www.sem.admin.ch'],
-                  ['🇳🇱 Países Bajos', '18–25', 'Inglés / Básico', 'Competitivo', 'Media', 'ind.nl', 'https://ind.nl/en/residence-permits/exchange/au-pair'],
-                  ['🇧🇪 Bélgica', '18–26', 'Básico', 'Competitivo', 'Media', 'dofi.ibz.be', 'https://dofi.ibz.be/en/themes/faq/au-pair'],
-                  ['🇺🇸 EE.UU.', '18–26', 'Inglés intermedio', '~$195/semana', 'Alta', 'j1visa.state.gov', 'https://j1visa.state.gov/programs/au-pair'],
-                ].map((r, i) => (
+                {t.destinos_rows.map((r, i) => (
                   <tr key={i}>
                     <td style={{ ...T.td(i), ...T.bold }}>{r[0]}</td>
                     <td style={T.td(i)}>{r[1]}</td>
@@ -396,6 +536,27 @@ export default function AuPair() {
             </table>
           </div>
           <HackBox text={t.destinos_hack} />
+        </Section>
+
+        {/* COMPARATIVA */}
+        <Section id="comparativa" emoji="📊" title={t.sec_comparativa_title}>
+          <Intro text={t.sec_comparativa_sub} />
+          <div style={T.wrap}>
+            <table style={{ ...T.table, minWidth: '520px' }}>
+              <thead><tr>{[t.th_comp_pais, t.th_comp_pocket, t.th_comp_horas, t.th_comp_idioma, t.th_comp_visa].map((h, i) => <th key={i} style={T.th}>{h}</th>)}</tr></thead>
+              <tbody>
+                {t.comparativa_rows.map((r, i) => (
+                  <tr key={i}>
+                    <td style={{ ...T.td(i), ...T.bold }}>{r[0]}</td>
+                    <td style={{ ...T.td(i), color: '#166534', fontWeight: '600' }}>{r[1]}</td>
+                    <td style={T.td(i)}>{r[2]}</td>
+                    <td style={T.td(i)}>{r[3]}</td>
+                    <td style={T.td(i)}>{r[4]}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
         </Section>
 
         {/* PREMIUM LOCK */}
@@ -471,6 +632,42 @@ export default function AuPair() {
           ))}
           <RedBox text={t.aplic_red} />
           <HackBox text={t.aplic_hack} />
+        </Section>
+
+        <Section id="agencias" emoji="🏢" title={t.sec_agencias_title}>
+          <Intro text={t.agencias_intro} />
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+            {t.agencias_items.map((item, i) => (
+              <div key={i} style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', backgroundColor: '#f8f7f4', borderRadius: '10px', padding: '12px 14px' }}>
+                <div>
+                  <p style={{ fontWeight: '700', fontSize: '13px', margin: '0 0 2px', color: '#1a1a2e' }}>{item[0]}</p>
+                  <p style={{ fontSize: '12px', color: '#333333', margin: 0 }}>{item[1]}</p>
+                </div>
+                <ExtLink text={item[2] as string} url={item[3] as string} />
+              </div>
+            ))}
+          </div>
+        </Section>
+
+        <Section id="proscons" emoji="⚖️" title={t.sec_proscons_title}>
+          <div style={{ display: 'grid', gap: '12px' }}>
+            <div style={{ backgroundColor: '#f0fdf4', borderRadius: '10px', padding: '14px', border: '1px solid #86efac' }}>
+              <p style={{ fontWeight: '700', fontSize: '14px', margin: '0 0 8px', color: '#166534' }}>{t.pros_title}</p>
+              {t.pros_items.map((item, i) => (
+                <p key={i} style={{ fontSize: '13px', color: '#1a1a2e', margin: '4px 0', display: 'flex', gap: '6px' }}>
+                  <span style={{ color: '#22c55e' }}>✓</span> {item}
+                </p>
+              ))}
+            </div>
+            <div style={{ backgroundColor: '#fef2f2', borderRadius: '10px', padding: '14px', border: '1px solid #fecaca' }}>
+              <p style={{ fontWeight: '700', fontSize: '14px', margin: '0 0 8px', color: '#dc2626' }}>{t.cons_title}</p>
+              {t.cons_items.map((item, i) => (
+                <p key={i} style={{ fontSize: '13px', color: '#1a1a2e', margin: '4px 0', display: 'flex', gap: '6px' }}>
+                  <span style={{ color: '#ef4444' }}>✗</span> {item}
+                </p>
+              ))}
+            </div>
+          </div>
         </Section>
 
         {/* TIEMPOS */}
