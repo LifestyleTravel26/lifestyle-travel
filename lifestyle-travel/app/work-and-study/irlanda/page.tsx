@@ -167,7 +167,7 @@ const translations = {
       ['Registro de inmigración (IRP)', '€300 (≈ $330)'],
       ['Renta habitación compartida', '€480 - €720/mes'],
       ['Empleos más comunes', 'Hospitality, Cleaning, Security, Care'],
-      ['Salario promedio entrada', '€12 - €16 por hora'],
+      ['Salario promedio entrada', '€13.50 - €16 por hora'],
       ['Tiempo hasta primer trabajo', '1-4 semanas'],
       ['Tiempo hasta primer cobro', '3-6 semanas desde llegada'],
       ['Idioma oficial', 'Inglés'],
@@ -348,7 +348,7 @@ const translations = {
       ['Registro de imigração (IRP)', '€300 (≈ $330)'],
       ['Aluguel quarto compartilhado', '€480 - €720/mês'],
       ['Empregos mais comuns', 'Hospitalidade, Limpeza, Segurança, Cuidados'],
-      ['Salário médio de entrada', '€12 - €16 por hora'],
+      ['Salário médio de entrada', '€13.50 - €16 por hora'],
       ['Tempo até primeiro emprego', '1-4 semanas'],
       ['Tempo até primeiro pagamento', '3-6 semanas desde chegada'],
       ['Idioma oficial', 'Inglês'],
@@ -529,7 +529,7 @@ const translations = {
       ['Immigration registration (IRP)', '€300 (≈ $330)'],
       ['Shared room rent', '€480 - €720/month'],
       ['Most common jobs', 'Hospitality, Cleaning, Security, Care'],
-      ['Average entry salary', '€12 - €16 per hour'],
+      ['Average entry salary', '€13.50 - €16 per hour'],
       ['Time to first job', '1-4 weeks'],
       ['Time to first payment', '3-6 weeks from arrival'],
       ['Official language', 'English'],
@@ -1014,10 +1014,10 @@ export default function Irlanda() {
               <thead><tr>{[t.th_sector, t.th_puesto, t.th_salario_h, t.th_usd, t.th_canal_emp].map((h, i) => <th key={i} style={T.th}>{h}</th>)}</tr></thead>
               <tbody>
                 {[
-                  ['Hospitality', 'Waiter / Floor Staff / Kitchen Porter', '€12 - €14', '$13.2 - $15.4', 'CV en mano en pubs 3-5pm'],
-                  ['Cleaning / Housekeeping', 'Cleaner / Housekeeper', '€11 - €13', '$12.1 - $14.3', 'Indeed, agencias, grupos WhatsApp'],
+                  ['Hospitality', 'Waiter / Floor Staff / Kitchen Porter', '€13.50 - €15', '$14.85 - $16.5', 'CV en mano en pubs 3-5pm'],
+                  ['Cleaning / Housekeeping', 'Cleaner / Housekeeper', '€13.50 - €14', '$14.85 - $15.4', 'Indeed, agencias, grupos WhatsApp'],
                   ['Security', 'Static Guard / Event Security', '€13 - €16', '$14.3 - $17.6', 'Requiere PSA License (4 días, ~€400)'],
-                  ['Retail', 'Shop Assistant / Cashier', '€12 - €13', '$13.2 - $14.3', 'Indeed, tiendas directas'],
+                  ['Retail', 'Shop Assistant / Cashier', '€13.50 - €14', '$14.85 - $15.4', 'Indeed, tiendas directas'],
                   ['Care Sector', 'Care Assistant', '€14 - €17', '$15.4 - $18.7', 'Agencias: CPL, Staffline Ireland'],
                 ].map((r, i) => (
                   <tr key={i}>
@@ -1042,10 +1042,10 @@ export default function Irlanda() {
               <thead><tr>{[t.th_puesto_sal, t.th_salario_h, t.th_usd, t.th_horas, t.th_mensual, t.th_usd].map((h, i) => <th key={i} style={T.th}>{h}</th>)}</tr></thead>
               <tbody>
                 {[
-                  ['Waiter / Floor Staff', '€12 - €14', '$13.2 - $15.4', '20h', '€960 - €1,120', '$1,056 - $1,232'],
-                  ['Cleaner / Housekeeping', '€11 - €13', '$12.1 - $14.3', '20h', '€880 - €1,040', '$968 - $1,144'],
+                  ['Waiter / Floor Staff', '€13.50 - €15', '$14.85 - $16.5', '20h', '€1,080 - €1,200', '$1,188 - $1,320'],
+                  ['Cleaner / Housekeeping', '€13.50 - €14', '$14.85 - $15.4', '20h', '€1,080 - €1,120', '$1,188 - $1,232'],
                   ['Security Guard', '€13 - €16', '$14.3 - $17.6', '20h', '€1,040 - €1,280', '$1,144 - $1,408'],
-                  ['Shop Assistant', '€12 - €13', '$13.2 - $14.3', '20h', '€960 - €1,040', '$1,056 - $1,144'],
+                  ['Shop Assistant', '€13.50 - €14', '$14.85 - $15.4', '20h', '€1,080 - €1,120', '$1,188 - $1,232'],
                   ['Care Assistant', '€14 - €17', '$15.4 - $18.7', '20h', '€1,120 - €1,360', '$1,232 - $1,496'],
                 ].map((r, i) => (
                   <tr key={i}>
