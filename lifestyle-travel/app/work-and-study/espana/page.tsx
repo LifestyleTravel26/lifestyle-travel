@@ -935,10 +935,10 @@ export default function Espana() {
               <thead><tr>{[t.th_sector, t.th_puesto, t.th_salario_h, t.th_usd_h, t.th_canal_emp].map((h, i) => <th key={i} style={T.th}>{h}</th>)}</tr></thead>
               <tbody>
                 {[
-                  ['Hospitality', 'Camarero / Bar Staff / Ayudante de Cocina', '€7 – €10', '$8 – $12', 'CV en persona / JobToday / InfoJobs'],
-                  ['Cleaning', 'Cleaner / Housekeeping', '€7 – €9', '$8 – $10', 'Agencias / Indeed / Networking'],
+                  ['Hospitality', 'Camarero / Bar Staff / Ayudante de Cocina', '€9.26 – €11', '$10.65 – $12.65', 'CV en persona / JobToday / InfoJobs'],
+                  ['Cleaning', 'Cleaner / Housekeeping', '€9.26 – €10', '$10.65 – $11.50', 'Agencias / Indeed / Networking'],
                   ['Hotels & Tourism', 'Recepción / Hotel Staff', '€9 – €12', '$10 – $14', 'Turijobs / Hosco / LinkedIn'],
-                  ['Retail', 'Dependiente / Shop Assistant', '€8 – €10', '$9 – $12', 'InfoJobs / Indeed'],
+                  ['Retail', 'Dependiente / Shop Assistant', '€9.26 – €11', '$10.65 – $12.65', 'InfoJobs / Indeed'],
                   ['Delivery', 'Repartidor / Courier', '€8 – €12', '$9 – $14', 'Glovo / Uber Eats / Apps'],
                 ].map((r, i) => (
                   <tr key={i}>
@@ -963,10 +963,10 @@ export default function Espana() {
               <thead><tr>{[t.th_sector_sal, t.th_puesto_sal, t.th_salario_h, t.th_usd_h, t.th_mensual].map((h, i) => <th key={i} style={T.th}>{h}</th>)}</tr></thead>
               <tbody>
                 {[
-                  ['Hospitality', 'Camarero / Bar Staff', '€7 – €10', '$8 – $12', '€840 – €1,200'],
-                  ['Cleaning', 'Cleaner / Housekeeping', '€7 – €9', '$8 – $10', '€840 – €1,080'],
+                  ['Hospitality', 'Camarero / Bar Staff', '€9.26 – €11', '$10.65 – $12.65', '€1,111 – €1,320'],
+                  ['Cleaning', 'Cleaner / Housekeeping', '€9.26 – €10', '$10.65 – $11.50', '€1,111 – €1,200'],
                   ['Hotels', 'Recepción / Hotel Staff', '€9 – €12', '$10 – $14', '€1,080 – €1,440'],
-                  ['Retail', 'Dependiente', '€8 – €10', '$9 – $12', '€960 – €1,200'],
+                  ['Retail', 'Dependiente', '€9.26 – €11', '$10.65 – $12.65', '€1,111 – €1,320'],
                   ['Delivery', 'Repartidor / Courier', '€8 – €12', '$9 – $14', '€960 – €1,440'],
                 ].map((r, i) => (
                   <tr key={i}>
