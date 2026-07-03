@@ -413,32 +413,6 @@ export default function NomadaDigital() {
         </div>
 
         {/* REQUISITOS */}
-        <Section id="requisitos" emoji="📊" title={t.sec_req_title}>
-          <Intro text={t.req_intro} />
-          <div style={T.wrap}>
-            <table style={T.table}>
-              <thead><tr>{[t.th_pais, t.th_ingreso, t.th_duracion, t.th_dificultad].map((h, i) => <th key={i} style={T.th}>{h}</th>)}</tr></thead>
-              <tbody>
-                {[
-                  ['🇬🇪 Georgia', '~$2,000', '365 días', '⭐ Fácil', '#22c55e'],
-                  ['🇭🇺 Hungría', '€2,000', '1 – 2 años', '⭐ Fácil', '#22c55e'],
-                  ['🇭🇷 Croacia', '€2,300', '1 año', '⭐⭐ Media', '#f59e0b'],
-                  ['🇦🇪 Dubai', '$3,500', '1 año', '⭐⭐ Media', '#f59e0b'],
-                  ['🇪🇸 España', '€2,762', '1 – 3 años', '⭐⭐⭐ Media', '#f59e0b'],
-                  ['🇵🇹 Portugal', '€3,480', '1 año renovable', '⭐⭐⭐ Alta', '#ef4444'],
-                ].map((r, i) => (
-                  <tr key={i}>
-                    <td style={{ ...T.td(i), ...T.bold }}>{r[0]}</td>
-                    <td style={{ ...T.td(i), color: '#166534', fontWeight: '700' }}>{r[1]}</td>
-                    <td style={T.td(i)}>{r[2]}</td>
-                    <td style={{ ...T.td(i), color: r[4] as string, fontWeight: '600' }}>{r[3]}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-          <HackBox text={t.req_hack} />
-        </Section>
 
         {/* PREMIUM LOCK */}
         {!hasAccess && (
@@ -475,6 +449,32 @@ export default function NomadaDigital() {
 
         <div style={{ display: hasAccess ? 'block' : 'none' }}>
 
+        <Section id="requisitos" emoji="📊" title={t.sec_req_title}>
+          <Intro text={t.req_intro} />
+          <div style={T.wrap}>
+            <table style={T.table}>
+              <thead><tr>{[t.th_pais, t.th_ingreso, t.th_duracion, t.th_dificultad].map((h, i) => <th key={i} style={T.th}>{h}</th>)}</tr></thead>
+              <tbody>
+                {[
+                  ['🇬🇪 Georgia', '~$2,000', '365 días', '⭐ Fácil', '#22c55e'],
+                  ['🇭🇺 Hungría', '€2,000', '1 – 2 años', '⭐ Fácil', '#22c55e'],
+                  ['🇭🇷 Croacia', '€2,300', '1 año', '⭐⭐ Media', '#f59e0b'],
+                  ['🇦🇪 Dubai', '$3,500', '1 año', '⭐⭐ Media', '#f59e0b'],
+                  ['🇪🇸 España', '€2,762', '1 – 3 años', '⭐⭐⭐ Media', '#f59e0b'],
+                  ['🇵🇹 Portugal', '€3,480', '1 año renovable', '⭐⭐⭐ Alta', '#ef4444'],
+                ].map((r, i) => (
+                  <tr key={i}>
+                    <td style={{ ...T.td(i), ...T.bold }}>{r[0]}</td>
+                    <td style={{ ...T.td(i), color: '#166534', fontWeight: '700' }}>{r[1]}</td>
+                    <td style={T.td(i)}>{r[2]}</td>
+                    <td style={{ ...T.td(i), color: r[4] as string, fontWeight: '600' }}>{r[3]}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <HackBox text={t.req_hack} />
+        </Section>
 
         {/* APLICACION */}
         <Section id="aplicacion" emoji="🛂" title={t.sec_aplic_title}>

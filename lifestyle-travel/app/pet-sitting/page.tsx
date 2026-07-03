@@ -26,6 +26,8 @@ const translations = {
       'Experiencia internacional y de vida real',
     ],
     intro_hack: 'El pet sitting no te paga, pero te quita de encima el costo del alojamiento. Si combinas esto con trabajo remoto o ingresos freelance, reduces tu gasto mensual a casi cero en vivienda. Llega con €1,500-3,000 de colchón para los primeros sits mientras construyes reseñas.',
+    sec_visado_title: 'Visados',
+    sec_opciones_legales_title: 'Opciones Legales',
     sec_visados_title: 'Visados — Opciones Legales para Pet Sitting',
     visados_intro: 'El pet sitting funciona con visa de turista en la mayoría de países. Es una actividad de intercambio no remunerada, por lo que no requiere permiso de trabajo. Respeta siempre los límites de estancia del país.',
     visados: [
@@ -109,6 +111,8 @@ const translations = {
       'Experiência internacional e de vida real',
     ],
     intro_hack: 'O pet sitting não te paga, mas elimina o custo do alojamento. Se combinar isso com trabalho remoto ou renda freelance, você reduz seu gasto mensal a quase zero em moradia. Chegue com €1.500-3.000 de reserva para os primeiros sits enquanto constrói avaliações.',
+    sec_visado_title: 'Vistos',
+    sec_opciones_legales_title: 'Opções Legais',
     sec_visados_title: 'Vistos — Opções Legais para Pet Sitting',
     visados_intro: 'O pet sitting funciona com visto de turista na maioria dos países. É uma atividade de intercâmbio não remunerada, portanto não exige permissão de trabalho. Sempre respeite os limites de estadia do país.',
     visados: [
@@ -192,6 +196,8 @@ const translations = {
       'International and real-life experience',
     ],
     intro_hack: 'Pet sitting doesn\'t pay you, but it takes away the cost of accommodation. If you combine this with remote work or freelance income, you reduce your monthly housing expense to almost zero. Arrive with €1,500-3,000 as a buffer for the first sits while you build reviews.',
+    sec_visado_title: 'Visas',
+    sec_opciones_legales_title: 'Legal Options',
     sec_visados_title: 'Visas — Legal Options for Pet Sitting',
     visados_intro: 'Pet sitting works with a tourist visa in most countries. It\'s an unpaid exchange activity, so it doesn\'t require a work permit. Always respect the country\'s stay limits.',
     visados: [
@@ -355,22 +361,6 @@ export default function PetSitting() {
         </div>
 
         {/* VISADOS */}
-        <Section id="visados" emoji="🛂" title={t.sec_visados_title}>
-          <Intro text={t.visados_intro} />
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
-            {t.visados.map((item, i) => (
-              <div key={i} style={{ backgroundColor: '#f8f7f4', borderRadius: '10px', padding: '14px', borderLeft: `4px solid ${item.color}` }}>
-                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '6px' }}>
-                  <p style={{ fontWeight: '700', fontSize: '14px', margin: 0, color: '#1a1a2e' }}>{item.flag} {item.title}</p>
-                  <span style={{ backgroundColor: item.color, color: 'white', borderRadius: '10px', padding: '2px 8px', fontSize: '11px', fontWeight: 'bold', flexShrink: 0, marginLeft: '8px' }}>{item.dif}</span>
-                </div>
-                <p style={{ fontSize: '13px', color: '#1a1a2e', margin: '0 0 6px', lineHeight: '1.5' }}>{item.detail}</p>
-                <a href={item.url} target="_blank" rel="noopener noreferrer" style={{ color: '#2563eb', textDecoration: 'underline', fontSize: '12px' }}>{item.link} →</a>
-              </div>
-            ))}
-          </div>
-          <RedBox text={t.visados_red} />
-        </Section>
 
         {/* PREMIUM LOCK */}
         {!hasAccess && (
@@ -407,6 +397,25 @@ export default function PetSitting() {
 
         <div style={{ display: hasAccess ? 'block' : 'none' }}>
 
+        <Section id="visado" emoji="🛂" title={t.sec_visado_title}>
+          <Intro text={t.visados_intro} />
+        </Section>
+
+        <Section id="opciones-legales" emoji="⚖️" title={t.sec_opciones_legales_title}>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+            {t.visados.map((item, i) => (
+              <div key={i} style={{ backgroundColor: '#f8f7f4', borderRadius: '10px', padding: '14px', borderLeft: `4px solid ${item.color}` }}>
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '6px' }}>
+                  <p style={{ fontWeight: '700', fontSize: '14px', margin: 0, color: '#1a1a2e' }}>{item.flag} {item.title}</p>
+                  <span style={{ backgroundColor: item.color, color: 'white', borderRadius: '10px', padding: '2px 8px', fontSize: '11px', fontWeight: 'bold', flexShrink: 0, marginLeft: '8px' }}>{item.dif}</span>
+                </div>
+                <p style={{ fontSize: '13px', color: '#1a1a2e', margin: '0 0 6px', lineHeight: '1.5' }}>{item.detail}</p>
+                <a href={item.url} target="_blank" rel="noopener noreferrer" style={{ color: '#2563eb', textDecoration: 'underline', fontSize: '12px' }}>{item.link} →</a>
+              </div>
+            ))}
+          </div>
+          <RedBox text={t.visados_red} />
+        </Section>
 
         {/* PLATAFORMAS */}
         <Section id="plataformas" emoji="🐕‍🦺" title={t.sec_plataformas_title}>

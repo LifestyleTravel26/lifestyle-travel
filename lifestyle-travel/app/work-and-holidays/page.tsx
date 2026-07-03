@@ -382,7 +382,6 @@ export default function WorkAndHolidays() {
 
         <div style={{ display: hasAccess ? 'block' : 'none' }}>
 
-
         <Section id="costos" emoji="💰" title={t.sec_costos_title}>
           <div style={{ overflowX: 'auto' as const, borderRadius: '10px', border: '1px solid #e5e7eb' }}>
             <table style={{ width: '100%', borderCollapse: 'collapse' as const, minWidth: '400px' }}>
