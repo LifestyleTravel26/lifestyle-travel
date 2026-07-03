@@ -109,11 +109,11 @@ const translations = {
     empleos_cv_label: 'CV en Mano:',
     empleos_cv_text: 'Muchos restaurantes, cafés y hoteles prefieren contratar personas que se presenten directamente. Especialmente en zonas turísticas como',
     empleos_cv_b: 'Lisboa, Porto, Algarve y Cascais',
-    th_sector: 'Sector', th_puesto: 'Puesto Típico', th_salario_mes: 'Salario/mes EUR', th_usd_mes: '≈ USD', th_canal_emp: 'Canal',
+    th_sector: 'Sector', th_puesto: 'Puesto Típico', th_salario_mes: 'Salario/hora EUR', th_usd_mes: '≈ USD/h', th_canal_emp: 'Canal',
     empleos_hack: 'Lisboa tiene call centers internacionales de Google, Meta, Amazon y otras multinacionales que contratan hispanohablantes. Inglés + español puede darte acceso a €1,500-2,500/mes — mucho más que hospitality. Busca en LinkedIn "customer support Lisboa".',
     sec_salarios_title: 'Matriz de Salarios Comunes',
     salarios_intro: 'Salarios en Portugal son más bajos que Irlanda o España, pero el costo de vida también es más bajo. Con €700-800/mes puedes cubrir renta + comida + transporte en ciudades secundarias.',
-    th_sector_sal: 'Sector', th_puesto_sal: 'Puesto', th_mensual: 'Salario/mes EUR', th_usd_sal: '≈ USD/mes',
+    th_sector_sal: 'Sector', th_puesto_sal: 'Puesto', th_salario_h: 'Salario/hora EUR', th_usd_h: '≈ USD/h', th_mensual: 'Salario/mes EUR', th_usd_sal: '≈ USD/mes',
     salarios_blue: '💡 VENTAJA PORTUGAL: Costo de vida más bajo que España, Irlanda o Malta. Una habitación compartida en Évora o Braga cuesta €300-400/mes. Con €900/mes de salario en hospitality puedes vivir con comodidad fuera de Lisboa.',
     salarios_hack: 'Evita Lisboa y Porto si priorizas el ahorro. Ciudades como Évora, Braga, Faro o Coimbra tienen rentas 40-50% más baratas y menos competencia por trabajo. Misma visa, mismo acceso a AIMA, pero mucho menos gasto mensual.',
     sec_timeline_title: 'Timeline de Ejecución',
@@ -171,7 +171,7 @@ const translations = {
       ['Tiempo hasta primer cobro', '1-2 meses desde llegada'],
       ['Documento clave', 'NIF — obtener antes de viajar'],
       ['Idioma', 'Portugués (inglés en multinacionales)'],
-      ['Camino a residencia', 'AIMA → Residencia Permanente (5 años)'],
+      ['Camino a residencia', 'AIMA → Residencia Permanente (7 años)'],
       ['Nivel de dificultad', 'Medio'],
       ['Mejores ciudades', 'Lisboa, Porto, Algarve, Braga'],
       ['Ventaja única', 'Universidades más baratas de Europa + ruta nómada digital'],
@@ -290,11 +290,11 @@ const translations = {
     empleos_cv_label: 'CV na Mão:',
     empleos_cv_text: 'Muitos restaurantes, cafés e hotéis preferem contratar pessoas que se apresentam diretamente. Especialmente em zonas turísticas como',
     empleos_cv_b: 'Lisboa, Porto, Algarve e Cascais',
-    th_sector: 'Setor', th_puesto: 'Cargo Típico', th_salario_mes: 'Salário/mês EUR', th_usd_mes: '≈ USD', th_canal_emp: 'Canal',
+    th_sector: 'Setor', th_puesto: 'Cargo Típico', th_salario_mes: 'Salário/hora EUR', th_usd_mes: '≈ USD/h', th_canal_emp: 'Canal',
     empleos_hack: 'Lisboa tem call centers internacionais do Google, Meta, Amazon e outras multinacionais que contratam hispanofalantes. Inglês + espanhol pode te dar acesso a €1.500-2.500/mês — muito mais que hotelaria. Busque no LinkedIn "customer support Lisboa".',
     sec_salarios_title: 'Matriz de Salários Comuns',
     salarios_intro: 'Salários em Portugal são mais baixos que Irlanda ou Espanha, mas o custo de vida também é mais baixo. Com €700-800/mês você pode cobrir aluguel + comida + transporte em cidades secundárias.',
-    th_sector_sal: 'Setor', th_puesto_sal: 'Cargo', th_mensual: 'Salário/mês EUR', th_usd_sal: '≈ USD/mês',
+    th_sector_sal: 'Setor', th_puesto_sal: 'Cargo', th_salario_h: 'Salário/hora EUR', th_usd_h: '≈ USD/h', th_mensual: 'Salário/mês EUR', th_usd_sal: '≈ USD/mês',
     salarios_blue: '💡 VANTAGEM PORTUGAL: Custo de vida mais baixo que Espanha, Irlanda ou Malta. Um quarto compartilhado em Évora ou Braga custa €300-400/mês. Com €900/mês de salário em hotelaria você pode viver confortavelmente fora de Lisboa.',
     salarios_hack: 'Evite Lisboa e Porto se prioriza poupança. Cidades como Évora, Braga, Faro ou Coimbra têm aluguéis 40-50% mais baratos e menos concorrência por trabalho. Mesmo visto, mesmo acesso à AIMA, mas muito menos gasto mensal.',
     sec_timeline_title: 'Cronograma de Execução',
@@ -352,7 +352,7 @@ const translations = {
       ['Tempo até primeiro pagamento', '1-2 meses desde chegada'],
       ['Documento chave', 'NIF — obter antes de viajar'],
       ['Idioma', 'Português (inglês em multinacionais)'],
-      ['Caminho para residência', 'AIMA → Residência Permanente (5 anos)'],
+      ['Caminho para residência', 'AIMA → Residência Permanente (7 anos)'],
       ['Nível de dificuldade', 'Médio'],
       ['Melhores cidades', 'Lisboa, Porto, Algarve, Braga'],
       ['Vantagem única', 'Universidades mais baratas da Europa + rota nômade digital'],
@@ -471,11 +471,11 @@ const translations = {
     empleos_cv_label: 'CV in Hand:',
     empleos_cv_text: 'Many restaurants, cafés and hotels prefer to hire people who present themselves directly. Especially in tourist areas like',
     empleos_cv_b: 'Lisbon, Porto, Algarve and Cascais',
-    th_sector: 'Sector', th_puesto: 'Typical Role', th_salario_mes: 'Salary/month EUR', th_usd_mes: '≈ USD', th_canal_emp: 'Channel',
+    th_sector: 'Sector', th_puesto: 'Typical Role', th_salario_mes: 'Salary/hour EUR', th_usd_mes: '≈ USD/h', th_canal_emp: 'Channel',
     empleos_hack: 'Lisbon has international call centers from Google, Meta, Amazon and other multinationals that hire Spanish speakers. English + Spanish can give you access to €1,500-2,500/month — much more than hospitality. Search LinkedIn for "customer support Lisboa".',
     sec_salarios_title: 'Common Salaries Matrix',
     salarios_intro: 'Salaries in Portugal are lower than Ireland or Spain, but the cost of living is also lower. With €700-800/month you can cover rent + food + transport in secondary cities.',
-    th_sector_sal: 'Sector', th_puesto_sal: 'Role', th_mensual: 'Salary/month EUR', th_usd_sal: '≈ USD/month',
+    th_sector_sal: 'Sector', th_puesto_sal: 'Role', th_salario_h: 'Salary/hour EUR', th_usd_h: '≈ USD/h', th_mensual: 'Salary/month EUR', th_usd_sal: '≈ USD/month',
     salarios_blue: '💡 PORTUGAL ADVANTAGE: Lower cost of living than Spain, Ireland or Malta. A shared room in Évora or Braga costs €300-400/month. With €900/month salary in hospitality you can live comfortably outside Lisbon.',
     salarios_hack: 'Avoid Lisbon and Porto if you prioritize saving. Cities like Évora, Braga, Faro or Coimbra have rents 40-50% cheaper and less job competition. Same visa, same access to AIMA, but much less monthly spending.',
     sec_timeline_title: 'Execution Timeline',
@@ -533,7 +533,7 @@ const translations = {
       ['Time to first payment', '1-2 months from arrival'],
       ['Key document', 'NIF — get before traveling'],
       ['Language', 'Portuguese (English at multinationals)'],
-      ['Path to residency', 'AIMA → Permanent Residency (5 years)'],
+      ['Path to residency', 'AIMA → Permanent Residency (7 years)'],
       ['Difficulty level', 'Medium'],
       ['Best cities', 'Lisbon, Porto, Algarve, Braga'],
       ['Unique advantage', 'Cheapest universities in Europe + digital nomad route'],
@@ -983,12 +983,12 @@ export default function Portugal() {
               <thead><tr>{[t.th_sector, t.th_puesto, t.th_salario_mes, t.th_usd_mes, t.th_canal_emp].map((h, i) => <th key={i} style={T.th}>{h}</th>)}</tr></thead>
               <tbody>
                 {[
-                  ['Hospitality', 'Waiter / Bar Staff', '€750 – €1,100', '$863 – $1,265', 'Indeed / CV en persona'],
-                  ['Cleaning', 'Cleaner / Housekeeping', '€750 – €1,000', '$863 – $1,150', 'Indeed / Agencias'],
-                  ['Hotels', 'Reception / Hotel Staff', '€900 – €1,200', '$1,035 – $1,380', 'Sapo Emprego / LinkedIn'],
-                  ['Retail', 'Sales Assistant', '€850 – €1,100', '$978 – $1,265', 'Net-Empregos / Indeed'],
-                  ['Delivery', 'Delivery Rider / Courier', '€900 – €1,400', '$1,035 – $1,610', 'Glovo / Uber Eats'],
-                  ['IT / Tech (cualificado)', 'Developer / Data Analyst', '€1,500 – €3,000', '$1,725 – $3,450', 'LinkedIn / empresas directas'],
+                  ['Hospitality', 'Empregado de mesa / Bar Staff', '€5.54 – €7', '$6.37 – $8.05', 'Indeed / CV en persona'],
+                  ['Cleaning', 'Limpeza / Housekeeping', '€5.54 – €6.50', '$6.37 – $7.48', 'Indeed / Agencias'],
+                  ['Hotels', 'Reception / Hotel Staff', '€5.63 – €7.50', '$6.47 – $8.63', 'Sapo Emprego / LinkedIn'],
+                  ['Retail', 'Comércio / Sales Assistant', '€5.54 – €7', '$6.37 – $8.05', 'Net-Empregos / Indeed'],
+                  ['Delivery', 'Delivery Rider / Courier', '€5.63 – €8.75', '$6.47 – $10.06', 'Glovo / Uber Eats'],
+                  ['IT / Tech (cualificado)', 'Developer / Data Analyst', '€9.38 – €18.75', '$10.79 – $21.56', 'LinkedIn / empresas directas'],
                 ].map((r, i) => (
                   <tr key={i}>
                     <td style={{ ...T.td(i), ...T.bold }}>{r[0]}</td>
@@ -1009,20 +1009,22 @@ export default function Portugal() {
           <Intro text={t.salarios_intro} />
           <div style={T.wrap}>
             <table style={T.table}>
-              <thead><tr>{[t.th_sector_sal, t.th_puesto_sal, t.th_mensual, t.th_usd_sal].map((h, i) => <th key={i} style={T.th}>{h}</th>)}</tr></thead>
+              <thead><tr>{[t.th_sector_sal, t.th_puesto_sal, t.th_salario_h, t.th_usd_h, t.th_mensual, t.th_usd_sal].map((h, i) => <th key={i} style={T.th}>{h}</th>)}</tr></thead>
               <tbody>
                 {[
-                  ['Hospitality', 'Waiter / Bar Staff', '€750 – €1,100', '$863 – $1,265'],
-                  ['Cleaning', 'Cleaner / Housekeeping', '€750 – €1,000', '$863 – $1,150'],
-                  ['Hotels', 'Reception / Hotel Staff', '€900 – €1,200', '$1,035 – $1,380'],
-                  ['Retail', 'Sales Assistant', '€850 – €1,100', '$978 – $1,265'],
-                  ['Delivery', 'Rider / Courier', '€900 – €1,400', '$1,035 – $1,610'],
+                  ['Hospitality', 'Empregado de mesa / Bar Staff', '€5.54 – €7', '$6.37 – $8.05', '€886 – €1,120', '$1,019 – $1,288'],
+                  ['Cleaning', 'Limpeza / Housekeeping', '€5.54 – €6.50', '$6.37 – $7.48', '€886 – €1,040', '$1,019 – $1,196'],
+                  ['Hotels', 'Reception / Hotel Staff', '—', '—', '€900 – €1,200', '$1,035 – $1,380'],
+                  ['Retail', 'Comércio / Sales Assistant', '€5.54 – €7', '$6.37 – $8.05', '€886 – €1,120', '$1,019 – $1,288'],
+                  ['Delivery', 'Rider / Courier', '—', '—', '€900 – €1,400', '$1,035 – $1,610'],
                 ].map((r, i) => (
                   <tr key={i}>
                     <td style={{ ...T.td(i), ...T.bold }}>{r[0]}</td>
                     <td style={T.td(i)}>{r[1]}</td>
                     <td style={T.td(i)}>{r[2]}</td>
-                    <td style={{ ...T.td(i), color: '#166534', fontWeight: '700' }}>{r[3]}</td>
+                    <td style={T.td(i)}>{r[3]}</td>
+                    <td style={T.td(i)}>{r[4]}</td>
+                    <td style={{ ...T.td(i), color: '#166534', fontWeight: '700' }}>{r[5]}</td>
                   </tr>
                 ))}
               </tbody>
