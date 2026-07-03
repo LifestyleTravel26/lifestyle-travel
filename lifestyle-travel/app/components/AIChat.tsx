@@ -94,7 +94,6 @@ export default function AIChat() {
 
   return (
     <>
-    <div style={{ position: 'fixed', bottom: '20px', right: '20px', backgroundColor: 'red', width: '50px', height: '50px', zIndex: 99999 }}>TEST</div>
       <button
         onClick={() => setIsOpen(!isOpen)}
         style={{
