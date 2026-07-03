@@ -42,6 +42,61 @@ const translations = {
     globales_head: '🌍 Plataformas globales',
     locales_head: '🗺️ Plataformas por país (menos competencia)',
     plataformas_hack: 'Empieza en destinos menos competidos (ciudades secundarias en España, Portugal o Francia) para conseguir tus primeras 2-3 reseñas. Con esas reviews, accedes a mejores casas en destinos más populares. Sin reviews, todo cuesta el doble de tiempo.',
+    plataformas_globales: [
+      ['TrustedHousesitters', 'La más grande a nivel mundial. Mayor variedad de destinos.', '$149/año', 'https://www.trustedhousesitters.com'],
+      ['Nomador', 'Muy fuerte en Europa. Buena para empezar en España o Francia.', '€89/año', 'https://www.nomador.com'],
+      ['MindMyHouse', 'Ideal para principiantes. Buena cantidad de listings en Europa.', '$20/año', 'https://www.mindmyhouse.com'],
+      ['Rover', 'Plataforma de pago. Ideal para generar ingresos mientras viajas.', '$15–$50/día', 'https://www.rover.com'],
+      ['HouseSitter.com', 'Buena opción para Australia y Nueva Zelanda.', '$50/año', 'https://www.housesitter.com'],
+      ['HouseCarers', 'Comunidad sólida y veterana. Buena variedad global.', '$50/año', 'https://www.housecarers.com'],
+    ],
+    ver_plataforma: 'Ver →',
+    sec_comparativa_title: 'Comparativa de Plataformas',
+    th_comp_plataforma: 'Plataforma', th_comp_precio: 'Precio/año', th_comp_listings: 'Listings', th_comp_mejor: 'Mejor Para', th_comp_pago: 'Pago',
+    comparativa_rows: [
+      ['TrustedHousesitters', '$149', '+50,000', 'Todo el mundo', 'No'],
+      ['Nomador', '€89', '+20,000', 'Europa', 'No'],
+      ['MindMyHouse', '$20', '+10,000', 'Principiantes', 'No'],
+      ['HouseSitter.com', '$50', '+5,000', 'Australia/NZ', 'No'],
+      ['Rover', 'Gratis', '+100,000', 'Generar ingresos', 'Sí $15–$50/día'],
+      ['HouseCarers', '$50', '+10,000', 'Global', 'No'],
+    ],
+    sec_perfil_title: 'Cómo Crear un Perfil Exitoso',
+    perfil_items: [
+      'Foto profesional y amigable',
+      'Describir experiencia con animales (aunque sea informal)',
+      'Agregar referencias de dueños anteriores o familiares',
+      'Completar verificación de antecedentes (TrustedHousesitters lo ofrece)',
+      'Carta de presentación personalizada para cada aplicación',
+      'Responder rápido a los mensajes de los dueños',
+    ],
+    sec_destinos_pop_title: 'Destinos Más Populares',
+    destinos_pop_items: [
+      ['🇫🇷 Francia', 'Provenza, París, Costa Azul'],
+      ['🇮🇹 Italia', 'Toscana, Roma, Sicilia'],
+      ['🇪🇸 España', 'Barcelona, Madrid, Andalucía'],
+      ['🇵🇹 Portugal', 'Lisboa, Algarve, Oporto'],
+      ['🇬🇧 Reino Unido', 'Londres, Escocia, Cotswolds'],
+      ['🇦🇺 Australia', 'Sydney, Melbourne, Queensland'],
+      ['🇳🇿 Nueva Zelanda', 'Auckland, South Island'],
+    ],
+    sec_proscons_title: 'Pros y Contras',
+    pros_title: '✅ Pros',
+    cons_title: '❌ Contras',
+    pros_items: [
+      'Alojamiento completamente gratis',
+      'Conoces lugares increíbles viviendo como local',
+      'Ideal para combinar con trabajo remoto',
+      'Cuidas mascotas que ya tienen todo lo necesario',
+      'Experiencia cultural auténtica',
+    ],
+    cons_items: [
+      'No genera ingresos (excepto Rover)',
+      'Requiere disponibilidad flexible',
+      'Dependes de la aprobación del dueño',
+      'Algunas casas tienen reglas estrictas',
+      'No siempre hay listings disponibles cuando quieres viajar',
+    ],
     sec_proceso_title: 'Proceso Paso a Paso',
     proceso_intro: 'No gana el más calificado, sino el más rápido y confiable. Perfil fuerte + aplicación rápida = primeros sits. Reviews = acceso a mejores casas.',
     pasos: [
@@ -127,6 +182,61 @@ const translations = {
     globales_head: '🌍 Plataformas globais',
     locales_head: '🗺️ Plataformas por país (menos concorrência)',
     plataformas_hack: 'Comece em destinos menos concorridos (cidades secundárias na Espanha, Portugal ou França) para conseguir suas primeiras 2-3 avaliações. Com essas reviews, você acessa melhores casas em destinos mais populares. Sem reviews, tudo leva o dobro do tempo.',
+    plataformas_globales: [
+      ['TrustedHousesitters', 'A maior do mundo. Maior variedade de destinos.', '$149/ano', 'https://www.trustedhousesitters.com'],
+      ['Nomador', 'Muito forte na Europa. Boa para começar na Espanha ou França.', '€89/ano', 'https://www.nomador.com'],
+      ['MindMyHouse', 'Ideal para iniciantes. Boa quantidade de listings na Europa.', '$20/ano', 'https://www.mindmyhouse.com'],
+      ['Rover', 'Plataforma paga. Ideal para gerar renda enquanto viaja.', '$15–$50/dia', 'https://www.rover.com'],
+      ['HouseSitter.com', 'Boa opção para Austrália e Nova Zelândia.', '$50/ano', 'https://www.housesitter.com'],
+      ['HouseCarers', 'Comunidade sólida e veterana. Boa variedade global.', '$50/ano', 'https://www.housecarers.com'],
+    ],
+    ver_plataforma: 'Ver →',
+    sec_comparativa_title: 'Comparativo de Plataformas',
+    th_comp_plataforma: 'Plataforma', th_comp_precio: 'Preço/ano', th_comp_listings: 'Listings', th_comp_mejor: 'Melhor Para', th_comp_pago: 'Pagamento',
+    comparativa_rows: [
+      ['TrustedHousesitters', '$149', '+50.000', 'Todo o mundo', 'Não'],
+      ['Nomador', '€89', '+20.000', 'Europa', 'Não'],
+      ['MindMyHouse', '$20', '+10.000', 'Iniciantes', 'Não'],
+      ['HouseSitter.com', '$50', '+5.000', 'Austrália/NZ', 'Não'],
+      ['Rover', 'Grátis', '+100.000', 'Gerar renda', 'Sim $15–$50/dia'],
+      ['HouseCarers', '$50', '+10.000', 'Global', 'Não'],
+    ],
+    sec_perfil_title: 'Como Criar um Perfil de Sucesso',
+    perfil_items: [
+      'Foto profissional e amigável',
+      'Descrever experiência com animais (mesmo que informal)',
+      'Adicionar referências de donos anteriores ou familiares',
+      'Completar verificação de antecedentes (TrustedHousesitters oferece)',
+      'Carta de apresentação personalizada para cada candidatura',
+      'Responder rápido às mensagens dos donos',
+    ],
+    sec_destinos_pop_title: 'Destinos Mais Populares',
+    destinos_pop_items: [
+      ['🇫🇷 França', 'Provença, Paris, Costa Azul'],
+      ['🇮🇹 Itália', 'Toscana, Roma, Sicília'],
+      ['🇪🇸 Espanha', 'Barcelona, Madrid, Andaluzia'],
+      ['🇵🇹 Portugal', 'Lisboa, Algarve, Porto'],
+      ['🇬🇧 Reino Unido', 'Londres, Escócia, Cotswolds'],
+      ['🇦🇺 Austrália', 'Sydney, Melbourne, Queensland'],
+      ['🇳🇿 Nova Zelândia', 'Auckland, South Island'],
+    ],
+    sec_proscons_title: 'Prós e Contras',
+    pros_title: '✅ Prós',
+    cons_title: '❌ Contras',
+    pros_items: [
+      'Alojamento completamente grátis',
+      'Conhece lugares incríveis vivendo como local',
+      'Ideal para combinar com trabalho remoto',
+      'Cuida de animais que já têm tudo o que precisam',
+      'Experiência cultural autêntica',
+    ],
+    cons_items: [
+      'Não gera renda (exceto Rover)',
+      'Requer disponibilidade flexível',
+      'Depende da aprovação do dono',
+      'Algumas casas têm regras rígidas',
+      'Nem sempre há listings disponíveis quando você quer viajar',
+    ],
     sec_proceso_title: 'Processo Passo a Passo',
     proceso_intro: 'Não vence o mais qualificado, mas o mais rápido e confiável. Perfil forte + aplicação rápida = primeiros sits. Reviews = acesso a melhores casas.',
     pasos: [
@@ -212,6 +322,61 @@ const translations = {
     globales_head: '🌍 Global platforms',
     locales_head: '🗺️ Country-specific platforms (less competition)',
     plataformas_hack: 'Start in less competitive destinations (secondary cities in Spain, Portugal or France) to get your first 2-3 reviews. With those reviews, you access better homes in more popular destinations. Without reviews, everything takes twice as long.',
+    plataformas_globales: [
+      ['TrustedHousesitters', 'The largest worldwide. Greatest variety of destinations.', '$149/year', 'https://www.trustedhousesitters.com'],
+      ['Nomador', 'Very strong in Europe. Good for starting in Spain or France.', '€89/year', 'https://www.nomador.com'],
+      ['MindMyHouse', 'Ideal for beginners. Good number of listings in Europe.', '$20/year', 'https://www.mindmyhouse.com'],
+      ['Rover', 'Paid platform. Ideal for earning income while traveling.', '$15–$50/day', 'https://www.rover.com'],
+      ['HouseSitter.com', 'Good option for Australia and New Zealand.', '$50/year', 'https://www.housesitter.com'],
+      ['HouseCarers', 'Solid veteran community. Good global variety.', '$50/year', 'https://www.housecarers.com'],
+    ],
+    ver_plataforma: 'View →',
+    sec_comparativa_title: 'Platform Comparison',
+    th_comp_plataforma: 'Platform', th_comp_precio: 'Price/year', th_comp_listings: 'Listings', th_comp_mejor: 'Best For', th_comp_pago: 'Paid',
+    comparativa_rows: [
+      ['TrustedHousesitters', '$149', '+50,000', 'Worldwide', 'No'],
+      ['Nomador', '€89', '+20,000', 'Europe', 'No'],
+      ['MindMyHouse', '$20', '+10,000', 'Beginners', 'No'],
+      ['HouseSitter.com', '$50', '+5,000', 'Australia/NZ', 'No'],
+      ['Rover', 'Free', '+100,000', 'Earn income', 'Yes $15–$50/day'],
+      ['HouseCarers', '$50', '+10,000', 'Global', 'No'],
+    ],
+    sec_perfil_title: 'How to Create a Successful Profile',
+    perfil_items: [
+      'Professional and friendly photo',
+      'Describe experience with animals (even if informal)',
+      'Add references from previous owners or family',
+      'Complete background check verification (TrustedHousesitters offers this)',
+      'Personalized cover letter for each application',
+      'Respond quickly to owner messages',
+    ],
+    sec_destinos_pop_title: 'Most Popular Destinations',
+    destinos_pop_items: [
+      ['🇫🇷 France', 'Provence, Paris, French Riviera'],
+      ['🇮🇹 Italy', 'Tuscany, Rome, Sicily'],
+      ['🇪🇸 Spain', 'Barcelona, Madrid, Andalusia'],
+      ['🇵🇹 Portugal', 'Lisbon, Algarve, Porto'],
+      ['🇬🇧 United Kingdom', 'London, Scotland, Cotswolds'],
+      ['🇦🇺 Australia', 'Sydney, Melbourne, Queensland'],
+      ['🇳🇿 New Zealand', 'Auckland, South Island'],
+    ],
+    sec_proscons_title: 'Pros and Cons',
+    pros_title: '✅ Pros',
+    cons_title: '❌ Cons',
+    pros_items: [
+      'Completely free accommodation',
+      'Discover amazing places living like a local',
+      'Ideal to combine with remote work',
+      'Care for pets that already have everything they need',
+      'Authentic cultural experience',
+    ],
+    cons_items: [
+      'Does not generate income (except Rover)',
+      'Requires flexible availability',
+      'Depends on owner approval',
+      'Some homes have strict rules',
+      'Listings not always available when you want to travel',
+    ],
     sec_proceso_title: 'Step by Step Process',
     proceso_intro: 'The winner isn\'t the most qualified, but the fastest and most reliable. Strong profile + fast application = first sits. Reviews = access to better homes.',
     pasos: [
@@ -423,22 +588,15 @@ export default function PetSitting() {
           <Intro text={t.plataformas_intro} />
           <SubHead text={t.globales_head} />
           <div style={{ display: 'grid', gap: '8px', marginBottom: '14px' }}>
-            {[
-              ['TrustedHousesitters', 'La más grande a nivel mundial. Mayor variedad de destinos.', '€120-150/año', 'https://www.trustedhousesitters.com'],
-              ['Nomador', 'Muy fuerte en Europa. Buena para empezar en España o Francia.', '€89/año', 'https://www.nomador.com'],
-              ['HouseCarers', 'Comunidad sólida y veterana. Buena variedad global.', '€50/año', 'https://www.housecarers.com'],
-              ['MindMyHouse', 'Opción económica para empezar. Menos competencia.', '€20/año', 'https://www.mindmyhouse.com'],
-              ['HouseSitMatch', 'Buena para principiantes. Proceso de matching más guiado.', '€39/año', 'https://www.housesitmatch.com'],
-              ['Luxury House Sitting', 'Propiedades premium. Requiere historial sólido.', 'Variable', 'https://www.luxuryhousesitting.com'],
-            ].map((r, i) => (
+            {t.plataformas_globales.map((r, i) => (
               <div key={i} style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', backgroundColor: '#f8f7f4', borderRadius: '10px', padding: '10px 14px' }}>
                 <div>
                   <p style={{ fontWeight: '700', fontSize: '13px', margin: '0 0 2px', color: '#1a1a2e' }}>{r[0]}</p>
                   <p style={{ fontSize: '12px', color: '#333333', margin: 0 }}>{r[1]}</p>
                 </div>
                 <div style={{ textAlign: 'right' as const, flexShrink: 0, marginLeft: '8px' }}>
-                  <p style={{ fontSize: '11px', color: '#333333', margin: '0 0 2px' }}>{r[2]}</p>
-                  <a href={r[3] as string} target="_blank" rel="noopener noreferrer" style={{ color: '#2563eb', textDecoration: 'underline', fontSize: '12px' }}>Ver →</a>
+                  <p style={{ fontSize: '11px', color: '#166534', fontWeight: '600', margin: '0 0 2px' }}>{r[2]}</p>
+                  <a href={r[3] as string} target="_blank" rel="noopener noreferrer" style={{ color: '#2563eb', textDecoration: 'underline', fontSize: '12px' }}>{t.ver_plataforma}</a>
                 </div>
               </div>
             ))}
@@ -459,6 +617,66 @@ export default function PetSitting() {
             ))}
           </div>
           <HackBox text={t.plataformas_hack} />
+        </Section>
+
+        <Section id="comparativa" emoji="📊" title={t.sec_comparativa_title}>
+          <div style={T.wrap}>
+            <table style={{ ...T.table, minWidth: '520px' }}>
+              <thead><tr>{[t.th_comp_plataforma, t.th_comp_precio, t.th_comp_listings, t.th_comp_mejor, t.th_comp_pago].map((h, i) => <th key={i} style={T.th}>{h}</th>)}</tr></thead>
+              <tbody>
+                {t.comparativa_rows.map((r, i) => (
+                  <tr key={i}>
+                    <td style={{ ...T.td(i), ...T.bold }}>{r[0]}</td>
+                    <td style={{ ...T.td(i), color: '#166534', fontWeight: '600' }}>{r[1]}</td>
+                    <td style={T.td(i)}>{r[2]}</td>
+                    <td style={T.td(i)}>{r[3]}</td>
+                    <td style={T.td(i)}>{r[4]}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </Section>
+
+        <Section id="perfil" emoji="👤" title={t.sec_perfil_title}>
+          {t.perfil_items.map((item, i) => (
+            <div key={i} style={{ display: 'flex', gap: '10px', marginBottom: '10px', alignItems: 'flex-start' }}>
+              <span style={{ backgroundColor: '#22c55e', color: 'white', borderRadius: '50%', width: '20px', height: '20px', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '11px', fontWeight: '700', flexShrink: 0, marginTop: '1px' }}>✓</span>
+              <p style={{ fontSize: '13px', color: '#1a1a2e', margin: 0, lineHeight: '1.5' }}>{item}</p>
+            </div>
+          ))}
+        </Section>
+
+        <Section id="destinos-pop" emoji="🗺️" title={t.sec_destinos_pop_title}>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+            {t.destinos_pop_items.map((item, i) => (
+              <div key={i} style={{ backgroundColor: '#f0fdf4', borderRadius: '10px', padding: '12px 14px', borderLeft: '3px solid #22c55e' }}>
+                <p style={{ fontWeight: '700', fontSize: '13px', color: '#166534', margin: '0 0 3px' }}>{item[0]}</p>
+                <p style={{ fontSize: '12px', color: '#1a1a2e', margin: 0 }}>{item[1]}</p>
+              </div>
+            ))}
+          </div>
+        </Section>
+
+        <Section id="proscons" emoji="⚖️" title={t.sec_proscons_title}>
+          <div style={{ display: 'grid', gap: '12px' }}>
+            <div style={{ backgroundColor: '#f0fdf4', borderRadius: '10px', padding: '14px', border: '1px solid #86efac' }}>
+              <p style={{ fontWeight: '700', fontSize: '14px', margin: '0 0 8px', color: '#166534' }}>{t.pros_title}</p>
+              {t.pros_items.map((item, i) => (
+                <p key={i} style={{ fontSize: '13px', color: '#1a1a2e', margin: '4px 0', display: 'flex', gap: '6px' }}>
+                  <span style={{ color: '#22c55e' }}>✓</span> {item}
+                </p>
+              ))}
+            </div>
+            <div style={{ backgroundColor: '#fef2f2', borderRadius: '10px', padding: '14px', border: '1px solid #fecaca' }}>
+              <p style={{ fontWeight: '700', fontSize: '14px', margin: '0 0 8px', color: '#dc2626' }}>{t.cons_title}</p>
+              {t.cons_items.map((item, i) => (
+                <p key={i} style={{ fontSize: '13px', color: '#1a1a2e', margin: '4px 0', display: 'flex', gap: '6px' }}>
+                  <span style={{ color: '#ef4444' }}>✗</span> {item}
+                </p>
+              ))}
+            </div>
+          </div>
         </Section>
 
         {/* PROCESO */}
@@ -505,7 +723,7 @@ export default function PetSitting() {
               <thead><tr>{[t.th_concepto, t.th_costo, t.th_oblig].map((h, i) => <th key={i} style={T.th}>{h}</th>)}</tr></thead>
               <tbody>
                 {[
-                  ['Membresía TrustedHousesitters', '€120-150/año', '✅ Principal plataforma'],
+                  ['Membresía TrustedHousesitters', '$149/año', '✅ Principal plataforma'],
                   ['Membresía Nomador (opcional)', '€89/año', '⚪ Recomendado para Europa'],
                   ['Membresía adicional (opcional)', '€20-50/año', '⚪ Para más visibilidad'],
                   ['Seguro médico internacional', '€100-300/año', '✅ Muy recomendado'],
