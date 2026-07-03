@@ -176,6 +176,7 @@ export default function AIChat() {
               style={{ flex: 1, border: '1px solid #e5e7eb', borderRadius: '8px', padding: '8px 12px', fontSize: '13px', outline: 'none', color: '#1a1a2e' }}
             />
             <button
+              type="button"
               onClick={sendMessage}
               disabled={loading || !input.trim()}
               style={{

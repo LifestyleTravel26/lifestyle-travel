@@ -1,0 +1,103 @@
+'use client'
+import { useState, useEffect } from 'react'
+
+const translations = {
+  es: {
+    message: 'Usamos cookies para analizar el tráfico y mejorar tu experiencia. Puedes aceptar o rechazar las cookies no esenciales.',
+    accept: 'Aceptar',
+    reject: 'Rechazar',
+    privacy: 'Política de privacidad',
+  },
+  pt: {
+    message: 'Usamos cookies para analisar o tráfego e melhorar sua experiência. Você pode aceitar ou recusar os cookies não essenciais.',
+    accept: 'Aceitar',
+    reject: 'Recusar',
+    privacy: 'Política de privacidade',
+  },
+  en: {
+    message: 'We use cookies to analyze traffic and improve your experience. You can accept or reject non-essential cookies.',
+    accept: 'Accept',
+    reject: 'Reject',
+    privacy: 'Privacy policy',
+  },
+}
+
+export default function CookieBanner() {
+  const [visible, setVisible] = useState(false)
+  const [locale, setLocale] = useState<'es' | 'pt' | 'en'>('es')
+
+  useEffect(() => {
+    try {
+      const savedLocale = localStorage.getItem('locale') as 'es' | 'pt' | 'en'
+      if (savedLocale && ['es', 'pt', 'en'].includes(savedLocale)) {
+        setLocale(savedLocale)
+      }
+    } catch {}
+
+    try {
+      const consent = localStorage.getItem('cookie_consent')
+      if (!consent) setVisible(true)
+    } catch {
+      setVisible(true)
+    }
+  }, [])
+
+  function handleAccept() {
+    try { localStorage.setItem('cookie_consent', 'accepted') } catch {}
+    setVisible(false)
+    if (typeof window !== 'undefined' && (window as Window & { gtag?: (...args: unknown[]) => void }).gtag) {
+      ;(window as Window & { gtag: (...args: unknown[]) => void }).gtag('consent', 'update', { analytics_storage: 'granted' })
+    }
+  }
+
+  function handleReject() {
+    try { localStorage.setItem('cookie_consent', 'rejected') } catch {}
+    setVisible(false)
+    if (typeof window !== 'undefined' && (window as Window & { gtag?: (...args: unknown[]) => void }).gtag) {
+      ;(window as Window & { gtag: (...args: unknown[]) => void }).gtag('consent', 'update', { analytics_storage: 'denied' })
+    }
+  }
+
+  if (!visible) return null
+
+  const t = translations[locale]
+
+  return (
+    <div style={{
+      position: 'fixed',
+      bottom: 0,
+      left: 0,
+      right: 0,
+      zIndex: 9999,
+      backgroundColor: '#1a1a2e',
+      padding: '16px 20px',
+      display: 'flex',
+      flexDirection: 'column',
+      gap: '12px',
+      boxShadow: '0 -4px 20px rgba(0,0,0,0.3)',
+    }}>
+      <p style={{ color: 'white', fontSize: '13px', lineHeight: '1.6', margin: 0 }}>
+        🍪 {t.message}{' '}
+        <a href="/privacy" style={{ color: '#e8572a', textDecoration: 'underline', fontSize: '13px' }}>
+          {t.privacy}
+        </a>
+      </p>
+      <div style={{ display: 'flex', gap: '10px' }}>
+        <button
+          type="button"
+          onClick={handleAccept}
+          style={{ flex: 1, backgroundColor: '#e8572a', color: 'white', border: 'none', borderRadius: '8px', padding: '10px', fontSize: '14px', fontWeight: 'bold', cursor: 'pointer' }}
+        >
+          {t.accept}
+        </button>
+        <button
+          type="button"
+          onClick={handleReject}
+          style={{ flex: 1, backgroundColor: 'transparent', color: 'white', border: '1px solid rgba(255,255,255,0.4)', borderRadius: '8px', padding: '10px', fontSize: '14px', fontWeight: 'bold', cursor: 'pointer' }}
+        >
+          {t.reject}
+        </button>
+      </div>
+    </div>
+  )
+}
