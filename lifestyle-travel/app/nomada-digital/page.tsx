@@ -19,13 +19,63 @@ const translations = {
     card_p2: 'Está pensada para freelancers, emprendedores o empleados remotos con ingresos de fuera del país destino.',
     filter_title: '💡 Filtro rápido por ingreso mensual:',
     filter_items: [
-      '• Menos de €2,500/mes: Georgia o Hungría',
+      '• Menos de €700/mes: Colombia',
+      '• $686 – $1,500/mes: Colombia, Argentina o México',
+      '• €2,000 – €2,700/mes: Georgia o Hungría',
       '• €2,700 – €3,500/mes: España o Croacia',
-      '• Más de €3,500/mes: Portugal o Dubai',
+      '• Más de $3,000/mes: Portugal, Dubai o Costa Rica',
     ],
     sec_req_title: 'Requisitos Económicos por País',
     req_intro: 'El factor clave para la aprobación es demostrar ingresos estables trabajando para empresas o clientes fuera del país de destino. Sin cupos, sin sorteos — solo ingresos comprobables.',
     th_pais: 'País', th_ingreso: 'Ingreso mínimo/mes', th_duracion: 'Duración', th_dificultad: 'Dificultad',
+    req_rows: [
+      ['🇬🇪 Georgia', '~$2,000', '365 días', '⭐ Fácil', '#22c55e'],
+      ['🇭🇺 Hungría', '€2,000', '1 – 2 años', '⭐ Fácil', '#22c55e'],
+      ['🇭🇷 Croacia', '€2,532', '1 año', '⭐⭐ Media', '#f59e0b'],
+      ['🇦🇪 Dubai', '$5,000', '1 año', '⭐⭐⭐ Alta', '#ef4444'],
+      ['🇪🇸 España', '€2,762', '1 – 3 años', '⭐⭐⭐ Media', '#f59e0b'],
+      ['🇵🇹 Portugal', '€3,480', '1 año renovable', '⭐⭐⭐ Alta', '#ef4444'],
+      ['🇨🇷 Costa Rica', '$3,000', '1 año renovable', '⭐⭐⭐ Media', '#f59e0b'],
+      ['🇨🇴 Colombia', '$686 (3 SMMLV)', '2 años renovable', '⭐⭐ Media', '#f59e0b'],
+      ['🇲🇽 México', '$1,500 recomendado', '180 días + residente temporal', '⭐⭐ Media', '#f59e0b'],
+      ['🇦🇷 Argentina', '$1,500', 'Visa rentista', '⭐ Fácil', '#22c55e'],
+    ],
+    sec_comparativa_title: 'Comparativa de Destinos',
+    sec_comparativa_sub: 'Ingreso mínimo, costo de vida, impuestos, internet y clima',
+    th_comp_pais: 'País', th_comp_ingreso: 'Ingreso Mínimo', th_comp_costo: 'Costo de Vida', th_comp_impuestos: 'Impuestos', th_comp_internet: 'Internet', th_comp_clima: 'Clima',
+    comparativa_rows: [
+      ['🇬🇪 Georgia', '$2,000', 'Bajo', '0%', 'Rápido', 'Variado'],
+      ['🇪🇸 España', '€2,762', 'Alto', '24% (Beckham)', 'Rápido', 'Mediterráneo'],
+      ['🇵🇹 Portugal', '€3,480', 'Medio', '20% (NHR)', 'Rápido', 'Mediterráneo'],
+      ['🇭🇺 Hungría', '€2,000', 'Medio', '15%', 'Rápido', 'Continental'],
+      ['🇭🇷 Croacia', '€2,532', 'Medio', '0% 1er año', 'Rápido', 'Mediterráneo'],
+      ['🇦🇪 Dubai', '$5,000', 'Alto', '0%', 'Rápido', 'Caluroso'],
+      ['🇨🇷 Costa Rica', '$3,000', 'Medio', '0%', 'Bueno', 'Tropical'],
+      ['🇨🇴 Colombia', '$686', 'Bajo', 'Local +183 días', 'Bueno', 'Tropical'],
+      ['🇲🇽 México', '$1,500', 'Bajo-Medio', 'Local +183 días', 'Bueno', 'Variado'],
+      ['🇦🇷 Argentina', '$1,500', 'Muy Bajo', 'Local', 'Bueno', 'Templado'],
+    ],
+    sec_impuestos_title: 'Impuestos por País',
+    impuestos_intro: 'Cada destino tiene reglas fiscales distintas para ingresos extranjeros. Conoce tu obligación antes de elegir.',
+    impuestos_items: [
+      ['🇬🇪 Georgia', '0% impuesto para ingresos extranjeros'],
+      ['🇪🇸 España', 'Régimen Beckham — 24% flat rate primeros 6 años'],
+      ['🇵🇹 Portugal', 'NHR (Non-Habitual Resident) — 20% flat rate primeros 10 años'],
+      ['🇭🇷 Croacia', '0% impuesto sobre ingresos extranjeros primer año'],
+      ['🇨🇷 Costa Rica', '0% impuesto sobre ingresos extranjeros'],
+      ['🇨🇴 Colombia', 'Impuesto local aplica después de 183 días'],
+      ['🇲🇽 México', 'Impuesto aplica si resides más de 183 días'],
+    ],
+    sec_coworking_title: 'Comunidades y Coworkings',
+    coworking_intro: 'Espacios y comunidades donde conectar con otros nómadas digitales en cada hub.',
+    coworking_items: [
+      ['🇬🇪 Georgia (Tbilisi)', 'Impact Hub, Fabrika'],
+      ['🇪🇸 España (Barcelona/Madrid)', 'WeWork, Utopicus'],
+      ['🇵🇹 Portugal (Lisboa)', 'Second Home, Heden'],
+      ['🇨🇴 Colombia (Medellín)', 'Selina, Atomhouse'],
+      ['🇲🇽 México (Ciudad de México)', 'WeWork, Comunal'],
+      ['🇨🇷 Costa Rica (San José)', 'La Maquila, Impact Hub'],
+    ],
     req_hack: 'No elijas el país primero — elige según tu ingreso actual. Georgia (desde $2,000) y Hungría (desde €2,000) son los puntos de entrada más accesibles del blueprint. Una vez establecido con ingresos demostrables, puedes aplicar a Portugal o España.',
     sec_aplic_title: 'Cómo Aplicar — 3 Tipos de Proceso',
     aplic_intro: 'A diferencia de Working Holiday, en la Visa Nómada Digital no compites por cupos. La aprobación depende de cumplir los requisitos de ingresos y documentación. Sin sorteos, sin fechas de apertura — aplicas cuando estás listo.',
@@ -121,13 +171,63 @@ const translations = {
     card_p2: 'É pensado para freelancers, empreendedores ou funcionários remotos com renda de fora do país de destino.',
     filter_title: '💡 Filtro rápido por renda mensal:',
     filter_items: [
-      '• Menos de €2.500/mês: Geórgia ou Hungria',
+      '• Menos de €700/mês: Colômbia',
+      '• $686 – $1.500/mês: Colômbia, Argentina ou México',
+      '• €2.000 – €2.700/mês: Geórgia ou Hungria',
       '• €2.700 – €3.500/mês: Espanha ou Croácia',
-      '• Mais de €3.500/mês: Portugal ou Dubai',
+      '• Mais de $3.000/mês: Portugal, Dubai ou Costa Rica',
     ],
     sec_req_title: 'Requisitos Econômicos por País',
     req_intro: 'O fator chave para aprovação é demonstrar renda estável trabalhando para empresas ou clientes fora do país de destino. Sem vagas, sem sorteios — apenas renda comprovável.',
     th_pais: 'País', th_ingreso: 'Renda mínima/mês', th_duracion: 'Duração', th_dificultad: 'Dificuldade',
+    req_rows: [
+      ['🇬🇪 Geórgia', '~$2.000', '365 dias', '⭐ Fácil', '#22c55e'],
+      ['🇭🇺 Hungria', '€2.000', '1 – 2 anos', '⭐ Fácil', '#22c55e'],
+      ['🇭🇷 Croácia', '€2.532', '1 ano', '⭐⭐ Média', '#f59e0b'],
+      ['🇦🇪 Dubai', '$5.000', '1 ano', '⭐⭐⭐ Alta', '#ef4444'],
+      ['🇪🇸 Espanha', '€2.762', '1 – 3 anos', '⭐⭐⭐ Média', '#f59e0b'],
+      ['🇵🇹 Portugal', '€3.480', '1 ano renovável', '⭐⭐⭐ Alta', '#ef4444'],
+      ['🇨🇷 Costa Rica', '$3.000', '1 ano renovável', '⭐⭐⭐ Média', '#f59e0b'],
+      ['🇨🇴 Colômbia', '$686 (3 SMMLV)', '2 anos renovável', '⭐⭐ Média', '#f59e0b'],
+      ['🇲🇽 México', '$1.500 recomendado', '180 dias + residente temporal', '⭐⭐ Média', '#f59e0b'],
+      ['🇦🇷 Argentina', '$1.500', 'Visto rentista', '⭐ Fácil', '#22c55e'],
+    ],
+    sec_comparativa_title: 'Comparativo de Destinos',
+    sec_comparativa_sub: 'Renda mínima, custo de vida, impostos, internet e clima',
+    th_comp_pais: 'País', th_comp_ingreso: 'Renda Mínima', th_comp_costo: 'Custo de Vida', th_comp_impuestos: 'Impostos', th_comp_internet: 'Internet', th_comp_clima: 'Clima',
+    comparativa_rows: [
+      ['🇬🇪 Geórgia', '$2.000', 'Baixo', '0%', 'Rápido', 'Variado'],
+      ['🇪🇸 Espanha', '€2.762', 'Alto', '24% (Beckham)', 'Rápido', 'Mediterrâneo'],
+      ['🇵🇹 Portugal', '€3.480', 'Médio', '20% (NHR)', 'Rápido', 'Mediterrâneo'],
+      ['🇭🇺 Hungria', '€2.000', 'Médio', '15%', 'Rápido', 'Continental'],
+      ['🇭🇷 Croácia', '€2.532', 'Médio', '0% 1º ano', 'Rápido', 'Mediterrâneo'],
+      ['🇦🇪 Dubai', '$5.000', 'Alto', '0%', 'Rápido', 'Quente'],
+      ['🇨🇷 Costa Rica', '$3.000', 'Médio', '0%', 'Bom', 'Tropical'],
+      ['🇨🇴 Colômbia', '$686', 'Baixo', 'Local +183 dias', 'Bom', 'Tropical'],
+      ['🇲🇽 México', '$1.500', 'Baixo-Médio', 'Local +183 dias', 'Bom', 'Variado'],
+      ['🇦🇷 Argentina', '$1.500', 'Muito Baixo', 'Local', 'Bom', 'Temperado'],
+    ],
+    sec_impuestos_title: 'Impostos por País',
+    impuestos_intro: 'Cada destino tem regras fiscais distintas para renda estrangeira. Conheça sua obrigação antes de escolher.',
+    impuestos_items: [
+      ['🇬🇪 Geórgia', '0% imposto para renda estrangeira'],
+      ['🇪🇸 Espanha', 'Regime Beckham — 24% flat rate primeiros 6 anos'],
+      ['🇵🇹 Portugal', 'NHR (Non-Habitual Resident) — 20% flat rate primeiros 10 anos'],
+      ['🇭🇷 Croácia', '0% imposto sobre renda estrangeira no primeiro ano'],
+      ['🇨🇷 Costa Rica', '0% imposto sobre renda estrangeira'],
+      ['🇨🇴 Colômbia', 'Imposto local aplica após 183 dias'],
+      ['🇲🇽 México', 'Imposto aplica se reside mais de 183 dias'],
+    ],
+    sec_coworking_title: 'Comunidades e Coworkings',
+    coworking_intro: 'Espaços e comunidades para conectar com outros nômades digitais em cada hub.',
+    coworking_items: [
+      ['🇬🇪 Geórgia (Tbilisi)', 'Impact Hub, Fabrika'],
+      ['🇪🇸 Espanha (Barcelona/Madrid)', 'WeWork, Utopicus'],
+      ['🇵🇹 Portugal (Lisboa)', 'Second Home, Heden'],
+      ['🇨🇴 Colômbia (Medellín)', 'Selina, Atomhouse'],
+      ['🇲🇽 México (Cidade do México)', 'WeWork, Comunal'],
+      ['🇨🇷 Costa Rica (San José)', 'La Maquila, Impact Hub'],
+    ],
     req_hack: 'Não escolha o país primeiro — escolha de acordo com sua renda atual. Geórgia (a partir de $2.000) e Hungria (a partir de €2.000) são os pontos de entrada mais acessíveis do blueprint. Uma vez estabelecido com renda demonstrável, você pode solicitar Portugal ou Espanha.',
     sec_aplic_title: 'Como Solicitar — 3 Tipos de Processo',
     aplic_intro: 'Ao contrário do Working Holiday, no Visto Nômade Digital você não compete por vagas. A aprovação depende de cumprir os requisitos de renda e documentação. Sem sorteios, sem datas de abertura — você solicita quando está pronto.',
@@ -223,13 +323,63 @@ const translations = {
     card_p2: 'It is designed for freelancers, entrepreneurs or remote employees with income from outside the destination country.',
     filter_title: '💡 Quick filter by monthly income:',
     filter_items: [
-      '• Less than €2,500/month: Georgia or Hungary',
+      '• Less than €700/month: Colombia',
+      '• $686 – $1,500/month: Colombia, Argentina or Mexico',
+      '• €2,000 – €2,700/month: Georgia or Hungary',
       '• €2,700 – €3,500/month: Spain or Croatia',
-      '• More than €3,500/month: Portugal or Dubai',
+      '• More than $3,000/month: Portugal, Dubai or Costa Rica',
     ],
     sec_req_title: 'Economic Requirements by Country',
     req_intro: 'The key factor for approval is demonstrating stable income working for companies or clients outside the destination country. No quotas, no lotteries — just provable income.',
     th_pais: 'Country', th_ingreso: 'Minimum income/month', th_duracion: 'Duration', th_dificultad: 'Difficulty',
+    req_rows: [
+      ['🇬🇪 Georgia', '~$2,000', '365 days', '⭐ Easy', '#22c55e'],
+      ['🇭🇺 Hungary', '€2,000', '1 – 2 years', '⭐ Easy', '#22c55e'],
+      ['🇭🇷 Croatia', '€2,532', '1 year', '⭐⭐ Medium', '#f59e0b'],
+      ['🇦🇪 Dubai', '$5,000', '1 year', '⭐⭐⭐ High', '#ef4444'],
+      ['🇪🇸 Spain', '€2,762', '1 – 3 years', '⭐⭐⭐ Medium', '#f59e0b'],
+      ['🇵🇹 Portugal', '€3,480', '1 year renewable', '⭐⭐⭐ High', '#ef4444'],
+      ['🇨🇷 Costa Rica', '$3,000', '1 year renewable', '⭐⭐⭐ Medium', '#f59e0b'],
+      ['🇨🇴 Colombia', '$686 (3 SMMLV)', '2 years renewable', '⭐⭐ Medium', '#f59e0b'],
+      ['🇲🇽 Mexico', '$1,500 recommended', '180 days + temporary resident', '⭐⭐ Medium', '#f59e0b'],
+      ['🇦🇷 Argentina', '$1,500', 'Rentista visa', '⭐ Easy', '#22c55e'],
+    ],
+    sec_comparativa_title: 'Destination Comparison',
+    sec_comparativa_sub: 'Minimum income, cost of living, taxes, internet and climate',
+    th_comp_pais: 'Country', th_comp_ingreso: 'Minimum Income', th_comp_costo: 'Cost of Living', th_comp_impuestos: 'Taxes', th_comp_internet: 'Internet', th_comp_clima: 'Climate',
+    comparativa_rows: [
+      ['🇬🇪 Georgia', '$2,000', 'Low', '0%', 'Fast', 'Varied'],
+      ['🇪🇸 Spain', '€2,762', 'High', '24% (Beckham)', 'Fast', 'Mediterranean'],
+      ['🇵🇹 Portugal', '€3,480', 'Medium', '20% (NHR)', 'Fast', 'Mediterranean'],
+      ['🇭🇺 Hungary', '€2,000', 'Medium', '15%', 'Fast', 'Continental'],
+      ['🇭🇷 Croatia', '€2,532', 'Medium', '0% 1st year', 'Fast', 'Mediterranean'],
+      ['🇦🇪 Dubai', '$5,000', 'High', '0%', 'Fast', 'Hot'],
+      ['🇨🇷 Costa Rica', '$3,000', 'Medium', '0%', 'Good', 'Tropical'],
+      ['🇨🇴 Colombia', '$686', 'Low', 'Local +183 days', 'Good', 'Tropical'],
+      ['🇲🇽 Mexico', '$1,500', 'Low-Medium', 'Local +183 days', 'Good', 'Varied'],
+      ['🇦🇷 Argentina', '$1,500', 'Very Low', 'Local', 'Good', 'Temperate'],
+    ],
+    sec_impuestos_title: 'Taxes by Country',
+    impuestos_intro: 'Each destination has different tax rules for foreign income. Know your obligations before choosing.',
+    impuestos_items: [
+      ['🇬🇪 Georgia', '0% tax on foreign income'],
+      ['🇪🇸 Spain', 'Beckham Regime — 24% flat rate first 6 years'],
+      ['🇵🇹 Portugal', 'NHR (Non-Habitual Resident) — 20% flat rate first 10 years'],
+      ['🇭🇷 Croatia', '0% tax on foreign income first year'],
+      ['🇨🇷 Costa Rica', '0% tax on foreign income'],
+      ['🇨🇴 Colombia', 'Local tax applies after 183 days'],
+      ['🇲🇽 Mexico', 'Tax applies if you reside more than 183 days'],
+    ],
+    sec_coworking_title: 'Communities & Coworkings',
+    coworking_intro: 'Spaces and communities to connect with other digital nomads in each hub.',
+    coworking_items: [
+      ['🇬🇪 Georgia (Tbilisi)', 'Impact Hub, Fabrika'],
+      ['🇪🇸 Spain (Barcelona/Madrid)', 'WeWork, Utopicus'],
+      ['🇵🇹 Portugal (Lisbon)', 'Second Home, Heden'],
+      ['🇨🇴 Colombia (Medellín)', 'Selina, Atomhouse'],
+      ['🇲🇽 Mexico (Mexico City)', 'WeWork, Comunal'],
+      ['🇨🇷 Costa Rica (San José)', 'La Maquila, Impact Hub'],
+    ],
     req_hack: 'Don\'t choose the country first — choose based on your current income. Georgia (from $2,000) and Hungary (from €2,000) are the most accessible entry points in the blueprint. Once established with provable income, you can apply to Portugal or Spain.',
     sec_aplic_title: 'How to Apply — 3 Types of Process',
     aplic_intro: 'Unlike Working Holiday, with the Digital Nomad Visa you don\'t compete for quotas. Approval depends on meeting the income and documentation requirements. No lotteries, no opening dates — you apply when you\'re ready.',
@@ -455,14 +605,7 @@ export default function NomadaDigital() {
             <table style={T.table}>
               <thead><tr>{[t.th_pais, t.th_ingreso, t.th_duracion, t.th_dificultad].map((h, i) => <th key={i} style={T.th}>{h}</th>)}</tr></thead>
               <tbody>
-                {[
-                  ['🇬🇪 Georgia', '~$2,000', '365 días', '⭐ Fácil', '#22c55e'],
-                  ['🇭🇺 Hungría', '€2,000', '1 – 2 años', '⭐ Fácil', '#22c55e'],
-                  ['🇭🇷 Croacia', '€2,300', '1 año', '⭐⭐ Media', '#f59e0b'],
-                  ['🇦🇪 Dubai', '$3,500', '1 año', '⭐⭐ Media', '#f59e0b'],
-                  ['🇪🇸 España', '€2,762', '1 – 3 años', '⭐⭐⭐ Media', '#f59e0b'],
-                  ['🇵🇹 Portugal', '€3,480', '1 año renovable', '⭐⭐⭐ Alta', '#ef4444'],
-                ].map((r, i) => (
+                {t.req_rows.map((r, i) => (
                   <tr key={i}>
                     <td style={{ ...T.td(i), ...T.bold }}>{r[0]}</td>
                     <td style={{ ...T.td(i), color: '#166534', fontWeight: '700' }}>{r[1]}</td>
@@ -474,6 +617,51 @@ export default function NomadaDigital() {
             </table>
           </div>
           <HackBox text={t.req_hack} />
+        </Section>
+
+        <Section id="comparativa" emoji="📊" title={t.sec_comparativa_title}>
+          <Intro text={t.sec_comparativa_sub} />
+          <div style={T.wrap}>
+            <table style={{ ...T.table, minWidth: '560px' }}>
+              <thead><tr>{[t.th_comp_pais, t.th_comp_ingreso, t.th_comp_costo, t.th_comp_impuestos, t.th_comp_internet, t.th_comp_clima].map((h, i) => <th key={i} style={T.th}>{h}</th>)}</tr></thead>
+              <tbody>
+                {t.comparativa_rows.map((r, i) => (
+                  <tr key={i}>
+                    <td style={{ ...T.td(i), ...T.bold }}>{r[0]}</td>
+                    <td style={{ ...T.td(i), color: '#166534', fontWeight: '600' }}>{r[1]}</td>
+                    <td style={T.td(i)}>{r[2]}</td>
+                    <td style={T.td(i)}>{r[3]}</td>
+                    <td style={T.td(i)}>{r[4]}</td>
+                    <td style={T.td(i)}>{r[5]}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </Section>
+
+        <Section id="impuestos" emoji="🧾" title={t.sec_impuestos_title}>
+          <Intro text={t.impuestos_intro} />
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+            {t.impuestos_items.map((item, i) => (
+              <div key={i} style={{ backgroundColor: '#f8f7f4', borderRadius: '10px', padding: '12px 14px', borderLeft: '3px solid #1e3a5f' }}>
+                <p style={{ fontWeight: '700', fontSize: '13px', color: '#1a1a2e', margin: '0 0 3px' }}>{item[0]}</p>
+                <p style={{ fontSize: '12px', color: '#1a1a2e', margin: 0 }}>{item[1]}</p>
+              </div>
+            ))}
+          </div>
+        </Section>
+
+        <Section id="coworking" emoji="💼" title={t.sec_coworking_title}>
+          <Intro text={t.coworking_intro} />
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+            {t.coworking_items.map((item, i) => (
+              <div key={i} style={{ backgroundColor: '#f0fdf4', borderRadius: '10px', padding: '12px 14px', borderLeft: '3px solid #22c55e' }}>
+                <p style={{ fontWeight: '700', fontSize: '13px', color: '#166534', margin: '0 0 3px' }}>{item[0]}</p>
+                <p style={{ fontSize: '12px', color: '#1a1a2e', margin: 0 }}>{item[1]}</p>
+              </div>
+            ))}
+          </div>
         </Section>
 
         {/* APLICACION */}
