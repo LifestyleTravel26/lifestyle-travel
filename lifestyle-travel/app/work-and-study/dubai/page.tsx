@@ -2,6 +2,7 @@
 import { useState } from 'react'
 import { useLanguage } from '../../context/LanguageContext'
 import LanguageSwitcher from '../../components/LanguageSwitcher'
+import { usePurchase } from '../../hooks/usePurchase'
 
 const translations = {
   es: {
@@ -518,6 +519,7 @@ export default function Dubai() {
   const [feedback, setFeedback] = useState('')
   const toggle = (s: string) => setOpenSection(openSection === s ? null : s)
   const { locale } = useLanguage()
+  const { hasAccess, loading } = usePurchase()
   const t = translations[locale]
 
   const HackBox = ({ text }: { text: string }) => (
@@ -631,6 +633,7 @@ export default function Dubai() {
         </Section>
 
         {/* PREMIUM LOCK */}
+        {!hasAccess && (
         <div style={{ backgroundColor: 'white', borderRadius: '16px', padding: '24px', textAlign: 'center', boxShadow: '0 4px 16px rgba(0,0,0,0.10)', margin: '16px 0', border: '2px solid #e8572a' }}>
           <div style={{ fontSize: '40px', marginBottom: '12px' }}>🔒</div>
           <h3 style={{ fontWeight: 'bold', fontSize: '18px', color: '#1a1a2e', marginBottom: '8px' }}>Contenido Premium</h3>
@@ -660,8 +663,9 @@ export default function Dubai() {
             </a>
           </div>
         </div>
+        )}
 
-        <div style={{ display: 'none' }}>
+        <div style={{ display: hasAccess ? 'block' : 'none' }}>
 
         {/* ESTRATEGIA */}
         <Section id="estrategia" emoji="🏷️" title={t.sec_estrategia_title}>
