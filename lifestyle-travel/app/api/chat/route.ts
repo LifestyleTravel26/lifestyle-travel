@@ -187,20 +187,46 @@ function normalizeMessages(messages: unknown): ChatMessage[] {
     .map(m => ({ role: m.role, content: m.content.trim() }))
 }
 
+function buildApiMessages(messages: ChatMessage[]): ChatMessage[] {
+  const firstUserIndex = messages.findIndex(m => m.role === 'user')
+  if (firstUserIndex === -1) return []
+
+  const sliced = messages.slice(firstUserIndex)
+  if (sliced[0]?.role !== 'user') return []
+
+  const result: ChatMessage[] = []
+  for (const msg of sliced) {
+    const last = result[result.length - 1]
+    if (last && last.role === msg.role) {
+      last.content = `${last.content}\n\n${msg.content}`
+    } else {
+      result.push({ ...msg })
+    }
+  }
+
+  return result
+}
+
 export async function POST(request: NextRequest) {
   try {
     if (!process.env.ANTHROPIC_API_KEY) {
+      console.error('AI Chat error: ANTHROPIC_API_KEY is not configured')
       return NextResponse.json({ error: 'AI service not configured' }, { status: 503 })
     }
 
-    const { messages } = await request.json()
-    const firstUserIndex = normalizeMessages(messages).findIndex(m => m.role === 'user')
+    const body = await request.json()
+    const normalized = normalizeMessages(body?.messages)
+    const apiMessages = buildApiMessages(normalized)
 
-    if (firstUserIndex === -1) {
+    if (apiMessages.length === 0) {
+      console.error('AI Chat error: no valid messages after normalization', body?.messages)
       return NextResponse.json({ error: 'No user message provided' }, { status: 400 })
     }
 
-    const apiMessages = normalizeMessages(messages).slice(firstUserIndex)
+    if (apiMessages[0].role !== 'user') {
+      console.error('AI Chat error: first message must be from user', apiMessages)
+      return NextResponse.json({ error: 'First message must be from user' }, { status: 400 })
+    }
 
     const client = new Anthropic({
       apiKey: process.env.ANTHROPIC_API_KEY,
@@ -216,12 +242,14 @@ export async function POST(request: NextRequest) {
     const text = response.content[0]?.type === 'text' ? response.content[0].text : ''
 
     if (!text) {
+      console.error('AI Chat error: empty response from model', response)
       return NextResponse.json({ error: 'Empty response from AI' }, { status: 502 })
     }
 
     return NextResponse.json({ message: text })
   } catch (error) {
+    const message = error instanceof Error ? error.message : 'Unknown error'
     console.error('AI Chat error:', error)
-    return NextResponse.json({ error: 'Error processing request' }, { status: 500 })
+    return NextResponse.json({ error: message }, { status: 500 })
   }
 }

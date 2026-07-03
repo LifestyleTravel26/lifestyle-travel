@@ -84,7 +84,8 @@ export default function AIChat() {
   const [input, setInput] = useState('')
   const [loading, setLoading] = useState(false)
   const messagesEndRef = useRef<HTMLDivElement>(null)
-  const isDraggingRef = useRef(false)
+  const pointerActiveRef = useRef(false)
+  const didDragRef = useRef(false)
   const dragStartRef = useRef({ pointerX: 0, pointerY: 0, posX: 0, posY: 0 })
   const movedRef = useRef(0)
   const { locale } = useLanguage()
@@ -104,14 +105,22 @@ export default function AIChat() {
 
   useEffect(() => {
     function handlePointerMove(e: MouseEvent | TouchEvent) {
-      if (!isDraggingRef.current) return
-      if ('touches' in e) e.preventDefault()
+      if (!pointerActiveRef.current) return
 
       const clientX = 'touches' in e ? e.touches[0].clientX : e.clientX
       const clientY = 'touches' in e ? e.touches[0].clientY : e.clientY
       const dx = clientX - dragStartRef.current.pointerX
       const dy = clientY - dragStartRef.current.pointerY
       movedRef.current = Math.hypot(dx, dy)
+
+      if (!didDragRef.current && movedRef.current >= DRAG_THRESHOLD) {
+        didDragRef.current = true
+        setIsDragging(true)
+      }
+
+      if (!didDragRef.current) return
+
+      if ('touches' in e) e.preventDefault()
 
       setPosition(clampButtonPosition({
         x: dragStartRef.current.posX + dx,
@@ -120,11 +129,15 @@ export default function AIChat() {
     }
 
     function handlePointerUp() {
-      if (!isDraggingRef.current) return
-      if (movedRef.current < DRAG_THRESHOLD) {
+      if (!pointerActiveRef.current) return
+
+      if (!didDragRef.current) {
         setIsOpen(prev => !prev)
       }
-      isDraggingRef.current = false
+
+      pointerActiveRef.current = false
+      didDragRef.current = false
+      movedRef.current = 0
       setIsDragging(false)
     }
 
@@ -132,24 +145,25 @@ export default function AIChat() {
     document.addEventListener('mouseup', handlePointerUp)
     document.addEventListener('touchmove', handlePointerMove, { passive: false })
     document.addEventListener('touchend', handlePointerUp)
+    document.addEventListener('touchcancel', handlePointerUp)
 
     return () => {
       document.removeEventListener('mousemove', handlePointerMove)
       document.removeEventListener('mouseup', handlePointerUp)
       document.removeEventListener('touchmove', handlePointerMove)
       document.removeEventListener('touchend', handlePointerUp)
+      document.removeEventListener('touchcancel', handlePointerUp)
     }
   }, [])
 
   function handlePointerDown(e: React.MouseEvent | React.TouchEvent) {
     if (!position) return
-    e.preventDefault()
 
     const clientX = 'touches' in e ? e.touches[0].clientX : e.clientX
     const clientY = 'touches' in e ? e.touches[0].clientY : e.clientY
 
-    isDraggingRef.current = true
-    setIsDragging(true)
+    pointerActiveRef.current = true
+    didDragRef.current = false
     movedRef.current = 0
     dragStartRef.current = {
       pointerX: clientX,
@@ -157,6 +171,15 @@ export default function AIChat() {
       posX: position.x,
       posY: position.y,
     }
+  }
+
+  function buildApiMessages(allMessages: Message[]): Message[] {
+    const conversation = allMessages.filter(
+      m => m.role === 'user' || (m.role === 'assistant' && m.content !== t.welcome)
+    )
+    const firstUserIndex = conversation.findIndex(m => m.role === 'user')
+    if (firstUserIndex === -1) return []
+    return conversation.slice(firstUserIndex)
   }
 
   useEffect(() => {
@@ -183,22 +206,38 @@ export default function AIChat() {
     setInput('')
     setLoading(true)
 
-    const firstUserIndex = newMessages.findIndex(m => m.role === 'user')
-    const apiMessages = firstUserIndex >= 0 ? newMessages.slice(firstUserIndex) : []
+    const apiMessages = buildApiMessages(newMessages)
+    if (apiMessages.length === 0 || apiMessages[0].role !== 'user') {
+      console.error('AI Chat client error: no user message to send', newMessages)
+      setMessages([...newMessages, { role: 'assistant', content: t.error }])
+      setLoading(false)
+      return
+    }
 
     try {
       const response = await fetch('/api/chat', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ messages: apiMessages }),
+        body: JSON.stringify({ messages: apiMessages, locale }),
       })
-      const data = await response.json()
+
+      let data: { message?: string; error?: string } = {}
+      try {
+        data = await response.json()
+      } catch (parseError) {
+        console.error('AI Chat client error: invalid JSON response', parseError, response.status)
+        setMessages([...newMessages, { role: 'assistant', content: t.error }])
+        return
+      }
+
       if (response.ok && data.message) {
         setMessages([...newMessages, { role: 'assistant', content: data.message }])
       } else {
+        console.error('AI Chat API error:', response.status, data.error ?? data)
         setMessages([...newMessages, { role: 'assistant', content: t.error }])
       }
-    } catch {
+    } catch (error) {
+      console.error('AI Chat client error:', error)
       setMessages([...newMessages, { role: 'assistant', content: t.error }])
     } finally {
       setLoading(false)
@@ -237,6 +276,7 @@ export default function AIChat() {
           justifyContent: 'center',
           touchAction: 'none',
           userSelect: 'none',
+          WebkitUserSelect: 'none',
         }}
       >
         {isOpen ? '✕' : '🤖'}
@@ -258,9 +298,28 @@ export default function AIChat() {
           flexDirection: 'column',
           overflow: 'hidden',
         }}>
-          <div style={{ backgroundColor: '#1a1a2e', padding: '14px 16px' }}>
-            <p style={{ color: 'white', fontWeight: 'bold', fontSize: '14px', margin: '0 0 2px' }}>{t.title}</p>
-            <p style={{ color: '#aaa', fontSize: '11px', margin: 0 }}>{t.subtitle}</p>
+          <div style={{ backgroundColor: '#1a1a2e', padding: '14px 16px', display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', gap: '12px' }}>
+            <div>
+              <p style={{ color: 'white', fontWeight: 'bold', fontSize: '14px', margin: '0 0 2px' }}>{t.title}</p>
+              <p style={{ color: '#aaa', fontSize: '11px', margin: 0 }}>{t.subtitle}</p>
+            </div>
+            <button
+              type="button"
+              aria-label="Close chat"
+              onClick={() => setIsOpen(false)}
+              style={{
+                background: 'transparent',
+                border: 'none',
+                color: '#aaa',
+                cursor: 'pointer',
+                fontSize: '18px',
+                lineHeight: 1,
+                padding: '2px 4px',
+                flexShrink: 0,
+              }}
+            >
+              ✕
+            </button>
           </div>
 
           <div style={{ flex: 1, overflowY: 'auto', padding: '12px', display: 'flex', flexDirection: 'column', gap: '10px' }}>
