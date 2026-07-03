@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { LanguageProvider } from "./context/LanguageContext";
 import CookieBanner from "./components/CookieBanner";
+import AIChat from "./components/AIChat";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -31,7 +32,6 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <head>
-        {/* Google Analytics */}
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-FQWKYXGMY4"></script>
         <script
           dangerouslySetInnerHTML={{
@@ -46,13 +46,13 @@ export default function RootLayout({
             `,
           }}
         />
-        {/* Lemon Squeezy */}
         <script src="https://assets.lemonsqueezy.com/lemon.js" defer></script>
       </head>
       <body className="min-h-full flex flex-col">
         <LanguageProvider>
           {children}
           <CookieBanner />
+          <AIChat />
         </LanguageProvider>
       </body>
     </html>

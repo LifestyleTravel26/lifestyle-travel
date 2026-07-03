@@ -1,5 +1,6 @@
 'use client'
 import { useState, useRef, useEffect } from 'react'
+import { createPortal } from 'react-dom'
 import { useLanguage } from '../context/LanguageContext'
 
 const translations = {
@@ -38,6 +39,7 @@ type Message = {
 }
 
 export default function AIChat() {
+  const [mounted, setMounted] = useState(false)
   const [isOpen, setIsOpen] = useState(false)
   const [messages, setMessages] = useState<Message[]>([])
   const [input, setInput] = useState('')
@@ -45,6 +47,10 @@ export default function AIChat() {
   const messagesEndRef = useRef<HTMLDivElement>(null)
   const { locale } = useLanguage()
   const t = translations[locale]
+
+  useEffect(() => {
+    setMounted(true)
+  }, [])
 
   useEffect(() => {
     setMessages(prev => {
@@ -92,7 +98,9 @@ export default function AIChat() {
     }
   }
 
-  return (
+  if (!mounted) return null
+
+  return createPortal(
     <>
       <button
         type="button"
@@ -195,6 +203,7 @@ export default function AIChat() {
           </div>
         </div>
       )}
-    </>
+    </>,
+    document.body
   )
 }
