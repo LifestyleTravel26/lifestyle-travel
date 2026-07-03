@@ -56,16 +56,46 @@ const translations = {
       ['Peace Corps', 'Gratis', 'Desarrollo', 'Sí', 'Sí (solo USA)'],
     ],
     sec_destinos_pop_title: 'Destinos Más Populares',
-    destinos_pop_items: [
-      ['🇨🇷 Costa Rica', 'Conservación de tortugas, naturaleza'],
-      ['🇹🇭 Tailandia', 'Enseñanza, templos budistas'],
-      ['🇳🇵 Nepal', 'Reconstrucción, montañismo'],
-      ['🇵🇪 Perú', 'Comunidades andinas, arqueología'],
-      ['🇰🇪 Kenia', 'Vida salvaje, conservación'],
-      ['🇪🇸 España', 'Granjas WWOOF, cultura'],
-      ['🇵🇹 Portugal', 'Granjas orgánicas, Alentejo'],
-      ['🇦🇺 Australia', 'Granjas WWOOF, trabajo regional'],
+    destinos_pop_groups: [
+      {
+        items: [
+          ['🇨🇷 Costa Rica', 'Conservación de tortugas, naturaleza'],
+          ['🇹🇭 Tailandia', 'Enseñanza, templos budistas'],
+          ['🇳🇵 Nepal', 'Reconstrucción, montañismo'],
+          ['🇵🇪 Perú', 'Comunidades andinas, arqueología'],
+          ['🇰🇪 Kenia', 'Vida salvaje, conservación'],
+          ['🇪🇸 España', 'Granjas WWOOF, cultura'],
+          ['🇵🇹 Portugal', 'Granjas orgánicas, Alentejo'],
+          ['🇦🇺 Australia', 'Granjas WWOOF, trabajo regional'],
+        ],
+      },
+      {
+        title: 'Asia / Pacífico',
+        items: [
+          ['🇮🇩 Bali, Indonesia', 'Voluntariado en templos, enseñanza de inglés, conservación de arrecifes de coral'],
+          ['🇻🇳 Vietnam', 'Enseñanza de inglés muy demandada, costo de vida muy bajo'],
+          ['🇱🇰 Sri Lanka', 'Conservación de elefantes y tortugas marinas'],
+          ['🇫🇯 Fiji', 'Conservación marina, arrecifes de coral, comunidades del Pacífico'],
+        ],
+      },
+      {
+        title: 'África',
+        items: [
+          ['🇹🇿 Tanzania', 'Safaris, conservación de vida salvaje, Monte Kilimanjaro'],
+          ['🇬🇭 Ghana', 'Voluntariado social, comunidades locales, bajo costo'],
+          ['🇿🇦 Sudáfrica', 'Conservación de animales, vida salvaje'],
+        ],
+      },
+      {
+        title: 'Latinoamérica',
+        items: [
+          ['🇪🇨 Ecuador/Galápagos', 'Conservación marina única, tortugas gigantes'],
+          ['🇧🇴 Bolivia', 'Comunidades indígenas, altiplano, proyectos educativos'],
+          ['🇬🇹 Guatemala', 'Proyectos educativos mayas, naturaleza, volcanes'],
+        ],
+      },
     ],
+    destinos_pop_note: '💡 Todos estos destinos están disponibles en Worldpackers, Workaway y HelpX. Solo filtra por país en la plataforma y aplica directamente.',
     sec_proscons_title: 'Pros y Contras',
     pros_title: '✅ Pros',
     cons_title: '❌ Contras',
@@ -203,16 +233,46 @@ const translations = {
       ['Peace Corps', 'Grátis', 'Desenvolvimento', 'Sim', 'Sim (apenas EUA)'],
     ],
     sec_destinos_pop_title: 'Destinos Mais Populares',
-    destinos_pop_items: [
-      ['🇨🇷 Costa Rica', 'Conservação de tartarugas, natureza'],
-      ['🇹🇭 Tailândia', 'Ensino, templos budistas'],
-      ['🇳🇵 Nepal', 'Reconstrução, montanhismo'],
-      ['🇵🇪 Peru', 'Comunidades andinas, arqueologia'],
-      ['🇰🇪 Quênia', 'Vida selvagem, conservação'],
-      ['🇪🇸 Espanha', 'Fazendas WWOOF, cultura'],
-      ['🇵🇹 Portugal', 'Fazendas orgânicas, Alentejo'],
-      ['🇦🇺 Austrália', 'Fazendas WWOOF, trabalho regional'],
+    destinos_pop_groups: [
+      {
+        items: [
+          ['🇨🇷 Costa Rica', 'Conservação de tartarugas, natureza'],
+          ['🇹🇭 Tailândia', 'Ensino, templos budistas'],
+          ['🇳🇵 Nepal', 'Reconstrução, montanhismo'],
+          ['🇵🇪 Peru', 'Comunidades andinas, arqueologia'],
+          ['🇰🇪 Quênia', 'Vida selvagem, conservação'],
+          ['🇪🇸 Espanha', 'Fazendas WWOOF, cultura'],
+          ['🇵🇹 Portugal', 'Fazendas orgânicas, Alentejo'],
+          ['🇦🇺 Austrália', 'Fazendas WWOOF, trabalho regional'],
+        ],
+      },
+      {
+        title: 'Ásia / Pacífico',
+        items: [
+          ['🇮🇩 Bali, Indonésia', 'Voluntariado em templos, ensino de inglês, conservação de recifes de coral'],
+          ['🇻🇳 Vietnã', 'Ensino de inglês muito procurado, custo de vida muito baixo'],
+          ['🇱🇰 Sri Lanka', 'Conservação de elefantes e tartarugas marinhas'],
+          ['🇫🇯 Fiji', 'Conservação marinha, recifes de coral, comunidades do Pacífico'],
+        ],
+      },
+      {
+        title: 'África',
+        items: [
+          ['🇹🇿 Tanzânia', 'Safaris, conservação de vida selvagem, Monte Kilimanjaro'],
+          ['🇬🇭 Gana', 'Voluntariado social, comunidades locais, baixo custo'],
+          ['🇿🇦 África do Sul', 'Conservação de animais, vida selvagem'],
+        ],
+      },
+      {
+        title: 'América Latina',
+        items: [
+          ['🇪🇨 Equador/Galápagos', 'Conservação marinha única, tartarugas gigantes'],
+          ['🇧🇴 Bolívia', 'Comunidades indígenas, altiplano, projetos educativos'],
+          ['🇬🇹 Guatemala', 'Projetos educativos maias, natureza, vulcões'],
+        ],
+      },
     ],
+    destinos_pop_note: '💡 Todos esses destinos estão disponíveis no Worldpackers, Workaway e HelpX. Filtre pelo país na plataforma e candidate-se diretamente.',
     sec_proscons_title: 'Prós e Contras',
     pros_title: '✅ Prós',
     cons_title: '❌ Contras',
@@ -350,16 +410,46 @@ const translations = {
       ['Peace Corps', 'Free', 'Development', 'Yes', 'Yes (USA only)'],
     ],
     sec_destinos_pop_title: 'Most Popular Destinations',
-    destinos_pop_items: [
-      ['🇨🇷 Costa Rica', 'Turtle conservation, nature'],
-      ['🇹🇭 Thailand', 'Teaching, Buddhist temples'],
-      ['🇳🇵 Nepal', 'Reconstruction, mountaineering'],
-      ['🇵🇪 Peru', 'Andean communities, archaeology'],
-      ['🇰🇪 Kenya', 'Wildlife, conservation'],
-      ['🇪🇸 Spain', 'WWOOF farms, culture'],
-      ['🇵🇹 Portugal', 'Organic farms, Alentejo'],
-      ['🇦🇺 Australia', 'WWOOF farms, regional work'],
+    destinos_pop_groups: [
+      {
+        items: [
+          ['🇨🇷 Costa Rica', 'Turtle conservation, nature'],
+          ['🇹🇭 Thailand', 'Teaching, Buddhist temples'],
+          ['🇳🇵 Nepal', 'Reconstruction, mountaineering'],
+          ['🇵🇪 Peru', 'Andean communities, archaeology'],
+          ['🇰🇪 Kenya', 'Wildlife, conservation'],
+          ['🇪🇸 Spain', 'WWOOF farms, culture'],
+          ['🇵🇹 Portugal', 'Organic farms, Alentejo'],
+          ['🇦🇺 Australia', 'WWOOF farms, regional work'],
+        ],
+      },
+      {
+        title: 'Asia / Pacific',
+        items: [
+          ['🇮🇩 Bali, Indonesia', 'Temple volunteering, English teaching, coral reef conservation'],
+          ['🇻🇳 Vietnam', 'High demand for English teaching, very low cost of living'],
+          ['🇱🇰 Sri Lanka', 'Elephant and sea turtle conservation'],
+          ['🇫🇯 Fiji', 'Marine conservation, coral reefs, Pacific communities'],
+        ],
+      },
+      {
+        title: 'Africa',
+        items: [
+          ['🇹🇿 Tanzania', 'Safaris, wildlife conservation, Mount Kilimanjaro'],
+          ['🇬🇭 Ghana', 'Social volunteering, local communities, low cost'],
+          ['🇿🇦 South Africa', 'Animal conservation, wildlife'],
+        ],
+      },
+      {
+        title: 'Latin America',
+        items: [
+          ['🇪🇨 Ecuador/Galápagos', 'Unique marine conservation, giant tortoises'],
+          ['🇧🇴 Bolivia', 'Indigenous communities, highlands, education projects'],
+          ['🇬🇹 Guatemala', 'Mayan education projects, nature, volcanoes'],
+        ],
+      },
     ],
+    destinos_pop_note: '💡 All these destinations are available on Worldpackers, Workaway and HelpX. Just filter by country on the platform and apply directly.',
     sec_proscons_title: 'Pros and Cons',
     pros_title: '✅ Pros',
     cons_title: '❌ Cons',
@@ -654,12 +744,20 @@ export default function Voluntariado() {
 
         <Section id="destinos-pop" emoji="🗺️" title={t.sec_destinos_pop_title}>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
-            {t.destinos_pop_items.map((item, i) => (
-              <div key={i} style={{ backgroundColor: '#f0fdf4', borderRadius: '10px', padding: '12px 14px', borderLeft: '3px solid #22c55e' }}>
-                <p style={{ fontWeight: '700', fontSize: '13px', color: '#166534', margin: '0 0 3px' }}>{item[0]}</p>
-                <p style={{ fontSize: '12px', color: '#1a1a2e', margin: 0 }}>{item[1]}</p>
+            {t.destinos_pop_groups.map((group, gi) => (
+              <div key={gi} style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                {group.title && (
+                  <p style={{ fontWeight: '700', fontSize: '14px', color: '#1a1a2e', margin: gi > 0 ? '12px 0 4px' : '0 0 4px' }}>{group.title}</p>
+                )}
+                {group.items.map((item, i) => (
+                  <div key={i} style={{ backgroundColor: '#f0fdf4', borderRadius: '10px', padding: '12px 14px', borderLeft: '3px solid #22c55e' }}>
+                    <p style={{ fontWeight: '700', fontSize: '13px', color: '#166534', margin: '0 0 3px' }}>{item[0]}</p>
+                    <p style={{ fontSize: '12px', color: '#1a1a2e', margin: 0 }}>{item[1]}</p>
+                  </div>
+                ))}
               </div>
             ))}
+            <HackBox text={t.destinos_pop_note} />
           </div>
         </Section>
 
