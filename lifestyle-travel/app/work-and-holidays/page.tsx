@@ -333,19 +333,6 @@ export default function WorkAndHolidays() {
         </div>
 
         {/* ACCORDION SECTIONS */}
-        <Section id="como" emoji="🛂" title={t.sec_como_title}>
-          <div style={{ backgroundImage: 'url("https://plus.unsplash.com/premium_photo-1722349520010-a21efb9c3bcc?q=80&w=687&auto=format&fit=crop")', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', height: '160px', borderRadius: '10px', marginBottom: '14px' }} />
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
-            {t.systems.map((item, i) => (
-              <div key={i} style={{ backgroundColor: '#f8f7f4', borderRadius: '10px', padding: '14px', borderLeft: `4px solid ${item.color}` }}>
-                <p style={{ fontWeight: '700', fontSize: '14px', margin: '0 0 4px', color: '#1a1a2e' }}>{item.n} {item.title}</p>
-                <p style={{ fontSize: '13px', color: '#1a1a2e', margin: '0 0 6px', lineHeight: '1.5' }}>{item.desc}</p>
-                <p style={{ fontSize: '12px', color: '#333333', margin: 0 }}>Ejemplos: <strong>{item.examples}</strong></p>
-              </div>
-            ))}
-          </div>
-          <HackBox text={t.como_hack} />
-        </Section>
 
         {/* PREMIUM LOCK */}
         {!hasAccess && (
@@ -381,6 +368,20 @@ export default function WorkAndHolidays() {
         )}
 
         <div style={{ display: hasAccess ? 'block' : 'none' }}>
+
+        <Section id="como" emoji="🛂" title={t.sec_como_title}>
+          <div style={{ backgroundImage: 'url("https://plus.unsplash.com/premium_photo-1722349520010-a21efb9c3bcc?q=80&w=687&auto=format&fit=crop")', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', height: '160px', borderRadius: '10px', marginBottom: '14px' }} />
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+            {t.systems.map((item, i) => (
+              <div key={i} style={{ backgroundColor: '#f8f7f4', borderRadius: '10px', padding: '14px', borderLeft: `4px solid ${item.color}` }}>
+                <p style={{ fontWeight: '700', fontSize: '14px', margin: '0 0 4px', color: '#1a1a2e' }}>{item.n} {item.title}</p>
+                <p style={{ fontSize: '13px', color: '#1a1a2e', margin: '0 0 6px', lineHeight: '1.5' }}>{item.desc}</p>
+                <p style={{ fontSize: '12px', color: '#333333', margin: 0 }}>Ejemplos: <strong>{item.examples}</strong></p>
+              </div>
+            ))}
+          </div>
+          <HackBox text={t.como_hack} />
+        </Section>
 
         <Section id="costos" emoji="💰" title={t.sec_costos_title}>
           <div style={{ overflowX: 'auto' as const, borderRadius: '10px', border: '1px solid #e5e7eb' }}>
