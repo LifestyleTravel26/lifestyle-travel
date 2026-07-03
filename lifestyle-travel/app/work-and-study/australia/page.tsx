@@ -927,10 +927,10 @@ export default function Australia() {
               <thead><tr>{[t.th_sector, t.th_puesto, t.th_salario_aud, t.th_usd_h, t.th_canal_emp].map((h, i) => <th key={i} style={T.th}>{h}</th>)}</tr></thead>
               <tbody>
                 {[
-                  ['Hospitality', 'Waiter / Bar Staff / Kitchen Hand', '$22 – $30 AUD', '$15.2 – $20.7', 'Seek / CV en persona'],
-                  ['Cleaning', 'Cleaner / Housekeeping', '$23 – $30 AUD', '$15.9 – $20.7', 'Gumtree / Indeed'],
+                  ['Hospitality', 'Waiter', '$24.10 – $27 AUD', '$15.67 – $17.55', 'Seek / CV en persona'],
+                  ['Cleaning', 'Housekeeping', '$24.10 – $26 AUD', '$15.67 – $16.90', 'Gumtree / Indeed'],
                   ['Hotels', 'Reception / Hotel Staff', '$24 – $32 AUD', '$16.6 – $22.1', 'Seek / hoteles directos'],
-                  ['Retail', 'Sales Assistant', '$23 – $30 AUD', '$15.9 – $20.7', 'Seek / malls directos'],
+                  ['Retail', 'Shop Assistant', '$24.10 – $27 AUD', '$15.67 – $17.55', 'Seek / malls directos'],
                   ['Delivery', 'Rider / Courier', '$25 – $35 AUD', '$17.3 – $24.2', 'Uber Eats / DoorDash'],
                 ].map((r, i) => (
                   <tr key={i}>
@@ -955,10 +955,10 @@ export default function Australia() {
               <thead><tr>{[t.th_sector_sal, t.th_puesto_sal, t.th_salario_aud, t.th_usd_h, t.th_mensual].map((h, i) => <th key={i} style={T.th}>{h}</th>)}</tr></thead>
               <tbody>
                 {[
-                  ['Hospitality', 'Waiter / Bar Staff', '$22 – $30 AUD', '$15.2 – $20.7', 'A$1,760 – $2,400'],
-                  ['Cleaning', 'Cleaner / Housekeeping', '$23 – $30 AUD', '$15.9 – $20.7', 'A$1,840 – $2,400'],
+                  ['Hospitality', 'Waiter', '$24.10 – $27 AUD', '$15.67 – $17.55', 'A$1,928 – $2,160'],
+                  ['Cleaning', 'Housekeeping', '$24.10 – $26 AUD', '$15.67 – $16.90', 'A$1,928 – $2,080'],
                   ['Hotels', 'Reception / Hotel Staff', '$24 – $32 AUD', '$16.6 – $22.1', 'A$1,920 – $2,560'],
-                  ['Retail', 'Sales Assistant', '$23 – $30 AUD', '$15.9 – $20.7', 'A$1,840 – $2,400'],
+                  ['Retail', 'Shop Assistant', '$24.10 – $27 AUD', '$15.67 – $17.55', 'A$1,928 – $2,160'],
                   ['Delivery', 'Rider / Courier', '$25 – $35 AUD', '$17.3 – $24.2', 'A$2,000 – $2,800'],
                 ].map((r, i) => (
                   <tr key={i}>
