@@ -9,10 +9,13 @@ const inputStyle: React.CSSProperties = {
   width: '100%',
   padding: '12px 14px',
   borderRadius: '8px',
-  border: '1px solid #ddd',
+  border: '1px solid #e5e7eb',
   fontSize: '15px',
   marginBottom: '16px',
   boxSizing: 'border-box',
+  backgroundColor: 'white',
+  color: '#1a1a2e',
+  borderColor: '#e5e7eb',
 };
 
 const buttonStyle: React.CSSProperties = {

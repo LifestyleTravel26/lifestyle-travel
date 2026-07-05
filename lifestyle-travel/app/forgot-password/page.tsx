@@ -4,13 +4,15 @@ import { ForgotPasswordForm } from '@/components/auth/forgot-password-form';
 
 export default function ForgotPasswordPage() {
   return (
-    <AuthLayout
-      title="Recuperar contraseña"
-      subtitle="Te enviamos un link a tu email"
-    >
-      <Suspense fallback={<p style={{ textAlign: 'center', color: '#1a1a2e' }}>Cargando...</p>}>
-        <ForgotPasswordForm />
-      </Suspense>
-    </AuthLayout>
+    <div style={{ backgroundColor: '#f8f7f4', minHeight: '100vh' }}>
+      <AuthLayout
+        title="Recuperar contraseña"
+        subtitle="Te enviamos un link a tu email"
+      >
+        <Suspense fallback={<p style={{ textAlign: 'center', color: '#1a1a2e' }}>Cargando...</p>}>
+          <ForgotPasswordForm />
+        </Suspense>
+      </AuthLayout>
+    </div>
   );
 }

@@ -12,7 +12,7 @@ type AuthLayoutProps = {
 
 export function AuthLayout({ title, subtitle, children }: AuthLayoutProps) {
   return (
-    <main style={{ minHeight: '100vh', backgroundColor: '#f8f7f4', fontFamily: 'sans-serif' }}>
+    <main style={{ minHeight: '100vh', backgroundColor: '#f8f7f4', colorScheme: 'light', fontFamily: 'sans-serif' }}>
 
       {/* TOP NAV */}
       <div style={{ position: 'absolute', top: 0, left: 0, right: 0, zIndex: 10, padding: '16px 24px', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>

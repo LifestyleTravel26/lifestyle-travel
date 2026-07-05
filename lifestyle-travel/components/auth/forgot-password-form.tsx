@@ -4,6 +4,19 @@ import { useState } from 'react';
 import Link from 'next/link';
 import { createClient } from '@/lib/supabase/client';
 
+const inputStyle: React.CSSProperties = {
+  width: '100%',
+  padding: '12px 14px',
+  borderRadius: '8px',
+  border: '1px solid #e5e7eb',
+  fontSize: '15px',
+  marginBottom: '16px',
+  boxSizing: 'border-box',
+  backgroundColor: 'white',
+  color: '#1a1a2e',
+  borderColor: '#e5e7eb',
+};
+
 export function ForgotPasswordForm() {
   const [email, setEmail] = useState('');
   const [loading, setLoading] = useState(false);
@@ -56,7 +69,7 @@ export function ForgotPasswordForm() {
           onChange={(e) => setEmail(e.target.value)}
           required
           placeholder="tu@email.com"
-          style={{ width: '100%', padding: '12px 14px', borderRadius: '8px', border: '1px solid #ddd', fontSize: '15px', marginBottom: '16px', boxSizing: 'border-box' }}
+          style={inputStyle}
         />
         {error && (
           <p style={{ color: '#ef4444', fontSize: '14px', marginBottom: '16px' }}>{error}</p>

@@ -16,10 +16,12 @@ export default function LoginPage() {
   const t = translations[locale];
 
   return (
-    <AuthLayout title={t.title} subtitle={t.subtitle}>
-      <Suspense fallback={<p style={{ textAlign: 'center', color: '#1a1a2e' }}>Cargando...</p>}>
-        <LoginForm />
-      </Suspense>
-    </AuthLayout>
+    <div style={{ backgroundColor: '#f8f7f4', minHeight: '100vh' }}>
+      <AuthLayout title={t.title} subtitle={t.subtitle}>
+        <Suspense fallback={<p style={{ textAlign: 'center', color: '#1a1a2e' }}>Cargando...</p>}>
+          <LoginForm />
+        </Suspense>
+      </AuthLayout>
+    </div>
   );
 }
