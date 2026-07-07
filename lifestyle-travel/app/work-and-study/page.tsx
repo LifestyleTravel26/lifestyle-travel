@@ -6,7 +6,7 @@ import { useLanguage } from '../context/LanguageContext'
 const translations = {
   es: {
     title: 'Visa Work and Study',
-    subtitle: '9 países con blueprint completo paso a paso',
+    subtitle: '10 países con blueprint completo paso a paso',
     section_title: 'Elige tu destino',
     section_sub: 'Cada país con su guía migratoria detallada',
     countries: [
@@ -14,6 +14,7 @@ const translations = {
       { name: 'Malta', difficulty: 'Fácil' },
       { name: 'Dubái', difficulty: 'Medio' },
       { name: 'España', difficulty: 'Medio' },
+      { name: 'Italia', difficulty: 'Media' },
       { name: 'Portugal', difficulty: 'Medio' },
       { name: 'Georgia', difficulty: 'Fácil' },
       { name: 'Canadá', difficulty: 'Alto' },
@@ -23,7 +24,7 @@ const translations = {
   },
   pt: {
     title: 'Visto Work and Study',
-    subtitle: '9 países com blueprint completo passo a passo',
+    subtitle: '10 países com blueprint completo passo a passo',
     section_title: 'Escolha seu destino',
     section_sub: 'Cada país com seu guia migratório detalhado',
     countries: [
@@ -31,6 +32,7 @@ const translations = {
       { name: 'Malta', difficulty: 'Fácil' },
       { name: 'Dubai', difficulty: 'Médio' },
       { name: 'Espanha', difficulty: 'Médio' },
+      { name: 'Itália', difficulty: 'Média' },
       { name: 'Portugal', difficulty: 'Médio' },
       { name: 'Geórgia', difficulty: 'Fácil' },
       { name: 'Canadá', difficulty: 'Alto' },
@@ -40,7 +42,7 @@ const translations = {
   },
   en: {
     title: 'Work and Study Visa',
-    subtitle: '9 countries with complete step-by-step blueprint',
+    subtitle: '10 countries with complete step-by-step blueprint',
     section_title: 'Choose your destination',
     section_sub: 'Each country with its detailed migration guide',
     countries: [
@@ -48,6 +50,7 @@ const translations = {
       { name: 'Malta', difficulty: 'Easy' },
       { name: 'Dubai', difficulty: 'Medium' },
       { name: 'Spain', difficulty: 'Medium' },
+      { name: 'Italy', difficulty: 'Medium' },
       { name: 'Portugal', difficulty: 'Medium' },
       { name: 'Georgia', difficulty: 'Easy' },
       { name: 'Canada', difficulty: 'High' },
@@ -81,6 +84,12 @@ const countryData = [
     difficultyColor: '#f59e0b',
     href: '/work-and-study/espana',
     img: 'https://images.unsplash.com/photo-1539037116277-4db20889f2d4?q=80&w=1170&auto=format&fit=crop',
+  },
+  {
+    flag: '🇮🇹',
+    difficultyColor: '#f59e0b',
+    href: '/work-and-study/italia',
+    img: 'https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?q=80&w=1170&auto=format&fit=crop',
   },
   {
     flag: '🇵🇹',
