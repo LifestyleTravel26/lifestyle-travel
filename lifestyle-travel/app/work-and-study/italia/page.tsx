@@ -55,12 +55,12 @@ const translations = {
     edu_it_head: '🏛️ Programas en ITALIANO — Bachelor / Master',
     edu_it_sub: 'Necesitás certificado B2 italiano (CILS o CELI)',
     th_uni: 'Universidad', th_area: 'Área', th_anual: 'Precio/año',
-    edu_blue: '🔵 Solvencia universitaria: €8,800/año (≈ $9,680 USD) — Esta cantidad debe estar demostrada en tu cuenta bancaria personal al momento de aplicar a la visa de estudiante en el consulado italiano de tu país. No es el costo del programa — es el dinero que el gobierno italiano te exige tener disponible para cubrir tus gastos de vida durante el año académico. Sin demostrar esta solvencia, el consulado puede rechazar tu visa aunque tengas la carta de aceptación de la universidad.',
+    edu_blue: '🔵 Solvencia universitaria: €8,000/año (≈ $8,800 USD) — Esta cantidad debe estar demostrada en tu cuenta bancaria personal al momento de aplicar a la visa de estudiante en el consulado italiano de tu país. No es el costo del programa — es el dinero que el gobierno italiano te exige tener disponible para cubrir tus gastos de vida durante el año académico. Sin demostrar esta solvencia, el consulado puede rechazar tu visa aunque tengas la carta de aceptación de la universidad.',
     edu_hack: 'Si ya estudiaste italiano y tenés B2 — los programas en italiano son mucho más baratos y hay más opciones. Si venís con inglés — los programas en inglés son tu puerta directa sin esperar aprender italiano. Sapienza Roma tiene 59 programas en inglés y es una de las universidades más grandes de Europa.',
     sec_gastos_title: 'Gastos Obligatorios No Incluidos',
     gastos_intro: 'Estos son los costos que tu escuela NO incluye en el precio del curso. Son absolutamente obligatorios y debes tenerlos calculados y disponibles antes de iniciar el proceso de visa. No tenerlos puede significar el rechazo de tu solicitud.',
     th_concepto: 'Concepto', th_costo: 'Costo (EUR)',
-    gastos_red: '🔴 SOLVENCIA OBLIGATORIA: €5,000 para escuela de italiano — €8,800 para universidad. Sin este monto exacto en tu cuenta bancaria, la visa será RECHAZADA de inmediato. Este dinero no se gasta — solo se demuestra.',
+    gastos_red: '🔴 SOLVENCIA OBLIGATORIA: €5,000 para escuela de italiano — €8,000 para universidad. Sin este monto exacto en tu cuenta bancaria, la visa será RECHAZADA de inmediato. Este dinero no se gasta — solo se demuestra.',
     gastos_hack: 'Tu Capital de Ejecución Real = precio de tu escuela + €5,000 de solvencia + €500 de gastos fijos. Ese es el número mínimo que necesitas antes de arrancar. Si no lo tienes completo, no inicies el proceso. La Dichiarazione di Valore es única para Italia — es la validación oficial de tu diploma en el consulado italiano de tu país. Tramítala con mínimo 3 meses de anticipación porque puede demorar.',
     sec_aterrizaje_title: 'Protocolo de Aterrizaje y Gestión',
     aterrizaje_intro: 'Aquí el orden importa más que en cualquier otro país: Codice Fiscale primero, Permesso di Soggiorno dentro de 8 días, SPID después, banco al final.',
@@ -171,7 +171,7 @@ const translations = {
       ['Horas de trabajo durante clases', '20 horas/semana'],
       ['Horas de trabajo en vacaciones', 'Sin límite oficial'],
       ['Solvencia para italiano', '€5,000 (≈ $5,500)'],
-      ['Solvencia para universidad', '€8,800 (≈ $9,680)'],
+      ['Solvencia para universidad', '€8,000 (≈ $8,800)'],
       ['Costo promedio curso italiano', '€2,500 - €3,500/año'],
       ['Permesso di Soggiorno', '€80 - €120 (≈ $88 - $132)'],
       ['Renta habitación compartida', '€350 - €600/mes'],
@@ -247,12 +247,12 @@ const translations = {
     edu_it_head: '🏛️ Programas em ITALIANO — Bachelor / Master',
     edu_it_sub: 'Você precisa do certificado B2 italiano (CILS ou CELI)',
     th_uni: 'Universidade', th_area: 'Área', th_anual: 'Preço/ano',
-    edu_blue: '🔵 Solvência universitária: €8.800/ano (≈ $9.680 USD) — Este valor deve ser demonstrado na sua conta bancária pessoal no momento de aplicar ao visto de estudante no consulado italiano do seu país. Não é o custo do programa — é o dinheiro que o governo italiano exige que você tenha disponível para cobrir seus gastos de vida durante o ano acadêmico. Sem demonstrar essa solvência, o consulado pode rejeitar seu visto mesmo com a carta de aceitação da universidade.',
+    edu_blue: '🔵 Solvência universitária: €8.000/ano (≈ $8.800 USD) — Este valor deve ser demonstrado na sua conta bancária pessoal no momento de aplicar ao visto de estudante no consulado italiano do seu país. Não é o custo do programa — é o dinheiro que o governo italiano exige que você tenha disponível para cobrir seus gastos de vida durante o ano acadêmico. Sem demonstrar essa solvência, o consulado pode rejeitar seu visto mesmo com a carta de aceitação da universidade.',
     edu_hack: 'Se você já estudou italiano e tem B2 — os programas em italiano são muito mais baratos e há mais opções. Se você vem com inglês — os programas em inglês são sua porta direta sem esperar aprender italiano. Sapienza Roma tem 59 programas em inglês e é uma das maiores universidades da Europa.',
     sec_gastos_title: 'Despesas Obrigatórias Não Incluídas',
     gastos_intro: 'Estes são os custos que sua escola NÃO inclui no preço do curso. São absolutamente obrigatórios e você deve tê-los calculados e disponíveis antes de iniciar o processo de visto. Não tê-los pode significar a rejeição do seu pedido.',
     th_concepto: 'Conceito', th_costo: 'Custo (EUR)',
-    gastos_red: '🔴 SOLVÊNCIA OBRIGATÓRIA: €5.000 para escola de italiano — €8.800 para universidade. Sem este valor exato na sua conta bancária, o visto será REJEITADO imediatamente. Este dinheiro não é gasto — apenas demonstrado.',
+    gastos_red: '🔴 SOLVÊNCIA OBRIGATÓRIA: €5.000 para escola de italiano — €8.000 para universidade. Sem este valor exato na sua conta bancária, o visto será REJEITADO imediatamente. Este dinheiro não é gasto — apenas demonstrado.',
     gastos_hack: 'Seu Capital de Execução Real = preço da sua escola + €5.000 de solvência + €500 de despesas fixas. Esse é o número mínimo que você precisa antes de começar. Se não tiver completo, não inicie o processo. A Dichiarazione di Valore é exclusiva da Itália — é a validação oficial do seu diploma no consulado italiano do seu país. Providencie com pelo menos 3 meses de antecedência porque pode demorar.',
     sec_aterrizaje_title: 'Protocolo de Chegada e Gestão',
     aterrizaje_intro: 'Aqui a ordem importa mais do que em qualquer outro país: Codice Fiscale primeiro, Permesso di Soggiorno dentro de 8 dias, SPID depois, banco por último.',
@@ -363,7 +363,7 @@ const translations = {
       ['Horas de trabalho durante aulas', '20 horas/semana'],
       ['Horas de trabalho nas férias', 'Sem limite oficial'],
       ['Solvência para italiano', '€5.000 (≈ $5.500)'],
-      ['Solvência para universidade', '€8.800 (≈ $9.680)'],
+      ['Solvência para universidade', '€8.000 (≈ $8.800)'],
       ['Custo médio curso italiano', '€2.500 - €3.500/ano'],
       ['Permesso di Soggiorno', '€80 - €120 (≈ $88 - $132)'],
       ['Aluguel quarto compartilhado', '€350 - €600/mês'],
@@ -439,12 +439,12 @@ const translations = {
     edu_it_head: '🏛️ Programs in ITALIAN — Bachelor / Master',
     edu_it_sub: 'You need an Italian B2 certificate (CILS or CELI)',
     th_uni: 'University', th_area: 'Area', th_anual: 'Price/year',
-    edu_blue: '🔵 University funds: €8,800/year (≈ $9,680 USD) — This amount must be demonstrated in your personal bank account when applying for the student visa at the Italian consulate in your country. This is NOT the program cost — it\'s the money the Italian government requires you to have available to cover your living expenses during the academic year. Without demonstrating these funds, the consulate may reject your visa even with a university acceptance letter.',
+    edu_blue: '🔵 University funds: €8,000/year (≈ $8,800 USD) — This amount must be demonstrated in your personal bank account when applying for the student visa at the Italian consulate in your country. This is NOT the program cost — it\'s the money the Italian government requires you to have available to cover your living expenses during the academic year. Without demonstrating these funds, the consulate may reject your visa even with a university acceptance letter.',
     edu_hack: 'If you already studied Italian and have B2 — programs in Italian are much cheaper and there are more options. If you come with English — programs in English are your direct path without waiting to learn Italian. Sapienza Rome has 59 programs in English and is one of the largest universities in Europe.',
     sec_gastos_title: 'Mandatory Costs Not Included',
     gastos_intro: 'These are costs your school does NOT include in the course price. They are absolutely mandatory and must be calculated and available before starting the visa process. Not having them can mean rejection of your application.',
     th_concepto: 'Item', th_costo: 'Cost (EUR)',
-    gastos_red: '🔴 MANDATORY FUNDS: €5,000 for Italian school — €8,800 for university. Without this exact amount in your bank account, the visa will be REJECTED immediately. This money is not spent — only demonstrated.',
+    gastos_red: '🔴 MANDATORY FUNDS: €5,000 for Italian school — €8,000 for university. Without this exact amount in your bank account, the visa will be REJECTED immediately. This money is not spent — only demonstrated.',
     gastos_hack: 'Your Real Execution Capital = your school price + €5,000 in funds + €500 in fixed costs. That\'s the minimum number you need before starting. If you don\'t have it complete, don\'t start the process. The Dichiarazione di Valore is unique to Italy — it\'s the official validation of your diploma at the Italian consulate in your country. Process it at least 3 months in advance since it can take time.',
     sec_aterrizaje_title: 'Landing & Management Protocol',
     aterrizaje_intro: 'Here the order matters more than in any other country: Codice Fiscale first, Permesso di Soggiorno within 8 days, SPID next, bank last.',
@@ -555,7 +555,7 @@ const translations = {
       ['Work hours during classes', '20 hours/week'],
       ['Work hours during holidays', 'No official limit'],
       ['Required funds for Italian', '€5,000 (≈ $5,500)'],
-      ['Required funds for university', '€8,800 (≈ $9,680)'],
+      ['Required funds for university', '€8,000 (≈ $8,800)'],
       ['Average Italian course cost', '€2,500 - €3,500/year'],
       ['Permesso di Soggiorno', '€80 - €120 (≈ $88 - $132)'],
       ['Shared room rent', '€350 - €600/month'],
@@ -751,20 +751,24 @@ export default function Italia() {
             <p style={{ fontSize: '13px', color: '#1a1a2e', marginBottom: '10px', lineHeight: '1.6' }}>{t.roma_sub}</p>
             <div style={T.wrap}>
               <table style={T.table}>
-                <thead><tr>{[t.th_inst, t.th_loc, t.th_am].map((h, i) => <th key={i} style={T.th}>{h}</th>)}</tr></thead>
+                <thead><tr>{[t.th_inst, t.th_loc, t.th_am, t.th_usd, t.th_pm, t.th_usd, t.th_web].map((h, i) => <th key={i} style={T.th}>{h}</th>)}</tr></thead>
                 <tbody>
                   {[
-                    ['Dilit International House', 'Roma Centro', '€2,500'],
-                    ['Torre di Babele', 'Roma Prati', '€2,600'],
-                    ['Scuola Leonardo da Vinci', 'Roma Centro', '€2,700'],
-                    ['Il Laboratorio', 'Roma Trastevere', '€2,800'],
-                    ['Istituto Italiano', 'Roma Parioli', '€3,000'],
-                    ['Accademia Italiana', 'Roma Centro', '€3,200'],
+                    ['Dilit International House', 'Roma Centro', '€2,500', '$2,750', '€2,200', '$2,420', 'dilit.it', 'https://www.dilit.it'],
+                    ['Torre di Babele', 'Roma Prati', '€2,600', '$2,860', '€2,300', '$2,530', 'torredibabele.com', 'https://www.torredibabele.com'],
+                    ['Il Laboratorio', 'Roma Trastevere', '€2,800', '$3,080', '€2,500', '$2,750', 'il-laboratorio.com', 'https://www.il-laboratorio.com'],
+                    ['Scuola Leonardo da Vinci', 'Roma Centro', '€2,700', '$2,970', '€2,400', '$2,640', 'scuolaleonardo.com', 'https://www.scuolaleonardo.com'],
+                    ['Istituto Italiano', 'Roma Parioli', '€3,000', '$3,300', '€2,700', '$2,970', 'istitutoitaliano.it', 'https://www.istitutoitaliano.it'],
+                    ['Accademia Italiana', 'Roma Centro', '€3,200', '$3,520', '€2,900', '$3,190', 'accademiaitaliana.com', 'https://www.accademiaitaliana.com'],
                   ].map((r, i) => (
                     <tr key={i}>
                       <td style={{ ...T.td(i), ...T.bold }}>{r[0]}</td>
                       <td style={T.td(i)}>{r[1]}</td>
                       <td style={T.td(i)}>{r[2]}</td>
+                      <td style={T.td(i)}>{r[3]}</td>
+                      <td style={T.td(i)}>{r[4]}</td>
+                      <td style={T.td(i)}>{r[5]}</td>
+                      <td style={T.td(i)}><Link text={r[6] as string} url={r[7] as string} /></td>
                     </tr>
                   ))}
                 </tbody>
@@ -774,17 +778,21 @@ export default function Italia() {
             <p style={{ fontSize: '13px', color: '#1a1a2e', marginBottom: '10px', lineHeight: '1.6' }}>{t.florencia_sub}</p>
             <div style={T.wrap}>
               <table style={T.table}>
-                <thead><tr>{[t.th_inst, t.th_loc, t.th_am].map((h, i) => <th key={i} style={T.th}>{h}</th>)}</tr></thead>
+                <thead><tr>{[t.th_inst, t.th_loc, t.th_am, t.th_usd, t.th_pm, t.th_usd, t.th_web].map((h, i) => <th key={i} style={T.th}>{h}</th>)}</tr></thead>
                 <tbody>
                   {[
-                    ['Scuola Leonardo da Vinci', 'Centro', '€2,500'],
-                    ['British Institute Florence', 'Oltrarno', '€2,800'],
-                    ['Istituto Machiavelli', 'Centro', '€3,000'],
+                    ['British Institute Florence', 'Oltrarno', '€2,800', '$3,080', '€2,500', '$2,750', 'britishinstitute.it', 'https://www.britishinstitute.it'],
+                    ['Istituto Machiavelli', 'Centro', '€3,000', '$3,300', '€2,700', '$2,970', 'istitutomachiavelli.it', 'https://www.istitutomachiavelli.it'],
+                    ['Scuola Leonardo da Vinci', 'Centro', '€2,500', '$2,750', '€2,200', '$2,420', 'scuolaleonardo.com', 'https://www.scuolaleonardo.com'],
                   ].map((r, i) => (
                     <tr key={i}>
                       <td style={{ ...T.td(i), ...T.bold }}>{r[0]}</td>
                       <td style={T.td(i)}>{r[1]}</td>
                       <td style={T.td(i)}>{r[2]}</td>
+                      <td style={T.td(i)}>{r[3]}</td>
+                      <td style={T.td(i)}>{r[4]}</td>
+                      <td style={T.td(i)}>{r[5]}</td>
+                      <td style={T.td(i)}><Link text={r[6] as string} url={r[7] as string} /></td>
                     </tr>
                   ))}
                 </tbody>
@@ -794,17 +802,21 @@ export default function Italia() {
             <p style={{ fontSize: '13px', color: '#1a1a2e', marginBottom: '10px', lineHeight: '1.6' }}>{t.milan_sub}</p>
             <div style={T.wrap}>
               <table style={T.table}>
-                <thead><tr>{[t.th_inst, t.th_loc, t.th_am].map((h, i) => <th key={i} style={T.th}>{h}</th>)}</tr></thead>
+                <thead><tr>{[t.th_inst, t.th_loc, t.th_am, t.th_usd, t.th_pm, t.th_usd, t.th_web].map((h, i) => <th key={i} style={T.th}>{h}</th>)}</tr></thead>
                 <tbody>
                   {[
-                    ['Scuola Leonardo da Vinci', 'Brera', '€2,700'],
-                    ['Istituto Europeo', 'Centro', '€3,000'],
-                    ['Berlitz Milano', 'Centro', '€3,500'],
+                    ['Scuola Leonardo da Vinci', 'Brera', '€2,700', '$2,970', '€2,400', '$2,640', 'scuolaleonardo.com', 'https://www.scuolaleonardo.com'],
+                    ['Istituto Europeo', 'Centro', '€3,000', '$3,300', '€2,700', '$2,970', 'istitutoeuropeo.it', 'https://www.istitutoeuropeo.it'],
+                    ['Berlitz Milano', 'Centro', '€3,500', '$3,850', '€3,000', '$3,300', 'berlitz.it', 'https://www.berlitz.it'],
                   ].map((r, i) => (
                     <tr key={i}>
                       <td style={{ ...T.td(i), ...T.bold }}>{r[0]}</td>
                       <td style={T.td(i)}>{r[1]}</td>
                       <td style={T.td(i)}>{r[2]}</td>
+                      <td style={T.td(i)}>{r[3]}</td>
+                      <td style={T.td(i)}>{r[4]}</td>
+                      <td style={T.td(i)}>{r[5]}</td>
+                      <td style={T.td(i)}><Link text={r[6] as string} url={r[7] as string} /></td>
                     </tr>
                   ))}
                 </tbody>
@@ -813,7 +825,7 @@ export default function Italia() {
             <div style={{ marginTop: '14px', backgroundColor: '#fef3c7', borderRadius: '8px', padding: '12px', border: '1px solid #fbbf24' }}>
               <p style={{ fontSize: '13px', margin: 0, lineHeight: '1.6' }}>
                 <strong>{t.solvencia_ingles}</strong> €5,000 (≈ $5,500 USD)<br />
-                <strong>{t.solvencia_uni}</strong> €8,800 (≈ $9,680 USD)
+                <strong>{t.solvencia_uni}</strong> €8,000 (≈ $8,800 USD)
               </p>
             </div>
             <HackBox text={t.estrategia_hack} />
@@ -825,20 +837,22 @@ export default function Italia() {
             <p style={{ fontSize: '13px', color: '#1a1a2e', marginBottom: '10px', lineHeight: '1.6' }}>{t.edu_en_sub}</p>
             <div style={T.wrap}>
               <table style={T.table}>
-                <thead><tr>{[t.th_uni, t.th_area, t.th_anual].map((h, i) => <th key={i} style={T.th}>{h}</th>)}</tr></thead>
+                <thead><tr>{[t.th_uni, t.th_area, t.th_anual, t.th_usd, t.th_web].map((h, i) => <th key={i} style={T.th}>{h}</th>)}</tr></thead>
                 <tbody>
                   {[
-                    ['Sapienza University Roma', 'Humanidades / Ciencias / IT', '€1,000 - €2,000'],
-                    ['Politecnico di Milano', 'Diseño / Ingeniería / Arquitectura', '€3,900 - €8,000'],
-                    ['University of Bologna', 'Negocios / Ingeniería / Arte', '€2,500 - €5,000'],
-                    ["Ca' Foscari University", 'Economía / Lenguas / Marketing', '€2,800 - €5,500'],
-                    ['Bocconi University', 'Negocios / Finanzas / Economía', '€13,000 - €16,000'],
-                    ['IED Istituto Europeo di Design', 'Diseño / Moda / Comunicación', '€7,000 - €12,000'],
+                    ['Sapienza University Roma', 'Humanidades / Ciencias / IT', '€1,000 - €2,000', '$1,100 - $2,200', 'uniroma1.it', 'https://www.uniroma1.it'],
+                    ['Politecnico di Milano', 'Diseño / Ingeniería / Arquitectura', '€3,900 - €8,000', '$4,290 - $8,800', 'polimi.it', 'https://www.polimi.it'],
+                    ['University of Bologna', 'Negocios / Ingeniería / Arte', '€2,500 - €5,000', '$2,750 - $5,500', 'unibo.it', 'https://www.unibo.it'],
+                    ["Ca' Foscari University", 'Economía / Lenguas / Marketing', '€2,800 - €5,500', '$3,080 - $6,050', 'unive.it', 'https://www.unive.it'],
+                    ['Bocconi University', 'Negocios / Finanzas / Economía', '€13,000 - €16,000', '$14,300 - $17,600', 'unibocconi.it', 'https://www.unibocconi.it'],
+                    ['IED Istituto Europeo di Design', 'Diseño / Moda / Comunicación', '€7,000 - €12,000', '$7,700 - $13,200', 'ied.edu', 'https://www.ied.edu'],
                   ].map((r, i) => (
                     <tr key={i}>
                       <td style={{ ...T.td(i), ...T.bold }}>{r[0]}</td>
                       <td style={T.td(i)}>{r[1]}</td>
                       <td style={T.td(i)}>{r[2]}</td>
+                      <td style={T.td(i)}>{r[3]}</td>
+                      <td style={T.td(i)}><Link text={r[4] as string} url={r[5] as string} /></td>
                     </tr>
                   ))}
                 </tbody>
@@ -848,20 +862,22 @@ export default function Italia() {
             <p style={{ fontSize: '13px', color: '#1a1a2e', marginBottom: '10px', lineHeight: '1.6' }}>{t.edu_it_sub}</p>
             <div style={T.wrap}>
               <table style={T.table}>
-                <thead><tr>{[t.th_uni, t.th_area, t.th_anual].map((h, i) => <th key={i} style={T.th}>{h}</th>)}</tr></thead>
+                <thead><tr>{[t.th_uni, t.th_area, t.th_anual, t.th_usd, t.th_web].map((h, i) => <th key={i} style={T.th}>{h}</th>)}</tr></thead>
                 <tbody>
                   {[
-                    ['Sapienza University Roma', 'Derecho / Medicina / Ciencias', '€300 - €1,500'],
-                    ['University of Bologna', 'Todas las áreas', '€1,000 - €3,000'],
-                    ['University of Padova', 'Medicina / Ingeniería / Ciencias', '€1,500 - €3,500'],
-                    ['Politecnico di Torino', 'Arquitectura / Ingeniería', '€2,000 - €4,000'],
-                    ["Ca' Foscari University", 'Economía / Comercio / Lenguas', '€1,500 - €3,000'],
-                    ['University of Pisa', 'Ciencias / IT / Ingeniería', '€1,000 - €3,000'],
+                    ['Sapienza University Roma', 'Derecho / Medicina / Ciencias', '€300 - €1,500', '$330 - $1,650', 'uniroma1.it', 'https://www.uniroma1.it'],
+                    ['University of Bologna', 'Todas las áreas', '€1,000 - €3,000', '$1,100 - $3,300', 'unibo.it', 'https://www.unibo.it'],
+                    ['University of Padova', 'Medicina / Ingeniería / Ciencias', '€1,500 - €3,500', '$1,650 - $3,850', 'unipd.it', 'https://www.unipd.it'],
+                    ['Politecnico di Torino', 'Arquitectura / Ingeniería', '€2,000 - €4,000', '$2,200 - $4,400', 'polito.it', 'https://www.polito.it'],
+                    ["Ca' Foscari University", 'Economía / Comercio / Lenguas', '€1,500 - €3,000', '$1,650 - $3,300', 'unive.it', 'https://www.unive.it'],
+                    ['University of Pisa', 'Ciencias / IT / Ingeniería', '€1,000 - €3,000', '$1,100 - $3,300', 'unipi.it', 'https://www.unipi.it'],
                   ].map((r, i) => (
                     <tr key={i}>
                       <td style={{ ...T.td(i), ...T.bold }}>{r[0]}</td>
                       <td style={T.td(i)}>{r[1]}</td>
                       <td style={T.td(i)}>{r[2]}</td>
+                      <td style={T.td(i)}>{r[3]}</td>
+                      <td style={T.td(i)}><Link text={r[4] as string} url={r[5] as string} /></td>
                     </tr>
                   ))}
                 </tbody>
@@ -886,7 +902,7 @@ export default function Italia() {
                     ['Marca da Bollo (sello fiscal)', '€16'],
                     ['Dichiarazione di Valore (validación diploma)', '€50 - €150'],
                     ['Solvencia — Italiano (6 meses)', '€5,000'],
-                    ['Solvencia — Universidad/Master', '€8,800'],
+                    ['Solvencia — Universidad/Master', '€8,000'],
                   ].map((r, i) => (
                     <tr key={i}>
                       <td style={{ ...T.td(i), ...T.bold }}>{r[0]}</td>
