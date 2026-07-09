@@ -28,6 +28,8 @@ const translations = {
       { name: 'Corea del Sur', flag: '🇰🇷', duration: '12 meses', age: '18 – 30', system: 'Aplicación directa', difficulty: 'Media', funds: 'Solicitud gratuita', salary: '₩9,860/hora (~$7.50 USD)', color: '#f59e0b' },
       { name: 'Alemania', flag: '🇩🇪', duration: '12 meses', age: '18 – 30', system: 'Consulado', difficulty: 'Baja', funds: '€2,000 – €3,000', salary: '€13.90 – €17/hora', color: '#22c55e' },
       { name: 'Francia', flag: '🇫🇷', duration: '12 meses', age: '18 – 30', system: 'Consulado', difficulty: 'Media', funds: '€2,500 – €3,500', salary: '€12.02 – €15/hora', color: '#f59e0b' },
+      { name: 'España', flag: '🇪🇸', duration: '12 meses', age: '18 – 30', system: 'Consulado', difficulty: 'Media', funds: '€2,000 – €3,000', salary: '€8.90/hora (~$9.79 USD)', color: '#f59e0b' },
+      { name: 'Portugal', flag: '🇵🇹', duration: '12 meses', age: '18 – 30', system: 'Consulado', difficulty: 'Media', funds: '€1,500 – €2,500', salary: '€5.32/hora (~$5.85 USD)', color: '#f59e0b' },
     ],
     sec_comparativa_title: 'Comparativa WHV',
     sec_comparativa_sub: 'Salarios, costo de vida, empleo y clima de los principales destinos',
@@ -39,6 +41,8 @@ const translations = {
       ['🇮🇪 Irlanda', '€13.50/h (~$15.53 USD)', 'Alto', '⭐⭐⭐⭐⭐', 'Frío'],
       ['🇯🇵 Japón', '¥1,055/h (~$7 USD)', 'Medio', '⭐⭐⭐', 'Variado'],
       ['🇰🇷 Corea del Sur', '₩9,860/h (~$7.50 USD)', 'Medio', '⭐⭐⭐', 'Variado'],
+      ['🇪🇸 España', '€8.90/h (~$9.79 USD)', 'Medio', '⭐⭐⭐', 'Cálido'],
+      ['🇵🇹 Portugal', '€5.32/h (~$5.85 USD)', 'Medio-Bajo', '⭐⭐⭐', 'Templado'],
     ],
     sec_extension_title: 'Extensión de Visa',
     extension_intro: 'Algunos países permiten extender tu WHV si cumples trabajo estacional o regional.',
@@ -72,6 +76,18 @@ const translations = {
     como_hack: 'El error más común es esperar a que abran los cupos para preparar documentos. La estrategia correcta: crear cuentas en portales de inmigración, preparar documentos y tener fondos listos ANTES de la apertura. Así aplicas en los primeros minutos.',
     sec_costos_title: 'Costos de Aplicación por País',
     th_pais: 'País', th_costo: 'Costo', th_sistema: 'Sistema', th_portal: 'Portal Oficial',
+    costos_rows: [
+      ['🇦🇺 Australia', '$635 AUD', 'Directa', 'immi.homeaffairs.gov.au', 'https://immi.homeaffairs.gov.au'],
+      ['🇳🇿 Nueva Zelanda', '$455 NZD', 'Directa', 'immigration.govt.nz', 'https://www.immigration.govt.nz'],
+      ['🇨🇦 Canadá', '$172 CAD', 'Pool/sorteo', 'canada.ca/iec', 'https://www.canada.ca/iec'],
+      ['🇩🇪 Alemania', '€75', 'Consulado', 'auswaertiges-amt.de', 'https://www.auswaertiges-amt.de'],
+      ['🇫🇷 Francia', '€99', 'Consulado', 'france-visas.gouv.fr', 'https://france-visas.gouv.fr'],
+      ['🇮🇪 Irlanda', '€60 – €100', 'Bilateral', 'irishimmigration.ie', 'https://www.irishimmigration.ie'],
+      ['🇯🇵 Japón', '¥50,000 (~$330 USD)', 'Consulado', 'mofa.go.jp', 'https://www.mofa.go.jp'],
+      ['🇰🇷 Corea del Sur', 'Gratis', 'Directa', 'hikorea.go.kr', 'https://www.hikorea.go.kr'],
+      ['🇪🇸 España', '€80', 'Consulado', 'exteriores.gob.es', 'https://www.exteriores.gob.es'],
+      ['🇵🇹 Portugal', '€75', 'Consulado', 'vistos.mne.gov.pt', 'https://vistos.mne.gov.pt'],
+    ],
     costos_hack: 'Si tu objetivo es obtener la visa rápido, los mejores destinos son Australia, Nueva Zelanda y Alemania. Procesos simples, sin sorteo y con respuesta en 2-4 semanas. Canadá puede tardar meses por el sistema de pool.',
     sec_checklist_title: 'Checklist de Documentos',
     checklist: [
@@ -86,8 +102,21 @@ const translations = {
     checklist_hack: 'El requisito oficial de fondos suele ser $2,500-5,000 pero ese es el mínimo migratorio. La estrategia real es llegar con $4,000-6,000 para cubrir los primeros 30-60 días mientras encuentras trabajo sin presión.',
     sec_bancos_title: 'Opciones Bancarias',
     bancos_intro: 'Para una Working Holiday abre primero Wise o Revolut antes de viajar. Luego abre banco local en el país destino.',
+    bancos_rows: [
+      ['Wise', 'Digital', 'Transferencias internacionales baratas + múltiples divisas. Abre antes de viajar.', 'wise.com', 'https://wise.com'],
+      ['Revolut', 'Digital', 'Tarjeta virtual inmediata. Ideal para primeras semanas.', 'revolut.com', 'https://revolut.com'],
+      ['ANZ / Commonwealth', 'Tradicional AUS/NZ', 'Los más usados en Australia y Nueva Zelanda.', 'anz.com', 'https://anz.com'],
+      ['Scotiabank', 'Tradicional CA', 'Popular entre WHV en Canadá.', 'scotiabank.com', 'https://scotiabank.com'],
+    ],
     sec_vivienda_title: 'Protocolo de Vivienda',
     vivienda_intro: 'Reserva hostel o Airbnb para las primeras 1-2 semanas. Busca habitación permanente desde ahí.',
+    vivienda_rows: [
+      ['Airbnb', 'Alojamiento temporal', 'Primeras semanas — base para buscar permanente', 'airbnb.com', 'https://airbnb.com'],
+      ['Booking', 'Hostels económicos', 'Ideal para llegar sin compromisos largos', 'booking.com', 'https://booking.com'],
+      ['Flatmates (AUS/NZ)', 'Habitaciones compartidas', 'El portal #1 en Australia y NZ para WHV', 'flatmates.com.au', 'https://flatmates.com.au'],
+      ['Gumtree', 'Clasificados AUS/NZ', 'Habitaciones rápidas para viajeros', 'gumtree.com', 'https://gumtree.com'],
+      ['Facebook Groups', 'Comunidad WHV', 'Grupos de viajeros WHV por país destino', 'facebook.com', 'https://facebook.com'],
+    ],
     vivienda_hack: 'Muchos WHV encuentran alojamiento a través de networking con otros viajeros. En ciudades con alta rotación laboral, las habitaciones se anuncian primero en grupos de Facebook o WhatsApp antes que en portales. Únete a grupos WHV de tu destino antes de volar.',
     sec_crisis_title: 'Crisis y Contingencia',
     crisis_items: [
@@ -125,6 +154,8 @@ const translations = {
       { name: 'Coreia do Sul', flag: '🇰🇷', duration: '12 meses', age: '18 – 30', system: 'Solicitação direta', difficulty: 'Media', funds: 'Solicitação gratuita', salary: '₩9.860/hora (~$7,50 USD)', color: '#f59e0b' },
       { name: 'Alemanha', flag: '🇩🇪', duration: '12 meses', age: '18 – 30', system: 'Consulado', difficulty: 'Baja', funds: '€2.000 – €3.000', salary: '€13,90 – €17/hora', color: '#22c55e' },
       { name: 'França', flag: '🇫🇷', duration: '12 meses', age: '18 – 30', system: 'Consulado', difficulty: 'Media', funds: '€2.500 – €3.500', salary: '€12,02 – €15/hora', color: '#f59e0b' },
+      { name: 'Espanha', flag: '🇪🇸', duration: '12 meses', age: '18 – 30', system: 'Consulado', difficulty: 'Media', funds: '€2.000 – €3.000', salary: '€8,90/hora (~$9,79 USD)', color: '#f59e0b' },
+      { name: 'Portugal', flag: '🇵🇹', duration: '12 meses', age: '18 – 30', system: 'Consulado', difficulty: 'Media', funds: '€1.500 – €2.500', salary: '€5,32/hora (~$5,85 USD)', color: '#f59e0b' },
     ],
     sec_comparativa_title: 'Comparativo WHV',
     sec_comparativa_sub: 'Salários, custo de vida, emprego e clima dos principais destinos',
@@ -136,6 +167,8 @@ const translations = {
       ['🇮🇪 Irlanda', '€13,50/h (~$15,53 USD)', 'Alto', '⭐⭐⭐⭐⭐', 'Frio'],
       ['🇯🇵 Japão', '¥1.055/h (~$7 USD)', 'Médio', '⭐⭐⭐', 'Variado'],
       ['🇰🇷 Coreia do Sul', '₩9.860/h (~$7,50 USD)', 'Médio', '⭐⭐⭐', 'Variado'],
+      ['🇪🇸 Espanha', '€8,90/h (~$9,79 USD)', 'Médio', '⭐⭐⭐', 'Quente'],
+      ['🇵🇹 Portugal', '€5,32/h (~$5,85 USD)', 'Médio-Baixo', '⭐⭐⭐', 'Temperado'],
     ],
     sec_extension_title: 'Extensão de Visto',
     extension_intro: 'Alguns países permitem estender seu WHV se cumprir trabalho sazonal ou regional.',
@@ -169,6 +202,18 @@ const translations = {
     como_hack: 'O erro mais comum é esperar as vagas abrirem para preparar documentos. A estratégia correta: criar contas em portais de imigração, preparar documentos e ter fundos prontos ANTES da abertura. Assim você solicita nos primeiros minutos.',
     sec_costos_title: 'Custos de Solicitação por País',
     th_pais: 'País', th_costo: 'Custo', th_sistema: 'Sistema', th_portal: 'Portal Oficial',
+    costos_rows: [
+      ['🇦🇺 Austrália', '$635 AUD', 'Direta', 'immi.homeaffairs.gov.au', 'https://immi.homeaffairs.gov.au'],
+      ['🇳🇿 Nova Zelândia', '$455 NZD', 'Direta', 'immigration.govt.nz', 'https://www.immigration.govt.nz'],
+      ['🇨🇦 Canadá', '$172 CAD', 'Pool/sorteio', 'canada.ca/iec', 'https://www.canada.ca/iec'],
+      ['🇩🇪 Alemanha', '€75', 'Consulado', 'auswaertiges-amt.de', 'https://www.auswaertiges-amt.de'],
+      ['🇫🇷 França', '€99', 'Consulado', 'france-visas.gouv.fr', 'https://france-visas.gouv.fr'],
+      ['🇮🇪 Irlanda', '€60 – €100', 'Bilateral', 'irishimmigration.ie', 'https://www.irishimmigration.ie'],
+      ['🇯🇵 Japão', '¥50.000 (~$330 USD)', 'Consulado', 'mofa.go.jp', 'https://www.mofa.go.jp'],
+      ['🇰🇷 Coreia do Sul', 'Grátis', 'Direta', 'hikorea.go.kr', 'https://www.hikorea.go.kr'],
+      ['🇪🇸 Espanha', '€80', 'Consulado', 'exteriores.gob.es', 'https://www.exteriores.gob.es'],
+      ['🇵🇹 Portugal', '€75', 'Consulado', 'vistos.mne.gov.pt', 'https://vistos.mne.gov.pt'],
+    ],
     costos_hack: 'Se seu objetivo é obter o visto rápido, os melhores destinos são Austrália, Nova Zelândia e Alemanha. Processos simples, sem sorteio e com resposta em 2-4 semanas. O Canadá pode demorar meses pelo sistema de pool.',
     sec_checklist_title: 'Checklist de Documentos',
     checklist: [
@@ -183,8 +228,21 @@ const translations = {
     checklist_hack: 'O requisito oficial de fundos costuma ser $2.500-5.000 mas esse é o mínimo migratório. A estratégia real é chegar com $4.000-6.000 para cobrir os primeiros 30-60 dias enquanto você encontra trabalho sem pressão.',
     sec_bancos_title: 'Opções Bancárias',
     bancos_intro: 'Para um Working Holiday abra primeiro Wise ou Revolut antes de viajar. Depois abra banco local no país de destino.',
+    bancos_rows: [
+      ['Wise', 'Digital', 'Transferências internacionais baratas + múltiplas moedas. Abra antes de viajar.', 'wise.com', 'https://wise.com'],
+      ['Revolut', 'Digital', 'Cartão virtual imediato. Ideal para as primeiras semanas.', 'revolut.com', 'https://revolut.com'],
+      ['ANZ / Commonwealth', 'Tradicional AUS/NZ', 'Os mais usados na Austrália e Nova Zelândia.', 'anz.com', 'https://anz.com'],
+      ['Scotiabank', 'Tradicional CA', 'Popular entre WHV no Canadá.', 'scotiabank.com', 'https://scotiabank.com'],
+    ],
     sec_vivienda_title: 'Protocolo de Moradia',
     vivienda_intro: 'Reserve hostel ou Airbnb para as primeiras 1-2 semanas. Busque quarto permanente a partir daí.',
+    vivienda_rows: [
+      ['Airbnb', 'Alojamento temporário', 'Primeiras semanas — base para buscar permanente', 'airbnb.com', 'https://airbnb.com'],
+      ['Booking', 'Hostels econômicos', 'Ideal para chegar sem compromissos longos', 'booking.com', 'https://booking.com'],
+      ['Flatmates (AUS/NZ)', 'Quartos compartilhados', 'O portal #1 na Austrália e NZ para WHV', 'flatmates.com.au', 'https://flatmates.com.au'],
+      ['Gumtree', 'Classificados AUS/NZ', 'Quartos rápidos para viajantes', 'gumtree.com', 'https://gumtree.com'],
+      ['Facebook Groups', 'Comunidade WHV', 'Grupos de viajantes WHV por país de destino', 'facebook.com', 'https://facebook.com'],
+    ],
     vivienda_hack: 'Muitos WHV encontram alojamento através de networking com outros viajantes. Em cidades com alta rotatividade de trabalho, os quartos são anunciados primeiro em grupos do Facebook ou WhatsApp antes dos portais. Entre em grupos WHV do seu destino antes de viajar.',
     sec_crisis_title: 'Crise e Contingência',
     crisis_items: [
@@ -222,6 +280,8 @@ const translations = {
       { name: 'South Korea', flag: '🇰🇷', duration: '12 months', age: '18 – 30', system: 'Direct application', difficulty: 'Media', funds: 'Free application', salary: '₩9,860/hour (~$7.50 USD)', color: '#f59e0b' },
       { name: 'Germany', flag: '🇩🇪', duration: '12 months', age: '18 – 30', system: 'Consulate', difficulty: 'Baja', funds: '€2,000 – €3,000', salary: '€13.90 – €17/hour', color: '#22c55e' },
       { name: 'France', flag: '🇫🇷', duration: '12 months', age: '18 – 30', system: 'Consulate', difficulty: 'Media', funds: '€2,500 – €3,500', salary: '€12.02 – €15/hour', color: '#f59e0b' },
+      { name: 'Spain', flag: '🇪🇸', duration: '12 months', age: '18 – 30', system: 'Consulate', difficulty: 'Media', funds: '€2,000 – €3,000', salary: '€8.90/hour (~$9.79 USD)', color: '#f59e0b' },
+      { name: 'Portugal', flag: '🇵🇹', duration: '12 months', age: '18 – 30', system: 'Consulate', difficulty: 'Media', funds: '€1,500 – €2,500', salary: '€5.32/hour (~$5.85 USD)', color: '#f59e0b' },
     ],
     sec_comparativa_title: 'WHV Comparison',
     sec_comparativa_sub: 'Wages, cost of living, job availability and climate across top destinations',
@@ -233,6 +293,8 @@ const translations = {
       ['🇮🇪 Ireland', '€13.50/h (~$15.53 USD)', 'High', '⭐⭐⭐⭐⭐', 'Cold'],
       ['🇯🇵 Japan', '¥1,055/h (~$7 USD)', 'Medium', '⭐⭐⭐', 'Varied'],
       ['🇰🇷 South Korea', '₩9,860/h (~$7.50 USD)', 'Medium', '⭐⭐⭐', 'Varied'],
+      ['🇪🇸 Spain', '€8.90/h (~$9.79 USD)', 'Medium', '⭐⭐⭐', 'Warm'],
+      ['🇵🇹 Portugal', '€5.32/h (~$5.85 USD)', 'Medium-Low', '⭐⭐⭐', 'Temperate'],
     ],
     sec_extension_title: 'Visa Extension',
     extension_intro: 'Some countries allow you to extend your WHV if you complete seasonal or regional work.',
@@ -266,6 +328,18 @@ const translations = {
     como_hack: 'The most common mistake is waiting for quotas to open before preparing documents. The right strategy: create accounts on immigration portals, prepare documents and have funds ready BEFORE opening. That way you apply in the first few minutes.',
     sec_costos_title: 'Application Costs by Country',
     th_pais: 'Country', th_costo: 'Cost', th_sistema: 'System', th_portal: 'Official Portal',
+    costos_rows: [
+      ['🇦🇺 Australia', '$635 AUD', 'Direct', 'immi.homeaffairs.gov.au', 'https://immi.homeaffairs.gov.au'],
+      ['🇳🇿 New Zealand', '$455 NZD', 'Direct', 'immigration.govt.nz', 'https://www.immigration.govt.nz'],
+      ['🇨🇦 Canada', '$172 CAD', 'Pool/lottery', 'canada.ca/iec', 'https://www.canada.ca/iec'],
+      ['🇩🇪 Germany', '€75', 'Consulate', 'auswaertiges-amt.de', 'https://www.auswaertiges-amt.de'],
+      ['🇫🇷 France', '€99', 'Consulate', 'france-visas.gouv.fr', 'https://france-visas.gouv.fr'],
+      ['🇮🇪 Ireland', '€60 – €100', 'Bilateral', 'irishimmigration.ie', 'https://www.irishimmigration.ie'],
+      ['🇯🇵 Japan', '¥50,000 (~$330 USD)', 'Consulate', 'mofa.go.jp', 'https://www.mofa.go.jp'],
+      ['🇰🇷 South Korea', 'Free', 'Direct', 'hikorea.go.kr', 'https://www.hikorea.go.kr'],
+      ['🇪🇸 Spain', '€80', 'Consulate', 'exteriores.gob.es', 'https://www.exteriores.gob.es'],
+      ['🇵🇹 Portugal', '€75', 'Consulate', 'vistos.mne.gov.pt', 'https://vistos.mne.gov.pt'],
+    ],
     costos_hack: 'If your goal is to get the visa fast, the best destinations are Australia, New Zealand and Germany. Simple processes, no lottery and response in 2-4 weeks. Canada can take months due to the pool system.',
     sec_checklist_title: 'Documents Checklist',
     checklist: [
@@ -280,8 +354,21 @@ const translations = {
     checklist_hack: 'The official funds requirement is usually $2,500-5,000 but that\'s the migration minimum. The real strategy is to arrive with $4,000-6,000 to cover the first 30-60 days while finding work without pressure.',
     sec_bancos_title: 'Banking Options',
     bancos_intro: 'For a Working Holiday first open Wise or Revolut before traveling. Then open a local bank in the destination country.',
+    bancos_rows: [
+      ['Wise', 'Digital', 'Cheap international transfers + multiple currencies. Open before traveling.', 'wise.com', 'https://wise.com'],
+      ['Revolut', 'Digital', 'Instant virtual card. Ideal for the first weeks.', 'revolut.com', 'https://revolut.com'],
+      ['ANZ / Commonwealth', 'Traditional AUS/NZ', 'The most used in Australia and New Zealand.', 'anz.com', 'https://anz.com'],
+      ['Scotiabank', 'Traditional CA', 'Popular among WHV travelers in Canada.', 'scotiabank.com', 'https://scotiabank.com'],
+    ],
     sec_vivienda_title: 'Housing Protocol',
     vivienda_intro: 'Book a hostel or Airbnb for the first 1-2 weeks. Look for permanent accommodation from there.',
+    vivienda_rows: [
+      ['Airbnb', 'Temporary housing', 'First weeks — base to find permanent housing', 'airbnb.com', 'https://airbnb.com'],
+      ['Booking', 'Budget hostels', 'Ideal for arriving without long commitments', 'booking.com', 'https://booking.com'],
+      ['Flatmates (AUS/NZ)', 'Shared rooms', 'The #1 portal in Australia and NZ for WHV', 'flatmates.com.au', 'https://flatmates.com.au'],
+      ['Gumtree', 'Classifieds AUS/NZ', 'Quick rooms for travelers', 'gumtree.com', 'https://gumtree.com'],
+      ['Facebook Groups', 'WHV community', 'WHV traveler groups by destination country', 'facebook.com', 'https://facebook.com'],
+    ],
     vivienda_hack: 'Many WHV travelers find accommodation through networking with other travelers. In cities with high job turnover, rooms are advertised first in Facebook or WhatsApp groups before portals. Join WHV groups for your destination before flying.',
     sec_crisis_title: 'Crisis & Contingency',
     crisis_items: [
@@ -539,18 +626,7 @@ export default function WorkAndHolidays() {
                 ))}</tr>
               </thead>
               <tbody>
-                {[
-                  ['🇦🇺 Australia', '$635 AUD', 'Directa', 'immi.homeaffairs.gov.au', 'https://immi.homeaffairs.gov.au'],
-                  ['🇳🇿 Nueva Zelanda', '$455 NZD', 'Directa', 'immigration.govt.nz', 'https://www.immigration.govt.nz'],
-                  ['🇨🇦 Canadá', '$172 CAD', 'Pool/sorteo', 'canada.ca/iec', 'https://www.canada.ca/iec'],
-                  ['🇩🇪 Alemania', '€75', 'Consulado', 'auswaertiges-amt.de', 'https://www.auswaertiges-amt.de'],
-                  ['🇫🇷 Francia', '€99', 'Consulado', 'france-visas.gouv.fr', 'https://france-visas.gouv.fr'],
-                  ['🇮🇪 Irlanda', '€60 – €100', 'Bilateral', 'irishimmigration.ie', 'https://www.irishimmigration.ie'],
-                  ['🇯🇵 Japón', '¥50,000 (~$330 USD)', 'Consulado', 'mofa.go.jp', 'https://www.mofa.go.jp'],
-                  ['🇰🇷 Corea del Sur', 'Gratis', 'Directa', 'hikorea.go.kr', 'https://www.hikorea.go.kr'],
-                  ['🇪🇸 España', '€80', 'Consulado', 'exteriores.gob.es', 'https://www.exteriores.gob.es'],
-                  ['🇵🇹 Portugal', '€75', 'Consulado', 'vistos.mne.gov.pt', 'https://vistos.mne.gov.pt'],
-                ].map((r, i) => (
+                {t.costos_rows.map((r, i) => (
                   <tr key={i}>
                     <td style={{ padding: '9px 14px', fontSize: '13px', borderBottom: '1px solid #f0f0f0', backgroundColor: i % 2 === 0 ? 'white' : '#fafafa', fontWeight: '700', color: '#1a1a2e' }}>{r[0]}</td>
                     <td style={{ padding: '9px 14px', fontSize: '13px', borderBottom: '1px solid #f0f0f0', backgroundColor: i % 2 === 0 ? 'white' : '#fafafa', color: '#1a1a2e' }}>{r[1]}</td>
@@ -582,12 +658,7 @@ export default function WorkAndHolidays() {
         <Section id="bancos" emoji="🏦" title={t.sec_bancos_title}>
           <p style={{ fontSize: '14px', color: '#1a1a2e', marginBottom: '12px', lineHeight: '1.6' }}>{t.bancos_intro}</p>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
-            {[
-              ['Wise', 'Digital', 'Transferencias internacionales baratas + múltiples divisas. Abre antes de viajar.', 'wise.com', 'https://wise.com'],
-              ['Revolut', 'Digital', 'Tarjeta virtual inmediata. Ideal para primeras semanas.', 'revolut.com', 'https://revolut.com'],
-              ['ANZ / Commonwealth', 'Tradicional AUS/NZ', 'Los más usados en Australia y Nueva Zelanda.', 'anz.com', 'https://anz.com'],
-              ['Scotiabank', 'Tradicional CA', 'Popular entre WHV en Canadá.', 'scotiabank.com', 'https://scotiabank.com'],
-            ].map((r, i) => (
+            {t.bancos_rows.map((r, i) => (
               <div key={i} style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', backgroundColor: '#f8f7f4', borderRadius: '10px', padding: '12px 14px' }}>
                 <div>
                   <p style={{ fontWeight: '700', fontSize: '13px', margin: '0 0 2px', color: '#1a1a2e' }}>{r[0]} <span style={{ color: '#333333', fontWeight: 'normal', fontSize: '12px' }}>· {r[1]}</span></p>
@@ -603,13 +674,7 @@ export default function WorkAndHolidays() {
           <div style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1539635278303-d4002c07eae3?q=80&w=1170&auto=format&fit=crop")', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', height: '160px', borderRadius: '10px', marginBottom: '14px' }} />
           <p style={{ fontSize: '14px', color: '#1a1a2e', marginBottom: '12px', lineHeight: '1.6' }}>{t.vivienda_intro}</p>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
-            {[
-              ['Airbnb', 'Alojamiento temporal', 'Primeras semanas — base para buscar permanente', 'airbnb.com', 'https://airbnb.com'],
-              ['Booking', 'Hostels económicos', 'Ideal para llegar sin compromisos largos', 'booking.com', 'https://booking.com'],
-              ['Flatmates (AUS/NZ)', 'Habitaciones compartidas', 'El portal #1 en Australia y NZ para WHV', 'flatmates.com.au', 'https://flatmates.com.au'],
-              ['Gumtree', 'Clasificados AUS/NZ', 'Habitaciones rápidas para viajeros', 'gumtree.com', 'https://gumtree.com'],
-              ['Facebook Groups', 'Comunidad WHV', 'Grupos de viajeros WHV por país destino', 'facebook.com', 'https://facebook.com'],
-            ].map((r, i) => (
+            {t.vivienda_rows.map((r, i) => (
               <div key={i} style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', backgroundColor: '#f8f7f4', borderRadius: '10px', padding: '10px 14px' }}>
                 <div>
                   <p style={{ fontWeight: '700', fontSize: '13px', margin: '0 0 2px', color: '#1a1a2e' }}>{r[0]} <span style={{ color: '#333333', fontWeight: 'normal', fontSize: '12px' }}>· {r[1]}</span></p>
