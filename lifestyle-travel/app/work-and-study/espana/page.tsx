@@ -53,6 +53,21 @@ const translations = {
     th_inst: 'Institución', th_nivel: 'Nivel', th_inversion_anual: 'Inversión (año/total)',
     edu_blue: '💰 HACK UNIVERSIDADES PÚBLICAS: Muchas universidades públicas en Andalucía, Valencia y Extremadura cobran tasas muy reducidas incluso para estudiantes internacionales. Un Máster de €2,500 vs €15,000+ en Irlanda. Mismo título europeo reconocido.',
     edu_hack: 'Universidad de Jaén o Extremadura son las más baratas de España para internacionales. Mismo título europeo que UCM o UAB pero hasta 80% menos costo. La diferencia de precio puede ser de €10,000+ por año.',
+    sec_fp_title: 'Cursos Técnicos con Empleo Garantizado',
+    fp_intro: 'Estos son cursos técnicos de 2 años (conocidos oficialmente como FP Dual) donde estudias en el centro Y trabajas en una empresa real desde el primer año — no al final, como en la mayoría de carreras. Es obligatorio en toda España desde 2025. La ventaja: sales con experiencia real, cotizando a la Seguridad Social desde el día 1, y muchas empresas contratan directamente a quien ya formaron. Según el Ministerio de Educación, el 70% de los titulados consigue empleo en los 6 meses posteriores.',
+    th_centro_fp: 'Centro', th_ciudad_fp: 'Ciudades', th_duracion_fp: 'Duración', th_precio_fp: 'Precio/año', th_web_fp: 'Website',
+    fp_blue: '🔵 DATO OFICIAL (Ministerio de Educación): Cotizas a la Seguridad Social desde el primer día en modalidad con contrato — esto genera derechos futuros (paro, jubilación). Las empresas reciben hasta 95% de bonificación en cuotas por contratar alumnos en FP Dual, por eso muchas SÍ convierten el contrato de formación en indefinido al terminar.',
+    fp_visa_blue: '🔵 PROCESO MIGRATORIO: Es el mismo Visado Tipo D + TIE que ya conoces del resto del blueprint, pero con un paso extra exclusivo de FP: debes HOMOLOGAR tu Bachillerato (o secundaria completa para Grado Medio) ante el Ministerio de Educación español. Es el trámite que más tarda — empiézalo con meses de anticipación. Mientras se resuelve, puedes matricularte con un "Volante de Inscripción Condicional" sin esperar la aprobación final.',
+    fp_familias_head: '📊 Familias Profesionales con Mayor Empleabilidad (dato oficial SEPE/Observatorio FP)',
+    th_familia: 'Familia', th_empleabilidad: 'Empleabilidad', th_salidas: 'Ejemplos de salida',
+    fp_familias: [
+      ['Informática y Comunicaciones', '+90% inserción laboral', 'Desarrollo de apps, administración de sistemas, ciberseguridad'],
+      ['Sanidad', '~85% inserción laboral', 'Cuidados Auxiliares de Enfermería, Laboratorio Clínico, Radioterapia'],
+      ['Comercio y Marketing', '~78% inserción laboral', 'Gestión comercial, marketing digital, comercio internacional'],
+      ['Administración y Gestión', 'Alta inserción (Grado Medio)', 'Gestión administrativa, contabilidad, RRHH'],
+      ['Instalación y Mantenimiento', 'Alta inserción (Grado Superior)', 'Mantenimiento industrial, climatización, energías renovables'],
+    ],
+    fp_hack: 'Cesur no exige nota de corte para acceder (a diferencia de los centros públicos), lo que lo hace más accesible si vienes de fuera del sistema educativo español. Si tu presupuesto es muy ajustado, revisa también la oferta pública de FP en tu Comunidad Autónoma — las tasas son mucho más bajas, pero necesitas nota de corte y hay menos plazas para extranjeros recién llegados.',
     sec_gastos_title: 'Gastos Obligatorios No Incluidos',
     gastos_intro: 'Estos son los costos que tu escuela NO incluye. El seguro médico en España debe ser de una compañía española, sin copagos ni carencias — no vale cualquier seguro internacional.',
     th_concepto: 'Concepto', th_costo_eur: 'Costo (EUR)', th_usd: '≈ USD', th_oblig: 'Obligatorio',
@@ -222,6 +237,21 @@ const translations = {
     th_inst: 'Instituição', th_nivel: 'Nível', th_inversion_anual: 'Investimento (ano/total)',
     edu_blue: '💰 HACK UNIVERSIDADES PÚBLICAS: Muitas universidades públicas na Andaluzia, Valência e Extremadura cobram taxas muito reduzidas mesmo para estudantes internacionais. Um Mestrado de €2.500 vs €15.000+ na Irlanda. Mesmo título europeu reconhecido.',
     edu_hack: 'Universidade de Jaén ou Extremadura são as mais baratas da Espanha para internacionais. Mesmo título europeu que UCM ou UAB mas até 80% menos custo. A diferença de preço pode ser de €10.000+ por ano.',
+    sec_fp_title: 'Cursos Técnicos com Emprego Garantido',
+    fp_intro: 'São cursos técnicos de 2 anos (conhecidos oficialmente como FP Dual) onde você estuda no centro E trabalha em uma empresa real desde o primeiro ano — não no final, como na maioria dos cursos. É obrigatório em toda a Espanha desde 2025. A vantagem: você sai com experiência real, contribuindo para a Seguridade Social desde o dia 1, e muitas empresas contratam diretamente quem já formaram. Segundo o Ministério da Educação, 70% dos formados conseguem emprego nos 6 meses seguintes.',
+    th_centro_fp: 'Centro', th_ciudad_fp: 'Cidades', th_duracion_fp: 'Duração', th_precio_fp: 'Preço/ano', th_web_fp: 'Website',
+    fp_blue: '🔵 DADO OFICIAL (Ministério da Educação): Você cotiza para a Seguridade Social desde o primeiro dia na modalidade com contrato — isso gera direitos futuros (seguro-desemprego, aposentadoria). As empresas recebem até 95% de bonificação nas cotas por contratar alunos em FP Dual, por isso muitas convertem o contrato de formação em efetivo ao terminar.',
+    fp_visa_blue: '🔵 PROCESSO MIGRATÓRIO: É o mesmo Visto Tipo D + TIE que você já conhece do resto do blueprint, mas com um passo extra exclusivo da FP: você deve HOMOLOGAR seu Ensino Médio (ou fundamental completo para Grau Médio) junto ao Ministério da Educação espanhol. É o trâmite que mais demora — comece com meses de antecedência. Enquanto se resolve, você pode se matricular com um "Volante de Inscripción Condicional" sem esperar a aprovação final.',
+    fp_familias_head: '📊 Famílias Profissionais com Maior Empregabilidade (dado oficial SEPE/Observatório FP)',
+    th_familia: 'Família', th_empleabilidad: 'Empregabilidade', th_salidas: 'Exemplos de saída',
+    fp_familias: [
+      ['Informática e Comunicações', '+90% inserção no mercado', 'Desenvolvimento de apps, administração de sistemas, cibersegurança'],
+      ['Saúde', '~85% inserção no mercado', 'Cuidados Auxiliares de Enfermagem, Laboratório Clínico, Radioterapia'],
+      ['Comércio e Marketing', '~78% inserção no mercado', 'Gestão comercial, marketing digital, comércio internacional'],
+      ['Administração e Gestão', 'Alta inserção (Grau Médio)', 'Gestão administrativa, contabilidade, RH'],
+      ['Instalação e Manutenção', 'Alta inserção (Grau Superior)', 'Manutenção industrial, climatização, energias renováveis'],
+    ],
+    fp_hack: 'A Cesur não exige nota de corte para ingressar (diferente dos centros públicos), o que a torna mais acessível se você vem de fora do sistema educacional espanhol. Se seu orçamento for muito apertado, veja também a oferta pública de FP na sua Comunidade Autônoma — as taxas são muito mais baixas, mas você precisa de nota de corte e há menos vagas para estrangeiros recém-chegados.',
     sec_gastos_title: 'Despesas Obrigatórias Não Incluídas',
     gastos_intro: 'Estes são os custos que sua escola NÃO inclui. O seguro médico na Espanha deve ser de uma empresa espanhola, sem copagamentos nem carências — não vale qualquer seguro internacional.',
     th_concepto: 'Conceito', th_costo_eur: 'Custo (EUR)', th_usd: '≈ USD', th_oblig: 'Obrigatório',
@@ -391,6 +421,21 @@ const translations = {
     th_inst: 'Institution', th_nivel: 'Level', th_inversion_anual: 'Investment (year/total)',
     edu_blue: '💰 PUBLIC UNIVERSITY HACK: Many public universities in Andalusia, Valencia and Extremadura charge very reduced fees even for international students. A Master\'s for €2,500 vs €15,000+ in Ireland. Same recognized European degree.',
     edu_hack: 'University of Jaén or Extremadura are the cheapest in Spain for internationals. Same European degree as UCM or UAB but up to 80% less cost. The price difference can be €10,000+ per year.',
+    sec_fp_title: 'Technical Courses with Guaranteed Employment',
+    fp_intro: 'These are 2-year technical courses (officially called FP Dual) where you study at the center AND work at a real company starting year one — not at the end, like most degrees. It has been mandatory across Spain since 2025. The advantage: you graduate with real experience, contributing to Social Security from day one, and many companies hire directly the students they trained. According to the Ministry of Education, 70% of graduates find employment within 6 months.',
+    th_centro_fp: 'Center', th_ciudad_fp: 'Cities', th_duracion_fp: 'Duration', th_precio_fp: 'Price/year', th_web_fp: 'Website',
+    fp_blue: '🔵 OFFICIAL DATA (Ministry of Education): You contribute to Social Security from day one in the contract modality — this builds future rights (unemployment benefits, retirement). Companies get up to 95% rebates on contributions for hiring FP Dual students, which is why many convert the training contract into a permanent one after graduation.',
+    fp_visa_blue: '🔵 IMMIGRATION PROCESS: It\'s the same Type D Visa + TIE you already know from the rest of the blueprint, but with one extra step exclusive to FP: you must HOMOLOGATE your high school diploma (or full secondary education for Mid-level) with the Spanish Ministry of Education. This is the step that takes longest — start it months in advance. While it\'s pending, you can enroll conditionally with a "Volante de Inscripción Condicional" without waiting for final approval.',
+    fp_familias_head: '📊 Professional Fields with Highest Employability (official SEPE/FP Observatory data)',
+    th_familia: 'Field', th_empleabilidad: 'Employability', th_salidas: 'Example roles',
+    fp_familias: [
+      ['IT and Communications', '90%+ job placement', 'App development, systems administration, cybersecurity'],
+      ['Healthcare', '~85% job placement', 'Nursing assistant care, clinical lab, radiotherapy'],
+      ['Commerce and Marketing', '~78% job placement', 'Sales management, digital marketing, international trade'],
+      ['Administration and Management', 'High placement (Mid-level)', 'Administrative management, accounting, HR'],
+      ['Installation and Maintenance', 'High placement (Higher-level)', 'Industrial maintenance, HVAC, renewable energy'],
+    ],
+    fp_hack: 'Cesur doesn\'t require a minimum entry grade (unlike public centers), making it more accessible if you\'re coming from outside the Spanish education system. If your budget is tight, also check the public FP offerings in your region — fees are much lower, but you need a competitive entry grade and there are fewer spots for recently arrived foreigners.',
     sec_gastos_title: 'Mandatory Costs Not Included',
     gastos_intro: 'These are costs your school does NOT include. Health insurance in Spain must be from a Spanish company, with no copayments or waiting periods — international insurance is not accepted.',
     th_concepto: 'Item', th_costo_eur: 'Cost (EUR)', th_usd: '≈ USD', th_oblig: 'Mandatory',
@@ -766,6 +811,51 @@ export default function Espana() {
           </div>
           <BlueBox text={t.edu_blue} />
           <HackBox text={t.edu_hack} />
+        </Section>
+
+        {/* CURSOS TÉCNICOS / FP DUAL */}
+        <Section id="fpdual" emoji="🛠️" title={t.sec_fp_title}>
+          <Intro text={t.fp_intro} />
+          <div style={T.wrap}>
+            <table style={T.table}>
+              <thead><tr>{[t.th_centro_fp, t.th_ciudad_fp, t.th_duracion_fp, t.th_precio_fp, t.th_web_fp].map((h, i) => <th key={i} style={T.th}>{h}</th>)}</tr></thead>
+              <tbody>
+                {[
+                  ['Cesur (presencial)', 'Madrid, Barcelona, Málaga, Sevilla, Zaragoza +15 ciudades', '2 años (Grado Superior)', '€3,000 – €5,000', 'cesurformacion.com', 'https://www.cesurformacion.com'],
+                  ['Cesur (online)', 'Nacional / Online', '2 años (Grado Superior)', 'desde €82/mes', 'cesurformacion.com', 'https://www.cesurformacion.com'],
+                  ['Linkia FP (online)', 'Nacional / Online', '2 años (Grado Superior)', '~€1,800/año', 'linkiafp.es', 'https://www.linkiafp.es'],
+                  ['Linkia FP (presencial)', 'Varias ciudades', '2 años (Grado Superior)', '~€2,800/año', 'linkiafp.es', 'https://www.linkiafp.es'],
+                  ['ITEP', 'Varias ciudades', '2 años (Grado Superior)', '€1,500 – €3,000/año', 'itep.edu.es', 'https://www.itep.edu.es'],
+                ].map((r, i) => (
+                  <tr key={i}>
+                    <td style={{ ...T.td(i), ...T.bold }}>{r[0]}</td>
+                    <td style={T.td(i)}>{r[1]}</td>
+                    <td style={T.td(i)}>{r[2]}</td>
+                    <td style={T.td(i)}>{r[3]}</td>
+                    <td style={T.td(i)}><Link text={r[4] as string} url={r[5] as string} /></td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <BlueBox text={t.fp_blue} />
+          <BlueBox text={t.fp_visa_blue} />
+          <SubHead text={t.fp_familias_head} />
+          <div style={T.wrap}>
+            <table style={T.table}>
+              <thead><tr>{[t.th_familia, t.th_empleabilidad, t.th_salidas].map((h, i) => <th key={i} style={T.th}>{h}</th>)}</tr></thead>
+              <tbody>
+                {t.fp_familias.map((r, i) => (
+                  <tr key={i}>
+                    <td style={{ ...T.td(i), ...T.bold }}>{r[0]}</td>
+                    <td style={{ ...T.td(i), color: '#166534', fontWeight: '600' }}>{r[1]}</td>
+                    <td style={T.td(i)}>{r[2]}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <HackBox text={t.fp_hack} />
         </Section>
 
         {/* GASTOS */}
