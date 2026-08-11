@@ -714,7 +714,7 @@ export default function Irlanda() {
                   ['Central School of English', 'Dublin', '€3,000', '$3,300', '€2,700', '$2,970', 'centralschool.ie', 'https://centralschool.ie'],
                   ['ICOT College Dublin', 'Dublin 1/2', '€3,000', '$3,300', '€2,800', '$3,080', 'icot.ie', 'https://icot.ie'],
                   ['ULearn English School', 'Dublin 1', '€3,100', '$3,410', '€2,800', '$3,080', 'ulearnschool.com', 'https://ulearnschool.com'],
-                  ['Erin School of English', 'Dublin 1', '€3,200', '$3,520', '€2,900', '$3,190', 'erincollege.com', 'https://erincollege.com'],
+                  ['Erin School of English', 'Dublin 1', '€2,645', '$2,910', '€2,145', '$2,360', 'erincollege.com', 'https://erincollege.com'],
                   ['Ned Training Centre', 'Dublin 1', '€3,200', '$3,520', '€2,900', '$3,190', 'ned.ie', 'https://ned.ie'],
                   ['GoLearn', 'Dublin 1', '€3,300', '$3,630', '€3,000', '$3,300', 'golearnireland.com', 'https://golearnireland.com'],
                   ['Seda College', 'Dublin 1', '€3,500', '$3,850', '€3,200', '$3,520', 'seda.college', 'https://seda.college'],
