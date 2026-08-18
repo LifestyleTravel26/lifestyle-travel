@@ -45,6 +45,19 @@ DUBAI (UAE):
 - Salaries: AED 2,000-4,000/month hospitality, AED 3,000-6,000 tech
 - Rent: AED 2,500-4,000/month for a room
 
+ITALY:
+- Visto per Studio (student visa), 20h/week work during classes, no official hour limit during holidays
+- Solvency: €5,000 for Italian language school, €8,000 for university programs
+- Permesso di Soggiorno: €80-€120, must register within 8 business days of arrival
+- Minimum wage: no national minimum, market rate €8.24-€10/hour
+- Salaries: Hospitality €8.24-€10/h, Cleaning €8.24-€9/h, Retail €8.24-€10/h
+- Monthly (20h/week): €660-€800
+- Popular cities: Rome, Milan, Florence
+- Italian schools from €2,500-€3,500/year
+- Rent: €350-€600/month for a room (Rome €400-600, Milan €450-700, Florence €350-550)
+- Unique advantage: citizenship by Italian descent possible for many Latin Americans
+- Note: Italy has the slowest bureaucracy in Europe — Permesso di Soggiorno can take up to 6 months
+
 SPAIN:
 - 30h/week work permitted
 - Solvency: €7,200-€8,400 (IPREM based)
