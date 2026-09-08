@@ -6,12 +6,88 @@ type ChatMessage = {
   content: string
 }
 
+// ─────────────────────────────────────────────
+// SECURITY CONFIG — adjust these if needed
+// ─────────────────────────────────────────────
+const ALLOWED_ORIGINS = [
+  'https://lifestylentravel.com',
+  'https://www.lifestylentravel.com',
+  // add your Vercel preview domain here too if you test on it, e.g.:
+  // 'https://lifestyle-travel.vercel.app',
+]
+
+const MAX_MESSAGE_LENGTH = 2000 // characters per message
+const MAX_MESSAGES_IN_THREAD = 20 // how many turns of history allowed per request
+const RATE_LIMIT_WINDOW_MS = 60 * 60 * 1000 // 1 hour
+const RATE_LIMIT_MAX_REQUESTS = 15 // max requests per IP per window
+
+// Simple in-memory rate limiter.
+// NOTE: this resets on cold starts and isn't shared across serverless instances,
+// so it's a speed bump, not a perfect wall. It stops casual/scripted abuse.
+// For a stronger guarantee later, move this to Upstash Redis or Vercel KV.
+const requestLog = new Map<string, number[]>()
+
+function isRateLimited(ip: string): boolean {
+  const now = Date.now()
+  const timestamps = requestLog.get(ip) ?? []
+  const recent = timestamps.filter(t => now - t < RATE_LIMIT_WINDOW_MS)
+
+  if (recent.length >= RATE_LIMIT_MAX_REQUESTS) {
+    requestLog.set(ip, recent)
+    return true
+  }
+
+  recent.push(now)
+  requestLog.set(ip, recent)
+  return false
+}
+
+function getClientIp(request: NextRequest): string {
+  const forwarded = request.headers.get('x-forwarded-for')
+  if (forwarded) return forwarded.split(',')[0].trim()
+  return request.headers.get('x-real-ip') ?? 'unknown'
+}
+
+function isAllowedOrigin(request: NextRequest): boolean {
+  const origin = request.headers.get('origin')
+  const referer = request.headers.get('referer')
+
+  if (!origin && referer) {
+    return ALLOWED_ORIGINS.some(allowed => referer.startsWith(allowed))
+  }
+
+  if (!origin) return false
+
+  return ALLOWED_ORIGINS.includes(origin)
+}
+
+// ─────────────────────────────────────────────
+
 const SYSTEM_PROMPT = `You are a migration assistant for Lifestyle & Travel (lifestylentravel.com), a platform that helps Latin Americans emigrate and work legally abroad. You are an expert in visas, immigration, and working abroad for Latin Americans.
 
 Always respond in the same language the user writes in (Spanish, Portuguese, or English).
 Be concise, practical and actionable. Maximum 3-4 paragraphs per response.
 Always recommend checking official immigration portals for the latest requirements.
 If asked about pricing, mention: Blueprint Individual €14.99, Full Access €39.99, Orientation Call €59.99.
+
+FORMATTING RULES (critical — the chat widget displays plain text only, it does NOT render markdown):
+- NEVER use asterisks (*) for bold or emphasis, under any circumstance
+- NEVER use pipe tables (|) or any markdown table syntax
+- NEVER use markdown headers (#, ##)
+- NEVER use numbered markdown lists like "1." followed by bold text
+- For lists, use a simple dash (-) or a single emoji at the start of the line, one item per line, plain text only
+- For any comparison (prices, platforms, countries), write it as separate short lines, NOT a table — e.g.:
+  Worldpackers — $49/año — muchos proyectos en Bali
+  Workaway — $49/año — gran variedad de proyectos
+  (each on its own line, no pipes, no dashes-as-separators, no header row)
+- Emojis are fine and encouraged for visual structure
+- Keep paragraphs short with line breaks between ideas
+- Before sending your response, double check it contains zero asterisks and zero pipe characters
+
+SOFT UPSELL GUIDANCE:
+- Answer every question fully and helpfully.
+- After giving a complete answer, when it fits naturally, you may mention one specific concrete benefit of the Full Access blueprint or the 1-on-1 Orientation Call relevant to what they just asked.
+- Don't pitch in every single message — once every 2-3 responses is enough.
 
 ---
 
@@ -197,7 +273,8 @@ function normalizeMessages(messages: unknown): ChatMessage[] {
         typeof m.content === 'string' &&
         m.content.trim().length > 0
     )
-    .map(m => ({ role: m.role, content: m.content.trim() }))
+    .map(m => ({ role: m.role, content: m.content.trim().slice(0, MAX_MESSAGE_LENGTH) }))
+    .slice(-MAX_MESSAGES_IN_THREAD)
 }
 
 function buildApiMessages(messages: ChatMessage[]): ChatMessage[] {
@@ -220,8 +297,50 @@ function buildApiMessages(messages: ChatMessage[]): ChatMessage[] {
   return result
 }
 
+/**
+ * Strips any markdown formatting the model produced anyway (belt-and-suspenders
+ * on top of the prompt instructions above, since models sometimes slip back
+ * into markdown habits, especially with tables and bold text).
+ */
+function stripMarkdown(text: string): string {
+  return text
+    // pipe tables: turn "| a | b |" rows into "a — b"
+    .split('\n')
+    .map(line => {
+      const trimmed = line.trim()
+      if (trimmed.startsWith('|') && trimmed.endsWith('|')) {
+        const cells = trimmed
+          .split('|')
+          .map(c => c.trim())
+          .filter(c => c.length > 0 && !/^-+$/.test(c))
+        return cells.join(' — ')
+      }
+      return line
+    })
+    .join('\n')
+    // bold/italic asterisks
+    .replace(/\*\*(.*?)\*\*/g, '$1')
+    .replace(/\*(.*?)\*/g, '$1')
+    // markdown headers
+    .replace(/^#{1,6}\s*/gm, '')
+    // leftover stray pipes/asterisks
+    .replace(/\|/g, ' — ')
+    .replace(/\*/g, '')
+}
+
 export async function POST(request: NextRequest) {
   try {
+    if (!isAllowedOrigin(request)) {
+      console.warn('AI Chat blocked: disallowed origin', request.headers.get('origin'), request.headers.get('referer'))
+      return NextResponse.json({ error: 'Forbidden' }, { status: 403 })
+    }
+
+    const ip = getClientIp(request)
+    if (isRateLimited(ip)) {
+      console.warn('AI Chat blocked: rate limit exceeded', ip)
+      return NextResponse.json({ error: 'Too many requests, please try again later' }, { status: 429 })
+    }
+
     if (!process.env.ANTHROPIC_API_KEY) {
       console.error('AI Chat error: ANTHROPIC_API_KEY is not configured')
       return NextResponse.json({ error: 'AI service not configured' }, { status: 503 })
@@ -252,7 +371,8 @@ export async function POST(request: NextRequest) {
       messages: apiMessages,
     })
 
-    const text = response.content[0]?.type === 'text' ? response.content[0].text : ''
+    const rawText = response.content[0]?.type === 'text' ? response.content[0].text : ''
+    const text = stripMarkdown(rawText)
 
     if (!text) {
       console.error('AI Chat error: empty response from model', response)
