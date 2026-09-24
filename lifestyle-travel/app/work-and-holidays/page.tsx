@@ -1,5 +1,5 @@
 'use client'
-import { useState, useRef } from 'react'
+import { useState } from 'react'
 import Link from 'next/link'
 import { useLanguage } from '../context/LanguageContext'
 import LanguageSwitcher from '../components/LanguageSwitcher'
@@ -407,7 +407,6 @@ const countries = [
 export default function WorkAndHolidays() {
   const [selectedCountry, setSelectedCountry] = useState<string | null>(null)
   const [openSection, setOpenSection] = useState<string | null>(null)
-  const resultRef = useRef<HTMLDivElement>(null)
   const { locale } = useLanguage()
   const { hasAccess, loading } = usePurchase()
   const t = translations[locale]
@@ -415,13 +414,7 @@ export default function WorkAndHolidays() {
   const toggle = (s: string) => setOpenSection(openSection === s ? null : s)
 
   const handleSelectCountry = (name: string) => {
-    const next = selectedCountry === name ? null : name
-    setSelectedCountry(next)
-    if (next) {
-      setTimeout(() => {
-        resultRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' })
-      }, 80)
-    }
+    setSelectedCountry(prev => (prev === name ? null : name))
   }
 
   const HackBox = ({ text }: { text: string }) => (
@@ -444,8 +437,6 @@ export default function WorkAndHolidays() {
     </div>
   )
 
-  const selected = countries.find(c => c.name === selectedCountry)
-
   return (
     <main style={{ minHeight: '100vh', backgroundColor: '#f8f7f4', fontFamily: 'Inter, system-ui, sans-serif' }}>
 
@@ -466,54 +457,52 @@ export default function WorkAndHolidays() {
 
       <div style={{ padding: '24px 20px 40px', maxWidth: '600px', margin: '0 auto' }}>
 
-        {/* SELECTOR */}
+        {/* SELECTOR — el resultado ahora aparece inline, pegado al país seleccionado */}
         <div style={{ backgroundColor: 'white', borderRadius: '16px', padding: '20px', boxShadow: '0 2px 8px rgba(0,0,0,0.07)', marginBottom: '20px' }}>
           <h2 style={{ fontSize: '18px', fontWeight: 'bold', marginBottom: '4px', color: '#1a1a2e' }}>{t.selector_title}</h2>
           <p style={{ color: '#333333', fontSize: '13px', marginBottom: '16px' }}>{t.selector_sub}</p>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(140px, 1fr))', gap: '8px' }}>
             {countries.map(c => (
-              <button
-                key={c.name}
-                onClick={() => handleSelectCountry(c.name)}
-                style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '10px 10px', borderRadius: '10px', border: selectedCountry === c.name ? '2px solid #e8572a' : '2px solid #e5e7eb', backgroundColor: selectedCountry === c.name ? '#fff5f2' : 'white', cursor: 'pointer', gap: '4px', minWidth: 0, width: '100%' }}>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '5px', minWidth: 0, overflow: 'hidden' }}>
-                  <span style={{ fontSize: '18px', flexShrink: 0 }}>{c.flag}</span>
-                  <span style={{ fontSize: c.name.length > 10 ? '10px' : '12px', fontWeight: '600', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis', color: '#1a1a2e' }}>{c.name}</span>
-                </div>
-                <span style={{ backgroundColor: c.levelColor, color: 'white', borderRadius: '10px', padding: '2px 6px', fontSize: '9px', fontWeight: 'bold', whiteSpace: 'nowrap', flexShrink: 0 }}>
-                  {t.levels[c.level as keyof typeof t.levels]}
-                </span>
-              </button>
+              <div key={c.name} style={{ display: 'contents' }}>
+                <button
+                  onClick={() => handleSelectCountry(c.name)}
+                  style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '10px 10px', borderRadius: '10px', border: selectedCountry === c.name ? '2px solid #e8572a' : '2px solid #e5e7eb', backgroundColor: selectedCountry === c.name ? '#fff5f2' : 'white', cursor: 'pointer', gap: '4px', minWidth: 0, width: '100%' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '5px', minWidth: 0, overflow: 'hidden' }}>
+                    <span style={{ fontSize: '18px', flexShrink: 0 }}>{c.flag}</span>
+                    <span style={{ fontSize: c.name.length > 10 ? '10px' : '12px', fontWeight: '600', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis', color: '#1a1a2e' }}>{c.name}</span>
+                  </div>
+                  <span style={{ backgroundColor: c.levelColor, color: 'white', borderRadius: '10px', padding: '2px 6px', fontSize: '9px', fontWeight: 'bold', whiteSpace: 'nowrap', flexShrink: 0 }}>
+                    {t.levels[c.level as keyof typeof t.levels]}
+                  </span>
+                </button>
+
+                {selectedCountry === c.name && (
+                  <div style={{ gridColumn: '1 / -1', backgroundColor: 'white', borderRadius: '12px', padding: '16px', border: '2px solid #e8572a', marginTop: '2px', marginBottom: '4px' }}>
+                    <h3 style={{ fontSize: '15px', fontWeight: 'bold', marginBottom: '4px', color: '#1a1a2e' }}>
+                      {c.flag} {c.name} — {t.destinations_title}
+                    </h3>
+                    {c.destinations.length === 0 ? (
+                      <div style={{ backgroundColor: '#fef2f2', borderRadius: '10px', padding: '14px', marginTop: '10px', textAlign: 'center' }}>
+                        <p style={{ color: '#dc2626', fontWeight: '600', margin: 0, fontSize: '13px' }}>{t.no_destinations}</p>
+                        <p style={{ color: '#1a1a2e', fontSize: '12px', margin: '6px 0 0' }}>{t.no_destinations_sub}</p>
+                      </div>
+                    ) : (
+                      <div style={{ display: 'flex', flexWrap: 'wrap' as const, gap: '8px', marginTop: '10px' }}>
+                        {c.destinations.map((dest, i) => (
+                          <span key={i} style={{ backgroundColor: '#f0fdf4', border: '1px solid #86efac', borderRadius: '20px', padding: '6px 14px', fontSize: '13px', fontWeight: '600', color: '#166534' }}>
+                            {dest}
+                          </span>
+                        ))}
+                      </div>
+                    )}
+                    {c.destinations.length > 0 && (
+                      <p style={{ fontSize: '12px', color: '#333333', margin: '10px 0 0' }}>{t.destinations_warning}</p>
+                    )}
+                  </div>
+                )}
+              </div>
             ))}
           </div>
-        </div>
-
-        {/* RESULTADO */}
-        <div ref={resultRef}>
-          {selected && (
-            <div style={{ backgroundColor: 'white', borderRadius: '16px', padding: '20px', boxShadow: '0 2px 8px rgba(0,0,0,0.07)', marginBottom: '20px' }}>
-              <h3 style={{ fontSize: '16px', fontWeight: 'bold', marginBottom: '4px', color: '#1a1a2e' }}>
-                {selected.flag} {selected.name} — {t.destinations_title}
-              </h3>
-              {selected.destinations.length === 0 ? (
-                <div style={{ backgroundColor: '#fef2f2', borderRadius: '10px', padding: '16px', marginTop: '12px', textAlign: 'center' }}>
-                  <p style={{ color: '#dc2626', fontWeight: '600', margin: 0, fontSize: '14px' }}>{t.no_destinations}</p>
-                  <p style={{ color: '#1a1a2e', fontSize: '13px', margin: '8px 0 0' }}>{t.no_destinations_sub}</p>
-                </div>
-              ) : (
-                <div style={{ display: 'flex', flexWrap: 'wrap' as const, gap: '8px', marginTop: '12px' }}>
-                  {selected.destinations.map((dest, i) => (
-                    <span key={i} style={{ backgroundColor: '#f0fdf4', border: '1px solid #86efac', borderRadius: '20px', padding: '6px 14px', fontSize: '13px', fontWeight: '600', color: '#166534' }}>
-                      {dest}
-                    </span>
-                  ))}
-                </div>
-              )}
-              {selected.destinations.length > 0 && (
-                <p style={{ fontSize: '12px', color: '#333333', margin: '12px 0 0' }}>{t.destinations_warning}</p>
-              )}
-            </div>
-          )}
         </div>
 
         {/* DESTINOS PRINCIPALES */}
