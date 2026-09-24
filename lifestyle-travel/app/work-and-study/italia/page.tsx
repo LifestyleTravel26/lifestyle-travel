@@ -1034,15 +1034,15 @@ export default function Italia() {
                 <thead><tr>{[t.th_canal, t.th_tipo, t.th_estrategia_col].map((h, i) => <th key={i} style={T.th}>{h}</th>)}</tr></thead>
                 <tbody>
                   {[
-                    ['Idealista', 'Portal oficial #1', 'Activa alertas push — respondé en menos de 2 horas'],
-                    ['Immobiliare.it', 'Portal oficial #2', 'Filtrá por stanze (habitaciones) compartidas'],
-                    ['Bakeca.it', 'Clasificados', 'Habitaciones más baratas — revisá diario'],
-                    ['Subito.it', 'Clasificados', 'Bueno para habitaciones en ciudades medianas'],
-                    ['Grupos WhatsApp Latinos', 'Networking', 'Unite al grupo de tu país — Latinos en Roma, Latinos en Milán'],
-                    ['Facebook Groups', 'Networking', '"Affitti Roma", "Stanze Milano" — grupos muy activos'],
+                    ['Idealista', 'Portal oficial #1', 'Activa alertas push — respondé en menos de 2 horas', ''],
+                    ['Immobiliare.it', 'Portal oficial #2', 'Filtrá por stanze (habitaciones) compartidas', ''],
+                    ['Bakeca.it', 'Clasificados', 'Habitaciones más baratas — revisá diario', ''],
+                    ['Subito.it', 'Clasificados', 'Bueno para habitaciones en ciudades medianas', ''],
+                    ['Grupos WhatsApp Latinos', 'Networking', 'Unite al grupo de tu país — Latinos en Roma, Latinos en Milán', 'https://www.facebook.com/search/groups?q=' + encodeURIComponent('Latinos Italia')],
+                    ['Facebook Groups', 'Networking', '"Affitti Roma", "Stanze Milano" — grupos muy activos', ''],
                   ].map((r, i) => (
                     <tr key={i}>
-                      <td style={{ ...T.td(i), ...T.bold }}>{r[0]}</td>
+                      <td style={{ ...T.td(i), ...T.bold }}>{r[3] ? <Link text={r[0]} url={r[3]} /> : r[0]}</td>
                       <td style={T.td(i)}>{r[1]}</td>
                       <td style={T.td(i)}>{r[2]}</td>
                     </tr>
@@ -1199,7 +1199,36 @@ export default function Italia() {
             </div>
             <div style={{ marginTop: '14px', backgroundColor: '#f0fdf4', borderRadius: '8px', padding: '14px' }}>
               <p style={{ fontSize: '14px', margin: '0 0 10px', fontWeight: '700' }}>{t.comunidad_title}</p>
-              <p style={{ fontSize: '13px', color: '#1a1a2e', margin: 0 }}>{t.comunidad_text}</p>
+              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
+                {([
+                  ['Mexicanos', 'Mexicanos Italia'],
+                  ['Ticos', 'Ticos Italia'],
+                  ['Colombianos', 'Colombianos Italia'],
+                  ['Argentinos', 'Argentinos Italia'],
+                  ['Venezolanos', 'Venezolanos Italia'],
+                  ['Peruanos', 'Peruanos Italia'],
+                ] as [string, string][]).map(([label, query]) => (
+                  <a
+                    key={label}
+                    href={'https://www.facebook.com/search/groups?q=' + encodeURIComponent(query)}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{
+                      display: 'inline-block',
+                      backgroundColor: '#dcfce7',
+                      color: '#166534',
+                      border: '1px solid #86efac',
+                      borderRadius: '999px',
+                      padding: '6px 12px',
+                      fontSize: '12px',
+                      fontWeight: 600,
+                      textDecoration: 'none',
+                    }}
+                  >
+                    {label}
+                  </a>
+                ))}
+              </div>
             </div>
             <HackBox text={t.crisis_hack} />
           </Section>

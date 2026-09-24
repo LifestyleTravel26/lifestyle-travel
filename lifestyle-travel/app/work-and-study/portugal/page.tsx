@@ -956,7 +956,7 @@ export default function Portugal() {
                   ['Imovirtual', 'Portal inmobiliario', 'Muy usado por locales para alquileres largos', 'imovirtual.com', 'https://www.imovirtual.com'],
                   ['Casa Sapo', 'Portal tradicional', 'Miles de propiedades en todo el país', 'casasapo.pt', 'https://www.casasapo.pt'],
                   ['Uniplaces', 'Plataforma estudiantil', 'Alquiler temporal seguro para estudiantes', 'uniplaces.com', 'https://www.uniplaces.com'],
-                  ['Grupos WhatsApp Latinos', 'Networking', 'Latinoamericanos en Portugal — habitaciones antes que en portales', 'Ver grupos', '#'],
+                  ['Grupos WhatsApp Latinos', 'Networking', 'Latinoamericanos en Portugal — habitaciones antes que en portales', 'Ver grupos', 'https://www.facebook.com/search/groups?q=' + encodeURIComponent('Latinos Portugal')],
                 ].map((r, i) => (
                   <tr key={i}>
                     <td style={{ ...T.td(i), ...T.bold }}>{r[0]}</td>
@@ -1121,7 +1121,37 @@ export default function Portugal() {
           </div>
           <div style={{ marginTop: '14px', backgroundColor: '#f0fdf4', borderRadius: '8px', padding: '14px' }}>
             <p style={{ fontSize: '14px', margin: '0 0 10px', fontWeight: '700', color: '#1a1a2e' }}>{t.comunidad_title}</p>
-            <p style={{ fontSize: '13px', color: '#1a1a2e', margin: 0 }}>{t.comunidad_text}</p>
+            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
+              {([
+                ['Mexicanos', 'Mexicanos Portugal'],
+                ['Ticos', 'Ticos Portugal'],
+                ['Colombianos', 'Colombianos Portugal'],
+                ['Argentinos', 'Argentinos Portugal'],
+                ['Venezolanos', 'Venezolanos Portugal'],
+                ['Peruanos', 'Peruanos Portugal'],
+                ['Brasileiros', 'Brasileiros Portugal'],
+              ] as [string, string][]).map(([label, query]) => (
+                <a
+                  key={label}
+                  href={'https://www.facebook.com/search/groups?q=' + encodeURIComponent(query)}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{
+                    display: 'inline-block',
+                    backgroundColor: '#dcfce7',
+                    color: '#166534',
+                    border: '1px solid #86efac',
+                    borderRadius: '999px',
+                    padding: '6px 12px',
+                    fontSize: '12px',
+                    fontWeight: 600,
+                    textDecoration: 'none',
+                  }}
+                >
+                  {label}
+                </a>
+              ))}
+            </div>
           </div>
           <HackBox text={t.crisis_hack} />
         </Section>

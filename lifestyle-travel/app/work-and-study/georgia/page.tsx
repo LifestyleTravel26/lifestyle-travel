@@ -845,6 +845,7 @@ export default function Georgia() {
                   ['Place.ge', 'Portal inmobiliario', 'Muchas opciones en Tbilisi y Batumi', 'place.ge', 'https://www.place.ge'],
                   ['Airbnb', 'Alojamiento temporal', 'Primeras semanas mientras buscas permanente', 'airbnb.com', 'https://airbnb.com'],
                   ['Digital Nomads Tbilisi (Facebook)', 'Comunidad', 'Grupos donde se comparten alquileres y oportunidades', 'Facebook', 'https://facebook.com'],
+                  ['Grupos WhatsApp Latinos', 'Networking', 'Únete al grupo de tu país — Mexicanos, Ticos, Colombianos, Argentinos en Georgia', 'Ver grupos', 'https://www.facebook.com/search/groups?q=' + encodeURIComponent('Latinos Georgia')],
                 ].map((r, i) => (
                   <tr key={i}>
                     <td style={{ ...T.td(i), ...T.bold }}>{r[0]}</td>
@@ -1003,7 +1004,36 @@ export default function Georgia() {
           </div>
           <div style={{ marginTop: '14px', backgroundColor: '#f0fdf4', borderRadius: '8px', padding: '14px' }}>
             <p style={{ fontSize: '14px', margin: '0 0 10px', fontWeight: '700', color: '#1a1a2e' }}>{t.comunidad_title}</p>
-            <p style={{ fontSize: '13px', color: '#1a1a2e', margin: 0 }}>{t.comunidad_text}</p>
+            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
+              {([
+                ['Mexicanos', 'Mexicanos Georgia'],
+                ['Ticos', 'Ticos Georgia'],
+                ['Colombianos', 'Colombianos Georgia'],
+                ['Argentinos', 'Argentinos Georgia'],
+                ['Venezolanos', 'Venezolanos Georgia'],
+                ['Peruanos', 'Peruanos Georgia'],
+              ] as [string, string][]).map(([label, query]) => (
+                <a
+                  key={label}
+                  href={'https://www.facebook.com/search/groups?q=' + encodeURIComponent(query)}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{
+                    display: 'inline-block',
+                    backgroundColor: '#dcfce7',
+                    color: '#166534',
+                    border: '1px solid #86efac',
+                    borderRadius: '999px',
+                    padding: '6px 12px',
+                    fontSize: '12px',
+                    fontWeight: 600,
+                    textDecoration: 'none',
+                  }}
+                >
+                  {label}
+                </a>
+              ))}
+            </div>
           </div>
           <HackBox text={t.crisis_hack} />
         </Section>

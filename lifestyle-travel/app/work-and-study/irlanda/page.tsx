@@ -987,7 +987,7 @@ export default function Irlanda() {
                 {[
                   ['Daft.ie', 'Portal oficial #1', 'Activa alertas push — responde en menos de 2 horas', 'daft.ie', 'https://daft.ie'],
                   ['Rent.ie', 'Portal oficial #2', 'Filtra por habitaciones compartidas', 'rent.ie', 'https://rent.ie'],
-                  ['Grupos WhatsApp Latinos', 'Networking', 'Únete al grupo de tu país — Mexicanos, Ticos, Colombianos, Argentinos en Irlanda', 'Ver grupos', '#'],
+                  ['Grupos WhatsApp Latinos', 'Networking', 'Únete al grupo de tu país — Mexicanos, Ticos, Colombianos, Argentinos en Irlanda', 'Ver grupos', 'https://www.facebook.com/search/groups?q=' + encodeURIComponent('Latinos Irlanda')],
                 ].map((r, i) => (
                   <tr key={i}>
                     <td style={{ ...T.td(i), ...T.bold }}>{r[0]}</td>
@@ -1151,7 +1151,36 @@ export default function Irlanda() {
           </div>
           <div style={{ marginTop: '14px', backgroundColor: '#f0fdf4', borderRadius: '8px', padding: '14px' }}>
             <p style={{ fontSize: '14px', margin: '0 0 10px', fontWeight: '700' }}>{t.comunidad_title}</p>
-            <p style={{ fontSize: '13px', color: '#1a1a2e', margin: 0 }}>{t.comunidad_text}</p>
+            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
+              {([
+                ['Mexicanos', 'Mexicanos Irlanda'],
+                ['Ticos', 'Ticos Irlanda'],
+                ['Colombianos', 'Colombianos Irlanda'],
+                ['Argentinos', 'Argentinos Irlanda'],
+                ['Venezolanos', 'Venezolanos Irlanda'],
+                ['Peruanos', 'Peruanos Irlanda'],
+              ] as [string, string][]).map(([label, query]) => (
+                <a
+                  key={label}
+                  href={'https://www.facebook.com/search/groups?q=' + encodeURIComponent(query)}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{
+                    display: 'inline-block',
+                    backgroundColor: '#dcfce7',
+                    color: '#166534',
+                    border: '1px solid #86efac',
+                    borderRadius: '999px',
+                    padding: '6px 12px',
+                    fontSize: '12px',
+                    fontWeight: 600,
+                    textDecoration: 'none',
+                  }}
+                >
+                  {label}
+                </a>
+              ))}
+            </div>
           </div>
           <HackBox text={t.crisis_hack} />
         </Section>

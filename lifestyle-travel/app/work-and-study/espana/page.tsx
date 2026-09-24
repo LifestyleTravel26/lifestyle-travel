@@ -998,7 +998,7 @@ export default function Espana() {
                   ['Spotahome', 'Plataforma verificada', 'Propiedades verificadas con fotos y video', 'spotahome.com', 'https://spotahome.com'],
                   ['Badi', 'App de habitaciones', 'La app más popular para habitaciones compartidas', 'badi.com', 'https://badi.com'],
                   ['Uniplaces', 'Plataforma estudiantil', 'Alquiler rápido para estudiantes internacionales', 'uniplaces.com', 'https://uniplaces.com'],
-                  ['Grupos WhatsApp Latinos', 'Networking', 'Mexicanos, Colombianos, Argentinos en Madrid/Barcelona', 'Ver grupos', '#'],
+                  ['Grupos WhatsApp Latinos', 'Networking', 'Mexicanos, Colombianos, Argentinos en Madrid/Barcelona', 'Ver grupos', 'https://www.facebook.com/search/groups?q=' + encodeURIComponent('Latinos España')],
                 ].map((r, i) => (
                   <tr key={i}>
                     <td style={{ ...T.td(i), ...T.bold }}>{r[0]}</td>
@@ -1160,7 +1160,37 @@ export default function Espana() {
           </div>
           <div style={{ marginTop: '14px', backgroundColor: '#f0fdf4', borderRadius: '8px', padding: '14px' }}>
             <p style={{ fontSize: '14px', margin: '0 0 10px', fontWeight: '700' }}>{t.comunidad_title}</p>
-            <p style={{ fontSize: '13px', color: '#1a1a2e', margin: 0 }}>{t.comunidad_text}</p>
+            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
+              {([
+                ['Mexicanos', 'Mexicanos España'],
+                ['Ticos', 'Ticos España'],
+                ['Colombianos', 'Colombianos España'],
+                ['Argentinos', 'Argentinos España'],
+                ['Venezolanos', 'Venezolanos España'],
+                ['Peruanos', 'Peruanos España'],
+                ['Brasileiros', 'Brasileiros España'],
+              ] as [string, string][]).map(([label, query]) => (
+                <a
+                  key={label}
+                  href={'https://www.facebook.com/search/groups?q=' + encodeURIComponent(query)}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{
+                    display: 'inline-block',
+                    backgroundColor: '#dcfce7',
+                    color: '#166534',
+                    border: '1px solid #86efac',
+                    borderRadius: '999px',
+                    padding: '6px 12px',
+                    fontSize: '12px',
+                    fontWeight: 600,
+                    textDecoration: 'none',
+                  }}
+                >
+                  {label}
+                </a>
+              ))}
+            </div>
           </div>
           <HackBox text={t.crisis_hack} />
         </Section>
