@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Lifestyle & Travel",
+  title: "Lifestyle&Travel",
   description: "Tu camino para trabajar en el extranjero. Blueprints paso a paso para emigrar y empezar a ganar dinero.",
   manifest: "/manifest.json",
 };
