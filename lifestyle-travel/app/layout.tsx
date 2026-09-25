@@ -18,6 +18,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Lifestyle & Travel",
   description: "Tu camino para trabajar en el extranjero. Blueprints paso a paso para emigrar y empezar a ganar dinero.",
+  manifest: "/manifest.json",
 };
 
 export default function RootLayout({
@@ -32,6 +33,11 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <head>
+        <meta name="theme-color" content="#1a1a2e" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+        <meta name="apple-mobile-web-app-title" content="L&T" />
+        <link rel="apple-touch-icon" href="/icon-192.png" />
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-FQWKYXGMY4"></script>
         <script
           dangerouslySetInnerHTML={{
@@ -47,6 +53,17 @@ export default function RootLayout({
           }}
         />
         <script src="https://assets.lemonsqueezy.com/lemon.js" defer></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              if ('serviceWorker' in navigator) {
+                window.addEventListener('load', function() {
+                  navigator.serviceWorker.register('/sw.js');
+                });
+              }
+            `,
+          }}
+        />
       </head>
       <body className="min-h-full flex flex-col">
         <LanguageProvider>

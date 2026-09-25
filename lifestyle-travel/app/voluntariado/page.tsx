@@ -118,7 +118,7 @@ const translations = {
     th_prog: 'Programa', th_edad: 'Edad', th_idioma: 'Idioma', th_antec: 'Antecedentes', th_docs: 'Documentos',
     sec_gastos_title: 'Gastos Obligatorios por Perfil',
     th_perfil: 'Perfil', th_visa: 'Visa Europa', th_seguro: 'Seguro médico', th_extras: 'Extras', th_total: 'Total estimado',
-    gastos_blue: '💡 ETIAS 2026: Los latinoamericanos con pasaporte Premium (sin visa Schengen) ahora deben tramitar ETIAS online antes de volar a Europa. Cuesta €20, dura 3 años y se aprueba en minutos. Sin ETIAS no te dejan subir al avión.',
+    gastos_blue: '💡 ETIAS: A partir del último trimestre de 2026 comenzará el lanzamiento gradual de ETIAS, la nueva autorización obligatoria para viajar a Europa sin visa Schengen. Costará €20 y durará 3 años. Todavía no hace falta tramitarlo, pero conviene estar atento a la fecha oficial de apertura antes de tu viaje.',
     sec_roles_title: 'Roles y Límites de Trabajo Voluntario',
     roles_intro: 'El intercambio es justo cuando se respetan los límites. Más de 30 horas semanales ya califica como empleo y debe ser remunerado. Verifica estas reglas antes de confirmar cualquier voluntariado.',
     reglas: [
@@ -295,7 +295,7 @@ const translations = {
     th_prog: 'Programa', th_edad: 'Idade', th_idioma: 'Idioma', th_antec: 'Antecedentes', th_docs: 'Documentos',
     sec_gastos_title: 'Despesas Obrigatórias por Perfil',
     th_perfil: 'Perfil', th_visa: 'Visto Europa', th_seguro: 'Seguro médico', th_extras: 'Extras', th_total: 'Total estimado',
-    gastos_blue: '💡 ETIAS 2026: Os latino-americanos com passaporte Premium (sem visto Schengen) agora devem tramitar ETIAS online antes de voar para a Europa. Custa €20, dura 3 anos e é aprovado em minutos. Sem ETIAS não deixam embarcar.',
+    gastos_blue: '💡 ETIAS: A partir do último trimestre de 2026 começará o lançamento gradual do ETIAS, a nova autorização obrigatória para viajar à Europa sem visto Schengen. Custará €20 e durará 3 anos. Ainda não é necessário tramitá-lo, mas vale a pena ficar atento à data oficial de abertura antes da sua viagem.',
     sec_roles_title: 'Funções e Limites do Trabalho Voluntário',
     roles_intro: 'O intercâmbio é justo quando os limites são respeitados. Mais de 30 horas semanais já qualifica como emprego e deve ser remunerado. Verifique estas regras antes de confirmar qualquer voluntariado.',
     reglas: [
@@ -472,7 +472,7 @@ const translations = {
     th_prog: 'Program', th_edad: 'Age', th_idioma: 'Language', th_antec: 'Background check', th_docs: 'Documents',
     sec_gastos_title: 'Mandatory Costs by Profile',
     th_perfil: 'Profile', th_visa: 'Europe Visa', th_seguro: 'Health insurance', th_extras: 'Extras', th_total: 'Estimated total',
-    gastos_blue: '💡 ETIAS 2026: Latin Americans with Premium passports (no Schengen visa) must now process ETIAS online before flying to Europe. It costs €20, lasts 3 years and is approved in minutes. Without ETIAS you can\'t board the plane.',
+    gastos_blue: '💡 ETIAS: Starting in the last quarter of 2026, ETIAS — the new mandatory authorization to travel to Europe without a Schengen visa — will begin rolling out gradually. It will cost €20 and last 3 years. You don\'t need to apply yet, but keep an eye on the official launch date before your trip.',
     sec_roles_title: 'Roles & Volunteer Work Limits',
     roles_intro: 'The exchange is fair when limits are respected. More than 30 weekly hours already qualifies as employment and must be paid. Check these rules before confirming any volunteering.',
     reglas: [
