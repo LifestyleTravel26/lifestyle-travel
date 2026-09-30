@@ -47,16 +47,16 @@ export default function HeaderMenu() {
   ]
 
   return (
-    <div ref={ref} style={{ position: 'relative' }}>
+    <div ref={ref} style={{ position: 'relative', fontFamily: "'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" }}>
       <button
         onClick={() => setOpen(prev => !prev)}
         aria-label="Menu"
         style={{
-          background: 'transparent',
+          background: 'rgba(255,255,255,0.08)',
           border: '1.5px solid rgba(255,255,255,0.6)',
-          borderRadius: '8px',
-          width: '40px',
-          height: '40px',
+          borderRadius: '10px',
+          width: '42px',
+          height: '42px',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
@@ -74,20 +74,20 @@ export default function HeaderMenu() {
         <div
           style={{
             position: 'absolute',
-            top: 'calc(100% + 8px)',
+            top: 'calc(100% + 10px)',
             right: 0,
             backgroundColor: 'white',
-            borderRadius: '12px',
-            boxShadow: '0 8px 24px rgba(0,0,0,0.2)',
-            padding: '14px',
+            borderRadius: '14px',
+            boxShadow: '0 12px 32px rgba(0,0,0,0.22)',
+            padding: '16px',
             display: 'flex',
             flexDirection: 'column',
-            gap: '4px',
-            minWidth: '210px',
+            gap: '2px',
+            minWidth: '230px',
             zIndex: 1000,
           }}
         >
-          <p style={{ fontSize: '11px', fontWeight: 'bold', color: '#999', margin: '0 0 6px', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
+          <p style={{ fontSize: '11px', fontWeight: 700, color: '#a3a3a3', margin: '0 0 8px', textTransform: 'uppercase', letterSpacing: '0.08em' }}>
             {t.language}
           </p>
           {languages.map(lang => (
@@ -96,23 +96,24 @@ export default function HeaderMenu() {
               onClick={() => setLocale(lang.code)}
               style={{
                 background: locale === lang.code ? '#fdf0ea' : 'transparent',
-                color: '#1a1a2e',
+                color: locale === lang.code ? '#e8572a' : '#1a1a2e',
                 border: 'none',
-                borderRadius: '8px',
-                padding: '8px 10px',
+                borderRadius: '9px',
+                padding: '10px 12px',
                 textAlign: 'left',
-                fontSize: '14px',
-                fontWeight: locale === lang.code ? 'bold' : 'normal',
+                fontSize: '15px',
+                fontWeight: locale === lang.code ? 600 : 500,
                 cursor: 'pointer',
+                letterSpacing: '0.01em',
               }}
             >
               {lang.label}
             </button>
           ))}
 
-          <div style={{ borderTop: '1px solid #eee', margin: '8px 0' }} />
+          <div style={{ borderTop: '1px solid #eee', margin: '10px 0' }} />
 
-          <p style={{ fontSize: '11px', fontWeight: 'bold', color: '#999', margin: '0 0 6px', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
+          <p style={{ fontSize: '11px', fontWeight: 700, color: '#a3a3a3', margin: '0 0 8px', textTransform: 'uppercase', letterSpacing: '0.08em' }}>
             {t.account}
           </p>
           {!loading && (
@@ -121,12 +122,13 @@ export default function HeaderMenu() {
                 onClick={handleSignOut}
                 style={{
                   background: 'transparent',
-                  color: '#1a1a2e',
+                  color: '#c0392b',
                   border: 'none',
-                  borderRadius: '8px',
-                  padding: '8px 10px',
+                  borderRadius: '9px',
+                  padding: '10px 12px',
                   textAlign: 'left',
-                  fontSize: '14px',
+                  fontSize: '15px',
+                  fontWeight: 600,
                   cursor: 'pointer',
                 }}
               >
@@ -139,12 +141,13 @@ export default function HeaderMenu() {
                 style={{
                   backgroundColor: '#e8572a',
                   color: 'white',
-                  borderRadius: '8px',
-                  padding: '8px 10px',
-                  fontSize: '14px',
-                  fontWeight: 'bold',
+                  borderRadius: '9px',
+                  padding: '11px 12px',
+                  fontSize: '15px',
+                  fontWeight: 700,
                   textDecoration: 'none',
                   textAlign: 'center',
+                  display: 'block',
                 }}
               >
                 {t.start}
