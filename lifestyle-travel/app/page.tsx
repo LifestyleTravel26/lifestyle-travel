@@ -73,6 +73,7 @@ export default function Home() {
             <span style={{ color: 'white', fontWeight: 'bold', fontSize: '18px' }}>Lifestyle & Travel</span>
           </div>
           <HeaderMenu />
+          </div>
         <div style={{ flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', textAlign: 'center', padding: '0 24px 24px' }}>
           <h1 style={{ color: 'white', fontSize: '28px', fontWeight: 'bold', marginBottom: '12px', lineHeight: '1.3' }}>{t.hero_title}</h1>
           <p style={{ color: '#ddd', fontSize: '14px', marginBottom: '20px', maxWidth: '400px' }}>{t.hero_sub}</p>
