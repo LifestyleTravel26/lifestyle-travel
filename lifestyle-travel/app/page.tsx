@@ -1,7 +1,6 @@
 'use client'
 import Link from 'next/link';
-import { NavButtons } from '@/components/nav-buttons';
-import LanguageSwitcher from './components/LanguageSwitcher';
+import HeaderMenu from './components/HeaderMenu';
 import { useLanguage } from './context/LanguageContext';
 
 const translations = {
@@ -73,11 +72,7 @@ export default function Home() {
             <span>✈️</span>
             <span style={{ color: 'white', fontWeight: 'bold', fontSize: '18px' }}>Lifestyle & Travel</span>
           </div>
-          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end', gap: '4px' }}>
-            <NavButtons />
-            <LanguageSwitcher />
-          </div>
-        </div>
+          <HeaderMenu />
         <div style={{ flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', textAlign: 'center', padding: '0 24px 24px' }}>
           <h1 style={{ color: 'white', fontSize: '28px', fontWeight: 'bold', marginBottom: '12px', lineHeight: '1.3' }}>{t.hero_title}</h1>
           <p style={{ color: '#ddd', fontSize: '14px', marginBottom: '20px', maxWidth: '400px' }}>{t.hero_sub}</p>
