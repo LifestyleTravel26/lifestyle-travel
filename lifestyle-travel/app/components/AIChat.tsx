@@ -6,7 +6,7 @@ import { usePurchase } from '@/app/hooks/usePurchase'
 
 const translations = {
   es: {
-    title: '🤖 Asistente de Migración AI',
+    title: 'Asistente de Migración AI',
     subtitle: 'Pregúntame sobre visas, costos, requisitos y más',
     placeholder: 'Ej: ¿Cuánto dinero necesito para ir a Irlanda?',
     send: 'Enviar',
@@ -15,7 +15,7 @@ const translations = {
     error: 'Error al procesar tu mensaje. Intenta de nuevo.',
   },
   pt: {
-    title: '🤖 Assistente de Migração AI',
+    title: 'Assistente de Migração AI',
     subtitle: 'Pergunte-me sobre vistos, custos, requisitos e mais',
     placeholder: 'Ex: Quanto dinheiro preciso para ir à Irlanda?',
     send: 'Enviar',
@@ -24,7 +24,7 @@ const translations = {
     error: 'Erro ao processar sua mensagem. Tente novamente.',
   },
   en: {
-    title: '🤖 AI Migration Assistant',
+    title: 'AI Migration Assistant',
     subtitle: 'Ask me about visas, costs, requirements and more',
     placeholder: 'E.g: How much money do I need to go to Ireland?',
     send: 'Send',
@@ -263,12 +263,11 @@ export default function AIChat() {
           width: `${BUTTON_SIZE}px`,
           height: `${BUTTON_SIZE}px`,
           borderRadius: '50%',
-          backgroundColor: '#e8572a',
+          background: 'linear-gradient(135deg, #ff7a45 0%, #e8572a 55%, #c73e1d 100%)',
           color: 'white',
           border: 'none',
           cursor: isDragging ? 'grabbing' : 'grab',
-          fontSize: '24px',
-          boxShadow: '0 4px 16px rgba(232,87,42,0.4)',
+          boxShadow: '0 6px 20px rgba(232,87,42,0.45), inset 0 1px 1px rgba(255,255,255,0.25)',
           zIndex: 10001,
           display: 'flex',
           alignItems: 'center',
@@ -276,9 +275,20 @@ export default function AIChat() {
           touchAction: 'none',
           userSelect: 'none',
           WebkitUserSelect: 'none',
+          transition: 'transform 0.15s ease, box-shadow 0.15s ease',
         }}
       >
-        {isOpen ? '✕' : '🤖'}
+        {isOpen ? (
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.25" strokeLinecap="round" strokeLinejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18" />
+            <line x1="6" y1="6" x2="18" y2="18" />
+          </svg>
+        ) : (
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M12 3l1.6 4.2L18 9l-4.4 1.8L12 15l-1.6-4.2L6 9l4.4-1.8L12 3Z" fill="white" stroke="none" />
+            <path d="M19 13.5l.8 2 2 .8-2 .8-.8 2-.8-2-2-.8 2-.8.8-2Z" fill="white" stroke="none" />
+          </svg>
+        )}
       </button>
 
       {isOpen && (
@@ -297,10 +307,28 @@ export default function AIChat() {
           flexDirection: 'column',
           overflow: 'hidden',
         }}>
-          <div style={{ backgroundColor: '#1a1a2e', padding: '14px 16px', display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', gap: '12px' }}>
-            <div>
-              <p style={{ color: 'white', fontWeight: 'bold', fontSize: '14px', margin: '0 0 2px' }}>{t.title}</p>
-              <p style={{ color: '#aaa', fontSize: '11px', margin: 0 }}>{t.subtitle}</p>
+          <div style={{ background: 'linear-gradient(135deg, #1a1a2e 0%, #23233f 100%)', padding: '14px 16px', display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', gap: '12px' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+              <div style={{
+                width: '32px',
+                height: '32px',
+                borderRadius: '10px',
+                flexShrink: 0,
+                background: 'linear-gradient(135deg, #ff7a45 0%, #e8572a 100%)',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                boxShadow: '0 2px 8px rgba(232,87,42,0.4)',
+              }}>
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M12 3l1.6 4.2L18 9l-4.4 1.8L12 15l-1.6-4.2L6 9l4.4-1.8L12 3Z" fill="white" stroke="none" />
+                  <path d="M19 13.5l.8 2 2 .8-2 .8-.8 2-.8-2-2-.8 2-.8.8-2Z" fill="white" stroke="none" />
+                </svg>
+              </div>
+              <div>
+                <p style={{ color: 'white', fontWeight: 'bold', fontSize: '14px', margin: '0 0 2px' }}>{t.title}</p>
+                <p style={{ color: '#aaa', fontSize: '11px', margin: 0 }}>{t.subtitle}</p>
+              </div>
             </div>
             <button
               type="button"
