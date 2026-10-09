@@ -1,7 +1,7 @@
 'use client'
 import { useState } from 'react'
 import { useLanguage } from '../../context/LanguageContext'
-import HeaderMenu from '../../components/HeaderMenu'
+import LanguageSwitcher from '../../components/LanguageSwitcher'
 import { usePurchase } from '../../hooks/usePurchase'
 
 const translations = {
@@ -612,7 +612,7 @@ export default function Irlanda() {
   const heroTextShadow = '0 2px 12px rgba(0,0,0,0.9), 0 1px 4px rgba(0,0,0,0.85)'
 
   const Section = ({ id, emoji, title, children, free = false }: any) => (
-    <div style={{ border: '1px solid #e5e7eb', boxShadow: '0 2px 8px rgba(0,0,0,0.06)', borderRadius: '12px', marginBottom: '10px', overflow: 'hidden', display: 'flex', flexDirection: 'column' }}>
+    <div style={{ border: free ? '2px solid #e8572a' : '2px solid #f59e0b', borderRadius: '12px', marginBottom: '10px', overflow: 'hidden', display: 'flex', flexDirection: 'column' }}>
       <button onClick={() => toggle(id)} style={{ width: '100%', padding: '14px 20px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', backgroundColor: 'white', border: 'none', cursor: 'pointer', flexShrink: 0, color: '#1a1a2e' }}>
         <span style={{ fontWeight: '600', fontSize: '15px', color: '#1a1a2e' }}>{emoji} {title}</span>
         <span style={{ fontSize: '16px', color: '#555555' }}>{openSection === id ? '∧' : '∨'}</span>
@@ -633,7 +633,7 @@ export default function Irlanda() {
             <span style={{ fontSize: '20px' }}>←</span>
             <span style={{ fontWeight: 'bold', fontSize: '18px' }}>✈️ Lifestyle & Travel</span>
           </a>
-          <HeaderMenu />
+          <LanguageSwitcher />
         </div>
         <div style={{ flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', textAlign: 'center', padding: '0 24px 24px' }}>
           <div style={{ fontSize: '52px', marginBottom: '8px', textShadow: heroTextShadow }}>🇮🇪</div>
