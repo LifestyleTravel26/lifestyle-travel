@@ -1,6 +1,7 @@
 'use client'
 import { useState, useRef, useEffect } from 'react'
 import { createPortal } from 'react-dom'
+import { usePathname } from 'next/navigation'
 import { useLanguage } from '../context/LanguageContext'
 import { usePurchase } from '@/app/hooks/usePurchase'
 
@@ -88,6 +89,7 @@ export default function AIChat() {
   const didDragRef = useRef(false)
   const dragStartRef = useRef({ pointerX: 0, pointerY: 0, posX: 0, posY: 0 })
   const movedRef = useRef(0)
+  const pathname = usePathname()
   const { locale } = useLanguage()
   const { hasAccess } = usePurchase()
   const t = translations[locale]
@@ -243,6 +245,9 @@ export default function AIChat() {
       setLoading(false)
     }
   }
+
+  const HIDDEN_ROUTES = ['/login', '/signup', '/forgot-password', '/reset-password']
+  if (HIDDEN_ROUTES.some(r => pathname === r || pathname?.startsWith(`${r}/`))) return null
 
   if (!mounted) return null
   if (!position) return null
