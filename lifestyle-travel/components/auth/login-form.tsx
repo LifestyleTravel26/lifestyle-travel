@@ -75,6 +75,7 @@ export function LoginForm() {
 
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [showPassword, setShowPassword] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
 
@@ -122,16 +123,37 @@ export function LoginForm() {
         <label htmlFor="password" style={{ display: 'block', fontWeight: 'bold', marginBottom: '6px', fontSize: '14px', color: '#1a1a2e' }}>
           {t.password_label}
         </label>
-        <input
-          id="password"
-          type="password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          required
-          autoComplete="current-password"
-          style={inputStyle}
-          placeholder="••••••••"
-        />
+        <div style={{ position: 'relative' }}>
+          <input
+            id="password"
+            type={showPassword ? 'text' : 'password'}
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+            autoComplete="current-password"
+            style={{ ...inputStyle, paddingRight: '44px' }}
+            placeholder="••••••••"
+          />
+          <button
+            type="button"
+            onClick={() => setShowPassword((v) => !v)}
+            aria-label={showPassword ? 'Ocultar contraseña' : 'Mostrar contraseña'}
+            style={{
+              position: 'absolute',
+              right: '10px',
+              top: '12px',
+              background: 'none',
+              border: 'none',
+              cursor: 'pointer',
+              fontSize: '18px',
+              lineHeight: 1,
+              padding: '4px',
+              color: '#6b7280',
+            }}
+          >
+            {showPassword ? '🙈' : '👁️'}
+          </button>
+        </div>
 
         {error && (
           <p style={{ color: '#ef4444', fontSize: '14px', marginBottom: '16px' }}>{error}</p>
