@@ -2,7 +2,7 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import { useLanguage } from '../context/LanguageContext'
-import LanguageSwitcher from '../components/LanguageSwitcher'
+import HeaderMenu from '../components/HeaderMenu'
 import { usePurchase } from '../hooks/usePurchase'
 
 const translations = {
@@ -482,9 +482,11 @@ export default function PetSitting() {
     <main style={{ minHeight: '100vh', backgroundColor: '#f8f7f4', fontFamily: 'Inter, system-ui, sans-serif' }}>
       <div style={{ position: 'relative', height: '55vh', backgroundImage: 'linear-gradient(rgba(0,0,0,0.20), rgba(0,0,0,0.20)), url("https://images.unsplash.com/photo-1696875135742-c3044510c9e2?q=80&w=1180&auto=format&fit=crop")', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', display: 'flex', flexDirection: 'column' }}>
         <div style={{ padding: '16px 24px', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-          <Link href="/" style={{ color: 'white', textDecoration: 'none', fontSize: '20px' }}>←</Link>
-          <LanguageSwitcher />
-          <span style={{ color: 'white', fontWeight: 'bold', fontSize: '16px' }}>✈️ Lifestyle & Travel</span>
+          <Link href="/" style={{ color: 'white', textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '8px' }}>
+            <span style={{ fontSize: '20px' }}>←</span>
+            <span style={{ fontWeight: 'bold', fontSize: '16px' }}>✈️ Lifestyle & Travel</span>
+          </Link>
+          <HeaderMenu />
         </div>
         <div style={{ flex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', textAlign: 'center', padding: '0 24px 32px' }}>
           <div style={{ fontSize: '52px', marginBottom: '8px' }}>🐾</div>
