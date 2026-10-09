@@ -99,7 +99,23 @@ export function LoginForm() {
       return;
     }
 
-    router.push('/');
+    // Sin compra registrada -> directo a precios; con compra -> a donde venía
+    let hasPurchase = false;
+    try {
+      const { data: { user } } = await supabase.auth.getUser();
+      if (user?.email) {
+        const { data } = await supabase
+          .from('purchases')
+          .select('id')
+          .eq('email', user.email.toLowerCase())
+          .limit(1);
+        hasPurchase = !!data && data.length > 0;
+      }
+    } catch {
+      hasPurchase = true; // ante un error, no bloquear: llevar al destino normal
+    }
+
+    router.push(hasPurchase ? redirectTo : '/pricing');
     router.refresh();
   }
 
