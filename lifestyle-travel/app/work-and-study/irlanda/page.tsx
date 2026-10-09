@@ -1,7 +1,7 @@
 'use client'
 import { useState } from 'react'
 import { useLanguage } from '../../context/LanguageContext'
-import LanguageSwitcher from '../../components/LanguageSwitcher'
+import HeaderMenu from '../../components/HeaderMenu'
 import { usePurchase } from '../../hooks/usePurchase'
 
 const translations = {
@@ -633,7 +633,7 @@ export default function Irlanda() {
             <span style={{ fontSize: '20px' }}>←</span>
             <span style={{ fontWeight: 'bold', fontSize: '18px' }}>✈️ Lifestyle & Travel</span>
           </a>
-          <LanguageSwitcher />
+          <HeaderMenu />
         </div>
         <div style={{ flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', textAlign: 'center', padding: '0 24px 24px' }}>
           <div style={{ fontSize: '52px', marginBottom: '8px', textShadow: heroTextShadow }}>🇮🇪</div>
