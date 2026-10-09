@@ -1,6 +1,6 @@
 'use client'
 import Link from 'next/link'
-import LanguageSwitcher from '../components/LanguageSwitcher'
+import HeaderMenu from '../components/HeaderMenu'
 import { useLanguage } from '../context/LanguageContext'
 
 const translations = {
@@ -142,9 +142,11 @@ export default function WorkAndStudy() {
         flexDirection: 'column',
       }}>
         <div style={{ padding: '16px 24px', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-          <Link href="/" style={{ color: 'white', textDecoration: 'none', fontSize: '20px' }}>←</Link>
-          <LanguageSwitcher />
-          <span style={{ color: 'white', fontWeight: 'bold', fontSize: '16px' }}>✈️ Lifestyle & Travel</span>
+          <Link href="/" style={{ color: 'white', textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '8px' }}>
+            <span style={{ fontSize: '20px' }}>←</span>
+            <span style={{ fontWeight: 'bold', fontSize: '16px' }}>✈️ Lifestyle & Travel</span>
+          </Link>
+          <HeaderMenu />
         </div>
         <div style={{ flex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', textAlign: 'center', padding: '0 24px 32px' }}>
           <div style={{ fontSize: '52px', marginBottom: '8px' }}>🎓</div>
