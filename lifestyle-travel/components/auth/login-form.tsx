@@ -10,6 +10,8 @@ const translations = {
   es: {
     email_label: 'Email',
     password_label: 'Contraseña',
+    show: 'Mostrar contraseña',
+    hide: 'Ocultar contraseña',
     placeholder_email: 'tu@email.com',
     loading: 'Iniciando sesión...',
     submit: 'Iniciar sesión',
@@ -20,6 +22,8 @@ const translations = {
   pt: {
     email_label: 'Email',
     password_label: 'Senha',
+    show: 'Mostrar senha',
+    hide: 'Ocultar senha',
     placeholder_email: 'seu@email.com',
     loading: 'Entrando...',
     submit: 'Entrar',
@@ -30,6 +34,8 @@ const translations = {
   en: {
     email_label: 'Email',
     password_label: 'Password',
+    show: 'Show password',
+    hide: 'Hide password',
     placeholder_email: 'you@email.com',
     loading: 'Signing in...',
     submit: 'Sign in',
@@ -153,7 +159,7 @@ export function LoginForm() {
           <button
             type="button"
             onClick={() => setShowPassword((v) => !v)}
-            aria-label={showPassword ? 'Ocultar contraseña' : 'Mostrar contraseña'}
+            aria-label={showPassword ? t.hide : t.show}
             style={{
               position: 'absolute',
               right: '10px',

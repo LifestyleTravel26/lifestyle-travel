@@ -4,6 +4,49 @@ import Link from 'next/link';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { useState } from 'react';
 import { createClient } from '@/lib/supabase/client';
+import { useLanguage } from '@/app/context/LanguageContext';
+
+const translations = {
+  es: {
+    email_label: 'Email',
+    password_label: 'Contraseña',
+    placeholder_email: 'tu@email.com',
+    placeholder_password: 'Mínimo 6 caracteres',
+    show: 'Mostrar contraseña',
+    hide: 'Ocultar contraseña',
+    success: 'Cuenta creada. Revisa tu email para confirmar, o inicia sesión si ya está activa.',
+    loading: 'Creando cuenta...',
+    submit: 'Crear cuenta',
+    have_account: '¿Ya tienes cuenta?',
+    login: 'Inicia sesión',
+  },
+  pt: {
+    email_label: 'Email',
+    password_label: 'Senha',
+    placeholder_email: 'seu@email.com',
+    placeholder_password: 'Mínimo 6 caracteres',
+    show: 'Mostrar senha',
+    hide: 'Ocultar senha',
+    success: 'Conta criada. Verifique seu email para confirmar, ou entre se já estiver ativa.',
+    loading: 'Criando conta...',
+    submit: 'Criar conta',
+    have_account: 'Já tem conta?',
+    login: 'Entrar',
+  },
+  en: {
+    email_label: 'Email',
+    password_label: 'Password',
+    placeholder_email: 'you@email.com',
+    placeholder_password: 'At least 6 characters',
+    show: 'Show password',
+    hide: 'Hide password',
+    success: 'Account created. Check your email to confirm, or sign in if it is already active.',
+    loading: 'Creating account...',
+    submit: 'Create account',
+    have_account: 'Already have an account?',
+    login: 'Sign in',
+  },
+}
 
 const inputStyle: React.CSSProperties = {
   width: '100%',
@@ -46,6 +89,9 @@ export function SignupForm() {
   const [message, setMessage] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
 
+  const { locale } = useLanguage();
+  const t = translations[locale];
+
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
     setError(null);
@@ -67,9 +113,7 @@ export function SignupForm() {
       return;
     }
 
-    setMessage(
-      'Cuenta creada. Revisa tu email para confirmar, o inicia sesión si ya está activa.'
-    );
+    setMessage(t.success);
     setLoading(false);
 
     setTimeout(() => {
@@ -91,7 +135,7 @@ export function SignupForm() {
           htmlFor="email"
           style={{ display: 'block', fontWeight: 'bold', marginBottom: '6px', fontSize: '14px' }}
         >
-          Email
+          {t.email_label}
         </label>
         <input
           id="email"
@@ -101,14 +145,14 @@ export function SignupForm() {
           required
           autoComplete="email"
           style={inputStyle}
-          placeholder="tu@email.com"
+          placeholder={t.placeholder_email}
         />
 
         <label
           htmlFor="password"
           style={{ display: 'block', fontWeight: 'bold', marginBottom: '6px', fontSize: '14px' }}
         >
-          Contraseña
+          {t.password_label}
         </label>
         <div style={{ position: 'relative' }}>
           <input
@@ -120,12 +164,12 @@ export function SignupForm() {
             minLength={6}
             autoComplete="new-password"
             style={{ ...inputStyle, paddingRight: '44px' }}
-            placeholder="Mínimo 6 caracteres"
+            placeholder={t.placeholder_password}
           />
           <button
             type="button"
             onClick={() => setShowPassword((v) => !v)}
-            aria-label={showPassword ? 'Ocultar contraseña' : 'Mostrar contraseña'}
+            aria-label={showPassword ? t.hide : t.show}
             style={{
               position: 'absolute',
               right: '10px',
@@ -166,17 +210,17 @@ export function SignupForm() {
         )}
 
         <button type="submit" disabled={loading} style={buttonStyle}>
-          {loading ? 'Creando cuenta...' : 'Crear cuenta'}
+          {loading ? t.loading : t.submit}
         </button>
       </form>
 
       <p style={{ textAlign: 'center', marginTop: '20px', color: '#1a1a2e', fontSize: '14px' }}>
-        ¿Ya tienes cuenta?{' '}
+        {t.have_account}{' '}
         <Link
           href={redirectTo !== '/' ? `/login?redirectTo=${encodeURIComponent(redirectTo)}` : '/login'}
           style={{ color: '#e8572a', fontWeight: 'bold', textDecoration: 'none' }}
         >
-          Inicia sesión
+          {t.login}
         </Link>
       </p>
     </div>
