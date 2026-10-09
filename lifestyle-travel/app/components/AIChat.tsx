@@ -284,9 +284,8 @@ export default function AIChat() {
             <line x1="6" y1="6" x2="18" y2="18" />
           </svg>
         ) : (
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-            <path d="M12 3l1.6 4.2L18 9l-4.4 1.8L12 15l-1.6-4.2L6 9l4.4-1.8L12 3Z" fill="white" stroke="none" />
-            <path d="M19 13.5l.8 2 2 .8-2 .8-.8 2-.8-2-2-.8 2-.8.8-2Z" fill="white" stroke="none" />
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="white" stroke="none">
+            <path d="M12 2.5c.3 2.9 1 5 2.1 6.2 1.2 1.2 3.3 1.9 6.2 2.1-2.9.3-5 1-6.2 2.1-1.2 1.2-1.9 3.3-2.1 6.2-.3-2.9-1-5-2.1-6.2-1.2-1.2-3.3-1.9-6.2-2.1 2.9-.3 5-1 6.2-2.1 1.2-1.2 1.9-3.3 2.1-6.2Z" />
           </svg>
         )}
       </button>
@@ -307,27 +306,25 @@ export default function AIChat() {
           flexDirection: 'column',
           overflow: 'hidden',
         }}>
-          <div style={{ background: 'linear-gradient(135deg, #1a1a2e 0%, #23233f 100%)', padding: '14px 16px', display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', gap: '12px' }}>
+          <div style={{ backgroundColor: '#ffffff', borderBottom: '1px solid #f0f0f0', padding: '14px 16px', display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', gap: '12px' }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
               <div style={{
                 width: '32px',
                 height: '32px',
                 borderRadius: '10px',
                 flexShrink: 0,
-                background: 'linear-gradient(135deg, #ff7a45 0%, #e8572a 100%)',
+                backgroundColor: '#fdf0ea',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
-                boxShadow: '0 2px 8px rgba(232,87,42,0.4)',
               }}>
-                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M12 3l1.6 4.2L18 9l-4.4 1.8L12 15l-1.6-4.2L6 9l4.4-1.8L12 3Z" fill="white" stroke="none" />
-                  <path d="M19 13.5l.8 2 2 .8-2 .8-.8 2-.8-2-2-.8 2-.8.8-2Z" fill="white" stroke="none" />
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="#e8572a" stroke="none">
+                  <path d="M12 2.5c.3 2.9 1 5 2.1 6.2 1.2 1.2 3.3 1.9 6.2 2.1-2.9.3-5 1-6.2 2.1-1.2 1.2-1.9 3.3-2.1 6.2-.3-2.9-1-5-2.1-6.2-1.2-1.2-3.3-1.9-6.2-2.1 2.9-.3 5-1 6.2-2.1 1.2-1.2 1.9-3.3 2.1-6.2Z" />
                 </svg>
               </div>
               <div>
-                <p style={{ color: 'white', fontWeight: 'bold', fontSize: '14px', margin: '0 0 2px' }}>{t.title}</p>
-                <p style={{ color: '#aaa', fontSize: '11px', margin: 0 }}>{t.subtitle}</p>
+                <p style={{ color: '#1a1a2e', fontWeight: 'bold', fontSize: '14px', margin: '0 0 2px' }}>{t.title}</p>
+                <p style={{ color: '#9b9b9b', fontSize: '11px', margin: 0 }}>{t.subtitle}</p>
               </div>
             </div>
             <button
@@ -337,7 +334,7 @@ export default function AIChat() {
               style={{
                 background: 'transparent',
                 border: 'none',
-                color: '#aaa',
+                color: '#9b9b9b',
                 cursor: 'pointer',
                 fontSize: '18px',
                 lineHeight: 1,
