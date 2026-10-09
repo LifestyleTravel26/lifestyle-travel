@@ -4,6 +4,7 @@ import { createPortal } from 'react-dom'
 import { usePathname } from 'next/navigation'
 import { useLanguage } from '../context/LanguageContext'
 import { usePurchase } from '@/app/hooks/usePurchase'
+import { createClient } from '@/lib/supabase/client'
 
 const translations = {
   es: {
@@ -90,9 +91,19 @@ export default function AIChat() {
   const dragStartRef = useRef({ pointerX: 0, pointerY: 0, posX: 0, posY: 0 })
   const movedRef = useRef(0)
   const pathname = usePathname()
+  const [isLoggedIn, setIsLoggedIn] = useState(false)
   const { locale } = useLanguage()
   const { hasAccess } = usePurchase()
   const t = translations[locale]
+
+  useEffect(() => {
+    const supabase = createClient()
+    supabase.auth.getSession().then(({ data: { session } }) => setIsLoggedIn(!!session))
+    const { data: { subscription } } = supabase.auth.onAuthStateChange((_event, session) => {
+      setIsLoggedIn(!!session)
+    })
+    return () => subscription.unsubscribe()
+  }, [])
 
   useEffect(() => {
     setMounted(true)
@@ -248,6 +259,8 @@ export default function AIChat() {
 
   const HIDDEN_ROUTES = ['/login', '/signup', '/forgot-password', '/reset-password']
   if (HIDDEN_ROUTES.some(r => pathname === r || pathname?.startsWith(`${r}/`))) return null
+
+  if (!isLoggedIn) return null
 
   if (!mounted) return null
   if (!position) return null
