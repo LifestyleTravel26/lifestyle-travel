@@ -8,8 +8,8 @@ const translations = {
     hero_title: 'Tu Camino Para Trabajar en el Extranjero',
     hero_sub: 'Blueprints paso a paso para emigrar y empezar a ganar dinero rápidamente.',
     hero_btn: '¿No sabes por dónde comenzar? →',
-    section_title: 'Tipos de Visa',
-    section_sub: 'Cada uno con su blueprint completo',
+    section_title: '¿Cómo querés vivir en el extranjero?',
+    section_sub: 'Elegí tu ruta y descubrí el blueprint completo',
     visas: [
       { title: 'Visa Work and Study' },
       { title: 'Visa Work and Holidays' },
@@ -23,8 +23,8 @@ const translations = {
     hero_title: 'Seu Caminho Para Trabalhar no Exterior',
     hero_sub: 'Blueprints passo a passo para emigrar e começar a ganhar dinheiro rapidamente.',
     hero_btn: 'Não sabe por onde começar? →',
-    section_title: 'Tipos de Visto',
-    section_sub: 'Cada um com seu blueprint completo',
+    section_title: 'Como você quer viver no exterior?',
+    section_sub: 'Escolha sua rota e descubra o blueprint completo',
     visas: [
       { title: 'Visto Work and Study' },
       { title: 'Visto Work and Holidays' },
@@ -38,8 +38,8 @@ const translations = {
     hero_title: 'Your Path to Working Abroad',
     hero_sub: 'Step-by-step blueprints to emigrate and start earning money fast.',
     hero_btn: "Don't know where to start? →",
-    section_title: 'Visa Types',
-    section_sub: 'Each one with its complete blueprint',
+    section_title: 'How do you want to live abroad?',
+    section_sub: 'Choose your route and discover the complete blueprint',
     visas: [
       { title: 'Work and Study Visa' },
       { title: 'Work and Holidays Visa' },
