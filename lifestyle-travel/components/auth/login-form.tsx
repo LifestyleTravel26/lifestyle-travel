@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { useRef, useState } from 'react';
 import { createClient } from '@/lib/supabase/client';
+import { getPostLoginPath } from '@/lib/supabase/post-login';
 import { useLanguage } from '@/app/context/LanguageContext';
 
 const translations = {
@@ -106,23 +107,7 @@ export function LoginForm() {
       return;
     }
 
-    // Sin compra registrada -> directo a precios; con compra -> a donde venía
-    let hasPurchase = false;
-    try {
-      const { data: { user } } = await supabase.auth.getUser();
-      if (user?.email) {
-        const { data } = await supabase
-          .from('purchases')
-          .select('id')
-          .eq('email', user.email.toLowerCase())
-          .limit(1);
-        hasPurchase = !!data && data.length > 0;
-      }
-    } catch {
-      hasPurchase = true; // ante un error, no bloquear: llevar al destino normal
-    }
-
-    router.push(hasPurchase ? redirectTo : '/pricing');
+    router.push(await getPostLoginPath(supabase, redirectTo));
     router.refresh();
   }
 

@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { useRef, useState } from 'react';
 import { createClient } from '@/lib/supabase/client';
+import { getPostLoginPath } from '@/lib/supabase/post-login';
 import { useLanguage } from '@/app/context/LanguageContext';
 
 const translations = {
@@ -19,6 +20,9 @@ const translations = {
     submit: 'Crear cuenta',
     have_account: '¿Ya tienes cuenta?',
     login: 'Inicia sesión',
+    exists_wrong: 'Ya tienes una cuenta con este email, pero la contraseña no coincide.',
+    not_confirmed: 'Tu cuenta existe pero falta confirmar el email. Revisa tu bandeja de entrada.',
+    forgot: '¿Olvidaste tu contraseña?',
   },
   pt: {
     email_label: 'Email',
@@ -32,6 +36,9 @@ const translations = {
     submit: 'Criar conta',
     have_account: 'Já tem conta?',
     login: 'Entrar',
+    exists_wrong: 'Você já tem uma conta com este email, mas a senha não coincide.',
+    not_confirmed: 'Sua conta existe, mas falta confirmar o email. Verifique sua caixa de entrada.',
+    forgot: 'Esqueceu sua senha?',
   },
   en: {
     email_label: 'Email',
@@ -45,6 +52,9 @@ const translations = {
     submit: 'Create account',
     have_account: 'Already have an account?',
     login: 'Sign in',
+    exists_wrong: "You already have an account with this email, but the password doesn't match.",
+    not_confirmed: "Your account exists but the email isn't confirmed yet. Check your inbox.",
+    forgot: 'Forgot your password?',
   },
 }
 
@@ -88,6 +98,7 @@ export function SignupForm() {
   const passwordRef = useRef<HTMLInputElement>(null);
   const [error, setError] = useState<string | null>(null);
   const [message, setMessage] = useState<string | null>(null);
+  const [showForgot, setShowForgot] = useState(false);
   const [loading, setLoading] = useState(false);
 
   const { locale } = useLanguage();
@@ -97,10 +108,11 @@ export function SignupForm() {
     e.preventDefault();
     setError(null);
     setMessage(null);
+    setShowForgot(false);
     setLoading(true);
 
     const supabase = createClient();
-    const { error: signUpError } = await supabase.auth.signUp({
+    const { data: signUpData, error: signUpError } = await supabase.auth.signUp({
       email,
       password,
       options: {
@@ -110,6 +122,27 @@ export function SignupForm() {
 
     if (signUpError) {
       setError(signUpError.message);
+      setLoading(false);
+      return;
+    }
+
+    // Si el email ya tiene cuenta, Supabase no da error pero devuelve identities vacío.
+    // En ese caso intentamos iniciar sesión con los mismos datos.
+    const alreadyExists =
+      !!signUpData.user && (signUpData.user.identities?.length ?? 1) === 0;
+    if (alreadyExists) {
+      const { error: signInError } = await supabase.auth.signInWithPassword({ email, password });
+      if (!signInError) {
+        router.push(await getPostLoginPath(supabase, redirectTo));
+        router.refresh();
+        return;
+      }
+      if (/confirm/i.test(signInError.message)) {
+        setError(t.not_confirmed);
+      } else {
+        setError(t.exists_wrong);
+        setShowForgot(true);
+      }
       setLoading(false);
       return;
     }
@@ -209,6 +242,14 @@ export function SignupForm() {
 
         {error && (
           <p style={{ color: '#ef4444', fontSize: '14px', marginBottom: '16px' }}>{error}</p>
+        )}
+
+        {showForgot && (
+          <p style={{ marginBottom: '16px', fontSize: '14px' }}>
+            <Link href="/forgot-password" style={{ color: '#e8572a', fontWeight: 'bold', textDecoration: 'none' }}>
+              {t.forgot}
+            </Link>
+          </p>
         )}
 
         {message && (
