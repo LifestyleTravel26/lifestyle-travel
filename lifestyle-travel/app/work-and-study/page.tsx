@@ -161,37 +161,89 @@ export default function WorkAndStudy() {
         <h2 style={{ fontSize: '20px', fontWeight: 'bold', marginBottom: '4px', color: '#1a1a2e' }}>{t.section_title}</h2>
         <p style={{ color: '#333333', fontSize: '13px', marginBottom: '16px' }}>{t.section_sub}</p>
 
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+        <style>{`
+          .country-card { transition: transform 0.18s ease, box-shadow 0.18s ease; }
+          .country-card:hover { transform: translateY(-3px); box-shadow: 0 10px 24px rgba(26,26,46,0.22); }
+          .country-card:active { transform: scale(0.98); }
+        `}</style>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '14px' }}>
           {countryData.map((country, index) => (
             <Link key={country.href} href={country.href} style={{ textDecoration: 'none', color: 'inherit' }}>
-              <div style={{
-                backgroundImage: `linear-gradient(to right, rgba(0,0,0,0.25) 0%, rgba(0,0,0,0.10) 50%, rgba(0,0,0,0.25) 100%), url("${country.img}")`,
-                backgroundSize: 'cover',
-                backgroundPosition: 'center',
-                backgroundRepeat: 'no-repeat',
-                borderRadius: '14px',
-                padding: '18px 20px',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'space-between',
-                cursor: 'pointer',
-                minHeight: '110px',
-              }}>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-                  <span style={{ fontSize: '28px' }}>{country.flag}</span>
-                  <span style={{ fontWeight: '700', fontSize: '16px', color: 'white', textShadow: '0 1px 4px rgba(0,0,0,0.8)' }}>{t.countries[index].name}</span>
+              <div
+                className="country-card"
+                style={{
+                  position: 'relative',
+                  backgroundImage: `linear-gradient(to top, rgba(10,10,25,0.62) 0%, rgba(10,10,25,0.18) 34%, rgba(10,10,25,0) 58%), url("${country.img}")`,
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center',
+                  backgroundRepeat: 'no-repeat',
+                  borderRadius: '18px',
+                  aspectRatio: '16 / 9',
+                  minHeight: '170px',
+                  boxSizing: 'border-box',
+                  padding: '14px 16px',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  justifyContent: 'space-between',
+                  cursor: 'pointer',
+                  overflow: 'hidden',
+                  boxShadow: '0 2px 10px rgba(26,26,46,0.10)',
+                }}
+              >
+                <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between' }}>
+                  <span
+                    style={{
+                      width: '38px',
+                      height: '38px',
+                      borderRadius: '50%',
+                      backgroundColor: 'rgba(255,255,255,0.22)',
+                      border: '1px solid rgba(255,255,255,0.45)',
+                      backdropFilter: 'blur(8px)',
+                      WebkitBackdropFilter: 'blur(8px)',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      fontSize: '20px',
+                      lineHeight: 1,
+                    }}
+                  >
+                    {country.flag}
+                  </span>
+                  <span style={{
+                    backgroundColor: country.difficultyColor,
+                    color: 'white',
+                    borderRadius: '20px',
+                    padding: '4px 14px',
+                    fontSize: '12px',
+                    fontWeight: 'bold',
+                    whiteSpace: 'nowrap' as const,
+                    boxShadow: '0 1px 4px rgba(0,0,0,0.25)',
+                  }}>
+                    {t.countries[index].difficulty}
+                  </span>
                 </div>
-                <span style={{
-                  backgroundColor: country.difficultyColor,
-                  color: 'white',
-                  borderRadius: '20px',
-                  padding: '4px 14px',
-                  fontSize: '12px',
-                  fontWeight: 'bold',
-                  whiteSpace: 'nowrap' as const,
-                }}>
-                  {t.countries[index].difficulty}
-                </span>
+
+                <div style={{ display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between', gap: '8px' }}>
+                  <span style={{ fontWeight: 700, fontSize: '21px', color: 'white', lineHeight: 1.2, textShadow: '0 1px 5px rgba(0,0,0,0.55)' }}>
+                    {t.countries[index].name}
+                  </span>
+                  <span
+                    style={{
+                      flexShrink: 0,
+                      width: '30px',
+                      height: '30px',
+                      borderRadius: '50%',
+                      backgroundColor: '#e8572a',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                    }}
+                  >
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M5 12h14M13 6l6 6-6 6" />
+                    </svg>
+                  </span>
+                </div>
               </div>
             </Link>
           ))}
