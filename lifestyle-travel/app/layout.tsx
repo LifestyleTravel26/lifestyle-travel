@@ -4,6 +4,7 @@ import "./globals.css";
 import { LanguageProvider } from "./context/LanguageContext";
 import CookieBanner from "./components/CookieBanner";
 import AIChat from "./components/AIChat";
+import InstallPrompt from "./components/InstallPrompt";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -70,6 +71,7 @@ export default function RootLayout({
           {children}
           <CookieBanner />
           <AIChat />
+          <InstallPrompt />
         </LanguageProvider>
       </body>
     </html>
