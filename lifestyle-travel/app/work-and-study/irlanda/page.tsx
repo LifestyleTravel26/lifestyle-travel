@@ -550,6 +550,23 @@ const translations = {
   },
 }
 
+const ICON_PATHS: Record<string, React.ReactNode> = {
+  cost: (<><path d="M4 10h12" /><path d="M4 14h9" /><path d="M19 6a7.7 7.7 0 0 0-5.2-2A7.9 7.9 0 0 0 6 12c0 4.4 3.5 8 7.8 8 2 0 3.8-.8 5.2-2" /></>),
+  time: (<><circle cx="12" cy="12" r="10" /><polyline points="12 6 12 12 16 14" /></>),
+  level: (<><line x1="12" x2="12" y1="20" y2="10" /><line x1="18" x2="18" y1="20" y2="4" /><line x1="6" x2="6" y1="20" y2="16" /></>),
+  lock: (<><rect width="18" height="11" x="3" y="11" rx="2" ry="2" /><path d="M7 11V7a5 5 0 0 1 10 0v4" /></>),
+}
+
+function IconBadge({ name, size = 40 }: { name: string; size?: number }) {
+  return (
+    <div style={{ width: `${size}px`, height: `${size}px`, borderRadius: '50%', backgroundColor: '#fdf0ea', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto' }}>
+      <svg width={size * 0.5} height={size * 0.5} viewBox="0 0 24 24" fill="none" stroke="#e8572a" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        {ICON_PATHS[name]}
+      </svg>
+    </div>
+  )
+}
+
 export default function Irlanda() {
   const [openSection, setOpenSection] = useState<string | null>(null)
   const [feedback, setFeedback] = useState('')
@@ -646,9 +663,9 @@ export default function Irlanda() {
 
       {/* STATS */}
       <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '10px', padding: '16px 20px' }}>
-        {[['💰', t.stat1_label, t.stat1_value], ['🕐', t.stat2_label, t.stat2_value], ['📊', t.stat3_label, t.stat3_value]].map((s, i) => (
+        {[['cost', t.stat1_label, t.stat1_value], ['time', t.stat2_label, t.stat2_value], ['level', t.stat3_label, t.stat3_value]].map((s, i) => (
           <div key={i} style={{ backgroundColor: 'white', borderRadius: '10px', padding: '14px', textAlign: 'center', boxShadow: '0 1px 4px rgba(0,0,0,0.06)' }}>
-            <div style={{ fontSize: '22px', marginBottom: '4px' }}>{s[0]}</div>
+            <div style={{ marginBottom: '8px' }}><IconBadge name={s[0]} size={36} /></div>
             <div style={{ color: '#555555', fontSize: '10px', marginBottom: '3px' }}>{s[1]}</div>
             <div style={{ fontWeight: '700', fontSize: '12px', color: '#1a1a2e' }}>{s[2]}</div>
           </div>
@@ -684,15 +701,15 @@ export default function Irlanda() {
 
         {!hasAccess && (
   <div style={{ backgroundColor: 'white', borderRadius: '16px', padding: '24px', textAlign: 'center', boxShadow: '0 4px 16px rgba(0,0,0,0.10)', margin: '16px 0', border: '2px solid #e8572a' }}>
-    <div style={{ fontSize: '40px', marginBottom: '12px' }}>🔒</div>
+    <div style={{ marginBottom: '14px' }}><IconBadge name="lock" size={52} /></div>
     <h3 style={{ fontWeight: 'bold', fontSize: '18px', color: '#1a1a2e', marginBottom: '8px' }}>Contenido Premium</h3>
     <p style={{ color: '#555555', fontSize: '14px', marginBottom: '20px' }}>Accede al blueprint completo con toda la información detallada</p>
     <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
       <a href="https://lifestylentravel2.lemonsqueezy.com/checkout/buy/524cea8d-e3ba-4bbf-b5dd-46c927b2857d?embed=1" className="lemonsqueezy-button" style={{ backgroundColor: '#1a1a2e', color: 'white', borderRadius: '10px', padding: '14px', fontSize: '15px', fontWeight: 'bold', textDecoration: 'none', display: 'block' }}>
-        🗂️ Comprar este Blueprint — €14.99
+        Comprar este Blueprint — €14.99
       </a>
       <a href="https://lifestylentravel2.lemonsqueezy.com/checkout/buy/2dc9d208-cf0b-45f0-83b4-998414ffb9f4?embed=1" className="lemonsqueezy-button" style={{ backgroundColor: '#e8572a', color: 'white', borderRadius: '10px', padding: '16px', fontSize: '16px', fontWeight: 'bold', textDecoration: 'none', display: 'block', textAlign: 'center', boxShadow: '0 4px 12px rgba(232,87,42,0.4)', border: '2px solid #ff6b3d' }}>
-        🔥 Acceso Total — Todos los Blueprints €39.99
+        Acceso Total — Todos los Blueprints €39.99
       </a>
     </div>
   </div>
