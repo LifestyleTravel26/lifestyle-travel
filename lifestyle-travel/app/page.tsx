@@ -52,13 +52,54 @@ const translations = {
 }
 
 const visaData = [
-  { emoji: '🎓', href: '/work-and-study', img: 'https://images.unsplash.com/photo-1607114751909-976171f71616?q=80&w=1200&auto=format&fit=crop' },
-  { emoji: '🌴', href: '/work-and-holidays', img: 'https://images.unsplash.com/photo-1476900543704-4312b78632f8?q=80&w=1200&auto=format&fit=crop' },
-  { emoji: '💻', href: '/nomada-digital', img: 'https://images.unsplash.com/photo-1715210471871-590883e6a720?q=80&w=1200&auto=format&fit=crop' },
-  { emoji: '👨‍👩‍👧', href: '/au-pair', img: 'https://images.unsplash.com/photo-1560706981-3f98c4aceb76?q=80&w=1200&auto=format&fit=crop' },
-  { emoji: '🐾', href: '/pet-sitting', img: 'https://images.unsplash.com/photo-1696875135742-c3044510c9e2?q=80&w=1200&auto=format&fit=crop' },
-  { emoji: '🌍', href: '/voluntariado', img: 'https://images.unsplash.com/photo-1565803974275-dccd2f933cbb?q=80&w=1200&auto=format&fit=crop' },
+  { icon: 'study', href: '/work-and-study', img: 'https://images.unsplash.com/photo-1607114751909-976171f71616?q=80&w=700&auto=format&fit=crop' },
+  { icon: 'sun', href: '/work-and-holidays', img: 'https://images.unsplash.com/photo-1476900543704-4312b78632f8?q=80&w=700&auto=format&fit=crop' },
+  { icon: 'laptop', href: '/nomada-digital', img: 'https://images.unsplash.com/photo-1715210471871-590883e6a720?q=80&w=700&auto=format&fit=crop' },
+  { icon: 'users', href: '/au-pair', img: 'https://images.unsplash.com/photo-1560706981-3f98c4aceb76?q=80&w=700&auto=format&fit=crop' },
+  { icon: 'paw', href: '/pet-sitting', img: 'https://images.unsplash.com/photo-1696875135742-c3044510c9e2?q=80&w=700&auto=format&fit=crop' },
+  { icon: 'globe', href: '/voluntariado', img: 'https://images.unsplash.com/photo-1565803974275-dccd2f933cbb?q=80&w=700&auto=format&fit=crop' },
 ]
+
+
+const ICON_PATHS: Record<string, React.ReactNode> = {
+  study: (
+    <>
+      <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+      <path d="M6 12v5c3 3 9 3 12 0v-5" />
+    </>
+  ),
+  sun: (
+    <>
+      <circle cx="12" cy="12" r="4" />
+      <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41" />
+    </>
+  ),
+  laptop: (
+    <path d="M20 16V7a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v9m16 0H4m16 0 1.28 2.55a1 1 0 0 1-.9 1.45H3.62a1 1 0 0 1-.9-1.45L4 16" />
+  ),
+  users: (
+    <>
+      <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+      <circle cx="9" cy="7" r="4" />
+      <path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" />
+    </>
+  ),
+  paw: (
+    <>
+      <circle cx="11" cy="4" r="2" />
+      <circle cx="18" cy="8" r="2" />
+      <circle cx="20" cy="16" r="2" />
+      <path d="M9 10a5 5 0 0 1 5 5v3.5a3.5 3.5 0 0 1-6.84 1.045Q6.52 17.48 4.46 16.84A3.5 3.5 0 0 1 5.5 10Z" />
+    </>
+  ),
+  globe: (
+    <>
+      <circle cx="12" cy="12" r="10" />
+      <path d="M2 12h20" />
+      <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+    </>
+  ),
+}
 
 export default function Home() {
   const { locale } = useLanguage()
@@ -84,12 +125,74 @@ export default function Home() {
       <div style={{ padding: '16px 16px 32px', maxWidth: '600px', margin: '0 auto' }}>
         <h2 style={{ fontSize: '20px', fontWeight: 'bold', marginBottom: '4px', color: '#1a1a2e' }}>{t.section_title}</h2>
         <p style={{ color: '#333333', marginBottom: '14px', fontSize: '13px' }}>{t.section_sub}</p>
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '10px' }}>
+        <style>{`
+          .route-card { transition: transform 0.18s ease, box-shadow 0.18s ease; }
+          .route-card:hover { transform: translateY(-3px); box-shadow: 0 10px 24px rgba(26,26,46,0.22); }
+          .route-card:active { transform: scale(0.97); }
+        `}</style>
+        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '12px' }}>
           {visaData.map((visa, index) => (
             <Link key={visa.href} href={visa.href} style={{ textDecoration: 'none', color: 'inherit' }}>
-              <div style={{ backgroundImage: `linear-gradient(to top, rgba(0,0,0,0.65) 0%, transparent 55%), url("${visa.img}")`, backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', borderRadius: '16px', aspectRatio: '4/3', display: 'flex', flexDirection: 'column', justifyContent: 'flex-end', cursor: 'pointer', overflow: 'hidden', boxSizing: 'border-box', padding: '10px 12px' }}>
-                <span style={{ fontSize: '18px', lineHeight: '1', marginBottom: '4px' }}>{visa.emoji}</span>
-                <span style={{ fontWeight: 'bold', fontSize: '13px', color: 'white', lineHeight: '1.3', textShadow: '0 1px 3px rgba(0,0,0,0.8)' }}>{t.visas[index].title}</span>
+              <div
+                className="route-card"
+                style={{
+                  position: 'relative',
+                  backgroundImage: `linear-gradient(to top, rgba(10,10,25,0.80) 0%, rgba(10,10,25,0.22) 52%, rgba(10,10,25,0.05) 100%), url("${visa.img}")`,
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center',
+                  backgroundRepeat: 'no-repeat',
+                  borderRadius: '18px',
+                  aspectRatio: '1 / 1',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  justifyContent: 'flex-end',
+                  cursor: 'pointer',
+                  overflow: 'hidden',
+                  boxSizing: 'border-box',
+                  padding: '12px',
+                  boxShadow: '0 2px 10px rgba(26,26,46,0.12)',
+                }}
+              >
+                <span
+                  style={{
+                    position: 'absolute',
+                    top: '10px',
+                    left: '10px',
+                    width: '34px',
+                    height: '34px',
+                    borderRadius: '50%',
+                    backgroundColor: 'rgba(255,255,255,0.18)',
+                    border: '1px solid rgba(255,255,255,0.4)',
+                    backdropFilter: 'blur(8px)',
+                    WebkitBackdropFilter: 'blur(8px)',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                  }}
+                >
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    {ICON_PATHS[visa.icon]}
+                  </svg>
+                </span>
+                <div style={{ display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between', gap: '8px' }}>
+                  <span style={{ fontWeight: 'bold', fontSize: '14px', color: 'white', lineHeight: '1.25', textShadow: '0 1px 4px rgba(0,0,0,0.5)' }}>{t.visas[index].title}</span>
+                  <span
+                    style={{
+                      flexShrink: 0,
+                      width: '26px',
+                      height: '26px',
+                      borderRadius: '50%',
+                      backgroundColor: '#e8572a',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                    }}
+                  >
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M5 12h14M13 6l6 6-6 6" />
+                    </svg>
+                  </span>
+                </div>
               </div>
             </Link>
           ))}
