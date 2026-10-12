@@ -687,7 +687,7 @@ export default function Espana() {
           <h3 style={{ fontWeight: 'bold', fontSize: '18px', color: '#1a1a2e', marginBottom: '8px' }}>Contenido Premium</h3>
           <p style={{ color: '#555555', fontSize: '14px', marginBottom: '20px' }}>Accede al blueprint completo con toda la información detallada</p>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
-            <a href="https://lifestylentravel2.lemonsqueezy.com/checkout/buy/524cea8d-e3ba-4bbf-b5dd-46c927b2857d?embed=1" className="lemonsqueezy-button" style={{ backgroundColor: '#1a1a2e', color: 'white', borderRadius: '10px', padding: '14px', fontSize: '15px', fontWeight: 'bold', textDecoration: 'none', display: 'block' }}>
+            <a href="https://lifestylentravel2.lemonsqueezy.com/checkout/buy/524cea8d-e3ba-4bbf-b5dd-46c927b2857d?embed=1" className="lemonsqueezy-button" style={{ backgroundColor: 'white', color: '#1a1a2e', border: '2px solid #d1d5db', borderRadius: '10px', padding: '12px', fontSize: '14px', fontWeight: 'bold', textDecoration: 'none', display: 'block' }}>
               Comprar este Blueprint — €14.99
             </a>
             <a

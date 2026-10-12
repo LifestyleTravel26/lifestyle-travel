@@ -7,7 +7,8 @@ const translations = {
   es: {
     title: 'Planes y Precios',
     subtitle: 'Elige el plan que mejor se adapta a tu situación',
-    badge_popular: '⭐ Más Popular',
+    badge_popular: 'Recomendado',
+    save_note: 'Cuesta menos que 3 blueprints individuales',
     badge_best: '🔥 Mejor Valor',
     plans: [
       {
@@ -75,7 +76,8 @@ const translations = {
   pt: {
     title: 'Planos e Preços',
     subtitle: 'Escolha o plano que melhor se adapta à sua situação',
-    badge_popular: '⭐ Mais Popular',
+    badge_popular: 'Recomendado',
+    save_note: 'Custa menos que 3 blueprints avulsos',
     badge_best: '🔥 Melhor Valor',
     plans: [
       {
@@ -143,7 +145,8 @@ const translations = {
   en: {
     title: 'Plans & Pricing',
     subtitle: 'Choose the plan that best fits your situation',
-    badge_popular: '⭐ Most Popular',
+    badge_popular: 'Recommended',
+    save_note: 'Costs less than 3 single blueprints',
     badge_best: '🔥 Best Value',
     plans: [
       {
@@ -244,17 +247,18 @@ export default function PricingPage() {
 
         {/* PLANS */}
         <div style={{ display: 'flex', flexDirection: 'column', gap: '16px', marginBottom: '32px' }}>
-          {t.plans.map((plan, i) => (
+          {[...t.plans].sort((a, b) => Number(b.popular) - Number(a.popular)).map((plan, i) => (
             <div key={i} style={{
-              backgroundColor: 'white',
+              backgroundColor: plan.popular ? '#fffaf7' : 'white',
               borderRadius: '16px',
-              padding: '24px',
-              boxShadow: plan.popular ? '0 4px 20px rgba(232,87,42,0.15)' : '0 2px 8px rgba(0,0,0,0.07)',
+              padding: plan.popular ? '30px 24px 26px' : '22px 24px',
+              boxShadow: plan.popular ? '0 8px 28px rgba(232,87,42,0.22)' : '0 2px 8px rgba(0,0,0,0.07)',
               border: plan.popular ? '2px solid #e8572a' : '2px solid #f0f0f0',
               position: 'relative' as const,
             }}>
               {plan.popular && (
-                <div style={{ position: 'absolute' as const, top: '-12px', left: '50%', transform: 'translateX(-50%)', backgroundColor: '#e8572a', color: 'white', borderRadius: '20px', padding: '4px 16px', fontSize: '12px', fontWeight: 'bold', whiteSpace: 'nowrap' as const }}>
+                <div style={{ position: 'absolute' as const, top: '-12px', left: '50%', transform: 'translateX(-50%)', backgroundColor: '#e8572a', color: 'white', borderRadius: '20px', padding: '5px 16px', fontSize: '12px', fontWeight: 'bold', whiteSpace: 'nowrap' as const, display: 'flex', alignItems: 'center', gap: '6px' }}>
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="white" stroke="none"><path d="M12 2.5c.3 2.9 1 5 2.1 6.2 1.2 1.2 3.3 1.9 6.2 2.1-2.9.3-5 1-6.2 2.1-1.2 1.2-1.9 3.3-2.1 6.2-.3-2.9-1-5-2.1-6.2-1.2-1.2-3.3-1.9-6.2-2.1 2.9-.3 5-1 6.2-2.1 1.2-1.2 1.9-3.3 2.1-6.2Z" /></svg>
                   {t.badge_popular}
                 </div>
               )}
@@ -262,8 +266,11 @@ export default function PricingPage() {
                 <div>
                   <h2 style={{ fontSize: '18px', fontWeight: 'bold', color: '#1a1a2e', margin: '0 0 4px' }}>{plan.name}</h2>
                   <p style={{ fontSize: '13px', color: '#555555', margin: 0 }}>{plan.description}</p>
+                  {plan.popular && (
+                    <p style={{ fontSize: '12px', color: '#e8572a', fontWeight: 'bold', margin: '6px 0 0' }}>{t.save_note}</p>
+                  )}
                 </div>
-                <span style={{ fontSize: '24px', fontWeight: 'bold', color: plan.color, flexShrink: 0, marginLeft: '12px' }}>{plan.price}</span>
+                <span style={{ fontSize: plan.popular ? '30px' : '22px', fontWeight: 'bold', color: plan.color, flexShrink: 0, marginLeft: '12px' }}>{plan.price}</span>
               </div>
               <div style={{ marginBottom: '16px' }}>
                 {plan.features.map((feature, j) => (
@@ -278,10 +285,11 @@ export default function PricingPage() {
                 style={{
                   display: 'block',
                   textAlign: 'center' as const,
-                  backgroundColor: plan.popular ? '#e8572a' : '#1a1a2e',
-                  color: 'white',
+                  backgroundColor: plan.popular ? '#e8572a' : 'white',
+                  color: plan.popular ? 'white' : '#1a1a2e',
+                  border: plan.popular ? '2px solid #e8572a' : '2px solid #d1d5db',
                   borderRadius: '10px',
-                  padding: '14px',
+                  padding: plan.popular ? '15px' : '12px',
                   fontSize: '15px',
                   fontWeight: 'bold',
                   textDecoration: 'none',
