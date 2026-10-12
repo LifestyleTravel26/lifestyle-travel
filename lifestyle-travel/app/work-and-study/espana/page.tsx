@@ -3,6 +3,7 @@ import { useState } from 'react'
 import { useLanguage } from '../../context/LanguageContext'
 import HeaderMenu from '../../components/HeaderMenu'
 import { usePurchase } from '../../hooks/usePurchase'
+import IconBadge from '../../components/IconBadge'
 
 const translations = {
   es: {
@@ -643,9 +644,9 @@ export default function Espana() {
 
       {/* STATS */}
       <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '10px', padding: '16px 20px' }}>
-        {[['💰', t.stat1_label, t.stat1_value], ['🕐', t.stat2_label, t.stat2_value], ['📊', t.stat3_label, t.stat3_value]].map((s, i) => (
+        {[['cost', t.stat1_label, t.stat1_value], ['time', t.stat2_label, t.stat2_value], ['level', t.stat3_label, t.stat3_value]].map((s, i) => (
           <div key={i} style={{ backgroundColor: 'white', borderRadius: '10px', padding: '14px', textAlign: 'center', boxShadow: '0 1px 4px rgba(0,0,0,0.06)' }}>
-            <div style={{ fontSize: '22px', marginBottom: '4px' }}>{s[0]}</div>
+            <div style={{ marginBottom: '8px' }}><IconBadge name={s[0]} size={36} /></div>
             <div style={{ color: '#555555', fontSize: '10px', marginBottom: '3px' }}>{s[1]}</div>
             <div style={{ fontWeight: '700', fontSize: '12px', color: '#1a1a2e' }}>{s[2]}</div>
           </div>
@@ -682,12 +683,12 @@ export default function Espana() {
         {/* PREMIUM LOCK */}
         {!hasAccess && (
         <div style={{ backgroundColor: 'white', borderRadius: '16px', padding: '24px', textAlign: 'center', boxShadow: '0 4px 16px rgba(0,0,0,0.10)', margin: '16px 0', border: '2px solid #e8572a' }}>
-          <div style={{ fontSize: '40px', marginBottom: '12px' }}>🔒</div>
+          <div style={{ marginBottom: '14px' }}><IconBadge name="lock" size={52} /></div>
           <h3 style={{ fontWeight: 'bold', fontSize: '18px', color: '#1a1a2e', marginBottom: '8px' }}>Contenido Premium</h3>
           <p style={{ color: '#555555', fontSize: '14px', marginBottom: '20px' }}>Accede al blueprint completo con toda la información detallada</p>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
             <a href="https://lifestylentravel2.lemonsqueezy.com/checkout/buy/524cea8d-e3ba-4bbf-b5dd-46c927b2857d?embed=1" className="lemonsqueezy-button" style={{ backgroundColor: '#1a1a2e', color: 'white', borderRadius: '10px', padding: '14px', fontSize: '15px', fontWeight: 'bold', textDecoration: 'none', display: 'block' }}>
-              🗂️ Comprar este Blueprint — €14.99
+              Comprar este Blueprint — €14.99
             </a>
             <a
               href="https://lifestylentravel2.lemonsqueezy.com/checkout/buy/2dc9d208-cf0b-45f0-83b4-998414ffb9f4?embed=1"
@@ -706,7 +707,7 @@ export default function Espana() {
                 border: '2px solid #ff6b3d',
               }}
             >
-              🔥 Acceso Total — Todos los Blueprints €39.99
+              Acceso Total — Todos los Blueprints €39.99
             </a>
           </div>
         </div>
