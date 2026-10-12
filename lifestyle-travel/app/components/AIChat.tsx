@@ -41,7 +41,7 @@ type Message = {
   content: string
 }
 
-const BUTTON_SIZE = 68
+const BUTTON_SIZE = 56
 const CHAT_WIDTH = 340
 const CHAT_HEIGHT = 480
 const GAP = 12
@@ -302,7 +302,7 @@ export default function AIChat() {
             <line x1="6" y1="6" x2="18" y2="18" />
           </svg>
         ) : (
-          <svg width="42" height="42" viewBox="0 0 24 24" fill="white" stroke="none">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="white" stroke="none">
             <path d="M12 2.5c.3 2.9 1 5 2.1 6.2 1.2 1.2 3.3 1.9 6.2 2.1-2.9.3-5 1-6.2 2.1-1.2 1.2-1.9 3.3-2.1 6.2-.3-2.9-1-5-2.1-6.2-1.2-1.2-3.3-1.9-6.2-2.1 2.9-.3 5-1 6.2-2.1 1.2-1.2 1.9-3.3 2.1-6.2Z" />
           </svg>
         )}
