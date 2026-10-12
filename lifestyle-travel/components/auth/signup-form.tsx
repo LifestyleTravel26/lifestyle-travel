@@ -112,6 +112,21 @@ export function SignupForm() {
     setLoading(true);
 
     const supabase = createClient();
+
+    // Primero intentamos iniciar sesión: si el email ya tiene cuenta y la
+    // contraseña es correcta, entra directo sin importar lo que responda signUp.
+    const { error: firstSignInError } = await supabase.auth.signInWithPassword({ email, password });
+    if (!firstSignInError) {
+      router.push(await getPostLoginPath(supabase, redirectTo));
+      router.refresh();
+      return;
+    }
+    if (/confirm/i.test(firstSignInError.message)) {
+      setError(t.not_confirmed);
+      setLoading(false);
+      return;
+    }
+
     const { data: signUpData, error: signUpError } = await supabase.auth.signUp({
       email,
       password,
@@ -137,18 +152,8 @@ export function SignupForm() {
       errorSaysExists ||
       (!!signUpData?.user && (signUpData.user.identities?.length ?? 1) === 0);
     if (alreadyExists) {
-      const { error: signInError } = await supabase.auth.signInWithPassword({ email, password });
-      if (!signInError) {
-        router.push(await getPostLoginPath(supabase, redirectTo));
-        router.refresh();
-        return;
-      }
-      if (/confirm/i.test(signInError.message)) {
-        setError(t.not_confirmed);
-      } else {
-        setError(t.exists_wrong);
-        setShowForgot(true);
-      }
+      setError(t.exists_wrong);
+      setShowForgot(true);
       setLoading(false);
       return;
     }
