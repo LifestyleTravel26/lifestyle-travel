@@ -107,24 +107,22 @@ export default function Home() {
 
   return (
     <main style={{ minHeight: '100vh', backgroundColor: '#f8f7f4', fontFamily: 'sans-serif' }}>
-      <div style={{ padding: '16px 16px 0', maxWidth: '600px', margin: '0 auto' }}>
-        <div style={{ position: 'relative', width: '100%', aspectRatio: '1 / 1', minHeight: '330px', maxHeight: '440px', borderRadius: '18px', display: 'flex', flexDirection: 'column', boxShadow: '0 2px 10px rgba(26,26,46,0.10)' }}>
-          <div aria-hidden="true" style={{ position: 'absolute', inset: 0, borderRadius: '18px', backgroundImage: 'linear-gradient(rgba(0,0,0,0.40), rgba(0,0,0,0.40)), url("https://images.unsplash.com/photo-1488085061387-422e29b40080?q=80&w=1331&auto=format&fit=crop")', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }} />
-          <div style={{ position: 'relative', padding: '14px 16px', display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between' }}>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-              <span>✈️</span>
-              <span style={{ color: 'white', fontWeight: 'bold', fontSize: '18px' }}>Lifestyle & Travel</span>
-            </div>
-            <HeaderMenu />
+      <div style={{ position: 'relative', height: '64vh', minHeight: '400px', backgroundImage: 'linear-gradient(rgba(0,0,0,0.40), rgba(0,0,0,0.40)), url("https://images.unsplash.com/photo-1488085061387-422e29b40080?q=80&w=1331&auto=format&fit=crop")', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', display: 'flex', flexDirection: 'column' }}>
+        <div style={{ padding: '16px 24px', display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+            <span>✈️</span>
+            <span style={{ color: 'white', fontWeight: 'bold', fontSize: '18px' }}>Lifestyle & Travel</span>
           </div>
-          <div style={{ position: 'relative', flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', textAlign: 'center', padding: '0 20px 24px' }}>
-            <h1 style={{ color: 'white', fontSize: '28px', fontWeight: 'bold', marginBottom: '12px', lineHeight: '1.3' }}>{t.hero_title}</h1>
-            <p style={{ color: '#ddd', fontSize: '14px', marginBottom: '20px', maxWidth: '400px' }}>{t.hero_sub}</p>
-            <Link href="/quiz" style={{ backgroundColor: '#e8572a', color: 'white', borderRadius: '12px', padding: '14px 28px', fontSize: '15px', fontWeight: 'bold', width: '100%', maxWidth: '360px', textDecoration: 'none', display: 'block', textAlign: 'center' }}>{t.hero_btn}</Link>
+          <HeaderMenu />
           </div>
+        <div style={{ flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', textAlign: 'center', padding: '0 24px 24px' }}>
+          <h1 style={{ color: 'white', fontSize: '28px', fontWeight: 'bold', marginBottom: '12px', lineHeight: '1.3' }}>{t.hero_title}</h1>
+          <p style={{ color: '#ddd', fontSize: '14px', marginBottom: '20px', maxWidth: '400px' }}>{t.hero_sub}</p>
+          <Link href="/quiz" style={{ backgroundColor: '#e8572a', color: 'white', borderRadius: '12px', padding: '14px 28px', fontSize: '15px', fontWeight: 'bold', width: '100%', maxWidth: '360px', textDecoration: 'none', display: 'block', textAlign: 'center' }}>{t.hero_btn}</Link>
         </div>
+        <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, height: '60px', background: 'linear-gradient(to bottom, transparent, #f8f7f4)', pointerEvents: 'none' }} />
       </div>
-      <div style={{ padding: '24px 16px 32px', maxWidth: '600px', margin: '0 auto' }}>
+      <div style={{ padding: '16px 16px 32px', maxWidth: '600px', margin: '0 auto' }}>
         <h2 style={{ fontSize: '20px', fontWeight: 'bold', marginBottom: '4px', color: '#1a1a2e' }}>{t.section_title}</h2>
         <p style={{ color: '#333333', marginBottom: '14px', fontSize: '13px' }}>{t.section_sub}</p>
         <style>{`
