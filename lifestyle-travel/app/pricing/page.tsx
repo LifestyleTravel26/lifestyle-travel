@@ -1,7 +1,7 @@
 'use client'
 import Link from 'next/link'
 import { useLanguage } from '../context/LanguageContext'
-import LanguageSwitcher from '../components/LanguageSwitcher'
+import HeaderMenu from '../components/HeaderMenu'
 
 const translations = {
   es: {
@@ -219,9 +219,11 @@ export default function PricingPage() {
 
       {/* HERO */}
       <div style={{ backgroundColor: '#1a1a2e', padding: '16px 24px', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-        <Link href="/" style={{ color: 'white', textDecoration: 'none', fontSize: '20px' }}>←</Link>
-        <span style={{ color: 'white', fontWeight: 'bold', fontSize: '16px' }}>✈️ Lifestyle & Travel</span>
-        <LanguageSwitcher />
+        <Link href="/" style={{ color: 'white', textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '8px' }}>
+          <span style={{ fontSize: '20px' }}>←</span>
+          <span style={{ fontWeight: 'bold', fontSize: '16px' }}>✈️ Lifestyle & Travel</span>
+        </Link>
+        <HeaderMenu />
       </div>
 
       <div style={{ padding: '32px 20px 60px', maxWidth: '600px', margin: '0 auto' }}>

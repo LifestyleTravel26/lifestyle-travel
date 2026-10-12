@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import type { ReactNode } from 'react';
-import LanguageSwitcher from '@/app/components/LanguageSwitcher';
+import HeaderMenu from '@/app/components/HeaderMenu';
 
 type AuthLayoutProps = {
   title: string;
@@ -19,7 +19,7 @@ export function AuthLayout({ title, subtitle, children }: AuthLayoutProps) {
         <Link href="/" style={{ color: 'white', textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '8px', fontWeight: 'bold' }}>
           ← ✈️ <span style={{ color: 'white' }}>Lifestyle & Travel</span>
         </Link>
-        <LanguageSwitcher />
+        <HeaderMenu />
       </div>
 
       {/* HERO */}
