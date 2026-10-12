@@ -302,7 +302,7 @@ export default function AIChat() {
             <line x1="6" y1="6" x2="18" y2="18" />
           </svg>
         ) : (
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="white" stroke="none">
+          <svg width="30" height="30" viewBox="0 0 24 24" fill="white" stroke="none">
             <path d="M12 2.5c.3 2.9 1 5 2.1 6.2 1.2 1.2 3.3 1.9 6.2 2.1-2.9.3-5 1-6.2 2.1-1.2 1.2-1.9 3.3-2.1 6.2-.3-2.9-1-5-2.1-6.2-1.2-1.2-3.3-1.9-6.2-2.1 2.9-.3 5-1 6.2-2.1 1.2-1.2 1.9-3.3 2.1-6.2Z" />
           </svg>
         )}
@@ -336,7 +336,7 @@ export default function AIChat() {
                 alignItems: 'center',
                 justifyContent: 'center',
               }}>
-                <svg width="17" height="17" viewBox="0 0 24 24" fill="#e8572a" stroke="none">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="#e8572a" stroke="none">
                   <path d="M12 2.5c.3 2.9 1 5 2.1 6.2 1.2 1.2 3.3 1.9 6.2 2.1-2.9.3-5 1-6.2 2.1-1.2 1.2-1.9 3.3-2.1 6.2-.3-2.9-1-5-2.1-6.2-1.2-1.2-3.3-1.9-6.2-2.1 2.9-.3 5-1 6.2-2.1 1.2-1.2 1.9-3.3 2.1-6.2Z" />
                 </svg>
               </div>
