@@ -120,16 +120,22 @@ export function SignupForm() {
       },
     });
 
-    if (signUpError) {
+    // Email ya registrado: según la configuración de Supabase puede venir como
+    // error ("User already registered") o como usuario sin identities.
+    const errorSaysExists =
+      !!signUpError &&
+      ((signUpError as { code?: string }).code === 'user_already_exists' ||
+        /already.*registered|already.*exists/i.test(signUpError.message));
+
+    if (signUpError && !errorSaysExists) {
       setError(signUpError.message);
       setLoading(false);
       return;
     }
 
-    // Si el email ya tiene cuenta, Supabase no da error pero devuelve identities vacío.
-    // En ese caso intentamos iniciar sesión con los mismos datos.
     const alreadyExists =
-      !!signUpData.user && (signUpData.user.identities?.length ?? 1) === 0;
+      errorSaysExists ||
+      (!!signUpData?.user && (signUpData.user.identities?.length ?? 1) === 0);
     if (alreadyExists) {
       const { error: signInError } = await supabase.auth.signInWithPassword({ email, password });
       if (!signInError) {
