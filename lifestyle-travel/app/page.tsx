@@ -137,7 +137,7 @@ export default function Home() {
                 className="route-card"
                 style={{
                   position: 'relative',
-                  backgroundImage: `linear-gradient(to top, rgba(10,10,25,0.80) 0%, rgba(10,10,25,0.22) 52%, rgba(10,10,25,0.05) 100%), url("${visa.img}")`,
+                  backgroundImage: `linear-gradient(to top, rgba(10,10,25,0.62) 0%, rgba(10,10,25,0.18) 32%, rgba(10,10,25,0) 55%), url("${visa.img}")`,
                   backgroundSize: 'cover',
                   backgroundPosition: 'center',
                   backgroundRepeat: 'no-repeat',
@@ -150,7 +150,7 @@ export default function Home() {
                   overflow: 'hidden',
                   boxSizing: 'border-box',
                   padding: '12px',
-                  boxShadow: '0 2px 10px rgba(26,26,46,0.12)',
+                  boxShadow: '0 2px 10px rgba(26,26,46,0.10)',
                 }}
               >
                 <span
