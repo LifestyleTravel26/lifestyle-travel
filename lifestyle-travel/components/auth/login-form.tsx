@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { useRouter, useSearchParams } from 'next/navigation';
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import { createClient } from '@/lib/supabase/client';
 import { useLanguage } from '@/app/context/LanguageContext';
 
@@ -82,6 +82,7 @@ export function LoginForm() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
+  const passwordRef = useRef<HTMLInputElement>(null);
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
 
@@ -147,6 +148,7 @@ export function LoginForm() {
         </label>
         <div style={{ position: 'relative' }}>
           <input
+            ref={passwordRef}
             id="password"
             type={showPassword ? 'text' : 'password'}
             value={password}
@@ -158,7 +160,11 @@ export function LoginForm() {
           />
           <button
             type="button"
-            onClick={() => setShowPassword((v) => !v)}
+            onMouseDown={(e) => e.preventDefault()}
+            onClick={() => {
+              setShowPassword((v) => !v)
+              passwordRef.current?.focus()
+            }}
             aria-label={showPassword ? t.hide : t.show}
             style={{
               position: 'absolute',
