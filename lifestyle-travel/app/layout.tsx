@@ -5,6 +5,7 @@ import { LanguageProvider } from "./context/LanguageContext";
 import CookieBanner from "./components/CookieBanner";
 import AIChat from "./components/AIChat";
 import InstallPrompt from "./components/InstallPrompt";
+import LemonSqueezyInit from "./components/LemonSqueezyInit";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -72,6 +73,7 @@ export default function RootLayout({
           <CookieBanner />
           <AIChat />
           <InstallPrompt />
+          <LemonSqueezyInit />
         </LanguageProvider>
       </body>
     </html>
