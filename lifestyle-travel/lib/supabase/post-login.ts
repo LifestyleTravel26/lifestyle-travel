@@ -14,7 +14,7 @@ export async function getPostLoginPath(
     const { data } = await supabase
       .from('purchases')
       .select('id')
-      .eq('email', user.email.toLowerCase())
+      .ilike('email', user.email.trim().replace(/[\\%_]/g, '\\$&'))
       .limit(1);
 
     return data && data.length > 0 ? redirectTo : '/pricing';

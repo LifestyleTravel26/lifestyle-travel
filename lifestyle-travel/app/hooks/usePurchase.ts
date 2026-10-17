@@ -18,13 +18,15 @@ export function usePurchase() {
           return
         }
 
+        // ilike (sin distinguir mayúsculas) y limit(1): no falla si hay filas duplicadas
+        const safeEmail = user.email.trim().replace(/[\\%_]/g, '\\$&')
         const { data } = await supabase
           .from('purchases')
           .select('id')
-          .eq('email', user.email.toLowerCase())
-          .single()
+          .ilike('email', safeEmail)
+          .limit(1)
 
-        setHasAccess(!!data)
+        setHasAccess(!!data && data.length > 0)
       } catch {
         setHasAccess(false)
       } finally {
