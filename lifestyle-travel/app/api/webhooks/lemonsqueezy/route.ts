@@ -1,8 +1,21 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { createClient } from '@/lib/supabase/server'
+import { createClient as createServerClient } from '@/lib/supabase/server'
+import { createClient as createAdminClient } from '@supabase/supabase-js'
 import crypto from 'crypto'
 
 const WEBHOOK_SECRET = process.env.LEMONSQUEEZY_WEBHOOK_SECRET || 'lsq_webhook_secret_lifestyle2026'
+
+// El webhook no tiene sesión de usuario: con RLS activo necesita la clave service_role.
+// Si no está configurada, se usa el cliente anterior para no romper nada.
+async function getDb() {
+  const key = process.env.SUPABASE_SERVICE_ROLE_KEY
+  if (key && process.env.NEXT_PUBLIC_SUPABASE_URL) {
+    return createAdminClient(process.env.NEXT_PUBLIC_SUPABASE_URL, key, {
+      auth: { persistSession: false, autoRefreshToken: false },
+    })
+  }
+  return createServerClient()
+}
 
 function verifySignature(payload: string, signature: string): boolean {
   const hmac = crypto.createHmac('sha256', WEBHOOK_SECRET)
@@ -33,7 +46,7 @@ export async function POST(request: NextRequest) {
     const accessLevel = 'full' // default to full for now
 
     if (email) {
-      const supabase = await createClient()
+      const supabase = await getDb()
       
       // Insert purchase record
       const { error } = await supabase
@@ -60,7 +73,7 @@ export async function POST(request: NextRequest) {
     const email = order?.user_email
 
     if (email) {
-      const supabase = await createClient()
+      const supabase = await getDb()
       await supabase
         .from('purchases')
         .delete()
