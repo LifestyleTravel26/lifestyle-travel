@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import Anthropic from '@anthropic-ai/sdk'
+import { createClient } from '@/lib/supabase/server'
 
 type ChatMessage = {
   role: 'user' | 'assistant'
@@ -339,6 +340,39 @@ function stripMarkdown(text: string): string {
     .replace(/\*/g, '')
 }
 
+// Verifica en el servidor si quien escribe tiene una compra (no confiamos en el cliente).
+async function userHasPurchase(): Promise<boolean> {
+  try {
+    const supabase = await createClient()
+    const { data: { user } } = await supabase.auth.getUser()
+    if (!user?.email) return false
+    const { data } = await supabase
+      .from('purchases')
+      .select('id')
+      .ilike('email', user.email.trim().replace(/[\\%_]/g, '\\$&'))
+      .limit(1)
+    return !!data && data.length > 0
+  } catch {
+    return false
+  }
+}
+
+const PAID_NOTE = `
+
+USER ACCESS: This user HAS PAID and already has full access to the blueprints.
+- Answer fully and in detail using the facts above.
+- For complete school lists, exact prices, step-by-step protocols and similar details, send them to the relevant blueprint page path.
+- Do NOT try to sell them anything.`
+
+const FREE_NOTE = `
+
+USER ACCESS: This user has NOT purchased. They are a prospective customer, so keep answers LIMITED:
+- Maximum 2-3 short sentences. Give only high-level orientation (which visa applies, a general price range, whether the country fits their situation).
+- Do NOT give detailed breakdowns: no school lists or school prices, no salary tables, no step-by-step processes or landing protocol, no housing channels, no bank-by-bank advice, no exact document checklists.
+- If they ask for those details, say clearly that the complete verified information is inside the blueprints.
+- ALWAYS end by inviting them to get Full Access (€39.99, all blueprints, lifetime access) at /pricing. If price seems to be a concern, mention the launch code LAUNCH50 (50% off, limited time).
+- This overrides the "once every 2-3 responses" upsell guidance above: in this mode, invite them in every reply, in one short sentence.`
+
 export async function POST(request: NextRequest) {
   try {
     if (!isAllowedOrigin(request)) {
@@ -371,18 +405,16 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: 'First message must be from user' }, { status: 400 })
     }
 
+    const hasPaid = await userHasPurchase()
+
     const client = new Anthropic({
       apiKey: process.env.ANTHROPIC_API_KEY,
     })
 
     const response = await client.messages.create({
       model: 'claude-sonnet-4-6',
-      max_tokens: 700,
-      system:
-        SYSTEM_PROMPT +
-        (body?.hasAccess === true
-          ? '\n\nThis user ALREADY HAS full access to the blueprints. Send them directly to the relevant blueprint page and do not try to sell them anything.'
-          : ''),
+      max_tokens: hasPaid ? 700 : 350,
+      system: SYSTEM_PROMPT + (hasPaid ? PAID_NOTE : FREE_NOTE),
       messages: apiMessages,
     })
 
