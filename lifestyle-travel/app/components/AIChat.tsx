@@ -2,6 +2,7 @@
 import { useState, useRef, useEffect } from 'react'
 import { createPortal } from 'react-dom'
 import { usePathname } from 'next/navigation'
+import Link from 'next/link'
 import { useLanguage } from '../context/LanguageContext'
 import { usePurchase } from '@/app/hooks/usePurchase'
 import { createClient } from '@/lib/supabase/client'
@@ -75,6 +76,22 @@ function getChatPosition(buttonPos: { x: number; y: number }) {
   chatY = Math.max(8, Math.min(window.innerHeight - CHAT_HEIGHT - 8, chatY))
 
   return { x: chatX, y: chatY }
+}
+
+// Convierte las rutas de blueprint que menciona el asistente en enlaces pulsables.
+const PAGE_PATH_RE =
+  /((?:https?:\/\/)?(?:www\.)?(?:lifestylentravel\.com)?\/(?:work-and-study\/[a-z-]*[a-z]|work-and-holidays|nomada-digital|au-pair|pet-sitting|voluntariado|pricing))/g
+
+function renderWithLinks(content: string) {
+  return content.split(PAGE_PATH_RE).map((part, i) => {
+    if (i % 2 === 0) return part
+    const href = part.replace(/^(?:https?:\/\/)?(?:www\.)?lifestylentravel\.com/, '')
+    return (
+      <Link key={i} href={href} style={{ color: '#e8572a', fontWeight: 'bold', textDecoration: 'underline' }}>
+        {part}
+      </Link>
+    )
+  })
 }
 
 export default function AIChat() {
@@ -376,7 +393,7 @@ export default function AIChat() {
                   fontSize: '13px',
                   lineHeight: '1.5',
                 }}>
-                  {msg.content}
+                  {msg.role === 'assistant' ? renderWithLinks(msg.content) : msg.content}
                 </div>
               </div>
             ))}

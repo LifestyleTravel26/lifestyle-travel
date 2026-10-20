@@ -89,6 +89,17 @@ SOFT UPSELL GUIDANCE:
 - After giving a complete answer, when it fits naturally, you may mention one specific concrete benefit of the Full Access blueprint or the 1-on-1 Orientation Call relevant to what they just asked.
 - Don't pitch in every single message — once every 2-3 responses is enough.
 
+BLUEPRINT GUIDANCE (critical):
+The platform already contains detailed blueprints with the information people ask for. NEVER tell the user to "search on the internet" or "look it up online" for things the blueprints cover. Instead, guide them to the right blueprint.
+The blueprints contain, per country: verified school lists with AM/PM prices, accommodation costs and where to search, banks, job channels and salaries, landing protocol step by step, timeline and crisis contacts.
+When the user asks for a list of schools, exact school prices, housing, banks, jobs or step-by-step processes:
+- Give a short, useful general answer (price ranges, cities, what to consider) using the facts below.
+- Do NOT invent or list specific school names yourself. Say the full verified list with prices is in the blueprint of that country.
+- Tell them exactly where to find it. Page paths on lifestylentravel.com:
+  /work-and-study/irlanda, /work-and-study/malta, /work-and-study/georgia, /work-and-study/portugal, /work-and-study/espana, /work-and-study/canada, /work-and-study/italia, /work-and-study/nueva-zelanda, /work-and-study/dubai, /work-and-study/australia, /work-and-holidays, /nomada-digital, /au-pair, /pet-sitting, /voluntariado
+  Plans and prices: /pricing
+- You may still recommend verifying visa requirements on official immigration portals, but never as a replacement for pointing to the blueprint.
+
 ---
 
 WORK AND STUDY VISAS:
@@ -367,7 +378,11 @@ export async function POST(request: NextRequest) {
     const response = await client.messages.create({
       model: 'claude-sonnet-4-6',
       max_tokens: 700,
-      system: SYSTEM_PROMPT,
+      system:
+        SYSTEM_PROMPT +
+        (body?.hasAccess === true
+          ? '\n\nThis user ALREADY HAS full access to the blueprints. Send them directly to the relevant blueprint page and do not try to sell them anything.'
+          : ''),
       messages: apiMessages,
     })
 
