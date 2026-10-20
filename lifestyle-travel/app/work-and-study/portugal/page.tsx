@@ -681,12 +681,12 @@ export default function Portugal() {
           <h3 style={{ fontWeight: 'bold', fontSize: '18px', color: '#1a1a2e', marginBottom: '8px' }}>Contenido Premium</h3>
           <p style={{ color: '#555555', fontSize: '14px', marginBottom: '20px' }}>Accede al blueprint completo con toda la información detallada</p>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
-            <a href="https://lifestylentravel2.lemonsqueezy.com/checkout/buy/524cea8d-e3ba-4bbf-b5dd-46c927b2857d?embed=1" className="lemonsqueezy-button" style={{ backgroundColor: 'white', color: '#1a1a2e', border: '2px solid #d1d5db', borderRadius: '10px', padding: '12px', fontSize: '14px', fontWeight: 'bold', textDecoration: 'none', display: 'block' }}>
+            <a href="https://lifestylentravel2.lemonsqueezy.com/checkout/buy/524cea8d-e3ba-4bbf-b5dd-46c927b2857d" style={{ backgroundColor: 'white', color: '#1a1a2e', border: '2px solid #d1d5db', borderRadius: '10px', padding: '12px', fontSize: '14px', fontWeight: 'bold', textDecoration: 'none', display: 'block' }}>
               Comprar este Blueprint — €14.99
             </a>
             <a
-              href="https://lifestylentravel2.lemonsqueezy.com/checkout/buy/2dc9d208-cf0b-45f0-83b4-998414ffb9f4?embed=1"
-              className="lemonsqueezy-button"
+              href="https://lifestylentravel2.lemonsqueezy.com/checkout/buy/2dc9d208-cf0b-45f0-83b4-998414ffb9f4"
+             
               style={{
                 backgroundColor: '#e8572a',
                 color: 'white',
@@ -1186,7 +1186,7 @@ export default function Portugal() {
           <h3 style={{ fontWeight: 'bold', marginBottom: '8px', fontSize: '18px', color: '#1a1a2e' }}>{t.consultoria_title}</h3>
           <p style={{ color: '#333333', fontSize: '14px', marginBottom: '6px' }}>{t.consultoria_desc}</p>
           <p style={{ color: '#555555', fontSize: '13px', marginBottom: '16px' }}>{t.consultoria_time}</p>
-          <a href="https://lifestylentravel2.lemonsqueezy.com/checkout/buy/9528f8ba-c895-43fb-ba9b-2637815b1366?embed=1" className="lemonsqueezy-button" target="_blank" rel="noopener noreferrer" style={{ backgroundColor: '#e8572a', color: 'white', borderRadius: '12px', padding: '14px 32px', fontSize: '15px', fontWeight: 'bold', textDecoration: 'none', display: 'inline-block' }}>
+          <a href="https://lifestylentravel2.lemonsqueezy.com/checkout/buy/9528f8ba-c895-43fb-ba9b-2637815b1366" target="_blank" rel="noopener noreferrer" style={{ backgroundColor: '#e8572a', color: 'white', borderRadius: '12px', padding: '14px 32px', fontSize: '15px', fontWeight: 'bold', textDecoration: 'none', display: 'inline-block' }}>
             {t.consultoria_btn}
           </a>
         </div>

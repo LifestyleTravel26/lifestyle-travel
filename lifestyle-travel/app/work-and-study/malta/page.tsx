@@ -21,7 +21,7 @@ const translations = {
       'Ruta Estudiante → Single Permit: la vía más segura y legal para vivir y trabajar en Malta',
       'Clima mediterráneo, inglés oficial y costo de vida más bajo que Irlanda o Canadá',
       'e-Residence Card: tu ID maltés en menos de 90 días desde llegada',
-      '11 escuelas verificadas en St. Julian\'s, Sliema y Gozo con precios desde €2,500',
+      '10 escuelas verificadas en St. Julian\'s, Sliema y Gozo con precios desde €2,500',
       'Comunidad latina activa — grupos de WhatsApp para vivienda y trabajo',
     ],
     sec_autoridad_title: 'Encabezado de Autoridad',
@@ -38,7 +38,7 @@ const translations = {
     sec_estrategia_title: 'Estrategia y Presupuesto: Selección de Academia',
     estrategia_intro: 'Elegir bien tu escuela es la decisión financiera más importante. Las escuelas AM son más caras pero te dejan las tardes libres para trabajar. Las PM son más baratas y liberan las mañanas. Malta tiene opciones en St. Julian\'s (más empleo), Gozo (más económico) y Sliema.',
     estrategia_head: '🇲🇹 Matriz de Escuelas de Inglés: Malta 2026',
-    estrategia_sub: '11 escuelas verificadas ordenadas por precio. AM = turno mañana, PM = turno tarde.',
+    estrategia_sub: '10 escuelas verificadas ordenadas por precio. AM = turno mañana, PM = turno tarde.',
     th_inst: 'Institución', th_loc: 'Ubicación', th_am: 'Precio AM (25 sem)', th_pm: 'Precio PM (25 sem)', th_web: 'Website',
     solvencia1_label: '🔵 Solvencia con alojamiento pagado:',
     solvencia1_val: '€28/día → aprox. €5,040 para 6 meses',
@@ -197,7 +197,7 @@ const translations = {
       'Rota Estudante → Single Permit: a via mais segura e legal para viver e trabalhar em Malta',
       'Clima mediterrâneo, inglês oficial e custo de vida mais baixo que Irlanda ou Canadá',
       'e-Residence Card: seu ID maltês em menos de 90 dias desde a chegada',
-      '11 escolas verificadas em St. Julian\'s, Sliema e Gozo com preços a partir de €2.500',
+      '10 escolas verificadas em St. Julian\'s, Sliema e Gozo com preços a partir de €2.500',
       'Comunidade latina ativa — grupos de WhatsApp para moradia e trabalho',
     ],
     sec_autoridad_title: 'Cabeçalho de Autoridade',
@@ -214,7 +214,7 @@ const translations = {
     sec_estrategia_title: 'Estratégia e Orçamento: Seleção de Academia',
     estrategia_intro: 'Escolher bem sua escola é a decisão financeira mais importante. As escolas AM são mais caras mas deixam as tardes livres para trabalhar. As PM são mais baratas e liberam as manhãs. Malta tem opções em St. Julian\'s (mais emprego), Gozo (mais econômico) e Sliema.',
     estrategia_head: '🇲🇹 Matriz de Escolas de Inglês: Malta 2026',
-    estrategia_sub: '11 escolas verificadas ordenadas por preço. AM = turno manhã, PM = turno tarde.',
+    estrategia_sub: '10 escolas verificadas ordenadas por preço. AM = turno manhã, PM = turno tarde.',
     th_inst: 'Instituição', th_loc: 'Localização', th_am: 'Preço AM (25 sem)', th_pm: 'Preço PM (25 sem)', th_web: 'Website',
     solvencia1_label: '🔵 Solvência com alojamento pago:',
     solvencia1_val: '€28/dia → aprox. €5.040 para 6 meses',
@@ -373,7 +373,7 @@ const translations = {
       'Student → Single Permit route: the safest and most legal way to live and work in Malta',
       'Mediterranean climate, official English and lower cost of living than Ireland or Canada',
       'e-Residence Card: your Maltese ID in less than 90 days from arrival',
-      '11 verified schools in St. Julian\'s, Sliema and Gozo with prices from €2,500',
+      '10 verified schools in St. Julian\'s, Sliema and Gozo with prices from €2,500',
       'Active Latin community — WhatsApp groups for housing and work',
     ],
     sec_autoridad_title: 'Authority Header',
@@ -390,7 +390,7 @@ const translations = {
     sec_estrategia_title: 'Strategy & Budget: School Selection',
     estrategia_intro: 'Choosing the right school is the most important financial decision. AM schools are more expensive but leave afternoons free to work. PM schools are cheaper and free up mornings. Malta has options in St. Julian\'s (more employment), Gozo (more affordable) and Sliema.',
     estrategia_head: '🇲🇹 English Schools Matrix: Malta 2026',
-    estrategia_sub: '11 verified schools ordered by price. AM = morning shift, PM = afternoon shift.',
+    estrategia_sub: '10 verified schools ordered by price. AM = morning shift, PM = afternoon shift.',
     th_inst: 'Institution', th_loc: 'Location', th_am: 'AM Price (25 wks)', th_pm: 'PM Price (25 wks)', th_web: 'Website',
     solvencia1_label: '🔵 Funds with paid accommodation:',
     solvencia1_val: '€28/day → approx. €5,040 for 6 months',
@@ -663,12 +663,12 @@ export default function Malta() {
           <h3 style={{ fontWeight: 'bold', fontSize: '18px', color: '#1a1a2e', marginBottom: '8px' }}>Contenido Premium</h3>
           <p style={{ color: '#555555', fontSize: '14px', marginBottom: '20px' }}>Accede al blueprint completo con toda la información detallada</p>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
-            <a href="https://lifestylentravel2.lemonsqueezy.com/checkout/buy/524cea8d-e3ba-4bbf-b5dd-46c927b2857d?embed=1" className="lemonsqueezy-button" style={{ backgroundColor: 'white', color: '#1a1a2e', border: '2px solid #d1d5db', borderRadius: '10px', padding: '12px', fontSize: '14px', fontWeight: 'bold', textDecoration: 'none', display: 'block' }}>
+            <a href="https://lifestylentravel2.lemonsqueezy.com/checkout/buy/524cea8d-e3ba-4bbf-b5dd-46c927b2857d" style={{ backgroundColor: 'white', color: '#1a1a2e', border: '2px solid #d1d5db', borderRadius: '10px', padding: '12px', fontSize: '14px', fontWeight: 'bold', textDecoration: 'none', display: 'block' }}>
               Comprar este Blueprint — €14.99
             </a>
             <a
-              href="https://lifestylentravel2.lemonsqueezy.com/checkout/buy/2dc9d208-cf0b-45f0-83b4-998414ffb9f4?embed=1"
-              className="lemonsqueezy-button"
+              href="https://lifestylentravel2.lemonsqueezy.com/checkout/buy/2dc9d208-cf0b-45f0-83b4-998414ffb9f4"
+             
               style={{
                 backgroundColor: '#e8572a',
                 color: 'white',
@@ -710,7 +710,6 @@ export default function Malta() {
                   ['Inlingua Malta', 'Sliema', '€3,300 – €3,800', '€3,000 – €3,400', 'inlinguamalta.com', 'https://inlinguamalta.com'],
                   ['ACE English Malta', "St. Julian's", '€3,500 – €3,900', '€3,200 – €3,500', 'aceenglishmalta.com', 'https://aceenglishmalta.com'],
                   ['ESE Malta', "St. Julian's", '€3,600 – €4,000', '€3,200 – €3,600', 'ese-edu.com', 'https://ese-edu.com'],
-                  ['EC English Malta', "St. Julian's", '€4,000 – €4,500', '€3,600 – €4,000', 'ecenglish.com', 'https://ecenglish.com'],
                   ['Malta University Language School', 'Lija', '€3,800 – €4,200', '€3,400 – €3,700', 'universitylanguageschool.com', 'https://universitylanguageschool.com'],
                 ].map((r, i) => (
                   <tr key={i}>
@@ -1159,7 +1158,7 @@ export default function Malta() {
           <h3 style={{ fontWeight: 'bold', marginBottom: '8px', fontSize: '18px', color: '#1a1a2e'}}>{t.consultoria_title}</h3>
           <p style={{ color: '#1a1a2e', fontSize: '14px', marginBottom: '6px' }}>{t.consultoria_desc}</p>
           <p style={{ color: '#555555', fontSize: '13px', marginBottom: '16px' }}>{t.consultoria_time}</p>
-          <a href="https://lifestylentravel2.lemonsqueezy.com/checkout/buy/9528f8ba-c895-43fb-ba9b-2637815b1366?embed=1" className="lemonsqueezy-button" target="_blank" rel="noopener noreferrer" style={{ backgroundColor: '#e8572a', color: 'white', borderRadius: '12px', padding: '14px 32px', fontSize: '15px', fontWeight: 'bold', textDecoration: 'none', display: 'inline-block' }}>
+          <a href="https://lifestylentravel2.lemonsqueezy.com/checkout/buy/9528f8ba-c895-43fb-ba9b-2637815b1366" target="_blank" rel="noopener noreferrer" style={{ backgroundColor: '#e8572a', color: 'white', borderRadius: '12px', padding: '14px 32px', fontSize: '15px', fontWeight: 'bold', textDecoration: 'none', display: 'inline-block' }}>
             {t.consultoria_btn}
           </a>
         </div>
