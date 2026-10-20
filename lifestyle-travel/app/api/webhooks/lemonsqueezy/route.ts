@@ -3,7 +3,7 @@ import { createClient as createServerClient } from '@/lib/supabase/server'
 import { createClient as createAdminClient } from '@supabase/supabase-js'
 import crypto from 'crypto'
 
-const WEBHOOK_SECRET = process.env.LEMONSQUEEZY_WEBHOOK_SECRET || 'lsq_webhook_secret_lifestyle2026'
+const WEBHOOK_SECRET = process.env.LEMONSQUEEZY_WEBHOOK_SECRET
 
 // El webhook no tiene sesión de usuario: con RLS activo necesita la clave service_role.
 // Si no está configurada, se usa el cliente anterior para no romper nada.
@@ -18,6 +18,7 @@ async function getDb() {
 }
 
 function verifySignature(payload: string, signature: string): boolean {
+  if (!WEBHOOK_SECRET) return false // sin clave configurada se rechaza todo
   const hmac = crypto.createHmac('sha256', WEBHOOK_SECRET)
   const digest = hmac.update(payload).digest('hex')
   return digest === signature
