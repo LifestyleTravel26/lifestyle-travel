@@ -17,7 +17,7 @@ const ALLOWED_ORIGINS = [
 ]
 
 const MAX_MESSAGE_LENGTH = 2000 // characters per message
-const MAX_MESSAGES_IN_THREAD = 20 // how many turns of history allowed per request
+const MAX_MESSAGES_IN_THREAD = 10 // how many turns of history allowed per request
 const RATE_LIMIT_WINDOW_MS = 60 * 60 * 1000 // 1 hour
 const RATE_LIMIT_MAX_REQUESTS = 15 // max requests per IP per window
 
@@ -366,7 +366,7 @@ export async function POST(request: NextRequest) {
 
     const response = await client.messages.create({
       model: 'claude-sonnet-4-6',
-      max_tokens: 1024,
+      max_tokens: 700,
       system: SYSTEM_PROMPT,
       messages: apiMessages,
     })
