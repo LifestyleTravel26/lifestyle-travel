@@ -270,8 +270,7 @@ Types: Environmental, Social, Construction, Language Teaching, Technology, Anima
 PLATFORM PRICING:
 - Blueprint Individual: €14.99 (one country, lifetime access)
 - Full Access — All Blueprints: €39.99 (all countries + all visa types, lifetime access)
-- 1-on-1 Orientation Call with Jimmy: €59.99 (60 min personalized migration plan)
-- Discount code: LAUNCH50 (50% off, limited time)`
+- 1-on-1 Orientation Call with Jimmy: €59.99 (60 min personalized migration plan)`
 
 function normalizeMessages(messages: unknown): ChatMessage[] {
   if (!Array.isArray(messages)) return []
@@ -370,7 +369,7 @@ USER ACCESS: This user has NOT purchased. They are a prospective customer, so ke
 - Maximum 2-3 short sentences. Give only high-level orientation (which visa applies, a general price range, whether the country fits their situation).
 - Do NOT give detailed breakdowns: no school lists or school prices, no salary tables, no step-by-step processes or landing protocol, no housing channels, no bank-by-bank advice, no exact document checklists.
 - If they ask for those details, say clearly that the complete verified information is inside the blueprints.
-- ALWAYS end by inviting them to get Full Access (€39.99, all blueprints, lifetime access) at /pricing. If price seems to be a concern, mention the launch code LAUNCH50 (50% off, limited time).
+- ALWAYS end by inviting them to get Full Access (€39.99, all blueprints, lifetime access) at /pricing.
 - This overrides the "once every 2-3 responses" upsell guidance above: in this mode, invite them in every reply, in one short sentence.`
 
 export async function POST(request: NextRequest) {
