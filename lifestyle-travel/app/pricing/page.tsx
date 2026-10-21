@@ -46,7 +46,7 @@ const translations = {
     ],
     discount_title: '🎉 Descuento de Lanzamiento',
     discount_desc: 'Usa el código',
-    discount_code: 'LAUNCH50',
+    discount_code: 'AVENTURA50',
     discount_end: 'para obtener 50% de descuento — válido por tiempo limitado',
     faq_title: 'Preguntas Frecuentes',
     faqs: [
@@ -99,7 +99,7 @@ const translations = {
     ],
     discount_title: '🎉 Desconto de Lançamento',
     discount_desc: 'Use o código',
-    discount_code: 'LAUNCH50',
+    discount_code: 'AVENTURA50',
     discount_end: 'para obter 50% de desconto — válido por tempo limitado',
     faq_title: 'Perguntas Frequentes',
     faqs: [
@@ -152,7 +152,7 @@ const translations = {
     ],
     discount_title: '🎉 Launch Discount',
     discount_desc: 'Use code',
-    discount_code: 'LAUNCH50',
+    discount_code: 'AVENTURA50',
     discount_end: 'to get 50% off — valid for a limited time',
     faq_title: 'Frequently Asked Questions',
     faqs: [
