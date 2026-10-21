@@ -1,6 +1,7 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { createClient } from '@/lib/supabase/client';
 import { AuthLayout } from '@/components/auth/auth-layout';
@@ -15,6 +16,8 @@ const translations = {
     mismatch: 'Las contraseñas no coinciden',
     saving: 'Guardando...',
     submit: 'Guardar nueva contraseña',
+    expired: 'Este enlace ya no es válido o expiró. Solicita uno nuevo.',
+    request_new: 'Solicitar nuevo enlace',
   },
   pt: {
     title: 'Nova senha',
@@ -24,6 +27,8 @@ const translations = {
     mismatch: 'As senhas não coincidem',
     saving: 'Salvando...',
     submit: 'Salvar nova senha',
+    expired: 'Este link não é mais válido ou expirou. Solicite um novo.',
+    request_new: 'Solicitar novo link',
   },
   en: {
     title: 'New password',
@@ -33,6 +38,8 @@ const translations = {
     mismatch: 'Passwords do not match',
     saving: 'Saving...',
     submit: 'Save new password',
+    expired: 'This link is no longer valid or has expired. Request a new one.',
+    request_new: 'Request a new link',
   },
 }
 
@@ -44,6 +51,27 @@ export default function ResetPasswordPage() {
   const [confirm, setConfirm] = useState('');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [expired, setExpired] = useState(false);
+
+  // El enlace del correo crea una sesión temporal. Si no llega ninguna, el enlace
+  // ya se usó o caducó: lo avisamos en lugar de dejar un formulario que falla.
+  useEffect(() => {
+    const supabase = createClient();
+    let ready = false;
+    supabase.auth.getSession().then(({ data }) => {
+      if (data.session) ready = true;
+    });
+    const { data } = supabase.auth.onAuthStateChange((_event, session) => {
+      if (session) ready = true;
+    });
+    const timer = setTimeout(() => {
+      if (!ready) setExpired(true);
+    }, 4000);
+    return () => {
+      clearTimeout(timer);
+      data.subscription.unsubscribe();
+    };
+  }, []);
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
@@ -73,6 +101,8 @@ export default function ResetPasswordPage() {
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             required
+            minLength={6}
+            autoComplete="new-password"
             placeholder="••••••••"
             style={{ width: '100%', padding: '12px 14px', borderRadius: '8px', border: '1px solid #ddd', fontSize: '15px', marginBottom: '16px', boxSizing: 'border-box' }}
           />
@@ -82,10 +112,20 @@ export default function ResetPasswordPage() {
             value={confirm}
             onChange={(e) => setConfirm(e.target.value)}
             required
+            minLength={6}
+            autoComplete="new-password"
             placeholder="••••••••"
             style={{ width: '100%', padding: '12px 14px', borderRadius: '8px', border: '1px solid #ddd', fontSize: '15px', marginBottom: '16px', boxSizing: 'border-box' }}
           />
           {error && <p style={{ color: '#ef4444', fontSize: '14px', marginBottom: '16px' }}>{error}</p>}
+          {expired && (
+            <p style={{ fontSize: '14px', marginBottom: '16px' }}>
+              <span style={{ color: '#ef4444' }}>{t.expired}</span>{' '}
+              <Link href="/forgot-password" style={{ color: '#e8572a', fontWeight: 'bold', textDecoration: 'none' }}>
+                {t.request_new}
+              </Link>
+            </p>
+          )}
           <button
             type="submit"
             disabled={loading}

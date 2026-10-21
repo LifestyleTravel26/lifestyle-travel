@@ -11,6 +11,8 @@ const translations = {
   es: {
     email_label: 'Email',
     password_label: 'Contraseña',
+    confirm_label: 'Confirmar contraseña',
+    mismatch: 'Las contraseñas no coinciden',
     placeholder_email: 'tu@email.com',
     placeholder_password: 'Mínimo 6 caracteres',
     show: 'Mostrar contraseña',
@@ -27,6 +29,8 @@ const translations = {
   pt: {
     email_label: 'Email',
     password_label: 'Senha',
+    confirm_label: 'Confirmar senha',
+    mismatch: 'As senhas não coincidem',
     placeholder_email: 'seu@email.com',
     placeholder_password: 'Mínimo 6 caracteres',
     show: 'Mostrar senha',
@@ -43,6 +47,8 @@ const translations = {
   en: {
     email_label: 'Email',
     password_label: 'Password',
+    confirm_label: 'Confirm password',
+    mismatch: 'Passwords do not match',
     placeholder_email: 'you@email.com',
     placeholder_password: 'At least 6 characters',
     show: 'Show password',
@@ -94,6 +100,7 @@ export function SignupForm() {
 
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [confirm, setConfirm] = useState('');
   const [showPassword, setShowPassword] = useState(false);
   const passwordRef = useRef<HTMLInputElement>(null);
   const [error, setError] = useState<string | null>(null);
@@ -109,6 +116,10 @@ export function SignupForm() {
     setError(null);
     setMessage(null);
     setShowForgot(false);
+    if (password !== confirm) {
+      setError(t.mismatch);
+      return;
+    }
     setLoading(true);
 
     const supabase = createClient();
@@ -250,6 +261,24 @@ export function SignupForm() {
             )}
           </button>
         </div>
+
+        <label
+          htmlFor="confirm"
+          style={{ display: 'block', fontWeight: 'bold', marginBottom: '6px', fontSize: '14px' }}
+        >
+          {t.confirm_label}
+        </label>
+        <input
+          id="confirm"
+          type={showPassword ? 'text' : 'password'}
+          value={confirm}
+          onChange={(e) => setConfirm(e.target.value)}
+          required
+          minLength={6}
+          autoComplete="new-password"
+          style={inputStyle}
+          placeholder={t.placeholder_password}
+        />
 
         {error && (
           <p style={{ color: '#ef4444', fontSize: '14px', marginBottom: '16px' }}>{error}</p>
