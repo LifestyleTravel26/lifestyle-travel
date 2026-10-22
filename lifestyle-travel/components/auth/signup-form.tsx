@@ -2,13 +2,15 @@
 
 import Link from 'next/link';
 import { useRouter, useSearchParams } from 'next/navigation';
-import { useRef, useState } from 'react';
+import { useState } from 'react';
 import { createClient } from '@/lib/supabase/client';
 import { getPostLoginPath } from '@/lib/supabase/post-login';
 import { useLanguage } from '@/app/context/LanguageContext';
 
 const translations = {
   es: {
+    name_label: 'Nombre',
+    placeholder_name: 'Tu nombre',
     email_label: 'Email',
     password_label: 'Contraseña',
     confirm_label: 'Confirmar contraseña',
@@ -27,6 +29,8 @@ const translations = {
     forgot: '¿Olvidaste tu contraseña?',
   },
   pt: {
+    name_label: 'Nome',
+    placeholder_name: 'Seu nome',
     email_label: 'Email',
     password_label: 'Senha',
     confirm_label: 'Confirmar senha',
@@ -45,6 +49,8 @@ const translations = {
     forgot: 'Esqueceu sua senha?',
   },
   en: {
+    name_label: 'Name',
+    placeholder_name: 'Your name',
     email_label: 'Email',
     password_label: 'Password',
     confirm_label: 'Confirm password',
@@ -89,6 +95,32 @@ const buttonStyle: React.CSSProperties = {
   cursor: 'pointer',
 };
 
+function EyeToggle({ show, onToggle, label }: { show: boolean; onToggle: () => void; label: string }) {
+  return (
+    <button
+      type="button"
+      onMouseDown={(e) => e.preventDefault()}
+      onClick={onToggle}
+      aria-label={label}
+      style={{ position: 'absolute', right: '10px', top: '50%', transform: 'translateY(-50%)', background: 'none', border: 'none', cursor: 'pointer', lineHeight: 0, padding: '4px', color: '#6b7280', display: 'flex', alignItems: 'center' }}
+    >
+      {show ? (
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M9.88 9.88a3 3 0 1 0 4.24 4.24" />
+          <path d="M10.73 5.08A10.43 10.43 0 0 1 12 5c7 0 10 7 10 7a13.16 13.16 0 0 1-1.67 2.68" />
+          <path d="M6.61 6.61A13.526 13.526 0 0 0 2 12s3 7 10 7a9.74 9.74 0 0 0 5.39-1.61" />
+          <line x1="2" y1="2" x2="22" y2="22" />
+        </svg>
+      ) : (
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7Z" />
+          <circle cx="12" cy="12" r="3" />
+        </svg>
+      )}
+    </button>
+  );
+}
+
 export function SignupForm() {
   const router = useRouter();
   const searchParams = useSearchParams();
@@ -101,8 +133,9 @@ export function SignupForm() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [confirm, setConfirm] = useState('');
+  const [name, setName] = useState('');
   const [showPassword, setShowPassword] = useState(false);
-  const passwordRef = useRef<HTMLInputElement>(null);
+  const [showConfirm, setShowConfirm] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [message, setMessage] = useState<string | null>(null);
   const [showForgot, setShowForgot] = useState(false);
@@ -142,6 +175,7 @@ export function SignupForm() {
       email,
       password,
       options: {
+        data: { full_name: name.trim() },
         emailRedirectTo: `${window.location.origin}/auth/callback?next=${encodeURIComponent(redirectTo)}`,
       },
     });
@@ -188,6 +222,23 @@ export function SignupForm() {
     >
       <form onSubmit={handleSubmit}>
         <label
+          htmlFor="name"
+          style={{ display: 'block', fontWeight: 'bold', marginBottom: '6px', fontSize: '14px' }}
+        >
+          {t.name_label}
+        </label>
+        <input
+          id="name"
+          type="text"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+          required
+          autoComplete="name"
+          style={inputStyle}
+          placeholder={t.placeholder_name}
+        />
+
+        <label
           htmlFor="email"
           style={{ display: 'block', fontWeight: 'bold', marginBottom: '6px', fontSize: '14px' }}
         >
@@ -212,7 +263,6 @@ export function SignupForm() {
         </label>
         <div style={{ position: 'relative' }}>
           <input
-            ref={passwordRef}
             id="password"
             type={showPassword ? 'text' : 'password'}
             value={password}
@@ -223,43 +273,7 @@ export function SignupForm() {
             style={{ ...inputStyle, paddingRight: '44px' }}
             placeholder={t.placeholder_password}
           />
-          <button
-            type="button"
-            onMouseDown={(e) => e.preventDefault()}
-            onClick={() => {
-              setShowPassword((v) => !v)
-              passwordRef.current?.focus()
-            }}
-            aria-label={showPassword ? t.hide : t.show}
-            style={{
-              position: 'absolute',
-              right: '10px',
-              top: '50%',
-              transform: 'translateY(-50%)',
-              background: 'none',
-              border: 'none',
-              cursor: 'pointer',
-              lineHeight: 0,
-              padding: '4px',
-              color: '#6b7280',
-              display: 'flex',
-              alignItems: 'center',
-            }}
-          >
-            {showPassword ? (
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M9.88 9.88a3 3 0 1 0 4.24 4.24" />
-                <path d="M10.73 5.08A10.43 10.43 0 0 1 12 5c7 0 10 7 10 7a13.16 13.16 0 0 1-1.67 2.68" />
-                <path d="M6.61 6.61A13.526 13.526 0 0 0 2 12s3 7 10 7a9.74 9.74 0 0 0 5.39-1.61" />
-                <line x1="2" y1="2" x2="22" y2="22" />
-              </svg>
-            ) : (
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7Z" />
-                <circle cx="12" cy="12" r="3" />
-              </svg>
-            )}
-          </button>
+          <EyeToggle show={showPassword} onToggle={() => setShowPassword((v) => !v)} label={showPassword ? t.hide : t.show} />
         </div>
 
         <label
@@ -268,17 +282,20 @@ export function SignupForm() {
         >
           {t.confirm_label}
         </label>
-        <input
-          id="confirm"
-          type={showPassword ? 'text' : 'password'}
-          value={confirm}
-          onChange={(e) => setConfirm(e.target.value)}
-          required
-          minLength={6}
-          autoComplete="new-password"
-          style={inputStyle}
-          placeholder={t.placeholder_password}
-        />
+        <div style={{ position: 'relative' }}>
+          <input
+            id="confirm"
+            type={showConfirm ? 'text' : 'password'}
+            value={confirm}
+            onChange={(e) => setConfirm(e.target.value)}
+            required
+            minLength={6}
+            autoComplete="new-password"
+            style={{ ...inputStyle, paddingRight: '44px' }}
+            placeholder={t.placeholder_password}
+          />
+          <EyeToggle show={showConfirm} onToggle={() => setShowConfirm((v) => !v)} label={showConfirm ? t.hide : t.show} />
+        </div>
 
         {error && (
           <p style={{ color: '#ef4444', fontSize: '14px', marginBottom: '16px' }}>{error}</p>
