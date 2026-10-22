@@ -44,6 +44,7 @@ export default function ConfirmPage() {
   const [tokenHash, setTokenHash] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
   const [failed, setFailed] = useState(false);
+  const [detail, setDetail] = useState<string | null>(null);
 
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
@@ -59,6 +60,7 @@ export default function ConfirmPage() {
     const supabase = createClient();
     const { error } = await supabase.auth.verifyOtp({ type: 'recovery', token_hash: tokenHash });
     if (error) {
+      setDetail(error.message);
       setFailed(true);
       setLoading(false);
       return;
@@ -75,6 +77,7 @@ export default function ConfirmPage() {
             <Link href="/forgot-password" style={{ color: '#e8572a', fontWeight: 'bold', textDecoration: 'none' }}>
               {t.request_new}
             </Link>
+            {detail && <span style={{ display: 'block', marginTop: '10px', color: '#6b7280', fontSize: '12px' }}>{detail}</span>}
           </p>
         ) : (
           <button
