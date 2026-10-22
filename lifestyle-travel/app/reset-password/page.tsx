@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { createClient } from '@/lib/supabase/client';
@@ -86,26 +86,6 @@ export default function ResetPasswordPage() {
   const [expired, setExpired] = useState(false);
   const [show, setShow] = useState(false);
 
-  // El enlace del correo crea una sesión temporal. Si no llega ninguna, el enlace
-  // ya se usó o caducó: lo avisamos en lugar de dejar un formulario que falla.
-  useEffect(() => {
-    const supabase = createClient();
-    let ready = false;
-    supabase.auth.getSession().then(({ data }) => {
-      if (data.session) ready = true;
-    });
-    const { data } = supabase.auth.onAuthStateChange((_event, session) => {
-      if (session) ready = true;
-    });
-    const timer = setTimeout(() => {
-      if (!ready) setExpired(true);
-    }, 4000);
-    return () => {
-      clearTimeout(timer);
-      data.subscription.unsubscribe();
-    };
-  }, []);
-
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
     if (password !== confirm) {
@@ -117,7 +97,9 @@ export default function ResetPasswordPage() {
     const supabase = createClient();
     const { error } = await supabase.auth.updateUser({ password });
     if (error) {
-      setError(error.message);
+      // Solo avisamos de enlace caducado si de verdad no hay sesión al guardar.
+      if (/session/i.test(error.message)) setExpired(true);
+      else setError(error.message);
       setLoading(false);
       return;
     }
