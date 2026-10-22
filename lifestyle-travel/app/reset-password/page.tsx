@@ -84,7 +84,8 @@ export default function ResetPasswordPage() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [expired, setExpired] = useState(false);
-  const [show, setShow] = useState(false);
+  const [showPw, setShowPw] = useState(false);
+  const [showConfirm, setShowConfirm] = useState(false);
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
@@ -113,7 +114,7 @@ export default function ResetPasswordPage() {
           <label style={{ display: 'block', fontWeight: 'bold', marginBottom: '6px', fontSize: '14px' }}>{t.new_label}</label>
           <div style={{ position: 'relative' }}>
           <input
-            type={show ? 'text' : 'password'}
+            type={showPw ? 'text' : 'password'}
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             required
@@ -122,12 +123,12 @@ export default function ResetPasswordPage() {
             placeholder="••••••••"
             style={{ width: '100%', padding: '12px 44px 12px 14px', borderRadius: '8px', border: '1px solid #ddd', fontSize: '15px', marginBottom: '16px', boxSizing: 'border-box' }}
           />
-          <EyeButton show={show} onToggle={() => setShow((v) => !v)} label={show ? t.hide : t.show} />
+          <EyeButton show={showPw} onToggle={() => setShowPw((v) => !v)} label={showPw ? t.hide : t.show} />
           </div>
           <label style={{ display: 'block', fontWeight: 'bold', marginBottom: '6px', fontSize: '14px' }}>{t.confirm_label}</label>
           <div style={{ position: 'relative' }}>
           <input
-            type={show ? 'text' : 'password'}
+            type={showConfirm ? 'text' : 'password'}
             value={confirm}
             onChange={(e) => setConfirm(e.target.value)}
             required
@@ -136,7 +137,7 @@ export default function ResetPasswordPage() {
             placeholder="••••••••"
             style={{ width: '100%', padding: '12px 44px 12px 14px', borderRadius: '8px', border: '1px solid #ddd', fontSize: '15px', marginBottom: '16px', boxSizing: 'border-box' }}
           />
-          <EyeButton show={show} onToggle={() => setShow((v) => !v)} label={show ? t.hide : t.show} />
+          <EyeButton show={showConfirm} onToggle={() => setShowConfirm((v) => !v)} label={showConfirm ? t.hide : t.show} />
           </div>
           {error && <p style={{ color: '#ef4444', fontSize: '14px', marginBottom: '16px' }}>{error}</p>}
           {expired && (
