@@ -99,8 +99,8 @@ export default function ResetPasswordPage() {
     const { error } = await supabase.auth.updateUser({ password });
     if (error) {
       // Solo avisamos de enlace caducado si de verdad no hay sesión al guardar.
+      setError(error.message);
       if (/session/i.test(error.message)) setExpired(true);
-      else setError(error.message);
       setLoading(false);
       return;
     }
