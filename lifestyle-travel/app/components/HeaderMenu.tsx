@@ -136,7 +136,7 @@ export default function HeaderMenu() {
               </button>
             ) : (
               <Link
-                href="/signup"
+                href="/login"
                 onClick={() => setOpen(false)}
                 style={{
                   backgroundColor: '#e8572a',

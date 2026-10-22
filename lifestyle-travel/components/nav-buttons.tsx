@@ -46,7 +46,7 @@ export function NavButtons() {
 
   return (
     <Link
-      href="/signup"
+      href="/login"
       style={{
         backgroundColor: '#e8572a',
         color: 'white',
