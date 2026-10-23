@@ -87,7 +87,8 @@ const translations = {
     ],
     trabajo_head: '2. Permiso de Trabajo (30h/semana)',
     trabajo_items: [
-      ['Puedes trabajar hasta 30 horas/semana mientras dure el programa académico', null],
+      ['Puedes trabajar hasta 30 horas/semana mientras dure el programa académico, siempre fuera de tu horario de clases', null],
+      ['Estudios superiores (universidad): la autorización es automática con tu TIE. Cursos de español y otros estudios no superiores: tu empleador debe pedir autorización previa en Extranjería (formulario EX-00)', null],
       ['El empleador tramita tu registro en la Seguridad Social (NUSS)', 'https://seg-social.es'],
       ['Con NIE/TIE + Seguridad Social activo, ya puedes trabajar legalmente', null],
     ],
@@ -164,7 +165,7 @@ const translations = {
     th_categoria: 'Categoría',
     matrix_rows: [
       ['Visa principal', 'Visa de Estudiante (Tipo D)'],
-      ['Horas de trabajo', 'Hasta 30 horas/semana'],
+      ['Horas de trabajo', 'Hasta 30 h/semana, fuera de clases'],
       ['Mínimo curso', '20 horas semanales'],
       ['Solvencia obligatoria', '~€7,200 – €8,400 (IPREM anual)'],
       ['Costo promedio curso español', '€2,500 – €5,500 (6 meses)'],
@@ -271,7 +272,8 @@ const translations = {
     ],
     trabajo_head: '2. Permissão de Trabalho (30h/semana)',
     trabajo_items: [
-      ['Você pode trabalhar até 30 horas/semana enquanto durar o programa acadêmico', null],
+      ['Você pode trabalhar até 30 horas/semana enquanto durar o programa acadêmico, sempre fora do horário de aulas', null],
+      ['Estudos superiores (universidade): a autorização é automática com seu TIE. Cursos de espanhol e outros estudos não superiores: seu empregador deve pedir autorização prévia na Extranjería (formulário EX-00)', null],
       ['O empregador processa seu registro na Seguridade Social (NUSS)', 'https://seg-social.es'],
       ['Com NIE/TIE + Seguridade Social ativo, você já pode trabalhar legalmente', null],
     ],
@@ -348,7 +350,7 @@ const translations = {
     th_categoria: 'Categoria',
     matrix_rows: [
       ['Visto principal', 'Visto de Estudante (Tipo D)'],
-      ['Horas de trabalho', 'Até 30 horas/semana'],
+      ['Horas de trabalho', 'Até 30 h/semana, fora das aulas'],
       ['Curso mínimo', '20 horas semanais'],
       ['Solvência obrigatória', '~€7.200 – €8.400 (IPREM anual)'],
       ['Custo médio curso espanhol', '€2.500 – €5.500 (6 meses)'],
@@ -455,7 +457,8 @@ const translations = {
     ],
     trabajo_head: '2. Work Permit (30h/week)',
     trabajo_items: [
-      ['You can work up to 30 hours/week while the academic program lasts', null],
+      ['You can work up to 30 hours/week while the academic program lasts, always outside your class hours', null],
+      ['Higher education (university): authorization is automatic with your TIE. Spanish courses and other non-higher studies: your employer must request prior authorization from Extranjería (form EX-00)', null],
       ['The employer processes your Social Security registration (NUSS)', 'https://seg-social.es'],
       ['With NIE/TIE + active Social Security, you can already work legally', null],
     ],
@@ -532,7 +535,7 @@ const translations = {
     th_categoria: 'Category',
     matrix_rows: [
       ['Main Visa', 'Student Visa (Type D)'],
-      ['Work hours', 'Up to 30 hours/week'],
+      ['Work hours', 'Up to 30 h/week, outside class hours'],
       ['Minimum course', '20 hours per week'],
       ['Mandatory funds', '~€7,200 – €8,400 (annual IPREM)'],
       ['Average Spanish course cost', '€2,500 – €5,500 (6 months)'],
