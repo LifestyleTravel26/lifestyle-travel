@@ -88,7 +88,7 @@ const translations = {
     trabajo_head: '2. Permiso de Trabajo (30h/semana)',
     trabajo_items: [
       ['Puedes trabajar hasta 30 horas/semana mientras dure el programa académico, siempre fuera de tu horario de clases', null],
-      ['Estudios superiores (universidad): la autorización es automática con tu TIE. Cursos de español y otros estudios no superiores: tu empleador debe pedir autorización previa en Extranjería (formulario EX-00)', null],
+      ['Estudios superiores (universidad): la autorización es automática con tu TIE. Cursos de español y otros estudios no superiores: tu empleador debe pedir autorización previa en Extranjería', null],
       ['El empleador tramita tu registro en la Seguridad Social (NUSS)', 'https://seg-social.es'],
       ['Con NIE/TIE + Seguridad Social activo, ya puedes trabajar legalmente', null],
     ],
@@ -273,7 +273,7 @@ const translations = {
     trabajo_head: '2. Permissão de Trabalho (30h/semana)',
     trabajo_items: [
       ['Você pode trabalhar até 30 horas/semana enquanto durar o programa acadêmico, sempre fora do horário de aulas', null],
-      ['Estudos superiores (universidade): a autorização é automática com seu TIE. Cursos de espanhol e outros estudos não superiores: seu empregador deve pedir autorização prévia na Extranjería (formulário EX-00)', null],
+      ['Estudos superiores (universidade): a autorização é automática com seu TIE. Cursos de espanhol e outros estudos não superiores: seu empregador deve pedir autorização prévia na Extranjería', null],
       ['O empregador processa seu registro na Seguridade Social (NUSS)', 'https://seg-social.es'],
       ['Com NIE/TIE + Seguridade Social ativo, você já pode trabalhar legalmente', null],
     ],
@@ -458,7 +458,7 @@ const translations = {
     trabajo_head: '2. Work Permit (30h/week)',
     trabajo_items: [
       ['You can work up to 30 hours/week while the academic program lasts, always outside your class hours', null],
-      ['Higher education (university): authorization is automatic with your TIE. Spanish courses and other non-higher studies: your employer must request prior authorization from Extranjería (form EX-00)', null],
+      ['Higher education (university): authorization is automatic with your TIE. Spanish courses and other non-higher studies: your employer must request prior authorization from Extranjería', null],
       ['The employer processes your Social Security registration (NUSS)', 'https://seg-social.es'],
       ['With NIE/TIE + active Social Security, you can already work legally', null],
     ],
