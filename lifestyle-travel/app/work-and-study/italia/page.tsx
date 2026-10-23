@@ -168,7 +168,7 @@ const translations = {
     th_categoria: 'Categoría',
     matrix_rows: [
       ['Visa principal', 'Visto per Studio'],
-      ['Duración mínima del curso', '6 meses'],
+      ['Duración mínima del curso', 'Más de 90 días (visa D: 91–365 días)'],
       ['Horas de trabajo durante clases', '20 horas/semana'],
       ['Tope anual de trabajo', '1,040 horas (no se concentran en vacaciones)'],
       ['Solvencia para italiano', '~€5,200 (≈ $5,700)'],
@@ -360,7 +360,7 @@ const translations = {
     th_categoria: 'Categoria',
     matrix_rows: [
       ['Visto principal', 'Visto per Studio'],
-      ['Duração mínima do curso', '6 meses'],
+      ['Duração mínima do curso', 'Mais de 90 dias (visto D: 91–365 dias)'],
       ['Horas de trabalho durante aulas', '20 horas/semana'],
       ['Teto anual de trabalho', '1.040 horas (não se concentram nas férias)'],
       ['Solvência para italiano', '~€5.200 (≈ $5.700)'],
@@ -552,7 +552,7 @@ const translations = {
     th_categoria: 'Category',
     matrix_rows: [
       ['Main Visa', 'Visto per Studio'],
-      ['Minimum course duration', '6 months'],
+      ['Minimum course duration', 'Over 90 days (D visa: 91–365 days)'],
       ['Work hours during classes', '20 hours/week'],
       ['Annual work cap', '1,040 hours (not concentrated in holidays)'],
       ['Required funds for Italian', '~€5,200 (≈ $5,700)'],
