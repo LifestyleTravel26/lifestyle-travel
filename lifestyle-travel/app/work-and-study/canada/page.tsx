@@ -49,6 +49,7 @@ const translations = {
     solvencia3_val: 'Colleges públicos en ciudades secundarias (más baratos + menos competencia)',
     estrategia_hack: 'Elige colleges públicos en ciudades secundarias como Newfoundland, Manitoba o British Columbia interior. Cuestan 30-40% menos que Toronto o Vancouver, hay menos competencia por trabajo y la calidad educativa es equivalente para el PGWP.',
     aviso_2026: '⚠️ Antes de pagar (2026): (1) Para trabajar fuera del campus necesitas un programa post-secundario de tiempo completo, de al menos 6 meses, que dé título, diploma o certificado en una institución autorizada (DLI). Los cursos de inglés o francés (ESL/FSL) y los programas preparatorios o pathway NO te dan permiso de trabajo: si empiezas con una escuela de inglés, no podrás trabajar durante ese curso. (2) El tope es de 24 horas/semana durante clases; en los descansos oficiales de tu calendario puedes trabajar sin límite, hasta 180 días al año. (3) La mayoría de los permisos de estudio piden una carta de atestación provincial (PAL) y cada provincia tiene cupos anuales; los másters y doctorados en instituciones públicas están exentos desde enero de 2026. (4) Para el PGWP necesitas nivel de idioma (CLB) y, si tu programa no es universitario, que tu campo de estudio esté en la lista oficial de IRCC. Verifica todo en canada.ca antes de pagar.',
+    aviso_wh: 'Si tu prioridad es trabajar desde el primer día, revisa nuestro blueprint Work & Holidays →',
     sec_pre_title: 'Pre-Foundations & Pathway Programs',
     pre_intro: 'Los programas University Pathway te preparan para entrar a universidades canadienses con inglés académico. Al completar un programa en college o universidad elegible, accedes al PGWP — el permiso de trabajo post-graduación más valioso del blueprint.',
     th_programa: 'Programa', th_institucion: 'Institución', th_inversion: 'Inversión',
@@ -106,7 +107,7 @@ const translations = {
     empleos_hack: 'En Canadá muchas empresas valoran actitud, puntualidad y disponibilidad inmediata. Muchos trabajos se consiguen aplicando online o dejando CV directamente. La clave es aplicar RÁPIDO — Indeed Canada recibe cientos de aplicaciones por día.',
     sec_salarios_title: 'Matriz de Salarios Comunes',
     salarios_intro: 'Canadá tiene los salarios más altos del blueprint. Con 24h/semana y $16 CAD/hora, ganas ~$1,540 CAD/mes (~$1,110 USD). En vacaciones académicas puedes trabajar tiempo completo y duplicar esa cifra.',
-    th_sector_sal: 'Sector', th_puesto_sal: 'Puesto', th_mensual: 'Mensual EST. (20h/sem)',
+    th_sector_sal: 'Sector', th_puesto_sal: 'Puesto', th_mensual: 'Mensual EST. (24h/sem)',
     salarios_blue: '💡 DESCANSOS OFICIALES: Puedes trabajar tiempo completo (40h/semana) en los descansos de tu calendario académico (máx. 180 días al año). Un estudiante en hospitality a $18 CAD/hora puede ganar $2,880 CAD/mes (~$2,074 USD) en vacaciones. Eso es suficiente para cubrir gastos y ahorrar significativamente.',
     salarios_hack: 'Delivery con DoorDash o Uber Eats puede llegar a $25 CAD/hora en Toronto o Vancouver. Con 24h/semana son $2,400 CAD/mes (~$1,730 USD). En vacaciones académicas con 40h/semana son $4,000 CAD/mes. Es el sector con mayor ingreso por hora.',
     sec_timeline_title: 'Timeline de Ejecución',
@@ -224,6 +225,7 @@ const translations = {
     solvencia3_val: 'Colleges públicos em cidades secundárias (mais baratos + menos concorrência)',
     estrategia_hack: 'Escolha colleges públicos em cidades secundárias como Newfoundland, Manitoba ou interior da British Columbia. Custam 30-40% menos que Toronto ou Vancouver, há menos concorrência por trabalho e a qualidade educacional é equivalente para o PGWP.',
     aviso_2026: '⚠️ Antes de pagar (2026): (1) Para trabalhar fora do campus você precisa de um programa pós-secundário em tempo integral, de pelo menos 6 meses, que dê diploma ou certificado em uma instituição autorizada (DLI). Cursos de inglês ou francês (ESL/FSL) e programas preparatórios ou pathway NÃO dão permissão de trabalho: se você começar com uma escola de inglês, não poderá trabalhar durante esse curso. (2) O limite é de 24 horas/semana durante as aulas; nos descansos oficiais do seu calendário você pode trabalhar sem limite, até 180 dias por ano. (3) A maioria das autorizações de estudo exige uma carta de atestação provincial (PAL) e cada província tem cotas anuais; mestrados e doutorados em instituições públicas estão isentos desde janeiro de 2026. (4) Para o PGWP você precisa de nível de idioma (CLB) e, se seu programa não for universitário, que seu campo de estudo esteja na lista oficial do IRCC. Verifique tudo em canada.ca antes de pagar.',
+    aviso_wh: 'Se sua prioridade é trabalhar desde o primeiro dia, veja nosso blueprint Work & Holidays →',
     sec_pre_title: 'Pré-Fundações & Programas de Acesso',
     pre_intro: 'Os programas University Pathway te preparam para entrar em universidades canadenses com inglês acadêmico. Ao completar um programa em college ou universidade elegível, você acessa o PGWP — a permissão de trabalho pós-graduação mais valiosa do blueprint.',
     th_programa: 'Programa', th_institucion: 'Instituição', th_inversion: 'Investimento',
@@ -281,7 +283,7 @@ const translations = {
     empleos_hack: 'No Canadá muitas empresas valorizam atitude, pontualidade e disponibilidade imediata. Muitos trabalhos são conseguidos aplicando online ou deixando CV diretamente. A chave é aplicar RÁPIDO — Indeed Canada recebe centenas de candidaturas por dia.',
     sec_salarios_title: 'Matriz de Salários Comuns',
     salarios_intro: 'O Canadá tem os salários mais altos do blueprint. Com 24h/semana e $16 CAD/hora, você ganha ~$1.540 CAD/mês (~$1.110 USD). Nas férias acadêmicas você pode trabalhar período integral e dobrar esse valor.',
-    th_sector_sal: 'Setor', th_puesto_sal: 'Cargo', th_mensual: 'Mensal EST. (20h/sem)',
+    th_sector_sal: 'Setor', th_puesto_sal: 'Cargo', th_mensual: 'Mensal EST. (24h/sem)',
     salarios_blue: '💡 DESCANSOS OFICIAIS: Você pode trabalhar período integral (40h/semana) nos descansos do seu calendário acadêmico (máx. 180 dias por ano). Um estudante em hotelaria a $18 CAD/hora pode ganhar $2.880 CAD/mês (~$2.074 USD) nas férias. Isso é suficiente para cobrir despesas e economizar significativamente.',
     salarios_hack: 'Delivery com DoorDash ou Uber Eats pode chegar a $25 CAD/hora em Toronto ou Vancouver. Com 24h/semana são $2.400 CAD/mês (~$1.730 USD). Nas férias acadêmicas com 40h/semana são $4.000 CAD/mês. É o setor com maior renda por hora.',
     sec_timeline_title: 'Cronograma de Execução',
@@ -399,6 +401,7 @@ const translations = {
     solvencia3_val: 'Public colleges in secondary cities (cheaper + less competition)',
     estrategia_hack: 'Choose public colleges in secondary cities like Newfoundland, Manitoba or interior British Columbia. They cost 30-40% less than Toronto or Vancouver, there\'s less job competition and the educational quality is equivalent for the PGWP.',
     aviso_2026: '⚠️ Before you pay (2026): (1) To work off campus you need a full-time post-secondary program of at least 6 months that leads to a degree, diploma or certificate at a designated institution (DLI). English or French language courses (ESL/FSL) and preparatory or pathway programs do NOT give you work authorization: if you start with an English school, you cannot work during that course. (2) The cap is 24 hours/week during classes; during official breaks in your calendar you can work without limit, up to 180 days per year. (3) Most study permits require a provincial attestation letter (PAL) and each province has annual quotas; master\'s and PhD students at public institutions are exempt since January 2026. (4) For the PGWP you need a language level (CLB) and, if your program is not a university degree, your field of study must be on IRCC\'s official list. Verify everything on canada.ca before paying.',
+    aviso_wh: 'If your priority is to work from day one, check our Work & Holidays blueprint →',
     sec_pre_title: 'Pre-Foundations & Pathway Programs',
     pre_intro: 'University Pathway programs prepare you to enter Canadian universities with academic English. Upon completing a program at an eligible college or university, you access the PGWP — the most valuable post-graduation work permit in the blueprint.',
     th_programa: 'Program', th_institucion: 'Institution', th_inversion: 'Investment',
@@ -456,7 +459,7 @@ const translations = {
     empleos_hack: 'In Canada many companies value attitude, punctuality and immediate availability. Many jobs are found by applying online or dropping off CV directly. The key is to apply FAST — Indeed Canada receives hundreds of applications per day.',
     sec_salarios_title: 'Common Salaries Matrix',
     salarios_intro: 'Canada has the highest salaries in the blueprint. With 24h/week and $16 CAD/hour, you earn ~$1,540 CAD/month (~$1,110 USD). During academic holidays you can work full time and double that figure.',
-    th_sector_sal: 'Sector', th_puesto_sal: 'Role', th_mensual: 'Monthly EST. (20h/wk)',
+    th_sector_sal: 'Sector', th_puesto_sal: 'Role', th_mensual: 'Monthly EST. (24h/wk)',
     salarios_blue: '💡 OFFICIAL BREAKS: You can work full time (40h/week) during the breaks in your academic calendar (max. 180 days per year). A student in hospitality at $18 CAD/hour can earn $2,880 CAD/month (~$2,074 USD) during holidays. That\'s enough to cover expenses and save significantly.',
     salarios_hack: 'Delivery with DoorDash or Uber Eats can reach $25 CAD/hour in Toronto or Vancouver. With 24h/week that\'s $2,400 CAD/month (~$1,730 USD). During academic holidays with 40h/week that\'s $4,000 CAD/month. It\'s the sector with the highest hourly income.',
     sec_timeline_title: 'Execution Timeline',
@@ -718,6 +721,7 @@ export default function Canada() {
           </div>
           <div style={{ marginTop: '14px', backgroundColor: '#fef2f2', borderRadius: '8px', padding: '12px', border: '1px solid #fca5a5' }}>
             <p style={{ fontSize: '13px', margin: 0, lineHeight: '1.6' }}>{t.aviso_2026}</p>
+            <p style={{ fontSize: '13px', margin: '8px 0 0', lineHeight: '1.6' }}><a href="/work-and-holidays" style={{ color: '#e8572a', fontWeight: 'bold', textDecoration: 'none' }}>{t.aviso_wh}</a></p>
           </div>
           <HackBox text={t.estrategia_hack} />
         </Section>
@@ -975,11 +979,11 @@ export default function Canada() {
               <thead><tr>{[t.th_sector_sal, t.th_puesto_sal, t.th_salario_cad, t.th_usd_h, t.th_mensual].map((h, i) => <th key={i} style={T.th}>{h}</th>)}</tr></thead>
               <tbody>
                 {[
-                  ['Hospitality', 'Waiter', '$17.30 – $20 CAD', '$12.80 – $14.80', '$1,384 – $1,600 CAD'],
-                  ['Cleaning', 'Housekeeping', '$17.30 – $19 CAD', '$12.80 – $14.06', '$1,384 – $1,520 CAD'],
-                  ['Hotels', 'Front Desk / Hotel Staff', '$17 – $21 CAD', '$12.2 – $15.1', '$1,360 – $1,680 CAD'],
-                  ['Retail', 'Shop Assistant', '$17.30 – $20 CAD', '$12.80 – $14.80', '$1,384 – $1,600 CAD'],
-                  ['Delivery', 'Driver / Courier', '$18 – $25 CAD', '$13 – $18', '$1,440 – $2,000 CAD'],
+                  ['Hospitality', 'Waiter', '$17.30 – $20 CAD', '$12.80 – $14.80', '$1,661 – $1,920 CAD'],
+                  ['Cleaning', 'Housekeeping', '$17.30 – $19 CAD', '$12.80 – $14.06', '$1,661 – $1,824 CAD'],
+                  ['Hotels', 'Front Desk / Hotel Staff', '$17 – $21 CAD', '$12.2 – $15.1', '$1,632 – $2,016 CAD'],
+                  ['Retail', 'Shop Assistant', '$17.30 – $20 CAD', '$12.80 – $14.80', '$1,661 – $1,920 CAD'],
+                  ['Delivery', 'Driver / Courier', '$18 – $25 CAD', '$13 – $18', '$1,728 – $2,400 CAD'],
                 ].map((r, i) => (
                   <tr key={i}>
                     <td style={{ ...T.td(i), ...T.bold }}>{r[0]}</td>
