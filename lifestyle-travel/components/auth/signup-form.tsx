@@ -27,6 +27,10 @@ const translations = {
     exists_wrong: 'Ya tienes una cuenta con este email, pero la contraseña no coincide.',
     not_confirmed: 'Tu cuenta existe pero falta confirmar el email. Revisa tu bandeja de entrada.',
     forgot: '¿Olvidaste tu contraseña?',
+    consent_pre: 'Al crear tu cuenta aceptas los',
+    terms: 'Términos y Condiciones',
+    consent_and: 'y la',
+    privacy: 'Política de Privacidad',
   },
   pt: {
     name_label: 'Nome',
@@ -47,6 +51,10 @@ const translations = {
     exists_wrong: 'Você já tem uma conta com este email, mas a senha não coincide.',
     not_confirmed: 'Sua conta existe, mas falta confirmar o email. Verifique sua caixa de entrada.',
     forgot: 'Esqueceu sua senha?',
+    consent_pre: 'Ao criar sua conta você aceita os',
+    terms: 'Termos e Condições',
+    consent_and: 'e a',
+    privacy: 'Política de Privacidade',
   },
   en: {
     name_label: 'Name',
@@ -67,6 +75,10 @@ const translations = {
     exists_wrong: "You already have an account with this email, but the password doesn't match.",
     not_confirmed: "Your account exists but the email isn't confirmed yet. Check your inbox.",
     forgot: 'Forgot your password?',
+    consent_pre: 'By creating your account you accept the',
+    terms: 'Terms & Conditions',
+    consent_and: 'and the',
+    privacy: 'Privacy Policy',
   },
 }
 
@@ -316,6 +328,12 @@ export function SignupForm() {
         <button type="submit" disabled={loading} style={buttonStyle}>
           {loading ? t.loading : t.submit}
         </button>
+        <p style={{ fontSize: '12px', color: '#6b7280', textAlign: 'center', margin: '12px 0 0', lineHeight: '1.5' }}>
+          {t.consent_pre}{' '}
+          <Link href="/terms" style={{ color: '#e8572a', textDecoration: 'none' }}>{t.terms}</Link>{' '}
+          {t.consent_and}{' '}
+          <Link href="/privacy" style={{ color: '#e8572a', textDecoration: 'none' }}>{t.privacy}</Link>.
+        </p>
       </form>
 
       <p style={{ textAlign: 'center', marginTop: '20px', color: '#1a1a2e', fontSize: '14px' }}>
