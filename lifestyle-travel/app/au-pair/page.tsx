@@ -110,6 +110,39 @@ const translations = {
     checklist_hack: 'Aunque no hay requisito oficial de fondos para trabajar como childminder, llega con €2,000-4,000 para cubrir los primeros 30-60 días mientras te instalas. Al inicio puede tomar tiempo generar ingresos estables.',
     sec_gastos_title: 'Gastos Obligatorios No Incluidos',
     th_concepto: 'Concepto', th_costo: 'Costo', th_oblig: 'Obligatorio',
+    tiempos_rows: [
+      ['Crear perfil y aplicar a familias', '1-2 semanas', 'Calidad del perfil'],
+      ['Entrevistas y match con familia', '2-4 semanas', 'Actividad y comunicación'],
+      ['Contrato + documentación', '1-2 semanas', 'Velocidad de trámites'],
+      ['Aplicación de visa', '2-8 semanas', 'País de destino'],
+      ['Tiempo total estimado', 'Europa: 3-5 meses · Australia: 6-10 semanas', 'Todo el proceso'],
+    ],
+    gastos_rows: [
+      ['Seguro médico internacional', '€100 – €300/año', '✅ Sí'],
+      ['Tasa de aplicación de visa', '$100 – $450 USD (Australia ~A$670; visas de estudiante europeas ~€80)', '✅ Sí'],
+      ['Curso de idiomas (España/Suiza/Austria)', '$1,500 – $3,500 USD/año (en España lo paga la au pair)', '✅ Si aplica'],
+      ['Traducciones y apostillas', '€50 – €150', '✅ Sí'],
+      ['Agencia (según país)', 'Suiza: gratis o hasta ~$300 · Austria: hasta ~$200 · Países Bajos: no pueden cobrarte · Bélgica: mínima · España: €250 – €400 · Australia: ~$500 – $1,000', '✅ Según país'],
+      ['Permiso de residencia (Países Bajos)', '€423 (lo paga la familia o la agencia, no la au pair)', '❌ No, lo cubre la familia'],
+      ['Working With Children Check (Australia)', 'A$80 – A$160 (normalmente lo cubre o reembolsa la familia)', '✅ Sí, en Australia'],
+      ['Biometría o exámenes médicos', '€50 – €200', '✅ Si requerido'],
+      ['Boleto de avión', '€400 – €1,200 (vuelos + seguro: $600 – $1,500 USD)', '✅ Sí'],
+      ['Capital inicial recomendado', '€2,000 – €4,000', '✅ Para los primeros 30-60 días'],
+    ],
+    bancos_rows: [
+      ['Wise', 'Digital — Global', 'Transferencias internacionales baratas + múltiples divisas', 'wise.com', 'https://wise.com'],
+      ['Revolut', 'Digital — Global', 'Apertura rápida + tarjeta virtual inmediata', 'revolut.com', 'https://revolut.com'],
+      ['N26', 'Digital — Europa', 'IBAN europeo + gestión desde app', 'n26.com', 'https://n26.com'],
+      ['ANZ', 'Tradicional — AUS/NZ', 'Muy usado por viajeros en Australia y Nueva Zelanda', 'anz.com', 'https://anz.com'],
+      ['Scotiabank', 'Tradicional — CA', 'Popular entre trabajadores WHV en Canadá', 'scotiabank.com', 'https://scotiabank.com'],
+    ],
+    vivienda_rows: [
+      ['Airbnb', 'Temporal', 'Primeras semanas o transición entre familias', 'airbnb.com', 'https://airbnb.com'],
+      ['Booking', 'Hostels', 'Económico para llegadas sin alojamiento confirmado', 'booking.com', 'https://booking.com'],
+      ['Facebook Groups', 'Comunidad Au Pair', 'Grupos específicos por país con consejos y contactos', 'facebook.com', 'https://facebook.com'],
+      ['Expat.com', 'Internacional', 'Comunidad de expatriados con info de vivienda por ciudad', 'expat.com', 'https://expat.com'],
+    ],
+    cta_buy: 'Acceso Total — Todos los Blueprints €39.99',
     sec_bancos_title: 'Opciones Bancarias',
     bancos_intro: 'Abre Wise o Revolut antes de viajar — permite recibir dinero internacionalmente y pagar gastos inmediatos mientras abres cuenta local en el país de destino.',
     sec_vivienda_title: 'Protocolo de Vivienda',
@@ -247,6 +280,39 @@ const translations = {
     checklist_hack: 'Embora não haja requisito oficial de fundos para trabalhar como au pair, chegue com €2.000-4.000 para cobrir os primeiros 30-60 dias enquanto você se instala. No início pode levar tempo para gerar renda estável.',
     sec_gastos_title: 'Despesas Obrigatórias Não Incluídas',
     th_concepto: 'Conceito', th_costo: 'Custo', th_oblig: 'Obrigatório',
+    tiempos_rows: [
+      ['Criar perfil e candidatar-se a famílias', '1-2 semanas', 'Qualidade do perfil'],
+      ['Entrevistas e match com a família', '2-4 semanas', 'Atividade e comunicação'],
+      ['Contrato + documentação', '1-2 semanas', 'Rapidez dos trâmites'],
+      ['Pedido de visto', '2-8 semanas', 'País de destino'],
+      ['Tempo total estimado', 'Europa: 3-5 meses · Austrália: 6-10 semanas', 'Todo o processo'],
+    ],
+    gastos_rows: [
+      ['Seguro saúde internacional', '€100 – €300/ano', '✅ Sim'],
+      ['Taxa do visto', '$100 – $450 USD (Austrália ~A$670; vistos de estudante europeus ~€80)', '✅ Sim'],
+      ['Curso de idioma (Espanha/Suíça/Áustria)', '$1,500 – $3,500 USD/ano (na Espanha quem paga é a au pair)', '✅ Se aplicável'],
+      ['Traduções e apostilas', '€50 – €150', '✅ Sim'],
+      ['Agência (conforme o país)', 'Suíça: grátis ou até ~$300 · Áustria: até ~$200 · Países Baixos: não podem cobrar de você · Bélgica: mínima · Espanha: €250 – €400 · Austrália: ~$500 – $1,000', '✅ Conforme o país'],
+      ['Autorização de residência (Países Baixos)', '€423 (paga pela família ou pela agência, não pela au pair)', '❌ Não, a família cobre'],
+      ['Working With Children Check (Austrália)', 'A$80 – A$160 (normalmente a família cobre ou reembolsa)', '✅ Sim, na Austrália'],
+      ['Biometria ou exames médicos', '€50 – €200', '✅ Se exigido'],
+      ['Passagem aérea', '€400 – €1,200 (voo + seguro: $600 – $1,500 USD)', '✅ Sim'],
+      ['Capital inicial recomendado', '€2,000 – €4,000', '✅ Para os primeiros 30-60 dias'],
+    ],
+    bancos_rows: [
+      ['Wise', 'Digital — Global', 'Transferências internacionais baratas + várias moedas', 'wise.com', 'https://wise.com'],
+      ['Revolut', 'Digital — Global', 'Abertura rápida + cartão virtual imediato', 'revolut.com', 'https://revolut.com'],
+      ['N26', 'Digital — Europa', 'IBAN europeu + gestão pelo app', 'n26.com', 'https://n26.com'],
+      ['ANZ', 'Tradicional — AUS/NZ', 'Muito usado por viajantes na Austrália e Nova Zelândia', 'anz.com', 'https://anz.com'],
+      ['Scotiabank', 'Tradicional — CA', 'Popular entre trabalhadores WHV no Canadá', 'scotiabank.com', 'https://scotiabank.com'],
+    ],
+    vivienda_rows: [
+      ['Airbnb', 'Temporário', 'Primeiras semanas ou transição entre famílias', 'airbnb.com', 'https://airbnb.com'],
+      ['Booking', 'Hostels', 'Econômico para chegadas sem hospedagem confirmada', 'booking.com', 'https://booking.com'],
+      ['Facebook Groups', 'Comunidade Au Pair', 'Grupos específicos por país com dicas e contatos', 'facebook.com', 'https://facebook.com'],
+      ['Expat.com', 'Internacional', 'Comunidade de expatriados com informação de moradia por cidade', 'expat.com', 'https://expat.com'],
+    ],
+    cta_buy: 'Acesso Total — Todos os Blueprints €39.99',
     sec_bancos_title: 'Opções Bancárias',
     bancos_intro: 'Abra Wise ou Revolut antes de viajar — permite receber dinheiro internacionalmente e pagar despesas imediatas enquanto você abre conta local no país de destino.',
     sec_vivienda_title: 'Protocolo de Moradia',
@@ -384,6 +450,39 @@ const translations = {
     checklist_hack: 'Although there\'s no official funds requirement to work as a childminder, arrive with €2,000-4,000 to cover the first 30-60 days while you get settled. At the beginning it may take time to generate stable income.',
     sec_gastos_title: 'Mandatory Costs Not Included',
     th_concepto: 'Item', th_costo: 'Cost', th_oblig: 'Mandatory',
+    tiempos_rows: [
+      ['Create profile and apply to families', '1-2 weeks', 'Profile quality'],
+      ['Interviews and family match', '2-4 weeks', 'Activity and communication'],
+      ['Contract + documentation', '1-2 weeks', 'Speed of paperwork'],
+      ['Visa application', '2-8 weeks', 'Destination country'],
+      ['Total estimated time', 'Europe: 3-5 months · Australia: 6-10 weeks', 'Whole process'],
+    ],
+    gastos_rows: [
+      ['International health insurance', '€100 – €300/year', '✅ Yes'],
+      ['Visa application fee', '$100 – $450 USD (Australia ~A$670; European student visas ~€80)', '✅ Yes'],
+      ['Language course (Spain/Switzerland/Austria)', '$1,500 – $3,500 USD/year (in Spain the au pair pays)', '✅ If applicable'],
+      ['Translations and apostilles', '€50 – €150', '✅ Yes'],
+      ['Agency (depends on country)', 'Switzerland: free or up to ~$300 · Austria: up to ~$200 · Netherlands: they cannot charge you · Belgium: minimal · Spain: €250 – €400 · Australia: ~$500 – $1,000', '✅ Depends on country'],
+      ['Residence permit (Netherlands)', '€423 (paid by the family or agency, not the au pair)', '❌ No, the family covers it'],
+      ['Working With Children Check (Australia)', 'A$80 – A$160 (usually covered or reimbursed by the family)', '✅ Yes, in Australia'],
+      ['Biometrics or medical exams', '€50 – €200', '✅ If required'],
+      ['Plane ticket', '€400 – €1,200 (flights + insurance: $600 – $1,500 USD)', '✅ Yes'],
+      ['Recommended starting capital', '€2,000 – €4,000', '✅ For the first 30-60 days'],
+    ],
+    bancos_rows: [
+      ['Wise', 'Digital — Global', 'Cheap international transfers + multiple currencies', 'wise.com', 'https://wise.com'],
+      ['Revolut', 'Digital — Global', 'Fast sign-up + instant virtual card', 'revolut.com', 'https://revolut.com'],
+      ['N26', 'Digital — Europe', 'European IBAN + management from the app', 'n26.com', 'https://n26.com'],
+      ['ANZ', 'Traditional — AUS/NZ', 'Widely used by travellers in Australia and New Zealand', 'anz.com', 'https://anz.com'],
+      ['Scotiabank', 'Traditional — CA', 'Popular with WHV workers in Canada', 'scotiabank.com', 'https://scotiabank.com'],
+    ],
+    vivienda_rows: [
+      ['Airbnb', 'Temporary', 'First weeks or transition between families', 'airbnb.com', 'https://airbnb.com'],
+      ['Booking', 'Hostels', 'Budget option if you arrive without confirmed housing', 'booking.com', 'https://booking.com'],
+      ['Facebook Groups', 'Au Pair community', 'Country-specific groups with tips and contacts', 'facebook.com', 'https://facebook.com'],
+      ['Expat.com', 'International', 'Expat community with housing info by city', 'expat.com', 'https://expat.com'],
+    ],
+    cta_buy: 'Full Access — All Blueprints €39.99',
     sec_bancos_title: 'Banking Options',
     bancos_intro: 'Open Wise or Revolut before traveling — allows receiving money internationally and paying immediate expenses while you open a local account in the destination country.',
     sec_vivienda_title: 'Housing Protocol',
@@ -589,7 +688,7 @@ export default function AuPair() {
                 border: '2px solid #ff6b3d',
               }}
             >
-              Acceso Total — Todos los Blueprints €39.99
+              {t.cta_buy}
             </a>
           </div>
         </div>
@@ -680,13 +779,7 @@ export default function AuPair() {
             <table style={T.table}>
               <thead><tr>{[t.th_fase, t.th_tiempo, t.th_depende].map((h, i) => <th key={i} style={T.th}>{h}</th>)}</tr></thead>
               <tbody>
-                {[
-                  ['Crear perfil y aplicar a familias', '1-2 semanas', 'Calidad del perfil'],
-                  ['Entrevistas y match con familia', '2-4 semanas', 'Actividad y comunicación'],
-                  ['Contrato + documentación', '1-2 semanas', 'Velocidad de trámites'],
-                  ['Aplicación de visa', '2-8 semanas', 'País de destino'],
-                  ['Tiempo total estimado', 'Europa: 3-5 meses · Australia: 6-10 semanas', 'Todo el proceso'],
-                ].map((r, i) => (
+                {t.tiempos_rows.map((r, i) => (
                   <tr key={i}>
                     <td style={{ ...T.td(i), ...T.bold }}>{r[0]}</td>
                     <td style={{ ...T.td(i), color: '#166534', fontWeight: '600' }}>{r[1]}</td>
@@ -719,18 +812,7 @@ export default function AuPair() {
             <table style={T.table}>
               <thead><tr>{[t.th_concepto, t.th_costo, t.th_oblig].map((h, i) => <th key={i} style={T.th}>{h}</th>)}</tr></thead>
               <tbody>
-                {[
-                  ['Seguro médico internacional', '€100 – €300/año', '✅ Sí'],
-                  ['Tasa de aplicación de visa', '$100 – $450 USD (Australia ~A$670; visas de estudiante europeas ~€80)', '✅ Sí'],
-                  ['Curso de idiomas (España/Suiza/Austria)', '$1,500 – $3,500 USD/año (en España lo paga la au pair)', '✅ Si aplica'],
-                  ['Traducciones y apostillas', '€50 – €150', '✅ Sí'],
-                  ['Agencia (según país)', 'Suiza: gratis o hasta ~$300 · Austria: hasta ~$200 · Países Bajos: no pueden cobrarte · Bélgica: mínima · España: €250 – €400 · Australia: ~$500 – $1,000', '✅ Según país'],
-                  ['Permiso de residencia (Países Bajos)', '€423 (lo paga la familia o la agencia, no la au pair)', '❌ No, lo cubre la familia'],
-                  ['Working With Children Check (Australia)', 'A$80 – A$160 (normalmente lo cubre o reembolsa la familia)', '✅ Sí, en Australia'],
-                  ['Biometría o exámenes médicos', '€50 – €200', '✅ Si requerido'],
-                  ['Boleto de avión', '€400 – €1,200 (vuelos + seguro: $600 – $1,500 USD)', '✅ Sí'],
-                  ['Capital inicial recomendado', '€2,000 – €4,000', '✅ Para los primeros 30-60 días'],
-                ].map((r, i) => (
+                {t.gastos_rows.map((r, i) => (
                   <tr key={i}>
                     <td style={{ ...T.td(i), ...T.bold }}>{r[0]}</td>
                     <td style={T.td(i)}>{r[1]}</td>
@@ -746,13 +828,7 @@ export default function AuPair() {
         <Section id="bancos" emoji="🏦" title={t.sec_bancos_title}>
           <Intro text={t.bancos_intro} />
           <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
-            {[
-              ['Wise', 'Digital — Global', 'Transferencias internacionales baratas + múltiples divisas', 'wise.com', 'https://wise.com'],
-              ['Revolut', 'Digital — Global', 'Apertura rápida + tarjeta virtual inmediata', 'revolut.com', 'https://revolut.com'],
-              ['N26', 'Digital — Europa', 'IBAN europeo + gestión desde app', 'n26.com', 'https://n26.com'],
-              ['ANZ', 'Tradicional — AUS/NZ', 'Muy usado por viajeros en Australia y Nueva Zelanda', 'anz.com', 'https://anz.com'],
-              ['Scotiabank', 'Tradicional — CA', 'Popular entre trabajadores WHV en Canadá', 'scotiabank.com', 'https://scotiabank.com'],
-            ].map((r, i) => (
+            {t.bancos_rows.map((r, i) => (
               <div key={i} style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', backgroundColor: '#f8f7f4', borderRadius: '10px', padding: '10px 14px' }}>
                 <div>
                   <p style={{ fontWeight: '700', fontSize: '13px', margin: '0 0 2px', color: '#1a1a2e' }}>{r[0]} <span style={{ color: '#333333', fontWeight: 'normal', fontSize: '12px' }}>· {r[1]}</span></p>
@@ -769,12 +845,7 @@ export default function AuPair() {
           <div style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1629551241242-eab03e6fb655?q=80&w=627&auto=format&fit=crop")', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', height: '180px', borderRadius: '10px', marginBottom: '14px' }} />
           <Intro text={t.vivienda_intro} />
           <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
-            {[
-              ['Airbnb', 'Temporal', 'Primeras semanas o transición entre familias', 'airbnb.com', 'https://airbnb.com'],
-              ['Booking', 'Hostels', 'Económico para llegadas sin alojamiento confirmado', 'booking.com', 'https://booking.com'],
-              ['Facebook Groups', 'Comunidad Au Pair', 'Grupos específicos por país con consejos y contactos', 'facebook.com', 'https://facebook.com'],
-              ['Expat.com', 'Internacional', 'Comunidad de expatriados con info de vivienda por ciudad', 'expat.com', 'https://expat.com'],
-            ].map((r, i) => (
+            {t.vivienda_rows.map((r, i) => (
               <div key={i} style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', backgroundColor: '#f8f7f4', borderRadius: '10px', padding: '10px 14px' }}>
                 <div>
                   <p style={{ fontWeight: '700', fontSize: '13px', margin: '0 0 2px', color: '#1a1a2e' }}>{r[0]} <span style={{ color: '#333333', fontWeight: 'normal', fontSize: '12px' }}>· {r[1]}</span></p>
