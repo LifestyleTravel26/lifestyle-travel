@@ -12,6 +12,10 @@ const translations = {
   es: {
     back: '← Lifestyle & Travel',
     title: 'Mi cuenta',
+    hello: 'Hola',
+    accessLabel: 'Tu acceso',
+    accessNote: 'Pago único. Todos los blueprints incluidos.',
+    help: 'Ayuda',
     loading: 'Cargando...',
     email: 'Email de tu cuenta',
     status: 'Estado',
@@ -32,6 +36,10 @@ const translations = {
   pt: {
     back: '← Lifestyle & Travel',
     title: 'Minha conta',
+    hello: 'Olá',
+    accessLabel: 'Seu acesso',
+    accessNote: 'Pagamento único. Todos os blueprints incluídos.',
+    help: 'Ajuda',
     loading: 'Carregando...',
     email: 'Email da sua conta',
     status: 'Status',
@@ -52,6 +60,10 @@ const translations = {
   en: {
     back: '← Lifestyle & Travel',
     title: 'My account',
+    hello: 'Hi',
+    accessLabel: 'Your access',
+    accessNote: 'One-time payment. All blueprints included.',
+    help: 'Help',
     loading: 'Loading...',
     email: 'Your account email',
     status: 'Status',
@@ -71,9 +83,9 @@ const translations = {
   },
 }
 
-const card = { backgroundColor: 'white', borderRadius: '12px', padding: '20px', marginBottom: '14px', boxShadow: '0 1px 4px rgba(0,0,0,0.06)' } as const
-const label = { fontSize: '12px', color: '#6b7280', margin: '0 0 4px', textTransform: 'uppercase', letterSpacing: '0.06em' } as const
-const primaryBtn = { display: 'block', backgroundColor: '#e8572a', color: 'white', borderRadius: '10px', padding: '13px 16px', fontSize: '15px', fontWeight: 700, textDecoration: 'none', textAlign: 'center' } as const
+const card = { backgroundColor: 'white', borderRadius: '16px', padding: '20px', marginBottom: '14px', boxShadow: '0 4px 16px rgba(26,26,46,0.08)' } as const
+const label = { fontSize: '11px', fontWeight: 700, color: '#a3a3a3', margin: '0 0 6px', textTransform: 'uppercase', letterSpacing: '0.08em' } as const
+const primaryBtn = { display: 'block', backgroundColor: '#e8572a', color: 'white', borderRadius: '12px', padding: '14px 16px', fontSize: '15px', fontWeight: 700, textDecoration: 'none', textAlign: 'center', boxShadow: '0 6px 16px rgba(232,87,42,0.28)' } as const
 
 export default function AccountPage() {
   const { locale } = useLanguage()
@@ -111,27 +123,42 @@ export default function AccountPage() {
   }
 
   const mailto = `mailto:${SUPPORT_EMAIL}?subject=${encodeURIComponent(t.mailSubject)}&body=${encodeURIComponent(t.mailBody + email)}`
+  const initial = email ? email.charAt(0).toUpperCase() : ''
+  const name = email ? email.split('@')[0] : ''
 
   return (
     <main style={{ minHeight: '100vh', backgroundColor: '#f8f7f4', colorScheme: 'light', fontFamily: 'sans-serif' }}>
-      <div style={{ backgroundColor: '#1a1a2e', padding: '16px 24px', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-        <Link href="/" style={{ color: 'white', textDecoration: 'none', fontWeight: 'bold' }}>{t.back}</Link>
-        <HeaderMenu />
+      <div style={{ position: 'relative', height: '260px', backgroundImage: 'linear-gradient(rgba(10,10,25,0.55), rgba(10,10,25,0.55)), url("/account-hero.jpg")', backgroundSize: 'cover', backgroundPosition: 'center 38%' }}>
+        <div style={{ padding: '16px 24px', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+          <Link href="/" style={{ color: 'white', textDecoration: 'none', fontWeight: 'bold' }}>{t.back}</Link>
+          <HeaderMenu />
+        </div>
+        <div style={{ textAlign: 'center', padding: '8px 24px 0' }}>
+          <h1 style={{ color: 'white', fontSize: '28px', fontWeight: 'bold', margin: '0 0 6px', textShadow: '0 2px 8px rgba(0,0,0,0.5)' }}>{t.title}</h1>
+          {!loading && <p style={{ color: '#ddd', fontSize: '15px', margin: 0, textShadow: '0 1px 4px rgba(0,0,0,0.5)' }}>{t.hello}, {name}</p>}
+        </div>
       </div>
-      <div style={{ maxWidth: '560px', margin: '0 auto', padding: '32px 20px 64px' }}>
-        <h1 style={{ fontSize: '28px', color: '#1a1a2e', margin: '0 0 20px' }}>{t.title}</h1>
 
+      <div style={{ maxWidth: '560px', margin: '-56px auto 0', padding: '0 16px 64px', position: 'relative' }}>
         {loading ? (
-          <p style={{ color: '#1a1a2e' }}>{t.loading}</p>
+          <section style={{ ...card, textAlign: 'center', color: '#1a1a2e' }}>{t.loading}</section>
         ) : (
           <>
             <section style={card}>
-              <p style={label}>{t.email}</p>
-              <p style={{ fontSize: '16px', color: '#1a1a2e', margin: '0 0 16px', wordBreak: 'break-all' }}>{email}</p>
-              <p style={label}>{t.status}</p>
-              <p style={{ fontSize: '16px', fontWeight: 700, margin: 0, color: hasAccess ? '#15803d' : '#b45309' }}>
-                {hasAccess ? t.active : t.inactive}
-              </p>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '14px', marginBottom: '18px' }}>
+                <div style={{ width: '52px', height: '52px', borderRadius: '50%', backgroundColor: '#1a1a2e', color: 'white', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '22px', fontWeight: 700, flexShrink: 0 }}>{initial}</div>
+                <div style={{ minWidth: 0 }}>
+                  <p style={label}>{t.email}</p>
+                  <p style={{ fontSize: '15px', color: '#1a1a2e', margin: 0, wordBreak: 'break-all' }}>{email}</p>
+                </div>
+              </div>
+              <div style={{ borderTop: '1px solid #eee', paddingTop: '16px' }}>
+                <p style={label}>{t.accessLabel}</p>
+                <span style={{ display: 'inline-block', borderRadius: '999px', padding: '6px 14px', fontSize: '14px', fontWeight: 700, backgroundColor: hasAccess ? '#e7f6ec' : '#fdf0ea', color: hasAccess ? '#15803d' : '#b45309' }}>
+                  {hasAccess ? t.active : t.inactive}
+                </span>
+                {hasAccess && <p style={{ fontSize: '13px', color: '#6b7280', margin: '10px 0 0' }}>{t.accessNote}</p>}
+              </div>
             </section>
 
             {hasAccess ? (
@@ -140,22 +167,25 @@ export default function AccountPage() {
               <>
                 <Link href="/pricing" style={{ ...primaryBtn, marginBottom: '14px' }}>{t.buy}</Link>
                 <section style={card}>
+                  <p style={label}>{t.help}</p>
                   <h2 style={{ fontSize: '17px', color: '#1a1a2e', margin: '0 0 8px' }}>{t.noPurchaseTitle}</h2>
                   <p style={{ fontSize: '14px', lineHeight: '1.7', color: '#333333', margin: '0 0 14px' }}>{t.noPurchaseText}</p>
-                  <a href={mailto} style={{ color: '#e8572a', fontWeight: 700, fontSize: '14px', textDecoration: 'none' }}>{t.contact} →</a>
+                  <a href={mailto} style={{ display: 'block', textAlign: 'center', border: '1.5px solid #e8572a', color: '#e8572a', borderRadius: '10px', padding: '11px', fontWeight: 700, fontSize: '14px', textDecoration: 'none' }}>{t.contact}</a>
                 </section>
               </>
             )}
 
             <section style={card}>
-              <h2 style={{ fontSize: '17px', color: '#1a1a2e', margin: '0 0 12px' }}>{t.security}</h2>
-              <Link href="/forgot-password" style={{ color: '#1a1a2e', fontWeight: 600, fontSize: '14px', textDecoration: 'underline' }}>{t.changePw}</Link>
+              <p style={label}>{t.security}</p>
+              <Link href="/forgot-password" style={{ color: '#1a1a2e', fontWeight: 600, fontSize: '15px', textDecoration: 'none', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                <span>{t.changePw}</span><span style={{ color: '#a3a3a3' }}>→</span>
+              </Link>
               <p style={{ fontSize: '12px', color: '#6b7280', margin: '4px 0 0' }}>{t.changePwHint}</p>
             </section>
 
             <button
               onClick={handleSignOut}
-              style={{ width: '100%', backgroundColor: 'transparent', color: '#c0392b', border: '1.5px solid #c0392b', borderRadius: '10px', padding: '12px', fontSize: '15px', fontWeight: 700, cursor: 'pointer' }}
+              style={{ width: '100%', backgroundColor: 'transparent', color: '#c0392b', border: '1.5px solid #c0392b', borderRadius: '12px', padding: '13px', fontSize: '15px', fontWeight: 700, cursor: 'pointer' }}
             >
               {t.logout}
             </button>
