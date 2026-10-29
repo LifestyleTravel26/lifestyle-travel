@@ -40,7 +40,6 @@ const translations = {
     premium_badge: '⭐ Blueprint Completo — PREMIUM',
     sec_estrategia_title: 'Estrategia y Presupuesto: Selección de Academia',
     estrategia_intro: 'En Australia la academia se elige por ubicación y conexión laboral — cerca de zonas con alta actividad económica. Sydney CBD, Melbourne CBD, Brisbane y Gold Coast son las mejores ciudades para conseguir trabajo siendo estudiante.',
-    precios_nota: 'Solo ILSC está verificado con su lista oficial 2026: curso de 24 semanas en AUD, sin extras (matrícula AUD $250 y materiales AUD $360). Las demás cifras son estimadas, confirma el precio actual con cada escuela.',
     estrategia_head: '🇦🇺 Matriz de Escuelas de Inglés: Australia 2026',
     th_inst: 'Institución', th_ciudad: 'Ciudad', th_precio: 'Precio (24 semanas)', th_web: 'Website',
     solvencia1_label: '🔴 Solvencia obligatoria:',
@@ -218,7 +217,6 @@ const translations = {
     premium_badge: '⭐ Blueprint Completo — PREMIUM',
     sec_estrategia_title: 'Estratégia e Orçamento: Seleção de Academia',
     estrategia_intro: 'Na Austrália a academia se escolhe por localização e conexão laboral. Sydney CBD, Melbourne CBD, Brisbane e Gold Coast são as melhores cidades para conseguir trabalho sendo estudante.',
-    precios_nota: 'Só a ILSC está verificada com a lista oficial de 2026: curso de 24 semanas em AUD, sem extras (matrícula AUD $250 e materiais AUD $360). Os demais valores são estimados, confirme o preço atual com cada escola.',
     estrategia_head: '🇦🇺 Matriz de Escolas de Inglês: Austrália 2026',
     th_inst: 'Instituição', th_ciudad: 'Cidade', th_precio: 'Preço (24 semanas)', th_web: 'Website',
     solvencia1_label: '🔴 Solvência obrigatória:',
@@ -396,7 +394,6 @@ const translations = {
     premium_badge: '⭐ Complete Blueprint — PREMIUM',
     sec_estrategia_title: 'Strategy & Budget: School Selection',
     estrategia_intro: 'In Australia the school is chosen by location and job connection. Sydney CBD, Melbourne CBD, Brisbane and Gold Coast are the best cities to find work as a student.',
-    precios_nota: 'Only ILSC is verified against its official 2026 price list: 24-week course in AUD, extras not included (registration AUD $250 and materials AUD $360). The other figures are estimates, so confirm the current price with each school.',
     estrategia_head: '🇦🇺 English Schools Matrix: Australia 2026',
     th_inst: 'Institution', th_ciudad: 'City', th_precio: 'Price (24 weeks)', th_web: 'Website',
     solvencia1_label: '🔴 Mandatory funds:',
@@ -685,7 +682,6 @@ export default function Australia() {
         <Section id="estrategia" emoji="🏷️" title={t.sec_estrategia_title}>
           <Intro text={t.estrategia_intro} />
           <SubHead text={t.estrategia_head} />
-          <p style={{ fontSize: '13px', color: '#1a1a2e', marginBottom: '10px', lineHeight: '1.6' }}>{t.precios_nota}</p>
           <div style={T.wrap}>
             <table style={T.table}>
               <thead><tr>{[t.th_inst, t.th_ciudad, t.th_precio, t.th_web].map((h, i) => <th key={i} style={T.th}>{h}</th>)}</tr></thead>
