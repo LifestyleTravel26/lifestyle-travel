@@ -712,7 +712,7 @@ export default function Irlanda() {
               <thead><tr>{[t.th_inst, t.th_loc, t.th_am, t.th_usd, t.th_pm, t.th_usd, t.th_web].map((h, i) => <th key={i} style={T.th}>{h}</th>)}</tr></thead>
               <tbody>
                 {trRows([
-                  ['Seda College', 'Dublin 1', '€3,500', '$3,850', '€3,200', '$3,520', 'seda.college', 'https://seda.college'],
+                  ['Seda College', 'Dublin 1', '€3,300', '$3,630', '€3,000', '$3,300', 'seda.college', 'https://seda.college'],
                   ['IBAT College Dublin', 'Dublin 2', '€2,910', '$3,200', '€2,495', '$2,745', 'ibat.ie', 'https://ibat.ie'],
                   ['Active Language Learning', 'Dublin 1', '€3,000', '$3,300', '€2,700', '$2,970', 'all.ie', 'https://all.ie'],
                   ['Central School of English', 'Dublin', '€3,000', '$3,300', '€2,700', '$2,970', 'centralschool.ie', 'https://centralschool.ie'],
