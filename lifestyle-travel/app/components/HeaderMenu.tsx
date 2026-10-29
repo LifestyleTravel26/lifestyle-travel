@@ -5,9 +5,9 @@ import { useLanguage } from '../context/LanguageContext'
 import { createClient } from '@/lib/supabase/client'
 
 const menuText = {
-  es: { language: 'Idioma', account: 'Cuenta', start: 'Comenzar', logout: 'Cerrar sesión' },
-  pt: { language: 'Idioma', account: 'Conta', start: 'Começar', logout: 'Sair' },
-  en: { language: 'Language', account: 'Account', start: 'Get Started', logout: 'Log out' },
+  es: { language: 'Idioma', account: 'Cuenta', start: 'Comenzar', logout: 'Cerrar sesión', myAccount: 'Mi cuenta' },
+  pt: { language: 'Idioma', account: 'Conta', start: 'Começar', logout: 'Sair', myAccount: 'Minha conta' },
+  en: { language: 'Language', account: 'Account', start: 'Get Started', logout: 'Log out', myAccount: 'My account' },
 }
 
 export default function HeaderMenu() {
@@ -118,6 +118,14 @@ export default function HeaderMenu() {
           </p>
           {!loading && (
             isLoggedIn ? (
+              <>
+              <Link
+                href="/account"
+                onClick={() => setOpen(false)}
+                style={{ color: '#1a1a2e', borderRadius: '9px', padding: '10px 12px', fontSize: '15px', fontWeight: 600, textDecoration: 'none', display: 'block' }}
+              >
+                {t.myAccount}
+              </Link>
               <button
                 onClick={handleSignOut}
                 style={{
@@ -134,6 +142,7 @@ export default function HeaderMenu() {
               >
                 {t.logout}
               </button>
+              </>
             ) : (
               <Link
                 href="/login"
