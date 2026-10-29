@@ -389,7 +389,7 @@ const translations = {
 
 const countries = [
   { name: 'Argentina', flag: '🇦🇷', level: 'Alto', levelColor: '#22c55e', destinations: ['🇦🇺 Australia', '🇳🇿 Nueva Zelanda', '🇩🇪 Alemania', '🇫🇷 Francia', '🇮🇪 Irlanda', '🇵🇹 Portugal', '🇪🇸 España', '🇯🇵 Japón', '🇨🇦 Canadá', '🇳🇴 Noruega', '🇸🇪 Suecia', '🇳🇱 Países Bajos', '🇩🇰 Dinamarca'] },
-  { name: 'Chile', flag: '🇨🇱', level: 'Alto', levelColor: '#22c55e', destinations: ['🇦🇺 Australia', '🇳🇿 Nueva Zelanda', '🇩🇪 Alemania', '🇫🇷 Francia', '🇮🇪 Irlanda', '🇵🇹 Portugal', '🇪🇸 España', '🇨🇦 Canadá', '🇯🇵 Japón', '🇰🇷 Corea del Sur', '🇳🇴 Noruega', '🇸🇪 Suecia'] },
+  { name: 'Chile', flag: '🇨🇱', level: 'Alto', levelColor: '#22c55e', destinations: ['🇦🇺 Australia', '🇳🇿 Nueva Zelanda', '🇩🇪 Alemania', '🇫🇷 Francia', '🇮🇪 Irlanda', '🇵🇹 Portugal', '🇪🇸 España', '🇨🇦 Canadá', '🇯🇵 Japón', '🇰🇷 Corea del Sur', '🇳🇴 Noruega', '🇸🇪 Suecia', '🇦🇹 Austria', '🇨🇴 Colombia', '🇨🇿 República Checa', '🇩🇰 Dinamarca', '🇭🇺 Hungría', '🇮🇸 Islandia', '🇱🇺 Luxemburgo', '🇲🇽 México', '🇵🇪 Perú', '🇵🇱 Polonia', '🇨🇭 Suiza'] },
   { name: 'México', flag: '🇲🇽', level: 'Medio', levelColor: '#f59e0b', destinations: ['🇨🇦 Canadá', '🇩🇪 Alemania', '🇳🇿 Nueva Zelanda', '🇰🇷 Corea del Sur', '🇫🇷 Francia'] },
   { name: 'Uruguay', flag: '🇺🇾', level: 'Medio', levelColor: '#f59e0b', destinations: ['🇦🇺 Australia', '🇩🇪 Alemania', '🇫🇷 Francia', '🇮🇪 Irlanda', '🇵🇹 Portugal', '🇪🇸 España', '🇯🇵 Japón', '🇳🇿 Nueva Zelanda', '🇳🇴 Noruega', '🇸🇪 Suecia'] },
   { name: 'Brasil', flag: '🇧🇷', level: 'Medio', levelColor: '#f59e0b', destinations: ['🇦🇺 Australia', '🇩🇪 Alemania', '🇫🇷 Francia', '🇳🇿 Nueva Zelanda'] },
