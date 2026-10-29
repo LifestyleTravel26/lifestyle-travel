@@ -153,7 +153,7 @@ const translations = {
     th_categoria: 'Categoría',
     matrix_rows: [
       ['Visa principal', 'Student Visa → Licencia de Trabajo'],
-      ['Duración mínima del curso', '25 semanas (6 meses)'],
+      ['Duración mínima del curso', '25 semanas (6 meses) — aplica a cursos de inglés y programas por debajo de nivel universitario (MQF 1–4)'],
       ['Espera para trabajar', '90 días desde llegada'],
       ['Horas de trabajo', '20 horas/semana (con Licencia de Trabajo)'],
       ['Solvencia (con alojamiento)', '€5,040 (€28/día × 180 días)'],
@@ -329,7 +329,7 @@ const translations = {
     th_categoria: 'Categoria',
     matrix_rows: [
       ['Visto principal', 'Student Visa → Licença de Trabalho'],
-      ['Duração mínima do curso', '25 semanas (6 meses)'],
+      ['Duração mínima do curso', '25 semanas (6 meses) — vale para cursos de inglês e programas abaixo do nível universitário (MQF 1–4)'],
       ['Espera para trabalhar', '90 dias desde a chegada'],
       ['Horas de trabalho', '20 horas/semana (com Licença de Trabalho)'],
       ['Solvência (com alojamento)', '€5.040 (€28/dia × 180 dias)'],
@@ -505,7 +505,7 @@ const translations = {
     th_categoria: 'Category',
     matrix_rows: [
       ['Main Visa', 'Student Visa → Employment Licence'],
-      ['Minimum course duration', '25 weeks (6 months)'],
+      ['Minimum course duration', '25 weeks (6 months) — applies to English-language courses and programmes below degree level (MQF 1–4)'],
       ['Wait to work', '90 days from arrival'],
       ['Work hours', '20 hours/week (with Employment Licence)'],
       ['Funds (with accommodation)', '€5,040 (€28/day × 180 days)'],
