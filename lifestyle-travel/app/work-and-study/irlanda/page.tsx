@@ -4,6 +4,7 @@ import { useLanguage } from '../../context/LanguageContext'
 import HeaderMenu from '../../components/HeaderMenu'
 import { usePurchase } from '../../hooks/usePurchase'
 import IconBadge from '../../components/IconBadge'
+import { tx, trRows } from '@/lib/phrases'
 
 const translations = {
   es: {
@@ -689,11 +690,11 @@ export default function Irlanda() {
         {!hasAccess && (
   <div style={{ backgroundColor: 'white', borderRadius: '16px', padding: '24px', textAlign: 'center', boxShadow: '0 4px 16px rgba(0,0,0,0.10)', margin: '16px 0', border: '2px solid #e8572a' }}>
     <div style={{ marginBottom: '14px' }}><IconBadge name="lock" size={52} /></div>
-    <h3 style={{ fontWeight: 'bold', fontSize: '18px', color: '#1a1a2e', marginBottom: '8px' }}>Contenido Premium</h3>
-    <p style={{ color: '#555555', fontSize: '14px', marginBottom: '20px' }}>Accede al blueprint completo con toda la información detallada</p>
+    <h3 style={{ fontWeight: 'bold', fontSize: '18px', color: '#1a1a2e', marginBottom: '8px' }}>{tx('Contenido Premium', locale)}</h3>
+    <p style={{ color: '#555555', fontSize: '14px', marginBottom: '20px' }}>{tx('Accede al blueprint completo con toda la información detallada', locale)}</p>
     <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
       <a href="https://lifestylentravel2.lemonsqueezy.com/checkout/buy/2dc9d208-cf0b-45f0-83b4-998414ffb9f4" style={{ backgroundColor: '#e8572a', color: 'white', borderRadius: '10px', padding: '16px', fontSize: '16px', fontWeight: 'bold', textDecoration: 'none', display: 'block', textAlign: 'center', boxShadow: '0 4px 12px rgba(232,87,42,0.4)', border: '2px solid #ff6b3d' }}>
-        Acceso Total — Todos los Blueprints €39.99
+        {tx('Acceso Total — Todos los Blueprints €39.99', locale)}
       </a>
     </div>
   </div>
@@ -710,7 +711,7 @@ export default function Irlanda() {
             <table style={T.table}>
               <thead><tr>{[t.th_inst, t.th_loc, t.th_am, t.th_usd, t.th_pm, t.th_usd, t.th_web].map((h, i) => <th key={i} style={T.th}>{h}</th>)}</tr></thead>
               <tbody>
-                {[
+                {trRows([
                   ['Active Language Learning', 'Dublin 1', '€3,000', '$3,300', '€2,700', '$2,970', 'all.ie', 'https://all.ie'],
                   ['Central School of English', 'Dublin', '€3,000', '$3,300', '€2,700', '$2,970', 'centralschool.ie', 'https://centralschool.ie'],
                   ['ULearn English School', 'Dublin 1', '€3,100', '$3,410', '€2,800', '$3,080', 'ulearnschool.com', 'https://ulearnschool.com'],
@@ -726,7 +727,7 @@ export default function Irlanda() {
                   ['Emerald Cultural Institute', 'Dublin', '€4,200', '$4,620', '€3,700', '$4,070', 'emeraldculturalinstitute.com', 'https://emeraldculturalinstitute.com'],
                   ['IBAT College Dublin', 'Dublin 2', '€4,500', '$4,950', '€3,900', '$4,290', 'ibat.ie', 'https://ibat.ie'],
                   ['Kaplan International Dublin', 'Dublin 2', '€4,500', '$4,950', '€4,000', '$4,400', 'kaplaninternational.com', 'https://kaplaninternational.com'],
-                ].map((r, i) => (
+                ], locale).map((r, i) => (
                   <tr key={i}>
                     <td style={{ ...T.td(i), ...T.bold }}>{r[0]}</td>
                     <td style={T.td(i)}>{r[1]}</td>
@@ -746,11 +747,11 @@ export default function Irlanda() {
             <table style={T.table}>
               <thead><tr>{[t.th_inst, t.th_loc, t.th_am, t.th_usd, t.th_pm, t.th_usd, t.th_web].map((h, i) => <th key={i} style={T.th}>{h}</th>)}</tr></thead>
               <tbody>
-                {[
+                {trRows([
                   ['Limerick City College', "O'Connell St", '€3,000', '$3,300', '€2,700', '$2,970', 'limerickcitycollege.ie', 'https://limerickcitycollege.ie'],
                   ['Rightword Institute', 'Winthrop H.', '€3,200', '$3,520', '€2,900', '$3,190', 'rightword.ie', 'https://rightword.ie'],
                   ['Griffith College Limerick', "O'Connell Av", '€3,600', '$3,960', '€3,200', '$3,520', 'griffith.ie', 'https://griffith.ie'],
-                ].map((r, i) => (
+                ], locale).map((r, i) => (
                   <tr key={i}>
                     <td style={{ ...T.td(i), ...T.bold }}>{r[0]}</td>
                     <td style={T.td(i)}>{r[1]}</td>
@@ -784,16 +785,16 @@ export default function Irlanda() {
           </p>
           <div style={T.wrap}>
             <table style={T.table}>
-              <thead><tr>{[t.th_prog, 'Institución', t.th_precio_eur, t.th_usd, t.th_web].map((h, i) => <th key={i} style={T.th}>{h}</th>)}</tr></thead>
+              <thead><tr>{[t.th_prog, tx('Institución', locale), t.th_precio_eur, t.th_usd, t.th_web].map((h, i) => <th key={i} style={T.th}>{h}</th>)}</tr></thead>
               <tbody>
-                {[
+                {trRows([
                   ['Diploma in Project Management', 'IBAT', '€2,500 - €3,500', '$2,750 - $3,850', 'ibat.ie', 'https://ibat.ie'],
                   ['Certificate in IT Skills', 'CCT College', '€3,000 - €4,500', '$3,300 - $4,950', 'cct.ie', 'https://cct.ie'],
                   ['English for Academic Purposes', 'Atlas Language', '€4,500 - €5,500', '$4,950 - $6,050', 'atlaslanguageschool.com', 'https://atlaslanguageschool.com'],
                   ['International Foundation', 'NCIRL', '€6,000 - €8,000', '$6,600 - $8,800', 'ncirl.ie', 'https://ncirl.ie'],
                   ['Pre-Masters in Business', 'Griffith College', '€7,500 - €9,500', '$8,250 - $10,450', 'griffith.ie', 'https://griffith.ie'],
                   ['Foundation in Science', 'DCU', '€8,500 - €12,000', '$9,350 - $13,200', 'dcu.ie', 'https://dcu.ie'],
-                ].map((r, i) => (
+                ], locale).map((r, i) => (
                   <tr key={i}>
                     <td style={{ ...T.td(i), ...T.bold }}>{r[0]}</td>
                     <td style={T.td(i)}>{r[1]}</td>
@@ -817,7 +818,7 @@ export default function Irlanda() {
             <table style={T.table}>
               <thead><tr>{[t.th_uni, t.th_area, t.th_anual, t.th_usd, t.th_web].map((h, i) => <th key={i} style={T.th}>{h}</th>)}</tr></thead>
               <tbody>
-                {[
+                {trRows([
                   ['CCT College Dublin', 'Computing & Business', '€4,000 - €12,000', '$4,400 - $13,200', 'cct.ie', 'https://cct.ie'],
                   ['IBAT College', 'Business & Management', '€6,500 - €9,000', '$7,150 - $9,900', 'ibat.ie', 'https://ibat.ie'],
                   ['Dorset College', 'Healthcare & IT', '€7,500 - €10,500', '$8,250 - $11,550', 'dorset-college.ie', 'https://dorset-college.ie'],
@@ -826,7 +827,7 @@ export default function Irlanda() {
                   ['ICD Business School', 'Business / Finance', '€10,000 - €13,500', '$11,000 - $14,850', 'icd.ie', 'https://icd.ie'],
                   ['NCI - National College of Ireland', 'Data / HR / Finance', '€10,000 - €15,000', '$11,000 - $16,500', 'ncirl.ie', 'https://ncirl.ie'],
                   ['Griffith College Dublin', 'Law / Media / Business', '€12,000 - €14,000', '$13,200 - $15,400', 'griffith.ie', 'https://griffith.ie'],
-                ].map((r, i) => (
+                ], locale).map((r, i) => (
                   <tr key={i}>
                     <td style={{ ...T.td(i), ...T.bold }}>{r[0]}</td>
                     <td style={T.td(i)}>{r[1]}</td>
@@ -849,14 +850,14 @@ export default function Irlanda() {
             <table style={T.table}>
               <thead><tr>{[t.th_concepto, t.th_costo, t.th_usd, t.th_oblig].map((h, i) => <th key={i} style={T.th}>{h}</th>)}</tr></thead>
               <tbody>
-                {[
+                {trRows([
                   ['Seguro médico', '€150', '$165', '✅ Sí'],
                   ['Examen Final del curso', '€150 - €200', '$165 - $220', '✅ Sí'],
                   ['Materiales / Libros', '€40 - €70', '$44 - $77', '✅ Sí'],
                   ['Cita IRP (Inmigración)', '€300', '$330', '✅ Sí'],
                   ['Solvencia - Inglés (25 semanas)', '€6,665', '$7,330', '✅ Obligatorio visa'],
                   ['Solvencia - Universidad/Master', '€10,000', '$11,000', '✅ Obligatorio visa'],
-                ].map((r, i) => (
+                ], locale).map((r, i) => (
                   <tr key={i}>
                     <td style={{ ...T.td(i), ...T.bold }}>{r[0]}</td>
                     <td style={T.td(i)}>{r[1]}</td>
@@ -903,12 +904,12 @@ export default function Irlanda() {
             <table style={T.table}>
               <thead><tr>{[t.th_entidad, t.th_tipo, t.th_ventaja, t.th_web].map((h, i) => <th key={i} style={T.th}>{h}</th>)}</tr></thead>
               <tbody>
-                {[
+                {trRows([
                   ['Revolut Ireland', 'Digital', 'IBAN irlandés (IE) activo en 24h. El más usado para nóminas rápidas.', 'revolut.com', 'https://revolut.com'],
                   ['N26', 'Digital', 'IBAN europeo. App excelente y sin comisiones de mantenimiento.', 'n26.com', 'https://n26.com'],
                   ['AIB', 'Tradicional', 'Necesario para depósitos en efectivo y estados de cuenta para visa.', 'aib.ie', 'https://aib.ie'],
                   ['Bank of Ireland', 'Tradicional', 'Mayor red de cajeros y sucursales físicas en todo el país.', 'bankofireland.com', 'https://bankofireland.com'],
-                ].map((r, i) => (
+                ], locale).map((r, i) => (
                   <tr key={i}>
                     <td style={{ ...T.td(i), ...T.bold }}>{r[0]}</td>
                     <td style={T.td(i)}>{r[1]}</td>
@@ -929,7 +930,7 @@ export default function Irlanda() {
             <table style={T.table}>
               <thead><tr>{[t.th_portal, t.th_para_que, t.th_cuando, t.th_web].map((h, i) => <th key={i} style={T.th}>{h}</th>)}</tr></thead>
               <tbody>
-                {[
+                {trRows([
                   ['MyGovID.ie', 'Cuenta digital del gobierno irlandés', 'Semana 1 — antes de todo lo demás', 'mygovid.ie', 'https://mygovid.ie'],
                   ['MyWelfare.ie', 'Solicitar PPS Number', 'Semana 1-2 al llegar', 'mywelfare.ie', 'https://mywelfare.ie'],
                   ['IrishImmigration.ie', 'Cita y registro IRP', 'Antes de volar — saca la cita anticipada', 'irishimmigration.ie', 'https://irishimmigration.ie'],
@@ -939,7 +940,7 @@ export default function Irlanda() {
                   ['LinkedIn Jobs', 'Empleos profesionales y networking', 'Desde mes 2-3', 'linkedin.com/jobs', 'https://linkedin.com/jobs'],
                   ['Daft.ie', 'Búsqueda de vivienda #1 en Irlanda', 'Desde semana 1 — activa alertas push', 'daft.ie', 'https://daft.ie'],
                   ['Rent.ie', 'Habitaciones compartidas', 'Desde semana 1', 'rent.ie', 'https://rent.ie'],
-                ].map((r, i) => (
+                ], locale).map((r, i) => (
                   <tr key={i}>
                     <td style={{ ...T.td(i), ...T.bold }}>{r[0]}</td>
                     <td style={T.td(i)}>{r[1]}</td>
@@ -962,11 +963,11 @@ export default function Irlanda() {
             <table style={T.table}>
               <thead><tr>{[t.th_tipo_aloj, t.th_sem, t.th_usd, t.th_mes, t.th_usd].map((h, i) => <th key={i} style={T.th}>{h}</th>)}</tr></thead>
               <tbody>
-                {[
+                {trRows([
                   ['Habitación compartida (Dublín)', '€120 - €180', '$132 - $198', '€480 - €720', '$528 - $792'],
                   ['Habitación individual (Dublín)', '€180 - €260', '$198 - $286', '€720 - €1,040', '$792 - $1,144'],
                   ['Habitación compartida (Limerick)', '€80 - €130', '$88 - $143', '€320 - €520', '$352 - $572'],
-                ].map((r, i) => (
+                ], locale).map((r, i) => (
                   <tr key={i}>
                     <td style={{ ...T.td(i), ...T.bold }}>{r[0]}</td>
                     <td style={T.td(i)}>{r[1]}</td>
@@ -984,11 +985,11 @@ export default function Irlanda() {
             <table style={T.table}>
               <thead><tr>{[t.th_canal, t.th_tipo, t.th_estrategia_col, t.th_acceso].map((h, i) => <th key={i} style={T.th}>{h}</th>)}</tr></thead>
               <tbody>
-                {[
+                {trRows([
                   ['Daft.ie', 'Portal oficial #1', 'Activa alertas push — responde en menos de 2 horas', 'daft.ie', 'https://daft.ie'],
                   ['Rent.ie', 'Portal oficial #2', 'Filtra por habitaciones compartidas', 'rent.ie', 'https://rent.ie'],
                   ['Grupos WhatsApp Latinos', 'Networking', 'Únete al grupo de tu país — Mexicanos, Ticos, Colombianos, Argentinos en Irlanda', 'Ver grupos', 'https://www.facebook.com/search/groups?q=' + encodeURIComponent('Latinos Irlanda')],
-                ].map((r, i) => (
+                ], locale).map((r, i) => (
                   <tr key={i}>
                     <td style={{ ...T.td(i), ...T.bold }}>{r[0]}</td>
                     <td style={T.td(i)}>{r[1]}</td>
@@ -1013,13 +1014,13 @@ export default function Irlanda() {
             <table style={T.table}>
               <thead><tr>{[t.th_sector, t.th_puesto, t.th_salario_h, t.th_usd, t.th_canal_emp].map((h, i) => <th key={i} style={T.th}>{h}</th>)}</tr></thead>
               <tbody>
-                {[
+                {trRows([
                   ['Hospitality', 'Waiter / Floor Staff / Kitchen Porter', '€13.50 - €15', '$14.85 - $16.5', 'CV en mano en pubs 3-5pm'],
                   ['Cleaning / Housekeeping', 'Cleaner / Housekeeper', '€13.50 - €14', '$14.85 - $15.4', 'Indeed, agencias, grupos WhatsApp'],
                   ['Security', 'Static Guard / Event Security', '€13 - €16', '$14.3 - $17.6', 'Requiere PSA License (4 días, ~€400)'],
                   ['Retail', 'Shop Assistant / Cashier', '€13.50 - €14', '$14.85 - $15.4', 'Indeed, tiendas directas'],
                   ['Care Sector', 'Care Assistant', '€14 - €17', '$15.4 - $18.7', 'Agencias: CPL, Staffline Ireland'],
-                ].map((r, i) => (
+                ], locale).map((r, i) => (
                   <tr key={i}>
                     <td style={{ ...T.td(i), ...T.bold }}>{r[0]}</td>
                     <td style={T.td(i)}>{r[1]}</td>
@@ -1041,13 +1042,13 @@ export default function Irlanda() {
             <table style={T.table}>
               <thead><tr>{[t.th_puesto_sal, t.th_salario_h, t.th_usd, t.th_horas, t.th_mensual, t.th_usd].map((h, i) => <th key={i} style={T.th}>{h}</th>)}</tr></thead>
               <tbody>
-                {[
+                {trRows([
                   ['Waiter / Floor Staff', '€13.50 - €15', '$14.85 - $16.5', '20h', '€1,080 - €1,200', '$1,188 - $1,320'],
                   ['Cleaner / Housekeeping', '€13.50 - €14', '$14.85 - $15.4', '20h', '€1,080 - €1,120', '$1,188 - $1,232'],
                   ['Security Guard', '€13 - €16', '$14.3 - $17.6', '20h', '€1,040 - €1,280', '$1,144 - $1,408'],
                   ['Shop Assistant', '€13.50 - €14', '$14.85 - $15.4', '20h', '€1,080 - €1,120', '$1,188 - $1,232'],
                   ['Care Assistant', '€14 - €17', '$15.4 - $18.7', '20h', '€1,120 - €1,360', '$1,232 - $1,496'],
-                ].map((r, i) => (
+                ], locale).map((r, i) => (
                   <tr key={i}>
                     <td style={{ ...T.td(i), ...T.bold }}>{r[0]}</td>
                     <td style={T.td(i)}>{r[1]}</td>
@@ -1132,14 +1133,14 @@ export default function Irlanda() {
             <table style={T.table}>
               <thead><tr>{[t.th_problema, t.th_accion, t.th_contacto].map((h, i) => <th key={i} style={T.th}>{h}</th>)}</tr></thead>
               <tbody>
-                {[
+                {trRows([
                   ['Robo / Pérdida de Pasaporte', 'Denuncia en Garda Station + Contactar Embajada de tu país de inmediato', 'Garda.ie + Embajada'],
                   ['Estafa de Vivienda', 'No más pagos. Denunciar en Garda y reportar en Facebook/WhatsApp', 'Garda.ie'],
                   ['Emergency Tax (sin PPS)', 'Entrar a Revenue.ie y vincular empleo con PPSN — dinero se devuelve en próxima nómina', 'Revenue.ie'],
                   ['Rechazo de IRP', 'Generalmente falta Proof of Address válido o Job Offer — revisar documentos', 'IrishImmigration.ie'],
                   ['Problemas con empleador', 'Contactar Workplace Relations Commission — servicio gratuito', 'WRC.ie'],
                   ['Enfermedad / Urgencia médica', 'Ir a Urgent Care Center más cercano con seguro médico', '999 / 112'],
-                ].map((r, i) => (
+                ], locale).map((r, i) => (
                   <tr key={i}>
                     <td style={{ ...T.td(i), ...T.bold, color: '#dc2626' }}>{r[0]}</td>
                     <td style={{ ...T.td(i), lineHeight: '1.5' }}>{r[1]}</td>

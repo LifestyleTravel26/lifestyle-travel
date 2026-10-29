@@ -4,6 +4,7 @@ import { useLanguage } from '../../context/LanguageContext'
 import HeaderMenu from '../../components/HeaderMenu'
 import { usePurchase } from '../../hooks/usePurchase'
 import IconBadge from '../../components/IconBadge'
+import { tx, trRows } from '@/lib/phrases'
 
 const translations = {
   es: {
@@ -636,8 +637,8 @@ export default function Georgia() {
         {!hasAccess && (
         <div style={{ backgroundColor: 'white', borderRadius: '16px', padding: '24px', textAlign: 'center', boxShadow: '0 4px 16px rgba(0,0,0,0.10)', margin: '16px 0', border: '2px solid #e8572a' }}>
           <div style={{ marginBottom: '14px' }}><IconBadge name="lock" size={52} /></div>
-          <h3 style={{ fontWeight: 'bold', fontSize: '18px', color: '#1a1a2e', marginBottom: '8px' }}>Contenido Premium</h3>
-          <p style={{ color: '#555555', fontSize: '14px', marginBottom: '20px' }}>Accede al blueprint completo con toda la información detallada</p>
+          <h3 style={{ fontWeight: 'bold', fontSize: '18px', color: '#1a1a2e', marginBottom: '8px' }}>{tx('Contenido Premium', locale)}</h3>
+          <p style={{ color: '#555555', fontSize: '14px', marginBottom: '20px' }}>{tx('Accede al blueprint completo con toda la información detallada', locale)}</p>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
             <a
               href="https://lifestylentravel2.lemonsqueezy.com/checkout/buy/2dc9d208-cf0b-45f0-83b4-998414ffb9f4"
@@ -656,7 +657,7 @@ export default function Georgia() {
                 border: '2px solid #ff6b3d',
               }}
             >
-              Acceso Total — Todos los Blueprints €39.99
+              {tx('Acceso Total — Todos los Blueprints €39.99', locale)}
             </a>
           </div>
         </div>
@@ -718,7 +719,7 @@ export default function Georgia() {
             <table style={T.table}>
               <thead><tr>{[t.th_concepto, t.th_costo, t.th_oblig].map((h, i) => <th key={i} style={T.th}>{h}</th>)}</tr></thead>
               <tbody>
-                {[
+                {trRows([
                   ['Visa de entrada', '$0', '✅ Gratis (visa-free)'],
                   ['Seguro médico internacional', '$60 – $120', '⚪ Muy recomendado'],
                   ['Registro Individual Entrepreneur', '$7 – $18 (20-50 GEL)', '⚪ Si trabajas como freelancer'],
@@ -726,7 +727,7 @@ export default function Georgia() {
                   ['Traducciones de documentos', '$30 – $100', '⚪ Según necesidad'],
                   ['Small Business Status (1% tax)', '$0', '⚪ Gratis — activas online'],
                   ['Capital recomendado total', '$2,000 – $3,000', '⚪ Recomendado para estabilidad'],
-                ].map((r, i) => (
+                ], locale).map((r, i) => (
                   <tr key={i}>
                     <td style={{ ...T.td(i), ...T.bold }}>{r[0]}</td>
                     <td style={T.td(i)}>{r[1]}</td>
@@ -767,13 +768,13 @@ export default function Georgia() {
             <table style={T.table}>
               <thead><tr>{[t.th_entidad, t.th_tipo, t.th_ventaja, 'Website'].map((h, i) => <th key={i} style={T.th}>{h}</th>)}</tr></thead>
               <tbody>
-                {[
+                {trRows([
                   ['Bank of Georgia', 'Tradicional', 'El más grande del país. Muy usado por expatriados y emprendedores. App excelente.', 'bankofgeorgia.ge', 'https://bankofgeorgia.ge'],
                   ['TBC Bank', 'Tradicional', 'Excelente banca digital. Apertura muy rápida. Popular entre digital nomads.', 'tbcbank.ge', 'https://tbcbank.ge'],
                   ['Liberty Bank', 'Tradicional', 'Amplia red de sucursales y cajeros en todo el país.', 'libertybank.ge', 'https://libertybank.ge'],
                   ['Wise', 'Digital', 'Ideal para transferencias internacionales y conversión de divisas.', 'wise.com', 'https://wise.com'],
                   ['Revolut', 'Digital', 'Apertura rápida desde el móvil. Pagos internacionales.', 'revolut.com', 'https://revolut.com'],
-                ].map((r, i) => (
+                ], locale).map((r, i) => (
                   <tr key={i}>
                     <td style={{ ...T.td(i), ...T.bold }}>{r[0]}</td>
                     <td style={T.td(i)}>{r[1]}</td>
@@ -794,7 +795,7 @@ export default function Georgia() {
             <table style={T.table}>
               <thead><tr>{[t.th_portal, t.th_para_que, t.th_cuando, 'Website'].map((h, i) => <th key={i} style={T.th}>{h}</th>)}</tr></thead>
               <tbody>
-                {[
+                {trRows([
                   ['Revenue Service (rs.ge)', 'Impuestos y Small Business Status (1%)', 'Semana 1 — registrar actividad fiscal', 'rs.ge', 'https://www.rs.ge'],
                   ['Public Service Hall (psh.ge)', 'Registro como Individual Entrepreneur', 'Semana 1 — presencial con pasaporte', 'psh.gov.ge', 'https://psh.gov.ge'],
                   ['Migration Commission', 'Residencia temporal y estatus migratorio', 'Si planeas quedarte más de 365 días', 'migration.commission.ge', 'https://migration.commission.ge'],
@@ -803,7 +804,7 @@ export default function Georgia() {
                   ['SS.ge', 'Clasificados — trabajo y vivienda', 'Desde semana 1', 'ss.ge', 'https://ss.ge'],
                   ['MyHome.ge', 'Portal inmobiliario #1 en Georgia', 'Semana 1 para vivienda', 'myhome.ge', 'https://www.myhome.ge'],
                   ['Expat.com', 'Comunidad de expatriados — empleo y networking', 'Desde semana 1', 'expat.com', 'https://expat.com'],
-                ].map((r, i) => (
+                ], locale).map((r, i) => (
                   <tr key={i}>
                     <td style={{ ...T.td(i), ...T.bold }}>{r[0]}</td>
                     <td style={T.td(i)}>{r[1]}</td>
@@ -826,10 +827,10 @@ export default function Georgia() {
             <table style={T.table}>
               <thead><tr>{[t.th_tipo_aloj, t.th_sem, t.th_mes].map((h, i) => <th key={i} style={T.th}>{h}</th>)}</tr></thead>
               <tbody>
-                {[
+                {trRows([
                   ['Cuarto compartido', '$60 – $90', '$240 – $360'],
                   ['Cuarto individual', '$110 – $160', '$440 – $640'],
-                ].map((r, i) => (
+                ], locale).map((r, i) => (
                   <tr key={i}>
                     <td style={{ ...T.td(i), ...T.bold }}>{r[0]}</td>
                     <td style={T.td(i)}>{r[1]}</td>
@@ -845,14 +846,14 @@ export default function Georgia() {
             <table style={T.table}>
               <thead><tr>{[t.th_canal, t.th_tipo, t.th_estrategia_col, t.th_acceso].map((h, i) => <th key={i} style={T.th}>{h}</th>)}</tr></thead>
               <tbody>
-                {[
+                {trRows([
                   ['MyHome.ge', 'Portal #1 en Georgia', 'Alquileres en Tbilisi y Batumi — el más completo', 'myhome.ge', 'https://www.myhome.ge'],
                   ['SS.ge', 'Clasificados populares', 'Alquileres económicos y anuncios directos de propietarios', 'ss.ge', 'https://www.ss.ge'],
                   ['Place.ge', 'Portal inmobiliario', 'Muchas opciones en Tbilisi y Batumi', 'place.ge', 'https://www.place.ge'],
                   ['Airbnb', 'Alojamiento temporal', 'Primeras semanas mientras buscas permanente', 'airbnb.com', 'https://airbnb.com'],
                   ['Digital Nomads Tbilisi (Facebook)', 'Comunidad', 'Grupos donde se comparten alquileres y oportunidades', 'Facebook', 'https://facebook.com'],
                   ['Grupos WhatsApp Latinos', 'Networking', 'Únete al grupo de tu país — Mexicanos, Ticos, Colombianos, Argentinos en Georgia', 'Ver grupos', 'https://www.facebook.com/search/groups?q=' + encodeURIComponent('Latinos Georgia')],
-                ].map((r, i) => (
+                ], locale).map((r, i) => (
                   <tr key={i}>
                     <td style={{ ...T.td(i), ...T.bold }}>{r[0]}</td>
                     <td style={T.td(i)}>{r[1]}</td>
@@ -874,14 +875,14 @@ export default function Georgia() {
             <table style={T.table}>
               <thead><tr>{[t.th_sector, t.th_puesto, t.th_salario, t.th_canal_emp].map((h, i) => <th key={i} style={T.th}>{h}</th>)}</tr></thead>
               <tbody>
-                {[
+                {trRows([
                   ['Hospitality', 'Waiter / Bar Staff', '$350 – $600', 'Jobs.ge / CV en persona'],
                   ['Cleaning', 'Cleaner / Housekeeping', '$300 – $500', 'Jobs.ge / SS.ge'],
                   ['Hotels', 'Reception / Hotel Staff', '$400 – $700', 'Jobs.ge / LinkedIn'],
                   ['Retail', 'Sales Assistant', '$350 – $600', 'HR.ge / Jobs.ge'],
                   ['Delivery', 'Rider / Courier (Wolt)', '$500 – $900', 'Wolt / Glovo'],
                   ['Freelance / Remoto', 'Tu especialidad para clientes internacionales', '$1,000 – $5,000+', 'LinkedIn / Upwork / Fiverr'],
-                ].map((r, i) => (
+                ], locale).map((r, i) => (
                   <tr key={i}>
                     <td style={{ ...T.td(i), ...T.bold }}>{r[0]}</td>
                     <td style={T.td(i)}>{r[1]}</td>
@@ -903,13 +904,13 @@ export default function Georgia() {
             <table style={T.table}>
               <thead><tr>{[t.th_sector_sal, t.th_puesto_sal, t.th_mensual, t.th_impuesto].map((h, i) => <th key={i} style={T.th}>{h}</th>)}</tr></thead>
               <tbody>
-                {[
+                {trRows([
                   ['Hospitality', 'Waiter / Bar Staff', '$350 – $600', '$3.5 – $6'],
                   ['Hotels', 'Reception / Hotel Staff', '$400 – $700', '$4 – $7'],
                   ['Delivery', 'Rider / Courier', '$500 – $900', '$5 – $9'],
                   ['Freelance Junior', 'Tu especialidad (remoto)', '$1,000 – $2,000', '$10 – $20'],
                   ['Freelance Senior', 'Tu especialidad (remoto)', '$2,000 – $5,000', '$20 – $50'],
-                ].map((r, i) => (
+                ], locale).map((r, i) => (
                   <tr key={i}>
                     <td style={{ ...T.td(i), ...T.bold }}>{r[0]}</td>
                     <td style={T.td(i)}>{r[1]}</td>
@@ -992,13 +993,13 @@ export default function Georgia() {
             <table style={T.table}>
               <thead><tr>{[t.th_problema, t.th_accion, t.th_contacto].map((h, i) => <th key={i} style={T.th}>{h}</th>)}</tr></thead>
               <tbody>
-                {[
+                {trRows([
                   ['Robo / Extravío de Pasaporte', 'Reportar a Policía de Georgia y contactar Embajada/Consulado', 'Policía + Embajada'],
                   ['Estafa de Vivienda', 'Reportar en plataforma (MyHome/SS.ge) y denunciar en Policía', 'Policía Georgia'],
                   ['Problemas migratorios', 'Consultar con Public Service Hall o Migration Commission', 'psh.gov.ge'],
                   ['Problemas bancarios', 'Contactar Bank of Georgia o TBC Bank para bloquear tarjeta', 'Tu banco'],
                   ['Enfermedad / Urgencia médica', 'Hospital privado o clínica internacional en Tbilisi', '112'],
-                ].map((r, i) => (
+                ], locale).map((r, i) => (
                   <tr key={i}>
                     <td style={{ ...T.td(i), ...T.bold, color: '#dc2626' }}>{r[0]}</td>
                     <td style={{ ...T.td(i), lineHeight: '1.5' }}>{r[1]}</td>

@@ -4,6 +4,7 @@ import { useLanguage } from '../../context/LanguageContext'
 import HeaderMenu from '../../components/HeaderMenu'
 import { usePurchase } from '../../hooks/usePurchase'
 import IconBadge from '../../components/IconBadge'
+import { tx, trRows } from '@/lib/phrases'
 
 const translations = {
   es: {
@@ -644,8 +645,8 @@ export default function NuevaZelanda() {
         {!hasAccess && (
         <div style={{ backgroundColor: 'white', borderRadius: '16px', padding: '24px', textAlign: 'center', boxShadow: '0 4px 16px rgba(0,0,0,0.10)', margin: '16px 0', border: '2px solid #e8572a' }}>
           <div style={{ marginBottom: '14px' }}><IconBadge name="lock" size={52} /></div>
-          <h3 style={{ fontWeight: 'bold', fontSize: '18px', color: '#1a1a2e', marginBottom: '8px' }}>Contenido Premium</h3>
-          <p style={{ color: '#555555', fontSize: '14px', marginBottom: '20px' }}>Accede al blueprint completo con toda la información detallada</p>
+          <h3 style={{ fontWeight: 'bold', fontSize: '18px', color: '#1a1a2e', marginBottom: '8px' }}>{tx('Contenido Premium', locale)}</h3>
+          <p style={{ color: '#555555', fontSize: '14px', marginBottom: '20px' }}>{tx('Accede al blueprint completo con toda la información detallada', locale)}</p>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
             <a
               href="https://lifestylentravel2.lemonsqueezy.com/checkout/buy/2dc9d208-cf0b-45f0-83b4-998414ffb9f4"
@@ -664,7 +665,7 @@ export default function NuevaZelanda() {
                 border: '2px solid #ff6b3d',
               }}
             >
-              Acceso Total — Todos los Blueprints €39.99
+              {tx('Acceso Total — Todos los Blueprints €39.99', locale)}
             </a>
           </div>
         </div>
@@ -679,13 +680,13 @@ export default function NuevaZelanda() {
             <table style={T.table}>
               <thead><tr>{[t.th_inst, t.th_loc, t.th_precio, t.th_web].map((h, i) => <th key={i} style={T.th}>{h}</th>)}</tr></thead>
               <tbody>
-                {[
+                {trRows([
                   ['NZLC', 'Auckland / Wellington', '$3,200 – $4,000', 'nzlc.ac.nz', 'https://nzlc.ac.nz'],
                   ['LSI Auckland', 'Auckland', '$3,200 – $4,000', 'lsi.edu', 'https://lsi.edu'],
                   ['Worldwide School of English', 'Auckland', '$3,300 – $4,100', 'worldwide.ac.nz', 'https://worldwide.ac.nz'],
                   ['Languages International', 'Auckland', '$3,400 – $4,200', 'languages.ac.nz', 'https://languages.ac.nz'],
                   ['Kaplan International', 'Auckland', '$3,500 – $4,400', 'kaplaninternational.com', 'https://kaplaninternational.com'],
-                ].map((r, i) => (
+                ], locale).map((r, i) => (
                   <tr key={i}>
                     <td style={{ ...T.td(i), ...T.bold }}>{r[0]}</td>
                     <td style={T.td(i)}>{r[1]}</td>
@@ -715,13 +716,13 @@ export default function NuevaZelanda() {
             <table style={T.table}>
               <thead><tr>{[t.th_programa, t.th_institucion, t.th_inversion, t.th_web].map((h, i) => <th key={i} style={T.th}>{h}</th>)}</tr></thead>
               <tbody>
-                {[
+                {trRows([
                   ['University Pathway', 'NZLC', '$9,500 – $12,500', 'nzlc.ac.nz', 'https://nzlc.ac.nz'],
                   ['Academic English', 'Worldwide School of English', '$9,800 – $12,000', 'worldwide.ac.nz', 'https://worldwide.ac.nz'],
                   ['College Pathway', 'LSI Auckland', '$9,500 – $12,000', 'lsi.edu', 'https://lsi.edu'],
                   ['Academic Pathway', 'Languages International', '$10,000 – $13,000', 'languages.ac.nz', 'https://languages.ac.nz'],
                   ['University Preparation', 'Kaplan International', '$11,000 – $14,000', 'kaplaninternational.com', 'https://kaplaninternational.com'],
-                ].map((r, i) => (
+                ], locale).map((r, i) => (
                   <tr key={i}>
                     <td style={{ ...T.td(i), ...T.bold }}>{r[0]}</td>
                     <td style={T.td(i)}>{r[1]}</td>
@@ -742,13 +743,13 @@ export default function NuevaZelanda() {
             <table style={T.table}>
               <thead><tr>{[t.th_inst, t.th_ubicacion, t.th_programa_col, t.th_precio_anual, t.th_web].map((h, i) => <th key={i} style={T.th}>{h}</th>)}</tr></thead>
               <tbody>
-                {[
+                {trRows([
                   ['Southern Institute of Technology (SIT)', 'Invercargill', 'Business / IT / Hospitality', '$11,000 – $14,000', 'sit.ac.nz', 'https://www.sit.ac.nz'],
                   ['Otago Polytechnic', 'Dunedin / Auckland', 'Design / IT / Business', '$13,000 – $17,000', 'op.ac.nz', 'https://www.op.ac.nz'],
                   ['Ara Institute of Canterbury', 'Christchurch', 'Engineering / Business', '$13,000 – $18,000', 'ara.ac.nz', 'https://www.ara.ac.nz'],
                   ['Toi Ohomai Institute', 'Tauranga / Rotorua', 'Tourism / IT / Business', '$14,000 – $18,000', 'toiohomai.ac.nz', 'https://www.toiohomai.ac.nz'],
                   ['Manukau Institute of Technology', 'Auckland', 'Trades / Engineering / Business', '$15,000 – $19,000', 'manukau.ac.nz', 'https://www.manukau.ac.nz'],
-                ].map((r, i) => (
+                ], locale).map((r, i) => (
                   <tr key={i}>
                     <td style={{ ...T.td(i), ...T.bold }}>{r[0]}</td>
                     <td style={T.td(i)}>{r[1]}</td>
@@ -770,7 +771,7 @@ export default function NuevaZelanda() {
             <table style={T.table}>
               <thead><tr>{[t.th_concepto, t.th_costo, t.th_oblig].map((h, i) => <th key={i} style={T.th}>{h}</th>)}</tr></thead>
               <tbody>
-                {[
+                {trRows([
                   ['Seguro médico internacional', '$300 – $600/año', '✅ Sí'],
                   ['Student Visa (INZ Fee)', '~$485 USD (NZ$850+ más IVL)', '✅ Sí'],
                   ['Examen médico y Rayos X', '$150 – $250', '✅ Si requerido'],
@@ -778,7 +779,7 @@ export default function NuevaZelanda() {
                   ['IRD Number (número fiscal)', 'Gratis', '✅ Para trabajar'],
                   ['Solvencia obligatoria', '~$12,000 – $13,000 USD', '✅ Obligatorio visa'],
                   ['Capital total recomendado', '$15,000 – $22,000 USD', '✅ Para arrancar bien'],
-                ].map((r, i) => (
+                ], locale).map((r, i) => (
                   <tr key={i}>
                     <td style={{ ...T.td(i), ...T.bold }}>{r[0]}</td>
                     <td style={T.td(i)}>{r[1]}</td>
@@ -817,14 +818,14 @@ export default function NuevaZelanda() {
             <table style={T.table}>
               <thead><tr>{[t.th_entidad, t.th_tipo, t.th_ventaja, t.th_web].map((h, i) => <th key={i} style={T.th}>{h}</th>)}</tr></thead>
               <tbody>
-                {[
+                {trRows([
                   ['ANZ Bank NZ', 'Tradicional', 'El más grande. Muy usado por estudiantes internacionales. Cuenta activa el mismo día.', 'anz.co.nz', 'https://www.anz.co.nz'],
                   ['ASB Bank', 'Tradicional', 'Cuenta sencilla para estudiantes con excelente app móvil.', 'asb.co.nz', 'https://www.asb.co.nz'],
                   ['BNZ (Bank of New Zealand)', 'Tradicional', 'Gran red de sucursales. Buenos servicios para newcomers.', 'bnz.co.nz', 'https://www.bnz.co.nz'],
                   ['Westpac NZ', 'Tradicional', 'Banco internacional con cuentas para estudiantes y migrantes.', 'westpac.co.nz', 'https://www.westpac.co.nz'],
                   ['Wise', 'Digital', 'Ideal para transferencias internacionales y conversión de divisas.', 'wise.com', 'https://wise.com'],
                   ['Revolut', 'Digital', 'Banca digital popular entre estudiantes internacionales.', 'revolut.com', 'https://revolut.com'],
-                ].map((r, i) => (
+                ], locale).map((r, i) => (
                   <tr key={i}>
                     <td style={{ ...T.td(i), ...T.bold }}>{r[0]}</td>
                     <td style={T.td(i)}>{r[1]}</td>
@@ -844,7 +845,7 @@ export default function NuevaZelanda() {
             <table style={T.table}>
               <thead><tr>{[t.th_portal, t.th_para_que, t.th_cuando, t.th_web].map((h, i) => <th key={i} style={T.th}>{h}</th>)}</tr></thead>
               <tbody>
-                {[
+                {trRows([
                   ['Immigration NZ (INZ)', 'Student Visa, permisos de trabajo y residencia', 'Antes de viajar + seguimiento', 'immigration.govt.nz', 'https://www.immigration.govt.nz'],
                   ['Inland Revenue (IRD)', 'IRD Number para trabajar y pagar impuestos', 'Semana 1 — prioritario', 'ird.govt.nz', 'https://www.ird.govt.nz'],
                   ['Work and Income NZ', 'Ofertas de empleo y recursos laborales', 'Desde semana 1', 'workandincome.govt.nz', 'https://www.workandincome.govt.nz'],
@@ -854,7 +855,7 @@ export default function NuevaZelanda() {
                   ['Backpacker Board', 'Hospitality y trabajos temporales', 'Desde semana 1', 'backpackerboard.co.nz', 'https://www.backpackerboard.co.nz'],
                   ['Seasonal Jobs NZ', 'Fruit picking y trabajos de temporada', 'Según temporada', 'seasonaljobs.co.nz', 'https://www.seasonaljobs.co.nz'],
                   ['Trade Me (vivienda)', 'Portal #1 para alquiler en NZ', 'Semana 1 para vivienda', 'trademe.co.nz', 'https://www.trademe.co.nz'],
-                ].map((r, i) => (
+                ], locale).map((r, i) => (
                   <tr key={i}>
                     <td style={{ ...T.td(i), ...T.bold }}>{r[0]}</td>
                     <td style={T.td(i)}>{r[1]}</td>
@@ -876,10 +877,10 @@ export default function NuevaZelanda() {
             <table style={T.table}>
               <thead><tr>{[t.th_tipo_aloj, t.th_sem, t.th_mes, t.th_usd_mes].map((h, i) => <th key={i} style={T.th}>{h}</th>)}</tr></thead>
               <tbody>
-                {[
+                {trRows([
                   ['Cuarto compartido', 'NZ$180 – $250', 'NZ$720 – $1,000', '$411 – $570'],
                   ['Cuarto individual', 'NZ$280 – $400', 'NZ$1,120 – $1,600', '$638 – $912'],
-                ].map((r, i) => (
+                ], locale).map((r, i) => (
                   <tr key={i}>
                     <td style={{ ...T.td(i), ...T.bold }}>{r[0]}</td>
                     <td style={T.td(i)}>{r[1]}</td>
@@ -896,13 +897,13 @@ export default function NuevaZelanda() {
             <table style={T.table}>
               <thead><tr>{[t.th_canal, t.th_tipo, t.th_estrategia_col, t.th_acceso].map((h, i) => <th key={i} style={T.th}>{h}</th>)}</tr></thead>
               <tbody>
-                {[
+                {trRows([
                   ['Trade Me', 'Portal #1 en NZ', 'El portal más usado para alquiler en todo el país', 'trademe.co.nz', 'https://www.trademe.co.nz'],
                   ['Realestate.co.nz', 'Portal inmobiliario', 'Plataforma profesional para alquileres verificados', 'realestate.co.nz', 'https://www.realestate.co.nz'],
                   ['Facebook Marketplace', 'Clasificados', 'Muy usado por estudiantes y locales para alquileres rápidos', 'facebook.com/marketplace', 'https://facebook.com/marketplace'],
                   ['Airbnb', 'Temporal', 'Primeras 1-2 semanas mientras buscas permanente', 'airbnb.com', 'https://airbnb.com'],
                   ['Grupos WhatsApp Latinos', 'Networking', 'Latinos en Auckland, Wellington, Christchurch', 'Ver grupos', 'https://www.facebook.com/search/groups?q=' + encodeURIComponent('Latinos Nueva Zelanda')],
-                ].map((r, i) => (
+                ], locale).map((r, i) => (
                   <tr key={i}>
                     <td style={{ ...T.td(i), ...T.bold }}>{r[0]}</td>
                     <td style={T.td(i)}>{r[1]}</td>
@@ -926,13 +927,13 @@ export default function NuevaZelanda() {
             <table style={T.table}>
               <thead><tr>{[t.th_sector, t.th_puesto, t.th_salario_nzd, t.th_usd_h, t.th_canal_emp].map((h, i) => <th key={i} style={T.th}>{h}</th>)}</tr></thead>
               <tbody>
-                {[
+                {trRows([
                   ['Hospitality', 'Waiter', '$23.95 – $26 NZD', '$13.65 – $14.82', 'Seek / CV en persona'],
                   ['Cleaning', 'Housekeeping', '$23.95 – $25 NZD', '$13.65 – $14.25', 'Indeed NZ / Agencias'],
                   ['Hotels', 'Front Desk / Hotel Staff', '$24 – $27 NZD', '$13.7 – $15.4', 'Seek / hoteles directos'],
                   ['Retail', 'Shop Assistant', '$23.95 – $26 NZD', '$13.65 – $14.82', 'Trade Me Jobs / malls'],
                   ['Agriculture', 'Fruit Picker / Farm Worker', '$23.95 – $28 NZD', '$13.65 – $15.96', 'Seasonal Jobs NZ / Backpacker Board'],
-                ].map((r, i) => (
+                ], locale).map((r, i) => (
                   <tr key={i}>
                     <td style={{ ...T.td(i), ...T.bold }}>{r[0]}</td>
                     <td style={T.td(i)}>{r[1]}</td>
@@ -954,13 +955,13 @@ export default function NuevaZelanda() {
             <table style={T.table}>
               <thead><tr>{[t.th_sector_sal, t.th_puesto_sal, t.th_salario_nzd, t.th_usd_h, t.th_mensual].map((h, i) => <th key={i} style={T.th}>{h}</th>)}</tr></thead>
               <tbody>
-                {[
+                {trRows([
                   ['Hospitality', 'Waiter', '$23.95 – $26 NZD', '$13.65 – $14.82', 'NZ$2,395 – $2,600'],
                   ['Cleaning', 'Housekeeping', '$23.95 – $25 NZD', '$13.65 – $14.25', 'NZ$2,395 – $2,500'],
                   ['Hotels', 'Front Desk / Hotel Staff', '$24 – $27 NZD', '$13.7 – $15.4', 'NZ$2,400 – $2,700'],
                   ['Retail', 'Shop Assistant', '$23.95 – $26 NZD', '$13.65 – $14.82', 'NZ$2,395 – $2,600'],
                   ['Agriculture', 'Fruit Picker / Farm Worker', '$23.95 – $28 NZD', '$13.65 – $15.96', 'NZ$2,395 – $2,800'],
-                ].map((r, i) => (
+                ], locale).map((r, i) => (
                   <tr key={i}>
                     <td style={{ ...T.td(i), ...T.bold }}>{r[0]}</td>
                     <td style={T.td(i)}>{r[1]}</td>
@@ -1041,13 +1042,13 @@ export default function NuevaZelanda() {
             <table style={T.table}>
               <thead><tr>{[t.th_problema, t.th_accion, t.th_contacto].map((h, i) => <th key={i} style={T.th}>{h}</th>)}</tr></thead>
               <tbody>
-                {[
+                {trRows([
                   ['Robo / Extravío de Pasaporte', 'Reportar a Policía NZ y contactar Embajada/Consulado', 'Policía + Embajada'],
                   ['Estafa de Vivienda', 'Reportar en Trade Me/Facebook y denunciar en Policía', 'Policía NZ'],
                   ['Problemas con Student Visa', 'Revisar en INZ o contactar institución educativa', 'immigration.govt.nz'],
                   ['Retraso en documentos del instituto', 'Contactar International Student Office', 'Tu instituto'],
                   ['Enfermedad / Urgencia médica', 'Hospital público o clínica privada según seguro', '111'],
-                ].map((r, i) => (
+                ], locale).map((r, i) => (
                   <tr key={i}>
                     <td style={{ ...T.td(i), ...T.bold, color: '#dc2626' }}>{r[0]}</td>
                     <td style={{ ...T.td(i), lineHeight: '1.5' }}>{r[1]}</td>

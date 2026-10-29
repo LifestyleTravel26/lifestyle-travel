@@ -5,6 +5,7 @@ import { useLanguage } from '../context/LanguageContext'
 import HeaderMenu from '../components/HeaderMenu'
 import { usePurchase } from '../hooks/usePurchase'
 import IconBadge from '../components/IconBadge'
+import { tx, trRows } from '@/lib/phrases'
 
 const translations = {
   es: {
@@ -657,8 +658,8 @@ export default function Voluntariado() {
         {!hasAccess && (
         <div style={{ backgroundColor: 'white', borderRadius: '16px', padding: '24px', textAlign: 'center', boxShadow: '0 4px 16px rgba(0,0,0,0.10)', margin: '16px 0', border: '2px solid #e8572a' }}>
           <div style={{ marginBottom: '14px' }}><IconBadge name="lock" size={52} /></div>
-          <h3 style={{ fontWeight: 'bold', fontSize: '18px', color: '#1a1a2e', marginBottom: '8px' }}>Contenido Premium</h3>
-          <p style={{ color: '#555555', fontSize: '14px', marginBottom: '20px' }}>Accede al blueprint completo con toda la información detallada</p>
+          <h3 style={{ fontWeight: 'bold', fontSize: '18px', color: '#1a1a2e', marginBottom: '8px' }}>{tx('Contenido Premium', locale)}</h3>
+          <p style={{ color: '#555555', fontSize: '14px', marginBottom: '20px' }}>{tx('Accede al blueprint completo con toda la información detallada', locale)}</p>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
             <a
               href="https://lifestylentravel2.lemonsqueezy.com/checkout/buy/2dc9d208-cf0b-45f0-83b4-998414ffb9f4"
@@ -677,7 +678,7 @@ export default function Voluntariado() {
                 border: '2px solid #ff6b3d',
               }}
             >
-              Acceso Total — Todos los Blueprints €39.99
+              {tx('Acceso Total — Todos los Blueprints €39.99', locale)}
             </a>
           </div>
         </div>
@@ -788,12 +789,12 @@ export default function Voluntariado() {
             <table style={T.table}>
               <thead><tr>{[t.th_prog, t.th_edad, t.th_idioma, t.th_antec, t.th_docs].map((h, i) => <th key={i} style={T.th}>{h}</th>)}</tr></thead>
               <tbody>
-                {[
+                {trRows([
                   ['🌐 Worldpackers', '18 – 99 años', 'Inglés básico informal', 'Solo si trabaja con niños/ONGs', 'Pasaporte +6 meses + seguro de viaje'],
                   ['🌾 WWOOF', '18 años mínimo', 'Idioma local básico o inglés', 'No requerido (90% granjas)', 'Pasaporte + registro asociación local'],
                   ['🇺🇳 UN Volunteers (Youth)', '18 – 26 años', 'Inglés/Francés/Español avanzado', '✅ Obligatorio (policía nacional)', 'Pasaporte + título universitario + CV'],
                   ['🇺🇳 UN Volunteers (Especialista)', '27 – 80 años', 'Inglés/Francés/Español avanzado', '✅ Obligatorio', 'Pasaporte + experiencia profesional + CV'],
-                ].map((r, i) => (
+                ], locale).map((r, i) => (
                   <tr key={i}>
                     <td style={{ ...T.td(i), ...T.bold }}>{r[0]}</td>
                     <td style={T.td(i)}>{r[1]}</td>
@@ -813,12 +814,12 @@ export default function Voluntariado() {
             <table style={T.table}>
               <thead><tr>{[t.th_perfil, t.th_visa, t.th_seguro, t.th_extras, t.th_total].map((h, i) => <th key={i} style={T.th}>{h}</th>)}</tr></thead>
               <tbody>
-                {[
+                {trRows([
                   ['🟢 LATAM Premium/Medio → Europa', '€20 (ETIAS)', '$40-70 USD/mes', '$20-50 USD', '~€300-500/mes'],
                   ['🔴 LATAM Restricción → Europa', '€90 (Schengen)', '$40-70 USD/mes', '$30-50 USD (apostillas)', '~€400-700/mes'],
                   ['🇺🇳 UN Volunteers (cualquier pasaporte)', '$0 (ONU paga todo)', '$0 (seguro ONU)', '$20-50 USD (apostillas)', 'Subsidio $1,200-$2,400/mes'],
                   ['🇪🇺 Europeos → Latam/Asia', '$0 (libre 90 días)', '$40-70 USD/mes', '$20-30 USD', '~€200-400/mes'],
-                ].map((r, i) => (
+                ], locale).map((r, i) => (
                   <tr key={i}>
                     <td style={{ ...T.td(i), ...T.bold }}>{r[0]}</td>
                     <td style={T.td(i)}>{r[1]}</td>
@@ -848,11 +849,11 @@ export default function Voluntariado() {
             <table style={T.table}>
               <thead><tr>{[t.th_roles, t.th_roles2, t.th_horas, t.th_beneficios].map((h, i) => <th key={i} style={T.th}>{h}</th>)}</tr></thead>
               <tbody>
-                {[
+                {trRows([
                   ['🌐 Worldpackers', 'Recepción, Social Media, Bar, Limpieza', '20 – 24h (5 días/sem)', 'Cama + cocina + desayuno + lavandería'],
                   ['🌾 WWOOF', 'Siembra, Animales, Permacultura, Quesos', '25 – 30h (4-6h/día)', 'Alojamiento + 3 comidas/día'],
                   ['🇺🇳 UN Volunteers', 'Logística, DDHH, IT, Monitoreo', '35 – 40h (full-time)', 'Subsidio + seguro + vuelos ida/vuelta'],
-                ].map((r, i) => (
+                ], locale).map((r, i) => (
                   <tr key={i}>
                     <td style={{ ...T.td(i), ...T.bold }}>{r[0]}</td>
                     <td style={T.td(i)}>{r[1]}</td>
@@ -869,14 +870,14 @@ export default function Voluntariado() {
         <Section id="remoto" emoji="💻" title={t.sec_remoto_title}>
           <Intro text={t.remoto_intro} />
           <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
-            {[
+            {trRows([
               ['Upwork', 'Freelance global', 'Traducción, diseño, programación, asistencia virtual. Pagos en USD.', 'upwork.com', 'https://www.upwork.com'],
               ['Fiverr', 'Servicios digitales', 'Vender servicios por proyectos cortos. Perfecta para ganar dinero rápido en el camino.', 'fiverr.com', 'https://www.fiverr.com'],
               ['We Work Remotely', 'Empleo remoto', 'La mayor comunidad de empleo remoto del mundo. Puestos estables a tiempo parcial o completo.', 'weworkremotely.com', 'https://weworkremotely.com'],
               ['LinkedIn Global', 'Red profesional', 'Configurar ubicación en el país de destino para trabajo corporativo en Europa o Asia.', 'linkedin.com', 'https://www.linkedin.com'],
               ['Indeed (por país)', 'Empleo local', 'Filtrar por país destino. Hostelería, turismo, idiomas.', 'indeed.com', 'https://www.indeed.com'],
               ['Hostel Jobs', 'Sector hostelería', 'Empleos pagados en hostales y turismo. El salto natural después de ser voluntario.', 'hosteljobs.net', 'https://www.hosteljobs.net'],
-            ].map((r, i) => (
+            ], locale).map((r, i) => (
               <div key={i} style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', backgroundColor: '#f8f7f4', borderRadius: '10px', padding: '10px 14px' }}>
                 <div>
                   <p style={{ fontWeight: '700', fontSize: '13px', margin: '0 0 2px', color: '#1a1a2e' }}>{r[0]} <span style={{ color: '#333333', fontWeight: 'normal', fontSize: '12px' }}>· {r[1]}</span></p>

@@ -4,6 +4,7 @@ import { useLanguage } from '../../context/LanguageContext'
 import HeaderMenu from '../../components/HeaderMenu'
 import { usePurchase } from '../../hooks/usePurchase'
 import IconBadge from '../../components/IconBadge'
+import { tx, trRows } from '@/lib/phrases'
 
 const translations = {
   es: {
@@ -639,8 +640,8 @@ export default function Dubai() {
         {!hasAccess && (
         <div style={{ backgroundColor: 'white', borderRadius: '16px', padding: '24px', textAlign: 'center', boxShadow: '0 4px 16px rgba(0,0,0,0.10)', margin: '16px 0', border: '2px solid #e8572a' }}>
           <div style={{ marginBottom: '14px' }}><IconBadge name="lock" size={52} /></div>
-          <h3 style={{ fontWeight: 'bold', fontSize: '18px', color: '#1a1a2e', marginBottom: '8px' }}>Contenido Premium</h3>
-          <p style={{ color: '#555555', fontSize: '14px', marginBottom: '20px' }}>Accede al blueprint completo con toda la información detallada</p>
+          <h3 style={{ fontWeight: 'bold', fontSize: '18px', color: '#1a1a2e', marginBottom: '8px' }}>{tx('Contenido Premium', locale)}</h3>
+          <p style={{ color: '#555555', fontSize: '14px', marginBottom: '20px' }}>{tx('Accede al blueprint completo con toda la información detallada', locale)}</p>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
             <a
               href="https://lifestylentravel2.lemonsqueezy.com/checkout/buy/2dc9d208-cf0b-45f0-83b4-998414ffb9f4"
@@ -659,7 +660,7 @@ export default function Dubai() {
                 border: '2px solid #ff6b3d',
               }}
             >
-              Acceso Total — Todos los Blueprints €39.99
+              {tx('Acceso Total — Todos los Blueprints €39.99', locale)}
             </a>
           </div>
         </div>
@@ -675,7 +676,7 @@ export default function Dubai() {
             <table style={T.table}>
               <thead><tr>{[t.th_inst, t.th_loc, t.th_precio, t.th_web].map((h, i) => <th key={i} style={T.th}>{h}</th>)}</tr></thead>
               <tbody>
-                {[
+                {trRows([
                   ['Language Skills Institute', 'Al Barsha', '$2,500 – $3,200', 'languageskills.ae', 'https://languageskills.ae'],
                   ['SpotOn Training Institute', 'Al Karama', '$2,600 – $3,300', 'spoton.ae', 'https://spoton.ae'],
                   ['Learners Point Academy', 'Al Garhoud', '$2,700 – $3,400', 'learnerspoint.org', 'https://learnerspoint.org'],
@@ -686,7 +687,7 @@ export default function Dubai() {
                   ['UKCBC Dubai', 'Academic City', '$3,000 – $4,000', 'ukcbc.ac.ae', 'https://ukcbc.ac.ae'],
                   ['ES Dubai', 'JLT', '$3,200 – $4,200', 'esdubai.com', 'https://esdubai.com'],
                   ['EC Dubai', 'Knowledge Park', '$3,500 – $4,500', 'ecenglish.com', 'https://ecenglish.com'],
-                ].map((r, i) => (
+                ], locale).map((r, i) => (
                   <tr key={i}>
                     <td style={{ ...T.td(i), ...T.bold }}>{r[0]}</td>
                     <td style={T.td(i)}>{r[1]}</td>
@@ -708,10 +709,10 @@ export default function Dubai() {
             <table style={T.table}>
               <thead><tr>{[t.th_prog, t.th_programa, t.th_duracion, t.th_precio_prog, t.th_web].map((h, i) => <th key={i} style={T.th}>{h}</th>)}</tr></thead>
               <tbody>
-                {[
+                {trRows([
                   ['ES Dubai', 'Academic English / EAP', '6–12 meses', '$2,600 – $3,200', 'esdubai.com', 'https://esdubai.com'],
                   ['English Path Dubai', 'Academic English + transición laboral', '6–12 meses', '$3,000 – $3,600', 'englishpath.com', 'https://www.englishpath.com/destinations/middle-east/dubai/'],
-                ].map((r, i) => (
+                ], locale).map((r, i) => (
                   <tr key={i}>
                     <td style={{ ...T.td(i), ...T.bold }}>{r[0]}</td>
                     <td style={T.td(i)}>{r[1]}</td>
@@ -735,12 +736,12 @@ export default function Dubai() {
             <table style={T.table}>
               <thead><tr>{[t.th_inst, t.th_programas, t.th_anual, t.th_total, t.th_web].map((h, i) => <th key={i} style={T.th}>{h}</th>)}</tr></thead>
               <tbody>
-                {[
+                {trRows([
                   ['University of Bolton Dubai', 'Business, IT, Engineering', '$7,500 – $9,000', '$22k – $27k', 'bolton.ac.ae', 'https://www.bolton.ac.ae'],
                   ['Amity University Dubai', 'Business, IT, Media', '$9,000 – $12,000', '$27k – $36k', 'amityuniversity.ae', 'https://amityuniversity.ae'],
                   ['Manipal University Dubai', 'Engineering, Business, IT', '$10,000 – $13,000', '$30k – $40k', 'manipaldubai.com', 'https://www.manipaldubai.com'],
                   ['Canadian University Dubai', 'Business, Engineering', '$12,000 – $16,000', '$36k – $48k', 'cud.ac.ae', 'https://www.cud.ac.ae'],
-                ].map((r, i) => (
+                ], locale).map((r, i) => (
                   <tr key={i}>
                     <td style={{ ...T.td(i), ...T.bold }}>{r[0]}</td>
                     <td style={T.td(i)}>{r[1]}</td>
@@ -757,12 +758,12 @@ export default function Dubai() {
             <table style={T.table}>
               <thead><tr>{[t.th_inst, t.th_programa_m, t.th_total, t.th_web].map((h, i) => <th key={i} style={T.th}>{h}</th>)}</tr></thead>
               <tbody>
-                {[
+                {trRows([
                   ['University of Bolton Dubai', 'MBA / MSc / LLM', '$6,000 – $10,000', 'bolton.ac.ae', 'https://www.bolton.ac.ae'],
                   ['Amity University Dubai', 'MBA / MSc', '$11,000 – $15,000', 'amityuniversity.ae', 'https://amityuniversity.ae'],
                   ['Manipal University Dubai', 'MBA / MSc', '$12,000 – $16,000', 'manipaldubai.com', 'https://www.manipaldubai.com'],
                   ['Canadian University Dubai', 'MBA / MSc', '$14,000 – $18,000', 'cud.ac.ae', 'https://www.cud.ac.ae'],
-                ].map((r, i) => (
+                ], locale).map((r, i) => (
                   <tr key={i}>
                     <td style={{ ...T.td(i), ...T.bold }}>{r[0]}</td>
                     <td style={T.td(i)}>{r[1]}</td>
@@ -783,14 +784,14 @@ export default function Dubai() {
             <table style={T.table}>
               <thead><tr>{[t.th_concepto, t.th_costo, t.th_oblig].map((h, i) => <th key={i} style={T.th}>{h}</th>)}</tr></thead>
               <tbody>
-                {[
+                {trRows([
                   ['Seguro médico (requerido para visa)', '$200 – $300', '✅ Sí'],
                   ['Visa de estudiante + gestión migratoria', '$680 – $1,140', '✅ Sí'],
                   ['Exámenes médicos (Dubai Health Authority)', '$70 – $150', '✅ Sí'],
                   ['Emirates ID', '$100', '✅ Sí'],
                   ['Materiales / Libros', '$50 – $100', '✅ Sí'],
                   ['Solvencia bancaria', 'No requerida formalmente', '⚪ Recomendado $3k-$5k'],
-                ].map((r, i) => (
+                ], locale).map((r, i) => (
                   <tr key={i}>
                     <td style={{ ...T.td(i), ...T.bold }}>{r[0]}</td>
                     <td style={T.td(i)}>{r[1]}</td>
@@ -831,13 +832,13 @@ export default function Dubai() {
             <table style={T.table}>
               <thead><tr>{[t.th_entidad, t.th_tipo, t.th_ventaja, t.th_web].map((h, i) => <th key={i} style={T.th}>{h}</th>)}</tr></thead>
               <tbody>
-                {[
+                {trRows([
                   ['Liv. (by Emirates NBD)', 'Digital', 'Apertura en minutos con Emirates ID. Ideal para estudiantes y expatriados desde día 1.', 'liv.me', 'https://liv.me'],
                   ['Wio Bank', 'Digital', 'Banco digital moderno. Popular entre freelancers y emprendedores en Dubái.', 'wio.io', 'https://wio.io'],
                   ['Emirates NBD', 'Tradicional', 'El banco más grande de Dubái. Red amplia y muy usado para nóminas internacionales.', 'emiratesnbd.com', 'https://emiratesnbd.com'],
                   ['ADCB', 'Tradicional', 'Muy popular entre expatriados. Buena app y apertura relativamente rápida.', 'adcb.com', 'https://adcb.com'],
                   ['Mashreq Bank', 'Tradicional', 'Uno de los bancos más antiguos del país. Muy usado por empresas y trabajadores extranjeros.', 'mashreq.com', 'https://mashreq.com'],
-                ].map((r, i) => (
+                ], locale).map((r, i) => (
                   <tr key={i}>
                     <td style={{ ...T.td(i), ...T.bold }}>{r[0]}</td>
                     <td style={T.td(i)}>{r[1]}</td>
@@ -858,7 +859,7 @@ export default function Dubai() {
             <table style={T.table}>
               <thead><tr>{[t.th_portal, t.th_para_que, t.th_cuando, t.th_web].map((h, i) => <th key={i} style={T.th}>{h}</th>)}</tr></thead>
               <tbody>
-                {[
+                {trRows([
                   ['GDRFA', 'Entry Permit y residencia estudiantil', 'Tu escuela lo gestiona antes de llegar', 'gdrfad.gov.ae', 'https://gdrfad.gov.ae'],
                   ['Dubai Health Authority', 'Exámenes médicos obligatorios', 'Semana 1 — prioritario', 'dha.gov.ae', 'https://dha.gov.ae'],
                   ['ICP (Emirates ID)', 'Registro biométrico y Emirates ID', 'Semana 1-2', 'icp.gov.ae', 'https://icp.gov.ae'],
@@ -868,7 +869,7 @@ export default function Dubai() {
                   ['Dubizzle Jobs', 'Empleos entry level y habitaciones', 'Desde semana 1', 'dubizzle.com', 'https://dubizzle.com'],
                   ['GulfTalent', 'Empresas grandes del Golfo', 'Mes 2-3', 'gulftalent.com', 'https://gulftalent.com'],
                   ['Bayt', 'Vacantes corporativas regionales', 'Mes 2-3', 'bayt.com', 'https://bayt.com'],
-                ].map((r, i) => (
+                ], locale).map((r, i) => (
                   <tr key={i}>
                     <td style={{ ...T.td(i), ...T.bold }}>{r[0]}</td>
                     <td style={T.td(i)}>{r[1]}</td>
@@ -891,10 +892,10 @@ export default function Dubai() {
             <table style={T.table}>
               <thead><tr>{[t.th_tipo_aloj, t.th_sem, t.th_mes].map((h, i) => <th key={i} style={T.th}>{h}</th>)}</tr></thead>
               <tbody>
-                {[
+                {trRows([
                   ['Cuarto compartido', '$70 – $100', '$280 – $400'],
                   ['Cuarto individual', '$120 – $180', '$480 – $720'],
-                ].map((r, i) => (
+                ], locale).map((r, i) => (
                   <tr key={i}>
                     <td style={{ ...T.td(i), ...T.bold }}>{r[0]}</td>
                     <td style={T.td(i)}>{r[1]}</td>
@@ -910,13 +911,13 @@ export default function Dubai() {
             <table style={T.table}>
               <thead><tr>{[t.th_canal, t.th_tipo, t.th_estrategia_col, t.th_acceso].map((h, i) => <th key={i} style={T.th}>{h}</th>)}</tr></thead>
               <tbody>
-                {[
+                {trRows([
                   ['Dubizzle', 'Portal #1 de clasificados', 'Habitaciones compartidas y alquileres rápidos', 'dubizzle.com', 'https://dubizzle.com'],
                   ['Property Finder', 'Portal inmobiliario', 'Apartamentos con agentes verificados', 'propertyfinder.ae', 'https://propertyfinder.ae'],
                   ['Bayut', 'Portal inmobiliario', 'Muy detallado con mapas y precios por zona', 'bayut.com', 'https://bayut.com'],
                   ['Airbnb', 'Alojamiento temporal', 'Útil para primeras semanas', 'airbnb.com', 'https://airbnb.com'],
                   ['Grupos WhatsApp Latinos', 'Networking', 'Latinoamericanos en Dubái — habitaciones antes que en portales', 'Ver grupos', 'https://www.facebook.com/search/groups?q=' + encodeURIComponent('Latinos Dubái')],
-                ].map((r, i) => (
+                ], locale).map((r, i) => (
                   <tr key={i}>
                     <td style={{ ...T.td(i), ...T.bold }}>{r[0]}</td>
                     <td style={T.td(i)}>{r[1]}</td>
@@ -941,13 +942,13 @@ export default function Dubai() {
             <table style={T.table}>
               <thead><tr>{[t.th_sector, t.th_puesto, t.th_salario_aed, t.th_usd_mes, t.th_canal_emp].map((h, i) => <th key={i} style={T.th}>{h}</th>)}</tr></thead>
               <tbody>
-                {[
+                {trRows([
                   ['Hospitality', 'Waiter / Bar Staff', 'AED 2,000 – 3,500', '$540 – $945', 'LinkedIn, Indeed UAE, Dubizzle'],
                   ['Cleaning', 'Cleaner / Housekeeping', 'AED 1,500 – 2,500', '$405 – $675', 'Indeed UAE, Dubizzle'],
                   ['Hotels', 'Reception / Hotel Staff', 'AED 2,500 – 4,000', '$675 – $1,080', 'LinkedIn, Bayt, hoteles directos'],
                   ['Retail', 'Sales Assistant / Shop Staff', 'AED 2,500 – 4,000', '$675 – $1,080', 'LinkedIn, malls directos'],
                   ['Delivery', 'Delivery Rider / Courier', 'AED 3,000 – 5,000', '$810 – $1,350', 'Talabat, Deliveroo, Indeed UAE'],
-                ].map((r, i) => (
+                ], locale).map((r, i) => (
                   <tr key={i}>
                     <td style={{ ...T.td(i), ...T.bold }}>{r[0]}</td>
                     <td style={T.td(i)}>{r[1]}</td>
@@ -969,13 +970,13 @@ export default function Dubai() {
             <table style={T.table}>
               <thead><tr>{[t.th_sector_sal, t.th_puesto_sal, t.th_mensual_aed, t.th_mensual_usd].map((h, i) => <th key={i} style={T.th}>{h}</th>)}</tr></thead>
               <tbody>
-                {[
+                {trRows([
                   ['Hospitality', 'Waiter / Bar Staff', 'AED 2,000 – 3,500', '$540 – $945'],
                   ['Cleaning', 'Cleaner / Housekeeping', 'AED 1,500 – 2,500', '$405 – $675'],
                   ['Hotels', 'Reception / Hotel Staff', 'AED 2,500 – 4,000', '$675 – $1,080'],
                   ['Retail', 'Sales Assistant', 'AED 2,500 – 4,000', '$675 – $1,080'],
                   ['Delivery', 'Rider / Courier', 'AED 3,000 – 5,000', '$810 – $1,350'],
-                ].map((r, i) => (
+                ], locale).map((r, i) => (
                   <tr key={i}>
                     <td style={{ ...T.td(i), ...T.bold }}>{r[0]}</td>
                     <td style={T.td(i)}>{r[1]}</td>
@@ -1058,13 +1059,13 @@ export default function Dubai() {
             <table style={T.table}>
               <thead><tr>{[t.th_problema, t.th_accion, t.th_contacto].map((h, i) => <th key={i} style={T.th}>{h}</th>)}</tr></thead>
               <tbody>
-                {[
+                {trRows([
                   ['Robo / Extravío de Pasaporte', 'Reportar a Policía de Dubái y contactar Embajada/Consulado', 'Policía + Embajada'],
                   ['Estafa de Vivienda', 'Reportar en Dubizzle/Property Finder y denunciar a Policía', 'Policía Dubái'],
                   ['Problemas con Visa / Emirates ID', 'Revisar estado con sponsor o institución educativa', 'GDRFA / Escuela'],
                   ['Retraso en documentos de escuela', 'Contactar Student Office de la institución', 'Tu academia'],
                   ['Enfermedad / Urgencia médica', 'Hospital privado o clínica autorizada con tu seguro', '999'],
-                ].map((r, i) => (
+                ], locale).map((r, i) => (
                   <tr key={i}>
                     <td style={{ ...T.td(i), ...T.bold, color: '#dc2626' }}>{r[0]}</td>
                     <td style={{ ...T.td(i), lineHeight: '1.5' }}>{r[1]}</td>

@@ -5,6 +5,7 @@ import { useLanguage } from '../context/LanguageContext'
 import HeaderMenu from '../components/HeaderMenu'
 import { usePurchase } from '../hooks/usePurchase'
 import IconBadge from '../components/IconBadge'
+import { tx, trRows } from '@/lib/phrases'
 
 const translations = {
   es: {
@@ -534,8 +535,8 @@ export default function PetSitting() {
         {!hasAccess && (
         <div style={{ backgroundColor: 'white', borderRadius: '16px', padding: '24px', textAlign: 'center', boxShadow: '0 4px 16px rgba(0,0,0,0.10)', margin: '16px 0', border: '2px solid #e8572a' }}>
           <div style={{ marginBottom: '14px' }}><IconBadge name="lock" size={52} /></div>
-          <h3 style={{ fontWeight: 'bold', fontSize: '18px', color: '#1a1a2e', marginBottom: '8px' }}>Contenido Premium</h3>
-          <p style={{ color: '#555555', fontSize: '14px', marginBottom: '20px' }}>Accede al blueprint completo con toda la información detallada</p>
+          <h3 style={{ fontWeight: 'bold', fontSize: '18px', color: '#1a1a2e', marginBottom: '8px' }}>{tx('Contenido Premium', locale)}</h3>
+          <p style={{ color: '#555555', fontSize: '14px', marginBottom: '20px' }}>{tx('Accede al blueprint completo con toda la información detallada', locale)}</p>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
             <a
               href="https://lifestylentravel2.lemonsqueezy.com/checkout/buy/2dc9d208-cf0b-45f0-83b4-998414ffb9f4"
@@ -554,7 +555,7 @@ export default function PetSitting() {
                 border: '2px solid #ff6b3d',
               }}
             >
-              Acceso Total — Todos los Blueprints €39.99
+              {tx('Acceso Total — Todos los Blueprints €39.99', locale)}
             </a>
           </div>
         </div>
@@ -603,13 +604,13 @@ export default function PetSitting() {
           </div>
           <SubHead text={t.locales_head} />
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '8px' }}>
-            {[
+            {trRows([
               ['🇦🇺 Australia', 'Aussie House Sitters', 'https://www.aussiehousesitters.com.au'],
               ['🇳🇿 Nueva Zelanda', 'Kiwi House Sitters', 'https://www.kiwihousesitters.co.nz'],
               ['🇺🇸 EE.UU.', 'House Sitters America', 'https://www.housesittersamerica.com'],
               ['🇨🇦 Canadá', 'House Sitters Canada', 'https://www.housesitterscanada.com'],
               ['🇲🇽 México', 'House Sit Mexico', 'https://www.housesitmexico.com'],
-            ].map((r, i) => (
+            ], locale).map((r, i) => (
               <div key={i} style={{ backgroundColor: '#f8f7f4', borderRadius: '10px', padding: '10px 12px' }}>
                 <p style={{ fontWeight: '700', fontSize: '12px', margin: '0 0 3px', color: '#1a1a2e' }}>{r[0]}</p>
                 <a href={r[2] as string} target="_blank" rel="noopener noreferrer" style={{ color: '#2563eb', textDecoration: 'underline', fontSize: '12px' }}>{r[1]}</a>
@@ -696,13 +697,13 @@ export default function PetSitting() {
             <table style={T.table}>
               <thead><tr>{[t.th_fase, t.th_tiempo, t.th_factor].map((h, i) => <th key={i} style={T.th}>{h}</th>)}</tr></thead>
               <tbody>
-                {[
+                {trRows([
                   ['Crear perfil optimizado', '1-3 días', 'Calidad de fotos y descripción'],
                   ['Primeras aplicaciones', 'Día 1 en plataforma', 'Velocidad + personalización'],
                   ['Primer sit confirmado', '1-2 semanas (perfil fuerte)', 'Competencia del destino'],
                   ['Primeras reviews', 'Tras completar sit', 'Calidad del cuidado'],
                   ['Acceso a mejores oportunidades', 'Tras 3-5 reviews', 'Historial en plataforma'],
-                ].map((r, i) => (
+                ], locale).map((r, i) => (
                   <tr key={i}>
                     <td style={{ ...T.td(i), ...T.bold }}>{r[0]}</td>
                     <td style={{ ...T.td(i), color: '#166534', fontWeight: '600' }}>{r[1]}</td>
@@ -722,7 +723,7 @@ export default function PetSitting() {
             <table style={T.table}>
               <thead><tr>{[t.th_concepto, t.th_costo, t.th_oblig].map((h, i) => <th key={i} style={T.th}>{h}</th>)}</tr></thead>
               <tbody>
-                {[
+                {trRows([
                   ['Membresía TrustedHousesitters', '$129 – $259/año', '✅ Principal plataforma'],
                   ['Membresía Nomador (opcional)', '$99 – $199/año', '⚪ Recomendado para Europa'],
                   ['Membresía adicional (opcional)', '€20-50/año', '⚪ Para más visibilidad'],
@@ -730,7 +731,7 @@ export default function PetSitting() {
                   ['Tasa de visa (si aplica)', '€0-200', '✅ Según país'],
                   ['Boleto de avión', '€400-1,200', '✅ Primer destino'],
                   ['Colchón inicial recomendado', '€1,500-3,000', '✅ Para los primeros 30-60 días'],
-                ].map((r, i) => (
+                ], locale).map((r, i) => (
                   <tr key={i}>
                     <td style={{ ...T.td(i), ...T.bold }}>{r[0]}</td>
                     <td style={T.td(i)}>{r[1]}</td>
@@ -748,13 +749,13 @@ export default function PetSitting() {
           <div style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1696875094691-815f5a332506?q=80&w=627&auto=format&fit=crop")', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', height: '160px', borderRadius: '10px', marginBottom: '14px' }} />
           <Intro text={t.bancos_intro} />
           <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
-            {[
+            {trRows([
               ['Wise', 'Digital — Global', 'Transferencias internacionales baratas + múltiples divisas. El #1 para nómadas.', 'wise.com', 'https://wise.com'],
               ['Revolut', 'Digital — Global', 'Apertura rápida + tarjeta virtual inmediata. Ideal para pagos diarios.', 'revolut.com', 'https://revolut.com'],
               ['N26', 'Digital — Europa', 'IBAN europeo + gestión completa desde app.', 'n26.com', 'https://n26.com'],
               ['Monzo', 'Digital — UK', 'Muy usado en UK. Ideal si haces muchos sits en Reino Unido.', 'monzo.com', 'https://monzo.com'],
               ['Bunq', 'Digital — Europa', 'IBAN europeo + control total + ideal para expats.', 'bunq.com', 'https://bunq.com'],
-            ].map((r, i) => (
+            ], locale).map((r, i) => (
               <div key={i} style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', backgroundColor: '#f8f7f4', borderRadius: '10px', padding: '10px 14px' }}>
                 <div>
                   <p style={{ fontWeight: '700', fontSize: '13px', margin: '0 0 2px', color: '#1a1a2e' }}>{r[0]} <span style={{ color: '#333333', fontWeight: 'normal', fontSize: '12px' }}>· {r[1]}</span></p>

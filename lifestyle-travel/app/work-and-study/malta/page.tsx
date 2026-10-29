@@ -4,6 +4,7 @@ import { useLanguage } from '../../context/LanguageContext'
 import HeaderMenu from '../../components/HeaderMenu'
 import { usePurchase } from '../../hooks/usePurchase'
 import IconBadge from '../../components/IconBadge'
+import { tx, trRows } from '@/lib/phrases'
 
 const translations = {
   es: {
@@ -660,8 +661,8 @@ export default function Malta() {
         {!hasAccess && (
         <div style={{ backgroundColor: 'white', borderRadius: '16px', padding: '24px', textAlign: 'center', boxShadow: '0 4px 16px rgba(0,0,0,0.10)', margin: '16px 0', border: '2px solid #e8572a' }}>
           <div style={{ marginBottom: '14px' }}><IconBadge name="lock" size={52} /></div>
-          <h3 style={{ fontWeight: 'bold', fontSize: '18px', color: '#1a1a2e', marginBottom: '8px' }}>Contenido Premium</h3>
-          <p style={{ color: '#555555', fontSize: '14px', marginBottom: '20px' }}>Accede al blueprint completo con toda la información detallada</p>
+          <h3 style={{ fontWeight: 'bold', fontSize: '18px', color: '#1a1a2e', marginBottom: '8px' }}>{tx('Contenido Premium', locale)}</h3>
+          <p style={{ color: '#555555', fontSize: '14px', marginBottom: '20px' }}>{tx('Accede al blueprint completo con toda la información detallada', locale)}</p>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
             <a
               href="https://lifestylentravel2.lemonsqueezy.com/checkout/buy/2dc9d208-cf0b-45f0-83b4-998414ffb9f4"
@@ -680,7 +681,7 @@ export default function Malta() {
                 border: '2px solid #ff6b3d',
               }}
             >
-              Acceso Total — Todos los Blueprints €39.99
+              {tx('Acceso Total — Todos los Blueprints €39.99', locale)}
             </a>
           </div>
         </div>
@@ -697,7 +698,7 @@ export default function Malta() {
             <table style={T.table}>
               <thead><tr>{[t.th_inst, t.th_loc, t.th_am, t.th_pm, t.th_web].map((h, i) => <th key={i} style={T.th}>{h}</th>)}</tr></thead>
               <tbody>
-                {[
+                {trRows([
                   ['Gateway School (GSE)', "St. Julian's", '€2,500 – €2,850', '€2,200 – €2,400', 'english-malta.com', 'https://english-malta.com'],
                   ['International House Malta', "St. Julian's", '€2,800 – €3,200', '€2,400 – €2,700', 'ihmalta.com', 'https://ihmalta.com'],
                   ['BELS Malta', 'Gozo / St Paul\'s Bay', '€2,900 – €3,300', '€2,500 – €2,800', 'belsmalta.com', 'https://belsmalta.com'],
@@ -708,7 +709,7 @@ export default function Malta() {
                   ['ACE English Malta', "St. Julian's", '€3,500 – €3,900', '€3,200 – €3,500', 'aceenglishmalta.com', 'https://aceenglishmalta.com'],
                   ['ESE Malta', "St. Julian's", '€3,600 – €4,000', '€3,200 – €3,600', 'ese-edu.com', 'https://ese-edu.com'],
                   ['Malta University Language School', 'Lija', '€3,800 – €4,200', '€3,400 – €3,700', 'universitylanguageschool.com', 'https://universitylanguageschool.com'],
-                ].map((r, i) => (
+                ], locale).map((r, i) => (
                   <tr key={i}>
                     <td style={{ ...T.td(i), ...T.bold }}>{r[0]}</td>
                     <td style={T.td(i)}>{r[1]}</td>
@@ -737,13 +738,13 @@ export default function Malta() {
             <table style={T.table}>
               <thead><tr>{[t.th_prog, t.th_programa, t.th_duracion, t.th_precio, t.th_web].map((h, i) => <th key={i} style={T.th}>{h}</th>)}</tr></thead>
               <tbody>
-                {[
+                {trRows([
                   ['SBM Malta', 'NCUK International Foundation Year', '1 año', '€4,500', 'sbm.edu.mt', 'https://sbm.edu.mt'],
                   ['GBS Malta', 'Foundation Degree (IT / Business)', '1 año', '€5,000', 'gbs.edu.mt', 'https://gbs.edu.mt'],
                   ['University of Malta', 'Foundation Studies (Humanities / Nursing)', '1 año', '€6,600', 'um.edu.mt', 'https://um.edu.mt'],
                   ['Global College Malta', 'Foundation Business / Management', '1 año', '€6,800 – €8,500', 'gcm.edu.mt', 'https://gcm.edu.mt'],
                   ['University of Malta', 'Foundation in Medical & Dental', '1 año', '€16,000', 'um.edu.mt', 'https://um.edu.mt'],
-                ].map((r, i) => (
+                ], locale).map((r, i) => (
                   <tr key={i}>
                     <td style={{ ...T.td(i), ...T.bold }}>{r[0]}</td>
                     <td style={T.td(i)}>{r[1]}</td>
@@ -764,9 +765,9 @@ export default function Malta() {
           <Intro text={t.edu_intro} />
           <div style={T.wrap}>
             <table style={T.table}>
-              <thead><tr>{['Institución', t.th_nivel, t.th_anual, t.th_total, t.th_web].map((h, i) => <th key={i} style={T.th}>{h}</th>)}</tr></thead>
+              <thead><tr>{[tx('Institución', locale), t.th_nivel, t.th_anual, t.th_total, t.th_web].map((h, i) => <th key={i} style={T.th}>{h}</th>)}</tr></thead>
               <tbody>
-                {[
+                {trRows([
                   ['Global College Malta', 'Bachelor / Master', '€4,000 – €4,500', '€12k – €18k', 'gcm.edu.mt', 'https://gcm.edu.mt'],
                   ['International European University (IEU)', 'Bachelor / Master', '€5,000 – €5,500', '€15k – €20k', 'ieumalta.com', 'https://ieumalta.com'],
                   ['MCAST', 'Diploma / Bachelor', '€6,000 – €8,000', '€12k – €20k', 'mcast.edu.mt', 'https://mcast.edu.mt'],
@@ -775,7 +776,7 @@ export default function Malta() {
                   ['GBS Malta', 'Bachelor / Master', '€7,500 – €9,000', '€15k – €25k', 'gbs.edu.mt', 'https://gbs.edu.mt'],
                   ['STC Higher Education Malta', 'Bachelor / Master (IT, Business)', '€8,000 – €10,000', '€16k – €30k', 'stc.academy', 'https://stc.academy'],
                   ['American University of Malta', 'Bachelor / Master', '€15,000 – €17,000', '€45k – €50k', 'aum.edu.mt', 'https://aum.edu.mt'],
-                ].map((r, i) => (
+                ], locale).map((r, i) => (
                   <tr key={i}>
                     <td style={{ ...T.td(i), ...T.bold }}>{r[0]}</td>
                     <td style={T.td(i)}>{r[1]}</td>
@@ -798,14 +799,14 @@ export default function Malta() {
             <table style={T.table}>
               <thead><tr>{[t.th_concepto, t.th_costo, t.th_usd, t.th_oblig].map((h, i) => <th key={i} style={T.th}>{h}</th>)}</tr></thead>
               <tbody>
-                {[
+                {trRows([
                   ['Seguro médico', '€150', '$173', '✅ Sí'],
                   ['Examen Final del curso', '€150 - €200', '$173 - $230', '✅ Sí'],
                   ['Materiales / Libros', '€40 - €70', '$46 - $81', '✅ Sí'],
                   ['e-Residence Card (Identità Malta)', '€70', '$81', '✅ Sí'],
                   ['Solvencia (con alojamiento pagado)', '€5,040', '$5,796', '✅ Obligatorio visa'],
                   ['Solvencia (sin alojamiento pagado)', '€8,640', '$9,936', '✅ Obligatorio visa'],
-                ].map((r, i) => (
+                ], locale).map((r, i) => (
                   <tr key={i}>
                     <td style={{ ...T.td(i), ...T.bold }}>{r[0]}</td>
                     <td style={T.td(i)}>{r[1]}</td>
@@ -849,12 +850,12 @@ export default function Malta() {
             <table style={T.table}>
               <thead><tr>{[t.th_entidad, t.th_tipo, t.th_ventaja, t.th_web].map((h, i) => <th key={i} style={T.th}>{h}</th>)}</tr></thead>
               <tbody>
-                {[
+                {trRows([
                   ['Revolut / N26', 'Digital', 'IBAN europeo activo en 24h. Usar dirección maltesa para recibir tarjeta física.', 'revolut.com', 'https://revolut.com'],
                   ['Bank of Valletta (BOV)', 'Tradicional', 'El banco más grande de Malta. Estándar para domiciliar nóminas y pagos.', 'bov.com', 'https://bov.com'],
                   ['HSBC Malta', 'Tradicional', 'Ideal si ya tienes cuenta HSBC en otro país. Muy sólido para perfiles profesionales.', 'hsbc.com.mt', 'https://hsbc.com.mt'],
                   ['Moneybase', 'Digital Local', 'Primer ecosistema financiero digital nacido en Malta. Útil para pagos locales.', 'moneybase.com', 'https://moneybase.com'],
-                ].map((r, i) => (
+                ], locale).map((r, i) => (
                   <tr key={i}>
                     <td style={{ ...T.td(i), ...T.bold }}>{r[0]}</td>
                     <td style={T.td(i)}>{r[1]}</td>
@@ -875,7 +876,7 @@ export default function Malta() {
             <table style={T.table}>
               <thead><tr>{[t.th_portal, t.th_para_que, t.th_cuando, t.th_web].map((h, i) => <th key={i} style={T.th}>{h}</th>)}</tr></thead>
               <tbody>
-                {[
+                {trRows([
                   ['Identità Malta', 'e-Residence Card y estatus migratorio', 'Semana 1-2 — cita obligatoria antes del día 90', 'identitamalta.com', 'https://identitamalta.com'],
                   ['Jobsplus', 'Permiso de trabajo y Tax Number', 'Mes 3 — tu empleador lo inicia', 'jobsplus.gov.mt', 'https://jobsplus.gov.mt'],
                   ['Social Security Malta', 'Verificar aportaciones al seguro social', 'Desde que empieces a trabajar', 'socialsecurity.gov.mt', 'https://socialsecurity.gov.mt'],
@@ -884,7 +885,7 @@ export default function Malta() {
                   ['Indeed Malta', 'Vacantes generales', 'Desde semana 1', 'indeed.com.mt', 'https://indeed.com.mt'],
                   ['Maltapark', 'Clasificados — vivienda y trabajo', 'Desde semana 1', 'maltapark.com', 'https://maltapark.com'],
                   ['QuickLets', 'Agencia de alquiler para estudiantes', 'Semana 1-2 para vivienda', 'quicklets.com.mt', 'https://quicklets.com.mt'],
-                ].map((r, i) => (
+                ], locale).map((r, i) => (
                   <tr key={i}>
                     <td style={{ ...T.td(i), ...T.bold }}>{r[0]}</td>
                     <td style={T.td(i)}>{r[1]}</td>
@@ -907,10 +908,10 @@ export default function Malta() {
             <table style={T.table}>
               <thead><tr>{[t.th_tipo_aloj, t.th_sem, t.th_mes].map((h, i) => <th key={i} style={T.th}>{h}</th>)}</tr></thead>
               <tbody>
-                {[
+                {trRows([
                   ['Cuarto compartido', '€60 – €80', '€250 – €320'],
                   ['Cuarto individual', '€80 – €110', '€320 – €550'],
-                ].map((r, i) => (
+                ], locale).map((r, i) => (
                   <tr key={i}>
                     <td style={{ ...T.td(i), ...T.bold }}>{r[0]}</td>
                     <td style={T.td(i)}>{r[1]}</td>
@@ -926,13 +927,13 @@ export default function Malta() {
             <table style={T.table}>
               <thead><tr>{[t.th_canal, t.th_tipo, t.th_estrategia_col, t.th_acceso].map((h, i) => <th key={i} style={T.th}>{h}</th>)}</tr></thead>
               <tbody>
-                {[
+                {trRows([
                   ['Maltapark', 'Portal Local #1', 'El sitio #1 de clasificados en la isla', 'maltapark.com', 'https://maltapark.com'],
                   ['QuickLets', 'Agencia', 'La más grande y rápida para estudiantes', 'quicklets.com.mt', 'https://quicklets.com.mt'],
                   ['Zanzi Homes', 'Agencia', 'Especialistas en contratos largos y zonas residenciales', 'zanzihomes.com', 'https://zanzihomes.com'],
                   ['Facebook Marketplace', 'Social', 'Fuente confiable para tratos directos con dueños', 'Facebook Malta', 'https://facebook.com'],
                   ['Grupos WhatsApp Latinos', 'Networking', 'Mexicanos, Colombianos, Argentinos en Malta', 'Ver grupos', 'https://www.facebook.com/search/groups?q=' + encodeURIComponent('Latinos Malta')],
-                ].map((r, i) => (
+                ], locale).map((r, i) => (
                   <tr key={i}>
                     <td style={{ ...T.td(i), ...T.bold }}>{r[0]}</td>
                     <td style={T.td(i)}>{r[1]}</td>
@@ -957,12 +958,12 @@ export default function Malta() {
             <table style={T.table}>
               <thead><tr>{[t.th_sector, t.th_puesto, t.th_salario_h, t.th_canal_emp].map((h, i) => <th key={i} style={T.th}>{h}</th>)}</tr></thead>
               <tbody>
-                {[
+                {trRows([
                   ['Hospitality', 'Waiter / Bar Staff / Kitchen Assistant', '€5.74 – €8', 'CV en mano en restaurantes / Indeed'],
                   ['Cleaning Services', 'Cleaner / Housekeeping', '€5.74 – €7', 'Grupos Facebook / Agencias'],
                   ['Hotels & Tourism', 'Hotel Staff / Reception Assistant', '€6 – €8.50', 'LinkedIn / Jobs in Malta'],
                   ['iGaming / Customer Support', 'Customer Support Agent', '€8.50 – €10.50', 'LinkedIn / portales especializados'],
-                ].map((r, i) => (
+                ], locale).map((r, i) => (
                   <tr key={i}>
                     <td style={{ ...T.td(i), ...T.bold }}>{r[0]}</td>
                     <td style={T.td(i)}>{r[1]}</td>
@@ -983,12 +984,12 @@ export default function Malta() {
             <table style={T.table}>
               <thead><tr>{[t.th_sector_sal, t.th_puesto_sal, t.th_salario_h, t.th_usd, t.th_mensual].map((h, i) => <th key={i} style={T.th}>{h}</th>)}</tr></thead>
               <tbody>
-                {[
+                {trRows([
                   ['Hospitality', 'Waiter / Bar Staff', '€5.74 – €8', '$6.60 – $9.20', '€500 – €700'],
                   ['Cleaning', 'Cleaner / Housekeeping', '€5.74 – €7', '$6.60 – $8', '€500 – €610'],
                   ['Hotels', 'Hotel Staff / Reception', '€6 – €8.50', '$7 – $10', '€520 – €740'],
                   ['iGaming', 'Customer Support', '€8.50 – €10.50', '$10 – $12', '€740 – €910'],
-                ].map((r, i) => (
+                ], locale).map((r, i) => (
                   <tr key={i}>
                     <td style={{ ...T.td(i), ...T.bold }}>{r[0]}</td>
                     <td style={T.td(i)}>{r[1]}</td>
@@ -1072,14 +1073,14 @@ export default function Malta() {
             <table style={T.table}>
               <thead><tr>{[t.th_problema, t.th_accion, t.th_contacto].map((h, i) => <th key={i} style={T.th}>{h}</th>)}</tr></thead>
               <tbody>
-                {[
+                {trRows([
                   ['Robo / Extravío de Pasaporte', 'Reportar a Policía de Malta y contactar Embajada/Consulado de tu país', 'Policía + Embajada'],
                   ['Estafa de Vivienda', 'Reportar en Facebook/Marketplace y denunciar en Policía local', 'Policía Malta'],
                   ['Problemas con e-Residence', 'Contactar directamente Identità Malta con documentos completos', 'identitamalta.com'],
                   ['Licencia de Trabajo rechazada', 'Revisar con empleador el estado en Jobsplus', 'jobsplus.gov.mt'],
                   ['Retraso en documentos de escuela', 'Contactar directamente al Student Office de la academia', 'Tu academia'],
                   ['Enfermedad / Urgencia médica', 'Ir al centro de salud más cercano con seguro médico', '999 / 112'],
-                ].map((r, i) => (
+                ], locale).map((r, i) => (
                   <tr key={i}>
                     <td style={{ ...T.td(i), ...T.bold, color: '#dc2626' }}>{r[0]}</td>
                     <td style={{ ...T.td(i), lineHeight: '1.5' }}>{r[1]}</td>

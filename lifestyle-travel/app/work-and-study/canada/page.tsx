@@ -4,6 +4,7 @@ import { useLanguage } from '../../context/LanguageContext'
 import HeaderMenu from '../../components/HeaderMenu'
 import { usePurchase } from '../../hooks/usePurchase'
 import IconBadge from '../../components/IconBadge'
+import { tx, trRows } from '@/lib/phrases'
 
 const translations = {
   es: {
@@ -660,8 +661,8 @@ export default function Canada() {
         {!hasAccess && (
         <div style={{ backgroundColor: 'white', borderRadius: '16px', padding: '24px', textAlign: 'center', boxShadow: '0 4px 16px rgba(0,0,0,0.10)', margin: '16px 0', border: '2px solid #e8572a' }}>
           <div style={{ marginBottom: '14px' }}><IconBadge name="lock" size={52} /></div>
-          <h3 style={{ fontWeight: 'bold', fontSize: '18px', color: '#1a1a2e', marginBottom: '8px' }}>Contenido Premium</h3>
-          <p style={{ color: '#555555', fontSize: '14px', marginBottom: '20px' }}>Accede al blueprint completo con toda la información detallada</p>
+          <h3 style={{ fontWeight: 'bold', fontSize: '18px', color: '#1a1a2e', marginBottom: '8px' }}>{tx('Contenido Premium', locale)}</h3>
+          <p style={{ color: '#555555', fontSize: '14px', marginBottom: '20px' }}>{tx('Accede al blueprint completo con toda la información detallada', locale)}</p>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
             <a
               href="https://lifestylentravel2.lemonsqueezy.com/checkout/buy/2dc9d208-cf0b-45f0-83b4-998414ffb9f4"
@@ -680,7 +681,7 @@ export default function Canada() {
                 border: '2px solid #ff6b3d',
               }}
             >
-              Acceso Total — Todos los Blueprints €39.99
+              {tx('Acceso Total — Todos los Blueprints €39.99', locale)}
             </a>
           </div>
         </div>
@@ -696,12 +697,12 @@ export default function Canada() {
             <table style={T.table}>
               <thead><tr>{[t.th_inst, t.th_loc, t.th_precio, t.th_web].map((h, i) => <th key={i} style={T.th}>{h}</th>)}</tr></thead>
               <tbody>
-                {[
+                {trRows([
                   ['ILSC Language Schools', 'Toronto / Vancouver', '$3,200 – $4,200', 'ilsc.com', 'https://ilsc.com'],
                   ['Oxford International', 'Toronto / Vancouver', '$3,200 – $4,100', 'oxfordinternationalenglish.com', 'https://oxfordinternationalenglish.com'],
                   ['Kaplan International', 'Toronto / Vancouver', '$3,400 – $4,500', 'kaplaninternational.com', 'https://kaplaninternational.com'],
                   ['ILAC', 'Toronto / Vancouver', '$3,500 – $4,800', 'ilac.com', 'https://ilac.com'],
-                ].map((r, i) => (
+                ], locale).map((r, i) => (
                   <tr key={i}>
                     <td style={{ ...T.td(i), ...T.bold }}>{r[0]}</td>
                     <td style={T.td(i)}>{r[1]}</td>
@@ -733,12 +734,12 @@ export default function Canada() {
             <table style={T.table}>
               <thead><tr>{[t.th_programa, t.th_institucion, t.th_inversion, t.th_web].map((h, i) => <th key={i} style={T.th}>{h}</th>)}</tr></thead>
               <tbody>
-                {[
+                {trRows([
                   ['University Pathway', 'ILSC', '$10,000 – $13,000', 'ilsc.com', 'https://ilsc.com'],
                   ['Academic Pathway', 'ILAC', '$11,000 – $14,000', 'ilac.com', 'https://ilac.com'],
                   ['University Preparation', 'Kaplan', '$12,000 – $15,000', 'kaplaninternational.com', 'https://kaplaninternational.com'],
                   ['College Pathway', 'Oxford International', '$10,000 – $12,500', 'oxfordinternationalenglish.com', 'https://oxfordinternationalenglish.com'],
-                ].map((r, i) => (
+                ], locale).map((r, i) => (
                   <tr key={i}>
                     <td style={{ ...T.td(i), ...T.bold }}>{r[0]}</td>
                     <td style={T.td(i)}>{r[1]}</td>
@@ -760,13 +761,13 @@ export default function Canada() {
             <table style={T.table}>
               <thead><tr>{[t.th_inst, t.th_provincia, t.th_programa_col, t.th_precio_anual, t.th_web].map((h, i) => <th key={i} style={T.th}>{h}</th>)}</tr></thead>
               <tbody>
-                {[
+                {trRows([
                   ['College of North Atlantic', 'Newfoundland', 'Business / IT / Trades', '$8,500 – $11,000 CAD', 'cna.nl.ca', 'https://www.cna.nl.ca'],
                   ['Northern Lights College', 'British Columbia', 'Business / Energy / Trades', '$10,000 – $13,000 CAD', 'nlc.bc.ca', 'https://www.nlc.bc.ca'],
                   ['Red River College', 'Manitoba', 'Business / Technology', '$10,000 – $17,000 CAD', 'rrc.ca', 'https://www.rrc.ca'],
                   ['Lambton College', 'Ontario', 'Business / IT / Supply Chain', '$13,000 – $14,000 CAD', 'lambtoncollege.ca', 'https://www.lambtoncollege.ca'],
                   ['Camosun College', 'British Columbia', 'Hospitality / Business', '$14,000 – $15,000 CAD', 'camosun.ca', 'https://camosun.ca'],
-                ].map((r, i) => (
+                ], locale).map((r, i) => (
                   <tr key={i}>
                     <td style={{ ...T.td(i), ...T.bold }}>{r[0]}</td>
                     <td style={T.td(i)}>{r[1]}</td>
@@ -789,7 +790,7 @@ export default function Canada() {
             <table style={T.table}>
               <thead><tr>{[t.th_concepto, t.th_costo, t.th_oblig].map((h, i) => <th key={i} style={T.th}>{h}</th>)}</tr></thead>
               <tbody>
-                {[
+                {trRows([
                   ['Seguro médico internacional o provincial', '$600 – $900/año', '✅ Sí'],
                   ['Study Permit (visa de estudiante)', '$150 CAD (~$108 USD)', '✅ Sí'],
                   ['Biométricos', '$85 CAD (~$61 USD)', '✅ Sí'],
@@ -797,7 +798,7 @@ export default function Canada() {
                   ['Examen médico migratorio (si requerido)', '$150 – $250', '✅ Según caso'],
                   ['Solvencia (primer año de vida)', '~$16,900 USD (CAD $23,448 desde el 1 sep. 2026) + matrícula y viaje', '✅ Obligatorio visa'],
                   ['Capital total recomendado', '$24,000 – $29,000 USD', '✅ Para arrancar bien'],
-                ].map((r, i) => (
+                ], locale).map((r, i) => (
                   <tr key={i}>
                     <td style={{ ...T.td(i), ...T.bold }}>{r[0]}</td>
                     <td style={T.td(i)}>{r[1]}</td>
@@ -838,14 +839,14 @@ export default function Canada() {
             <table style={T.table}>
               <thead><tr>{[t.th_entidad, t.th_tipo, t.th_ventaja, t.th_web].map((h, i) => <th key={i} style={T.th}>{h}</th>)}</tr></thead>
               <tbody>
-                {[
+                {trRows([
                   ['Scotiabank', 'Tradicional', 'Programa StartRight para recién llegados. Fácil apertura para nuevos inmigrantes.', 'scotiabank.com', 'https://scotiabank.com'],
                   ['RBC', 'Tradicional', 'El más grande del país. Muy usado por estudiantes. Cuenta activa el mismo día.', 'rbc.com', 'https://rbc.com'],
                   ['TD Bank', 'Tradicional', 'Buena red de sucursales. Cuenta especial para estudiantes internacionales.', 'td.com', 'https://td.com'],
                   ['CIBC', 'Tradicional', 'Sin comisiones para newcomers. Muy popular entre estudiantes.', 'cibc.com', 'https://cibc.com'],
                   ['Tangerine', 'Digital', 'Banco digital de Scotiabank. Sin comisiones y gestión desde app.', 'tangerine.ca', 'https://tangerine.ca'],
                   ['Simplii Financial', 'Digital', 'Banco digital de CIBC. Transferencias gratuitas y apertura online.', 'simplii.com', 'https://simplii.com'],
-                ].map((r, i) => (
+                ], locale).map((r, i) => (
                   <tr key={i}>
                     <td style={{ ...T.td(i), ...T.bold }}>{r[0]}</td>
                     <td style={T.td(i)}>{r[1]}</td>
@@ -866,7 +867,7 @@ export default function Canada() {
             <table style={T.table}>
               <thead><tr>{[t.th_portal, t.th_para_que, t.th_cuando, t.th_web].map((h, i) => <th key={i} style={T.th}>{h}</th>)}</tr></thead>
               <tbody>
-                {[
+                {trRows([
                   ['IRCC (Inmigración Canadá)', 'Study Permit, visas y permisos de trabajo', 'Antes de viajar + seguimiento en Canadá', 'canada.ca', 'https://www.canada.ca'],
                   ['Service Canada (SIN)', 'Social Insurance Number para trabajar', 'Semana 1 — prioritario', 'canada.ca/sin', 'https://www.canada.ca/en/employment-social-development/services/sin.html'],
                   ['Job Bank Canada', 'Portal de empleo oficial del gobierno', 'Desde semana 1', 'jobbank.gc.ca', 'https://www.jobbank.gc.ca'],
@@ -876,7 +877,7 @@ export default function Canada() {
                   ['Glassdoor Canada', 'Vacantes + info de salarios', 'Desde semana 2', 'glassdoor.ca', 'https://glassdoor.ca'],
                   ['Kijiji', 'Clasificados — vivienda y trabajo', 'Semana 1 para vivienda', 'kijiji.ca', 'https://kijiji.ca'],
                   ['Rentals.ca', 'Plataforma de alquiler #1', 'Semana 1 para vivienda', 'rentals.ca', 'https://rentals.ca'],
-                ].map((r, i) => (
+                ], locale).map((r, i) => (
                   <tr key={i}>
                     <td style={{ ...T.td(i), ...T.bold }}>{r[0]}</td>
                     <td style={T.td(i)}>{r[1]}</td>
@@ -899,10 +900,10 @@ export default function Canada() {
             <table style={T.table}>
               <thead><tr>{[t.th_tipo_aloj, t.th_sem, t.th_mes, t.th_usd_mes].map((h, i) => <th key={i} style={T.th}>{h}</th>)}</tr></thead>
               <tbody>
-                {[
+                {trRows([
                   ['Cuarto compartido', '$180 – $250', '$720 – $1,000', '$518 – $720'],
                   ['Cuarto individual', '$300 – $500', '$1,200 – $2,000', '$864 – $1,440'],
-                ].map((r, i) => (
+                ], locale).map((r, i) => (
                   <tr key={i}>
                     <td style={{ ...T.td(i), ...T.bold }}>{r[0]}</td>
                     <td style={T.td(i)}>{r[1]}</td>
@@ -919,13 +920,13 @@ export default function Canada() {
             <table style={T.table}>
               <thead><tr>{[t.th_canal, t.th_tipo, t.th_estrategia_col, t.th_acceso].map((h, i) => <th key={i} style={T.th}>{h}</th>)}</tr></thead>
               <tbody>
-                {[
+                {trRows([
                   ['Rentals.ca', 'Portal #1 en Canadá', 'Plataforma grande para todo el país', 'rentals.ca', 'https://rentals.ca'],
                   ['Kijiji', 'Clasificados', 'Muy usado para habitaciones compartidas', 'kijiji.ca', 'https://kijiji.ca'],
                   ['PadMapper', 'Portal con mapa', 'Buscador visual para apartamentos', 'padmapper.com', 'https://padmapper.com'],
                   ['Facebook Marketplace', 'Clasificados', 'Muy usado por estudiantes y locales', 'facebook.com/marketplace', 'https://facebook.com/marketplace'],
                   ['Grupos WhatsApp Latinos', 'Networking', 'Latinos en Toronto, Vancouver, Montreal', 'Ver grupos', 'https://www.facebook.com/search/groups?q=' + encodeURIComponent('Latinos Canadá')],
-                ].map((r, i) => (
+                ], locale).map((r, i) => (
                   <tr key={i}>
                     <td style={{ ...T.td(i), ...T.bold }}>{r[0]}</td>
                     <td style={T.td(i)}>{r[1]}</td>
@@ -950,13 +951,13 @@ export default function Canada() {
             <table style={T.table}>
               <thead><tr>{[t.th_sector, t.th_puesto, t.th_salario_cad, t.th_usd_h, t.th_canal_emp].map((h, i) => <th key={i} style={T.th}>{h}</th>)}</tr></thead>
               <tbody>
-                {[
+                {trRows([
                   ['Hospitality', 'Waiter', '$17.30 – $20 CAD', '$12.80 – $14.80', 'Indeed / CV en persona'],
                   ['Cleaning', 'Housekeeping', '$17.30 – $19 CAD', '$12.80 – $14.06', 'Job Bank / Indeed'],
                   ['Hotels', 'Front Desk / Hotel Staff', '$17 – $21 CAD', '$12.2 – $15.1', 'LinkedIn / hotels directos'],
                   ['Retail', 'Shop Assistant', '$17.30 – $20 CAD', '$12.80 – $14.80', 'Indeed / aplicar en tienda'],
                   ['Delivery', 'Delivery Driver / Courier', '$18 – $25 CAD', '$13 – $18', 'DoorDash / Uber Eats / Indeed'],
-                ].map((r, i) => (
+                ], locale).map((r, i) => (
                   <tr key={i}>
                     <td style={{ ...T.td(i), ...T.bold }}>{r[0]}</td>
                     <td style={T.td(i)}>{r[1]}</td>
@@ -978,13 +979,13 @@ export default function Canada() {
             <table style={T.table}>
               <thead><tr>{[t.th_sector_sal, t.th_puesto_sal, t.th_salario_cad, t.th_usd_h, t.th_mensual].map((h, i) => <th key={i} style={T.th}>{h}</th>)}</tr></thead>
               <tbody>
-                {[
+                {trRows([
                   ['Hospitality', 'Waiter', '$17.30 – $20 CAD', '$12.80 – $14.80', '$1,661 – $1,920 CAD'],
                   ['Cleaning', 'Housekeeping', '$17.30 – $19 CAD', '$12.80 – $14.06', '$1,661 – $1,824 CAD'],
                   ['Hotels', 'Front Desk / Hotel Staff', '$17 – $21 CAD', '$12.2 – $15.1', '$1,632 – $2,016 CAD'],
                   ['Retail', 'Shop Assistant', '$17.30 – $20 CAD', '$12.80 – $14.80', '$1,661 – $1,920 CAD'],
                   ['Delivery', 'Driver / Courier', '$18 – $25 CAD', '$13 – $18', '$1,728 – $2,400 CAD'],
-                ].map((r, i) => (
+                ], locale).map((r, i) => (
                   <tr key={i}>
                     <td style={{ ...T.td(i), ...T.bold }}>{r[0]}</td>
                     <td style={T.td(i)}>{r[1]}</td>
@@ -1068,13 +1069,13 @@ export default function Canada() {
             <table style={T.table}>
               <thead><tr>{[t.th_problema, t.th_accion, t.th_contacto].map((h, i) => <th key={i} style={T.th}>{h}</th>)}</tr></thead>
               <tbody>
-                {[
+                {trRows([
                   ['Robo / Extravío de Pasaporte', 'Reportar a Policía y contactar Embajada/Consulado', 'Policía + Embajada'],
                   ['Estafa de Vivienda', 'Reportar en Kijiji/Rentals.ca y denunciar en Policía', 'Policía local'],
                   ['Problemas con Study Permit', 'Revisar estado en IRCC o contactar institución educativa', 'canada.ca'],
                   ['Retraso en documentos del college', 'Contactar International Student Office', 'Tu college'],
                   ['Enfermedad / Urgencia médica', 'Hospital público o clínica privada según provincia y seguro', '911'],
-                ].map((r, i) => (
+                ], locale).map((r, i) => (
                   <tr key={i}>
                     <td style={{ ...T.td(i), ...T.bold, color: '#dc2626' }}>{r[0]}</td>
                     <td style={{ ...T.td(i), lineHeight: '1.5' }}>{r[1]}</td>

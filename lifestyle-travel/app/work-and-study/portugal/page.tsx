@@ -4,6 +4,7 @@ import { useLanguage } from '../../context/LanguageContext'
 import HeaderMenu from '../../components/HeaderMenu'
 import { usePurchase } from '../../hooks/usePurchase'
 import IconBadge from '../../components/IconBadge'
+import { tx, trRows } from '@/lib/phrases'
 
 const translations = {
   es: {
@@ -678,8 +679,8 @@ export default function Portugal() {
         {!hasAccess && (
         <div style={{ backgroundColor: 'white', borderRadius: '16px', padding: '24px', textAlign: 'center', boxShadow: '0 4px 16px rgba(0,0,0,0.10)', margin: '16px 0', border: '2px solid #e8572a' }}>
           <div style={{ marginBottom: '14px' }}><IconBadge name="lock" size={52} /></div>
-          <h3 style={{ fontWeight: 'bold', fontSize: '18px', color: '#1a1a2e', marginBottom: '8px' }}>Contenido Premium</h3>
-          <p style={{ color: '#555555', fontSize: '14px', marginBottom: '20px' }}>Accede al blueprint completo con toda la información detallada</p>
+          <h3 style={{ fontWeight: 'bold', fontSize: '18px', color: '#1a1a2e', marginBottom: '8px' }}>{tx('Contenido Premium', locale)}</h3>
+          <p style={{ color: '#555555', fontSize: '14px', marginBottom: '20px' }}>{tx('Accede al blueprint completo con toda la información detallada', locale)}</p>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
             <a
               href="https://lifestylentravel2.lemonsqueezy.com/checkout/buy/2dc9d208-cf0b-45f0-83b4-998414ffb9f4"
@@ -698,7 +699,7 @@ export default function Portugal() {
                 border: '2px solid #ff6b3d',
               }}
             >
-              Acceso Total — Todos los Blueprints €39.99
+              {tx('Acceso Total — Todos los Blueprints €39.99', locale)}
             </a>
           </div>
         </div>
@@ -714,7 +715,7 @@ export default function Portugal() {
             <table style={T.table}>
               <thead><tr>{[t.th_inst, t.th_nivel, t.th_precio_anual, t.th_web].map((h, i) => <th key={i} style={T.th}>{h}</th>)}</tr></thead>
               <tbody>
-                {[
+                {trRows([
                   ['Universidade da Beira Interior', 'Bachelor / Master', '€1,500 – €3,000', 'ubi.pt', 'https://www.ubi.pt'],
                   ['Universidade de Évora', 'Bachelor / Master', '€2,000 – €3,500', 'uevora.pt', 'https://www.uevora.pt'],
                   ['Universidade do Algarve', 'Bachelor / Master', '€2,000 – €4,000', 'ualg.pt', 'https://www.ualg.pt'],
@@ -723,7 +724,7 @@ export default function Portugal() {
                   ['Universidade de Lisboa', 'Bachelor / Master', '€3,500 – €7,000', 'ulisboa.pt', 'https://www.ulisboa.pt'],
                   ['NOVA University Lisbon', 'Bachelor / Master', '€4,000 – €8,000', 'unl.pt', 'https://www.unl.pt'],
                   ['Cursos Profesionales (Imigrata)', 'Formação profissional', 'Desde €1,880/ano', 'imigrata.com', 'https://imigrata.com/en/portugal/profcourses'],
-                ].map((r, i) => (
+                ], locale).map((r, i) => (
                   <tr key={i}>
                     <td style={{ ...T.td(i), ...T.bold }}>{r[0]}</td>
                     <td style={T.td(i)}>{r[1]}</td>
@@ -766,11 +767,11 @@ export default function Portugal() {
             <table style={T.table}>
               <thead><tr>{[t.th_programa, t.th_institucion, t.th_precio, t.th_web].map((h, i) => <th key={i} style={T.th}>{h}</th>)}</tr></thead>
               <tbody>
-                {[
+                {trRows([
                   ['Cursos Profesionales (1 año)', 'Imigrata', 'Desde €1,880', 'imigrata.com', 'https://imigrata.com/en/portugal/profcourses'],
                   ['International Foundation', 'Universidade do Porto', '€3,000 – €4,000', 'up.pt', 'https://www.up.pt'],
                   ['Foundation Program', 'Universidade de Lisboa', '€3,500 – €5,000', 'ulisboa.pt', 'https://www.ulisboa.pt'],
-                ].map((r, i) => (
+                ], locale).map((r, i) => (
                   <tr key={i}>
                     <td style={{ ...T.td(i), ...T.bold }}>{r[0]}</td>
                     <td style={T.td(i)}>{r[1]}</td>
@@ -792,7 +793,7 @@ export default function Portugal() {
             <table style={T.table}>
               <thead><tr>{[t.th_inst, t.th_nivel, t.th_precio_anual, t.th_idioma, t.th_web].map((h, i) => <th key={i} style={T.th}>{h}</th>)}</tr></thead>
               <tbody>
-                {[
+                {trRows([
                   ['Universidade da Beira Interior', 'Bachelor / Master', '€1,500 – €3,000', 'PT / EN', 'ubi.pt', 'https://www.ubi.pt'],
                   ['Universidade de Évora', 'Bachelor / Master', '€2,000 – €3,500', 'PT / EN', 'uevora.pt', 'https://www.uevora.pt'],
                   ['Universidade do Algarve', 'Bachelor / Master', '€2,000 – €4,000', 'PT / EN', 'ualg.pt', 'https://www.ualg.pt'],
@@ -800,7 +801,7 @@ export default function Portugal() {
                   ['Universidade do Porto', 'Bachelor / Master', '€3,000 – €6,000', 'PT / EN', 'up.pt', 'https://www.up.pt'],
                   ['Universidade de Lisboa', 'Bachelor / Master', '€3,500 – €7,000', 'PT / EN', 'ulisboa.pt', 'https://www.ulisboa.pt'],
                   ['NOVA University Lisbon', 'Bachelor / Master', '€4,000 – €8,000', 'EN', 'unl.pt', 'https://www.unl.pt'],
-                ].map((r, i) => (
+                ], locale).map((r, i) => (
                   <tr key={i}>
                     <td style={{ ...T.td(i), ...T.bold }}>{r[0]}</td>
                     <td style={T.td(i)}>{r[1]}</td>
@@ -823,14 +824,14 @@ export default function Portugal() {
             <table style={T.table}>
               <thead><tr>{[t.th_concepto, t.th_costo_eur, t.th_usd, t.th_oblig].map((h, i) => <th key={i} style={T.th}>{h}</th>)}</tr></thead>
               <tbody>
-                {[
+                {trRows([
                   ['Seguro médico (cobertura mínima €30,000)', '€80 – €150', '$92 – $173', '✅ Sí'],
                   ['Tasa de visa en consulado', '€80 – €120', '$92 – $138', '✅ Sí'],
                   ['Traducciones y apostillas de documentos', '€50 – €150', '$58 – $173', '✅ Sí'],
                   ['Representante fiscal para NIF', '€90 – €150', '$104 – $173', '✅ Sí (si no tienes contacto en PT)'],
                   ['Depósito inicial cuenta bancaria', '€100 – €250', '$115 – $288', '✅ Sí'],
                   ['Solvencia económica (Visa Estudiante)', '€11,040', '$12,696', '✅ Obligatorio visa'],
-                ].map((r, i) => (
+                ], locale).map((r, i) => (
                   <tr key={i}>
                     <td style={{ ...T.td(i), ...T.bold }}>{r[0]}</td>
                     <td style={T.td(i)}>{r[1]}</td>
@@ -873,12 +874,12 @@ export default function Portugal() {
             <table style={T.table}>
               <thead><tr>{[t.th_entidad, t.th_tipo, t.th_ventaja, t.th_web].map((h, i) => <th key={i} style={T.th}>{h}</th>)}</tr></thead>
               <tbody>
-                {[
+                {trRows([
                   ['Revolut / Wise', 'Digital', 'Abre antes de viajar. IBAN europeo inmediato para demostrar fondos y cubrir gastos desde día 1.', 'revolut.com', 'https://revolut.com'],
                   ['ActivoBank', 'Digital/Físico', 'El favorito de expatriados en Portugal. Sin comisiones mensuales. Requiere NIF.', 'activobank.pt', 'https://www.activobank.pt'],
                   ['Millennium BCP', 'Tradicional', 'El banco más grande de Portugal. Muy usado por inmigración y empresas.', 'millenniumbcp.pt', 'https://www.millenniumbcp.pt'],
                   ['Santander Totta', 'Tradicional', 'Gran red de cajeros y sucursales en todo Portugal.', 'santander.pt', 'https://www.santander.pt'],
-                ].map((r, i) => (
+                ], locale).map((r, i) => (
                   <tr key={i}>
                     <td style={{ ...T.td(i), ...T.bold }}>{r[0]}</td>
                     <td style={T.td(i)}>{r[1]}</td>
@@ -899,7 +900,7 @@ export default function Portugal() {
             <table style={T.table}>
               <thead><tr>{[t.th_portal, t.th_para_que, t.th_cuando, t.th_web].map((h, i) => <th key={i} style={T.th}>{h}</th>)}</tr></thead>
               <tbody>
-                {[
+                {trRows([
                   ['Portal das Finanças (NIF)', 'Gestión del NIF fiscal', 'Antes de viajar o semana 1', 'portaldasfinancas.gov.pt', 'https://www.portaldasfinancas.gov.pt'],
                   ['AIMA (Residencia)', 'Residencia legal en Portugal', 'Cuando tengas base legal activa', 'aima.gov.pt', 'https://aima.gov.pt'],
                   ['IEFP (Empleo)', 'Registrar perfil profesional y empleo', 'Semana 2-3', 'iefponline.iefp.pt', 'https://iefponline.iefp.pt'],
@@ -909,7 +910,7 @@ export default function Portugal() {
                   ['OLX Empregos', 'Trabajos rápidos o temporales', 'Desde semana 1', 'olx.pt', 'https://olx.pt'],
                   ['Sapo Emprego', 'Turismo, hoteles y restaurantes', 'Desde semana 1', 'empregos.sapo.pt', 'https://empregos.sapo.pt'],
                   ['Idealista PT', 'Vivienda #1 en Portugal', 'Semana 1 para habitación', 'idealista.pt', 'https://www.idealista.pt'],
-                ].map((r, i) => (
+                ], locale).map((r, i) => (
                   <tr key={i}>
                     <td style={{ ...T.td(i), ...T.bold }}>{r[0]}</td>
                     <td style={T.td(i)}>{r[1]}</td>
@@ -932,10 +933,10 @@ export default function Portugal() {
             <table style={T.table}>
               <thead><tr>{[t.th_tipo_aloj, t.th_sem, t.th_mes].map((h, i) => <th key={i} style={T.th}>{h}</th>)}</tr></thead>
               <tbody>
-                {[
+                {trRows([
                   ['Cuarto compartido', '€120 – €180', '€480 – €720'],
                   ['Cuarto individual', '€250 – €400', '€720 – €1,000'],
-                ].map((r, i) => (
+                ], locale).map((r, i) => (
                   <tr key={i}>
                     <td style={{ ...T.td(i), ...T.bold }}>{r[0]}</td>
                     <td style={T.td(i)}>{r[1]}</td>
@@ -951,13 +952,13 @@ export default function Portugal() {
             <table style={T.table}>
               <thead><tr>{[t.th_canal, t.th_tipo, t.th_estrategia_col, t.th_acceso].map((h, i) => <th key={i} style={T.th}>{h}</th>)}</tr></thead>
               <tbody>
-                {[
+                {trRows([
                   ['Idealista PT', 'Portal #1 en Portugal', 'Activa alertas — responde inmediatamente', 'idealista.pt', 'https://www.idealista.pt'],
                   ['Imovirtual', 'Portal inmobiliario', 'Muy usado por locales para alquileres largos', 'imovirtual.com', 'https://www.imovirtual.com'],
                   ['Casa Sapo', 'Portal tradicional', 'Miles de propiedades en todo el país', 'casasapo.pt', 'https://www.casasapo.pt'],
                   ['Uniplaces', 'Plataforma estudiantil', 'Alquiler temporal seguro para estudiantes', 'uniplaces.com', 'https://www.uniplaces.com'],
                   ['Grupos WhatsApp Latinos', 'Networking', 'Latinoamericanos en Portugal — habitaciones antes que en portales', 'Ver grupos', 'https://www.facebook.com/search/groups?q=' + encodeURIComponent('Latinos Portugal')],
-                ].map((r, i) => (
+                ], locale).map((r, i) => (
                   <tr key={i}>
                     <td style={{ ...T.td(i), ...T.bold }}>{r[0]}</td>
                     <td style={T.td(i)}>{r[1]}</td>
@@ -982,14 +983,14 @@ export default function Portugal() {
             <table style={T.table}>
               <thead><tr>{[t.th_sector, t.th_puesto, t.th_salario_mes, t.th_usd_mes, t.th_canal_emp].map((h, i) => <th key={i} style={T.th}>{h}</th>)}</tr></thead>
               <tbody>
-                {[
+                {trRows([
                   ['Hospitality', 'Empregado de mesa / Bar Staff', '€5.54 – €7', '$6.37 – $8.05', 'Indeed / CV en persona'],
                   ['Cleaning', 'Limpeza / Housekeeping', '€5.54 – €6.50', '$6.37 – $7.48', 'Indeed / Agencias'],
                   ['Hotels', 'Reception / Hotel Staff', '€5.63 – €7.50', '$6.47 – $8.63', 'Sapo Emprego / LinkedIn'],
                   ['Retail', 'Comércio / Sales Assistant', '€5.54 – €7', '$6.37 – $8.05', 'Net-Empregos / Indeed'],
                   ['Delivery', 'Delivery Rider / Courier', '€5.63 – €8.75', '$6.47 – $10.06', 'Glovo / Uber Eats'],
                   ['IT / Tech (cualificado)', 'Developer / Data Analyst', '€9.38 – €18.75', '$10.79 – $21.56', 'LinkedIn / empresas directas'],
-                ].map((r, i) => (
+                ], locale).map((r, i) => (
                   <tr key={i}>
                     <td style={{ ...T.td(i), ...T.bold }}>{r[0]}</td>
                     <td style={T.td(i)}>{r[1]}</td>
@@ -1011,13 +1012,13 @@ export default function Portugal() {
             <table style={T.table}>
               <thead><tr>{[t.th_sector_sal, t.th_puesto_sal, t.th_salario_h, t.th_usd_h, t.th_mensual, t.th_usd_sal].map((h, i) => <th key={i} style={T.th}>{h}</th>)}</tr></thead>
               <tbody>
-                {[
+                {trRows([
                   ['Hospitality', 'Empregado de mesa / Bar Staff', '€5.54 – €7', '$6.37 – $8.05', '€886 – €1,120', '$1,019 – $1,288'],
                   ['Cleaning', 'Limpeza / Housekeeping', '€5.54 – €6.50', '$6.37 – $7.48', '€886 – €1,040', '$1,019 – $1,196'],
                   ['Hotels', 'Reception / Hotel Staff', '—', '—', '€900 – €1,200', '$1,035 – $1,380'],
                   ['Retail', 'Comércio / Sales Assistant', '€5.54 – €7', '$6.37 – $8.05', '€886 – €1,120', '$1,019 – $1,288'],
                   ['Delivery', 'Rider / Courier', '—', '—', '€900 – €1,400', '$1,035 – $1,610'],
-                ].map((r, i) => (
+                ], locale).map((r, i) => (
                   <tr key={i}>
                     <td style={{ ...T.td(i), ...T.bold }}>{r[0]}</td>
                     <td style={T.td(i)}>{r[1]}</td>
@@ -1102,14 +1103,14 @@ export default function Portugal() {
             <table style={T.table}>
               <thead><tr>{[t.th_problema, t.th_accion, t.th_contacto].map((h, i) => <th key={i} style={T.th}>{h}</th>)}</tr></thead>
               <tbody>
-                {[
+                {trRows([
                   ['Robo / Extravío de Pasaporte', 'Reportar a Policía y contactar Embajada/Consulado', 'Policía + Embajada'],
                   ['Estafa de Vivienda', 'No enviar dinero → reportar en plataforma + denunciar en Policía', 'Policía Portugal'],
                   ['Problemas con Residencia (AIMA)', 'Revisar estado con AIMA o institución educativa', 'aima.gov.pt'],
                   ['Problemas con NIF', 'Contactar representante fiscal o Finanças directamente', 'portaldasfinancas.gov.pt'],
                   ['Retraso en documentos', 'Contactar Student Office de la academia', 'Tu academia'],
                   ['Enfermedad / Urgencia médica', 'Sistema público o privado según cobertura del seguro', '112'],
-                ].map((r, i) => (
+                ], locale).map((r, i) => (
                   <tr key={i}>
                     <td style={{ ...T.td(i), ...T.bold, color: '#dc2626' }}>{r[0]}</td>
                     <td style={{ ...T.td(i), lineHeight: '1.5' }}>{r[1]}</td>

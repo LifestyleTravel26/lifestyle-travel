@@ -5,6 +5,7 @@ import { useLanguage } from '../context/LanguageContext'
 import HeaderMenu from '../components/HeaderMenu'
 import { usePurchase } from '../hooks/usePurchase'
 import IconBadge from '../components/IconBadge'
+import { tx, trRows } from '@/lib/phrases'
 
 const translations = {
   es: {
@@ -571,8 +572,8 @@ export default function NomadaDigital() {
         {!hasAccess && (
         <div style={{ backgroundColor: 'white', borderRadius: '16px', padding: '24px', textAlign: 'center', boxShadow: '0 4px 16px rgba(0,0,0,0.10)', margin: '16px 0', border: '2px solid #e8572a' }}>
           <div style={{ marginBottom: '14px' }}><IconBadge name="lock" size={52} /></div>
-          <h3 style={{ fontWeight: 'bold', fontSize: '18px', color: '#1a1a2e', marginBottom: '8px' }}>Contenido Premium</h3>
-          <p style={{ color: '#555555', fontSize: '14px', marginBottom: '20px' }}>Accede al blueprint completo con toda la información detallada</p>
+          <h3 style={{ fontWeight: 'bold', fontSize: '18px', color: '#1a1a2e', marginBottom: '8px' }}>{tx('Contenido Premium', locale)}</h3>
+          <p style={{ color: '#555555', fontSize: '14px', marginBottom: '20px' }}>{tx('Accede al blueprint completo con toda la información detallada', locale)}</p>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
             <a
               href="https://lifestylentravel2.lemonsqueezy.com/checkout/buy/2dc9d208-cf0b-45f0-83b4-998414ffb9f4"
@@ -591,7 +592,7 @@ export default function NomadaDigital() {
                 border: '2px solid #ff6b3d',
               }}
             >
-              Acceso Total — Todos los Blueprints €39.99
+              {tx('Acceso Total — Todos los Blueprints €39.99', locale)}
             </a>
           </div>
         </div>
@@ -692,14 +693,14 @@ export default function NomadaDigital() {
             <table style={T.table}>
               <thead><tr>{[t.th_pais, t.th_tipo, t.th_tiempo, t.th_portal].map((h, i) => <th key={i} style={T.th}>{h}</th>)}</tr></thead>
               <tbody>
-                {[
+                {trRows([
                   ['🇬🇪 Georgia', 'Entrada directa', 'Inmediato', 'migration.commission.ge', 'https://migration.commission.ge'],
                   ['🇭🇺 Hungría', 'Consulado + residencia', '30 – 45 días', 'enterhungary.gov.hu', 'https://enterhungary.gov.hu'],
                   ['🇦🇪 Dubai', 'Online', '30 – 45 días', 'visitdubai.com', 'https://visitdubai.com'],
                   ['🇪🇸 España', 'Online / residencia', '20 – 45 días', 'prie.comercio.gob.es', 'https://prie.comercio.gob.es'],
                   ['🇭🇷 Croacia', 'Online / consulado', '30 – 60 días', 'mup.gov.hr', 'https://mup.gov.hr'],
                   ['🇵🇹 Portugal', 'Consulado (Visa D8)', '30 – 60 días', 'pedidodevistos.mne.gov.pt', 'https://pedidodevistos.mne.gov.pt'],
-                ].map((r, i) => (
+                ], locale).map((r, i) => (
                   <tr key={i}>
                     <td style={{ ...T.td(i), ...T.bold }}>{r[0]}</td>
                     <td style={T.td(i)}>{r[1]}</td>
@@ -735,7 +736,7 @@ export default function NomadaDigital() {
             <table style={T.table}>
               <thead><tr>{[t.th_concepto, t.th_costo, t.th_oblig].map((h, i) => <th key={i} style={T.th}>{h}</th>)}</tr></thead>
               <tbody>
-                {[
+                {trRows([
                   ['Seguro médico privado', '€300 – €900/año', '✅ Sí'],
                   ['Tasa de aplicación de visa', '€75 – €200', '✅ Sí'],
                   ['Traducciones y apostillas', '€50 – €200', '✅ Sí'],
@@ -743,7 +744,7 @@ export default function NomadaDigital() {
                   ['Boleto de avión inicial', '€400 – €1,200', '✅ Sí'],
                   ['Alojamiento inicial', '€500 – €1,500', '✅ Primer mes'],
                   ['Capital recomendado total', '€3,000 – €6,000', '✅ Para arrancar bien'],
-                ].map((r, i) => (
+                ], locale).map((r, i) => (
                   <tr key={i}>
                     <td style={{ ...T.td(i), ...T.bold }}>{r[0]}</td>
                     <td style={T.td(i)}>{r[1]}</td>
@@ -763,7 +764,7 @@ export default function NomadaDigital() {
             <table style={T.table}>
               <thead><tr>{[t.th_banco, t.th_tipo_banco, t.th_region, 'Website'].map((h, i) => <th key={i} style={T.th}>{h}</th>)}</tr></thead>
               <tbody>
-                {[
+                {trRows([
                   ['Wise', 'Digital', 'Global', 'wise.com', 'https://wise.com'],
                   ['Revolut', 'Digital', 'Global', 'revolut.com', 'https://revolut.com'],
                   ['N26', 'Digital (EU IBAN)', 'Europa', 'n26.com', 'https://n26.com'],
@@ -772,7 +773,7 @@ export default function NomadaDigital() {
                   ['Millennium BCP', 'Tradicional', 'Portugal', 'millenniumbcp.pt', 'https://millenniumbcp.pt'],
                   ['OTP Bank', 'Tradicional', 'Hungría', 'otpbank.hu', 'https://otpbank.hu'],
                   ['Bank of Georgia', 'Tradicional', 'Georgia', 'bankofgeorgia.ge', 'https://bankofgeorgia.ge'],
-                ].map((r, i) => (
+                ], locale).map((r, i) => (
                   <tr key={i}>
                     <td style={{ ...T.td(i), ...T.bold }}>{r[0]}</td>
                     <td style={T.td(i)}>{r[1]}</td>
@@ -807,13 +808,13 @@ export default function NomadaDigital() {
           </div>
           <SubHead text={t.vivienda_canales_head} />
           <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', marginTop: '8px' }}>
-            {[
+            {trRows([
               ['Airbnb', 'Temporal', 'Primeras semanas — base para buscar permanente', 'airbnb.com', 'https://airbnb.com'],
               ['Booking', 'Hostels económicos', 'Ideal para llegar sin compromisos', 'booking.com', 'https://booking.com'],
               ['Facebook Groups', 'Comunidad expats', 'Habitaciones y networking entre nómadas digitales', 'facebook.com', 'https://facebook.com'],
               ['Expat.com', 'Comunidad internacional', 'Vivienda y contactos locales en cada país', 'expat.com', 'https://expat.com'],
               ['Nomad List', 'Comunidad nómadas', 'Info de ciudades + comunidad de nómadas activos', 'nomadlist.com', 'https://nomadlist.com'],
-            ].map((r, i) => (
+            ], locale).map((r, i) => (
               <div key={i} style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', backgroundColor: '#f8f7f4', borderRadius: '10px', padding: '10px 14px' }}>
                 <div>
                   <p style={{ fontWeight: '700', fontSize: '13px', margin: '0 0 2px', color: '#1a1a2e' }}>{r[0]} <span style={{ color: '#333333', fontWeight: 'normal', fontSize: '12px' }}>· {r[1]}</span></p>
@@ -866,7 +867,7 @@ export default function NomadaDigital() {
           <Intro text={t.matrix_intro} />
           <div style={T.wrap}>
             <table style={T.table}>
-              <thead><tr>{[t.th_categoria, '🇵🇹 Portugal', '🇪🇸 España', '🇬🇪 Georgia', '🇭🇺 Hungría'].map((h, i) => <th key={i} style={T.th}>{h}</th>)}</tr></thead>
+              <thead><tr>{[t.th_categoria, '🇵🇹 Portugal', tx('🇪🇸 España', locale), '🇬🇪 Georgia', tx('🇭🇺 Hungría', locale)].map((h, i) => <th key={i} style={T.th}>{h}</th>)}</tr></thead>
               <tbody>
                 {t.matrix_rows.map((r, i) => (
                   <tr key={i}>

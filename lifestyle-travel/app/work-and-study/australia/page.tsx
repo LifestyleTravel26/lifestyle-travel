@@ -4,6 +4,7 @@ import { useLanguage } from '../../context/LanguageContext'
 import HeaderMenu from '../../components/HeaderMenu'
 import { usePurchase } from '../../hooks/usePurchase'
 import IconBadge from '../../components/IconBadge'
+import { tx, trRows } from '@/lib/phrases'
 
 const translations = {
   es: {
@@ -650,8 +651,8 @@ export default function Australia() {
         {!hasAccess && (
         <div style={{ backgroundColor: 'white', borderRadius: '16px', padding: '24px', textAlign: 'center', boxShadow: '0 4px 16px rgba(0,0,0,0.10)', margin: '16px 0', border: '2px solid #e8572a' }}>
           <div style={{ marginBottom: '14px' }}><IconBadge name="lock" size={52} /></div>
-          <h3 style={{ fontWeight: 'bold', fontSize: '18px', color: '#1a1a2e', marginBottom: '8px' }}>Contenido Premium</h3>
-          <p style={{ color: '#555555', fontSize: '14px', marginBottom: '20px' }}>Accede al blueprint completo con toda la información detallada</p>
+          <h3 style={{ fontWeight: 'bold', fontSize: '18px', color: '#1a1a2e', marginBottom: '8px' }}>{tx('Contenido Premium', locale)}</h3>
+          <p style={{ color: '#555555', fontSize: '14px', marginBottom: '20px' }}>{tx('Accede al blueprint completo con toda la información detallada', locale)}</p>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
             <a
               href="https://lifestylentravel2.lemonsqueezy.com/checkout/buy/2dc9d208-cf0b-45f0-83b4-998414ffb9f4"
@@ -670,7 +671,7 @@ export default function Australia() {
                 border: '2px solid #ff6b3d',
               }}
             >
-              Acceso Total — Todos los Blueprints €39.99
+              {tx('Acceso Total — Todos los Blueprints €39.99', locale)}
             </a>
           </div>
         </div>
@@ -685,13 +686,13 @@ export default function Australia() {
             <table style={T.table}>
               <thead><tr>{[t.th_inst, t.th_ciudad, t.th_precio, t.th_web].map((h, i) => <th key={i} style={T.th}>{h}</th>)}</tr></thead>
               <tbody>
-                {[
+                {trRows([
                   ['ILSC Language Schools', 'Sydney / Melbourne', '$3,000 – $4,500', 'ilsc.com', 'https://ilsc.com'],
                   ['Greenwich College', 'Sydney / Melbourne', '$3,200 – $4,800', 'greenwichcollege.edu.au', 'https://greenwichcollege.edu.au'],
                   ['Browns English', 'Brisbane / Gold Coast', '$3,600 – $5,000', 'brownsenglish.edu.au', 'https://brownsenglish.edu.au'],
                   ['Navitas English', 'Varias ciudades', '$3,500 – $5,000', 'navitasenglish.edu.au', 'https://navitasenglish.edu.au'],
                   ['Kaplan International', 'Sydney', '$3,800 – $5,200', 'kaplaninternational.com', 'https://kaplaninternational.com'],
-                ].map((r, i) => (
+                ], locale).map((r, i) => (
                   <tr key={i}>
                     <td style={{ ...T.td(i), ...T.bold }}>{r[0]}</td>
                     <td style={T.td(i)}>{r[1]}</td>
@@ -721,13 +722,13 @@ export default function Australia() {
             <table style={T.table}>
               <thead><tr>{[t.th_programa, t.th_institucion, t.th_inversion, t.th_web].map((h, i) => <th key={i} style={T.th}>{h}</th>)}</tr></thead>
               <tbody>
-                {[
+                {trRows([
                   ['Diploma of Business', 'Nova Vocational College', '$6,500 – $7,500', 'nvc.edu.au', 'https://nvc.edu.au'],
                   ['Diploma of Leadership & Management', 'Australian Institute of Advanced Studies', '$7,000 – $8,500', 'aias.edu.au', 'https://aias.edu.au'],
                   ['Diploma of Marketing & Communication', 'Pacific Training Group', '$7,500 – $9,000', 'ptg.edu.au', 'https://ptg.edu.au'],
                   ['Diploma of Hospitality Management', 'AIBT Global', '$9,000 – $13,000', 'aibtglobal.edu.au', 'https://aibtglobal.edu.au'],
                   ['Diploma of Information Technology', 'TAFE Australia', '$10,000 – $14,000', 'tafe.edu.au', 'https://tafe.edu.au'],
-                ].map((r, i) => (
+                ], locale).map((r, i) => (
                   <tr key={i}>
                     <td style={{ ...T.td(i), ...T.bold }}>{r[0]}</td>
                     <td style={T.td(i)}>{r[1]}</td>
@@ -748,13 +749,13 @@ export default function Australia() {
             <table style={T.table}>
               <thead><tr>{[t.th_inst, t.th_nivel, t.th_programa_col, t.th_precio_anual, t.th_web].map((h, i) => <th key={i} style={T.th}>{h}</th>)}</tr></thead>
               <tbody>
-                {[
+                {trRows([
                   ['University of Southern Queensland', 'Bachelor / Master', 'Business / IT / Engineering', '$15,000 – $18,000', 'usq.edu.au', 'https://usq.edu.au'],
                   ['Charles Sturt University', 'Bachelor / Master', 'Business / Education / IT', '$16,000 – $19,000', 'csu.edu.au', 'https://csu.edu.au'],
                   ['Federation University Australia', 'Bachelor / Master', 'Business / Engineering / Nursing', '$16,000 – $20,000', 'federation.edu.au', 'https://federation.edu.au'],
                   ['Southern Cross University', 'Bachelor / Master', 'Business / Tourism / IT', '$17,000 – $21,000', 'scu.edu.au', 'https://scu.edu.au'],
                   ['University of the Sunshine Coast', 'Bachelor / Master', 'Business / Communication / IT', '$18,000 – $22,000', 'usc.edu.au', 'https://usc.edu.au'],
-                ].map((r, i) => (
+                ], locale).map((r, i) => (
                   <tr key={i}>
                     <td style={{ ...T.td(i), ...T.bold }}>{r[0]}</td>
                     <td style={T.td(i)}>{r[1]}</td>
@@ -776,7 +777,7 @@ export default function Australia() {
             <table style={T.table}>
               <thead><tr>{[t.th_concepto, t.th_costo, t.th_oblig].map((h, i) => <th key={i} style={T.th}>{h}</th>)}</tr></thead>
               <tbody>
-                {[
+                {trRows([
                   ['OSHC (Overseas Student Health Cover)', '$400 – $700/año', '✅ Sí — obligatorio para visa'],
                   ['Student Visa Subclass 500', '~$1,400 – $1,725 USD (A$2,000 – 2,500)', '✅ Sí'],
                   ['Exámenes médicos para visa', '$200 – $350', '✅ Si requerido'],
@@ -785,7 +786,7 @@ export default function Australia() {
                   ['TFN (Tax File Number)', 'Gratis', '✅ Para trabajar legalmente'],
                   ['Solvencia obligatoria (primer año)', '~$20,500 USD (AUD $29,710) + matrícula y viaje', '✅ Obligatorio visa'],
                   ['Capital total recomendado', '$28,000 – $38,000 USD', '✅ Para arrancar bien'],
-                ].map((r, i) => (
+                ], locale).map((r, i) => (
                   <tr key={i}>
                     <td style={{ ...T.td(i), ...T.bold }}>{r[0]}</td>
                     <td style={T.td(i)}>{r[1]}</td>
@@ -824,13 +825,13 @@ export default function Australia() {
             <table style={T.table}>
               <thead><tr>{[t.th_entidad, t.th_tipo, t.th_ventaja, t.th_web].map((h, i) => <th key={i} style={T.th}>{h}</th>)}</tr></thead>
               <tbody>
-                {[
+                {trRows([
                   ['Commonwealth Bank', 'Tradicional', 'El más usado. Permite apertura ANTES de viajar desde app. El #1 recomendado.', 'commbank.com.au', 'https://commbank.com.au'],
                   ['ANZ Bank Australia', 'Tradicional', 'Muy popular entre estudiantes. Buena app bancaria.', 'anz.com.au', 'https://anz.com.au'],
                   ['NAB (National Australia Bank)', 'Tradicional', 'Cuenta para estudiantes sin comisión. Fácil apertura con visa.', 'nab.com.au', 'https://nab.com.au'],
                   ['Westpac', 'Tradicional', 'Amplia red de cajeros. Buen soporte para estudiantes internacionales.', 'westpac.com.au', 'https://westpac.com.au'],
                   ['Wise', 'Digital', 'Cuenta multi-moneda para transferencias internacionales baratas.', 'wise.com', 'https://wise.com'],
-                ].map((r, i) => (
+                ], locale).map((r, i) => (
                   <tr key={i}>
                     <td style={{ ...T.td(i), ...T.bold }}>{r[0]}</td>
                     <td style={T.td(i)}>{r[1]}</td>
@@ -850,7 +851,7 @@ export default function Australia() {
             <table style={T.table}>
               <thead><tr>{[t.th_portal, t.th_para_que, t.th_cuando, t.th_web].map((h, i) => <th key={i} style={T.th}>{h}</th>)}</tr></thead>
               <tbody>
-                {[
+                {trRows([
                   ['ATO (Australian Tax Office)', 'TFN (Tax File Number) para trabajar', 'Semana 1 — prioritario', 'ato.gov.au', 'https://ato.gov.au'],
                   ['Department of Home Affairs', 'Student Visa y trámites migratorios', 'Antes de viajar + seguimiento', 'homeaffairs.gov.au', 'https://homeaffairs.gov.au'],
                   ['Seek Australia', 'Portal de empleo #1 en Australia', 'Desde semana 1', 'seek.com.au', 'https://seek.com.au'],
@@ -860,7 +861,7 @@ export default function Australia() {
                   ['Backpacker Job Board', 'Hospitality y trabajos para estudiantes', 'Desde semana 1', 'backpackerjobboard.com.au', 'https://backpackerjobboard.com.au'],
                   ['Flatmates', 'Portal #1 para habitaciones compartidas', 'Semana 1 para vivienda', 'flatmates.com.au', 'https://flatmates.com.au'],
                   ['Domain / Realestate', 'Alquileres y apartamentos', 'Semana 1 para vivienda', 'domain.com.au', 'https://domain.com.au'],
-                ].map((r, i) => (
+                ], locale).map((r, i) => (
                   <tr key={i}>
                     <td style={{ ...T.td(i), ...T.bold }}>{r[0]}</td>
                     <td style={T.td(i)}>{r[1]}</td>
@@ -882,10 +883,10 @@ export default function Australia() {
             <table style={T.table}>
               <thead><tr>{[t.th_tipo_aloj, t.th_sem, t.th_mes, t.th_usd_mes].map((h, i) => <th key={i} style={T.th}>{h}</th>)}</tr></thead>
               <tbody>
-                {[
+                {trRows([
                   ['Cuarto compartido', 'A$180 – $280', 'A$720 – $1,120', '$497 – $773'],
                   ['Cuarto individual', 'A$300 – $450', 'A$1,200 – $1,800', '$828 – $1,242'],
-                ].map((r, i) => (
+                ], locale).map((r, i) => (
                   <tr key={i}>
                     <td style={{ ...T.td(i), ...T.bold }}>{r[0]}</td>
                     <td style={T.td(i)}>{r[1]}</td>
@@ -902,13 +903,13 @@ export default function Australia() {
             <table style={T.table}>
               <thead><tr>{[t.th_canal, t.th_tipo, t.th_estrategia_col, t.th_acceso].map((h, i) => <th key={i} style={T.th}>{h}</th>)}</tr></thead>
               <tbody>
-                {[
+                {trRows([
                   ['Flatmates', 'Portal #1 habitaciones', 'El más usado por estudiantes internacionales en Australia', 'flatmates.com.au', 'https://flatmates.com.au'],
                   ['Domain', 'Portal inmobiliario', 'Plataforma grande para alquileres y apartamentos', 'domain.com.au', 'https://domain.com.au'],
                   ['Realestate.com.au', 'Portal inmobiliario', 'Portal profesional con propiedades verificadas', 'realestate.com.au', 'https://realestate.com.au'],
                   ['Facebook Marketplace', 'Clasificados', 'Estudiantes suben habitaciones y subarriendos', 'facebook.com/marketplace', 'https://facebook.com/marketplace'],
                   ['Grupos WhatsApp Latinos', 'Networking', 'Latinos en Sydney, Melbourne, Brisbane', 'Ver grupos', 'https://www.facebook.com/search/groups?q=' + encodeURIComponent('Latinos Australia')],
-                ].map((r, i) => (
+                ], locale).map((r, i) => (
                   <tr key={i}>
                     <td style={{ ...T.td(i), ...T.bold }}>{r[0]}</td>
                     <td style={T.td(i)}>{r[1]}</td>
@@ -932,13 +933,13 @@ export default function Australia() {
             <table style={T.table}>
               <thead><tr>{[t.th_sector, t.th_puesto, t.th_salario_aud, t.th_usd_h, t.th_canal_emp].map((h, i) => <th key={i} style={T.th}>{h}</th>)}</tr></thead>
               <tbody>
-                {[
+                {trRows([
                   ['Hospitality', 'Waiter', '$26.44 – $30 AUD', '$18.24 – $20.70', 'Seek / CV en persona'],
                   ['Cleaning', 'Housekeeping', '$26.44 – $28 AUD', '$18.24 – $19.32', 'Gumtree / Indeed'],
                   ['Hotels', 'Reception / Hotel Staff', '$26.44 – $32 AUD', '$18.24 – $22.08', 'Seek / hoteles directos'],
                   ['Retail', 'Shop Assistant', '$26.44 – $30 AUD', '$18.24 – $20.70', 'Seek / malls directos'],
                   ['Delivery', 'Rider / Courier', '$25 – $35 AUD', '$17.3 – $24.2', 'Uber Eats / DoorDash'],
-                ].map((r, i) => (
+                ], locale).map((r, i) => (
                   <tr key={i}>
                     <td style={{ ...T.td(i), ...T.bold }}>{r[0]}</td>
                     <td style={T.td(i)}>{r[1]}</td>
@@ -960,13 +961,13 @@ export default function Australia() {
             <table style={T.table}>
               <thead><tr>{[t.th_sector_sal, t.th_puesto_sal, t.th_salario_aud, t.th_usd_h, t.th_mensual].map((h, i) => <th key={i} style={T.th}>{h}</th>)}</tr></thead>
               <tbody>
-                {[
+                {trRows([
                   ['Hospitality', 'Waiter', '$26.44 – $30 AUD', '$18.24 – $20.70', 'A$2,538 – $2,880'],
                   ['Cleaning', 'Housekeeping', '$26.44 – $28 AUD', '$18.24 – $19.32', 'A$2,538 – $2,688'],
                   ['Hotels', 'Reception / Hotel Staff', '$26.44 – $32 AUD', '$18.24 – $22.08', 'A$2,538 – $3,072'],
                   ['Retail', 'Shop Assistant', '$26.44 – $30 AUD', '$18.24 – $20.70', 'A$2,538 – $2,880'],
                   ['Delivery', 'Rider / Courier', '$25 – $35 AUD', '$17.3 – $24.2', 'A$2,400 – $3,360'],
-                ].map((r, i) => (
+                ], locale).map((r, i) => (
                   <tr key={i}>
                     <td style={{ ...T.td(i), ...T.bold }}>{r[0]}</td>
                     <td style={T.td(i)}>{r[1]}</td>
@@ -1047,13 +1048,13 @@ export default function Australia() {
             <table style={T.table}>
               <thead><tr>{[t.th_problema, t.th_accion, t.th_contacto].map((h, i) => <th key={i} style={T.th}>{h}</th>)}</tr></thead>
               <tbody>
-                {[
+                {trRows([
                   ['Robo / Extravío de Pasaporte', 'Reportar a Policía y contactar Embajada/Consulado', 'Policía + Embajada'],
                   ['Estafa de Vivienda', 'Reportar en Flatmates/Facebook y denunciar en Policía', 'Policía Australia'],
                   ['Problemas con Student Visa', 'Revisar en Home Affairs o contactar institución educativa', 'homeaffairs.gov.au'],
                   ['Retraso en documentos del college', 'Contactar Student Office de tu institución', 'Tu institución'],
                   ['Enfermedad / Urgencia médica', 'Hospital o clínica autorizada con tu OSHC', '000'],
-                ].map((r, i) => (
+                ], locale).map((r, i) => (
                   <tr key={i}>
                     <td style={{ ...T.td(i), ...T.bold, color: '#dc2626' }}>{r[0]}</td>
                     <td style={{ ...T.td(i), lineHeight: '1.5' }}>{r[1]}</td>

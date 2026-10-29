@@ -4,6 +4,7 @@ import { useLanguage } from '../../context/LanguageContext'
 import HeaderMenu from '../../components/HeaderMenu'
 import { usePurchase } from '../../hooks/usePurchase'
 import IconBadge from '../../components/IconBadge'
+import { tx, trRows } from '@/lib/phrases'
 
 const translations = {
   es: {
@@ -687,8 +688,8 @@ export default function Espana() {
         {!hasAccess && (
         <div style={{ backgroundColor: 'white', borderRadius: '16px', padding: '24px', textAlign: 'center', boxShadow: '0 4px 16px rgba(0,0,0,0.10)', margin: '16px 0', border: '2px solid #e8572a' }}>
           <div style={{ marginBottom: '14px' }}><IconBadge name="lock" size={52} /></div>
-          <h3 style={{ fontWeight: 'bold', fontSize: '18px', color: '#1a1a2e', marginBottom: '8px' }}>Contenido Premium</h3>
-          <p style={{ color: '#555555', fontSize: '14px', marginBottom: '20px' }}>Accede al blueprint completo con toda la información detallada</p>
+          <h3 style={{ fontWeight: 'bold', fontSize: '18px', color: '#1a1a2e', marginBottom: '8px' }}>{tx('Contenido Premium', locale)}</h3>
+          <p style={{ color: '#555555', fontSize: '14px', marginBottom: '20px' }}>{tx('Accede al blueprint completo con toda la información detallada', locale)}</p>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
             <a
               href="https://lifestylentravel2.lemonsqueezy.com/checkout/buy/2dc9d208-cf0b-45f0-83b4-998414ffb9f4"
@@ -707,7 +708,7 @@ export default function Espana() {
                 border: '2px solid #ff6b3d',
               }}
             >
-              Acceso Total — Todos los Blueprints €39.99
+              {tx('Acceso Total — Todos los Blueprints €39.99', locale)}
             </a>
           </div>
         </div>
@@ -723,7 +724,7 @@ export default function Espana() {
             <table style={T.table}>
               <thead><tr>{[t.th_escuela, t.th_ciudad, t.th_duracion, t.th_precio, t.th_web].map((h, i) => <th key={i} style={T.th}>{h}</th>)}</tr></thead>
               <tbody>
-                {[
+                {trRows([
                   ['Proyecto Español', 'Alicante / Granada', '6 meses', '€2,500 – €3,500', 'proyectoespanol.com', 'https://proyectoespanol.com'],
                   ['Conversa Spanish Institute', 'Valencia', '6 meses', '€2,760', 'conversaspanishinstitute.com', 'https://conversaspanishinstitute.com'],
                   ['Enforex', 'Valencia / Málaga / Madrid', '6 meses', '€2,800 – €3,600', 'enforex.com', 'https://www.enforex.com'],
@@ -736,7 +737,7 @@ export default function Espana() {
                   ['Camino Barcelona', 'Barcelona', '6 meses', '€3,300 – €4,300', 'caminobarcelona.com', 'https://caminobarcelona.com'],
                   ['AIL Madrid', 'Madrid', '6–9 meses', '€3,500 – €5,500', 'ailmadrid.com', 'https://ailmadrid.com'],
                   ['IH España', 'Barcelona / Madrid / Valencia', '6 meses', '€3,800 – €5,500', 'ihspain.com', 'https://www.ihspain.com'],
-                ].map((r, i) => (
+                ], locale).map((r, i) => (
                   <tr key={i}>
                     <td style={{ ...T.td(i), ...T.bold }}>{r[0]}</td>
                     <td style={T.td(i)}>{r[1]}</td>
@@ -764,13 +765,13 @@ export default function Espana() {
             <table style={T.table}>
               <thead><tr>{[t.th_programa, t.th_institucion, t.th_inversion, t.th_web].map((h, i) => <th key={i} style={T.th}>{h}</th>)}</tr></thead>
               <tbody>
-                {[
+                {trRows([
                   ['International Foundation', 'Universidad Europea', '€4,500 – €6,500', 'universidadeuropea.com', 'https://universidadeuropea.com'],
                   ['Foundation Program', 'EU Business School', '€5,500 – €7,500', 'euruni.edu', 'https://euruni.edu'],
                   ['Access Course', 'Universidad de Valencia', '€2,500 – €3,500', 'uv.es', 'https://www.uv.es'],
                   ['Pre-Masters Program', 'EAE Business School', '€6,500 – €9,000', 'eae.es', 'https://eae.es'],
                   ['Academic Spanish Prep', 'Expanish', '€4,000 – €5,500', 'expanish.com', 'https://expanish.com'],
-                ].map((r, i) => (
+                ], locale).map((r, i) => (
                   <tr key={i}>
                     <td style={{ ...T.td(i), ...T.bold }}>{r[0]}</td>
                     <td style={T.td(i)}>{r[1]}</td>
@@ -792,7 +793,7 @@ export default function Espana() {
             <table style={T.table}>
               <thead><tr>{[t.th_inst, t.th_nivel, t.th_inversion_anual, t.th_web].map((h, i) => <th key={i} style={T.th}>{h}</th>)}</tr></thead>
               <tbody>
-                {[
+                {trRows([
                   ['Universidad de Jaén / Extremadura', 'Bachelor / Master', '€1,500 – €2,500', 'ujaen.es', 'https://www.ujaen.es'],
                   ['Universidades Públicas (Valencia / Granada)', 'Bachelor / Master', '€2,500 – €4,000', 'uv.es', 'https://www.uv.es'],
                   ['Universidad de Granada', 'Bachelor / Master', '€2,500 – €4,500', 'ugr.es', 'https://www.ugr.es'],
@@ -801,7 +802,7 @@ export default function Espana() {
                   ['Universidad Autónoma de Barcelona', 'Master', '€4,000 – €6,000', 'uab.cat', 'https://www.uab.cat'],
                   ['Universidad Complutense de Madrid', 'Master', '€8,000 – €10,000', 'ucm.es', 'https://www.ucm.es'],
                   ['EAE Business School', 'Master', '€7,000 – €12,000', 'eae.es', 'https://www.eae.es'],
-                ].map((r, i) => (
+                ], locale).map((r, i) => (
                   <tr key={i}>
                     <td style={{ ...T.td(i), ...T.bold }}>{r[0]}</td>
                     <td style={T.td(i)}>{r[1]}</td>
@@ -823,13 +824,13 @@ export default function Espana() {
             <table style={T.table}>
               <thead><tr>{[t.th_centro_fp, t.th_ciudad_fp, t.th_duracion_fp, t.th_precio_fp, t.th_web_fp].map((h, i) => <th key={i} style={T.th}>{h}</th>)}</tr></thead>
               <tbody>
-                {[
+                {trRows([
                   ['Cesur (presencial)', 'Madrid, Barcelona, Málaga, Sevilla, Zaragoza +15 ciudades', '2 años (Grado Superior)', '€3,000 – €5,000', 'cesurformacion.com', 'https://www.cesurformacion.com'],
                   ['Cesur (online)', 'Nacional / Online', '2 años (Grado Superior)', 'desde €82/mes', 'cesurformacion.com', 'https://www.cesurformacion.com'],
                   ['Linkia FP (online)', 'Nacional / Online', '2 años (Grado Superior)', '~€1,800/año', 'linkiafp.es', 'https://www.linkiafp.es'],
                   ['Linkia FP (presencial)', 'Varias ciudades', '2 años (Grado Superior)', '~€2,800/año', 'linkiafp.es', 'https://www.linkiafp.es'],
                   ['ITEP', 'Varias ciudades', '2 años (Grado Superior)', '€1,500 – €3,000/año', 'itep.edu.es', 'https://www.itep.edu.es'],
-                ].map((r, i) => (
+                ], locale).map((r, i) => (
                   <tr key={i}>
                     <td style={{ ...T.td(i), ...T.bold }}>{r[0]}</td>
                     <td style={T.td(i)}>{r[1]}</td>
@@ -868,13 +869,13 @@ export default function Espana() {
             <table style={T.table}>
               <thead><tr>{[t.th_concepto, t.th_costo_eur, t.th_usd, t.th_oblig].map((h, i) => <th key={i} style={T.th}>{h}</th>)}</tr></thead>
               <tbody>
-                {[
+                {trRows([
                   ['Seguro médico (compañía española, sin copagos)', '€400 – €600', '$460 – $690', '✅ Sí'],
                   ['Tasa de visado (consulado)', '€60 – €80', '$69 – $92', '✅ Sí'],
                   ['Materiales / Libros', '€50 – €100', '$58 – $115', '✅ Sí'],
                   ['TIE (Tarjeta de Identidad de Extranjero)', '€16', '$18', '✅ Sí'],
                   ['Solvencia económica (IPREM anual)', '€7,200 – €8,400', '$8,280 – $9,660', '✅ Obligatorio visa'],
-                ].map((r, i) => (
+                ], locale).map((r, i) => (
                   <tr key={i}>
                     <td style={{ ...T.td(i), ...T.bold }}>{r[0]}</td>
                     <td style={T.td(i)}>{r[1]}</td>
@@ -917,13 +918,13 @@ export default function Espana() {
             <table style={T.table}>
               <thead><tr>{[t.th_entidad, t.th_tipo, t.th_ventaja, t.th_web].map((h, i) => <th key={i} style={T.th}>{h}</th>)}</tr></thead>
               <tbody>
-                {[
+                {trRows([
                   ['N26', 'Digital', 'Apertura rápida con pasaporte. IBAN europeo. Sin comisiones. Ideal para empezar.', 'n26.com', 'https://n26.com'],
                   ['Revolut', 'Digital', 'Multi-moneda y transferencias baratas. Útil para uso diario pero no siempre para nóminas.', 'revolut.com', 'https://revolut.com'],
                   ['BBVA', 'Tradicional', 'Cuenta gratuita para jóvenes, excelente app. Ideal para domiciliar pagos y nómina.', 'bbva.es', 'https://bbva.es'],
                   ['Santander', 'Tradicional', 'Red enorme de cajeros. Muy usado por estudiantes internacionales y empresas.', 'santander.es', 'https://santander.es'],
                   ['CaixaBank', 'Tradicional', 'HolaBank para extranjeros con atención en inglés. Gran presencia nacional.', 'caixabank.es', 'https://caixabank.es'],
-                ].map((r, i) => (
+                ], locale).map((r, i) => (
                   <tr key={i}>
                     <td style={{ ...T.td(i), ...T.bold }}>{r[0]}</td>
                     <td style={T.td(i)}>{r[1]}</td>
@@ -944,7 +945,7 @@ export default function Espana() {
             <table style={T.table}>
               <thead><tr>{[t.th_portal, t.th_para_que, t.th_cuando, t.th_web].map((h, i) => <th key={i} style={T.th}>{h}</th>)}</tr></thead>
               <tbody>
-                {[
+                {trRows([
                   ['Sede Extranjería', 'Citas NIE/TIE y trámites migratorios', 'Semana 1 — agenda cita inmediatamente', 'sede.administracionespublicas.gob.es', 'https://sede.administracionespublicas.gob.es'],
                   ['Seguridad Social (NUSS)', 'Número de Seguridad Social para trabajar', 'Cuando consigues empleo', 'seg-social.es', 'https://seg-social.es'],
                   ['SEPE', 'Programas de empleo y formación', 'Desde semana 2-3', 'sepe.es', 'https://sepe.es'],
@@ -954,7 +955,7 @@ export default function Espana() {
                   ['Turijobs', 'Hoteles, restaurantes y turismo', 'Desde semana 1', 'turijobs.com', 'https://turijobs.com'],
                   ['Idealista', 'Vivienda #1 en España', 'Semana 1 para encontrar habitación', 'idealista.com', 'https://idealista.com'],
                   ['Badi', 'App de habitaciones compartidas', 'Semana 1', 'badi.com', 'https://badi.com'],
-                ].map((r, i) => (
+                ], locale).map((r, i) => (
                   <tr key={i}>
                     <td style={{ ...T.td(i), ...T.bold }}>{r[0]}</td>
                     <td style={T.td(i)}>{r[1]}</td>
@@ -977,10 +978,10 @@ export default function Espana() {
             <table style={T.table}>
               <thead><tr>{[t.th_tipo_aloj, t.th_sem, t.th_mes].map((h, i) => <th key={i} style={T.th}>{h}</th>)}</tr></thead>
               <tbody>
-                {[
+                {trRows([
                   ['Cuarto compartido', '€120 – €200', '€480 – €800'],
                   ['Cuarto individual', '€300 – €500', '€800 – €1,200'],
-                ].map((r, i) => (
+                ], locale).map((r, i) => (
                   <tr key={i}>
                     <td style={{ ...T.td(i), ...T.bold }}>{r[0]}</td>
                     <td style={T.td(i)}>{r[1]}</td>
@@ -996,13 +997,13 @@ export default function Espana() {
             <table style={T.table}>
               <thead><tr>{[t.th_canal, t.th_tipo, t.th_estrategia_col, t.th_acceso].map((h, i) => <th key={i} style={T.th}>{h}</th>)}</tr></thead>
               <tbody>
-                {[
+                {trRows([
                   ['Idealista', 'Portal #1 en España', 'Activa alertas push — responde en menos de 1 hora', 'idealista.com', 'https://idealista.com'],
                   ['Spotahome', 'Plataforma verificada', 'Propiedades verificadas con fotos y video', 'spotahome.com', 'https://spotahome.com'],
                   ['Badi', 'App de habitaciones', 'La app más popular para habitaciones compartidas', 'badi.com', 'https://badi.com'],
                   ['Uniplaces', 'Plataforma estudiantil', 'Alquiler rápido para estudiantes internacionales', 'uniplaces.com', 'https://uniplaces.com'],
                   ['Grupos WhatsApp Latinos', 'Networking', 'Mexicanos, Colombianos, Argentinos en Madrid/Barcelona', 'Ver grupos', 'https://www.facebook.com/search/groups?q=' + encodeURIComponent('Latinos España')],
-                ].map((r, i) => (
+                ], locale).map((r, i) => (
                   <tr key={i}>
                     <td style={{ ...T.td(i), ...T.bold }}>{r[0]}</td>
                     <td style={T.td(i)}>{r[1]}</td>
@@ -1027,13 +1028,13 @@ export default function Espana() {
             <table style={T.table}>
               <thead><tr>{[t.th_sector, t.th_puesto, t.th_salario_h, t.th_usd_h, t.th_canal_emp].map((h, i) => <th key={i} style={T.th}>{h}</th>)}</tr></thead>
               <tbody>
-                {[
+                {trRows([
                   ['Hospitality', 'Camarero / Bar Staff / Ayudante de Cocina', '€9.26 – €11', '$10.65 – $12.65', 'CV en persona / JobToday / InfoJobs'],
                   ['Cleaning', 'Cleaner / Housekeeping', '€9.26 – €10', '$10.65 – $11.50', 'Agencias / Indeed / Networking'],
                   ['Hotels & Tourism', 'Recepción / Hotel Staff', '€9 – €12', '$10 – $14', 'Turijobs / Hosco / LinkedIn'],
                   ['Retail', 'Dependiente / Shop Assistant', '€9.26 – €11', '$10.65 – $12.65', 'InfoJobs / Indeed'],
                   ['Delivery', 'Repartidor / Courier', '€8 – €12', '$9 – $14', 'Glovo / Uber Eats / Apps'],
-                ].map((r, i) => (
+                ], locale).map((r, i) => (
                   <tr key={i}>
                     <td style={{ ...T.td(i), ...T.bold }}>{r[0]}</td>
                     <td style={T.td(i)}>{r[1]}</td>
@@ -1055,13 +1056,13 @@ export default function Espana() {
             <table style={T.table}>
               <thead><tr>{[t.th_sector_sal, t.th_puesto_sal, t.th_salario_h, t.th_usd_h, t.th_mensual].map((h, i) => <th key={i} style={T.th}>{h}</th>)}</tr></thead>
               <tbody>
-                {[
+                {trRows([
                   ['Hospitality', 'Camarero / Bar Staff', '€9.26 – €11', '$10.65 – $12.65', '€1,111 – €1,320'],
                   ['Cleaning', 'Cleaner / Housekeeping', '€9.26 – €10', '$10.65 – $11.50', '€1,111 – €1,200'],
                   ['Hotels', 'Recepción / Hotel Staff', '€9 – €12', '$10 – $14', '€1,080 – €1,440'],
                   ['Retail', 'Dependiente', '€9.26 – €11', '$10.65 – $12.65', '€1,111 – €1,320'],
                   ['Delivery', 'Repartidor / Courier', '€8 – €12', '$9 – $14', '€960 – €1,440'],
-                ].map((r, i) => (
+                ], locale).map((r, i) => (
                   <tr key={i}>
                     <td style={{ ...T.td(i), ...T.bold }}>{r[0]}</td>
                     <td style={T.td(i)}>{r[1]}</td>
@@ -1145,13 +1146,13 @@ export default function Espana() {
             <table style={T.table}>
               <thead><tr>{[t.th_problema, t.th_accion, t.th_contacto].map((h, i) => <th key={i} style={T.th}>{h}</th>)}</tr></thead>
               <tbody>
-                {[
+                {trRows([
                   ['Robo / Extravío de Pasaporte', 'Reportar a Policía Nacional y contactar Embajada/Consulado', 'Policía + Embajada'],
                   ['Estafa de Vivienda', 'Reportar en plataforma y denunciar en Policía', 'Policía Nacional'],
                   ['Problemas con TIE/NIE', 'Revisar cita en Extranjería y reunir documentos faltantes', 'Sede Extranjería'],
                   ['Retraso en documentos de escuela', 'Contactar Student Office de la academia', 'Tu academia'],
                   ['Enfermedad / Urgencia médica', 'Centro médico privado o urgencias con seguro', '112'],
-                ].map((r, i) => (
+                ], locale).map((r, i) => (
                   <tr key={i}>
                     <td style={{ ...T.td(i), ...T.bold, color: '#dc2626' }}>{r[0]}</td>
                     <td style={{ ...T.td(i), lineHeight: '1.5' }}>{r[1]}</td>

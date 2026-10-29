@@ -4,6 +4,7 @@ import { useLanguage } from '../../context/LanguageContext'
 import HeaderMenu from '../../components/HeaderMenu'
 import { usePurchase } from '../../hooks/usePurchase'
 import IconBadge from '../../components/IconBadge'
+import { tx, trRows } from '@/lib/phrases'
 
 const translations = {
   es: {
@@ -730,11 +731,11 @@ export default function Italia() {
         {!hasAccess && (
           <div style={{ backgroundColor: 'white', borderRadius: '16px', padding: '24px', textAlign: 'center', boxShadow: '0 4px 16px rgba(0,0,0,0.10)', margin: '16px 0', border: '2px solid #e8572a' }}>
             <div style={{ marginBottom: '14px' }}><IconBadge name="lock" size={52} /></div>
-            <h3 style={{ fontWeight: 'bold', fontSize: '18px', color: '#1a1a2e', marginBottom: '8px' }}>Contenido Premium</h3>
-            <p style={{ color: '#555555', fontSize: '14px', marginBottom: '20px' }}>Accede al blueprint completo con toda la información detallada</p>
+            <h3 style={{ fontWeight: 'bold', fontSize: '18px', color: '#1a1a2e', marginBottom: '8px' }}>{tx('Contenido Premium', locale)}</h3>
+            <p style={{ color: '#555555', fontSize: '14px', marginBottom: '20px' }}>{tx('Accede al blueprint completo con toda la información detallada', locale)}</p>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
               <a href="https://lifestylentravel2.lemonsqueezy.com/checkout/buy/2dc9d208-cf0b-45f0-83b4-998414ffb9f4" style={{ backgroundColor: '#e8572a', color: 'white', borderRadius: '10px', padding: '16px', fontSize: '16px', fontWeight: 'bold', textDecoration: 'none', display: 'block', textAlign: 'center', boxShadow: '0 4px 12px rgba(232,87,42,0.4)', border: '2px solid #ff6b3d' }}>
-                Acceso Total — Todos los Blueprints €39.99
+                {tx('Acceso Total — Todos los Blueprints €39.99', locale)}
               </a>
             </div>
           </div>
@@ -751,14 +752,14 @@ export default function Italia() {
               <table style={T.table}>
                 <thead><tr>{[t.th_inst, t.th_loc, t.th_am, t.th_usd, t.th_pm, t.th_usd, t.th_web].map((h, i) => <th key={i} style={T.th}>{h}</th>)}</tr></thead>
                 <tbody>
-                  {[
+                  {trRows([
                     ['Dilit International House', 'Roma Centro', '€2,500', '$2,750', '€2,200', '$2,420', 'dilit.it', 'https://www.dilit.it'],
                     ['Torre di Babele', 'Roma Prati', '€2,600', '$2,860', '€2,300', '$2,530', 'torredibabele.com', 'https://www.torredibabele.com'],
                     ['Il Laboratorio', 'Roma Trastevere', '€2,800', '$3,080', '€2,500', '$2,750', 'il-laboratorio.com', 'https://www.il-laboratorio.com'],
                     ['Scuola Leonardo da Vinci', 'Roma Centro', '€2,700', '$2,970', '€2,400', '$2,640', 'scuolaleonardo.com', 'https://www.scuolaleonardo.com'],
                     ['Istituto Italiano', 'Roma Parioli', '€3,000', '$3,300', '€2,700', '$2,970', 'istitutoitaliano.it', 'https://www.istitutoitaliano.it'],
                     ['Accademia Italiana', 'Roma Centro', '€3,200', '$3,520', '€2,900', '$3,190', 'accademiaitaliana.com', 'https://www.accademiaitaliana.com'],
-                  ].map((r, i) => (
+                  ], locale).map((r, i) => (
                     <tr key={i}>
                       <td style={{ ...T.td(i), ...T.bold }}>{r[0]}</td>
                       <td style={T.td(i)}>{r[1]}</td>
@@ -778,11 +779,11 @@ export default function Italia() {
               <table style={T.table}>
                 <thead><tr>{[t.th_inst, t.th_loc, t.th_am, t.th_usd, t.th_pm, t.th_usd, t.th_web].map((h, i) => <th key={i} style={T.th}>{h}</th>)}</tr></thead>
                 <tbody>
-                  {[
+                  {trRows([
                     ['British Institute Florence', 'Oltrarno', '€2,800', '$3,080', '€2,500', '$2,750', 'britishinstitute.it', 'https://www.britishinstitute.it'],
                     ['Istituto Machiavelli', 'Centro', '€3,000', '$3,300', '€2,700', '$2,970', 'istitutomachiavelli.it', 'https://www.istitutomachiavelli.it'],
                     ['Scuola Leonardo da Vinci', 'Centro', '€2,500', '$2,750', '€2,200', '$2,420', 'scuolaleonardo.com', 'https://www.scuolaleonardo.com'],
-                  ].map((r, i) => (
+                  ], locale).map((r, i) => (
                     <tr key={i}>
                       <td style={{ ...T.td(i), ...T.bold }}>{r[0]}</td>
                       <td style={T.td(i)}>{r[1]}</td>
@@ -802,11 +803,11 @@ export default function Italia() {
               <table style={T.table}>
                 <thead><tr>{[t.th_inst, t.th_loc, t.th_am, t.th_usd, t.th_pm, t.th_usd, t.th_web].map((h, i) => <th key={i} style={T.th}>{h}</th>)}</tr></thead>
                 <tbody>
-                  {[
+                  {trRows([
                     ['Scuola Leonardo da Vinci', 'Brera', '€2,700', '$2,970', '€2,400', '$2,640', 'scuolaleonardo.com', 'https://www.scuolaleonardo.com'],
                     ['Istituto Europeo', 'Centro', '€3,000', '$3,300', '€2,700', '$2,970', 'istitutoeuropeo.it', 'https://www.istitutoeuropeo.it'],
                     ['Berlitz Milano', 'Centro', '€3,500', '$3,850', '€3,000', '$3,300', 'berlitz.it', 'https://www.berlitz.it'],
-                  ].map((r, i) => (
+                  ], locale).map((r, i) => (
                     <tr key={i}>
                       <td style={{ ...T.td(i), ...T.bold }}>{r[0]}</td>
                       <td style={T.td(i)}>{r[1]}</td>
@@ -837,14 +838,14 @@ export default function Italia() {
               <table style={T.table}>
                 <thead><tr>{[t.th_uni, t.th_area, t.th_anual, t.th_usd, t.th_web].map((h, i) => <th key={i} style={T.th}>{h}</th>)}</tr></thead>
                 <tbody>
-                  {[
+                  {trRows([
                     ['Sapienza University Roma', 'Humanidades / Ciencias / IT', '€1,000 - €2,000', '$1,100 - $2,200', 'uniroma1.it', 'https://www.uniroma1.it'],
                     ['Politecnico di Milano', 'Diseño / Ingeniería / Arquitectura', '€3,900 - €8,000', '$4,290 - $8,800', 'polimi.it', 'https://www.polimi.it'],
                     ['University of Bologna', 'Negocios / Ingeniería / Arte', '€2,500 - €5,000', '$2,750 - $5,500', 'unibo.it', 'https://www.unibo.it'],
                     ["Ca' Foscari University", 'Economía / Lenguas / Marketing', '€2,800 - €5,500', '$3,080 - $6,050', 'unive.it', 'https://www.unive.it'],
                     ['Bocconi University', 'Negocios / Finanzas / Economía', '€13,000 - €16,000', '$14,300 - $17,600', 'unibocconi.it', 'https://www.unibocconi.it'],
                     ['IED Istituto Europeo di Design', 'Diseño / Moda / Comunicación', '€7,000 - €12,000', '$7,700 - $13,200', 'ied.edu', 'https://www.ied.edu'],
-                  ].map((r, i) => (
+                  ], locale).map((r, i) => (
                     <tr key={i}>
                       <td style={{ ...T.td(i), ...T.bold }}>{r[0]}</td>
                       <td style={T.td(i)}>{r[1]}</td>
@@ -862,14 +863,14 @@ export default function Italia() {
               <table style={T.table}>
                 <thead><tr>{[t.th_uni, t.th_area, t.th_anual, t.th_usd, t.th_web].map((h, i) => <th key={i} style={T.th}>{h}</th>)}</tr></thead>
                 <tbody>
-                  {[
+                  {trRows([
                     ['Sapienza University Roma', 'Derecho / Medicina / Ciencias', '€300 - €1,500', '$330 - $1,650', 'uniroma1.it', 'https://www.uniroma1.it'],
                     ['University of Bologna', 'Todas las áreas', '€1,000 - €3,000', '$1,100 - $3,300', 'unibo.it', 'https://www.unibo.it'],
                     ['University of Padova', 'Medicina / Ingeniería / Ciencias', '€1,500 - €3,500', '$1,650 - $3,850', 'unipd.it', 'https://www.unipd.it'],
                     ['Politecnico di Torino', 'Arquitectura / Ingeniería', '€2,000 - €4,000', '$2,200 - $4,400', 'polito.it', 'https://www.polito.it'],
                     ["Ca' Foscari University", 'Economía / Comercio / Lenguas', '€1,500 - €3,000', '$1,650 - $3,300', 'unive.it', 'https://www.unive.it'],
                     ['University of Pisa', 'Ciencias / IT / Ingeniería', '€1,000 - €3,000', '$1,100 - $3,300', 'unipi.it', 'https://www.unipi.it'],
-                  ].map((r, i) => (
+                  ], locale).map((r, i) => (
                     <tr key={i}>
                       <td style={{ ...T.td(i), ...T.bold }}>{r[0]}</td>
                       <td style={T.td(i)}>{r[1]}</td>
@@ -892,7 +893,7 @@ export default function Italia() {
               <table style={T.table}>
                 <thead><tr>{[t.th_concepto, t.th_costo].map((h, i) => <th key={i} style={T.th}>{h}</th>)}</tr></thead>
                 <tbody>
-                  {[
+                  {trRows([
                     ['Seguro médico', '€150 - €200'],
                     ['Examen final del curso de italiano', '€100 - €150'],
                     ['Materiales / Libros', '€40 - €70'],
@@ -901,7 +902,7 @@ export default function Italia() {
                     ['Dichiarazione di Valore (validación diploma)', '€50 - €150'],
                     ['Solvencia — Italiano (6 meses)', '~€5,200'],
                     ['Solvencia — Universidad/Master', '€10,180'],
-                  ].map((r, i) => (
+                  ], locale).map((r, i) => (
                     <tr key={i}>
                       <td style={{ ...T.td(i), ...T.bold }}>{r[0]}</td>
                       <td style={T.td(i)}>{r[1]}</td>
@@ -947,14 +948,14 @@ export default function Italia() {
               <table style={T.table}>
                 <thead><tr>{[t.th_entidad, t.th_tipo, t.th_ventaja].map((h, i) => <th key={i} style={T.th}>{h}</th>)}</tr></thead>
                 <tbody>
-                  {[
+                  {trRows([
                     ['Revolut', 'Digital', 'IBAN europeo activo en 24h. El más usado por extranjeros para nóminas rápidas.'],
                     ['N26', 'Digital', 'IBAN europeo. App excelente, sin comisiones de mantenimiento.'],
                     ['Poste Italiane', 'Tradicional', 'El más accesible para extranjeros en Italia. Cuentas BancoPosta desde €0/mes.'],
                     ['UniCredit', 'Tradicional', 'Banco más grande de Italia. Sucursales en toda Italia.'],
                     ['Intesa Sanpaolo', 'Tradicional', 'Segundo banco más grande. Muy usado para nóminas y alquileres.'],
                     ['Fineco Bank', 'Digital/Tradicional', 'Sin comisiones mensuales, buena app, muy popular entre jóvenes.'],
-                  ].map((r, i) => (
+                  ], locale).map((r, i) => (
                     <tr key={i}>
                       <td style={{ ...T.td(i), ...T.bold }}>{r[0]}</td>
                       <td style={T.td(i)}>{r[1]}</td>
@@ -974,7 +975,7 @@ export default function Italia() {
               <table style={T.table}>
                 <thead><tr>{[t.th_portal, t.th_para_que, t.th_cuando, t.th_web].map((h, i) => <th key={i} style={T.th}>{h}</th>)}</tr></thead>
                 <tbody>
-                  {[
+                  {trRows([
                     ['Universitaly', 'Pre-inscripción universitaria y visa de estudiante', 'Antes de volar — trámite obligatorio', 'universitaly.it', 'https://universitaly.it'],
                     ['Portale Immigrazione', 'Solicitar Permesso di Soggiorno', 'Primeros 8 días hábiles al llegar', 'portaleimmigrazione.it', 'https://portaleimmigrazione.it'],
                     ['Agenzia delle Entrate', 'Obtener Codice Fiscale', 'Semana 1 — antes de todo lo demás', 'agenziaentrate.gov.it', 'https://agenziaentrate.gov.it'],
@@ -986,7 +987,7 @@ export default function Italia() {
                     ['Idealista', 'Búsqueda de vivienda #1 en Italia', 'Desde semana 1 — activa alertas', 'idealista.it', 'https://idealista.it'],
                     ['Immobiliare.it', 'Habitaciones y apartamentos compartidos', 'Desde semana 1', 'immobiliare.it', 'https://immobiliare.it'],
                     ['Bakeca.it', 'Habitaciones baratas y clasificados', 'Desde semana 1', 'bakeca.it', 'https://bakeca.it'],
-                  ].map((r, i) => (
+                  ], locale).map((r, i) => (
                     <tr key={i}>
                       <td style={{ ...T.td(i), ...T.bold }}>{r[0]}</td>
                       <td style={T.td(i)}>{r[1]}</td>
@@ -1009,14 +1010,14 @@ export default function Italia() {
               <table style={T.table}>
                 <thead><tr>{[t.th_tipo_aloj, t.th_mes].map((h, i) => <th key={i} style={T.th}>{h}</th>)}</tr></thead>
                 <tbody>
-                  {[
+                  {trRows([
                     ['Habitación compartida (Roma)', '€400 - €600'],
                     ['Habitación individual (Roma)', '€600 - €900'],
                     ['Habitación compartida (Milán)', '€450 - €700'],
                     ['Habitación individual (Milán)', '€700 - €1,000'],
                     ['Habitación compartida (Florencia)', '€350 - €550'],
                     ['Habitación compartida (Nápoles/Sur)', '€250 - €400'],
-                  ].map((r, i) => (
+                  ], locale).map((r, i) => (
                     <tr key={i}>
                       <td style={{ ...T.td(i), ...T.bold }}>{r[0]}</td>
                       <td style={T.td(i)}>{r[1]}</td>
@@ -1031,14 +1032,14 @@ export default function Italia() {
               <table style={T.table}>
                 <thead><tr>{[t.th_canal, t.th_tipo, t.th_estrategia_col].map((h, i) => <th key={i} style={T.th}>{h}</th>)}</tr></thead>
                 <tbody>
-                  {[
+                  {trRows([
                     ['Idealista', 'Portal oficial #1', 'Activa alertas push — respondé en menos de 2 horas', ''],
                     ['Immobiliare.it', 'Portal oficial #2', 'Filtrá por stanze (habitaciones) compartidas', ''],
                     ['Bakeca.it', 'Clasificados', 'Habitaciones más baratas — revisá diario', ''],
                     ['Subito.it', 'Clasificados', 'Bueno para habitaciones en ciudades medianas', ''],
                     ['Grupos WhatsApp Latinos', 'Networking', 'Unite al grupo de tu país — Latinos en Roma, Latinos en Milán', 'https://www.facebook.com/search/groups?q=' + encodeURIComponent('Latinos Italia')],
                     ['Facebook Groups', 'Networking', '"Affitti Roma", "Stanze Milano" — grupos muy activos', ''],
-                  ].map((r, i) => (
+                  ], locale).map((r, i) => (
                     <tr key={i}>
                       <td style={{ ...T.td(i), ...T.bold }}>{r[3] ? <Link text={r[0]} url={r[3]} /> : r[0]}</td>
                       <td style={T.td(i)}>{r[1]}</td>
@@ -1062,14 +1063,14 @@ export default function Italia() {
               <table style={T.table}>
                 <thead><tr>{[t.th_sector, t.th_puesto, t.th_salario_h].map((h, i) => <th key={i} style={T.th}>{h}</th>)}</tr></thead>
                 <tbody>
-                  {[
+                  {trRows([
                     ['Hospitality', 'Cameriere / Barista / Aiuto Cucina', '€8.24 - €10'],
                     ['Cleaning / Housekeeping', 'Addetto Pulizie / Housekeeper', '€8.24 - €9'],
                     ['Retail', 'Commesso / Shop Assistant', '€8.24 - €10'],
                     ['Turismo', 'Guía turístico / Receptionist', '€9 - €12'],
                     ['Cuidado de personas', 'Badante / Care Assistant', '€9 - €13'],
                     ['Delivery', 'Rider / Corriere', '€8.50 - €11'],
-                  ].map((r, i) => (
+                  ], locale).map((r, i) => (
                     <tr key={i}>
                       <td style={{ ...T.td(i), ...T.bold }}>{r[0]}</td>
                       <td style={T.td(i)}>{r[1]}</td>
@@ -1089,14 +1090,14 @@ export default function Italia() {
               <table style={T.table}>
                 <thead><tr>{[t.th_puesto_sal, t.th_salario_h].map((h, i) => <th key={i} style={T.th}>{h}</th>)}</tr></thead>
                 <tbody>
-                  {[
+                  {trRows([
                     ['Cameriere / Floor Staff', '€8.24 - €10'],
                     ['Addetto Pulizie / Cleaner', '€8.24 - €9'],
                     ['Commesso / Shop Assistant', '€8.24 - €10'],
                     ['Barista / Bar Staff', '€8.50 - €11'],
                     ['Badante / Care Assistant', '€9 - €13'],
                     ['Rider / Delivery', '€8.50 - €11'],
-                  ].map((r, i) => (
+                  ], locale).map((r, i) => (
                     <tr key={i}>
                       <td style={{ ...T.td(i), ...T.bold }}>{r[0]}</td>
                       <td style={{ ...T.td(i), color: '#166534', fontWeight: '700' }}>{r[1]}</td>
@@ -1177,7 +1178,7 @@ export default function Italia() {
               <table style={T.table}>
                 <thead><tr>{[t.th_problema, t.th_accion, t.th_contacto].map((h, i) => <th key={i} style={T.th}>{h}</th>)}</tr></thead>
                 <tbody>
-                  {[
+                  {trRows([
                     ['Robo / Pérdida de Pasaporte', 'Denuncia en Commissariato más cercano + Contactar Embajada de tu país inmediatamente', '113 + Embajada'],
                     ['Estafa de Vivienda', 'No más pagos. Denunciar en Commissariato y reportar en grupos latinos', '113'],
                     ['Trabajo sin contrato (lavoro nero)', 'Denunciar en Ispettorato del Lavoro — es anónimo y gratuito', 'ispettorato.gov.it'],
@@ -1185,7 +1186,7 @@ export default function Italia() {
                     ['Problemas con empleador', 'Contactar sindacato (CGIL, CISL, UIL) — servicio gratuito para trabajadores', 'cgil.it'],
                     ['Enfermedad / Urgencia médica', 'Ir al Pronto Soccorso (urgencias) más cercano con seguro médico', '118 / 112'],
                     ['Accidente laboral', 'Reportar al empleador + denunciar en INAIL inmediatamente', 'inail.it'],
-                  ].map((r, i) => (
+                  ], locale).map((r, i) => (
                     <tr key={i}>
                       <td style={{ ...T.td(i), ...T.bold, color: '#dc2626' }}>{r[0]}</td>
                       <td style={{ ...T.td(i), lineHeight: '1.5' }}>{r[1]}</td>
