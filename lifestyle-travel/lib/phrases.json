@@ -2086,5 +2086,513 @@
  "Institución": {
   "pt": "Instituição",
   "en": "Institution"
+ },
+ "Cuarto compartido": {
+  "pt": "Quarto compartilhado",
+  "en": "Shared room"
+ },
+ "Cuarto individual": {
+  "pt": "Quarto individual",
+  "en": "Private room"
+ },
+ "Tradicional": {
+  "pt": "Tradicional",
+  "en": "Traditional"
+ },
+ "Digital": {
+  "pt": "Digital",
+  "en": "Digital"
+ },
+ "Digital — Europa": {
+  "pt": "Digital — Europa",
+  "en": "Digital — Europe"
+ },
+ "Digital — Global": {
+  "pt": "Digital — Global",
+  "en": "Digital — Global"
+ },
+ "Digital — UK": {
+  "pt": "Digital — Reino Unido",
+  "en": "Digital — UK"
+ },
+ "Digital Local": {
+  "pt": "Digital local",
+  "en": "Local digital"
+ },
+ "Digital/Tradicional": {
+  "pt": "Digital/Tradicional",
+  "en": "Digital/Traditional"
+ },
+ "Clasificados": {
+  "pt": "Classificados",
+  "en": "Classifieds"
+ },
+ "Clasificados populares": {
+  "pt": "Classificados populares",
+  "en": "Popular classifieds"
+ },
+ "Comunidad": {
+  "pt": "Comunidade",
+  "en": "Community"
+ },
+ "Comunidad expats": {
+  "pt": "Comunidade de expatriados",
+  "en": "Expat community"
+ },
+ "Comunidad internacional": {
+  "pt": "Comunidade internacional",
+  "en": "International community"
+ },
+ "Grupos WhatsApp Latinos": {
+  "pt": "Grupos de WhatsApp de latinos",
+  "en": "Latino WhatsApp groups"
+ },
+ "Ver grupos": {
+  "pt": "Ver grupos",
+  "en": "See groups"
+ },
+ "Materiales / Libros": {
+  "pt": "Materiais / Livros",
+  "en": "Materials / Books"
+ },
+ "Alojamiento inicial": {
+  "pt": "Alojamento inicial",
+  "en": "Initial accommodation"
+ },
+ "Alojamiento temporal": {
+  "pt": "Alojamento temporário",
+  "en": "Temporary accommodation"
+ },
+ "Antecedentes penales": {
+  "pt": "Antecedentes criminais",
+  "en": "Criminal record check"
+ },
+ "Capital recomendado total": {
+  "pt": "Capital total recomendado",
+  "en": "Total recommended capital"
+ },
+ "Capital total recomendado": {
+  "pt": "Capital total recomendado",
+  "en": "Total recommended capital"
+ },
+ "Solvencia bancaria": {
+  "pt": "Solvência bancária",
+  "en": "Bank solvency"
+ },
+ "Solvencia obligatoria": {
+  "pt": "Solvência obrigatória",
+  "en": "Mandatory proof of funds"
+ },
+ "Solvencia - Universidad/Master": {
+  "pt": "Solvência – Universidade/Mestrado",
+  "en": "Proof of funds – University/Master's"
+ },
+ "Solvencia — Universidad/Master": {
+  "pt": "Solvência – Universidade/Mestrado",
+  "en": "Proof of funds – University/Master's"
+ },
+ "Cuando consigues empleador": {
+  "pt": "Quando conseguir empregador",
+  "en": "When you get an employer"
+ },
+ "Cuando consigues empleo": {
+  "pt": "Quando conseguir emprego",
+  "en": "When you get a job"
+ },
+ "Cuando empieces a trabajar": {
+  "pt": "Quando começar a trabalhar",
+  "en": "When you start working"
+ },
+ "Cuando tengas base legal activa": {
+  "pt": "Quando tiver base legal ativa",
+  "en": "Once your legal basis is active"
+ },
+ "Primeras aplicaciones": {
+  "pt": "Primeiras candidaturas",
+  "en": "First applications"
+ },
+ "Primeras reviews": {
+  "pt": "Primeiras avaliações",
+  "en": "First reviews"
+ },
+ "Tras 3-5 reviews": {
+  "pt": "Após 3-5 avaliações",
+  "en": "After 3-5 reviews"
+ },
+ "Tras completar sit": {
+  "pt": "Após concluir o sit",
+  "en": "After completing a sit"
+ },
+ "Problemas bancarios": {
+  "pt": "Problemas bancários",
+  "en": "Banking problems"
+ },
+ "Problemas migratorios": {
+  "pt": "Problemas migratórios",
+  "en": "Immigration problems"
+ },
+ "Accidente laboral": {
+  "pt": "Acidente de trabalho",
+  "en": "Work accident"
+ },
+ "Temporal": {
+  "pt": "Temporário",
+  "en": "Temporary"
+ },
+ "Inmediato": {
+  "pt": "Imediato",
+  "en": "Immediate"
+ },
+ "Entrada directa": {
+  "pt": "Entrada direta",
+  "en": "Direct entry"
+ },
+ "Empleo local": {
+  "pt": "Emprego local",
+  "en": "Local jobs"
+ },
+ "Empleo local italiano": {
+  "pt": "Emprego local italiano",
+  "en": "Local Italian jobs"
+ },
+ "Empleo remoto": {
+  "pt": "Emprego remoto",
+  "en": "Remote jobs"
+ },
+ "Servicios digitales": {
+  "pt": "Serviços digitais",
+  "en": "Digital services"
+ },
+ "Red profesional": {
+  "pt": "Rede profissional",
+  "en": "Professional network"
+ },
+ "Plataforma estudiantil": {
+  "pt": "Plataforma estudantil",
+  "en": "Student platform"
+ },
+ "Plataforma verificada": {
+  "pt": "Plataforma verificada",
+  "en": "Verified platform"
+ },
+ "✅ Principal plataforma": {
+  "pt": "✅ Principal plataforma",
+  "en": "✅ Main platform"
+ },
+ "Varias ciudades": {
+  "pt": "Várias cidades",
+  "en": "Several cities"
+ },
+ "Habitaciones compartidas": {
+  "pt": "Quartos compartilhados",
+  "en": "Shared rooms"
+ },
+ "Dependiente": {
+  "pt": "Atendente",
+  "en": "Shop assistant"
+ },
+ "Dependiente / Shop Assistant": {
+  "pt": "Atendente / Shop Assistant",
+  "en": "Shop Assistant"
+ },
+ "Camarero / Bar Staff": {
+  "pt": "Garçom / Bar Staff",
+  "en": "Waiter / Bar Staff"
+ },
+ "Repartidor / Courier": {
+  "pt": "Entregador / Courier",
+  "en": "Delivery / Courier"
+ },
+ "Turismo": {
+  "pt": "Turismo",
+  "en": "Tourism"
+ },
+ "Seguridad Social (NUSS)": {
+  "pt": "Segurança Social (NISS)",
+  "en": "Social Security (NUSS)"
+ },
+ "Acceso a mejores oportunidades": {
+  "pt": "Acesso a melhores oportunidades",
+  "en": "Access to better opportunities"
+ },
+ "Activa alertas — responde inmediatamente": {
+  "pt": "Ative alertas — responda imediatamente",
+  "en": "Turn on alerts — reply immediately"
+ },
+ "Agencia": {
+  "pt": "Agência",
+  "en": "Agency"
+ },
+ "Agencias / Indeed / Networking": {
+  "pt": "Agências / Indeed / Networking",
+  "en": "Agencies / Indeed / Networking"
+ },
+ "Contactar International Student Office": {
+  "pt": "Contatar o International Student Office",
+  "en": "Contact the International Student Office"
+ },
+ "Contactar Workplace Relations Commission — servicio gratuito": {
+  "pt": "Contatar a Workplace Relations Commission — serviço gratuito",
+  "en": "Contact the Workplace Relations Commission — free service"
+ },
+ "Crear perfil optimizado": {
+  "pt": "Criar perfil otimizado",
+  "en": "Create an optimised profile"
+ },
+ "Banca digital popular entre estudiantes internacionales.": {
+  "pt": "Banco digital popular entre estudantes internacionais.",
+  "en": "Digital bank popular with international students."
+ },
+ "Consulado + residencia": {
+  "pt": "Consulado + residência",
+  "en": "Consulate + residence"
+ },
+ "Online / consulado": {
+  "pt": "Online / consulado",
+  "en": "Online / consulate"
+ },
+ "Online / residencia": {
+  "pt": "Online / residência",
+  "en": "Online / residence"
+ },
+ "Nacional / Online": {
+  "pt": "Nacional / Online",
+  "en": "National / Online"
+ },
+ "Pasaporte + experiencia profesional + CV": {
+  "pt": "Passaporte + experiência profissional + CV",
+  "en": "Passport + professional experience + CV"
+ },
+ "Subsidio + seguro + vuelos ida/vuelta": {
+  "pt": "Subsídio + seguro + voos de ida e volta",
+  "en": "Allowance + insurance + return flights"
+ },
+ "Verificar aportaciones al seguro social": {
+  "pt": "Verificar contribuições à segurança social",
+  "en": "Check social security contributions"
+ },
+ "Registro fiscal — evitar Emergency Tax 40%": {
+  "pt": "Registro fiscal — evitar Emergency Tax de 40%",
+  "en": "Tax registration — avoid 40% Emergency Tax"
+ },
+ "Vacantes corporativas regionales": {
+  "pt": "Vagas corporativas regionais",
+  "en": "Regional corporate vacancies"
+ },
+ "Vacantes generales": {
+  "pt": "Vagas gerais",
+  "en": "General vacancies"
+ },
+ "Empresas internacionales": {
+  "pt": "Empresas internacionais",
+  "en": "International companies"
+ },
+ "Empleos profesionales e internacionales": {
+  "pt": "Empregos profissionais e internacionais",
+  "en": "Professional and international jobs"
+ },
+ "Freelance / Remoto": {
+  "pt": "Freelance / Remoto",
+  "en": "Freelance / Remote"
+ },
+ "Freelance global": {
+  "pt": "Freelance global",
+  "en": "Global freelance"
+ },
+ "Derecho / Medicina / Ciencias": {
+  "pt": "Direito / Medicina / Ciências",
+  "en": "Law / Medicine / Science"
+ },
+ "Humanidades / Ciencias / IT": {
+  "pt": "Humanidades / Ciências / TI",
+  "en": "Humanities / Science / IT"
+ },
+ "Alicante / Granada": {
+  "pt": "Alicante / Granada",
+  "en": "Alicante / Granada"
+ },
+ "Facebook Groups": {
+  "pt": "Grupos do Facebook",
+  "en": "Facebook Groups"
+ },
+ "Grupos Facebook / Agencias": {
+  "pt": "Grupos do Facebook / Agências",
+  "en": "Facebook groups / Agencies"
+ },
+ "Siembra, Animales, Permacultura, Quesos": {
+  "pt": "Plantio, Animais, Permacultura, Queijos",
+  "en": "Planting, Animals, Permaculture, Cheeses"
+ },
+ "Indeed, agencias, grupos WhatsApp": {
+  "pt": "Indeed, agências, grupos de WhatsApp",
+  "en": "Indeed, agencies, WhatsApp groups"
+ },
+ "Indeed, tiendas directas": {
+  "pt": "Indeed, lojas diretas",
+  "en": "Indeed, direct to shops"
+ },
+ "Indeed / Agencias": {
+  "pt": "Indeed / Agências",
+  "en": "Indeed / Agencies"
+ },
+ "Indeed NZ / Agencias": {
+  "pt": "Indeed NZ / Agências",
+  "en": "Indeed NZ / Agencies"
+ },
+ "Seek / hoteles directos": {
+  "pt": "Seek / hotéis diretos",
+  "en": "Seek / direct to hotels"
+ },
+ "Seek / malls directos": {
+  "pt": "Seek / shoppings diretos",
+  "en": "Seek / direct to malls"
+ },
+ "LinkedIn / hotels directos": {
+  "pt": "LinkedIn / hotéis diretos",
+  "en": "LinkedIn / direct to hotels"
+ },
+ "LinkedIn / empresas directas": {
+  "pt": "LinkedIn / empresas diretas",
+  "en": "LinkedIn / direct to companies"
+ },
+ "LinkedIn / portales especializados": {
+  "pt": "LinkedIn / portais especializados",
+  "en": "LinkedIn / specialised portals"
+ },
+ "LinkedIn, malls directos": {
+  "pt": "LinkedIn, shoppings diretos",
+  "en": "LinkedIn, direct to malls"
+ },
+ "LinkedIn, Bayt, hoteles directos": {
+  "pt": "LinkedIn, Bayt, hotéis diretos",
+  "en": "LinkedIn, Bayt, direct to hotels"
+ },
+ "Trade Me Jobs / malls": {
+  "pt": "Trade Me Jobs / shoppings",
+  "en": "Trade Me Jobs / malls"
+ },
+ "Europa": {
+  "pt": "Europa",
+  "en": "Europe"
+ },
+ "Online": {
+  "pt": "Online",
+  "en": "Online"
+ },
+ "Master": {
+  "pt": "Mestrado",
+  "en": "Master's"
+ },
+ "Master (MBA)": {
+  "pt": "Mestrado (MBA)",
+  "en": "Master's (MBA)"
+ },
+ "Bachelor / Master": {
+  "pt": "Licenciatura / Mestrado",
+  "en": "Bachelor's / Master's"
+ },
+ "Diploma / Bachelor": {
+  "pt": "Diploma / Licenciatura",
+  "en": "Diploma / Bachelor's"
+ },
+ "Seguridad": {
+  "pt": "Segurança",
+  "en": "Security"
+ },
+ "Centro": {
+  "pt": "Centro",
+  "en": "Centre"
+ },
+ "Latinos Australia": {
+  "pt": "Latinos na Austrália",
+  "en": "Latinos in Australia"
+ },
+ "Latinos Canadá": {
+  "pt": "Latinos no Canadá",
+  "en": "Latinos in Canada"
+ },
+ "Latinos Dubái": {
+  "pt": "Latinos em Dubai",
+  "en": "Latinos in Dubai"
+ },
+ "Latinos España": {
+  "pt": "Latinos na Espanha",
+  "en": "Latinos in Spain"
+ },
+ "Latinos Georgia": {
+  "pt": "Latinos na Geórgia",
+  "en": "Latinos in Georgia"
+ },
+ "Latinos Irlanda": {
+  "pt": "Latinos na Irlanda",
+  "en": "Latinos in Ireland"
+ },
+ "Latinos Italia": {
+  "pt": "Latinos na Itália",
+  "en": "Latinos in Italy"
+ },
+ "Latinos Malta": {
+  "pt": "Latinos em Malta",
+  "en": "Latinos in Malta"
+ },
+ "Latinos Nueva Zelanda": {
+  "pt": "Latinos na Nova Zelândia",
+  "en": "Latinos in New Zealand"
+ },
+ "Latinos Portugal": {
+  "pt": "Latinos em Portugal",
+  "en": "Latinos in Portugal"
+ },
+ "🇦🇺 Australia": {
+  "pt": "🇦🇺 Austrália",
+  "en": "🇦🇺 Australia"
+ },
+ "🇳🇿 Nueva Zelanda": {
+  "pt": "🇳🇿 Nova Zelândia",
+  "en": "🇳🇿 New Zealand"
+ },
+ "🇬🇪 Georgia": {
+  "pt": "🇬🇪 Geórgia",
+  "en": "🇬🇪 Georgia"
+ },
+ "🇭🇷 Croacia": {
+  "pt": "🇭🇷 Croácia",
+  "en": "🇭🇷 Croatia"
+ },
+ "🇺🇸 EE.UU.": {
+  "pt": "🇺🇸 EUA",
+  "en": "🇺🇸 USA"
+ },
+ "🇪🇺 Europeos → Latam/Asia": {
+  "pt": "🇪🇺 Europeus → América Latina/Ásia",
+  "en": "🇪🇺 Europeans → Latin America/Asia"
+ },
+ "🟢 LATAM Premium/Medio → Europa": {
+  "pt": "🟢 América Latina Premium/Médio → Europa",
+  "en": "🟢 LATAM Premium/Mid → Europe"
+ },
+ "⚪ Recomendado": {
+  "pt": "⚪ Recomendado",
+  "en": "⚪ Recommended"
+ },
+ "⚪ Recomendado $3k-$5k": {
+  "pt": "⚪ Recomendado $3k-$5k",
+  "en": "⚪ Recommended $3k-$5k"
+ },
+ "Georgia": {
+  "pt": "Geórgia",
+  "en": "Georgia"
+ },
+ "Portugal": {
+  "pt": "Portugal",
+  "en": "Portugal"
+ },
+ "Dubai": {
+  "pt": "Dubai",
+  "en": "Dubai"
+ },
+ "Cuarto": {
+  "pt": "Quarto",
+  "en": "Room"
  }
 }
