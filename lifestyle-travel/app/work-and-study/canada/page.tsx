@@ -40,6 +40,7 @@ const translations = {
     premium_badge: '⭐ Blueprint Completo — PREMIUM',
     sec_estrategia_title: 'Estrategia y Presupuesto: Selección de Academia',
     estrategia_intro: 'En Canadá la escuela se elige por ubicación y ejecución: cerca de zonas laborales y transporte público en ciudades como Toronto, Vancouver o Montreal, donde es más realista conseguir trabajo siendo estudiante.',
+    precios_nota: 'Solo ILSC está verificado con su lista oficial 2026: curso de 24 semanas en CAD, sin extras (matrícula CAD $220 y materiales CAD $360). Las demás cifras son estimadas, confirma el precio actual con cada escuela.',
     estrategia_head: '🇨🇦 Matriz de Escuelas de Inglés: Canadá 2026',
     th_inst: 'Institución', th_loc: 'Ubicación', th_precio: 'Precio (24 semanas)', th_web: 'Website',
     solvencia1_label: '🔴 Solvencia obligatoria:',
@@ -216,6 +217,7 @@ const translations = {
     premium_badge: '⭐ Blueprint Completo — PREMIUM',
     sec_estrategia_title: 'Estratégia e Orçamento: Seleção de Academia',
     estrategia_intro: 'No Canadá a escola se escolhe por localização e execução: perto de zonas de trabalho e transporte público em cidades como Toronto, Vancouver ou Montreal, onde é mais realista conseguir trabalho sendo estudante.',
+    precios_nota: 'Só a ILSC está verificada com a lista oficial de 2026: curso de 24 semanas em CAD, sem extras (matrícula CAD $220 e materiais CAD $360). Os demais valores são estimados, confirme o preço atual com cada escola.',
     estrategia_head: '🇨🇦 Matriz de Escolas de Inglês: Canadá 2026',
     th_inst: 'Instituição', th_loc: 'Localização', th_precio: 'Preço (24 semanas)', th_web: 'Website',
     solvencia1_label: '🔴 Solvência obrigatória:',
@@ -392,6 +394,7 @@ const translations = {
     premium_badge: '⭐ Complete Blueprint — PREMIUM',
     sec_estrategia_title: 'Strategy & Budget: School Selection',
     estrategia_intro: 'In Canada the school is chosen by location and execution: near work areas and public transport in cities like Toronto, Vancouver or Montreal, where it\'s more realistic to find work as a student.',
+    precios_nota: 'Only ILSC is verified against its official 2026 price list: 24-week course in CAD, extras not included (registration CAD $220 and materials CAD $360). The other figures are estimates, so confirm the current price with each school.',
     estrategia_head: '🇨🇦 English Schools Matrix: Canada 2026',
     th_inst: 'Institution', th_loc: 'Location', th_precio: 'Price (24 weeks)', th_web: 'Website',
     solvencia1_label: '🔴 Mandatory funds:',
@@ -693,12 +696,13 @@ export default function Canada() {
         <Section id="estrategia" emoji="🏷️" title={t.sec_estrategia_title}>
           <Intro text={t.estrategia_intro} />
           <SubHead text={t.estrategia_head} />
+          <p style={{ fontSize: '13px', color: '#1a1a2e', marginBottom: '10px', lineHeight: '1.6' }}>{t.precios_nota}</p>
           <div style={T.wrap}>
             <table style={T.table}>
               <thead><tr>{[t.th_inst, t.th_loc, t.th_precio, t.th_web].map((h, i) => <th key={i} style={T.th}>{h}</th>)}</tr></thead>
               <tbody>
                 {trRows([
-                  ['ILSC Language Schools', 'Toronto / Vancouver', '$3,200 – $4,200', 'ilsc.com', 'https://ilsc.com'],
+                  ['ILSC Language Schools', 'Toronto / Vancouver', 'CAD $8,640 – $11,040', 'ilsc.com', 'https://ilsc.com'],
                   ['Oxford International', 'Toronto / Vancouver', '$3,200 – $4,100', 'oxfordinternationalenglish.com', 'https://oxfordinternationalenglish.com'],
                   ['Kaplan International', 'Toronto / Vancouver', '$3,400 – $4,500', 'kaplaninternational.com', 'https://kaplaninternational.com'],
                   ['ILAC', 'Toronto / Vancouver', '$3,500 – $4,800', 'ilac.com', 'https://ilac.com'],

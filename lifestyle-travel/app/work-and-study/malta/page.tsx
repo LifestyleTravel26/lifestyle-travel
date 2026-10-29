@@ -39,7 +39,7 @@ const translations = {
     sec_estrategia_title: 'Estrategia y Presupuesto: Selección de Academia',
     estrategia_intro: 'Elegir bien tu escuela es la decisión financiera más importante. Las escuelas AM son más caras pero te dejan las tardes libres para trabajar. Las PM son más baratas y liberan las mañanas. Malta tiene opciones en St. Julian\'s (más empleo), Gozo (más económico) y Sliema.',
     estrategia_head: '🇲🇹 Matriz de Escuelas de Inglés: Malta 2026',
-    estrategia_sub: '10 escuelas verificadas ordenadas por precio. AM = turno mañana, PM = turno tarde.',
+    estrategia_sub: '10 escuelas ordenadas por precio. AM = turno mañana, PM = turno tarde. International House está verificada con su lista oficial (curso de 25 semanas, temporada baja–alta, más €75 de matrícula); las demás cifras son estimadas, confirma con cada escuela.',
     th_inst: 'Institución', th_loc: 'Ubicación', th_am: 'Precio AM (25 sem)', th_pm: 'Precio PM (25 sem)', th_web: 'Website',
     solvencia1_label: '🔵 Solvencia con alojamiento pagado:',
     solvencia1_val: '€28/día → aprox. €5,040 para 6 meses',
@@ -215,7 +215,7 @@ const translations = {
     sec_estrategia_title: 'Estratégia e Orçamento: Seleção de Academia',
     estrategia_intro: 'Escolher bem sua escola é a decisão financeira mais importante. As escolas AM são mais caras mas deixam as tardes livres para trabalhar. As PM são mais baratas e liberam as manhãs. Malta tem opções em St. Julian\'s (mais emprego), Gozo (mais econômico) e Sliema.',
     estrategia_head: '🇲🇹 Matriz de Escolas de Inglês: Malta 2026',
-    estrategia_sub: '10 escolas verificadas ordenadas por preço. AM = turno manhã, PM = turno tarde.',
+    estrategia_sub: '10 escolas ordenadas por preço. AM = turno manhã, PM = turno tarde. A International House está verificada com a lista oficial (curso de 25 semanas, temporada baixa–alta, mais €75 de matrícula); os demais valores são estimados, confirme com cada escola.',
     th_inst: 'Instituição', th_loc: 'Localização', th_am: 'Preço AM (25 sem)', th_pm: 'Preço PM (25 sem)', th_web: 'Website',
     solvencia1_label: '🔵 Solvência com alojamento pago:',
     solvencia1_val: '€28/dia → aprox. €5.040 para 6 meses',
@@ -391,7 +391,7 @@ const translations = {
     sec_estrategia_title: 'Strategy & Budget: School Selection',
     estrategia_intro: 'Choosing the right school is the most important financial decision. AM schools are more expensive but leave afternoons free to work. PM schools are cheaper and free up mornings. Malta has options in St. Julian\'s (more employment), Gozo (more affordable) and Sliema.',
     estrategia_head: '🇲🇹 English Schools Matrix: Malta 2026',
-    estrategia_sub: '10 verified schools ordered by price. AM = morning shift, PM = afternoon shift.',
+    estrategia_sub: '10 schools ordered by price. AM = morning shift, PM = afternoon shift. International House is verified against its official price list (25-week course, low–high season, plus €75 registration); the other figures are estimates, so confirm with each school.',
     th_inst: 'Institution', th_loc: 'Location', th_am: 'AM Price (25 wks)', th_pm: 'PM Price (25 wks)', th_web: 'Website',
     solvencia1_label: '🔵 Funds with paid accommodation:',
     solvencia1_val: '€28/day → approx. €5,040 for 6 months',
@@ -700,7 +700,6 @@ export default function Malta() {
               <tbody>
                 {trRows([
                   ['Gateway School (GSE)', "St. Julian's", '€2,500 – €2,850', '€2,200 – €2,400', 'english-malta.com', 'https://english-malta.com'],
-                  ['International House Malta', "St. Julian's", '€2,800 – €3,200', '€2,400 – €2,700', 'ihmalta.com', 'https://ihmalta.com'],
                   ['BELS Malta', 'Gozo / St Paul\'s Bay', '€2,900 – €3,300', '€2,500 – €2,800', 'belsmalta.com', 'https://belsmalta.com'],
                   ['English Path (EP)', "St. Julian's", '€3,100 – €3,600', '€2,650 – €3,000', 'englishpath.com', 'https://englishpath.com'],
                   ['Clubclass Malta', 'Swieqi', '€3,250 – €3,700', '€2,800 – €3,200', 'clubclass.com', 'https://clubclass.com'],
@@ -709,6 +708,7 @@ export default function Malta() {
                   ['ACE English Malta', "St. Julian's", '€3,500 – €3,900', '€3,200 – €3,500', 'aceenglishmalta.com', 'https://aceenglishmalta.com'],
                   ['ESE Malta', "St. Julian's", '€3,600 – €4,000', '€3,200 – €3,600', 'ese-edu.com', 'https://ese-edu.com'],
                   ['Malta University Language School', 'Lija', '€3,800 – €4,200', '€3,400 – €3,700', 'universitylanguageschool.com', 'https://universitylanguageschool.com'],
+                  ['International House Malta', "St. Julian's", '€3,980 – €4,760', '—', 'ihmalta.com', 'https://ihmalta.com'],
                 ], locale).map((r, i) => (
                   <tr key={i}>
                     <td style={{ ...T.td(i), ...T.bold }}>{r[0]}</td>
