@@ -187,7 +187,7 @@ export function SignupForm() {
       email,
       password,
       options: {
-        data: { full_name: name.trim() },
+        data: { full_name: name.trim(), locale },
         emailRedirectTo: `${window.location.origin}/auth/callback?next=${encodeURIComponent(redirectTo)}`,
       },
     });
