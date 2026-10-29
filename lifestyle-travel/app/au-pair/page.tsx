@@ -725,6 +725,7 @@ export default function AuPair() {
                   ['Curso de idiomas (España/Suiza/Austria)', '$1,500 – $3,500 USD/año (en España lo paga la au pair)', '✅ Si aplica'],
                   ['Traducciones y apostillas', '€50 – €150', '✅ Sí'],
                   ['Agencia (según país)', 'Suiza: gratis o hasta ~$300 · Austria: hasta ~$200 · Países Bajos: no pueden cobrarte · Bélgica: mínima · España: €250 – €400 · Australia: ~$500 – $1,000', '✅ Según país'],
+                  ['Permiso de residencia (Países Bajos)', '€423 (lo paga la familia o la agencia, no la au pair)', '❌ No, lo cubre la familia'],
                   ['Working With Children Check (Australia)', 'A$80 – A$160 (normalmente lo cubre o reembolsa la familia)', '✅ Sí, en Australia'],
                   ['Biometría o exámenes médicos', '€50 – €200', '✅ Si requerido'],
                   ['Boleto de avión', '€400 – €1,200 (vuelos + seguro: $600 – $1,500 USD)', '✅ Sí'],
