@@ -466,6 +466,20 @@ const translations = {
   },
 }
 
+const COWORK_HUBS: { city: string; spaces: [string, string][] }[] = [
+  { city: 'Tbilisi', spaces: [['Impact Hub Tbilisi', ''], ['Fabrika', '']] },
+  { city: 'Barcelona Madrid', spaces: [['WeWork', 'https://www.wework.com'], ['Utopicus', 'https://utopicus.es']] },
+  { city: 'Lisboa', spaces: [['Second Home', 'https://secondhome.io'], ['Heden', '']] },
+  { city: 'Medellín', spaces: [['Selina', ''], ['Atomhouse', '']] },
+  { city: 'Ciudad de México', spaces: [['WeWork', 'https://www.wework.com'], ['Comunal', '']] },
+  { city: 'San José Costa Rica', spaces: [['La Maquila', ''], ['Impact Hub', '']] },
+]
+const COWORK_LABELS = {
+  es: { spaces: 'Coworkings', community: 'Comunidades' },
+  pt: { spaces: 'Coworkings', community: 'Comunidades' },
+  en: { spaces: 'Coworkings', community: 'Communities' },
+}
+
 export default function NomadaDigital() {
   const [openSection, setOpenSection] = useState<string | null>(null)
   const toggle = (s: string) => setOpenSection(openSection === s ? null : s)
@@ -656,12 +670,35 @@ export default function NomadaDigital() {
         <Section id="coworking" emoji="💼" title={t.sec_coworking_title}>
           <Intro text={t.coworking_intro} />
           <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
-            {t.coworking_items.map((item, i) => (
-              <div key={i} style={{ backgroundColor: '#f0fdf4', borderRadius: '10px', padding: '12px 14px', borderLeft: '3px solid #22c55e' }}>
-                <p style={{ fontWeight: '700', fontSize: '13px', color: '#166534', margin: '0 0 3px' }}>{item[0]}</p>
-                <p style={{ fontSize: '12px', color: '#1a1a2e', margin: 0 }}>{item[1]}</p>
-              </div>
-            ))}
+            {t.coworking_items.map((item, i) => {
+              const hub = COWORK_HUBS[i]
+              const maps = (n: string) => `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(n.includes(hub?.city ?? '#') ? n : n + ' ' + (hub?.city ?? ''))}`
+              const linkStyle = { color: '#166534', fontSize: '12px', fontWeight: '600' as const, textDecoration: 'none', borderBottom: '1px dashed #22c55e', marginRight: '12px', display: 'inline-block', marginTop: '2px' }
+              const lbl = { fontSize: '11px', fontWeight: '700' as const, color: '#6b7280', textTransform: 'uppercase' as const, letterSpacing: '0.06em', margin: '8px 0 2px' }
+              return (
+                <div key={i} style={{ backgroundColor: '#f0fdf4', borderRadius: '10px', padding: '12px 14px', borderLeft: '3px solid #22c55e' }}>
+                  <p style={{ fontWeight: '700', fontSize: '13px', color: '#166534', margin: '0 0 3px' }}>{item[0]}</p>
+                  {hub ? (
+                    <>
+                      <p style={lbl}>{COWORK_LABELS[locale].spaces}</p>
+                      <div>
+                        {hub.spaces.map(([n, u]) => (
+                          <a key={n} href={u || maps(n)} target="_blank" rel="noopener noreferrer" style={linkStyle}>{n} ↗</a>
+                        ))}
+                      </div>
+                      <p style={lbl}>{COWORK_LABELS[locale].community}</p>
+                      <div>
+                        <a href={`https://www.facebook.com/search/groups/?q=${encodeURIComponent('digital nomads ' + hub.city)}`} target="_blank" rel="noopener noreferrer" style={linkStyle}>Facebook ↗</a>
+                        <a href={`https://www.meetup.com/find/?keywords=${encodeURIComponent('digital nomads')}&location=${encodeURIComponent(hub.city)}`} target="_blank" rel="noopener noreferrer" style={linkStyle}>Meetup ↗</a>
+                        <a href="https://nomadlist.com" target="_blank" rel="noopener noreferrer" style={linkStyle}>Nomad List ↗</a>
+                      </div>
+                    </>
+                  ) : (
+                    <p style={{ fontSize: '12px', color: '#1a1a2e', margin: 0 }}>{item[1]}</p>
+                  )}
+                </div>
+              )
+            })}
           </div>
         </Section>
 
