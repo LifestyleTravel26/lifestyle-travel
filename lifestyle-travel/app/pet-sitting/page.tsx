@@ -461,12 +461,12 @@ export default function PetSitting() {
     </div>
   )
   const T = {
-    wrap: { overflowX: 'auto' as const, marginTop: '12px', borderRadius: '10px', border: '1px solid #e5e7eb' },
-    table: { width: '100%', borderCollapse: 'collapse' as const, minWidth: '400px' },
-    th: { backgroundColor: '#1e3a5f', color: 'white', padding: '10px 14px', textAlign: 'left' as const, fontSize: '13px', fontWeight: '700' as const, whiteSpace: 'nowrap' as const },
-    td: (i: number) => ({ padding: '9px 14px', fontSize: '13px', borderBottom: '1px solid #f0f0f0', backgroundColor: i % 2 === 0 ? 'white' : '#fafafa', lineHeight: '1.4', color: '#1a1a2e' }),
-    link: { color: '#2563eb', textDecoration: 'underline' as const, fontSize: '13px' },
-    bold: { fontWeight: '700' as const },
+    wrap: { overflowX: 'auto' as const, marginTop: '14px', borderRadius: '14px', border: '1px solid #ececf2', boxShadow: '0 4px 18px rgba(26,26,46,0.08)', backgroundColor: 'white' },
+    table: { width: '100%', borderCollapse: 'separate' as const, borderSpacing: 0, minWidth: '400px' },
+    th: { background: 'linear-gradient(135deg,#1a1a2e,#2d2d52)', color: 'white', padding: '13px 16px', textAlign: 'left' as const, fontSize: '11px', fontWeight: '700' as const, whiteSpace: 'nowrap' as const, textTransform: 'uppercase' as const, letterSpacing: '0.08em', borderBottom: '3px solid #e8572a' },
+    td: (i: number) => ({ padding: '13px 16px', fontSize: '13.5px', borderBottom: '1px solid #f1f1f5', backgroundColor: i % 2 === 0 ? 'white' : '#fbfaf8', lineHeight: '1.45', color: '#33334d' }),
+    link: { color: '#e8572a', textDecoration: 'none' as const, cursor: 'pointer' as const, fontSize: '12.5px', fontWeight: '600' as const, borderBottom: '1px dashed #e8572a' },
+    bold: { fontWeight: '700' as const, color: '#1a1a2e', letterSpacing: '0.01em', boxShadow: 'inset 3px 0 0 #e8572a', paddingLeft: '18px', minWidth: '170px' },
   }
   const Section = ({ id, emoji, title, children }: any) => (
     <div style={{ border: '2px solid #f59e0b', borderRadius: '12px', marginBottom: '10px', overflow: 'hidden' }}>
