@@ -41,7 +41,7 @@ const translations = {
     sec_estrategia_title: 'Estrategia y Presupuesto: Selección de Academia',
     estrategia_intro: 'Elegir bien tu escuela es la decisión financiera más importante de tu proceso. No se trata solo de estudiar — es tu inversión base que determina tu velocidad de inserción laboral. Las escuelas AM son más caras pero te dejan las tardes libres para trabajar. Las PM son más baratas y te dejan las mañanas libres.',
     dublin_head: '🇮🇪 Matriz: Dublín (Sede Central)',
-    dublin_sub: '15 escuelas en Dublín: primero Seda College (escuela aliada) y luego las demás ordenadas por precio. AM = turno mañana (más caro), PM = turno tarde (más barato y libera mañanas para trabajar). Precios para primer ingreso (primera visa, desde el extranjero); si renuevas dentro de Irlanda los precios de las escuelas son distintos, pídelos a la escuela. Curso de 25 semanas; los extras van aparte (ej. IBAT: matrícula €70, materiales €50, PEL €35, seguro médico €145, examen TIE €120).',
+    dublin_sub: '15 escuelas en Dublín: primero Seda College (escuela aliada) y luego las demás ordenadas por precio. AM = turno mañana (más caro), PM = turno tarde (más barato y libera mañanas para trabajar). Precios para primer ingreso (primera visa, desde el extranjero); si renuevas dentro de Irlanda los precios de las escuelas son distintos, pídelos a la escuela. Curso de 25 semanas; los extras van aparte (ej. IBAT: matrícula €70, materiales €50, PEL €35, seguro médico €145, examen TIE €120). El precio de Seda ya incluye seguro médico, libro y examen internacional.',
     th_inst: 'Institución', th_loc: 'Ubicación', th_am: 'Precio AM', th_usd: '≈ USD', th_pm: 'Precio PM', th_web: 'Website',
     limerick_head: '☘️ Matriz: Limerick (Optimización de costos)',
     limerick_sub: 'Limerick es la segunda ciudad universitaria de Irlanda. Renta más barata (€100-200/mes menos que Dublín), menor competencia laboral y escuelas más económicas. Ideal si tu prioridad es ahorrar.',
@@ -223,7 +223,7 @@ const translations = {
     sec_estrategia_title: 'Estratégia e Orçamento: Seleção de Academia',
     estrategia_intro: 'Escolher bem sua escola é a decisão financeira mais importante do seu processo. Não se trata apenas de estudar — é seu investimento base que determina sua velocidade de inserção no mercado de trabalho. As escolas AM são mais caras mas deixam as tardes livres para trabalhar. As PM são mais baratas e liberam as manhãs.',
     dublin_head: '🇮🇪 Matriz: Dublin (Sede Central)',
-    dublin_sub: '15 escolas em Dublin: primeiro a Seda College (escola parceira) e depois as demais ordenadas por preço. AM = turno manhã (mais caro), PM = turno tarde (mais barato e libera manhãs para trabalhar). Preços para primeiro ingresso (primeiro visto, do exterior); na renovação dentro da Irlanda os preços das escolas são diferentes, peça à escola. Curso de 25 semanas; os extras são à parte (ex. IBAT: matrícula €70, materiais €50, PEL €35, seguro saúde €145, exame TIE €120).',
+    dublin_sub: '15 escolas em Dublin: primeiro a Seda College (escola parceira) e depois as demais ordenadas por preço. AM = turno manhã (mais caro), PM = turno tarde (mais barato e libera manhãs para trabalhar). Preços para primeiro ingresso (primeiro visto, do exterior); na renovação dentro da Irlanda os preços das escolas são diferentes, peça à escola. Curso de 25 semanas; os extras são à parte (ex. IBAT: matrícula €70, materiais €50, PEL €35, seguro saúde €145, exame TIE €120). O preço da Seda já inclui seguro saúde, livro e exame internacional.',
     th_inst: 'Instituição', th_loc: 'Localização', th_am: 'Preço AM', th_usd: '≈ USD', th_pm: 'Preço PM', th_web: 'Website',
     limerick_head: '☘️ Matriz: Limerick (Otimização de custos)',
     limerick_sub: 'Limerick é a segunda cidade universitária da Irlanda. Aluguel mais barato (€100-200/mês menos que Dublin), menor concorrência no mercado de trabalho e escolas mais econômicas. Ideal se sua prioridade é economizar.',
@@ -405,7 +405,7 @@ const translations = {
     sec_estrategia_title: 'Strategy & Budget: School Selection',
     estrategia_intro: 'Choosing the right school is the most important financial decision of your process. It\'s not just about studying — it\'s your base investment that determines your speed of job placement. AM schools are more expensive but leave afternoons free to work. PM schools are cheaper and free up mornings.',
     dublin_head: '🇮🇪 Matrix: Dublin (Main Hub)',
-    dublin_sub: '15 schools in Dublin: Seda College (partner school) first, then the rest ordered by price. AM = morning shift (more expensive), PM = afternoon shift (cheaper and frees mornings to work). Prices are for first-time entry (first visa, from abroad); renewal prices inside Ireland are different, so ask the school. 25-week course; extras are separate (e.g. IBAT: registration €70, materials €50, PEL €35, medical insurance €145, TIE exam €120).',
+    dublin_sub: '15 schools in Dublin: Seda College (partner school) first, then the rest ordered by price. AM = morning shift (more expensive), PM = afternoon shift (cheaper and frees mornings to work). Prices are for first-time entry (first visa, from abroad); renewal prices inside Ireland are different, so ask the school. 25-week course; extras are separate (e.g. IBAT: registration €70, materials €50, PEL €35, medical insurance €145, TIE exam €120). The Seda price already includes medical insurance, the book and the international exam.',
     th_inst: 'Institution', th_loc: 'Location', th_am: 'AM Price', th_usd: '≈ USD', th_pm: 'PM Price', th_web: 'Website',
     limerick_head: '☘️ Matrix: Limerick (Cost Optimization)',
     limerick_sub: 'Limerick is Ireland\'s second university city. Cheaper rent (€100-200/month less than Dublin), lower job competition and more affordable schools. Ideal if saving money is your priority.',
@@ -712,7 +712,7 @@ export default function Irlanda() {
               <thead><tr>{[t.th_inst, t.th_loc, t.th_am, t.th_usd, t.th_pm, t.th_usd, t.th_web].map((h, i) => <th key={i} style={T.th}>{h}</th>)}</tr></thead>
               <tbody>
                 {trRows([
-                  ['Seda College', 'Dublin 1', '€3,300', '$3,630', '€3,000', '$3,300', 'seda.college', 'https://seda.college'],
+                  ['Seda College', 'Dublin 1', '€2,550', '$2,805', '€2,150', '$2,365', 'seda.college', 'https://seda.college'],
                   ['IBAT College Dublin', 'Dublin 2', '€2,910', '$3,200', '€2,495', '$2,745', 'ibat.ie', 'https://ibat.ie'],
                   ['Active Language Learning', 'Dublin 1', '€3,000', '$3,300', '€2,700', '$2,970', 'all.ie', 'https://all.ie'],
                   ['Central School of English', 'Dublin', '€3,000', '$3,300', '€2,700', '$2,970', 'centralschool.ie', 'https://centralschool.ie'],
