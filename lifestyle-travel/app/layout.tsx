@@ -31,10 +31,12 @@ export default function RootLayout({
   return (
     <html
       lang="es"
-      style={{ colorScheme: 'light' }}
+      style={{ colorScheme: 'only light', backgroundColor: '#ffffff', color: '#171717' }}
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <head>
+        <meta name="color-scheme" content="only light" />
+        <meta name="supported-color-schemes" content="light" />
         <meta name="theme-color" content="#1a1a2e" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
