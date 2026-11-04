@@ -22,7 +22,7 @@ const translations = {
       'Emirates ID para estudiantes universitarios — la llave para banco, contratos y trabajo en Dubái',
       'Sin solvencia bancaria obligatoria — el pago del curso actúa como garantía',
       '10 escuelas verificadas en JLT, Knowledge Park y Business Bay',
-      'Acceso a universidades internacionales con campus en Dubái (Canadian University Dubai, Amity, Manipal y otras)',
+      'Acceso a universidades internacionales con campus en Dubái (como Canadian University Dubai)',
       'Comunidad latina activa — grupos de WhatsApp para vivienda y trabajo',
     ],
     sec_autoridad_title: 'Encabezado de Autoridad',
@@ -47,7 +47,7 @@ const translations = {
     sec_pre_title: 'Pre-Foundations & Pre-Careers',
     pre_intro: 'Los programas de preparación académica en Dubái abren la puerta a universidades internacionales con títulos reconocidos globalmente. Al graduarte puedes acceder a empleo profesional en Business, Finanzas, Tecnología y Turismo.',
     th_prog: 'Institución', th_programa: 'Programa', th_duracion: 'Duración', th_precio_prog: 'Precio',
-    pre_blue: '🔵 UNIVERSIDADES INTERNACIONALES: Dubái tiene campus de universidades de distintos países en Dubai Knowledge Park y Dubai International Academic City. Algunas son sucursales de universidades indias (Amity, Manipal) y otras tienen respaldo canadiense o británico: pregunta qué título recibes y quién lo respalda antes de matricularte.',
+    pre_blue: '🔵 UNIVERSIDADES EN DUBÁI: Dubái tiene campus de universidades internacionales en Dubai Knowledge Park y Dubai International Academic City. Pregunta siempre qué título recibes, quién lo respalda y si está acreditado localmente (KHDA / CAA) antes de matricularte.',
     pre_hack: 'Estudiar en una universidad en Dubái es la vía que da visa de residencia de estudiante y Emirates ID. Compara con la universidad el título que recibes, su acreditación local (KHDA / CAA) y el costo total antes de decidir.',
     sec_edu_title: 'Educación Superior',
     edu_intro: 'Dubái tiene universidades internacionales de primer nivel con títulos reconocidos globalmente. Muchos graduados logran transicionar a una Employment Visa patrocinada por empresas multinacionales.',
@@ -55,7 +55,7 @@ const translations = {
     th_programas: 'Programas', th_anual: 'Precio anual', th_total: 'Precio total',
     edu_master_head: '⭐ Masters (MBA y MSc)',
     th_programa_m: 'Programa',
-    edu_hack: 'Precios de Amity y Canadian University Dubai tomados de sus listas 2025-26 (en AED, convertidos a USD; pueden subir hasta 10% al año). University of Bolton opera en Ras Al Khaimah, no en Dubái: confirma precio y sede con la universidad antes de decidir.',
+    edu_hack: 'Precios de Canadian University Dubai tomados de su lista 2025-26 (en AED, convertidos a USD; pueden subir hasta 10% al año). Confirma el precio actual con la universidad antes de decidir.',
     sec_gastos_title: 'Gastos Obligatorios No Incluidos',
     gastos_intro: 'Dubái tiene una ventaja única: NO se exige solvencia bancaria fija como en Europa. Los gastos principales son el paquete de visa y los exámenes médicos obligatorios.',
     th_concepto: 'Concepto', th_costo: 'Costo (USD)', th_oblig: 'Obligatorio',
@@ -193,7 +193,7 @@ const translations = {
       'Emirates ID para estudantes universitários — a chave para banco, contratos e trabalho em Dubai',
       'Sem solvência bancária obrigatória — o pagamento do curso atua como garantia',
       '10 escolas verificadas em JLT, Knowledge Park e Business Bay',
-      'Acesso a universidades internacionais com campus em Dubai (Canadian University Dubai, Amity, Manipal e outras)',
+      'Acesso a universidades internacionais com campus em Dubai (como a Canadian University Dubai)',
       'Comunidade latina ativa — grupos de WhatsApp para moradia e trabalho',
     ],
     sec_autoridad_title: 'Cabeçalho de Autoridade',
@@ -218,7 +218,7 @@ const translations = {
     sec_pre_title: 'Pré-Fundações & Pré-Carreiras',
     pre_intro: 'Os programas de preparação acadêmica em Dubai abrem a porta para universidades internacionais com títulos reconhecidos globalmente. Ao se formar você pode acessar emprego profissional em Business, Finanças, Tecnologia e Turismo.',
     th_prog: 'Instituição', th_programa: 'Programa', th_duracion: 'Duração', th_precio_prog: 'Preço',
-    pre_blue: '🔵 UNIVERSIDADES INTERNACIONAIS: Dubai tem campi de universidades de vários países no Dubai Knowledge Park e no Dubai International Academic City. Algumas são filiais de universidades indianas (Amity, Manipal) e outras têm respaldo canadense ou britânico: pergunte qual diploma você recebe e quem o respalda antes de se matricular.',
+    pre_blue: '🔵 UNIVERSIDADES EM DUBAI: Dubai tem campi de universidades internacionais no Dubai Knowledge Park e no Dubai International Academic City. Pergunte sempre qual diploma você recebe, quem o respalda e se é credenciado localmente (KHDA / CAA) antes de se matricular.',
     pre_hack: 'Estudar em uma universidade em Dubai é o caminho que dá visto de residência de estudante e Emirates ID. Compare com a universidade o diploma que você recebe, a acreditação local (KHDA / CAA) e o custo total antes de decidir.',
     sec_edu_title: 'Educação Superior',
     edu_intro: 'Dubai tem universidades internacionais de primeiro nível com títulos reconhecidos globalmente. Muitos graduados conseguem transicionar para um Employment Visa patrocinado por empresas multinacionais.',
@@ -226,7 +226,7 @@ const translations = {
     th_programas: 'Programas', th_anual: 'Preço anual', th_total: 'Preço total',
     edu_master_head: '⭐ Masters (MBA e MSc)',
     th_programa_m: 'Programa',
-    edu_hack: 'Preços de Amity e Canadian University Dubai tirados das listas 2025-26 (em AED, convertidos para USD; podem subir até 10% ao ano). A University of Bolton opera em Ras Al Khaimah, não em Dubai: confirme preço e sede com a universidade antes de decidir.',
+    edu_hack: 'Preços da Canadian University Dubai tirados da lista 2025-26 (em AED, convertidos para USD; podem subir até 10% ao ano). Confirme o preço atual com a universidade antes de decidir.',
     sec_gastos_title: 'Despesas Obrigatórias Não Incluídas',
     gastos_intro: 'Dubai tem uma vantagem única: NÃO se exige solvência bancária fixa como na Europa. As principais despesas são o pacote de visto e os exames médicos obrigatórios.',
     th_concepto: 'Conceito', th_costo: 'Custo (USD)', th_oblig: 'Obrigatório',
@@ -364,7 +364,7 @@ const translations = {
       'Emirates ID for university students — the key for bank, contracts and work in Dubai',
       'No mandatory bank balance required — course payment acts as guarantee',
       '10 verified schools in JLT, Knowledge Park and Business Bay',
-      'Access to international universities with campuses in Dubai (Canadian University Dubai, Amity, Manipal and others)',
+      'Access to international universities with campuses in Dubai (such as Canadian University Dubai)',
       'Active Latin community — WhatsApp groups for housing and work',
     ],
     sec_autoridad_title: 'Authority Header',
@@ -389,7 +389,7 @@ const translations = {
     sec_pre_title: 'Pre-Foundations & Pre-Careers',
     pre_intro: 'Academic preparation programs in Dubai open the door to international universities with globally recognized degrees. Upon graduating you can access professional employment in Business, Finance, Technology and Tourism.',
     th_prog: 'Institution', th_programa: 'Program', th_duracion: 'Duration', th_precio_prog: 'Price',
-    pre_blue: '🔵 INTERNATIONAL UNIVERSITIES: Dubai has campuses of universities from several countries in Dubai Knowledge Park and Dubai International Academic City. Some are branches of Indian universities (Amity, Manipal) and others have Canadian or British backing: ask which degree you receive and who backs it before enrolling.',
+    pre_blue: '🔵 UNIVERSITIES IN DUBAI: Dubai has international university campuses in Dubai Knowledge Park and Dubai International Academic City. Always ask which degree you receive, who backs it and whether it is locally accredited (KHDA / CAA) before enrolling.',
     pre_hack: 'Studying at a university in Dubai is the route that gives a student residence visa and Emirates ID. Compare with the university the degree you receive, its local accreditation (KHDA / CAA) and the total cost before deciding.',
     sec_edu_title: 'Higher Education',
     edu_intro: 'Dubai has top-tier international universities with globally recognized degrees. Many graduates manage to transition to an Employment Visa sponsored by multinational companies.',
@@ -397,7 +397,7 @@ const translations = {
     th_programas: 'Programs', th_anual: 'Annual price', th_total: 'Total price',
     edu_master_head: '⭐ Masters (MBA and MSc)',
     th_programa_m: 'Program',
-    edu_hack: 'Amity and Canadian University Dubai prices come from their 2025-26 fee lists (in AED, converted to USD; they can rise up to 10% a year). University of Bolton operates in Ras Al Khaimah, not Dubai: confirm price and campus with the university before deciding.',
+    edu_hack: 'Canadian University Dubai prices come from its 2025-26 fee list (in AED, converted to USD; they can rise up to 10% a year). Confirm the current price with the university before deciding.',
     sec_gastos_title: 'Mandatory Costs Not Included',
     gastos_intro: 'Dubai has a unique advantage: NO fixed bank balance is required like in Europe. The main costs are the visa package and mandatory medical exams.',
     th_concepto: 'Item', th_costo: 'Cost (USD)', th_oblig: 'Mandatory',
@@ -754,9 +754,6 @@ export default function Dubai() {
               <thead><tr>{[t.th_inst, t.th_programas, t.th_anual, t.th_total, t.th_web].map((h, i) => <th key={i} style={T.th}>{h}</th>)}</tr></thead>
               <tbody>
                 {trRows([
-                  ['University of Bolton (Ras Al Khaimah)', 'Business, IT, Engineering', '$7,500 – $9,000', '$22k – $27k', 'bolton.ac.ae', 'https://www.bolton.ac.ae'],
-                  ['Amity University Dubai', 'Business, IT, Media', '$17,000 – $21,000', '$68k – $84k', 'amityuniversity.ae', 'https://amityuniversity.ae'],
-                  ['Manipal University Dubai', 'Engineering, Business, IT', '$10,000 – $13,000', '$30k – $40k', 'manipaldubai.com', 'https://www.manipaldubai.com'],
                   ['Canadian University Dubai', 'Business, Engineering', '$17,500 – $24,500', '$70k – $98k', 'cud.ac.ae', 'https://www.cud.ac.ae'],
                 ], locale).map((r, i) => (
                   <tr key={i}>
@@ -776,9 +773,6 @@ export default function Dubai() {
               <thead><tr>{[t.th_inst, t.th_programa_m, t.th_total, t.th_web].map((h, i) => <th key={i} style={T.th}>{h}</th>)}</tr></thead>
               <tbody>
                 {trRows([
-                  ['University of Bolton (Ras Al Khaimah)', 'MBA / MSc / LLM', '$6,000 – $10,000', 'bolton.ac.ae', 'https://www.bolton.ac.ae'],
-                  ['Amity University Dubai', 'MBA / MSc', '$15,000 – $18,000', 'amityuniversity.ae', 'https://amityuniversity.ae'],
-                  ['Manipal University Dubai', 'MBA / MSc', '$12,000 – $16,000', 'manipaldubai.com', 'https://www.manipaldubai.com'],
                   ['Canadian University Dubai', 'MBA / MSc', '$23,000 – $37,000', 'cud.ac.ae', 'https://www.cud.ac.ae'],
                 ], locale).map((r, i) => (
                   <tr key={i}>
