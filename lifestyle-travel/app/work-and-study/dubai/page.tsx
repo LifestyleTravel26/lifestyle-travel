@@ -53,7 +53,7 @@ const translations = {
     th_programas: 'Programas', th_anual: 'Precio anual', th_total: 'Precio total',
     edu_master_head: '⭐ Masters (MBA y MSc)',
     th_programa_m: 'Programa',
-    edu_hack: 'University of Bolton Dubai tiene los MBAs más accesibles del Golfo ($6,000-$10,000 total). Un título británico en Dubái te abre puertas en toda la región del Golfo Pérsico.',
+    edu_hack: 'Precios de Amity y Canadian University Dubai tomados de sus listas 2025-26 (en AED, convertidos a USD; pueden subir hasta 10% al año). University of Bolton opera en Ras Al Khaimah, no en Dubái: confirma precio y sede con la universidad antes de decidir.',
     sec_gastos_title: 'Gastos Obligatorios No Incluidos',
     gastos_intro: 'Dubái tiene una ventaja única: NO se exige solvencia bancaria fija como en Europa. Los gastos principales son el paquete de visa y los exámenes médicos obligatorios.',
     th_concepto: 'Concepto', th_costo: 'Costo (USD)', th_oblig: 'Obligatorio',
@@ -222,7 +222,7 @@ const translations = {
     th_programas: 'Programas', th_anual: 'Preço anual', th_total: 'Preço total',
     edu_master_head: '⭐ Masters (MBA e MSc)',
     th_programa_m: 'Programa',
-    edu_hack: 'University of Bolton Dubai tem os MBAs mais acessíveis do Golfo ($6.000-$10.000 total). Um título britânico em Dubai abre portas em toda a região do Golfo Pérsico.',
+    edu_hack: 'Preços de Amity e Canadian University Dubai tirados das listas 2025-26 (em AED, convertidos para USD; podem subir até 10% ao ano). A University of Bolton opera em Ras Al Khaimah, não em Dubai: confirme preço e sede com a universidade antes de decidir.',
     sec_gastos_title: 'Despesas Obrigatórias Não Incluídas',
     gastos_intro: 'Dubai tem uma vantagem única: NÃO se exige solvência bancária fixa como na Europa. As principais despesas são o pacote de visto e os exames médicos obrigatórios.',
     th_concepto: 'Conceito', th_costo: 'Custo (USD)', th_oblig: 'Obrigatório',
@@ -391,7 +391,7 @@ const translations = {
     th_programas: 'Programs', th_anual: 'Annual price', th_total: 'Total price',
     edu_master_head: '⭐ Masters (MBA and MSc)',
     th_programa_m: 'Program',
-    edu_hack: 'University of Bolton Dubai has the most accessible MBAs in the Gulf ($6,000-$10,000 total). A British degree from Dubai opens doors throughout the Persian Gulf region.',
+    edu_hack: 'Amity and Canadian University Dubai prices come from their 2025-26 fee lists (in AED, converted to USD; they can rise up to 10% a year). University of Bolton operates in Ras Al Khaimah, not Dubai: confirm price and campus with the university before deciding.',
     sec_gastos_title: 'Mandatory Costs Not Included',
     gastos_intro: 'Dubai has a unique advantage: NO fixed bank balance is required like in Europe. The main costs are the visa package and mandatory medical exams.',
     th_concepto: 'Item', th_costo: 'Cost (USD)', th_oblig: 'Mandatory',
@@ -737,10 +737,10 @@ export default function Dubai() {
               <thead><tr>{[t.th_inst, t.th_programas, t.th_anual, t.th_total, t.th_web].map((h, i) => <th key={i} style={T.th}>{h}</th>)}</tr></thead>
               <tbody>
                 {trRows([
-                  ['University of Bolton Dubai', 'Business, IT, Engineering', '$7,500 – $9,000', '$22k – $27k', 'bolton.ac.ae', 'https://www.bolton.ac.ae'],
-                  ['Amity University Dubai', 'Business, IT, Media', '$9,000 – $12,000', '$27k – $36k', 'amityuniversity.ae', 'https://amityuniversity.ae'],
+                  ['University of Bolton (Ras Al Khaimah)', 'Business, IT, Engineering', '$7,500 – $9,000', '$22k – $27k', 'bolton.ac.ae', 'https://www.bolton.ac.ae'],
+                  ['Amity University Dubai', 'Business, IT, Media', '$17,000 – $21,000', '$68k – $84k', 'amityuniversity.ae', 'https://amityuniversity.ae'],
                   ['Manipal University Dubai', 'Engineering, Business, IT', '$10,000 – $13,000', '$30k – $40k', 'manipaldubai.com', 'https://www.manipaldubai.com'],
-                  ['Canadian University Dubai', 'Business, Engineering', '$12,000 – $16,000', '$36k – $48k', 'cud.ac.ae', 'https://www.cud.ac.ae'],
+                  ['Canadian University Dubai', 'Business, Engineering', '$17,500 – $24,500', '$70k – $98k', 'cud.ac.ae', 'https://www.cud.ac.ae'],
                 ], locale).map((r, i) => (
                   <tr key={i}>
                     <td style={{ ...T.td(i), ...T.bold }}>{r[0]}</td>
@@ -759,10 +759,10 @@ export default function Dubai() {
               <thead><tr>{[t.th_inst, t.th_programa_m, t.th_total, t.th_web].map((h, i) => <th key={i} style={T.th}>{h}</th>)}</tr></thead>
               <tbody>
                 {trRows([
-                  ['University of Bolton Dubai', 'MBA / MSc / LLM', '$6,000 – $10,000', 'bolton.ac.ae', 'https://www.bolton.ac.ae'],
-                  ['Amity University Dubai', 'MBA / MSc', '$11,000 – $15,000', 'amityuniversity.ae', 'https://amityuniversity.ae'],
+                  ['University of Bolton (Ras Al Khaimah)', 'MBA / MSc / LLM', '$6,000 – $10,000', 'bolton.ac.ae', 'https://www.bolton.ac.ae'],
+                  ['Amity University Dubai', 'MBA / MSc', '$15,000 – $18,000', 'amityuniversity.ae', 'https://amityuniversity.ae'],
                   ['Manipal University Dubai', 'MBA / MSc', '$12,000 – $16,000', 'manipaldubai.com', 'https://www.manipaldubai.com'],
-                  ['Canadian University Dubai', 'MBA / MSc', '$14,000 – $18,000', 'cud.ac.ae', 'https://www.cud.ac.ae'],
+                  ['Canadian University Dubai', 'MBA / MSc', '$23,000 – $37,000', 'cud.ac.ae', 'https://www.cud.ac.ae'],
                 ], locale).map((r, i) => (
                   <tr key={i}>
                     <td style={{ ...T.td(i), ...T.bold }}>{r[0]}</td>
