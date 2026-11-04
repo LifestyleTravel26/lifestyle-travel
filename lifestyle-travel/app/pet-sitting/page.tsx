@@ -46,7 +46,7 @@ const translations = {
     plataformas_hack: 'Empieza en destinos menos competidos (ciudades secundarias en España, Portugal o Francia) para conseguir tus primeras 2-3 reseñas. Con esas reviews, accedes a mejores casas en destinos más populares. Sin reviews, todo cuesta el doble de tiempo.',
     plataformas_globales: [
       ['TrustedHousesitters', 'La más grande a nivel mundial. Mayor variedad de destinos.', '$129 – $259/año', 'https://www.trustedhousesitters.com'],
-      ['Nomador', 'Muy fuerte en Europa. Buena para empezar en España o Francia.', '$99 – $199/año', 'https://www.nomador.com'],
+      ['Nomador', 'Muy fuerte en Europa. Buena para empezar en España o Francia.', '€89 – €189/año', 'https://www.nomador.com'],
       ['MindMyHouse', 'Ideal para principiantes. Buena cantidad de listings en Europa.', '$29/año', 'https://www.mindmyhouse.com'],
       ['Rover', 'Plataforma de pago. Ideal para generar ingresos mientras viajas. Rover descuenta 20–30% al cuidador.', '$50–$100/noche', 'https://www.rover.com'],
       ['HouseSitter.com', 'Buena opción para Australia y Nueva Zelanda. Registro gratis; contacto ilimitado con premium (~$30–$50/mes).', 'Gratis + premium', 'https://www.housesitter.com'],
@@ -57,7 +57,7 @@ const translations = {
     th_comp_plataforma: 'Plataforma', th_comp_precio: 'Precio/año', th_comp_listings: 'Miembros', th_comp_mejor: 'Mejor Para', th_comp_pago: 'Pago',
     comparativa_rows: [
       ['TrustedHousesitters', '$129 – $259', '+200,000', 'Todo el mundo', 'No'],
-      ['Nomador', '$99 – $199', '+100,000', 'Europa', 'No'],
+      ['Nomador', '€89 – €189', '+100,000', 'Europa', 'No'],
       ['MindMyHouse', '$29', '+30,000', 'Principiantes', 'No'],
       ['HouseSitter.com', 'Gratis + premium ~$30–$50/mes', '—', 'Australia/NZ', 'No'],
       ['Rover', 'Gratis', '—', 'Generar ingresos', 'Sí $50–$100/noche'],
@@ -186,7 +186,7 @@ const translations = {
     plataformas_hack: 'Comece em destinos menos concorridos (cidades secundárias na Espanha, Portugal ou França) para conseguir suas primeiras 2-3 avaliações. Com essas reviews, você acessa melhores casas em destinos mais populares. Sem reviews, tudo leva o dobro do tempo.',
     plataformas_globales: [
       ['TrustedHousesitters', 'A maior do mundo. Maior variedade de destinos.', '$129 – $259/ano', 'https://www.trustedhousesitters.com'],
-      ['Nomador', 'Muito forte na Europa. Boa para começar na Espanha ou França.', '$99 – $199/ano', 'https://www.nomador.com'],
+      ['Nomador', 'Muito forte na Europa. Boa para começar na Espanha ou França.', '€89 – €189/ano', 'https://www.nomador.com'],
       ['MindMyHouse', 'Ideal para iniciantes. Boa quantidade de listings na Europa.', '$29/ano', 'https://www.mindmyhouse.com'],
       ['Rover', 'Plataforma paga. Ideal para gerar renda enquanto viaja. A Rover desconta 20–30% do cuidador.', '$50–$100/noite', 'https://www.rover.com'],
       ['HouseSitter.com', 'Boa opção para Austrália e Nova Zelândia. Cadastro grátis; contato ilimitado com premium (~$30–$50/mês).', 'Grátis + premium', 'https://www.housesitter.com'],
@@ -197,7 +197,7 @@ const translations = {
     th_comp_plataforma: 'Plataforma', th_comp_precio: 'Preço/ano', th_comp_listings: 'Membros', th_comp_mejor: 'Melhor Para', th_comp_pago: 'Pagamento',
     comparativa_rows: [
       ['TrustedHousesitters', '$129 – $259', '+200.000', 'Todo o mundo', 'Não'],
-      ['Nomador', '$99 – $199', '+100.000', 'Europa', 'Não'],
+      ['Nomador', '€89 – €189', '+100.000', 'Europa', 'Não'],
       ['MindMyHouse', '$29', '+30.000', 'Iniciantes', 'Não'],
       ['HouseSitter.com', 'Grátis + premium ~$30–$50/mês', '—', 'Austrália/NZ', 'Não'],
       ['Rover', 'Grátis', '—', 'Gerar renda', 'Sim $50–$100/noite'],
@@ -326,7 +326,7 @@ const translations = {
     plataformas_hack: 'Start in less competitive destinations (secondary cities in Spain, Portugal or France) to get your first 2-3 reviews. With those reviews, you access better homes in more popular destinations. Without reviews, everything takes twice as long.',
     plataformas_globales: [
       ['TrustedHousesitters', 'The largest worldwide. Greatest variety of destinations.', '$129 – $259/year', 'https://www.trustedhousesitters.com'],
-      ['Nomador', 'Very strong in Europe. Good for starting in Spain or France.', '$99 – $199/year', 'https://www.nomador.com'],
+      ['Nomador', 'Very strong in Europe. Good for starting in Spain or France.', '€89 – €189/year', 'https://www.nomador.com'],
       ['MindMyHouse', 'Ideal for beginners. Good number of listings in Europe.', '$29/year', 'https://www.mindmyhouse.com'],
       ['Rover', 'Paid platform. Ideal for earning income while traveling. Rover takes 20–30% from the sitter.', '$50–$100/night', 'https://www.rover.com'],
       ['HouseSitter.com', 'Good option for Australia and New Zealand. Free sign-up; unlimited contact with premium (~$30–$50/month).', 'Free + premium', 'https://www.housesitter.com'],
@@ -337,7 +337,7 @@ const translations = {
     th_comp_plataforma: 'Platform', th_comp_precio: 'Price/year', th_comp_listings: 'Members', th_comp_mejor: 'Best For', th_comp_pago: 'Paid',
     comparativa_rows: [
       ['TrustedHousesitters', '$129 – $259', '+200,000', 'Worldwide', 'No'],
-      ['Nomador', '$99 – $199', '+100,000', 'Europe', 'No'],
+      ['Nomador', '€89 – €189', '+100,000', 'Europe', 'No'],
       ['MindMyHouse', '$29', '+30,000', 'Beginners', 'No'],
       ['HouseSitter.com', 'Free + premium ~$30–$50/month', '—', 'Australia/NZ', 'No'],
       ['Rover', 'Free', '—', 'Earn income', 'Yes $50–$100/night'],
@@ -725,7 +725,7 @@ export default function PetSitting() {
               <tbody>
                 {trRows([
                   ['Membresía TrustedHousesitters', '$129 – $259/año', '✅ Principal plataforma'],
-                  ['Membresía Nomador (opcional)', '$99 – $199/año', '⚪ Recomendado para Europa'],
+                  ['Membresía Nomador (opcional)', '€89 – €189/año', '⚪ Recomendado para Europa'],
                   ['Membresía adicional (opcional)', '€20-50/año', '⚪ Para más visibilidad'],
                   ['Seguro médico internacional', '€100-300/año', '✅ Muy recomendado'],
                   ['Tasa de visa (si aplica)', '€0-200', '✅ Según país'],
