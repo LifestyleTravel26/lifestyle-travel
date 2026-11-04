@@ -73,7 +73,7 @@ const translations = {
     coworking_items: [
       ['🇬🇪 Georgia (Tbilisi)', 'Impact Hub, Fabrika'],
       ['🇪🇸 España (Barcelona/Madrid)', 'WeWork, Utopicus'],
-      ['🇵🇹 Portugal (Lisboa)', 'Second Home, Heden'],
+      ['🇵🇹 Portugal (Lisboa)', 'Second Home'],
       ['🇨🇴 Colombia (Medellín)', 'Socialtel (Selina), Atomhouse'],
       ['🇲🇽 México (Ciudad de México)', 'WeWork, Comunal'],
       ['🇨🇷 Costa Rica (San José)', 'WeWork, Impact Hub'],
@@ -225,7 +225,7 @@ const translations = {
     coworking_items: [
       ['🇬🇪 Geórgia (Tbilisi)', 'Impact Hub, Fabrika'],
       ['🇪🇸 Espanha (Barcelona/Madrid)', 'WeWork, Utopicus'],
-      ['🇵🇹 Portugal (Lisboa)', 'Second Home, Heden'],
+      ['🇵🇹 Portugal (Lisboa)', 'Second Home'],
       ['🇨🇴 Colômbia (Medellín)', 'Socialtel (Selina), Atomhouse'],
       ['🇲🇽 México (Cidade do México)', 'WeWork, Comunal'],
       ['🇨🇷 Costa Rica (San José)', 'WeWork, Impact Hub'],
@@ -377,7 +377,7 @@ const translations = {
     coworking_items: [
       ['🇬🇪 Georgia (Tbilisi)', 'Impact Hub, Fabrika'],
       ['🇪🇸 Spain (Barcelona/Madrid)', 'WeWork, Utopicus'],
-      ['🇵🇹 Portugal (Lisbon)', 'Second Home, Heden'],
+      ['🇵🇹 Portugal (Lisbon)', 'Second Home'],
       ['🇨🇴 Colombia (Medellín)', 'Socialtel (Selina), Atomhouse'],
       ['🇲🇽 Mexico (Mexico City)', 'WeWork, Comunal'],
       ['🇨🇷 Costa Rica (San José)', 'WeWork, Impact Hub'],
@@ -469,7 +469,7 @@ const translations = {
 const COWORK_HUBS: { city: string; spaces: [string, string][] }[] = [
   { city: 'Tbilisi', spaces: [['Impact Hub Tbilisi', 'https://tbilisi.impacthub.net'], ['Fabrika', 'https://fabrikatbilisi.com']] },
   { city: 'Barcelona Madrid', spaces: [['WeWork', 'https://www.wework.com'], ['Utopicus', 'https://utopicus.es']] },
-  { city: 'Lisboa', spaces: [['Second Home', 'https://secondhome.io'], ['Heden', '']] },
+  { city: 'Lisboa', spaces: [['Second Home', 'https://secondhome.io']] },
   { city: 'Medellín', spaces: [['Socialtel (antes Selina)', 'https://socialtel.com'], ['Atomhouse', '']] },
   { city: 'Ciudad de México', spaces: [['WeWork', 'https://www.wework.com'], ['Comunal', 'https://comunal.co/es-mx']] },
   { city: 'San José Costa Rica', spaces: [['WeWork', 'https://www.wework.com'], ['Impact Hub', 'https://sanjose.impacthub.net']] },
