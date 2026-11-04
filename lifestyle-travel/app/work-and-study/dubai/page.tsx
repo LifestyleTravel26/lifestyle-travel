@@ -9,7 +9,7 @@ import { tx, trRows } from '@/lib/phrases'
 const translations = {
   es: {
     hero_title: 'Dubái',
-    hero_sub: 'Medio Oriente · Work and Study',
+    hero_sub: 'Medio Oriente · Estudiar en Dubái',
     hero_badge: 'Medio',
     stat1_label: 'Costo inicial (Cursos)',
     stat1_value: '$3,500 - $7,000',
@@ -27,6 +27,8 @@ const translations = {
     ],
     sec_autoridad_title: 'Encabezado de Autoridad',
     autoridad_intro: 'Dubái es rápido si estudias en una universidad: la visa de residencia de estudiante la patrocina la universidad y, con el Emirates ID, abres banco, firmas contratos y puedes trabajar con permiso. Si solo vas a un curso de inglés, el instituto no puede patrocinar esa visa: lo normal es una visa de visita para estudio de hasta 180 días, sin Emirates ID ni permiso de trabajo. Confírmalo con la escuela antes de pagar.',
+    rutas_title: 'Elige tu ruta',
+    rutas: [['Ruta A — Curso de inglés', 'Visa de visita para estudio (30, 60 o 180 días, entrada única) que tramita el instituto autorizado, con depósito de AED 1,000.|No da residencia, Emirates ID ni permiso de trabajo.|Sirve para estudiar y conocer Dubái, no para trabajar.'], ['Ruta B — Universidad', 'Visa de residencia de estudiante patrocinada por la universidad acreditada.|Con Emirates ID puedes abrir banco y firmar contratos.|Puedes trabajar con permiso MOHRE (20 h/semana en clases, 40 h en vacaciones) y carta NOC de la universidad.']],
     autoridad_warn_label: '⚠️ Importante:',
     autoridad_warn: 'La visa de estudiante permite vivir y estudiar en Dubái, pero',
     autoridad_warn_b: 'NO otorga automáticamente permiso de trabajo',
@@ -178,7 +180,7 @@ const translations = {
   },
   pt: {
     hero_title: 'Dubai',
-    hero_sub: 'Oriente Médio · Work and Study',
+    hero_sub: 'Oriente Médio · Estudar em Dubai',
     hero_badge: 'Médio',
     stat1_label: 'Custo inicial (Cursos)',
     stat1_value: '$3.500 - $7.000',
@@ -196,6 +198,8 @@ const translations = {
     ],
     sec_autoridad_title: 'Cabeçalho de Autoridade',
     autoridad_intro: 'Dubai é rápido se você estuda em uma universidade: o visto de residência de estudante é patrocinado pela universidade e, com o Emirates ID, você abre conta, assina contratos e pode trabalhar com permissão. Se for apenas um curso de inglês, o instituto não pode patrocinar esse visto: o normal é um visto de visita para estudo de até 180 dias, sem Emirates ID nem permissão de trabalho. Confirme com a escola antes de pagar.',
+    rutas_title: 'Escolha sua rota',
+    rutas: [['Rota A — Curso de inglês', 'Visto de visita para estudo (30, 60 ou 180 dias, entrada única) tramitado pelo instituto autorizado, com depósito de AED 1.000.|Não dá residência, Emirates ID nem permissão de trabalho.|Serve para estudar e conhecer Dubai, não para trabalhar.'], ['Rota B — Universidade', 'Visto de residência de estudante patrocinado pela universidade credenciada.|Com Emirates ID você abre conta e assina contratos.|Pode trabalhar com permissão MOHRE (20 h/semana em aulas, 40 h nas férias) e carta NOC da universidade.']],
     autoridad_warn_label: '⚠️ Importante:',
     autoridad_warn: 'O visto de estudante permite viver e estudar em Dubai, mas',
     autoridad_warn_b: 'NÃO concede automaticamente permissão de trabalho',
@@ -347,7 +351,7 @@ const translations = {
   },
   en: {
     hero_title: 'Dubai',
-    hero_sub: 'Middle East · Work and Study',
+    hero_sub: 'Middle East · Study in Dubai',
     hero_badge: 'Medium',
     stat1_label: 'Initial Cost (Courses)',
     stat1_value: '$3,500 - $7,000',
@@ -365,6 +369,8 @@ const translations = {
     ],
     sec_autoridad_title: 'Authority Header',
     autoridad_intro: 'Dubai is fast if you study at a university: the student residence visa is sponsored by the university and, with the Emirates ID, you can open a bank account, sign contracts and work with a permit. If you only take an English course, the institute cannot sponsor that visa: the usual route is a study visit visa of up to 180 days, with no Emirates ID or work permit. Confirm with the school before paying.',
+    rutas_title: 'Choose your route',
+    rutas: [['Route A — English course', 'Study visit visa (30, 60 or 180 days, single entry) processed by the licensed institute, with an AED 1,000 deposit.|It gives no residence, Emirates ID or work permit.|It is for studying and getting to know Dubai, not for working.'], ['Route B — University', 'Student residence visa sponsored by the accredited university.|With the Emirates ID you can open a bank account and sign contracts.|You can work with a MOHRE permit (20 h/week during term, 40 h in holidays) and an NOC from the university.']],
     autoridad_warn_label: '⚠️ Important:',
     autoridad_warn: 'The student visa allows living and studying in Dubai, but',
     autoridad_warn_b: 'does NOT automatically grant work permission',
@@ -626,6 +632,17 @@ export default function Dubai() {
         <Section id="autoridad" emoji="🧭" title={t.sec_autoridad_title} free={true}>
           <div style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1528702748617-c64d49f918af?q=80&w=687&auto=format&fit=crop")', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', height: '200px', borderRadius: '12px', marginBottom: '16px' }} />
           <Intro text={t.autoridad_intro} />
+          <p style={{ fontSize: '14px', fontWeight: '700', color: '#1a1a2e', margin: '14px 0 8px' }}>{t.rutas_title}</p>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '10px', marginBottom: '14px' }}>
+            {t.rutas.map(([title, bullets], i) => (
+              <div key={i} style={{ backgroundColor: i === 0 ? '#fff7ed' : '#f0fdf4', borderLeft: `3px solid ${i === 0 ? '#e8572a' : '#22c55e'}`, borderRadius: '10px', padding: '12px 14px' }}>
+                <p style={{ fontWeight: '700', fontSize: '13px', color: '#1a1a2e', margin: '0 0 6px' }}>{title}</p>
+                {bullets.split('|').map((b, j) => (
+                  <p key={j} style={{ fontSize: '13px', lineHeight: '1.6', color: '#33334d', margin: '0 0 4px' }}>• {b}</p>
+                ))}
+              </div>
+            ))}
+          </div>
           <p style={{ fontSize: '14px', lineHeight: '1.8', marginBottom: '10px', color: '#1a1a2e'}}>
             <strong>{t.autoridad_warn_label}</strong> {t.autoridad_warn} <strong>{t.autoridad_warn_b}</strong>{t.autoridad_warn_end}
           </p>
