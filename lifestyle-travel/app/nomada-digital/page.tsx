@@ -467,7 +467,7 @@ const translations = {
 }
 
 const COWORK_HUBS: { city: string; spaces: [string, string][] }[] = [
-  { city: 'Tbilisi', spaces: [['Impact Hub Tbilisi', ''], ['Fabrika', '']] },
+  { city: 'Tbilisi', spaces: [['Impact Hub Tbilisi', ''], ['Fabrika', 'https://fabrikatbilisi.com']] },
   { city: 'Barcelona Madrid', spaces: [['WeWork', 'https://www.wework.com'], ['Utopicus', 'https://utopicus.es']] },
   { city: 'Lisboa', spaces: [['Second Home', 'https://secondhome.io'], ['Heden', '']] },
   { city: 'Medellín', spaces: [['Socialtel (antes Selina)', ''], ['Atomhouse', '']] },
