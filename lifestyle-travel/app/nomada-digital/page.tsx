@@ -467,12 +467,12 @@ const translations = {
 }
 
 const COWORK_HUBS: { city: string; spaces: [string, string][] }[] = [
-  { city: 'Tbilisi', spaces: [['Impact Hub Tbilisi', ''], ['Fabrika', 'https://fabrikatbilisi.com']] },
+  { city: 'Tbilisi', spaces: [['Impact Hub Tbilisi', 'https://tbilisi.impacthub.net'], ['Fabrika', 'https://fabrikatbilisi.com']] },
   { city: 'Barcelona Madrid', spaces: [['WeWork', 'https://www.wework.com'], ['Utopicus', 'https://utopicus.es']] },
   { city: 'Lisboa', spaces: [['Second Home', 'https://secondhome.io'], ['Heden', '']] },
-  { city: 'Medellín', spaces: [['Socialtel (antes Selina)', ''], ['Atomhouse', '']] },
-  { city: 'Ciudad de México', spaces: [['WeWork', 'https://www.wework.com'], ['Comunal', '']] },
-  { city: 'San José Costa Rica', spaces: [['WeWork', 'https://www.wework.com'], ['Impact Hub', '']] },
+  { city: 'Medellín', spaces: [['Socialtel (antes Selina)', 'https://socialtel.com'], ['Atomhouse', '']] },
+  { city: 'Ciudad de México', spaces: [['WeWork', 'https://www.wework.com'], ['Comunal', 'https://comunal.co/es-mx']] },
+  { city: 'San José Costa Rica', spaces: [['WeWork', 'https://www.wework.com'], ['Impact Hub', 'https://sanjose.impacthub.net']] },
 ]
 const COWORK_LABELS = {
   es: { spaces: 'Coworkings', community: 'Comunidades' },
