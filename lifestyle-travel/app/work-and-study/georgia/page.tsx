@@ -4,7 +4,7 @@ import { useLanguage } from '../../context/LanguageContext'
 import HeaderMenu from '../../components/HeaderMenu'
 import { usePurchase } from '../../hooks/usePurchase'
 import IconBadge from '../../components/IconBadge'
-import { tx, trRows } from '@/lib/phrases'
+import { tx, trRows, pm } from '@/lib/phrases'
 
 const translations = {
   es: {
@@ -199,8 +199,8 @@ const translations = {
     autoridad_p1: 'Você não depende de um visto ou patrocínio antes de viajar. Você entra primeiro e organiza sua atividade econômica de dentro do país sem um processo migratório longo.',
     autoridad_p2_label: 'Acelerador de início:',
     autoridad_p2: 'registro como Individual Entrepreneur → Small Business Status (1% tax) → conta bancária → primeira renda. Tudo em menos de 2 semanas.',
-    autoridad_blue: '💱 Conversão Geórgia: 1 GEL ≈ $0,37 USD. $100 USD ≈ 270 GEL. Todos os preços locais em GEL com equivalente em USD.',
-    autoridad_hack: '365 dias visa-free é a grande vantagem da Geórgia. Isso te compra tempo para fazer o importante sem ansiedade. Muita gente usa as primeiras semanas para se registrar como Individual Entrepreneur e ativar o regime fiscal de 1%. Essa decisão pode te economizar milhares de dólares em impostos.',
+    autoridad_blue: '💱 Conversão Geórgia: 1 GEL ≈ R$ 2,00. R$ 540 ≈ 270 GEL. Todos os preços locais em GEL com equivalente em reais. Câmbio de referência: 1 USD ≈ R$ 5,40.',
+    autoridad_hack: '365 dias visa-free é a grande vantagem da Geórgia. Isso te compra tempo para fazer o importante sem ansiedade. Muita gente usa as primeiras semanas para se registrar como Individual Entrepreneur e ativar o regime fiscal de 1%. Essa decisão pode te economizar milhares de reais em impostos.',
     premium_badge: '⭐ Blueprint Completo — PREMIUM',
     sec_estrategia_title: 'Estratégia e Orçamento',
     estrategia_intro: 'A Geórgia tem três rotas econômicas principais. Escolha a que corresponde à sua situação antes de chegar. Você não precisa escolher antes de viajar — pode decidir durante os primeiros dias em Tbilisi.',
@@ -519,7 +519,7 @@ export default function Georgia() {
   const toggle = (s: string) => setOpenSection(openSection === s ? null : s)
   const { locale } = useLanguage()
   const { hasAccess, loading } = usePurchase()
-  const t = translations[locale]
+  const t = pm(translations[locale], locale)
 
   const HackBox = ({ text }: { text: string }) => (
     <div style={{ backgroundColor: '#fffbeb', borderLeft: '4px solid #f59e0b', borderRadius: '8px', padding: '14px 16px', marginTop: '16px' }}>

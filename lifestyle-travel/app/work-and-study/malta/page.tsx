@@ -4,7 +4,7 @@ import { useLanguage } from '../../context/LanguageContext'
 import HeaderMenu from '../../components/HeaderMenu'
 import { usePurchase } from '../../hooks/usePurchase'
 import IconBadge from '../../components/IconBadge'
-import { tx, trRows } from '@/lib/phrases'
+import { tx, trRows, pm } from '@/lib/phrases'
 
 const translations = {
   es: {
@@ -209,7 +209,7 @@ const translations = {
     autoridad_p1_end: 'uma vez aprovada a permissão.',
     autoridad_p2_label: 'Acelerador de início:',
     autoridad_p2_text: 'sincronizamos registros e prazos (residência, estudo e trabalho) com seu plano de renda para proteger sua economia e acelerar o retorno do seu investimento.',
-    autoridad_blue: '💱 Padrão de moeda (Malta): primeiro moeda local e ao lado o equivalente aproximado em USD. Exemplo: €200 → $230 USD (usando referência 1 EUR ≈ $1,15 USD).',
+    autoridad_blue: '💱 Padrão de moeda (Malta): primeiro moeda local e ao lado o equivalente aproximado em reais. Exemplo: €200 → R$ 1.240 (usando referência 1 EUR ≈ R$ 6,20).',
     autoridad_hack: 'Em Malta o contrato de aluguel é tão importante quanto o curso. Sem um contrato de moradia registrado, não há e-Residence. E sem e-Residence, você precisa sair no dia 91. Garanta sua cama antes de sair para buscar trabalho.',
     premium_badge: '⭐ Blueprint Completo — PREMIUM',
     sec_estrategia_title: 'Estratégia e Orçamento: Seleção de Academia',
@@ -543,7 +543,7 @@ export default function Malta() {
   const toggle = (s: string) => setOpenSection(openSection === s ? null : s)
   const { locale } = useLanguage()
   const { hasAccess, loading } = usePurchase()
-  const t = translations[locale]
+  const t = pm(translations[locale], locale)
 
   const HackBox = ({ text }: { text: string }) => (
     <div style={{ backgroundColor: '#fffbeb', borderLeft: '4px solid #f59e0b', borderRadius: '8px', padding: '14px 16px', marginTop: '16px' }}>

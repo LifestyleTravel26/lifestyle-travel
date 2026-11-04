@@ -4,7 +4,7 @@ import { useLanguage } from '../../context/LanguageContext'
 import HeaderMenu from '../../components/HeaderMenu'
 import { usePurchase } from '../../hooks/usePurchase'
 import IconBadge from '../../components/IconBadge'
-import { tx, trRows } from '@/lib/phrases'
+import { tx, trRows, pm } from '@/lib/phrases'
 
 const translations = {
   es: {
@@ -214,7 +214,7 @@ const translations = {
       ['💻 Nômade Digital', 'Trabalhar remotamente para empresa estrangeira. Requer €3.680/mês mínimo.'],
       ['🧠 Trabalho Qualificado', 'Contrato com empresa portuguesa em setores como TI, engenharia, marketing digital.'],
     ],
-    autoridad_blue: '💱 Padrão de moeda (Portugal): primeiro EUR e ao lado o equivalente em USD. Exemplo: €200 → $230 USD (usando referência 1 EUR ≈ $1,15 USD).',
+    autoridad_blue: '💱 Padrão de moeda (Portugal): primeiro EUR e ao lado o equivalente em reais. Exemplo: €200 → R$ 1.240 (usando referência 1 EUR ≈ R$ 6,20).',
     autoridad_hack: 'O NIF é o documento mais importante em Portugal. Sem NIF você não pode abrir banco, assinar contrato nem trabalhar. A jogada inteligente é obtê-lo ANTES de viajar com um representante fiscal online (€90-150). Você chega com vantagem e ativa tudo desde o dia 1.',
     premium_badge: '⭐ Blueprint Completo — PREMIUM',
     sec_estrategia_title: 'Estratégia e Orçamento: Rotas Disponíveis',
@@ -558,7 +558,7 @@ export default function Portugal() {
   const toggle = (s: string) => setOpenSection(openSection === s ? null : s)
   const { locale } = useLanguage()
   const { hasAccess, loading } = usePurchase()
-  const t = translations[locale]
+  const t = pm(translations[locale], locale)
 
   const HackBox = ({ text }: { text: string }) => (
     <div style={{ backgroundColor: '#fffbeb', borderLeft: '4px solid #f59e0b', borderRadius: '8px', padding: '14px 16px', marginTop: '16px' }}>

@@ -5,7 +5,7 @@ import { useLanguage } from '../context/LanguageContext'
 import HeaderMenu from '../components/HeaderMenu'
 import { usePurchase } from '../hooks/usePurchase'
 import IconBadge from '../components/IconBadge'
-import { tx, trRows } from '@/lib/phrases'
+import { tx, trRows, pm } from '@/lib/phrases'
 
 const translations = {
   es: {
@@ -411,7 +411,7 @@ export default function WorkAndHolidays() {
   const [openSection, setOpenSection] = useState<string | null>(null)
   const { locale } = useLanguage()
   const { hasAccess, loading } = usePurchase()
-  const t = translations[locale]
+  const t = pm(translations[locale], locale)
 
   const toggle = (s: string) => setOpenSection(openSection === s ? null : s)
 

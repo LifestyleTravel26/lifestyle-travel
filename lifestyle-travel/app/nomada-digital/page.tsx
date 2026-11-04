@@ -5,7 +5,7 @@ import { useLanguage } from '../context/LanguageContext'
 import HeaderMenu from '../components/HeaderMenu'
 import { usePurchase } from '../hooks/usePurchase'
 import IconBadge from '../components/IconBadge'
-import { tx, trRows } from '@/lib/phrases'
+import { tx, trRows, pm } from '@/lib/phrases'
 
 const translations = {
   es: {
@@ -485,7 +485,7 @@ export default function NomadaDigital() {
   const toggle = (s: string) => setOpenSection(openSection === s ? null : s)
   const { locale } = useLanguage()
   const { hasAccess, loading } = usePurchase()
-  const t = translations[locale]
+  const t = pm(translations[locale], locale)
 
   const HackBox = ({ text }: { text: string }) => (
     <div style={{ backgroundColor: '#fffbeb', borderLeft: '4px solid #f59e0b', borderRadius: '8px', padding: '14px 16px', marginTop: '16px' }}>
@@ -833,7 +833,7 @@ export default function NomadaDigital() {
             <table style={T.table}>
               <thead><tr>{[t.th_tipo_aloj, t.th_sem, t.th_mes].map((h, i) => <th key={i} style={T.th}>{h}</th>)}</tr></thead>
               <tbody>
-                {[['Cuarto compartido', '$120 – $220', '$480 – $880'], ['Cuarto individual', '$250 – $450', '$1,000 – $1,800']].map((r, i) => (
+                {trRows([['Cuarto compartido', '$120 – $220', '$480 – $880'], ['Cuarto individual', '$250 – $450', '$1,000 – $1,800']], locale).map((r, i) => (
                   <tr key={i}>
                     <td style={{ ...T.td(i), ...T.bold }}>{r[0]}</td>
                     <td style={T.td(i)}>{r[1]}</td>

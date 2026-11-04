@@ -4,7 +4,7 @@ import { useLanguage } from '../../context/LanguageContext'
 import HeaderMenu from '../../components/HeaderMenu'
 import { usePurchase } from '../../hooks/usePurchase'
 import IconBadge from '../../components/IconBadge'
-import { tx, trRows } from '@/lib/phrases'
+import { tx, trRows, pm } from '@/lib/phrases'
 
 const translations = {
   es: {
@@ -189,7 +189,7 @@ const translations = {
     hero_sub: 'Oceania · Work and Study',
     hero_badge: 'Alto',
     stat1_label: 'Capital necessário',
-    stat1_value: '$28.000 - $38.000',
+    stat1_value: '$28.000 - $38.000 USD',
     stat2_label: 'Duração',
     stat2_value: '8 - 12 meses',
     stat3_label: 'Dificuldade',
@@ -212,7 +212,7 @@ const translations = {
     autoridad_p1_end: 'nas férias acadêmicas.',
     autoridad_p2_label: 'Roteiro:',
     autoridad_p2: 'CoE → Student Visa 500 → TFN → trabalho → Temporary Graduate Visa 485 → Skilled Migrant → PR.',
-    autoridad_blue: '💱 Conversão Austrália: 1 AUD ≈ $0,69 USD. A$200 ≈ $138 USD. Salário mínimo $26,44 AUD/hora ≈ $18,2 USD/hora (desde 1º jul 2026).',
+    autoridad_blue: '💱 Conversão Austrália: 1 AUD ≈ R$ 3,75. A$200 ≈ R$ 745. Salário mínimo A$26,44/hora ≈ R$ 98/hora (desde 1º jul 2026). Câmbio de referência: 1 USD ≈ R$ 5,40.',
     autoridad_hack: 'A Austrália permite abrir Commonwealth Bank ANTES de viajar. Isso significa que você chega com conta ativa, cartão pronto e pode receber dinheiro desde o dia 1. Combine isso com TFN na semana 1 e pode estar trabalhando antes do primeiro mês acabar.',
     premium_badge: '⭐ Blueprint Completo — PREMIUM',
     sec_estrategia_title: 'Estratégia e Orçamento: Seleção de Academia',
@@ -231,7 +231,7 @@ const translations = {
     pre_intro: 'Os programas VET (Vocational Education and Training) são mais curtos e econômicos que universidades. Ao completar um Diploma ou Advanced Diploma elegível, você acessa a Temporary Graduate Visa 485 para trabalhar em período integral pós-graduação.',
     th_programa: 'Programa', th_institucion: 'Instituição', th_inversion: 'Investimento',
     pre_blue: '🔵 TEMPORARY GRADUATE VISA 485: Ao se formar em programa elegível você pode solicitar a Subclass 485 — até 18 meses de trabalho em período integral com um diploma VET (2 anos com bachelor ou mestrado por cursos). Com essa experiência você solicita Skilled Migrant Category para PR.',
-    pre_hack: 'Os Diplomas VET são a entrada mais econômica no sistema educacional australiano. $6.500-9.000 vs $15.000+ em universidades. Mesma qualificação para a Subclass 485. A diferença de custo pode ser de $8.000-10.000 AUD.',
+    pre_hack: 'Os Diplomas VET são a entrada mais econômica no sistema educacional australiano. $6.500-9.000 USD vs $15.000+ USD em universidades. Mesma qualificação para a Subclass 485. A diferença de custo pode ser de $8.000-10.000 AUD.',
     sec_edu_title: 'Ensino Superior — Universidades Regionais',
     edu_intro: 'As universidades regionais da Austrália são mais baratas, têm menos concorrência e mais oportunidades de trabalho para estudantes. Ao se formar você se qualifica para a Subclass 485.',
     th_nivel: 'Nível', th_programa_col: 'Programa', th_precio_anual: 'Preço/ano AUD',
@@ -546,7 +546,7 @@ export default function Australia() {
   const toggle = (s: string) => setOpenSection(openSection === s ? null : s)
   const { locale } = useLanguage()
   const { hasAccess, loading } = usePurchase()
-  const t = translations[locale]
+  const t = pm(translations[locale], locale, true)
 
   const HackBox = ({ text }: { text: string }) => (
     <div style={{ backgroundColor: '#fffbeb', borderLeft: '4px solid #f59e0b', borderRadius: '8px', padding: '14px 16px', marginTop: '16px' }}>
@@ -886,7 +886,7 @@ export default function Australia() {
                 {trRows([
                   ['Cuarto compartido', 'A$180 – $280', 'A$720 – $1,120', '$497 – $773'],
                   ['Cuarto individual', 'A$300 – $450', 'A$1,200 – $1,800', '$828 – $1,242'],
-                ], locale).map((r, i) => (
+                ], locale, [3]).map((r, i) => (
                   <tr key={i}>
                     <td style={{ ...T.td(i), ...T.bold }}>{r[0]}</td>
                     <td style={T.td(i)}>{r[1]}</td>
@@ -939,7 +939,7 @@ export default function Australia() {
                   ['Hotels', 'Reception / Hotel Staff', '$26.44 – $32 AUD', '$18.24 – $22.08', 'Seek / hoteles directos'],
                   ['Retail', 'Shop Assistant', '$26.44 – $30 AUD', '$18.24 – $20.70', 'Seek / malls directos'],
                   ['Delivery', 'Rider / Courier', '$25 – $35 AUD', '$17.3 – $24.2', 'Uber Eats / DoorDash'],
-                ], locale).map((r, i) => (
+                ], locale, [3]).map((r, i) => (
                   <tr key={i}>
                     <td style={{ ...T.td(i), ...T.bold }}>{r[0]}</td>
                     <td style={T.td(i)}>{r[1]}</td>
@@ -967,7 +967,7 @@ export default function Australia() {
                   ['Hotels', 'Reception / Hotel Staff', '$26.44 – $32 AUD', '$18.24 – $22.08', 'A$2,538 – $3,072'],
                   ['Retail', 'Shop Assistant', '$26.44 – $30 AUD', '$18.24 – $20.70', 'A$2,538 – $2,880'],
                   ['Delivery', 'Rider / Courier', '$25 – $35 AUD', '$17.3 – $24.2', 'A$2,400 – $3,360'],
-                ], locale).map((r, i) => (
+                ], locale, [3]).map((r, i) => (
                   <tr key={i}>
                     <td style={{ ...T.td(i), ...T.bold }}>{r[0]}</td>
                     <td style={T.td(i)}>{r[1]}</td>

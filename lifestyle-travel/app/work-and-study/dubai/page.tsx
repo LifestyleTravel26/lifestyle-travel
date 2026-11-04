@@ -4,7 +4,7 @@ import { useLanguage } from '../../context/LanguageContext'
 import HeaderMenu from '../../components/HeaderMenu'
 import { usePurchase } from '../../hooks/usePurchase'
 import IconBadge from '../../components/IconBadge'
-import { tx, trRows } from '@/lib/phrases'
+import { tx, trRows, pm } from '@/lib/phrases'
 
 const translations = {
   es: {
@@ -206,7 +206,7 @@ const translations = {
     autoridad_warn_end: '. Para trabalhar legalmente seu empregador deve tramitar a permissão MOHRE para estudantes (Student Training and Employment Permit): máximo 20 h/semana no período de aulas e 40 h nas férias, com carta de não objeção (NOC) da sua universidade. Vale para estudantes em tempo integral em instituições credenciadas — para cursos de inglês a escola deve ser credenciada pela KHDA (ex. ES Dubai, Speak English Institute), que atua como seu sponsor. Cada escola tem vagas e condições próprias: valide com a admissão se oferece a permissão parcial (costuma ser de 15-20 h/semana).',
     autoridad_p2_label: 'Acelerador de início:',
     autoridad_p2: 'coordenamos a ordem correta das etapas — Entry Permit, Medical Test, Emirates ID e contratação — para que você esteja pronto no menor tempo possível.',
-    autoridad_blue: '💱 Conversão Dubai: 1 AED ≈ $0,27 USD. $200 USD ≈ 735 AED. Todos os salários em AED com equivalente em USD.',
+    autoridad_blue: '💱 Conversão Dubai: 1 AED ≈ R$ 1,46. R$ 1.080 ≈ 735 AED. Todos os salários em AED com equivalente em reais. Câmbio de referência: 1 USD ≈ R$ 5,40.',
     autoridad_hack: 'Em Dubai o Emirates ID é a chave para tudo. Sem esse cartão você não pode abrir banco, assinar contrato nem ativar trabalho. Se você tiver os documentos em ordem, o processo é concluído em 10 a 25 dias — muito mais rápido que qualquer país europeu.',
     premium_badge: '⭐ Blueprint Completo — PREMIUM',
     sec_estrategia_title: 'Estratégia e Orçamento: Seleção de Academia',
@@ -226,7 +226,7 @@ const translations = {
     th_programas: 'Programas', th_anual: 'Preço anual', th_total: 'Preço total',
     edu_master_head: '⭐ Masters (MBA e MSc)',
     th_programa_m: 'Programa',
-    edu_hack: 'Preços da Canadian University Dubai tirados da lista 2025-26 (em AED, convertidos para USD; podem subir até 10% ao ano). Confirme o preço atual com a universidade antes de decidir.',
+    edu_hack: 'Preços da Canadian University Dubai tirados da lista 2025-26 (em AED, convertidos para reais; podem subir até 10% ao ano). Confirme o preço atual com a universidade antes de decidir.',
     sec_gastos_title: 'Despesas Obrigatórias Não Incluídas',
     gastos_intro: 'Dubai tem uma vantagem única: NÃO se exige solvência bancária fixa como na Europa. As principais despesas são o pacote de visto e os exames médicos obrigatórios.',
     th_concepto: 'Conceito', th_costo: 'Custo (USD)', th_oblig: 'Obrigatório',
@@ -274,7 +274,7 @@ const translations = {
     th_sector: 'Setor', th_puesto: 'Cargo Típico', th_salario_aed: 'Salário/mês AED', th_usd_mes: '≈ USD/mês', th_canal_emp: 'Canal',
     empleos_hack: 'Em Dubai muitas empresas valorizam mais presença, atitude e disponibilidade imediata do que experiência. Muitos trabalhos incluem alojamento ou transporte — isso reduz significativamente o custo de vida. Se conseguir trabalho com alojamento incluído, suas despesas caem pela metade.',
     sec_salarios_title: 'Matriz de Salários Comuns',
-    salarios_intro: 'Salários em AED com equivalente em USD. 1 AED ≈ $0,27 USD. Dubai não tem imposto de renda pessoal — o que você ganha é o que você recebe.',
+    salarios_intro: 'Salários em AED com equivalente em reais. 1 AED ≈ R$ 1,46. Dubai não tem imposto de renda pessoal — o que você ganha é o que você recebe.',
     th_sector_sal: 'Setor', th_puesto_sal: 'Cargo', th_mensual_aed: 'Salário/mês AED', th_mensual_usd: '≈ USD/mês',
     salarios_blue: '💡 VANTAGEM DUBAI: Sem imposto de renda pessoal. Tudo que você ganha é seu. Os salários das tabelas são em tempo integral; com visto de estudante (máx. 20 h/semana) calcule aproximadamente a metade. Muitos trabalhos incluem alojamento e transporte, o que aumenta o poder de compra real.',
     salarios_hack: 'Delivery em Dubai paga AED 3.000-5.000/mês em tempo integral ($810-$1.350), mas com limite de 20 h/semana como estudante sua renda será cerca da metade. Sem impostos, esse dinheiro é completamente seu.',
@@ -528,7 +528,7 @@ export default function Dubai() {
   const toggle = (s: string) => setOpenSection(openSection === s ? null : s)
   const { locale } = useLanguage()
   const { hasAccess, loading } = usePurchase()
-  const t = translations[locale]
+  const t = pm(translations[locale], locale)
 
   const HackBox = ({ text }: { text: string }) => (
     <div style={{ backgroundColor: '#fffbeb', borderLeft: '4px solid #f59e0b', borderRadius: '8px', padding: '14px 16px', marginTop: '16px' }}>

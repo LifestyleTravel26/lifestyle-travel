@@ -1,4 +1,5 @@
 'use client'
+import { pm } from '@/lib/phrases'
 import { useState } from 'react'
 import Link from 'next/link'
 import { useLanguage } from '../context/LanguageContext'
@@ -327,7 +328,7 @@ export default function VisaQuiz() {
   const [answers, setAnswers] = useState<Answers>({})
   const [done, setDone] = useState(false)
   const { locale } = useLanguage()
-  const t = translations[locale]
+  const t = pm(translations[locale], locale)
   const questions = t.questions
 
   function handleAnswer(value: string) {

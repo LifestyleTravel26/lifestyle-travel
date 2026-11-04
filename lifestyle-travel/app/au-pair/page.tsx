@@ -5,7 +5,7 @@ import { useLanguage } from '../context/LanguageContext'
 import HeaderMenu from '../components/HeaderMenu'
 import { usePurchase } from '../hooks/usePurchase'
 import IconBadge from '../components/IconBadge'
-import { tx } from '@/lib/phrases'
+import { tx, pm } from '@/lib/phrases'
 
 const translations = {
   es: {
@@ -525,7 +525,7 @@ export default function AuPair() {
   const toggle = (s: string) => setOpenSection(openSection === s ? null : s)
   const { locale } = useLanguage()
   const { hasAccess, loading } = usePurchase()
-  const t = translations[locale]
+  const t = pm(translations[locale], locale)
 
   const HackBox = ({ text }: { text: string }) => (
     <div style={{ backgroundColor: '#fffbeb', borderLeft: '4px solid #f59e0b', borderRadius: '8px', padding: '14px 16px', marginTop: '16px' }}>

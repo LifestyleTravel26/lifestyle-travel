@@ -4,7 +4,7 @@ import { useLanguage } from '../../context/LanguageContext'
 import HeaderMenu from '../../components/HeaderMenu'
 import { usePurchase } from '../../hooks/usePurchase'
 import IconBadge from '../../components/IconBadge'
-import { tx, trRows } from '@/lib/phrases'
+import { tx, trRows, pm } from '@/lib/phrases'
 
 const translations = {
   es: {
@@ -228,7 +228,7 @@ const translations = {
     autoridad_end: 'sem poder concentrar as horas nas férias.',
     autoridad_acelerador_label: 'Acelerador de início:',
     autoridad_acelerador_text: 'um roteiro claro para você chegar à Itália, se ativar legalmente e começar a gerar renda sem improvisar. A burocracia italiana pode ser lenta — a ordem e o timing desde o dia 1 são essenciais.',
-    autoridad_blue: '💱 Padrão de moeda: todos os preços vão em EUR primeiro, depois o equivalente em USD. Referência: 1 EUR ≈ $1,10 USD. Exemplo: €300 → $330 USD.',
+    autoridad_blue: '💱 Padrão de moeda: todos os preços vão em EUR primeiro, depois o equivalente em reais. Referência: 1 EUR ≈ R$ 5,95. Exemplo: €300 → R$ 1.780.',
     autoridad_hack: 'O Codice Fiscale é a chave para tudo na Itália. Sem ele você não pode trabalhar, alugar nem abrir conta bancária. Priorize consegui-lo na primeira semana — é feito gratuitamente na Agenzia delle Entrate ou no consulado italiano antes de viajar.',
     premium_badge: '⭐ Blueprint Completo — PREMIUM',
     sec_estrategia_title: 'Estratégia e Orçamento: Seleção de Academia',
@@ -591,7 +591,7 @@ export default function Italia() {
   const toggle = (s: string) => setOpenSection(openSection === s ? null : s)
   const { locale } = useLanguage()
   const { hasAccess, loading } = usePurchase()
-  const t = translations[locale]
+  const t = pm(translations[locale], locale)
 
   const HackBox = ({ text }: { text: string }) => (
     <div style={{ backgroundColor: '#fffbeb', borderLeft: '4px solid #f59e0b', borderRadius: '8px', padding: '14px 16px', marginTop: '16px' }}>
@@ -823,8 +823,8 @@ export default function Italia() {
             </div>
             <div style={{ marginTop: '14px', backgroundColor: '#fef3c7', borderRadius: '8px', padding: '12px', border: '1px solid #fbbf24' }}>
               <p style={{ fontSize: '13px', margin: 0, lineHeight: '1.6' }}>
-                <strong>{t.solvencia_ingles}</strong> ~€5,200 (≈ $5,700 USD)<br />
-                <strong>{t.solvencia_uni}</strong> €10,180 (≈ $11,200 USD)
+                <strong>{t.solvencia_ingles}</strong> ~€5,200 (≈ {pm('$5,700 USD', locale)})<br />
+                <strong>{t.solvencia_uni}</strong> €10,180 (≈ {pm('$11,200 USD', locale)})
               </p>
             </div>
             <HackBox text={t.estrategia_hack} />

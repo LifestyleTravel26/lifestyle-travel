@@ -4,7 +4,7 @@ import { useLanguage } from '../../context/LanguageContext'
 import HeaderMenu from '../../components/HeaderMenu'
 import { usePurchase } from '../../hooks/usePurchase'
 import IconBadge from '../../components/IconBadge'
-import { tx, trRows } from '@/lib/phrases'
+import { tx, trRows, pm } from '@/lib/phrases'
 
 const translations = {
   es: {
@@ -187,7 +187,7 @@ const translations = {
     hero_sub: 'Oceania · Work and Study',
     hero_badge: 'Médio',
     stat1_label: 'Capital necessário',
-    stat1_value: '$15.000 - $22.000',
+    stat1_value: '$15.000 - $22.000 USD',
     stat2_label: 'Duração',
     stat2_value: '8 - 12 meses',
     stat3_label: 'Dificuldade',
@@ -210,7 +210,7 @@ const translations = {
     autoridad_p1_end: 'nas férias acadêmicas.',
     autoridad_p2_label: 'Roteiro:',
     autoridad_p2: 'Offer of Place → Student Visa → IRD Number → trabalho → Post-Study Work Visa → Green List → Residência Permanente.',
-    autoridad_blue: '💱 Conversão NZ: 1 NZD ≈ $0,57 USD. NZ$200 ≈ $114 USD. Salário mínimo $23,95 NZD/hora ≈ $13,65 USD/hora (desde 1º abr 2026).',
+    autoridad_blue: '💱 Conversão NZ: 1 NZD ≈ R$ 3,10. NZ$200 ≈ R$ 615. Salário mínimo NZ$23,95/hora ≈ R$ 74/hora (desde 1º abr 2026). Câmbio de referência: 1 USD ≈ R$ 5,40.',
     autoridad_hack: 'O IRD Number é o documento chave para trabalhar na Nova Zelândia. Sem ele nenhum empregador pode te pagar legalmente. É gratuito e se obtém em poucos dias. Solicite na primeira semana — prioridade #1.',
     premium_badge: '⭐ Blueprint Completo — PREMIUM',
     sec_estrategia_title: 'Estratégia e Orçamento: Seleção de Academia',
@@ -236,7 +236,7 @@ const translations = {
     edu_blue: '💰 GREEN LIST HACK: Se você estudar TI, Engenharia, Construção ou Saúde em um ITP, seu empregador pode patrocinar sua residência permanente quase imediatamente ao se formar.',
     edu_hack: 'SIT em Invercargill oferece programas gratuitos sob o Zero Fees Scheme. Mesma qualificação para Post-Study Work Visa e Green List. Pesquise antes de escolher.',
     sec_gastos_title: 'Despesas Obrigatórias Não Incluídas',
-    gastos_intro: 'A Nova Zelândia é mais acessível que o Canadá em solvência (~$12.000 vs ~$16.000 USD) mas os custos em Auckland são altos. Cidades secundárias reduzem despesas significativamente.',
+    gastos_intro: 'A Nova Zelândia é mais acessível que o Canadá em solvência (~$12.000 USD vs ~$16.000 USD) mas os custos em Auckland são altos. Cidades secundárias reduzem despesas significativamente.',
     th_concepto: 'Conceito', th_costo: 'Custo', th_oblig: 'Obrigatório',
     gastos_red: '🔴 SOLVÊNCIA OBRIGATÓRIA: ~$12.000 – $13.000 USD para cobrir despesas do primeiro ano. Sem essa prova de fundos a Student Visa será rejeitada.',
     gastos_hack: 'Capital real = preço do instituto + ~$485 visto + $400 seguro médico + solvência. Total $15.000-22.000 USD. Mais barato que o Canadá e com salários similares.',
@@ -540,7 +540,7 @@ export default function NuevaZelanda() {
   const toggle = (s: string) => setOpenSection(openSection === s ? null : s)
   const { locale } = useLanguage()
   const { hasAccess, loading } = usePurchase()
-  const t = translations[locale]
+  const t = pm(translations[locale], locale, true)
 
   const HackBox = ({ text }: { text: string }) => (
     <div style={{ backgroundColor: '#fffbeb', borderLeft: '4px solid #f59e0b', borderRadius: '8px', padding: '14px 16px', marginTop: '16px' }}>
@@ -880,7 +880,7 @@ export default function NuevaZelanda() {
                 {trRows([
                   ['Cuarto compartido', 'NZ$180 – $250', 'NZ$720 – $1,000', '$411 – $570'],
                   ['Cuarto individual', 'NZ$280 – $400', 'NZ$1,120 – $1,600', '$638 – $912'],
-                ], locale).map((r, i) => (
+                ], locale, [3]).map((r, i) => (
                   <tr key={i}>
                     <td style={{ ...T.td(i), ...T.bold }}>{r[0]}</td>
                     <td style={T.td(i)}>{r[1]}</td>
@@ -933,7 +933,7 @@ export default function NuevaZelanda() {
                   ['Hotels', 'Front Desk / Hotel Staff', '$24 – $27 NZD', '$13.7 – $15.4', 'Seek / hoteles directos'],
                   ['Retail', 'Shop Assistant', '$23.95 – $26 NZD', '$13.65 – $14.82', 'Trade Me Jobs / malls'],
                   ['Agriculture', 'Fruit Picker / Farm Worker', '$23.95 – $28 NZD', '$13.65 – $15.96', 'Seasonal Jobs NZ / Backpacker Board'],
-                ], locale).map((r, i) => (
+                ], locale, [3]).map((r, i) => (
                   <tr key={i}>
                     <td style={{ ...T.td(i), ...T.bold }}>{r[0]}</td>
                     <td style={T.td(i)}>{r[1]}</td>
@@ -961,7 +961,7 @@ export default function NuevaZelanda() {
                   ['Hotels', 'Front Desk / Hotel Staff', '$24 – $27 NZD', '$13.7 – $15.4', 'NZ$2,400 – $2,700'],
                   ['Retail', 'Shop Assistant', '$23.95 – $26 NZD', '$13.65 – $14.82', 'NZ$2,395 – $2,600'],
                   ['Agriculture', 'Fruit Picker / Farm Worker', '$23.95 – $28 NZD', '$13.65 – $15.96', 'NZ$2,395 – $2,800'],
-                ], locale).map((r, i) => (
+                ], locale, [3]).map((r, i) => (
                   <tr key={i}>
                     <td style={{ ...T.td(i), ...T.bold }}>{r[0]}</td>
                     <td style={T.td(i)}>{r[1]}</td>

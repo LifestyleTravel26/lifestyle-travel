@@ -4,7 +4,7 @@ import { useLanguage } from '../../context/LanguageContext'
 import HeaderMenu from '../../components/HeaderMenu'
 import { usePurchase } from '../../hooks/usePurchase'
 import IconBadge from '../../components/IconBadge'
-import { tx, trRows } from '@/lib/phrases'
+import { tx, trRows, pm } from '@/lib/phrases'
 
 const translations = {
   es: {
@@ -217,7 +217,7 @@ const translations = {
     autoridad_end: 'nas férias oficiais.',
     autoridad_acelerador_label: 'Acelerador de início:',
     autoridad_acelerador_text: 'um roteiro claro para que você chegue, se ative legalmente e comece a gerar renda sem improvisar. A chave é a ordem e o timing correto desde o dia 1.',
-    autoridad_blue: '💱 Padrão de moeda: todos os preços vão em EUR primeiro, depois o equivalente em USD. Referência: 1 EUR ≈ $1,10 USD. Exemplo: €300 → $330 USD.',
+    autoridad_blue: '💱 Padrão de moeda: todos os preços vão em EUR primeiro, depois o equivalente em reais. Referência: 1 EUR ≈ R$ 5,95. Exemplo: €300 → R$ 1.780.',
     autoridad_hack: 'O PPS Number é a chave para tudo na Irlanda. Sem ele, seu empregador aplicará Emergency Tax (~40%). Priorize obtê-lo na primeira semana usando uma Job Offer como prova de necessidade.',
     premium_badge: '⭐ Blueprint Completo — PREMIUM',
     sec_estrategia_title: 'Estratégia e Orçamento: Seleção de Academia',
@@ -561,7 +561,7 @@ export default function Irlanda() {
   const toggle = (s: string) => setOpenSection(openSection === s ? null : s)
   const { locale } = useLanguage()
   const { hasAccess, loading } = usePurchase()
-  const t = translations[locale]
+  const t = pm(translations[locale], locale)
 
   const HackBox = ({ text }: { text: string }) => (
     <div style={{ backgroundColor: '#fffbeb', borderLeft: '4px solid #f59e0b', borderRadius: '8px', padding: '14px 16px', marginTop: '16px' }}>
@@ -767,8 +767,8 @@ export default function Irlanda() {
           </div>
           <div style={{ marginTop: '14px', backgroundColor: '#fef3c7', borderRadius: '8px', padding: '12px', border: '1px solid #fbbf24' }}>
             <p style={{ fontSize: '13px', margin: 0, lineHeight: '1.6' }}>
-              <strong>{t.solvencia_ingles}</strong> €6,665 (≈ $7,330 USD)<br />
-              <strong>{t.solvencia_uni}</strong> €10,000 (≈ $11,000 USD)
+              <strong>{t.solvencia_ingles}</strong> €6,665 (≈ {pm('$7,330 USD', locale)})<br />
+              <strong>{t.solvencia_uni}</strong> €10,000 (≈ {pm('$11,000 USD', locale)})
             </p>
           </div>
           <div style={{ marginTop: '14px', backgroundColor: '#fef2f2', borderRadius: '8px', padding: '12px', border: '1px solid #fca5a5' }}>

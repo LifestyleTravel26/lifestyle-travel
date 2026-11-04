@@ -4,7 +4,7 @@ import { useLanguage } from '../../context/LanguageContext'
 import HeaderMenu from '../../components/HeaderMenu'
 import { usePurchase } from '../../hooks/usePurchase'
 import IconBadge from '../../components/IconBadge'
-import { tx, trRows } from '@/lib/phrases'
+import { tx, trRows, pm } from '@/lib/phrases'
 
 const translations = {
   es: {
@@ -218,7 +218,7 @@ const translations = {
     autoridad_p1_end: 'durante o programa acadêmico. Mais horas que Irlanda (20h), Malta (20h) ou Canadá (20h).',
     autoridad_p2_label: 'Acelerador de início:',
     autoridad_p2: 'coordenamos NIE, registro municipal, TIE e Seguridade Social para habilitar a permissão de trabalho desde o início sem perder semanas em burocracia.',
-    autoridad_blue: '💱 Padrão de moeda (Espanha): primeiro EUR e ao lado o equivalente em USD. Exemplo: €200 → $230 USD (usando referência 1 EUR ≈ $1,15 USD).',
+    autoridad_blue: '💱 Padrão de moeda (Espanha): primeiro EUR e ao lado o equivalente em reais. Exemplo: €200 → R$ 1.240 (usando referência 1 EUR ≈ R$ 6,20).',
     autoridad_hack: 'Na Espanha o registro municipal e o contrato de aluguel são tão importantes quanto o visto. Sem endereço registrado você não processa o TIE. Sem TIE você não trabalha legalmente. Prioridade #1: garantir endereço. Todo o resto se constrói sobre isso.',
     premium_badge: '⭐ Blueprint Completo — PREMIUM',
     sec_estrategia_title: 'Estratégia e Orçamento: Seleção de Academia',
@@ -570,7 +570,7 @@ export default function Espana() {
   const toggle = (s: string) => setOpenSection(openSection === s ? null : s)
   const { locale } = useLanguage()
   const { hasAccess, loading } = usePurchase()
-  const t = translations[locale]
+  const t = pm(translations[locale], locale)
 
   const HackBox = ({ text }: { text: string }) => (
     <div style={{ backgroundColor: '#fffbeb', borderLeft: '4px solid #f59e0b', borderRadius: '8px', padding: '14px 16px', marginTop: '16px' }}>

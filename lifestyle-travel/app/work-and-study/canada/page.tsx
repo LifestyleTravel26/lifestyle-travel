@@ -4,7 +4,7 @@ import { useLanguage } from '../../context/LanguageContext'
 import HeaderMenu from '../../components/HeaderMenu'
 import { usePurchase } from '../../hooks/usePurchase'
 import IconBadge from '../../components/IconBadge'
-import { tx, trRows } from '@/lib/phrases'
+import { tx, trRows, pm } from '@/lib/phrases'
 
 const translations = {
   es: {
@@ -188,7 +188,7 @@ const translations = {
     hero_sub: 'América do Norte · Work and Study',
     hero_badge: 'Alto',
     stat1_label: 'Capital necessário',
-    stat1_value: '$24.000 - $29.000',
+    stat1_value: '$24.000 - $29.000 USD',
     stat2_label: 'Duração',
     stat2_value: '8 - 12 meses',
     stat3_label: 'Dificuldade',
@@ -211,7 +211,7 @@ const translations = {
     autoridad_p1_end: 'nos descansos oficiais do calendário (máx. 180 dias/ano).',
     autoridad_p2_label: 'Roteiro sem fumaça:',
     autoridad_p2: 'LOA (carta de aceitação) → Study Permit → SIN → trabalho → PGWP → Express Entry → PR. Cada passo desbloqueia o próximo.',
-    autoridad_blue: '💱 Conversão Canadá: 1 CAD ≈ $0,72 USD. $200 CAD ≈ $144 USD. Todos os preços em CAD com equivalente em USD.',
+    autoridad_blue: '💱 Conversão Canadá: 1 CAD ≈ R$ 3,90. $200 CAD ≈ R$ 780. Todos os preços em CAD com equivalente em reais. Câmbio de referência: 1 USD ≈ R$ 5,40.',
     autoridad_hack: 'O SIN (Social Insurance Number) é o documento chave para trabalhar no Canadá. Sem SIN nenhuma empresa pode te contratar nem te pagar salário. A boa notícia é que o processo é gratuito e se completa no mesmo dia no Service Canada se você levar passaporte e Study Permit.',
     premium_badge: '⭐ Blueprint Completo — PREMIUM',
     sec_estrategia_title: 'Estratégia e Orçamento: Seleção de Academia',
@@ -543,7 +543,7 @@ export default function Canada() {
   const toggle = (s: string) => setOpenSection(openSection === s ? null : s)
   const { locale } = useLanguage()
   const { hasAccess, loading } = usePurchase()
-  const t = translations[locale]
+  const t = pm(translations[locale], locale, true)
 
   const HackBox = ({ text }: { text: string }) => (
     <div style={{ backgroundColor: '#fffbeb', borderLeft: '4px solid #f59e0b', borderRadius: '8px', padding: '14px 16px', marginTop: '16px' }}>
@@ -903,7 +903,7 @@ export default function Canada() {
                 {trRows([
                   ['Cuarto compartido', '$180 – $250', '$720 – $1,000', '$518 – $720'],
                   ['Cuarto individual', '$300 – $500', '$1,200 – $2,000', '$864 – $1,440'],
-                ], locale).map((r, i) => (
+                ], locale, [3]).map((r, i) => (
                   <tr key={i}>
                     <td style={{ ...T.td(i), ...T.bold }}>{r[0]}</td>
                     <td style={T.td(i)}>{r[1]}</td>
@@ -957,7 +957,7 @@ export default function Canada() {
                   ['Hotels', 'Front Desk / Hotel Staff', '$17 – $21 CAD', '$12.2 – $15.1', 'LinkedIn / hotels directos'],
                   ['Retail', 'Shop Assistant', '$17.30 – $20 CAD', '$12.80 – $14.80', 'Indeed / aplicar en tienda'],
                   ['Delivery', 'Delivery Driver / Courier', '$18 – $25 CAD', '$13 – $18', 'DoorDash / Uber Eats / Indeed'],
-                ], locale).map((r, i) => (
+                ], locale, [3]).map((r, i) => (
                   <tr key={i}>
                     <td style={{ ...T.td(i), ...T.bold }}>{r[0]}</td>
                     <td style={T.td(i)}>{r[1]}</td>
@@ -985,7 +985,7 @@ export default function Canada() {
                   ['Hotels', 'Front Desk / Hotel Staff', '$17 – $21 CAD', '$12.2 – $15.1', '$1,632 – $2,016 CAD'],
                   ['Retail', 'Shop Assistant', '$17.30 – $20 CAD', '$12.80 – $14.80', '$1,661 – $1,920 CAD'],
                   ['Delivery', 'Driver / Courier', '$18 – $25 CAD', '$13 – $18', '$1,728 – $2,400 CAD'],
-                ], locale).map((r, i) => (
+                ], locale, [3]).map((r, i) => (
                   <tr key={i}>
                     <td style={{ ...T.td(i), ...T.bold }}>{r[0]}</td>
                     <td style={T.td(i)}>{r[1]}</td>
