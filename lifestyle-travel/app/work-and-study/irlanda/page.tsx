@@ -714,18 +714,18 @@ export default function Irlanda() {
                 {trRows([
                   ['Seda College', 'Dublin 1', '€2,550', '$2,805', '€2,150', '$2,365', 'seda.college', 'https://seda.college'],
                   ['IBAT College Dublin', 'Dublin 2', '€2,910', '$3,200', '€2,495', '$2,745', 'ibat.ie', 'https://ibat.ie'],
-                  ['Active Language Learning', 'Dublin 1', '€3,000', '$3,300', '€2,700', '$2,970', 'all.ie', 'https://all.ie'],
+                  ['Active Language Learning', 'Dún Laoghaire', '€3,000', '$3,300', '€2,700', '$2,970', 'all.ie', 'https://all.ie'],
                   ['Central School of English', 'Dublin', '€3,000', '$3,300', '€2,700', '$2,970', 'centralschool.ie', 'https://centralschool.ie'],
                   ['ULearn English School', 'Dublin 1', '€3,100', '$3,410', '€2,800', '$3,080', 'ulearnschool.com', 'https://ulearnschool.com'],
                   ['Ned Training Centre', 'Dublin 1', '€3,200', '$3,520', '€2,900', '$3,190', 'ned.ie', 'https://ned.ie'],
                   ['Delfin English School', 'Dublin 1', '€3,300', '$3,630', '€2,800', '$3,080', 'delfin.ie', 'https://delfin.ie'],
-                  ['GoLearn', 'Dublin 1', '€3,300', '$3,630', '€3,000', '$3,300', 'golearnireland.com', 'https://golearnireland.com'],
+                  ['GoLearn', 'Dublin 1', '€3,300', '$3,630', '€3,000', '$3,300', 'golearnlatam.com', 'https://golearnlatam.com'],
                   ['Dorset College', 'Dublin 1', '€3,500', '$3,850', '€3,250', '$3,575', 'dorset-college.ie', 'https://dorset-college.ie'],
                   ['ISI Dublin', 'Dublin 2', '€3,600', '$3,960', '€2,880', '$3,168', 'isi-ireland.ie', 'https://isi-ireland.ie'],
-                  ['Swan Training Institute', 'Dublin 2', '€3,700', '$4,070', '€3,200', '$3,520', 'swantraining.ie', 'https://swantraining.ie'],
+                  ['Swan Training Institute', 'Dublin 2', '€3,700', '$4,070', '€3,200', '$3,520', 'selt.ie', 'https://selt.ie'],
                   ['ATC Language Schools', 'Dublin 2', '€3,800', '$4,180', '€3,300', '$3,630', 'atclanguageschools.com', 'https://atclanguageschools.com'],
                   ['CES Dublin', 'Dublin 2', '€3,900', '$4,290', '€3,400', '$3,740', 'ces-schools.com', 'https://ces-schools.com'],
-                  ['Emerald Cultural Institute', 'Dublin', '€4,200', '$4,620', '€3,700', '$4,070', 'emeraldculturalinstitute.com', 'https://emeraldculturalinstitute.com'],
+                  ['Emerald Cultural Institute', 'Dublin', '€4,200', '$4,620', '€3,700', '$4,070', 'eci.ie', 'https://eci.ie'],
                   ['Kaplan International Dublin', 'Dublin 2', '€4,500', '$4,950', '€4,000', '$4,400', 'kaplaninternational.com', 'https://kaplaninternational.com'],
                 ], locale).map((r, i) => (
                   <tr key={i}>
