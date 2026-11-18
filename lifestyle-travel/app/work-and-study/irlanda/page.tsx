@@ -716,7 +716,7 @@ export default function Irlanda() {
                   ['IBAT College Dublin', 'Dublin 2', '€2,910', '$3,200', '€2,495', '$2,745', 'ibat.ie', 'https://ibat.ie'],
                   ['Active Language Learning', 'Dún Laoghaire', '€3,000', '$3,300', '€2,700', '$2,970', 'all.ie', 'https://all.ie'],
                   ['Central School of English', 'Dublin', '€3,000', '$3,300', '€2,700', '$2,970', 'centralschool.ie', 'https://centralschool.ie'],
-                  ['ULearn English School', 'Dublin 1', '€3,100', '$3,410', '€2,800', '$3,080', 'ulearnschool.com', 'https://ulearnschool.com'],
+                  ['ULearn English School', 'Dublin 2', '€3,150', '$3,465', '€2,400', '$2,640', 'ulearnschool.com', 'https://ulearnschool.com'],
                   ['Ned Training Centre', 'Dublin 1', '€3,200', '$3,520', '€2,900', '$3,190', 'ned.ie', 'https://ned.ie'],
                   ['Delfin English School', 'Dublin 1', '€3,300', '$3,630', '€2,800', '$3,080', 'delfin.ie', 'https://delfin.ie'],
                   ['GoLearn', 'Dublin 1', '€3,300', '$3,630', '€3,000', '$3,300', 'golearnlatam.com', 'https://golearnlatam.com'],
