@@ -748,7 +748,7 @@ export default function Irlanda() {
               <thead><tr>{[t.th_inst, t.th_loc, t.th_am, t.th_usd, t.th_pm, t.th_usd, t.th_web].map((h, i) => <th key={i} style={T.th}>{h}</th>)}</tr></thead>
               <tbody>
                 {trRows([
-                  ['Limerick City College', "O'Connell St", '€3,000', '$3,300', '€2,700', '$2,970', 'limerickcitycollege.ie', 'https://limerickcitycollege.ie'],
+                  ['Limerick City College', "O'Connell St", '€3,000', '$3,300', '€2,700', '$2,970', 'limerickcc.ie', 'https://limerickcc.ie'],
                   ['Rightword Institute', 'Winthrop H.', '€3,200', '$3,520', '€2,900', '$3,190', 'rightword.ie', 'https://rightword.ie'],
                   ['Griffith College Limerick', "O'Connell Av", '€3,600', '$3,960', '€3,200', '$3,520', 'griffith.ie', 'https://griffith.ie'],
                 ], locale).map((r, i) => (
